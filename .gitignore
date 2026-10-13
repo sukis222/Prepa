@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+prepa_knowledge.sqlite
+prepa_knowledge.sqlite-*
+PROJECT_SUMMARY.md
