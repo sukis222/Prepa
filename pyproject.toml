@@ -1,0 +1,6 @@
+[project]
+name = "prepa"
+version = "0.1.0"
+description = "Помощник репетитора по физике для ОГЭ и ЕГЭ"
+requires-python = ">=3.12"
+dependencies = []

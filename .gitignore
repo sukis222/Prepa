@@ -8,3 +8,15 @@ __pycache__/
 prepa_knowledge.sqlite
 prepa_knowledge.sqlite-*
 PROJECT_SUMMARY.md
+
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+.coverage
+htmlcov/
+data/materials/*
+!data/materials/README.md
+
+output/
