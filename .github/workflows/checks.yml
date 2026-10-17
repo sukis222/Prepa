@@ -1,0 +1,66 @@
+name: Content agents checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: checks-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - python: "3.12"
+            pydantic: latest
+          - python: "3.13"
+            pydantic: latest
+          - python: "3.14"
+            pydantic: latest
+          - python: "3.12"
+            pydantic: minimum
+    name: Python ${{ matrix.python }} / Pydantic ${{ matrix.pydantic }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - run: python -m pip install -e '.[dev]'
+      - if: matrix.pydantic == 'minimum'
+        run: python -m pip install 'pydantic==2.10.0'
+      - run: ruff check .
+      - run: ruff format --check .
+      - run: mypy
+      - run: pytest --cov=prepa --cov-branch --cov-report=term-missing --cov-fail-under=95
+      - run: python examples/content_agents.py
+
+  distribution:
+    name: Build and installed wheel smoke test
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.12"
+      - run: python -m pip install build
+      - run: python -m build
+      - name: Install the wheel in a separate environment
+        run: |
+          python -m venv "$RUNNER_TEMP/prepa-wheel"
+          "$RUNNER_TEMP/prepa-wheel/bin/python" -m pip install dist/prepa-*.whl
+      - name: Run all three agents outside the checkout
+        working-directory: ${{ runner.temp }}
+        run: |
+          "$RUNNER_TEMP/prepa-wheel/bin/python" "$GITHUB_WORKSPACE/examples/content_agents.py" --output-dir "$RUNNER_TEMP/prepa-wheel-output"
