@@ -16,7 +16,5 @@ build/
 dist/
 .coverage
 htmlcov/
-data/materials/*
-!data/materials/README.md
 
 output/
