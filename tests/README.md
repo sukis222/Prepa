@@ -17,6 +17,10 @@ python examples/content_agents.py --output-dir output/content-demo
 | test_schemas.py | JSON roundtrip, closed/frozen модели, строгие значения и пределы коллекций, ID, brief/profiles/materials, GenerationFailure/RepairFeedback, ученическая проекция |
 | test_quality.py | Темы/источники/покрытие/число/время, нулевое ДЗ, адреса review, package gates, warnings, digest и устаревшие данные |
 | test_agents.py | Структурированный вызов и JSON, отказ/таймаут/отмена/ошибки провайдера, подтверждение до LLM, предел ответа, адресованные исправления, сохранение локальных ошибок и свежая проверка комплекта |
+| test_task_bank_parser.py | Разбор тем и задач ФИПИ на синтетических страницах, типы ответа, рисунки, MathML → LaTeX |
+| test_task_bank_search.py | Сопоставление тем КЭС, фильтры, исключение выданных задач, страницы, воспроизводимая случайная выборка |
+| test_task_bank_client.py | Поля запроса к банку, windows-1251, кеш тем, ошибки сети и HTTP, проверка TLS (через MockTransport, без сети) |
+| test_task_bank_output.py | Текст для преподавателя, переход к Material, консольная команда |
 
 Тесты агента используют записанные ответы подменного StructuredLLM: они подтверждают
 передачу схемы, обработку ошибок и поведение API, а не правильность физики живой LLM.
