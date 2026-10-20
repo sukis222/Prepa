@@ -1,0 +1,40 @@
+name: prepa
+
+services:
+  bot:
+    build:
+      context: .
+      dockerfile: Containerfile
+    init: true
+    environment:
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:?Set TELEGRAM_BOT_TOKEN in .env}
+      TELEGRAM_ALLOWED_USER_IDS: ${TELEGRAM_ALLOWED_USER_IDS:?Set TELEGRAM_ALLOWED_USER_IDS in .env}
+      PREPARATION_MODE: ${PREPARATION_MODE:-off}
+      PGHOST: postgres
+      PGDATABASE: ${POSTGRES_DB:-prepa}
+      PGUSER: ${POSTGRES_USER:-prepa}
+      PGPASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    command: ["sh", "-c", "python -m prepa.db.migrate && exec prepa-bot"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+    stop_grace_period: 30s
+  postgres:
+    image: docker.io/library/postgres:17-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-prepa}
+      POSTGRES_USER: ${POSTGRES_USER:-prepa}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$$POSTGRES_USER\" -d \"$$POSTGRES_DB\""]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+    stop_grace_period: 30s
+
+volumes:
+  postgres_data:
