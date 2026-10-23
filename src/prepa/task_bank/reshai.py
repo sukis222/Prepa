@@ -71,7 +71,7 @@ TOPICS = {
         "электрическое поле",
         "заряд",
     ),
-    "magnetic-field-and-induction": ("магнит", "индукц"),
+    "magnetic-field-and-induction": ("магнит", "магнетизм", "индукц"),
     "oscillations-and-waves": ("колебан", "волн", "звук"),
     "geometrical-optics": ("оптик", "линз", "преломлен"),
     "quantum-and-nuclear-physics": ("квант", "ядер", "атом", "фотоэффект"),
@@ -347,10 +347,10 @@ class ReshaiSource:
                         ):
                             continue
                         matching[item.id] = item
-                    if not cycle_query and len(matching) >= target:
+                    if not cycle_query and len(matching) >= 70:
                         break
                     page += 1
-                if not cycle_query and len(matching) >= target:
+                if not cycle_query and len(matching) >= 70:
                     break
             ranked = list(matching.values())
             if "цикл" in topic.casefold():

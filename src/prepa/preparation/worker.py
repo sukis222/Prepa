@@ -121,7 +121,7 @@ def failure_message(error: Exception) -> tuple[str, str]:
     if isinstance(error, SourceCorpusError):
         return "source_corpus", (
             "Источник условий недоступен, не проверен или выбор задач некорректен. "
-            "Проверьте SOURCE_CORPUS_PATH. Выдача отменена."
+            "Уточните название темы через /edit или повторите запрос через /retry."
         )
 
     if isinstance(error, InsufficientMaterialsError):

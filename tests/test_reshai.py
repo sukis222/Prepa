@@ -75,6 +75,7 @@ def brief(context, **changes):
         ("Температура", "molecular-physics"),
         ("Теплопередача", "phase-transitions-and-heat-engines"),
         ("Статика", "dynamics-and-gravitation"),
+        ("Магнетизм", "magnetic-field-and-induction"),
     ],
 )
 def test_topic_aliases(topic, slug):
@@ -266,5 +267,30 @@ def test_cycle_ranking_before_detail_limit_and_unmentioned_preview_fallback(tmp_
         assert fetched[0] == "FFFFFE"
         assert {task.id for task, _ in result} == {"reshai-FFFFFE", "reshai-000000"}
         assert len(fetched) <= 70
+
+    run(check())
+
+
+def test_skip_unsupported_originals_without_stopping_at_preview_count(tmp_path, context):
+    def handler(request):
+        code = request.url.path.rsplit("/", 1)[-1]
+        if code.startswith("physics."):
+            page = int(request.url.params.get("page", "1"))
+            html = "".join(card(f"{i:06X}") for i in range((page - 1) * 20, page * 20))
+            html += '<a href="?page=3">3</a>'
+        elif int(code, 16) < 20:
+            html = condition("<table><tr><td>a</td><td>b</td></tr></table>")
+        else:
+            html = condition("Магнитное поле " + code)
+        return httpx.Response(200, text=html, headers={"content-type": "text/html"})
+
+    async def check():
+        async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as http:
+            source = ReshaiSource(http=http, cache_dir=tmp_path, request_interval=0)
+            result = await source.candidates(
+                brief(context, exam="ege", topics=["Магнетизм"], lesson_task_count=30)
+            )
+        assert len(result) == 40
+        assert all(topics == ("Магнетизм",) for _, topics in result)
 
     run(check())
