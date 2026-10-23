@@ -12,7 +12,7 @@ assignment_issues = review.for_author("assignments")
 
 Сигнатура: `async review(context: GenerationContext, theory: Theory, assignments:
 AssignmentSet) -> ReviewResult`. Конструктор принимает StructuredLLM и параметры
-`timeout_seconds=60`, `max_response_chars=200_000`.
+`timeout_seconds=120`, `max_response_chars=200_000`.
 
 Модель получает подтверждённый контекст, theory, assignments и локальные
 contract_issues; возвращает **ReviewReport**, не ReviewResult. Допустим также явный

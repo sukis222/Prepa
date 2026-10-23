@@ -44,7 +44,7 @@ class LessonBrief(Versioned):
     topics: Annotated[tuple[Topic, ...], Field(min_length=1, max_length=8)]
     duration_minutes: Minutes = 60
     theory_level: Literal["basic", "intermediate", "advanced"] = "basic"
-    lesson_task_count: Annotated[int, Field(strict=True, ge=1, le=20)] = 4
+    lesson_task_count: Annotated[int, Field(strict=True, ge=1, le=50)] = 4
     homework_task_count: Count = 2
     homework_minutes: Annotated[int, Field(strict=True, ge=0, le=180)] = 20
     teacher_notes: Text | None = None
@@ -168,7 +168,7 @@ class Homework(Contract):
 
 
 class AssignmentSet(Versioned):
-    lesson_assignments: Annotated[tuple[Assignment, ...], Field(min_length=1, max_length=20)]
+    lesson_assignments: Annotated[tuple[Assignment, ...], Field(min_length=1, max_length=50)]
     homeworks: Annotated[tuple[Homework, ...], Field(max_length=2)]
 
     def all_assignments(self) -> tuple[Assignment, ...]:
@@ -247,7 +247,7 @@ class StudentLesson(Versioned):
 
     student_id: Id
     theory: Theory
-    lesson_assignments: Annotated[tuple[StudentAssignment, ...], Field(min_length=1, max_length=20)]
+    lesson_assignments: Annotated[tuple[StudentAssignment, ...], Field(min_length=1, max_length=50)]
     homework: Annotated[tuple[StudentAssignment, ...], Field(max_length=20)]
     sources: Annotated[tuple[SourceCitation, ...], Field(min_length=1, max_length=50)]
 

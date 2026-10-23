@@ -100,7 +100,7 @@ class StructuredAgent:
         self,
         llm: StructuredLLM,
         *,
-        timeout_seconds: float = 60,
+        timeout_seconds: float = 120,
         max_response_chars: int = 200_000,
     ) -> None:
         if not math.isfinite(timeout_seconds) or timeout_seconds <= 0:

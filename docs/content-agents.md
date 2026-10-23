@@ -187,7 +187,7 @@ Runtime поднимает `InsufficientMaterialsError`, в `.failure` нахо�
 | Модель | Обязательные поля | Ограничения и defaults |
 |---|---|---|
 | `StudentProfile` | `student_id`, `grade`, `exam` | grade 9–11; `level="basic"`, `mastered_topics=[]` (до 100), `common_errors=[]` (до 50) |
-| `LessonBrief` | `preparation_id`, `version`, `student_ids`, `exam`, `topics` | version ≥1; 1–2 уникальных ученика, 1–8 уникальных тем; `duration_minutes=60` (1–180), `theory_level="basic"`, `lesson_task_count=4` (1–20), `homework_task_count=2` (0–20), `homework_minutes=20` (0–180), `teacher_notes=null`, `confirmed=false` |
+| `LessonBrief` | `preparation_id`, `version`, `student_ids`, `exam`, `topics` | version ≥1; 1–2 уникальных ученика, 1–8 уникальных тем; `duration_minutes=60` (1–180), `theory_level="basic"`, `lesson_task_count=4` (1–50), `homework_task_count=2` (0–20), `homework_minutes=20` (0–180), `teacher_notes=null`, `confirmed=false` |
 | `Material` | `material_id`, `title`, `source`, `exam`, `topics`, `content` | 1–50 тем; source — реальный URL, книга/страница или локальное происхождение, не обязательно URL |
 | `GenerationContext` | `brief`, `students`, `materials` | 1–2 профиля, 1–50 материалов; уникальные ID в каждом наборе; профили точно совпадают с brief; экзамены одинаковы; библиотека покрывает все темы |
 | `TextBlock` | `text` | `math=[]`, до 20 математических выражений |
@@ -198,7 +198,7 @@ Runtime поднимает `InsufficientMaterialsError`, в `.failure` нахо�
 | `Theory` | `preparation_id`, `version`, `sections` | 1–32 раздела, уникальные section_id; локальная проверка требует всех тем brief |
 | `Assignment` | `assignment_id`, `topic`, `difficulty`, `estimated_minutes`, `statement`, `answer`, `solution`, `source_ids` | difficulty 1–3, время 1–180, решение 1–20 блоков, 1–10 источников, `hints=[]` (до 5) |
 | `Homework` | `student_id`, `rationale`, `assignments` | 1–20 заданий; rationale объясняет персонализацию для преподавателя |
-| `AssignmentSet` | `preparation_id`, `version`, `lesson_assignments`, `homeworks` | 1–20 задач урока, до 2 ДЗ; homeworks обязательно, но может быть `[]`; получатели не повторяются, ID задач уникальны во всём комплекте |
+| `AssignmentSet` | `preparation_id`, `version`, `lesson_assignments`, `homeworks` | 1–50 задач урока, до 2 ДЗ; homeworks обязательно, но может быть `[]`; получатели не повторяются, ID задач уникальны во всём комплекте |
 | `ReviewIssue` | `author`, `target_id`, `severity`, `category`, `message`, `suggestion` | author=`theory`/`assignments`, severity=`error`/`warning`; категории ниже |
 | `ReviewReport` | `preparation_id`, `version`, `summary` | `issues=[]`, до 100; ответ модели reviewer |
 | `RepairFeedback` | `preparation_id`, `version`, `author`, `content_digest`, `issues` | 1–200 замечаний только этому автору; создаётся кодом для отклонённой генерации |
@@ -206,7 +206,7 @@ Runtime поднимает `InsufficientMaterialsError`, в `.failure` нахо�
 | `LessonPackage` | `context`, `theory`, `assignments`, `review` | Подтверждение, локальные проверки, идентичность, адреса и digest; только review без error |
 | `StudentAssignment` | `assignment_id`, `topic`, `estimated_minutes`, `statement`, `source_ids` | 1–10 ссылок для атрибуции задачи; без ответов, решений, подсказок и сложности |
 | `SourceCitation` | `material_id`, `title`, `source` | Ссылка без сырого content |
-| `StudentLesson` | `preparation_id`, `version`, `student_id`, `theory`, `lesson_assignments`, `homework`, `sources` | 1–20 задач урока, до 20 задач ДЗ, 1–50 источников; identity theory совпадает; ID задач и citations уникальны; все используемые ссылки присутствуют; theory сохраняет разобранные примеры |
+| `StudentLesson` | `preparation_id`, `version`, `student_id`, `theory`, `lesson_assignments`, `homework`, `sources` | 1–50 задач урока, до 20 задач ДЗ, 1–50 источников; identity theory совпадает; ID задач и citations уникальны; все используемые ссылки присутствуют; theory сохраняет разобранные примеры |
 
 Дополнительные инварианты brief: задач урока не меньше числа тем; объём/время ДЗ
 одновременно нулевые либо положительные; количество задач не превышает доступные

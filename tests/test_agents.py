@@ -30,6 +30,11 @@ from prepa.schemas.validation import check_assignments, check_theory, content_di
 ROLES = ("theory", "assignments", "reviewer")
 
 
+@pytest.mark.parametrize("agent_type", (TheoryAgent, AssignmentsAgent, ReviewerAgent))
+def test_default_agent_timeout_is_120_seconds(agent_type: Any) -> None:
+    assert agent_type(FakeLLM()).timeout_seconds == 120
+
+
 class FakeLLM:
     """Return queued responses and retain the complete structured provider boundary."""
 

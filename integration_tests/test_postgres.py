@@ -44,13 +44,16 @@ def test_real_restart_and_new_version(dsn):
     for text in (
         "/add_student",
         "Synthetic pupil",
-        "9 ОГЭ 1",
-        "-",
+        "9 ОГЭ",
+        "/add_student",
+        "Synthetic second pupil",
+        "9 ОГЭ",
         "/lesson",
-        "1",
+        "1,2",
         "Кинематика",
-        "60 1 4 2 20",
-        "-",
+        "4",
+        "Динамика",
+        "50",
     ):
         say(text)
     # Separate Python process reloads the exact unconfirmed draft from the database.
@@ -65,9 +68,11 @@ def test_real_restart_and_new_version(dsn):
         [sys.executable, "-c", code], capture_output=True, text=True, check=True
     )
     assert "Ожидает подтверждения" in result.stdout
+    assert "Synthetic pupil" in result.stdout and "Synthetic second pupil" in result.stdout
+    assert "мин." not in result.stdout and "Пожелания" not in result.stdout
     assert "PostgreSQL" in say("/confirm").text
     assert "Нет запроса" in say("/confirm").text
-    for text in ("/edit", "Динамика", "60 2 3 0 0", "Новая версия", "/confirm"):
+    for text in ("/edit", "Динамика", "3", "/confirm"):
         say(text)
     result = subprocess.run(
         [sys.executable, "-c", code.replace("'/status'", "'/history'")],
@@ -78,11 +83,18 @@ def test_real_restart_and_new_version(dsn):
     assert "v1" in result.stdout and "v2" in result.stdout
     with psycopg.connect(dsn) as conn:
         rows = conn.execute(
-            "SELECT preparation_id, version FROM preparation_versions "
-            "WHERE teacher_id=%s ORDER BY version",
+            "select preparation_id, version from preparation_versions "
+            "where teacher_id=%s order by version",
             (teacher,),
         ).fetchall()
-        assert len(rows) == 2 and rows[0][0] == rows[1][0]
+        assert len(rows) == 3
+        assert len({row[0] for row in rows}) == 2
+        assert sorted(row[1] for row in rows) == [1, 1, 2]
+        memberships = conn.execute(
+            "select student_id from preparation_students where teacher_id=%s",
+            (teacher,),
+        ).fetchall()
+        assert len(memberships) == 2
     outsider = asyncio.run(
         DialogService(None, repository=PostgresRepository(dsn)).respond(teacher_id(), "/students")
     )

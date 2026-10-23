@@ -2,7 +2,7 @@
 
 Начните с [README.md](README.md), затем прочитайте [API и интеграцию](docs/content-agents.md)
 и [критерии качества](docs/content-quality.md). Описания будущих модулей не означают,
-что бот, OpenRouter, PostgreSQL или PDF уже работают.
+что все сценарии и PDF уже работают. Статус реальных вызовов — в docs/openrouter.md.
 
 ## Общие правила
 

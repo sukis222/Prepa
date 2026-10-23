@@ -100,8 +100,19 @@ def test_enqueue_atomic_retrieval_retry_and_versions():
             "files": [{"name": "demo.txt", "content": base64.b64encode(b"persisted").decode()}]
         },
     )
-    assert say("/result 1").attachments[0].content == b"persisted"
-    for text in ("/edit", "Новая тема", "60 1 4 0 0", "-", "/confirm"):
+    result = say("/result 1")
+    assert result.attachments[0].content == b"persisted"
+    assert "Синтетический ученик" in result.text
+    assert key[0] not in result.text and "teacher" not in result.text
+    original = repo.data[1]["jobs"][key]["result"]
+    repo.data[1]["jobs"][key]["result"] = {
+        "files": original["files"] * 2,
+    }
+    old = say("/result 1")
+    assert "Сохранён старый формат" in old.text and not old.attachments
+    assert len(repo.data[1]["jobs"][key]["result"]["files"]) == 2
+    repo.data[1]["jobs"][key]["result"] = original
+    for text in ("/edit", "Новая тема", "4", "/confirm"):
         say(text)
     assert len(repo.data[1]["jobs"]) == 2
     assert say("/result 1").attachments[0].content == b"persisted"
@@ -143,8 +154,16 @@ def test_queue_claim_and_fencing(monkeypatch, package):
         package.context.brief.model_dump(),
         [s.model_dump() for s in package.context.students],
     )
+    cursor.fetchall.return_value = [
+        (package.context.brief.student_ids[0], "Максим"),
+        (package.context.brief.student_ids[1], "Ольга"),
+    ]
     job = run(queue.claim())
     assert job.teacher_id == 7 and job.mode == "demo"
+    assert job.student_names == ("Максим", "Ольга")
+    lookup = conn.execute.call_args_list[-2]
+    assert "where teacher_id=%s" in lookup.args[0]
+    assert lookup.args[1] == (7, list(job.brief.student_ids))
     assert "4 minutes" in conn.execute.call_args.args[0]
     cursor.rowcount = 1
     assert run(queue.finish(job, package, (Attachment("file.pdf", b"\x00\xff"),)))
@@ -169,7 +188,7 @@ def test_worker_saves_before_delivery_and_recovers(package):
     async def deliver(teacher, reply):
         assert teacher == 7 and "ДЕМО" in reply.text
         queue.finish.assert_awaited_once()
-        assert len(reply.attachments) == 3
+        assert len(reply.attachments) == 1
         raise RuntimeError("private details")
 
     assert run(worker.process_one(queue, backend, DemoDocuments(), deliver, None))
@@ -194,17 +213,20 @@ def test_worker_errors_and_access(package, failure, caplog):
         brief = LessonBrief.model_validate({**package.context.brief.model_dump(), "version": 99})
         queue.claim.return_value = Job(7, brief, package.context.students, "token", "real")
     elif failure == "documents":
-        docs = SimpleNamespace(teacher=AsyncMock(side_effect=RuntimeError("secret")))
+        docs = SimpleNamespace(tasks=AsyncMock(side_effect=RuntimeError("secret")))
     elif failure == "size":
         docs = SimpleNamespace(
-            teacher=AsyncMock(return_value=Attachment("empty", b"")),
-            student=DemoDocuments().student,
+            tasks=AsyncMock(return_value=Attachment("empty", b"")),
         )
     else:
         allowed = frozenset({999})
     deliver = AsyncMock()
     run(worker.process_one(queue, backend, docs, deliver, allowed))
-    assert queue.finish.call_args.kwargs["error"] in ("preparation_failed", "access_denied")
+    assert queue.finish.call_args.kwargs["error"] in (
+        "preparation_failed",
+        "access_denied",
+        "preparation_timeout",
+    )
     assert "secret" not in caplog.text
     if failure == "access":
         backend.prepare.assert_not_awaited()
@@ -227,7 +249,7 @@ def test_demo_settings_and_transport_arguments(monkeypatch):
     monkeypatch.setenv("TELEGRAM_BOT_TOKEN", "hidden")
     monkeypatch.setenv("TELEGRAM_ALLOWED_USER_IDS", "*")
     monkeypatch.setenv("DATABASE_URL", "hidden")
-    monkeypatch.setenv("PREPARATION_MODE", "real")
+    monkeypatch.setenv("PREPARATION_MODE", "invalid")
     with pytest.raises(ValueError, match="PREPARATION_MODE"):
         Settings.from_env()
     monkeypatch.setenv("PREPARATION_MODE", "demo")
@@ -259,3 +281,26 @@ def test_demo_app_worker_lifecycle(monkeypatch):
     monkeypatch.setattr(app, "work", fake_work)
     run(app.run(Settings("secret", None, "hidden", "demo")))
     bot.send_document.assert_awaited_once()
+
+
+@pytest.mark.parametrize("failed", [False, True])
+def test_worker_labels_each_delivery_with_names_without_sending_them_to_backend(package, failed):
+    queue = fake_queue(package)
+    original = queue.claim.return_value
+    queue.claim.return_value = Job(
+        original.teacher_id,
+        original.brief,
+        original.students,
+        original.token,
+        original.mode,
+        ("Максим", "Ольга"),
+    )
+    backend = SimpleNamespace(prepare=AsyncMock(return_value=package))
+    if failed:
+        backend.prepare.side_effect = TimeoutError()
+    delivery = AsyncMock()
+    run(worker.process_one(queue, backend, DemoDocuments(), delivery, None))
+    reply = delivery.call_args.args[1]
+    assert reply.text.startswith("Ученик: Максим, Ольга\n")
+    assert bool(reply.attachments) is not failed
+    backend.prepare.assert_awaited_once_with(7, original.brief, original.students)

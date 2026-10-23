@@ -37,20 +37,18 @@ def main():
     async def deliver(user, reply):
         assert user == teacher
         assert "ДЕМО" in reply.text
-        assert len(reply.attachments) == 2
+        assert len(reply.attachments) == 1
 
     async def scenario():
         await repo.check()
         for text in (
             "/add_student",
             "Synthetic demo pupil",
-            "9 ОГЭ 1",
-            "-",
+            "9 ОГЭ",
             "/lesson",
             "1",
             "Кинематика",
-            "60 1 4 2 20",
-            "-",
+            "4",
         ):
             await say(text)
         assert await queue.claim() is None
@@ -71,12 +69,12 @@ def main():
         )
         assert not await queue.finish(abandoned, error="late stale worker")
         reply = await say("/result")
-        assert len(reply.attachments) == 2
+        assert len(reply.attachments) == 1
         digests = [hashlib.sha256(f.content).hexdigest() for f in reply.attachments]
         assert digests == [
             hashlib.sha256(f.content).hexdigest() for f in (await say("/result 1")).attachments
         ]
-        for text in ("/edit", "Динамика", "60 1 4 0 0", "-", "/confirm"):
+        for text in ("/edit", "Динамика", "4", "/confirm"):
             await say(text)
         job = await queue.claim()
         assert job.brief.version == 2
@@ -84,12 +82,12 @@ def main():
         assert "не удалась" in (await say("/result")).text
         assert "очередь" in (await say("/retry")).text
         assert await process_one(queue, DemoBackend(), DemoDocuments(), deliver, None)
-        assert "v2" in (await say("/result")).text
+        assert "Динамика" in (await say("/result")).text
         assert digests == [
             hashlib.sha256(f.content).hexdigest() for f in (await say("/result 1")).attachments
         ]
         # Bound automatic recovery; explicit /retry is still available.
-        for text in ("/edit", "Динамика", "60 1 4 0 0", "-", "/confirm"):
+        for text in ("/edit", "Динамика", "4", "/confirm"):
             await say(text)
         assert await queue.claim() is not None
         with psycopg.connect(dsn) as conn:

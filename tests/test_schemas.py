@@ -58,7 +58,7 @@ def test_preparation_id_is_safe_and_nonempty(demo, value):
         ("duration_minutes", 0),
         ("duration_minutes", 181),
         ("lesson_task_count", 0),
-        ("lesson_task_count", 21),
+        ("lesson_task_count", 51),
         ("lesson_task_count", 2.0),
         ("homework_task_count", -1),
         ("homework_task_count", 21),
@@ -396,7 +396,7 @@ def test_student_assignment_requires_nonempty_bounded_attribution(package, sourc
 @pytest.mark.parametrize(
     ("field", "id_field", "limit"),
     [
-        ("lesson_assignments", "assignment_id", 20),
+        ("lesson_assignments", "assignment_id", 50),
         ("homework", "assignment_id", 20),
         ("sources", "material_id", 50),
     ],

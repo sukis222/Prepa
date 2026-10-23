@@ -19,3 +19,6 @@ dist/
 htmlcov/
 
 output/
+
+# Previous checkout; use this repository root
+local-run/

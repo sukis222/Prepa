@@ -12,6 +12,7 @@ from prepa.agents.runtime import AgentResponseError, InsufficientMaterialsError
 from prepa.bot import app
 from prepa.bot.service import DialogService, Reply, Session, summary
 from prepa.bot.settings import Settings
+from prepa.db.repository import StudentRecord
 from prepa.schemas import GenerationFailure, LessonBrief, LessonPackage
 
 
@@ -19,19 +20,18 @@ def say(service, text, user=1):
     return asyncio.run(service.respond(user, text))
 
 
-def draft(service, topics="Кинематика", students="1,2", format_text="60 1 4 2 20"):
+def draft(service, topics="Кинематика", students="1", format_text="4"):
     say(service, "/lesson")
     say(service, students)
     say(service, topics)
-    say(service, format_text)
-    return say(service, "-")
+    return say(service, format_text)
 
 
 def test_complete_flow_and_versions():
     service = DialogService(frozenset({1, 2}))
     assert "Демонстрационный" in say(service, "/start").text
     assert "demo-a" in say(service, "Ученики").text
-    assert "Ожидает" in draft(service).text
+    assert "Задач: 4" in draft(service).text
     pending = service.sessions[1].draft
     assert pending and not pending.confirmed
     assert "не подключены" in say(service, "Подтвердить").text
@@ -44,14 +44,13 @@ def test_complete_flow_and_versions():
     assert "Пока пусто" in say(service, "/history", user=2).text
     assert "Новая версия" in say(service, "Правки").text
     say(service, "Динамика")
-    say(service, "90 3 5 0 0")
-    say(service, "Усложнить вторую задачу")
+    say(service, "5")
     assert "Ожидает" in say(service, "/status").text
     say(service, "/confirm")
     second = service.sessions[1].history[-1]
     assert second.preparation_id == first.preparation_id and second.version == 2
     assert second.topics == ("Динамика",) and second.homework_task_count == 0
-    assert second.teacher_notes == "Усложнить вторую задачу"
+    assert second.teacher_notes is None
     say(service, "/edit")
     say(service, "Отмена")
     assert len(service.sessions[1].history) == 2
@@ -70,14 +69,14 @@ def test_help_empty_states_permissions_and_retention():
     assert "ещё не составлен" in say(service, "/status").text
     assert "Начните" in say(service, "что-то").text
     assert "Неизвестная" in say(service, "/unknown").text
-    assert "не подключена" in say(service, "/homework").text
+    assert "не поддерживается" in say(service, "/homework").text
     for _ in range(22):
         draft(service, students="1")
         say(service, "/confirm")
     assert len(service.sessions[1].history) == 20
 
 
-@pytest.mark.parametrize("selection", ["", "x", "0", "4", "-1", "1,1", "1,2,3", "1,3"])
+@pytest.mark.parametrize("selection", ["", "x", "0", "4", "-1", "1,1", "1,2,3"])
 def test_bad_selection_does_not_advance(selection):
     service = DialogService(frozenset({1}))
     say(service, "/lesson")
@@ -96,7 +95,7 @@ def test_bad_topics_do_not_advance(topics):
 
 @pytest.mark.parametrize(
     "values",
-    ["60 1 4 2", "x", "60 0 4 2 20", "0 1 4 2 20", "60 1 1 2 20", "60 1 4 0 20"],
+    ["60 1 4 2", "x", "0", "-1", "1", "51"],
 )
 def test_bad_format_can_be_corrected(values):
     service = DialogService(frozenset({1}))
@@ -105,11 +104,8 @@ def test_bad_format_can_be_corrected(values):
     say(service, "A;B")
     assert "Не удалось" in say(service, values).text
     assert service.sessions[1].draft is None
-    say(service, "60 2 4 2 20")
-    assert service.sessions[1].step == "notes"
-    assert "Не удалось" in say(service, "x" * 1001).text
-    assert "Не удалось" in say(service, " ").text
-    assert "Ожидает" in say(service, "Проверить перевод единиц").text
+    assert "Задач: 4" in say(service, "4").text
+    assert service.sessions[1].step == "confirm"
     assert "Подтвердить" in say(service, "да").text
     assert not service.sessions[1].history
 
@@ -165,10 +161,13 @@ def test_wrong_backend_identity_is_rejected(package):
     assert "не прошли" in say(service, "/confirm").text
 
 
-def test_status_summary_levels():
+def test_status_summary_hides_internal_defaults():
     service = DialogService(frozenset({1}))
-    draft(service, format_text="60 2 4 2 20")
-    assert "средний" in summary(service.sessions[1].draft)
+    draft(service, format_text="4")
+    text = summary(service.sessions[1].draft)
+    assert "Задач: 4" in text
+    assert "мин." not in text and "теория" not in text and "ДЗ" not in text
+    assert service.sessions[1].draft.homework_task_count == 0
 
 
 def test_settings(monkeypatch):
@@ -280,3 +279,96 @@ def test_entrypoints(monkeypatch):
     monkeypatch.setattr(app, "main", main)
     runpy.run_module("prepa.bot", run_name="__main__")
     main.assert_called_once()
+
+
+@pytest.mark.parametrize("step", ["student_goal", "notes"])
+def test_obsolete_draft_steps_restart_without_asking_removed_fields(step):
+    service = DialogService(frozenset({1}))
+    service.sessions[1] = Session(step=step)
+    assert "Форма обновлена" in say(service, "old input").text
+    assert service.sessions[1].step == "idle"
+
+
+def test_two_students_have_individual_briefs_and_edit_last_student():
+    service = DialogService(frozenset({1}))
+    say(service, "/lesson")
+    say(service, "1,2")
+    say(service, "Кинематика")
+    assert "demo-b" in say(service, "4").text
+    assert "Нет запроса" in say(service, "/confirm").text
+    say(service, "Динамика")
+    reply = say(service, "50")
+    assert "demo-a" in reply.text and "demo-b" in reply.text
+    assert "Задач: 4" in reply.text and "Задач: 50" in reply.text
+    say(service, "/confirm")
+    first, previous = service.sessions[1].history
+    assert first.student_ids == ("demo-a",) and previous.student_ids == ("demo-b",)
+    assert first.preparation_id != previous.preparation_id
+    assert "Новая версия" in say(service, "/edit").text
+    say(service, "Новая динамика")
+    say(service, "3")
+    say(service, "/confirm")
+    current = service.sessions[1].history[-1]
+    assert current.student_ids == previous.student_ids
+    assert current.preparation_id == previous.preparation_id
+    assert current.version == previous.version + 1
+
+
+def test_confirmation_uses_teacher_scoped_names_and_only_four_fields(package):
+    service = DialogService(frozenset({1, 2}))
+    students = package.context.students
+    service.catalogs[1] = tuple(
+        StudentRecord(profile, name)
+        for profile, name in zip(students, ("Саша", "Маша"), strict=True)
+    )
+    service.catalogs[2] = tuple(StudentRecord(profile, "Чужое имя") for profile in students)
+    brief = LessonBrief.model_validate(
+        {**package.context.brief.model_dump(), "confirmed": False, "teacher_notes": "old notes"}
+    )
+    service.sessions[1] = Session(step="confirm", draft=brief, selected=students)
+    text = say(service, "/status").text
+    assert "Саша, Маша" in text and "Чужое имя" not in text
+    for value in (brief.preparation_id, "версия", "мин.", "теория", "ДЗ", "old notes"):
+        assert value not in text
+    visible = summary(brief, service.catalogs[1])
+    assert visible.splitlines() == [
+        "Ученики: Саша, Маша",
+        "Экзамен: ОГЭ",
+        f"Темы: {'; '.join(brief.topics)}",
+        f"Задач: {brief.lesson_task_count}",
+    ]
+
+
+def test_different_exams_have_separate_confirmation_and_no_backend_calls_early():
+    backend = SimpleNamespace(prepare=AsyncMock(side_effect=ValueError("synthetic")))
+    service = DialogService(frozenset({1}), backend)
+    draft(service, students="1,3", format_text="50")
+    backend.prepare.assert_not_awaited()
+    assert not service.sessions[1].history
+    say(service, "Электродинамика")
+    say(service, "1")
+    backend.prepare.assert_not_awaited()
+    say(service, "/confirm")
+    assert backend.prepare.await_count == 2
+    oge, ege = service.sessions[1].history
+    assert oge.exam == "oge" and oge.lesson_task_count == 50
+    assert ege.exam == "ege" and ege.lesson_task_count == 1
+    say(service, "/confirm")
+    assert backend.prepare.await_count == 2
+
+
+def test_legacy_group_confirmation_and_edit_preserve_archived_request(package):
+    service = DialogService(frozenset({1}))
+    brief = LessonBrief.model_validate({**package.context.brief.model_dump(), "confirmed": False})
+    service.catalogs[1] = tuple(StudentRecord(s, s.student_id) for s in package.context.students)
+    service.sessions[1] = Session(step="confirm", draft=brief, selected=package.context.students)
+    say(service, "/confirm")
+    old = service.sessions[1].history[-1]
+    assert len(old.student_ids) == 2
+    say(service, "/edit")
+    for text in ("Тема A", "2", "Тема B", "3", "/confirm"):
+        say(service, text)
+    history = service.sessions[1].history
+    assert len(history) == 3 and history[0] == old
+    assert len(history[1].student_ids) == len(history[2].student_ids) == 1
+    assert history[1].preparation_id != old.preparation_id

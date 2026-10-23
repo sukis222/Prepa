@@ -74,7 +74,7 @@ class FipiClient:
     ) -> None:
         self.http = http or httpx.AsyncClient(
             verify=ssl_context(),
-            timeout=httpx.Timeout(30),
+            timeout=httpx.Timeout(20, connect=5),
             headers={"User-Agent": USER_AGENT},
             follow_redirects=True,
         )

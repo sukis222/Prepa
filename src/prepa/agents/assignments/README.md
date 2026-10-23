@@ -7,7 +7,7 @@
 ```python
 from prepa.agents.assignments import AssignmentsAgent
 
-agent = AssignmentsAgent(llm, timeout_seconds=60, max_response_chars=200_000)
+agent = AssignmentsAgent(llm, timeout_seconds=120, max_response_chars=200_000)
 assignments = await agent.generate(context, theory)
 # Только если review адресует замечания assignments:
 assignments = await agent.generate(

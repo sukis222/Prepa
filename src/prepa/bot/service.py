@@ -16,7 +16,7 @@ from prepa.agents.runtime import (
 from prepa.db.repository import Repository, StudentRecord
 from prepa.documents.delivery import Attachment
 from prepa.preparation.jobs import attachments
-from prepa.schemas import LessonBrief, LessonPackage, StudentProfile
+from prepa.schemas import LessonBrief, LessonPackage, StudentProfile, TaskWorksheet
 
 MENU = (
     ("Новое занятие", "Ученики"),
@@ -39,20 +39,20 @@ ALIASES = {
     "Подтвердить": "/confirm",
 }
 HELP = (
-    "Prepa — подготовка занятий по физике.\n"
+    "Prepa — подборка задач по физике.\n"
     "/id — ваш числовой Telegram ID\n"
     "/students — список учеников\n"
     "/add_student — добавить ученика\n"
-    "/lesson — согласовать новое занятие\n"
+    "/lesson — подготовить файл с задачами\n"
     "/confirm — подтвердить текущий запрос\n"
     "/edit — новая версия последнего запроса\n"
     "/status — текущий запрос\n"
     "/history — подтверждённые запросы\n"
     "/result — получить результат (или /result N из истории)\n"
     "/retry — повторить неудачную подготовку (или /retry N)\n"
-    "/homework — проверка выполненного ДЗ\n"
+    "/homework — не поддерживается\n"
     "/cancel — отменить черновик\n\n"
-    "Генерация, PDF и проверка ДЗ пока не подключены."
+    "Доступность генерации и PDF зависит от режима запуска. Проверка ДЗ пока не подключена."
 )
 
 
@@ -61,7 +61,7 @@ class PreparationBackend(Protocol):
 
     async def prepare(
         self, teacher_id: int, brief: LessonBrief, students: tuple[StudentProfile, ...]
-    ) -> LessonPackage: ...
+    ) -> LessonPackage | TaskWorksheet: ...
 
 
 @dataclass(frozen=True)
@@ -86,6 +86,7 @@ class Session:
     ] = "idle"
     selected: tuple[StudentProfile, ...] = ()
     draft: LessonBrief | None = None
+    drafts: tuple[LessonBrief, ...] = ()
     topics: tuple[str, ...] = ()
     history: deque[LessonBrief] = field(default_factory=lambda: deque(maxlen=20))
     choices: tuple[StudentRecord, ...] = ()
@@ -105,17 +106,14 @@ def demo_students() -> tuple[StudentProfile, ...]:
     )
 
 
-def summary(brief: LessonBrief) -> str:
-    level = {"basic": "базовый", "intermediate": "средний", "advanced": "углублённый"}
+def summary(brief: LessonBrief, catalog: tuple[StudentRecord, ...] = ()) -> str:
+    names = {item.profile.student_id: item.display_name for item in catalog}
+    students = ", ".join(names.get(sid, "Ученик") for sid in brief.student_ids)
     return (
-        f"Подготовка {brief.preparation_id}, версия {brief.version}\n"
-        f"Ученики: {', '.join(brief.student_ids)}; {brief.exam.upper()}\n"
+        f"Ученики: {students}\n"
+        f"Экзамен: {'ОГЭ' if brief.exam == 'oge' else 'ЕГЭ'}\n"
         f"Темы: {'; '.join(brief.topics)}\n"
-        f"Урок: {brief.duration_minutes} мин.; теория: {level[brief.theory_level]}; "
-        f"задач: {brief.lesson_task_count}\n"
-        f"ДЗ каждому: {brief.homework_task_count} задач, {brief.homework_minutes} мин.\n"
-        f"Пожелания: {brief.teacher_notes or 'нет'}\n"
-        f"{'Подтверждено' if brief.confirmed else 'Ожидает подтверждения'}"
+        f"Задач: {brief.lesson_task_count}"
     )
 
 
@@ -149,7 +147,7 @@ class DialogService:
         text = ALIASES.get(text.strip(), text.strip())
         if text.split(" ", 1)[0] in ("/result", "/retry"):
             return await self._result(teacher_id, text)
-        confirmed: LessonBrief | None = None
+        confirmed: tuple[LessonBrief, ...] = ()
         async with self.repository.transaction(teacher_id) as store:
             # A short-lived worker avoids retaining uncommitted state after a failed write.
             worker = DialogService(
@@ -164,28 +162,46 @@ class DialogService:
                 worker.sessions[teacher_id].history = deque(history, maxlen=20)
             worker.catalogs[teacher_id] = await store.students()
             previous = worker.sessions.get(teacher_id, Session()).history
-            last = previous[-1] if previous else None
+            previous_keys = {(item.preparation_id, item.version) for item in previous}
             reply = await worker._respond(teacher_id, text)
             session = worker.sessions[teacher_id]
             if session.new_student is not None:
                 await store.add_student(session.new_student)
                 session.new_student = None
-            if session.history and session.history[-1] != last:
-                confirmed = session.history[-1]
-                await store.save_brief(confirmed)
+            confirmed = tuple(
+                item
+                for item in session.history
+                if (item.preparation_id, item.version) not in previous_keys
+            )
+            for brief in confirmed:
+                profiles = tuple(s for s in session.selected if s.student_id in brief.student_ids)
+                await store.save_brief(brief)
                 if self.job_mode:
-                    await store.enqueue(confirmed, session.selected, self.job_mode)
-                    reply = Reply(
-                        ("ДЕМО: " if self.job_mode == "demo" else "")
-                        + "Запрос подтверждён и поставлен в очередь. Результат придёт отдельным "
-                        "сообщением. /result — статус и повторная выдача."
-                    )
+                    await store.enqueue(brief, profiles, self.job_mode)
+            if confirmed and self.job_mode:
+                reply = Reply(
+                    ("ДЕМО: " if self.job_mode == "demo" else "")
+                    + f"Подтверждено запросов: {len(confirmed)}, поставлены в очередь. "
+                    "Для каждого ученика подготовится отдельный файл. "
+                    "/history — список; /result N — результат из истории."
+                )
             await store.save_state(
                 {"format_version": 1, "session": SESSION_ADAPTER.dump_python(session, mode="json")}
             )
         # Never hold a DB transaction across a model call or Telegram delivery.
-        if confirmed is not None and self.backend is not None and not self.job_mode:
-            return await self._generate(teacher_id, confirmed, session.selected)
+        if confirmed and self.backend is not None and not self.job_mode:
+            replies = [
+                await self._generate(
+                    teacher_id,
+                    brief,
+                    tuple(s for s in session.selected if s.student_id in brief.student_ids),
+                )
+                for brief in confirmed
+            ]
+            return Reply(
+                "\n\n".join(item.text for item in replies),
+                attachments=tuple(f for item in replies for f in item.attachments),
+            )
         return reply
 
     async def _result(self, teacher_id: int, text: str) -> Reply:
@@ -210,12 +226,16 @@ class DialogService:
                 if self.job_mode and await store.retry(brief, self.job_mode):
                     return Reply("Повтор поставлен в очередь. /result — статус.")
                 return Reply("Повтор доступен только после ошибки и в том же режиме подготовки.")
-            label = f"Подготовка {brief.preparation_id}, v{brief.version}. "
+            label = summary(brief, await store.students()) + "\n"
             if job["mode"] == "demo":
                 label += "ДЕМО — не учебный материал. "
             if job["status"] == "ready":
+                if len(job["result"].get("files", ())) != 1:
+                    return Reply(
+                        label + "Сохранён старый формат. /edit — получить один новый файл."
+                    )
                 return Reply(
-                    label + "Готово. Файл teacher содержит ответы; не передавайте его ученикам.",
+                    label + "Готово. Один файл с задачами.",
                     attachments=attachments(job["result"]),
                 )
             statuses = {
@@ -236,6 +256,9 @@ class DialogService:
         session = self.sessions.setdefault(teacher_id, Session())
         catalog = self._catalog(teacher_id)
         text = ALIASES.get(text.strip(), text.strip())
+        if session.step in ("student_goal", "notes") and not text.startswith("/"):
+            self.sessions[teacher_id] = Session(history=session.history)
+            return Reply("Форма обновлена. /add_student — ученик; /lesson — файл с задачами.")
         if text in ("/start", "/help"):
             storage = (
                 "Ученики, черновики и подтверждённые запросы сохраняются в PostgreSQL."
@@ -245,6 +268,8 @@ class DialogService:
             mode = ""
             if self.job_mode == "demo":
                 mode = "\nДЕМО: тестовые материалы и TXT-файлы, без LLM, PDF и проверки физики."
+            if self.job_mode == "real":
+                mode = "\nREAL: генерация через OpenRouter, проверка и PDF."
             return Reply(HELP + "\n" + storage + mode)
         if text == "/id":
             return Reply(f"Ваш Telegram ID: {teacher_id}")
@@ -264,25 +289,31 @@ class DialogService:
             )
             return Reply(
                 self._students_text(catalog)
-                + "\nВведите номера одного или двух учеников: 1 или 1,2."
+                + "\nВведите номера одного или двух учеников: 1 или 1,2. "
+                "Для каждого отдельно укажите темы и число задач."
             )
         if text == "/history":
             entries = [
-                f"{i}. {item.preparation_id} · v{item.version} · {', '.join(item.topics)}"
+                f"{i}. {self._names(item.student_ids, catalog)} · v{item.version} · "
+                f"{', '.join(item.topics)} · задач: {item.lesson_task_count}"
                 for i, item in enumerate(session.history, 1)
             ]
             return Reply(
                 "Подтверждённые запросы (до 20):\n" + "\n".join(entries or ["Пока пусто."])
             )
         if text == "/status":
-            brief = session.draft or (session.history[-1] if session.history else None)
-            details = summary(brief) if brief else "Запрос ещё не составлен."
+            pending = session.drafts or ((session.draft,) if session.draft else ())
+            briefs = pending or ((session.history[-1],) if session.history else ())
+            details = "\n\n".join(summary(item, catalog) for item in briefs)
+            if briefs:
+                details += "\n" + (
+                    "Подтверждено" if briefs[-1].confirmed else "Ожидает подтверждения"
+                )
+            else:
+                details = "Запрос ещё не составлен."
             return Reply(details + f"\nШаг: {session.step}. /cancel — отменить черновик.")
         if text == "/homework":
-            return Reply(
-                "Проверка ДЗ ещё не подключена. Файлы не сохраняются и не проверяются. "
-                "Для этого сценария нужны выданное ДЗ, ученик и агент проверки."
-            )
+            return Reply("Проверка ДЗ не поддерживается. Файлы не сохраняются и не проверяются.")
         if text == "/edit":
             if not session.history:
                 return Reply("Сначала подтвердите запрос через /lesson.")
@@ -292,13 +323,14 @@ class DialogService:
             )
             self.sessions[teacher_id] = Session(
                 step="topics",
-                draft=draft,
+                draft=draft if len(draft.student_ids) == 1 else None,
                 selected=tuple(
                     s.profile for s in catalog if s.profile.student_id in draft.student_ids
                 ),
                 history=session.history,
+                choices=catalog,
             )
-            return Reply("Новая версия запроса. " + self._topics_prompt())
+            return Reply("Новая версия запроса. " + self._prompt(self.sessions[teacher_id]))
         if text == "/confirm":
             if session.step != "confirm" or session.draft is None:
                 return Reply("Нет запроса для подтверждения. Начните с /lesson.")
@@ -315,12 +347,16 @@ class DialogService:
         return (
             "Ученики:\n"
             + "\n".join(
-                f"{i}. {s.display_name} — {s.profile.grade} класс, "
-                f"{s.profile.exam.upper()}, {s.profile.level}"
+                f"{i}. {s.display_name} — {s.profile.grade} класс, {s.profile.exam.upper()}"
                 for i, s in enumerate(catalog, 1)
             )
             + ("\n/add_student — добавить ученика." if not catalog else "")
         )
+
+    @staticmethod
+    def _names(ids: tuple[str, ...], catalog: tuple[StudentRecord, ...]) -> str:
+        names = {item.profile.student_id: item.display_name for item in catalog}
+        return ", ".join(names.get(sid, "Ученик") for sid in ids)
 
     @staticmethod
     def _topics_prompt() -> str:
@@ -329,22 +365,24 @@ class DialogService:
     def _prompt(self, session: Session) -> str:
         return {
             "student_name": "Введите имя ученика (от 1 до 100 символов).",
-            "student_profile": "Введите класс, экзамен и уровень (1–3). Пример: 9 ОГЭ 1.",
-            "student_goal": "Введите цель (до 500 символов) или «-».",
-            "students": "Введите 1–2 разных номера через запятую, с одинаковым экзаменом.",
-            "topics": self._topics_prompt(),
+            "student_profile": "Введите класс и экзамен. Пример: 9 ОГЭ или 11 ЕГЭ.",
+            "student_goal": "Форма обновлена. /add_student — добавить ученика заново.",
+            "students": "Введите 1–2 разных номера через запятую.",
+            "topics": (f"{self._active_name(session)}: " + self._topics_prompt()),
             "format": (
-                "Введите 5 значений через пробел: минуты урока, уровень теории "
-                "(1 — базовый, 2 — средний, 3 — углублённый), число задач урока, "
-                "число задач ДЗ, минуты ДЗ.\n"
-                "Пример: 60 1 4 2 20. "
-                "Без ДЗ: 60 1 4 0 0. "
-                "Время до 180 мин., задач до 20; задач урока не меньше числа тем."
+                f"{self._active_name(session)}: введите число задач от 1 до 50, "
+                "не меньше числа тем. Пример: 4."
             ),
-            "notes": "Добавьте пожелания (до 1000 символов) или отправьте «-».",
+            "notes": "Форма обновлена. /lesson — создать запрос заново.",
             "confirm": "Нажмите «Подтвердить» или /cancel для отмены.",
             "idle": "Начните с /lesson; /help — помощь.",
         }[session.step]
+
+    def _active_name(self, session: Session) -> str:
+        if not session.selected:
+            return "Ученик"
+        index = min(len(session.drafts), len(session.selected) - 1)
+        return self._names((session.selected[index].student_id,), session.choices)
 
     def _advance(self, session: Session, text: str) -> Reply:
         if session.step == "student_name":
@@ -353,25 +391,17 @@ class DialogService:
             session.student_name = text
             session.step = "student_profile"
         elif session.step == "student_profile":
-            grade, exam, pupil_level = text.lower().split()
+            grade, exam = text.lower().split()
             exams = {"огэ": "oge", "егэ": "ege", "oge": "oge", "ege": "ege"}
-            pupil_levels = {"1": "basic", "2": "intermediate", "3": "advanced"}
             session.student_profile = StudentProfile.model_validate(
                 {
                     "student_id": uuid4().hex,
                     "grade": int(grade),
                     "exam": exams.get(exam),
-                    "level": pupil_levels.get(pupil_level),
+                    "level": "basic",
                 }
             )
-            session.step = "student_goal"
-        elif session.step == "student_goal":
-            if not 1 <= len(text) <= 500:
-                raise ValueError("goal")
-            assert session.student_profile is not None
-            session.new_student = StudentRecord(
-                session.student_profile, session.student_name, None if text == "-" else text
-            )
+            session.new_student = StudentRecord(session.student_profile, session.student_name)
             session.step = "idle"
             return Reply(f"Ученик {session.student_name} добавлен. /lesson — подготовить занятие.")
         elif session.step == "students":
@@ -382,8 +412,6 @@ class DialogService:
             if any(number < 1 or number > len(students) for number in numbers):
                 raise ValueError("selection")
             selected = tuple(students[number - 1] for number in numbers)
-            if len({s.exam for s in selected}) != 1:
-                raise ValueError("exams")
             session.selected = selected
             session.step = "topics"
         elif session.step == "topics":
@@ -397,53 +425,66 @@ class DialogService:
             session.topics = topics
             session.step = "format"
         elif session.step == "format":
-            duration, level, tasks, homework, minutes = (int(value) for value in text.split())
-            levels = {1: "basic", 2: "intermediate", 3: "advanced"}
-            if level not in levels:
-                raise ValueError("level")
+            tasks = int(text)
             session.draft = LessonBrief.model_validate(
                 {
                     "preparation_id": session.draft.preparation_id
                     if session.draft
                     else uuid4().hex,
                     "version": session.draft.version if session.draft else 1,
-                    "student_ids": tuple(s.student_id for s in session.selected),
-                    "exam": session.selected[0].exam,
+                    "student_ids": (session.selected[len(session.drafts)].student_id,),
+                    "exam": session.selected[len(session.drafts)].exam,
                     "topics": session.topics,
-                    "duration_minutes": duration,
-                    "theory_level": levels[level],
+                    "duration_minutes": 180,
+                    "theory_level": "basic",
                     "lesson_task_count": tasks,
-                    "homework_task_count": homework,
-                    "homework_minutes": minutes,
+                    "homework_task_count": 0,
+                    "homework_minutes": 0,
                 }
             )
-            session.step = "notes"
-        elif session.step == "notes":
-            if not text or len(text) > 1000:
-                raise ValueError("notes")
-            assert session.draft is not None
-            session.draft = LessonBrief.model_validate(
-                {**session.draft.model_dump(), "teacher_notes": None if text == "-" else text}
-            )
+            session.drafts = (*session.drafts, session.draft)
+            if len(session.drafts) < len(session.selected):
+                session.draft = None
+                session.topics = ()
+                session.step = "topics"
+                return Reply(self._prompt(session), (("Отмена",),))
             session.step = "confirm"
-            return Reply(summary(session.draft), (("Подтвердить", "Отмена"),))
+            return Reply(
+                "\n\n".join(summary(item, session.choices) for item in session.drafts),
+                (("Подтвердить", "Отмена"),),
+            )
         return Reply(self._prompt(session), (("Отмена",),))
 
     async def _confirm(self, teacher_id: int, session: Session) -> Reply:
         assert session.draft is not None
-        brief = LessonBrief.model_validate({**session.draft.model_dump(), "confirmed": True})
-        session.history.append(brief)
+        briefs = tuple(
+            LessonBrief.model_validate({**draft.model_dump(), "confirmed": True})
+            for draft in (session.drafts or (session.draft,))
+        )
+        session.history.extend(briefs)
         session.draft = None
+        session.drafts = ()
         session.step = "idle"
         if self.backend is None:
             destination = (
                 "в PostgreSQL" if self.repository is not None else "в памяти до перезапуска"
             )
             return Reply(
-                f"Запрос подтверждён и сохранён {destination}. "
-                "Генерация и PDF пока не подключены. /edit — подготовить новую версию."
+                f"Запросов подтверждено: {len(briefs)}, сохранены {destination}. "
+                "Генерация и PDF пока не подключены. /edit — новая версия последнего запроса."
             )
-        return await self._generate(teacher_id, brief, session.selected)
+        replies = [
+            await self._generate(
+                teacher_id,
+                brief,
+                tuple(s for s in session.selected if s.student_id in brief.student_ids),
+            )
+            for brief in briefs
+        ]
+        return Reply(
+            "\n\n".join(item.text for item in replies),
+            attachments=tuple(f for item in replies for f in item.attachments),
+        )
 
     async def _generate(
         self, teacher_id: int, brief: LessonBrief, students: tuple[StudentProfile, ...]
@@ -452,6 +493,8 @@ class DialogService:
         try:
             async with asyncio.timeout(180):
                 package = await self.backend.prepare(teacher_id, brief, students)
+            if not isinstance(package, LessonPackage):
+                raise ValueError("Source worksheets require the persistent PDF worker")
             package = LessonPackage.model_validate(package.model_dump(mode="json"))
             if package.context.brief != brief or set(package.context.students) != set(students):
                 raise ValueError("Backend returned another context")

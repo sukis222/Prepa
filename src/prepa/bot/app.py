@@ -2,7 +2,9 @@
 
 import asyncio
 import logging
+import os
 from contextlib import suppress
+from pathlib import Path
 
 from aiogram import Bot, Dispatcher, Router
 from aiogram.types import BufferedInputFile, KeyboardButton, Message, ReplyKeyboardMarkup
@@ -11,10 +13,14 @@ from dotenv import load_dotenv
 from prepa.bot.service import DialogService, Reply
 from prepa.bot.settings import Settings
 from prepa.db.repository import PostgresRepository
-from prepa.documents.delivery import DemoDocuments
+from prepa.documents.latex import LatexDocuments
+from prepa.documents.source import SourceDocuments
+from prepa.llm import OpenRouterLLM, OpenRouterSettings
 from prepa.preparation.demo import DemoBackend
 from prepa.preparation.jobs import JobQueue
+from prepa.preparation.source import SourceSelectionBackend
 from prepa.preparation.worker import work
+from prepa.task_bank.reshai import ReshaiSource
 
 logger = logging.getLogger(__name__)
 
@@ -70,11 +76,12 @@ def create_router(service: DialogService) -> Router:
 async def run(settings: Settings) -> None:
     repository = PostgresRepository(settings.database_url)
     await repository.check()
-    mode = "demo" if settings.preparation_mode == "demo" else None
+    mode = settings.preparation_mode if settings.preparation_mode != "off" else None
     service = DialogService(settings.teacher_ids, repository=repository, job_mode=mode)
     dispatcher = Dispatcher()
     dispatcher.include_router(create_router(service))
     async with Bot(settings.token) as bot:
+        llm = OpenRouterLLM(OpenRouterSettings.from_env()) if mode == "real" else None
 
         async def deliver(teacher_id: int, reply: Reply) -> None:
             await bot.send_message(teacher_id, reply.text)
@@ -87,8 +94,22 @@ async def run(settings: Settings) -> None:
             asyncio.create_task(
                 work(
                     JobQueue(settings.database_url, mode),
-                    DemoBackend(),
-                    DemoDocuments(),
+                    SourceSelectionBackend(
+                        llm,
+                        corpus_path=(
+                            Path(settings.source_corpus_path)
+                            if settings.source_provider == "local"
+                            else None
+                        ),
+                        source=ReshaiSource() if settings.source_provider == "reshai" else None,
+                        check_model=llm.check_model,
+                    )
+                    if llm
+                    else DemoBackend(),
+                    (SourceDocuments if llm else LatexDocuments)(
+                        engine=os.environ.get("LATEX_ENGINE", "xelatex"),
+                        font=os.environ.get("LATEX_FONT", "DejaVu Serif"),
+                    ),
                     deliver,
                     settings.teacher_ids,
                 )
@@ -108,6 +129,8 @@ async def run(settings: Settings) -> None:
                 worker.cancel()
                 with suppress(asyncio.CancelledError):
                     await worker
+            if llm is not None:
+                await llm.aclose()
 
 
 def main() -> None:

@@ -4,12 +4,22 @@ services:
   bot:
     build:
       context: .
-      dockerfile: Containerfile
+      dockerfile: Dockerfile
     init: true
     environment:
       TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:?Set TELEGRAM_BOT_TOKEN in .env}
       TELEGRAM_ALLOWED_USER_IDS: ${TELEGRAM_ALLOWED_USER_IDS:?Set TELEGRAM_ALLOWED_USER_IDS in .env}
+      LATEX_ENGINE: ${LATEX_ENGINE:-xelatex}
+      LATEX_FONT: ${LATEX_FONT:-DejaVu Serif}
       PREPARATION_MODE: ${PREPARATION_MODE:-off}
+      SOURCE_PROVIDER: ${SOURCE_PROVIDER:-reshai}
+      SOURCE_CORPUS_PATH: ${SOURCE_CORPUS_PATH:-}
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY:-}
+      OPENROUTER_BASE_URL: ${OPENROUTER_BASE_URL:-https://openrouter.ai/api/v1}
+      OPENROUTER_MODEL: ${OPENROUTER_MODEL:-nvidia/nemotron-3.5-super-vl:free}
+      OPENROUTER_TIMEOUT_SECONDS: ${OPENROUTER_TIMEOUT_SECONDS:-120}
+      OPENROUTER_MAX_TOKENS: ${OPENROUTER_MAX_TOKENS:-8192}
+      OPENROUTER_REASONING: ${OPENROUTER_REASONING:-default}
       PGHOST: postgres
       PGDATABASE: ${POSTGRES_DB:-prepa}
       PGUSER: ${POSTGRES_USER:-prepa}

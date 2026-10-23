@@ -6,7 +6,7 @@
 ```python
 from prepa.agents.theory import TheoryAgent
 
-agent = TheoryAgent(llm, timeout_seconds=60, max_response_chars=200_000)
+agent = TheoryAgent(llm, timeout_seconds=120, max_response_chars=200_000)
 theory = await agent.generate(context)
 # При наличии адресованных замечаний и неизменном контексте:
 theory = await agent.generate(context, previous=theory, feedback=review)

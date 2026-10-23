@@ -72,12 +72,11 @@ def send(repo, text, teacher=1, backend=None):
 def add_student(repo, teacher=1):
     send(repo, "/add_student", teacher)
     send(repo, "Синтетический ученик", teacher)
-    send(repo, "9 ОГЭ 1", teacher)
-    return send(repo, "Сдать экзамен", teacher)
+    return send(repo, "9 ОГЭ", teacher)
 
 
 def lesson(repo):
-    for text in ("/lesson", "1", "Кинематика", "60 1 4 2 20", "-"):
+    for text in ("/lesson", "1", "Кинематика", "4"):
         send(repo, text)
 
 
@@ -97,7 +96,7 @@ def test_restart_at_every_step_and_isolation():
     assert "Нет запроса" in send(repo, "/confirm").text
     assert len(repo.data[1]["briefs"]) == 1
     assert "Новая версия" in send(repo, "/edit").text
-    for text in ("Динамика", "45 2 3 0 0", "Изменить задачи", "/confirm"):
+    for text in ("Динамика", "3", "/confirm"):
         send(repo, text)
     second = repo.data[1]["briefs"][1]
     assert first.preparation_id == second.preparation_id and second.version == 2
@@ -154,12 +153,9 @@ def test_add_student_validation_and_memory_fallback():
     for value in ("", "a" * 101):
         assert "Не удалось" in say(value).text
     say("Тест")
-    for value in ("8 ОГЭ 1", "9 ОГЭ 4", "9 XXX 1", "wrong"):
+    for value in ("8 ОГЭ", "9 ОГЭ 4", "9 XXX", "wrong"):
         assert "Не удалось" in say(value).text
-    say("10 егэ 3")
-    for value in ("", "a" * 501):
-        assert "Не удалось" in say(value).text
-    assert "добавлен" in say("-").text
+    assert "добавлен" in say("10 егэ").text
     assert "Тест" in say("/students").text
     assert len(service.catalogs[1]) == 4
 
@@ -260,3 +256,77 @@ def test_startup_failure_hides_credentials(monkeypatch):
     with pytest.raises(SystemExit) as error:
         app.main()
     assert "secret" not in str(error.value)
+
+
+def test_two_pupils_restart_atomic_jobs_and_repeated_confirmation():
+    class FailingSecondJobRepository(MemoryRepository):
+        fail_second = True
+
+        @asynccontextmanager
+        async def transaction(self, teacher_id):
+            async with super().transaction(teacher_id) as store:
+                enqueue = store.enqueue
+                count = 0
+
+                async def failing_enqueue(*args):
+                    nonlocal count
+                    count += 1
+                    await enqueue(*args)
+                    if count == 2 and self.fail_second:
+                        raise RuntimeError("second job failed")
+
+                store.enqueue = failing_enqueue
+                yield store
+
+    repo = FailingSecondJobRepository()
+
+    def say(text):
+        return asyncio.run(DialogService(None, repository=repo, job_mode="real").respond(1, text))
+
+    for name, exam in (("Максим", "9 ОГЭ"), ("Ольга", "11 ЕГЭ")):
+        for text in ("/add_student", name, exam):
+            say(text)
+    for text in ("/lesson", "1,2", "Кинематика", "50"):
+        reply = say(text)
+    assert "Ольга" in reply.text and "тем" in reply.text.lower()
+    assert not repo.data[1].get("jobs")
+    assert "Нет запроса" in say("/confirm").text
+    assert "Не удалось" in say("x" * 161).text
+    say("Термодинамика")
+    assert "Не удалось" in say("51").text
+    reply = say("4")
+    assert "Максим" in reply.text and "Ольга" in reply.text
+    before = deepcopy(repo.data)
+    with pytest.raises(RuntimeError, match="second job"):
+        say("/confirm")
+    assert repo.data == before
+    repo.fail_second = False
+    assert "Подтверждено запросов: 2" in say("/confirm").text
+    briefs = repo.data[1]["briefs"]
+    assert [b.topics for b in briefs] == [("Кинематика",), ("Термодинамика",)]
+    assert [b.lesson_task_count for b in briefs] == [50, 4]
+    assert [b.exam for b in briefs] == ["oge", "ege"]
+    assert len({b.preparation_id for b in briefs}) == 2
+    assert len(repo.data[1]["jobs"]) == 2
+    for brief in briefs:
+        job = repo.data[1]["jobs"][(brief.preparation_id, brief.version)]
+        assert tuple(s.student_id for s in job["students"]) == brief.student_ids
+    assert "Нет запроса" in say("/confirm").text
+    assert len(repo.data[1]["jobs"]) == 2
+    assert "Максим" in say("/result 1").text
+    assert "Ольга" in say("/result 2").text
+
+
+@pytest.mark.parametrize("command", ["/cancel", "/lesson", "/add_student"])
+def test_replacing_partial_batch_clears_completed_pupil_drafts(command):
+    repo = MemoryRepository()
+    add_student(repo)
+    add_student(repo)
+    for text in ("/lesson", "1,2", "Кинематика", "4"):
+        send(repo, text)
+    session = SESSION_ADAPTER.validate_python(repo.data[1]["state"]["session"])
+    assert len(session.drafts) == 1
+    send(repo, command)
+    session = SESSION_ADAPTER.validate_python(repo.data[1]["state"]["session"])
+    assert session.drafts == () and session.draft is None
+    assert repo.data[1]["briefs"] == []
