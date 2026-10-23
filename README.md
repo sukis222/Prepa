@@ -148,6 +148,15 @@ pyproject.toml задаёт Python 3.12+. Для реализованных аг
 
 Настройки в .env.example: TELEGRAM_BOT_TOKEN, TELEGRAM_ALLOWED_USER_IDS, POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD, OPENROUTER_API_KEY, OPENROUTER_BASE_URL, OPENROUTER_MODEL, DATABASE_URL и LATEX_ENGINE. Бот читает настройки Telegram и PostgreSQL. .env не публикуется. Для демо используются вымышленные ученики.
 
+## Команда
+
+| Участник | GitHub |
+|---|---|
+| Макаркин Артур (руководитель) | [sukis222](https://github.com/sukis222) |
+| Убушаев Валерий | [FeelW1N](https://github.com/FeelW1N) |
+| Синицын Максим | [c0ldzy17](https://github.com/c0ldzy17) |
+| Бубнов Демьян | [Demyan228](https://github.com/Demyan228) |
+
 ## Совместная разработка
 
 Перед параллельной разработкой команда согласует форматы `StudentProfile`, `LessonBrief`, `Theory`, `Assignment`, `Homework`, `ReviewResult`, `HomeworkSubmission`, `HomeworkCheckResult`, `LessonPackage` и результат сборки документа. Изменения выполняются в отдельных ветках и объединяются через pull request.
