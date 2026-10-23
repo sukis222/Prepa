@@ -4,3 +4,5 @@ recursive-include examples *.py
 recursive-include data/demo *.json *.md
 recursive-include tests *.py *.md *.html
 recursive-include src/prepa *.md *.pem py.typed
+recursive-include migrations *.sql
+include Containerfile compose.yaml .containerignore
