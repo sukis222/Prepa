@@ -71,7 +71,7 @@ def safe_math(value: str) -> str:
         if char in "$%#&~" or ord(char) < 32 or char == "\x7f":
             raise DocumentError("unsupported_math")
         if char == "\\":
-            match = re.match(r"\\([a-zA-Z]+|[,;:! {}|])", value[position:])
+            match = re.match(r"\\([a-zA-Z]+|[,;:! {}|%])", value[position:])
             if match is None:
                 raise DocumentError("unsupported_math")
             command = match.group(1)

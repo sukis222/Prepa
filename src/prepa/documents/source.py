@@ -24,7 +24,7 @@ def render_source_text(text: str) -> str:
     for match in re.finditer(r"(?<!\$)(\$\$|\$)([^$]+)\1(?!\$)", text):
         parts.append(escape_text(text[end : match.start()]).replace("⊗", r"\(\otimes\)"))
         formula = safe_math(
-            match.group(2)
+            re.sub(r"(?<!\\)%", r"\\%", match.group(2))
             .replace("\n", " ")
             .replace("~", r"\ ")
             .replace("ℰ", r"\mathcal{E}")

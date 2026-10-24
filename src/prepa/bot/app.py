@@ -20,6 +20,8 @@ from prepa.db.repository import PostgresRepository
 from prepa.documents.latex import LatexDocuments
 from prepa.documents.source import SourceDocuments
 from prepa.llm import OpenRouterLLM, OpenRouterSettings
+from prepa.llm.fallback import RateLimitFallbackLLM
+from prepa.llm.ollama import OllamaLLM, OllamaSettings
 from prepa.preparation.demo import DemoBackend
 from prepa.preparation.jobs import JobQueue
 from prepa.preparation.source import SourceSelectionBackend
@@ -118,7 +120,25 @@ async def run(settings: Settings) -> None:
     service = DialogService(settings.teacher_ids, repository=repository, job_mode=mode)
     dispatcher = Dispatcher()
     async with Bot(settings.token) as bot:
-        llm = OpenRouterLLM(OpenRouterSettings.from_env()) if mode == "real" else None
+        provider = os.environ.get("LLM_PROVIDER", "openrouter").strip().lower()
+        if provider not in ("openrouter", "ollama", "auto"):
+            raise ValueError("LLM_PROVIDER должен быть openrouter, ollama или auto")
+        llm = (
+            (
+                OllamaLLM(OllamaSettings.from_env())
+                if provider == "ollama"
+                else (
+                    RateLimitFallbackLLM(
+                        OpenRouterLLM(OpenRouterSettings.from_env()),
+                        OllamaLLM(OllamaSettings.from_env()),
+                    )
+                    if provider == "auto"
+                    else OpenRouterLLM(OpenRouterSettings.from_env())
+                )
+            )
+            if mode == "real"
+            else None
+        )
         summary_service = (
             SummaryDialog(
                 PostgresLessonMemory(settings.database_url),

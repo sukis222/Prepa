@@ -171,7 +171,7 @@ def failure_message(error: Exception) -> tuple[str, str]:
             "reasoning_configuration_unavailable": "Модель не поддерживает отключение reasoning.",
         }
         return "model_" + error.code, messages.get(
-            error.code, "OpenRouter не вернул корректный ответ. /retry — повторить позже."
+            error.code, "Модель не вернула корректный ответ.\n/retry — повторить позже."
         )
     if isinstance(error, DocumentError):
         return "pdf_failed", "PDF не собран. Выдача отменена; проверьте LaTeX. /retry — повторить."

@@ -155,6 +155,14 @@ def test_perpendicular_symbol_in_condition_and_formula():
     assert render_source_text("$v ⊥ B$") == r"\(v \perp  B\)"
 
 
+def test_source_percentage_in_math_is_escaped_without_changing_condition():
+    assert render_source_text(r"КПД $\eta=20~%.$") == r"КПД \(\eta=20\ \%.\)"
+    assert render_source_text(r"$\eta=20\%$") == r"\(\eta=20\%\)"
+    assert render_source_text("Поле ⊙, скорость ⊥ полю") == (
+        r"Поле \(\odot\), скорость \(\perp\) полю"
+    )
+
+
 def test_display_math_from_published_solution():
     assert render_source_text(r"$$\mathcal{E}=\frac{Q}{t}$$") == r"\[\mathcal{E}=\frac{Q}{t}\]"
     assert render_source_text(r"$U=2~\text{кВ}$") == r"\(U=2\ \text{кВ}\)"
