@@ -105,6 +105,14 @@ def resolve_topics(topic: str) -> tuple[str, ...]:
         for slug, words in TOPICS.items()
         if any(re.search(r"(?<!\w)" + re.escape(w), text) for w in words)
     )
+    if re.search(r"лоренц|фараде|ленца|сил\w*\s+ампер", text):
+        slugs = tuple(
+            slug
+            for slug in slugs
+            if slug != "dynamics-and-gravitation"
+            or re.search(r"динамик|ньютон|гравитац|равновес|пружин|статик", text)
+        )
+        slugs = tuple(dict.fromkeys((*slugs, "magnetic-field-and-induction")))
     if not slugs:
         raise ReshaiError("Unknown Reshai topic")
     return slugs
@@ -232,7 +240,7 @@ def image_snapshot(content: bytes) -> SourceImage:
 
 
 class ReshaiSource:
-    """Requested topics only; <=16 listings for cycles (12 otherwise), <=70 conditions."""
+    """Bounded search: 70 conditions, or 120 when illustrations are requested."""
 
     def __init__(
         self,
@@ -353,6 +361,8 @@ class ReshaiSource:
         cycle_query = "цикл" in description.casefold()
         requested_part = request_part(description)
         requested_numbers = request_numbers(description)
+        require_images = bool(re.search(r"с\s+(?:график|рисунк|картинк)", description, re.I))
+        detail_limit = 120 if require_images else 70
         listing_budget = 16 if cycle_query else 12
         target = max(20, min(brief.lesson_task_count + 10, 60))
         for topic in brief.topics:
@@ -391,7 +401,13 @@ class ReshaiSource:
                     for bucket in buckets.values():
                         if bucket:
                             ranked.append(bucket.pop(0))
-            for item in ranked[:70]:
+            if re.search(r"ампер|лоренц", description, re.I):
+                ranked.sort(
+                    key=lambda item: (
+                        not bool(re.search(r"ампер|лоренц|сил[аы]", item.preview, re.I))
+                    )
+                )
+            for item in ranked[:detail_limit]:
                 if item.id not in grouped:
                     grouped[item.id] = (item, set())
                 grouped[item.id][1].add(topic)
@@ -401,7 +417,7 @@ class ReshaiSource:
         grouped_items = list(grouped.values())
         if cycle_query:
             grouped_items.sort(key=lambda pair: not bool(CYCLE.search(pair[0].preview)))
-        grouped_items = grouped_items[:70]
+        grouped_items = grouped_items[:detail_limit]
         for start in range(0, len(grouped_items), 3):
             chunk = grouped_items[start : start + 3]
             results = await asyncio.gather(
@@ -409,6 +425,8 @@ class ReshaiSource:
             )
             for (_item, topics), result in zip(chunk, results, strict=True):
                 if isinstance(result, SourceTask):
+                    if require_images and not result.images:
+                        continue
                     # Recheck the cycle constraint against the complete original.
                     covered = tuple(
                         t for t in topics if not cycle_query or CYCLE.search(result.statement_exact)

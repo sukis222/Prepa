@@ -136,13 +136,15 @@ def failure_message(error: Exception) -> tuple[str, str]:
     if isinstance(error, SourceCapacityError):
         return "source_capacity", (
             f"В подключённом источнике доступно {error.available} подходящих задач, "
-            f"а запрошено {error.requested}. Уменьшите число через /edit. "
-            "Новые условия не генерируются."
+            f"а запрошено {error.requested}. Новые условия не генерируются.\n\n"
+            "/edit — изменить темы или количество задач.\n"
+            "/retry — повторить поиск."
         )
     if isinstance(error, SourceCorpusError):
         return "source_corpus", (
-            "Источник условий недоступен, не проверен или выбор задач некорректен. "
-            "Уточните название темы через /edit или повторите запрос через /retry."
+            "Не удалось получить подходящие задачи из источника.\n\n"
+            "/edit — изменить темы и пожелания.\n"
+            "/retry — повторить поиск."
         )
 
     if isinstance(error, InsufficientMaterialsError):

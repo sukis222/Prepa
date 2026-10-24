@@ -319,3 +319,39 @@ def test_requested_exam_numbers():
     assert request_numbers("термодинамика, задания 24, 25 и 26") == {24, 25, 26}
     assert request_numbers("первая часть, 30 задач") == set()
     assert request_numbers("задания 2 части по термодинамике") == set()
+
+
+@pytest.mark.parametrize(
+    "topic",
+    [
+        "сила ампера и лоренца и хочется задачи с графиками либо картинками не просто голый текст",
+        "Силы Ампера",
+        "Сила Лоренца",
+        "Закон Фарадея",
+    ],
+)
+def test_magnetic_force_aliases_do_not_route_to_mechanics(topic):
+    assert resolve_topics(topic) == ("magnetic-field-and-induction",)
+
+
+def test_requested_figures_are_present(tmp_path, context):
+    def handler(request):
+        if "/media/task/" in request.url.path:
+            return httpx.Response(200, content=picture(), headers={"content-type": "image/gif"})
+        if "physics." in request.url.path:
+            body = card("ABC123", text="Сила Ампера") + card("ABC124", text="Сила Лоренца")
+        else:
+            body = condition(
+                "Сила Ампера " + request.url.path[-6:], image=request.url.path.endswith("ABC124")
+            )
+        return httpx.Response(200, text=body, headers={"content-type": "text/html"})
+
+    async def check():
+        async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as http:
+            result = await ReshaiSource(
+                http=http, cache_dir=tmp_path, request_interval=0
+            ).candidates(brief(context, exam="ege", topics=["Сила Ампера с картинками"]))
+        assert len(result) == 1 and result[0][0].id == "reshai-ABC124"
+        assert result[0][0].images
+
+    run(check())

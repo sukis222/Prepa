@@ -146,6 +146,8 @@ def test_bad_source_never_goes_to_model(source_case, mode):
         run(backend.prepare(1, brief, students))
     assert failure_message(SourceCorpusError("secret"))[0] == "source_corpus"
     assert "secret" not in failure_message(SourceCorpusError("secret"))[1]
+    message = failure_message(SourceCorpusError("secret"))[1]
+    assert "\n/edit —" in message and "\n/retry —" in message
     llm.generate.assert_not_awaited()
     check.assert_not_awaited()
 

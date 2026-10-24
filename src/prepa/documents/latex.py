@@ -35,11 +35,13 @@ ESCAPES = {
     "_": r"\_",
     "~": r"\textasciitilde{}",
     "^": r"\textasciicircum{}",
+    "⊙": r"\(\odot\)",
+    "⊗": r"\(\otimes\)",
 }
 MATH_COMMANDS = frozenset(
     "frac dfrac tfrac sqrt vec overline underline hat bar dot ddot mathrm mathbf mathit "
     "mathsf mathcal text textrm operatorname left right cdot times otimes div pm mp "
-    "le leq ge geq ne neq "
+    "odot le leq ge geq ne neq "
     "approx equiv sim propto infty degree circ angle perp parallel sin cos tan cot "
     "arcsin arccos arctan ln log exp lim sum prod int iint oint partial nabla Delta "
     "alpha beta gamma delta epsilon varepsilon zeta eta theta vartheta iota kappa lambda "

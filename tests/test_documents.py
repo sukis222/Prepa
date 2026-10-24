@@ -80,6 +80,7 @@ def test_plain_text_never_becomes_commands():
     assert r"\textbackslash{}input\{secret\}" in text
     assert r"100\% \& a\_b \$x\$" in text
     assert escape_text("a\nb") == "a\n\nb"
+    assert escape_text("⊙ ⊗") == r"\(\odot\) \(\otimes\)"
     with pytest.raises(DocumentError, match="invalid_text"):
         escape_text("a\x00b")
 
