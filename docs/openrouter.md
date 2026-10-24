@@ -16,10 +16,10 @@ SOURCE_PROVIDER=reshai
 # SOURCE_PROVIDER=local
 # SOURCE_CORPUS_PATH=/absolute/path/to/verified-source-tasks.json
 OPENROUTER_API_KEY=your_key
-OPENROUTER_MODEL=dots-studio/dots-3-note-preview:free
+OPENROUTER_MODEL=nvidia/nemotron-3.5-super-vl:free
 OPENROUTER_TIMEOUT_SECONDS=120
-OPENROUTER_MAX_TOKENS=4096
-OPENROUTER_REASONING=off
+OPENROUTER_MAX_TOKENS=8192
+OPENROUTER_REASONING=default
 ```
 
 Работать должен один polling-процесс на токен. Команды запуска — в README.
