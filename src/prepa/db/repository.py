@@ -44,8 +44,8 @@ class PostgresRepository:
             row = await (
                 await conn.execute("SELECT max(version) FROM schema_migrations")
             ).fetchone()
-            if row is None or row[0] != 3:
-                raise RuntimeError("Apply migrations 001 through 003 before starting the bot")
+            if row is None or row[0] != 4:
+                raise RuntimeError("Apply migrations 001 through 004 before starting the bot")
 
     @asynccontextmanager
     async def transaction(self, teacher_id: int) -> AsyncIterator[Store]:

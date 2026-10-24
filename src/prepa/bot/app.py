@@ -4,14 +4,18 @@ import asyncio
 import logging
 import os
 from contextlib import suppress
+from io import BytesIO
 from pathlib import Path
 
 from aiogram import Bot, Dispatcher, Router
 from aiogram.types import BufferedInputFile, KeyboardButton, Message, ReplyKeyboardMarkup
 from dotenv import load_dotenv
 
+from prepa.agents.summarizer import LessonSummarizerAgent
+from prepa.bot.lesson_summary import SummaryDialog
 from prepa.bot.service import DialogService, Reply
 from prepa.bot.settings import Settings
+from prepa.db.lesson_memory import PostgresLessonMemory
 from prepa.db.repository import PostgresRepository
 from prepa.documents.latex import LatexDocuments
 from prepa.documents.source import SourceDocuments
@@ -25,7 +29,7 @@ from prepa.task_bank.reshai import ReshaiSource
 logger = logging.getLogger(__name__)
 
 
-def create_router(service: DialogService) -> Router:
+def create_router(service: DialogService, summary_service: SummaryDialog | None = None) -> Router:
     router = Router(name="prepa")
 
     @router.message()
@@ -36,21 +40,55 @@ def create_router(service: DialogService) -> Router:
         if service.teacher_ids is not None and message.from_user.id not in service.teacher_ids:
             await message.answer("Доступ не настроен. Обратитесь к администратору.")
             return
-        if message.text is None:
+        text = message.text
+        transcript_file = False
+        if text is None and summary_service is not None and message.document:
+            document = message.document
+            if (
+                Path(document.file_name or "").suffix.lower() not in (".txt", ".srt", ".vtt")
+                or document.file_size is None
+                or document.file_size > 400000
+                or await summary_service.memory.pending(message.from_user.id) is None
+            ):
+                await message.answer(
+                    "Для транскрипта сначала /summarize N, затем TXT/SRT/VTT до 400 КБ."
+                )
+                return
+            buffer = BytesIO()
+            try:
+                transport_bot = message.bot
+                if transport_bot is None:
+                    raise ValueError("missing transport")
+                await transport_bot.download(document, destination=buffer)
+                if buffer.tell() > 400000:
+                    raise ValueError("transcript size")
+                text = buffer.getvalue().decode("utf-8-sig")
+                transcript_file = True
+            except (ValueError, UnicodeError):
+                await message.answer("Нужен текстовый файл UTF-8 до 400 КБ. Файл не сохранён.")
+                return
+        if text is None:
             await message.answer(
                 "Пока принимаю только текст. Файл не сохранён; проверка ДЗ ещё не подключена."
             )
             return
         # Accept /command@botname and /start deep links without changing free text.
-        text = message.text
-        if text.startswith("/"):
+        if text.startswith("/") and not transcript_file:
             command, *arguments = text.split(maxsplit=1)
             command = command.split("@")[0].lower()
             text = command
-            if command in ("/result", "/retry") and arguments:
+            if command in ("/result", "/retry", "/summarize", "/knowledge") and arguments:
                 text += " " + arguments[0]
         try:
-            reply = await service.respond(message.from_user.id, text)
+            reply = (
+                await summary_service.respond(
+                    message.from_user.id, text, transcript_file=transcript_file
+                )
+                if summary_service is not None
+                else None
+            )
+            if reply is None:
+                reply = await service.respond(message.from_user.id, text)
         except Exception as error:
             # Provider errors may contain tokens or pupils' data: never log their text.
             logger.error("Dialog failed (%s)", type(error).__name__)
@@ -79,9 +117,18 @@ async def run(settings: Settings) -> None:
     mode = settings.preparation_mode if settings.preparation_mode != "off" else None
     service = DialogService(settings.teacher_ids, repository=repository, job_mode=mode)
     dispatcher = Dispatcher()
-    dispatcher.include_router(create_router(service))
     async with Bot(settings.token) as bot:
         llm = OpenRouterLLM(OpenRouterSettings.from_env()) if mode == "real" else None
+        summary_service = (
+            SummaryDialog(
+                PostgresLessonMemory(settings.database_url),
+                LessonSummarizerAgent(llm),
+                llm.check_model,
+            )
+            if llm is not None
+            else None
+        )
+        dispatcher.include_router(create_router(service, summary_service))
 
         async def deliver(teacher_id: int, reply: Reply) -> None:
             await bot.send_message(teacher_id, reply.text)

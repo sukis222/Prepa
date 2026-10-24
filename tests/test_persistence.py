@@ -190,7 +190,7 @@ def test_repository_transaction_and_schema_check(monkeypatch):
         cursor.fetchone.return_value = row
         with pytest.raises(RuntimeError):
             asyncio.run(repo.check())
-    cursor.fetchone.return_value = (3,)
+    cursor.fetchone.return_value = (4,)
     asyncio.run(repo.check())
 
     async def use():
