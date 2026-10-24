@@ -6,7 +6,6 @@ import hashlib
 import io
 import re
 from pathlib import Path
-from urllib.parse import urlparse
 
 from PIL import Image, UnidentifiedImageError
 
@@ -19,14 +18,21 @@ MAX_IMAGE_PIXELS = 20_000_000
 
 
 def render_source_text(text: str) -> str:
-    """Render source inline math only; unmatched and doubled dollars remain text."""
+    """Render explicit source inline/display math through the same safe formula boundary."""
     parts = []
     end = 0
-    for match in re.finditer(r"(?<!\$)\$([^$]+)\$(?!\$)", text):
-        parts.append(escape_text(text[end : match.start()]))
-        parts.append(r"\(" + safe_math(match.group(1)) + r"\)")
+    for match in re.finditer(r"(?<!\$)(\$\$|\$)([^$]+)\1(?!\$)", text):
+        parts.append(escape_text(text[end : match.start()]).replace("⊗", r"\(\otimes\)"))
+        formula = safe_math(
+            match.group(2)
+            .replace("\n", " ")
+            .replace("~", r"\ ")
+            .replace("ℰ", r"\mathcal{E}")
+            .replace("⊗", r"\otimes ")
+        )
+        parts.append(r"\[" + formula + r"\]" if match.group(1) == "$$" else r"\(" + formula + r"\)")
         end = match.end()
-    parts.append(escape_text(text[end:]))
+    parts.append(escape_text(text[end:]).replace("⊗", r"\(\otimes\)"))
     return "".join(parts)
 
 
@@ -64,12 +70,17 @@ def clean_png(asset: SourceImage) -> bytes:
     return cleaned
 
 
-def source_citation(url: str, page: int | None) -> str:
-    parsed = urlparse(url)
-    # Local source provenance remains in the stored worksheet, not the public PDF.
-    label = "Prepa, проверенный набор" if not parsed.scheme or parsed.scheme == "file" else url
-    text = escape_text("Источник: " + label + (f", стр. {page}" if page else ""))
-    return text.replace("/", r"/\allowbreak{}").replace(".", r".\allowbreak{}")
+def display_statement(text: str) -> str:
+    """Hide website instructions and figure placeholders without altering stored sources."""
+    text = re.sub(r"\[\s*рисунок\s+\d+\s*\]", "", text, flags=re.IGNORECASE).strip()
+    text = re.sub(
+        r"^(?:впишите|введите|запишите)\s+(?:правильный\s+)?ответ\s*[.:]\s*",
+        "",
+        text,
+        flags=re.IGNORECASE,
+    )
+    text = re.sub(r"^дайте\s+разв[её]рнутый\s+ответ\s*[.:]\s*", "", text, flags=re.I)
+    return text.strip()
 
 
 def source_worksheet_tex(
@@ -78,61 +89,43 @@ def source_worksheet_tex(
     worksheet_font = "Arial" if font == "Times New Roman" else "DejaVu Sans"
     preamble = PREAMBLE.replace("DejaVu Serif", worksheet_font).replace(
         r"\begin{document}",
-        r"\usepackage{tikz,graphicx}"
+        r"\usepackage{graphicx}"
         "\n"
         r"\definecolor{sheetAccent}{HTML}{278757}"
         "\n"
-        r"\definecolor{sheetFill}{HTML}{EDF7F0}"
+        r"\definecolor{sheetAdvanced}{HTML}{C86B20}"
         "\n"
-        r"\definecolor{sheetGrid}{HTML}{DDEAE1}"
-        "\n"
-        r"\newsavebox{\sheetTask}"
+        r"\setlength{\parskip}{3pt}"
         "\n"
         r"\begin{document}",
     )
     parts = [
         preamble,
-        r"{\fontsize{21}{25}\selectfont\bfseries " + escape_text(worksheet.title) + r"\par}",
-        r"\vspace{3mm}",
-        r"\begingroup\setlength{\fboxsep}{3mm}"
-        r"\noindent\colorbox{sheetFill}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{"
-        r"\tikz[baseline=-0.6mm]\fill[sheetAccent] (0,0)--(1.8mm,1.8mm)--"
-        r"(3.6mm,0)--(1.8mm,-1.8mm)--cycle;\hspace{3mm}"
-        r"\textbf{Задачи из проверенных источников}}}\endgroup\par\vspace{3mm}",
+        r"{\fontsize{20}{24}\selectfont\bfseries " + escape_text(worksheet.title) + r"\par}",
+        r"\vspace{4mm}",
     ]
     for number, (task, names) in enumerate(zip(worksheet.tasks, image_names, strict=True), 1):
-        body = [r"\noindent " + str(number) + ". " + render_source_text(task.statement_exact)]
-        body.extend(r"\[" + safe_math(math) + r"\]" for math in task.statement_math_exact)
-        for name in names:
-            body.append(
-                r"\par\nopagebreak[4]\begin{center}\includegraphics["
-                r"width=0.8\linewidth,height=45mm,keepaspectratio]{" + name + r"}\end{center}"
-            )
-        body.extend(
-            [
-                r"\par\nopagebreak[4]{\footnotesize "
-                + source_citation(task.source_url, task.page)
-                + r"\par}",
-                r"\nopagebreak[4]\vspace{2mm}\nopagebreak[4]",
-                r"\noindent\begin{tikzpicture}\clip (0,0) rectangle (\linewidth,70mm);"
-                r"\draw[sheetGrid,step=5mm,line width=0.2pt](0,0) grid (\linewidth,70mm);"
-                r"\end{tikzpicture}\par",
-            ]
-        )
-        task_body = "\n".join(body)
+        color = "sheetAdvanced" if getattr(task, "exam_part", None) == 2 else "sheetAccent"
         parts.extend(
             [
-                r"\begin{lrbox}{\sheetTask}\begin{minipage}{\linewidth}",
-                task_body,
-                r"\end{minipage}\end{lrbox}",
-                r"\ifdim\dimexpr\ht\sheetTask+\dp\sheetTask\relax<\textheight",
-                r"\Needspace{\dimexpr\ht\sheetTask+\dp\sheetTask+5mm\relax}",
-                r"\noindent\usebox{\sheetTask}\par",
-                r"\else",
-                task_body,
-                r"\fi\vspace{5mm}",
+                r"\par\addvspace{5mm}\Needspace{"
+                + str(min(180, 35 + 38 * len(names)) if names else 25)
+                + "mm}",
+                r"\noindent{\color{"
+                + color
+                + r"}\bfseries "
+                + str(number)
+                + r".}\hspace{2mm}"
+                + render_source_text(display_statement(task.statement_exact)),
             ]
         )
+        parts.extend(r"\[" + safe_math(math) + r"\]" for math in task.statement_math_exact)
+        for name in names:
+            parts.append(
+                r"\par\nopagebreak[3]\begin{center}\includegraphics["
+                r"width=0.65\linewidth,height=38mm,keepaspectratio]{" + name + r"}\end{center}"
+            )
+        parts.append(r"\par")
     return "\n".join(parts) + "\n" + r"\end{document}" + "\n"
 
 

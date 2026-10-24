@@ -15,8 +15,8 @@ from prepa.documents.source import (
     SourceDocuments,
     _SourceCompiler,
     clean_png,
+    display_statement,
     render_source_text,
-    source_citation,
     source_worksheet_tex,
 )
 from prepa.schemas.source import SourceImage, SourceTask, TaskWorksheet, source_task_digest
@@ -112,15 +112,15 @@ def test_png_pixel_and_byte_limits(monkeypatch):
 def test_source_text_and_public_metadata():
     sheet = worksheet()
     source = source_worksheet_tex(sheet, ((),), "DejaVu Serif")
-    assert escape_text(sheet.tasks[0].statement_exact) in source
+    assert escape_text(sheet.tasks[0].statement_exact.strip()) in source
     assert "100\\% \\& x\\_y" in source
     assert "synthetic-student" not in source
     assert "synthetic-worksheet" not in source
     assert "/private/test" not in source
-    assert "Источник: Prepa, проверенный набор" in source
-    assert r"стр.\allowbreak{} 2" in source
-    assert "step=5mm" in source and "70mm" in source
-    assert r"\begin{minipage}" in source and r"\else" in source
+    assert "Источник:" not in source
+    assert "step=5mm" not in source and "70mm" not in source
+    assert r"\begin{minipage}" not in source
+    assert r"\bfseries 1." in source
     assert r"\setmainfont{DejaVu Sans}" in source
     assert "Ответ" not in source and "Решение" not in source
     assert source.count(r"\begingroup") == source.count(r"\endgroup")
@@ -143,9 +143,16 @@ def test_inline_source_math_mixed_text_punctuation_and_snapshot():
     assert r"\[" not in source
 
 
-@pytest.mark.parametrize("text", ["Цена $5", "$$money$$", "$$", "Обычный текст", ""])
+@pytest.mark.parametrize("text", ["Цена $5", "$$", "Обычный текст", ""])
 def test_unmatched_and_doubled_dollars_are_literal(text):
     assert render_source_text(text) == escape_text(text)
+
+
+def test_display_math_from_published_solution():
+    assert render_source_text(r"$$\mathcal{E}=\frac{Q}{t}$$") == r"\[\mathcal{E}=\frac{Q}{t}\]"
+    assert render_source_text(r"$U=2~\text{кВ}$") == r"\(U=2\ \text{кВ}\)"
+    assert render_source_text("$ℰ=2$") == r"\(\mathcal{E}=2\)"
+    assert render_source_text("Поле ⊗") == r"Поле \(\otimes\)"
 
 
 @pytest.mark.parametrize("math", [r"\input{secret}", r"^^5cinput{secret}", r"\write18{bad}"])
@@ -162,12 +169,25 @@ def test_tex_outside_inline_math_is_plain_text():
     assert r"\(x^2\)" in rendered
 
 
-def test_url_is_only_escaped_citation():
-    citation = source_citation(r"https://example.org/a?x=100%&bad=\input{secret}", None)
-    assert r"\input{secret}" not in citation
-    assert r"\textbackslash{}input\{secret\}" in citation
-    assert "100\\%\\&" in citation
-    assert source_citation("file:///private/test.pdf", 1).startswith("Источник: Prepa")
+@pytest.mark.parametrize(
+    "instruction", ["Впишите правильный ответ.", "Введите правильный ответ:", "Запишите ответ."]
+)
+def test_source_website_labels_hidden_only_in_display(instruction):
+    text = instruction + "\n[рисунок 1]\nРамка в поле (см. рисунок). [рисунок 2]"
+    assert display_statement(text) == "Рамка в поле (см. рисунок)."
+    sheet = worksheet()
+    original = SourceTask.model_validate(
+        {**sheet.tasks[0].model_dump(), "statement_exact": text, "sha256": source_task_digest(text)}
+    )
+    sheet = TaskWorksheet.model_validate({**sheet.model_dump(), "tasks": [original.model_dump()]})
+    source = source_worksheet_tex(sheet, ((),), "Times New Roman")
+    assert instruction not in source and "[рисунок" not in source
+    assert sheet.tasks[0].statement_exact == text
+    assert sheet.tasks[0].sha256 == source_task_digest(text)
+    assert (
+        display_statement("Объясните ответ. Введите ток в амперах.")
+        == "Объясните ответ. Введите ток в амперах."
+    )
 
 
 def test_model_tex_rejected_and_ordinary_text_escaped():
@@ -238,3 +258,15 @@ def test_total_cleaned_image_budget(tmp_path, monkeypatch):
     monkeypatch.setattr("prepa.documents.source.clean_png", lambda asset: next(values))
     with pytest.raises(DocumentError, match="source_images_too_large"):
         run(SourceDocuments(output_dir=tmp_path).worksheet(sheet))
+
+
+@pytest.mark.parametrize(
+    "part,color", [(1, "sheetAccent"), (2, "sheetAdvanced"), (None, "sheetAccent")]
+)
+def test_task_number_color_uses_source_exam_part(part, color):
+    sheet = worksheet()
+    task = SourceTask.model_validate({**sheet.tasks[0].model_dump(), "exam_part": part})
+    sheet = TaskWorksheet.model_validate({**sheet.model_dump(), "tasks": [task.model_dump()]})
+    source = source_worksheet_tex(sheet, ((),), "Times New Roman")
+    assert r"\noindent{\color{" + color + r"}\bfseries 1.}" in source
+    assert "newpage" not in source and "clearpage" not in source

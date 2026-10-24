@@ -88,6 +88,7 @@ class Session:
     draft: LessonBrief | None = None
     drafts: tuple[LessonBrief, ...] = ()
     topics: tuple[str, ...] = ()
+    request_description: str = ""
     history: deque[LessonBrief] = field(default_factory=lambda: deque(maxlen=20))
     choices: tuple[StudentRecord, ...] = ()
     student_name: str = ""
@@ -230,12 +231,24 @@ class DialogService:
             if job["mode"] == "demo":
                 label += "ДЕМО — не учебный материал. "
             if job["status"] == "ready":
-                if len(job["result"].get("files", ())) != 1:
+                saved_files = job["result"].get("files", ())
+                if len(saved_files) != 1 and not (
+                    len(saved_files) == 2
+                    and "tasks" in saved_files[0]["name"]
+                    and "solutions" in saved_files[1]["name"]
+                    and all(f["name"].endswith(".pdf") for f in saved_files)
+                    and job["result"].get("package", {}).get("tasks")
+                ):
                     return Reply(
                         label + "Сохранён старый формат. /edit — получить один новый файл."
                     )
                 return Reply(
-                    label + "Готово. Один файл с задачами.",
+                    label
+                    + (
+                        "Готово. Задачи и решения отдельными файлами."
+                        if len(saved_files) == 2
+                        else "Готово. Один файл с задачами."
+                    ),
                     attachments=attachments(job["result"]),
                 )
             statuses = {
@@ -360,7 +373,11 @@ class DialogService:
 
     @staticmethod
     def _topics_prompt() -> str:
-        return "Введите от 1 до 8 тем через точку с запятой (до 160 символов каждая)."
+        return (
+            "Опишите темы и задачи, которые хотите видеть: можно указать часть ЕГЭ, "
+            "сложность, номера заданий и пожелания. Например: магнетизм, первая часть, "
+            "разные задачи на силу Ампера и индукцию."
+        )
 
     def _prompt(self, session: Session) -> str:
         return {
@@ -369,10 +386,7 @@ class DialogService:
             "student_goal": "Форма обновлена. /add_student — добавить ученика заново.",
             "students": "Введите 1–2 разных номера через запятую.",
             "topics": (f"{self._active_name(session)}: " + self._topics_prompt()),
-            "format": (
-                f"{self._active_name(session)}: введите число задач от 1 до 50, "
-                "не меньше числа тем. Пример: 4."
-            ),
+            "format": (f"{self._active_name(session)}: введите число задач от 1 до 50, Пример: 4."),
             "notes": "Форма обновлена. /lesson — создать запрос заново.",
             "confirm": "Нажмите «Подтвердить» или /cancel для отмены.",
             "idle": "Начните с /lesson; /help — помощь.",
@@ -415,14 +429,13 @@ class DialogService:
             session.selected = selected
             session.step = "topics"
         elif session.step == "topics":
-            topics = tuple(topic.strip() for topic in text.split(";"))
-            if (
-                not 1 <= len(topics) <= 8
-                or any(not 1 <= len(topic) <= 160 for topic in topics)
-                or len(set(topics)) != len(topics)
-            ):
+            if not text.strip() or len(text) > 4000 or not text.strip("; "):
                 raise ValueError("topics")
-            session.topics = topics
+            topics = tuple(topic.strip() for topic in text.split(";") if topic.strip())
+            session.topics = (
+                topics if len(topics) <= 8 and all(len(t) <= 160 for t in topics) else (text[:160],)
+            )
+            session.request_description = text
             session.step = "format"
         elif session.step == "format":
             tasks = int(text)
@@ -435,6 +448,7 @@ class DialogService:
                     "student_ids": (session.selected[len(session.drafts)].student_id,),
                     "exam": session.selected[len(session.drafts)].exam,
                     "topics": session.topics,
+                    "teacher_notes": session.request_description or None,
                     "duration_minutes": 180,
                     "theory_level": "basic",
                     "lesson_task_count": tasks,

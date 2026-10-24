@@ -10,7 +10,7 @@ import pytest
 
 from prepa.agents.runtime import AgentResponseError, InsufficientMaterialsError
 from prepa.bot import app
-from prepa.bot.service import DialogService, Reply, Session, summary
+from prepa.bot.service import SESSION_ADAPTER, DialogService, Reply, Session, summary
 from prepa.bot.settings import Settings
 from prepa.db.repository import StudentRecord
 from prepa.schemas import GenerationFailure, LessonBrief, LessonPackage
@@ -50,7 +50,7 @@ def test_complete_flow_and_versions():
     second = service.sessions[1].history[-1]
     assert second.preparation_id == first.preparation_id and second.version == 2
     assert second.topics == ("Динамика",) and second.homework_task_count == 0
-    assert second.teacher_notes is None
+    assert second.teacher_notes == "Динамика"
     say(service, "/edit")
     say(service, "Отмена")
     assert len(service.sessions[1].history) == 2
@@ -84,7 +84,7 @@ def test_bad_selection_does_not_advance(selection):
     assert service.sessions[1].step == "students"
 
 
-@pytest.mark.parametrize("topics", ["", ";", "A;A", "A" * 161, ";".join(map(str, range(9)))])
+@pytest.mark.parametrize("topics", ["", ";", "A" * 4001])
 def test_bad_topics_do_not_advance(topics):
     service = DialogService(frozenset({1}))
     say(service, "/lesson")
@@ -372,3 +372,15 @@ def test_legacy_group_confirmation_and_edit_preserve_archived_request(package):
     assert len(history) == 3 and history[0] == old
     assert len(history[1].student_ids) == len(history[2].student_ids) == 1
     assert history[1].preparation_id != old.preparation_id
+
+
+def test_free_description_survives_dialog_roundtrip():
+    service = DialogService(frozenset({1}))
+    description = "Магнетизм, первая часть ЕГЭ; разные задачи на силу Ампера. " + "Пожелания. " * 30
+    say(service, "/lesson")
+    prompt = say(service, "3").text
+    assert "Опишите темы" in prompt and "8 тем" not in prompt
+    assert "число задач" in say(service, description).text
+    say(service, "10")
+    session = SESSION_ADAPTER.validate_json(SESSION_ADAPTER.dump_json(service.sessions[1]))
+    assert session.draft.teacher_notes == description.strip()

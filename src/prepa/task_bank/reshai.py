@@ -110,6 +110,30 @@ def resolve_topics(topic: str) -> tuple[str, ...]:
     return slugs
 
 
+def request_part(description: str) -> int | None:
+    text = description.casefold()
+    if re.search(r"перв\w*\s+и\s+втор\w*\s+част|част\w*\s*1\s*и\s*2", text):
+        return None
+    parts = set()
+    for number, word in ((1, "перв"), (2, "втор")):
+        if re.search(
+            rf"(?:{number}[- ]*(?:я|ая|ой|й)?\s*част|{word}\w*\s+част|част\w*\s*{number})", text
+        ):
+            parts.add(number)
+    return parts.pop() if len(parts) == 1 else None
+
+
+def request_numbers(description: str) -> set[int]:
+    text = description.casefold()
+    matches = re.finditer(r"(?:№|номер(?:а|ов)?|задани[еяй])\s*(\d+(?:\s*[,и]\s*\d+)*)", text)
+    return {
+        int(number)
+        for match in matches
+        if not re.match(r"[- ]*(?:я|ая|ой|й)?\s*част", text[match.end() :])
+        for number in re.findall(r"\d+", match[1])
+    }
+
+
 def parse_listing(html: str) -> tuple[tuple[ListingTask, ...], int]:
     soup = BeautifulSoup(html, "html.parser")
     tasks = []
@@ -299,6 +323,8 @@ class ReshaiSource:
             statement_math_exact=math,
             source_url=url,
             images=images,
+            exam_part=2 if item.extended else 1,
+            exam_number=item.number,
             sha256=source_task_digest(text, math),
         )
 
@@ -323,12 +349,15 @@ class ReshaiSource:
 
     async def _candidates(self, brief: LessonBrief) -> list[tuple[SourceTask, tuple[str, ...]]]:
         grouped: dict[str, tuple[ListingTask, set[str]]] = {}
-        cycle_query = any("цикл" in topic.casefold() for topic in brief.topics)
+        description = "; ".join(brief.topics) + " " + (brief.teacher_notes or "")
+        cycle_query = "цикл" in description.casefold()
+        requested_part = request_part(description)
+        requested_numbers = request_numbers(description)
         listing_budget = 16 if cycle_query else 12
         target = max(20, min(brief.lesson_task_count + 10, 60))
         for topic in brief.topics:
             matching: dict[str, ListingTask] = {}
-            for slug in resolve_topics(topic):
+            for slug in resolve_topics(description if len(brief.topics) == 1 else topic):
                 page = 1
                 pages = 1
                 while page <= pages and listing_budget > 0:
@@ -342,20 +371,26 @@ class ReshaiSource:
                         # An empty/outdated later page must not erase verified earlier candidates.
                         break
                     for item in items:
-                        if re.search(r"(?:2|втор)[ -]?(?:ая |я )?част", topic, re.I) and not (
-                            item.extended or item.number == 24
-                        ):
+                        if requested_part and (2 if item.extended else 1) != requested_part:
+                            continue
+                        if requested_numbers and item.number not in requested_numbers:
                             continue
                         matching[item.id] = item
-                    if not cycle_query and len(matching) >= 70:
-                        break
                     page += 1
-                if not cycle_query and len(matching) >= 70:
-                    break
             ranked = list(matching.values())
             if "цикл" in topic.casefold():
                 # Preview is a ranking hint only: missing/truncated words never exclude a task.
                 ranked.sort(key=lambda item: not bool(CYCLE.search(item.preview)))
+            elif not requested_numbers:
+                # Sample across task formats/parts instead of taking only the first easy pages.
+                buckets: dict[tuple[bool, int], list[ListingTask]] = {}
+                for item in ranked:
+                    buckets.setdefault((item.extended, item.number), []).append(item)
+                ranked = []
+                while any(buckets.values()):
+                    for bucket in buckets.values():
+                        if bucket:
+                            ranked.append(bucket.pop(0))
             for item in ranked[:70]:
                 if item.id not in grouped:
                     grouped[item.id] = (item, set())
@@ -376,9 +411,7 @@ class ReshaiSource:
                 if isinstance(result, SourceTask):
                     # Recheck the cycle constraint against the complete original.
                     covered = tuple(
-                        t
-                        for t in topics
-                        if "цикл" not in t.casefold() or CYCLE.search(result.statement_exact)
+                        t for t in topics if not cycle_query or CYCLE.search(result.statement_exact)
                     )
                     digest = (result.sha256, tuple(image.sha256 for image in result.images))
                     if covered and digest not in seen:

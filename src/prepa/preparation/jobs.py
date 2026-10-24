@@ -60,7 +60,7 @@ class JobQueue:
             token = str(uuid4())
             await conn.execute(
                 "UPDATE preparation_jobs SET status='running', attempts=attempts+1, "
-                "lease_until=now()+interval '4 minutes', claim_token=%s "
+                "lease_until=now()+interval '5 minutes', claim_token=%s "
                 "WHERE preparation_id=%s AND version=%s AND teacher_id=%s",
                 (token, brief.preparation_id, brief.version, row[0]),
             )

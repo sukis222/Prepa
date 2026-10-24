@@ -291,7 +291,7 @@ def test_two_pupils_restart_atomic_jobs_and_repeated_confirmation():
     assert "Ольга" in reply.text and "тем" in reply.text.lower()
     assert not repo.data[1].get("jobs")
     assert "Нет запроса" in say("/confirm").text
-    assert "Не удалось" in say("x" * 161).text
+    assert "Не удалось" in say("x" * 4001).text
     say("Термодинамика")
     assert "Не удалось" in say("51").text
     reply = say("4")

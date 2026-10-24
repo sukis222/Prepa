@@ -23,7 +23,7 @@ from .content import (
     TheorySection,
     WorkedExample,
 )
-from .source import SourceImage, SourceTask, TaskWorksheet
+from .source import SourceImage, SourceSolution, SourceTask, TaskWorksheet
 
 __all__ = [
     "Assignment",
@@ -41,6 +41,7 @@ __all__ = [
     "ReviewResult",
     "SourceCitation",
     "SourceImage",
+    "SourceSolution",
     "SourceTask",
     "TaskWorksheet",
     "StudentAssignment",

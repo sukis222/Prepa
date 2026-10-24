@@ -294,3 +294,28 @@ def test_skip_unsupported_originals_without_stopping_at_preview_count(tmp_path, 
         assert all(topics == ("Магнетизм",) for _, topics in result)
 
     run(check())
+
+
+@pytest.mark.parametrize(
+    "text,part",
+    [
+        ("магнетизм, первая часть ЕГЭ", 1),
+        ("термодинамика, 2 часть", 2),
+        ("часть 2", 2),
+        ("первая и вторая часть", None),
+        ("первая часть и вторая часть", None),
+        ("термодинамика", None),
+    ],
+)
+def test_requested_part_from_description(text, part):
+    from prepa.task_bank.reshai import request_part
+
+    assert request_part(text) == part
+
+
+def test_requested_exam_numbers():
+    from prepa.task_bank.reshai import request_numbers
+
+    assert request_numbers("термодинамика, задания 24, 25 и 26") == {24, 25, 26}
+    assert request_numbers("первая часть, 30 задач") == set()
+    assert request_numbers("задания 2 части по термодинамике") == set()

@@ -40,7 +40,7 @@ def source_case(tmp_path, context):
     tasks = [
         dict(
             id=f"t{i}",
-            statement_exact=f"  Исходное условие {i} Ω  ",
+            statement_exact=f"  Исходное условие {chr(0x4E00 + i)} Ω  ",
             statement_math_exact=[r"s=vt"],
             source_url="https://example.test/source.pdf",
             page=3,
@@ -48,7 +48,9 @@ def source_case(tmp_path, context):
             topic=brief.topics[0],
             tags=["motion"],
             exam=brief.exam,
-            statement_sha256=hashlib.sha256(f"  Исходное условие {i} Ω  ".encode()).hexdigest(),
+            statement_sha256=hashlib.sha256(
+                f"  Исходное условие {chr(0x4E00 + i)} Ω  ".encode()
+            ).hexdigest(),
         )
         for i in range(2)
     ]
@@ -71,7 +73,7 @@ def test_exact_snapshot_roundtrip_one_selector_and_no_profiles(source_case):
     check.assert_awaited_once()
     llm.generate.assert_awaited_once()
     prompt = json.loads(llm.generate.call_args.kwargs["user_prompt"])
-    assert set(prompt) == {"exam", "topics", "count", "tasks"}
+    assert set(prompt) == {"exam", "topics", "teacher_notes", "count", "tasks"}
     assert all("source_url" not in t and "answer" not in t for t in prompt["tasks"])
     assert "students" not in prompt and "student_ids" not in prompt
     with pytest.raises(ValidationError):
@@ -242,7 +244,15 @@ def test_worker_source_result_saved_then_delivered_without_legacy_projection(sou
 def test_fifty_source_tasks_select_and_roundtrip_without_truncation(source_case):
     backend, brief, students, llm, _, path, tasks = source_case
     corpus = json.loads(path.read_text())
-    corpus["tasks"] = [{**tasks[0], "id": f"t{i}"} for i in range(50)]
+    corpus["tasks"] = [
+        {
+            **tasks[0],
+            "id": f"t{i}",
+            "statement_exact": f"Условие {chr(0x4E00 + i)}",
+            "statement_sha256": hashlib.sha256(f"Условие {chr(0x4E00 + i)}".encode()).hexdigest(),
+        }
+        for i in range(50)
+    ]
     path.write_text(json.dumps(corpus))
     ids = [f"t{i}" for i in range(50)]
     llm.generate.return_value = {"ids": ids}
@@ -258,3 +268,16 @@ def test_fifty_source_tasks_select_and_roundtrip_without_truncation(source_case)
         TaskWorksheet.model_validate(
             {**worksheet.model_dump(), "tasks": [*worksheet.tasks, worksheet.tasks[0]]}
         )
+
+
+def test_numerical_clones_removed_before_model(source_case):
+    backend, brief, students, llm, check, path, tasks = source_case
+    corpus = json.loads(path.read_text())
+    for i, raw in enumerate(corpus["tasks"]):
+        text = f"Тело движется со скоростью {i + 2} м/с. Найдите путь за 5 с."
+        raw.update(statement_exact=text, statement_sha256=hashlib.sha256(text.encode()).hexdigest())
+    path.write_text(json.dumps(corpus))
+    with pytest.raises(SourceCapacityError) as error:
+        run(backend.prepare(1, brief, students))
+    assert error.value.available == 1
+    llm.generate.assert_not_awaited()

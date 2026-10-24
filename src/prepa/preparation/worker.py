@@ -9,6 +9,8 @@ from prepa.agents.runtime import InsufficientMaterialsError
 from prepa.bot.service import PreparationBackend, Reply
 from prepa.documents.delivery import Attachment, DocumentRenderer
 from prepa.documents.latex import DocumentError
+from prepa.documents.solutions import solution_document
+from prepa.documents.source import SourceDocuments
 from prepa.llm import LLMError
 from prepa.preparation.jobs import JobQueue
 from prepa.preparation.source import SourceCapacityError, SourceCorpusError
@@ -39,7 +41,7 @@ async def process_one(
     if job.mode == "demo":
         label += "ДЕМО — тест интеграции, не учебный материал. "
     try:
-        async with asyncio.timeout(210):
+        async with asyncio.timeout(270):
             package = await backend.prepare(job.teacher_id, job.brief, job.students)
             files: tuple[Attachment, ...]
             if isinstance(package, TaskWorksheet):
@@ -54,6 +56,14 @@ async def process_one(
                 ):
                     raise ValueError("Backend worksheet mismatch")
                 files = (await cast(WorksheetRenderer, documents).worksheet(package),)
+                if isinstance(documents, SourceDocuments):
+                    try:
+                        teacher_copy = await solution_document(documents, package)
+                    except (DocumentError, TimeoutError):
+                        logger.warning("Source solution PDF unavailable; worksheet retained")
+                    else:
+                        if teacher_copy is not None:
+                            files += (teacher_copy,)
             else:
                 package = LessonPackage.model_validate(package.model_dump(mode="json"))
                 if package.context.brief != job.brief or set(package.context.students) != set(
@@ -77,14 +87,25 @@ async def process_one(
         reply = Reply(
             label
             + (
-                "Готово. Один PDF с задачами и местом для решения. "
-                "/result — получить файл повторно."
+                (
+                    "Готово. PDF с задачами и отдельный PDF с решениями из источника. "
+                    if len(files) > 1
+                    else "Готово. Один PDF с задачами. Подходящих решений из источника нет. "
+                )
+                + "/result — получить файл повторно."
                 if job.mode == "real"
                 else "Готово. Один демонстрационный файл с задачами и местом для решения. "
                 "/result — получить файл повторно."
             ),
             attachments=files,
         )
+        if isinstance(package, TaskWorksheet) and len(files) > 1:
+            count = sum(task.solution is not None for task in package.tasks)
+            reply = Reply(
+                reply.text + f" Разборы найдены для {count} из {len(package.tasks)} задач; "
+                "для остальных отсутствие отмечено в файле.",
+                attachments=files,
+            )
     if saved:
         try:
             await deliver(job.teacher_id, reply)

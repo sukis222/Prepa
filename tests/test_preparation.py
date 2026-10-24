@@ -164,7 +164,7 @@ def test_queue_claim_and_fencing(monkeypatch, package):
     lookup = conn.execute.call_args_list[-2]
     assert "where teacher_id=%s" in lookup.args[0]
     assert lookup.args[1] == (7, list(job.brief.student_ids))
-    assert "4 minutes" in conn.execute.call_args.args[0]
+    assert "5 minutes" in conn.execute.call_args.args[0]
     cursor.rowcount = 1
     assert run(queue.finish(job, package, (Attachment("file.pdf", b"\x00\xff"),)))
     args = conn.execute.call_args.args[1]

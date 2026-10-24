@@ -3,7 +3,7 @@
 import base64
 import hashlib
 import json
-from typing import Annotated, Self
+from typing import Annotated, Literal, Self
 
 from pydantic import ConfigDict, Field, model_validator
 
@@ -36,6 +36,20 @@ class SourceImage(Contract):
         return self
 
 
+class SourceSolution(Contract):
+    model_config = ConfigDict(extra="forbid", frozen=True, str_strip_whitespace=False)
+    text: Annotated[str, Field(min_length=1, max_length=30_000)]
+    source_url: Annotated[str, Field(min_length=1, max_length=3000)]
+    images: Annotated[tuple[SourceImage, ...], Field(max_length=8)] = ()
+    sha256: Digest
+
+    @model_validator(mode="after")
+    def verify_digest(self) -> Self:
+        if self.sha256 != source_task_digest(self.text):
+            raise ValueError("Source solution digest mismatch")
+        return self
+
+
 class SourceTask(Contract):
     # Preserve the source byte-for-byte, including whitespace in conditions and math.
     model_config = ConfigDict(extra="forbid", frozen=True, str_strip_whitespace=False)
@@ -46,6 +60,9 @@ class SourceTask(Contract):
     page: Annotated[int, Field(strict=True, ge=1)] | None = None
     images: Annotated[tuple[SourceImage, ...], Field(max_length=4)] = ()
     sha256: Digest
+    exam_part: Literal[1, 2] | None = None
+    exam_number: Annotated[int, Field(strict=True, ge=1, le=100)] | None = None
+    solution: SourceSolution | None = None
 
     @model_validator(mode="after")
     def verify_digest(self) -> Self:
