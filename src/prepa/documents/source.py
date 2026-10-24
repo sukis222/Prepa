@@ -80,7 +80,9 @@ def display_statement(text: str) -> str:
         flags=re.IGNORECASE,
     )
     text = re.sub(r"^дайте\s+разв[её]рнутый\s+ответ\s*[.:]\s*", "", text, flags=re.I)
-    units = frozenset("Дж кДж % Н В А м с Па кПа К Ом Вт кВт Гц Тл Кл Вб мВб м/с м/с² кг".split())
+    units = frozenset(
+        "Дж кДж мДж % Н В А м с Па кПа К Ом Вт кВт Гц Тл Кл Вб мВб м/с м/с² кг г".split()
+    )
     lines = text.rstrip().splitlines()
     if lines and lines[-1].strip() in units:
         lines[-1] = "(Ответ: " + lines[-1].strip() + ")"
@@ -118,8 +120,7 @@ def worksheet_title(title: str) -> str:
 def source_worksheet_tex(
     worksheet: TaskWorksheet, image_names: tuple[tuple[str, ...], ...], font: str
 ) -> str:
-    worksheet_font = "Arial" if font == "Times New Roman" else "DejaVu Sans"
-    preamble = PREAMBLE.replace("DejaVu Serif", worksheet_font).replace(
+    preamble = PREAMBLE.replace("DejaVu Serif", font).replace(
         r"\begin{document}",
         r"\usepackage{graphicx,tikz}"
         "\n"

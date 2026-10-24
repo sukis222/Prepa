@@ -22,7 +22,7 @@ async def solution_document(
     worksheet = TaskWorksheet.model_validate(worksheet.model_dump(mode="json"))
     if not any(task.solution for task in worksheet.tasks):
         return None
-    font = "Arial" if documents.compiler.font == "Times New Roman" else "DejaVu Sans"
+    font = documents.compiler.font
     preamble = PREAMBLE.replace("DejaVu Serif", font).replace(
         r"\begin{document}", r"\usepackage{graphicx}" + "\n" + r"\begin{document}"
     )

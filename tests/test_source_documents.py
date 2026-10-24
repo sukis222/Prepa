@@ -123,7 +123,7 @@ def test_source_text_and_public_metadata():
     assert r"\textbf{Решение:" not in source
     assert r"\begin{minipage}" not in source
     assert r"\bfseries 1." in source
-    assert r"\setmainfont{DejaVu Sans}" in source
+    assert r"\setmainfont{DejaVu Serif}" in source
     assert "Ответ" not in source
     assert source.count(r"\begingroup") == source.count(r"\endgroup")
 
@@ -209,7 +209,7 @@ def test_model_tex_rejected_and_ordinary_text_escaped():
     safe = TaskWorksheet.model_validate({**sheet.model_dump(), "tasks": [task.model_dump()]})
     source = source_worksheet_tex(safe, ((),), "Times New Roman")
     assert r"\input{secret}" not in source
-    assert r"\setmainfont{Arial}" in source
+    assert r"\setmainfont{Times New Roman}" in source
 
 
 def test_asset_written_under_generated_name(tmp_path, monkeypatch):
@@ -285,7 +285,7 @@ def test_teacher_request_is_not_document_heading():
     assert len(worksheet_title(request).split()) <= 4
 
 
-@pytest.mark.parametrize("unit", ["Дж", "кДж", "%"])
+@pytest.mark.parametrize("unit", ["Дж", "кДж", "%", "г", "мДж"])
 def test_answer_unit_is_a_label_not_an_orphan_line(unit):
     text = "Найдите работу.\n" + unit
     assert display_statement(text) == "Найдите работу.\n(Ответ: " + unit + ")"

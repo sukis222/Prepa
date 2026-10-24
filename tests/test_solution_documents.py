@@ -57,6 +57,8 @@ def test_solution_pdf_optional_and_teacher_content(monkeypatch):
     assert result and result.name == "solutions.pdf"
     source = compile.call_args.args[0]
     assert "SECRET SOLUTION" in source and "Впишите" not in source
+    assert r"\setmainfont{DejaVu Serif}" in source
+    assert "Arial" not in source and "DejaVu Sans" not in source
     assert compile.call_args.args[-1] == "solutions"
 
 

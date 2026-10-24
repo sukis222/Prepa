@@ -228,7 +228,7 @@ def task_sheet_tex(
 ) -> str:
     """Shared worksheet with a green section band and a static 5 mm writing grid."""
     topics = tuple(dict.fromkeys(task.topic for task in lesson.lesson_assignments))
-    worksheet_font = "Arial" if font == "Times New Roman" else "DejaVu Sans"
+    worksheet_font = font
     preamble = PREAMBLE.replace("DejaVu Serif", worksheet_font).replace(
         r"\begin{document}",
         r"\usepackage{tikz}"
