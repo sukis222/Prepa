@@ -9,7 +9,7 @@ from typing import Any, Literal
 
 import httpx
 
-DEFAULT_MODEL = "nvidia/nemotron-3.5-super-vl:free"
+DEFAULT_MODEL = "dots-studio/dots-3-note-preview:free"
 BASE_URL = "https://openrouter.ai/api/v1"
 FinishReason = Literal["stop", "length", "content_filter", "tool_calls", "error", "unknown"]
 
