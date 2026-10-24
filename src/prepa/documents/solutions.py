@@ -11,6 +11,7 @@ from prepa.documents.source import (
     clean_png,
     display_statement,
     render_source_text,
+    worksheet_title,
 )
 from prepa.schemas import TaskWorksheet
 
@@ -27,7 +28,7 @@ async def solution_document(
     )
     parts = [
         preamble,
-        r"{\Large\bfseries " + escape_text(worksheet.title) + r". Решения\par}",
+        r"{\Large\bfseries " + escape_text(worksheet_title(worksheet.title)) + r". Решения\par}",
         r"\smallskip Разборы взяты из источника; требуется проверка преподавателем.\par",
     ]
     images: dict[str, bytes] = {}

@@ -80,7 +80,39 @@ def display_statement(text: str) -> str:
         flags=re.IGNORECASE,
     )
     text = re.sub(r"^дайте\s+разв[её]рнутый\s+ответ\s*[.:]\s*", "", text, flags=re.I)
+    units = frozenset("Дж кДж % Н В А м с Па кПа К Ом Вт кВт Гц Тл Кл Вб мВб м/с м/с² кг".split())
+    lines = text.rstrip().splitlines()
+    if lines and lines[-1].strip() in units:
+        lines[-1] = "(Ответ: " + lines[-1].strip() + ")"
+    elif lines and lines[-1].strip().casefold() == "на участке":
+        lines[-1] = "(Укажите участок.)"
+    text = "\n".join(lines)
     return text.strip()
+
+
+def worksheet_title(title: str) -> str:
+    """A subject heading, never a verbatim teacher instruction."""
+    topics = (
+        (r"термодинами|цикл.*газ", "Термодинамика"),
+        (r"уравнени.*состояни|молекул|\bмкт\b", "Молекулярная физика"),
+        (r"магнит|магнетизм|индукц", "Магнитное поле"),
+        (r"кинемат", "Кинематика"),
+        (r"электростат|конденсатор", "Электростатика"),
+        (r"постоянн.*ток|электрическ.*цеп", "Электрический ток"),
+        (r"колебан|волн", "Колебания и волны"),
+        (r"оптик|линз", "Оптика"),
+        (r"квант|ядер|атом", "Квантовая физика"),
+        (r"динамик|сил.*ньютон", "Динамика"),
+        (r"импульс|энерги", "Законы сохранения"),
+        (r"теплов|кпд|теплообмен", "Тепловые явления"),
+        (r"гидростат|архимед", "Гидростатика"),
+    )
+    for pattern, label in topics:
+        if re.search(pattern, title, re.I):
+            return label
+    if len(title.split()) <= 4 and not re.search(r"нуж|хочу|сделай|задач.*чтоб", title, re.I):
+        return title[:1].upper() + title[1:].lower()
+    return "Задачи по физике"
 
 
 def source_worksheet_tex(
@@ -89,11 +121,13 @@ def source_worksheet_tex(
     worksheet_font = "Arial" if font == "Times New Roman" else "DejaVu Sans"
     preamble = PREAMBLE.replace("DejaVu Serif", worksheet_font).replace(
         r"\begin{document}",
-        r"\usepackage{graphicx}"
+        r"\usepackage{graphicx,tikz}"
         "\n"
         r"\definecolor{sheetAccent}{HTML}{278757}"
         "\n"
         r"\definecolor{sheetAdvanced}{HTML}{C86B20}"
+        "\n"
+        r"\definecolor{sheetGrid}{HTML}{DDEAE1}"
         "\n"
         r"\setlength{\parskip}{3pt}"
         "\n"
@@ -101,16 +135,17 @@ def source_worksheet_tex(
     )
     parts = [
         preamble,
-        r"{\fontsize{20}{24}\selectfont\bfseries " + escape_text(worksheet.title) + r"\par}",
+        r"{\fontsize{20}{24}\selectfont\bfseries "
+        + escape_text(worksheet_title(worksheet.title))
+        + r"\par}",
         r"\vspace{4mm}",
     ]
     for number, (task, names) in enumerate(zip(worksheet.tasks, image_names, strict=True), 1):
         color = "sheetAdvanced" if getattr(task, "exam_part", None) == 2 else "sheetAccent"
+        needed = min(240, 55 + 5 * (len(task.statement_exact) // 80) + 38 * len(names))
         parts.extend(
             [
-                r"\par\addvspace{5mm}\Needspace{"
-                + str(min(180, 35 + 38 * len(names)) if names else 25)
-                + "mm}",
+                r"\par\addvspace{5mm}\Needspace{" + str(needed) + "mm}",
                 r"\noindent{\color{"
                 + color
                 + r"}\bfseries "
@@ -125,7 +160,14 @@ def source_worksheet_tex(
                 r"\par\nopagebreak[3]\begin{center}\includegraphics["
                 r"width=0.65\linewidth,height=38mm,keepaspectratio]{" + name + r"}\end{center}"
             )
-        parts.append(r"\par")
+        parts.extend(
+            [
+                r"\par\nopagebreak[3]\smallskip Решение:\par\nopagebreak[4]",
+                r"\noindent\begin{tikzpicture}"
+                r"\draw[sheetGrid,step=5mm,line width=.2pt] (0,0) grid (\linewidth,30mm);"
+                r"\end{tikzpicture}\par",
+            ]
+        )
     return "\n".join(parts) + "\n" + r"\end{document}" + "\n"
 
 

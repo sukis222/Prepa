@@ -118,11 +118,13 @@ def test_source_text_and_public_metadata():
     assert "synthetic-worksheet" not in source
     assert "/private/test" not in source
     assert "Источник:" not in source
-    assert "step=5mm" not in source and "70mm" not in source
+    assert "step=5mm" in source and "30mm" in source and "70mm" not in source
+    assert "Решение:" in source
+    assert r"\textbf{Решение:" not in source
     assert r"\begin{minipage}" not in source
     assert r"\bfseries 1." in source
     assert r"\setmainfont{DejaVu Sans}" in source
-    assert "Ответ" not in source and "Решение" not in source
+    assert "Ответ" not in source
     assert source.count(r"\begingroup") == source.count(r"\endgroup")
 
 
@@ -270,3 +272,21 @@ def test_task_number_color_uses_source_exam_part(part, color):
     source = source_worksheet_tex(sheet, ((),), "Times New Roman")
     assert r"\noindent{\color{" + color + r"}\bfseries 1.}" in source
     assert "newpage" not in source and "clearpage" not in source
+
+
+def test_teacher_request_is_not_document_heading():
+    from prepa.documents.source import worksheet_title
+
+    request = "НУЖНА ТЕРМОДИНАМИКА С ЦИКЛАМИ И 30% ИЗ ПЕРВОЙ ЧАСТИ"
+    assert worksheet_title(request) == "Термодинамика"
+    assert (
+        worksheet_title("Хочу разные сложные задачи из нескольких разделов") == "Задачи по физике"
+    )
+    assert len(worksheet_title(request).split()) <= 4
+
+
+@pytest.mark.parametrize("unit", ["Дж", "кДж", "%"])
+def test_answer_unit_is_a_label_not_an_orphan_line(unit):
+    text = "Найдите работу.\n" + unit
+    assert display_statement(text) == "Найдите работу.\n(Ответ: " + unit + ")"
+    assert display_statement("Найдите работу 20 Дж.") == "Найдите работу 20 Дж."
