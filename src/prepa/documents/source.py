@@ -30,6 +30,7 @@ def render_source_text(text: str) -> str:
             .replace("ℰ", r"\mathcal{E}")
             .replace("⊗", r"\otimes ")
             .replace("⊙", r"\odot ")
+            .replace("⊥", r"\perp ")
         )
         parts.append(r"\[" + formula + r"\]" if match.group(1) == "$$" else r"\(" + formula + r"\)")
         end = match.end()

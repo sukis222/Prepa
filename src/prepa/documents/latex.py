@@ -37,6 +37,7 @@ ESCAPES = {
     "^": r"\textasciicircum{}",
     "⊙": r"\(\odot\)",
     "⊗": r"\(\otimes\)",
+    "⊥": r"\(\perp\)",
 }
 MATH_COMMANDS = frozenset(
     "frac dfrac tfrac sqrt vec overline underline hat bar dot ddot mathrm mathbf mathit "

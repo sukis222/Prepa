@@ -41,6 +41,7 @@ async def process_one(
     if job.mode == "demo":
         label += "ДЕМО — тест интеграции, не учебный материал. "
     try:
+        deadline = asyncio.get_running_loop().time() + 265
         async with asyncio.timeout(270):
             package = await backend.prepare(job.teacher_id, job.brief, job.students)
             files: tuple[Attachment, ...]
@@ -58,7 +59,10 @@ async def process_one(
                 files = (await cast(WorksheetRenderer, documents).worksheet(package),)
                 if isinstance(documents, SourceDocuments):
                     try:
-                        teacher_copy = await solution_document(documents, package)
+                        teacher_copy = await asyncio.wait_for(
+                            solution_document(documents, package),
+                            timeout=max(0.1, min(30, deadline - asyncio.get_running_loop().time())),
+                        )
                     except (DocumentError, TimeoutError):
                         logger.warning("Source solution PDF unavailable; worksheet retained")
                     else:

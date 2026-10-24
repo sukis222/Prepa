@@ -150,6 +150,7 @@ async def run(settings: Settings) -> None:
                         ),
                         source=ReshaiSource() if settings.source_provider == "reshai" else None,
                         check_model=llm.check_model,
+                        interpret_requests=settings.source_provider == "reshai",
                     )
                     if llm
                     else DemoBackend(),

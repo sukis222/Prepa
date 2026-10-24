@@ -150,6 +150,11 @@ def test_unmatched_and_doubled_dollars_are_literal(text):
     assert render_source_text(text) == escape_text(text)
 
 
+def test_perpendicular_symbol_in_condition_and_formula():
+    assert render_source_text("Скорость ⊥ полю") == r"Скорость \(\perp\) полю"
+    assert render_source_text("$v ⊥ B$") == r"\(v \perp  B\)"
+
+
 def test_display_math_from_published_solution():
     assert render_source_text(r"$$\mathcal{E}=\frac{Q}{t}$$") == r"\[\mathcal{E}=\frac{Q}{t}\]"
     assert render_source_text(r"$U=2~\text{кВ}$") == r"\(U=2\ \text{кВ}\)"

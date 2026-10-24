@@ -9,6 +9,7 @@ import re
 import time
 from dataclasses import dataclass
 from pathlib import Path
+from typing import TYPE_CHECKING
 from urllib.parse import urljoin, urlparse
 
 import httpx
@@ -19,6 +20,9 @@ from PIL import Image, UnidentifiedImageError
 from prepa.schemas import LessonBrief, SourceImage, SourceTask
 from prepa.schemas.source import source_task_digest
 from prepa.task_bank.fipi.parser import flatten
+
+if TYPE_CHECKING:
+    from prepa.preparation.query import SearchQuery
 
 ORIGIN = "https://reshai.online"
 BASE = "/ege/subjects/physics/tasks/"
@@ -120,26 +124,40 @@ def resolve_topics(topic: str) -> tuple[str, ...]:
 
 def request_part(description: str) -> int | None:
     text = description.casefold()
-    if re.search(r"перв\w*\s+и\s+втор\w*\s+част|част\w*\s*1\s*и\s*2", text):
-        return None
-    parts = set()
-    for number, word in ((1, "перв"), (2, "втор")):
-        if re.search(
-            rf"(?:{number}[- ]*(?:я|ая|ой|й)?\s*част|{word}\w*\s+част|част\w*\s*{number})", text
-        ):
-            parts.add(number)
-    return parts.pop() if len(parts) == 1 else None
+    token = r"(?:[12](?:[- ]*(?:я|ая|ой|й))?|перв\w*|втор\w*)"
+    sequence = rf"{token}(?:\s*(?:,|и|или|/)\s*{token})*"
+    pattern = rf"(?<!\w)(?:{sequence}\s+част\w*|част\w*\s*{sequence})(?!\d)"
+    included: set[int] = set()
+    excluded: set[int] = set()
+    for match in re.finditer(pattern, text):
+        parts = set()
+        for number, word in ((1, "перв"), (2, "втор")):
+            if re.search(rf"(?<!\d){number}(?!\d)|{word}", match[0]):
+                parts.add(number)
+        prefix = text[max(0, match.start() - 35) : match.start()]
+        negative = re.search(
+            r"(?:без|кроме|исключая|исключить|не(?:\s+из)?)\s*(?:задач\w*\s*)?$", prefix
+        )
+        (excluded if negative else included).update(parts)
+    allowed = (included or {1, 2}) - excluded
+    return next(iter(allowed)) if len(allowed) == 1 else None
 
 
 def request_numbers(description: str) -> set[int]:
     text = description.casefold()
-    matches = re.finditer(r"(?:№|номер(?:а|ов)?|задани[еяй])\s*(\d+(?:\s*[,и]\s*\d+)*)", text)
-    return {
-        int(number)
-        for match in matches
-        if not re.match(r"[- ]*(?:я|ая|ой|й)?\s*част", text[match.end() :])
-        for number in re.findall(r"\d+", match[1])
-    }
+    integer = r"\d{1,2}(?!\d)"
+    item = rf"{integer}(?:\s*[-–—]\s*{integer})?"
+    sequence = rf"{item}(?:\s*(?:,|и|или)\s*{item})*"
+    pattern = rf"(?:№|\bномер(?:а|ов)?|\bзадани[еяй])\s*({sequence})"
+    numbers: set[int] = set()
+    for match in re.finditer(pattern, text):
+        if re.match(r"[- ]*(?:я|ая|ой|й)?\s*част", text[match.end() :]):
+            continue
+        for first, last in re.findall(rf"({integer})(?:\s*[-–—]\s*({integer}))?", match[1]):
+            start, end = int(first), int(last or first)
+            if 1 <= start <= end <= 30:
+                numbers.update(range(start, end + 1))
+    return numbers
 
 
 def parse_listing(html: str) -> tuple[tuple[ListingTask, ...], int]:
@@ -282,34 +300,56 @@ class ReshaiSource:
         except (OSError, ValueError, KeyError, TypeError):
             pass
         async with self._semaphore:
-            async with self._gate:
-                if self._calls >= 220:
-                    raise ReshaiError("Reshai request limit reached")
-                await asyncio.sleep(
-                    max(0.0, self.interval - (time.monotonic() - self._last_request))
-                )
-                self._last_request = time.monotonic()
-                self._calls += 1
             if self.http is None:
                 raise ReshaiError("Source client missing")
-            try:
-                async with self.http.stream(
-                    "GET", url, timeout=8, follow_redirects=False
-                ) as response:
-                    if response.status_code != 200:
-                        raise ReshaiError("Reshai unavailable")
-                    mime = response.headers.get("content-type", "").casefold()
-                    if (image and not mime.startswith("image/")) or (
-                        not image and "text/html" not in mime
-                    ):
-                        raise ReshaiError("Unexpected source content")
-                    data = b""
-                    async for chunk in response.aiter_bytes():
-                        data += chunk
-                        if len(data) > maximum:
-                            raise ReshaiError("Source response too large")
-            except httpx.HTTPError:
-                raise ReshaiError("Reshai unavailable") from None
+            for attempt in range(3):
+                async with self._gate:
+                    if self._calls >= 220:
+                        raise ReshaiError("Reshai request limit reached")
+                    await asyncio.sleep(
+                        max(0.0, self.interval - (time.monotonic() - self._last_request))
+                    )
+                    self._last_request = time.monotonic()
+                    self._calls += 1
+                retry_delay = None
+                try:
+                    async with self.http.stream(
+                        "GET", url, timeout=8, follow_redirects=False
+                    ) as response:
+                        if response.status_code in (429, 502, 503) and attempt < 2:
+                            retry_after = response.headers.get("retry-after", "")
+                            try:
+                                delay = float(retry_after)
+                                if not 0 <= delay < float("inf"):
+                                    raise ValueError
+                            except ValueError:
+                                from email.utils import parsedate_to_datetime
+
+                                try:
+                                    delay = (
+                                        parsedate_to_datetime(retry_after).timestamp() - time.time()
+                                    )
+                                except (TypeError, ValueError, OverflowError):
+                                    delay = float(attempt + 1)
+                            retry_delay = min(5.0, max(0.0, delay))
+                        elif response.status_code != 200:
+                            raise ReshaiError("Reshai unavailable")
+                        else:
+                            mime = response.headers.get("content-type", "").casefold()
+                            if (image and not mime.startswith("image/")) or (
+                                not image and "text/html" not in mime
+                            ):
+                                raise ReshaiError("Unexpected source content")
+                            data = b""
+                            async for chunk in response.aiter_bytes():
+                                data += chunk
+                                if len(data) > maximum:
+                                    raise ReshaiError("Source response too large")
+                except httpx.HTTPError:
+                    raise ReshaiError("Reshai unavailable") from None
+                if retry_delay is None:
+                    break
+                await asyncio.sleep(retry_delay)
             self.cache_dir.mkdir(parents=True, exist_ok=True)
             file.write_bytes(data)
             metadata.write_text(
@@ -339,7 +379,9 @@ class ReshaiSource:
     async def _image(self, url: str) -> SourceImage:
         return await asyncio.to_thread(image_snapshot, await self._fetch(url, image=True))
 
-    async def candidates(self, brief: LessonBrief) -> list[tuple[SourceTask, tuple[str, ...]]]:
+    async def candidates(
+        self, brief: LessonBrief, *, query: "SearchQuery | None" = None, expanded: bool = False
+    ) -> list[tuple[SourceTask, tuple[str, ...]]]:
         if brief.exam != "ege":
             raise ReshaiError("Reshai source currently supports EGE physics only")
         if self.http is None:
@@ -351,28 +393,54 @@ class ReshaiSource:
                     http=http,
                     cache_seconds=self.cache_seconds,
                     request_interval=self.interval,
-                ).candidates(brief)
-        async with asyncio.timeout(35):
-            return await self._candidates(brief)
+                ).candidates(brief, query=query, expanded=expanded)
+        best: list[tuple[SourceTask, tuple[str, ...]]] = []
+        for broaden in (True,) if expanded else (False, True):
+            try:
+                async with asyncio.timeout(35):
+                    result = await self._candidates(brief, expanded=broaden, query=query)
+                if len(result) > len(best):
+                    best = result
+                if len(best) >= brief.lesson_task_count:
+                    return best
+            except (ReshaiError, TimeoutError):
+                if broaden and not best:
+                    raise ReshaiError("Source search exhausted") from None
+        return best
 
-    async def _candidates(self, brief: LessonBrief) -> list[tuple[SourceTask, tuple[str, ...]]]:
+    async def _candidates(
+        self, brief: LessonBrief, *, expanded: bool = False, query: "SearchQuery | None" = None
+    ) -> list[tuple[SourceTask, tuple[str, ...]]]:
         grouped: dict[str, tuple[ListingTask, set[str]]] = {}
         description = "; ".join(brief.topics) + " " + (brief.teacher_notes or "")
-        cycle_query = "цикл" in description.casefold()
-        requested_part = request_part(description)
-        requested_numbers = request_numbers(description)
-        require_images = bool(re.search(r"с\s+(?:график|рисунк|картинк)", description, re.I))
-        detail_limit = 120 if require_images else 70
-        listing_budget = 16 if cycle_query else 12
-        target = max(20, min(brief.lesson_task_count + 10, 60))
+        cycle_query = bool(re.search(r"цикл", description, re.I)) and not bool(
+            re.search(r"(?:без|кроме|исключ\w*)\s+цикл", description, re.I)
+        )
+        requested_part = request_part(description) or (query.part if query and query.part else None)
+        requested_numbers = request_numbers(description) or (set(query.numbers) if query else set())
+        require_images = (
+            query.images
+            if query
+            else bool(re.search(r"с\s+(?:график|рисунк|картинк)", description, re.I))
+        )
+        detail_limit = 120 if require_images or expanded else 70
+        listing_budget = 20 if expanded else (16 if cycle_query else 12)
+        target = detail_limit if expanded else max(20, min(brief.lesson_task_count + 10, 60))
         for topic in brief.topics:
             matching: dict[str, ListingTask] = {}
-            for slug in resolve_topics(description if len(brief.topics) == 1 else topic):
+            sections = (
+                query.sections
+                if query
+                else resolve_topics(description if len(brief.topics) == 1 else topic)
+            )
+            for index, slug in enumerate(sections):
                 page = 1
                 pages = 1
-                while page <= pages and listing_budget > 0:
+                section_budget = max(1, listing_budget // (len(sections) - index))
+                while page <= pages and listing_budget > 0 and section_budget > 0:
                     path = BASE + "physics." + slug + (f"?page={page}" if page > 1 else "")
                     listing_budget -= 1
+                    section_budget -= 1
                     try:
                         items, pages = parse_listing((await self._fetch(path)).decode("utf-8"))
                     except ReshaiError:
@@ -401,7 +469,14 @@ class ReshaiSource:
                     for bucket in buckets.values():
                         if bucket:
                             ranked.append(bucket.pop(0))
-            if re.search(r"ампер|лоренц", description, re.I):
+            if query:
+                stems = {
+                    word[:5].casefold()
+                    for term in query.keywords
+                    for word in re.findall(r"[а-яёa-z]{4,}", term, re.I)
+                }
+                ranked.sort(key=lambda item: -sum(s in item.preview.casefold() for s in stems))
+            elif re.search(r"ампер|лоренц", description, re.I):
                 ranked.sort(
                     key=lambda item: (
                         not bool(re.search(r"ампер|лоренц|сил[аы]", item.preview, re.I))
