@@ -7,7 +7,6 @@ __pycache__/
 .DS_Store
 prepa_knowledge.sqlite
 prepa_knowledge.sqlite-*
-PROJECT_SUMMARY.md
 
 .pytest_cache/
 .ruff_cache/
@@ -22,3 +21,9 @@ output/
 
 # Previous checkout; use this repository root
 local-run/
+
+# Generated previews and temporary files
+tmp/
+
+# Local project/chat summary; not for public publication
+PROJECT_SUMMARY.md
