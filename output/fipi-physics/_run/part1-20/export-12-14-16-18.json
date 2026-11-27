@@ -1,0 +1,9 @@
+{
+  "idempotent": true,
+  "tex_sha256": {
+    "D:\\GitHub\\Prepa-GPT\\output\\fipi-physics\\task-12.tex": "6139155968afadcc5c25daa63444efa904d838f154010d56d07b4f654e6f5164",
+    "D:\\GitHub\\Prepa-GPT\\output\\fipi-physics\\task-14.tex": "889545c523df6bfc7ac9450bb4deb26cfd6ff805ba62ee13c9c85028d7da9808",
+    "D:\\GitHub\\Prepa-GPT\\output\\fipi-physics\\task-16.tex": "02c160762c675eb3db8eb0bebc56c1251ee913799029e3287ec8a778674b7d12",
+    "D:\\GitHub\\Prepa-GPT\\output\\fipi-physics\\task-18.tex": "cdc6e766c374cabfbe0e0e8e526f7b2c6cfc831bdbb9d74e2d0771adcb1db382"
+  }
+}

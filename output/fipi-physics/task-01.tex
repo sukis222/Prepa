@@ -1,0 +1,450 @@
+% EGE 2027, task 1. Source IDs and URLs are kept in comments.
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse
+\fi
+\newcounter{banktask}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}%
+  \Needspace{35mm}\par\medskip\noindent\begin{minipage}{\linewidth}%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+  \end{minipage}\par\medskip
+}
+\begin{document}
+
+
+% Source 3CF615: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=3CF615
+\BankTask{3CF615}{
+Координата $x$ тела меняется с течением времени $t$ согласно закону $x=23+5t-2t^2$, где все величины выражены в СИ. Определите проекцию $a_x$ ускорения этого тела, в $\text{м}/\text{с}^2$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Сравним $x=23+5t-2t^2$ с $x=x_0+v_{0x}t+\dfrac{a_xt^2}{2}$: $\dfrac{a_x}{2}=-2$. Следовательно, $a_x=-4\,\text{м}/\text{с}^2$.
+}
+
+% Source B51AF2: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B51AF2
+\BankTask{B51AF2}{
+На рисунке приведён график зависимости координаты тела $x$ от времени $t$ при его прямолинейном движении вдоль оси $Ox$. Определите проекцию скорости этого тела на ось $Ox$ в промежутке времени от $4$ до $6\,\text{с}$, в $\text{м}/\text{с}$.
+\begin{center}
+\begin{tikzpicture}[x=0.35cm,y=0.14cm,>=stealth]
+\draw[step=1,black!85,thin,xstep=2,ystep=5] (0,-15) grid (14,15);
+\draw[->] (0,0)--(16,0) node[right] {$t,\,\text{с}$};
+\draw[->] (0,-16)--(0,20) node[above] {$x,\,\text{м}$};
+\foreach \t in {2,4,6,8,10,12,14} \node[below] at (\t,0) {$\t$};
+\foreach \h in {-15,-10,-5,0,5,10,15} \node[left] at (0,\h) {$\h$};
+\draw[very thick] (0,-10)--(4,-10)--(8,10)--(14,-5);
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+На участке от $4$ до $8\,\text{с}$ скорость постоянна. По графику $x(4)=-10\,\text{м}$, $x(6)=0$. Поэтому $v_x=\dfrac{\Delta x}{\Delta t}=\dfrac{0-(-10)}{6-4}=5\,\text{м}/\text{с}$.
+}
+
+% Source 008243: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=008243
+\BankTask{008243}{
+На рисунке приведён график зависимости проекции скорости тела $\upsilon_x$ от времени $t$. Определите путь тела за первые $5$ секунд движения, в метрах.
+\begin{center}
+\begin{tikzpicture}[x=0.35cm,y=0.14cm,>=stealth]
+\draw[black!85,thin,xstep=1,ystep=5] (0,-10) grid (20,15);
+\draw[->] (0,0)--(22,0) node[right] {$t,\,\text{с}$};
+\draw[->] (0,-15)--(0,19) node[above] {$\upsilon_x,\,\text{м}/\text{с}$};
+\foreach \t in {5,10,15,20} \node[below] at (\t,0) {$\t$};
+\foreach \v in {-10,-5,0,5,10,15} \node[left] at (0,\v) {$\v$};
+\draw[very thick] (0,5)--(3,5)--(5,15)--(10,-10)--(12,-10)--(18,5)--(20,5);
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+На первых $5\,\text{с}$ проекция скорости положительна. Путь равен площади под графиком:
+\[
+s=5\cdot3+\frac{5+15}{2}\cdot(5-3)=35\,\text{м}.
+\]
+}
+
+% Source 081272: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=081272
+\BankTask{081272}{
+На рисунке приведены графики зависимости проекции скорости от времени для легкового автомобиля ($\mathrm{I}$) и микроавтобуса ($\mathrm{II}$), движущихся по прямой дороге, вдоль которой и направлена ось $Ox$. Определите отношение модулей ускорений $\dfrac{a_{\mathrm I}}{a_{\mathrm{II}}}$.
+\begin{center}
+\begin{tikzpicture}[x=1.4cm,y=0.14cm,>=stealth]
+\draw[black!85,thin,xstep=0.5,ystep=5] (0,0) grid (4.5,25);
+\draw[->] (0,0)--(5.15,0) node[right] {$t,\,\text{с}$};
+\draw[->] (0,0)--(0,29) node[above] {$\upsilon_x,\,\text{м}/\text{с}$};
+\node[below left] at (0,0) {$0$};
+\node[left] at (0,20) {$20$};
+\foreach \t in {2,4} \node[below] at (\t,0) {$\t$};
+\draw[very thick] (0,20)--(4,0);
+\draw[very thick] (0,0)--(4.5,11.25);
+\node at (1.25,17.3) {$\mathrm I$};
+\node at (3.8,13.3) {$\mathrm{II}$};
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Модуль ускорения равен модулю наклона графика $\upsilon_x(t)$. За $4\,\text{с}$ скорость автомобиля изменяется от $20$ до $0\,\text{м}/\text{с}$, а микроавтобуса --- от $0$ до $10\,\text{м}/\text{с}$. Тогда $a_{\mathrm I}=20/4=5\,\text{м}/\text{с}^2$, $a_{\mathrm{II}}=10/4=2{,}5\,\text{м}/\text{с}^2$, и $\dfrac{a_{\mathrm I}}{a_{\mathrm{II}}}=2$.
+}
+
+% Source 38F045: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=38F045
+\BankTask{38F045}{
+Из двух городов навстречу друг другу с постоянной скоростью движутся два автомобиля. На графике показано изменение расстояния между автомобилями с течением времени. С какой скоростью едет по дороге второй автомобиль, если скорость первого автомобиля равна $15\,\text{м}/\text{с}$? Скорость выразите в $\text{м}/\text{с}$.
+\begin{center}
+\begin{tikzpicture}[x=0.04cm,y=0.02cm,>=stealth]
+\draw[->] (0,0)--(151,0) node[right] {$t,\,\text{мин.}$};
+\draw[->] (0,0)--(0,181) node[above] {$S,\,\text{км}$};
+\draw (0,144)--(30,144) (55,144)--(80,144) (105,144)--(120,144);
+\draw (120,8)--(120,34) (120,83)--(120,132);
+\draw[very thick] (0,144)--(60,0)--(120,144);
+\node[below left] at (0,0) {$0$};
+\node[left] at (0,144) {$144$};
+\node[below] at (60,0) {$60$};
+\node[below] at (120,0) {$120$};
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+До встречи расстояние $144\,\text{км}$ уменьшается до нуля за $60\,\text{мин}=3600\,\text{с}$. Скорость сближения $v_1+v_2=\dfrac{144000}{3600}=40\,\text{м}/\text{с}$. Следовательно, $v_2=40-15=25\,\text{м}/\text{с}$.
+}
+
+% Source B5F7C7: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B5F7C7
+\BankTask{B5F7C7}{
+Начальная скорость движения тела равна $5\,\text{м}/\text{с}$. Сколько потребуется времени, чтобы увеличить его скорость в $3$ раза при равноускоренном движении по прямой в одном направлении на пути в $20\,\text{м}$? Время выразите в секундах.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Конечная скорость $v=3v_0=15\,\text{м}/\text{с}$. При равноускоренном движении в одном направлении $s=\dfrac{v_0+v}{2}t$. Отсюда $t=\dfrac{2s}{v_0+v}=\dfrac{2\cdot20}{5+15}=2\,\text{с}$.
+}
+
+% Source 5E532C: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=5E532C
+\BankTask{5E532C}{
+Расстояние между пунктами $A$ и $B$ равно $30\,\text{км}$. Из пункта $A$ в направлении пункта $B$ выезжает мотоциклист со скоростью $50\,\text{км}/\text{ч}$. Одновременно из пункта $B$ в том же направлении, что и мотоциклист, выезжает трактор со скоростью $20\,\text{км}/\text{ч}$. На каком расстоянии от пункта $A$ мотоциклист догонит трактор? Результат выразите в $\text{км}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Скорость сближения $v_{\text{отн}}=50-20=30\,\text{км}/\text{ч}$. Время $t=30/30=1\,\text{ч}$; от пункта $A$ мотоциклист проедет $s=50\cdot1=50\,\text{км}$.
+}
+
+% Source A32BC5: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=A32BC5
+\BankTask{A32BC5}{
+Какой путь пройдет тело за $2\,\text{с}$, двигаясь по прямой в одном направлении, если его скорость за это время уменьшается в $3$ раза? Модуль ускорения тела равен $5\,\text{м}/\text{с}^{2}$. Результат выразите в $\text{м}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$v_0=3v$, $v_0-v=at=10\,\text{м}/\text{с}$. Тогда $v=5\,\text{м}/\text{с}$, $v_0=15\,\text{м}/\text{с}$. Путь $s=(v_0+v)t/2=20\,\text{м}$.
+}
+
+% Source 277542: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=277542
+\BankTask{277542}{
+На рисунке показан график зависимости проекции $\upsilon_x$ скорости тела от времени $t$. Какова проекция $a_x$ ускорения этого тела в момент времени $2\,\text{с}$? Результат выразите в $\text{м}/\text{с}^2$.
+\begin{center}
+\begin{tikzpicture}[x=1.3cm,y=0.23cm,>=stealth]
+\draw[thin,black!65,xstep=0.5,ystep=2] (0,-6) grid (3,6);
+\draw[->] (0,0)--(4.0,0) node[right] {$t,\,\text{с}$};
+\draw[->] (0,-6)--(0,8) node[above] {$\upsilon_x,\,\text{м}/\text{с}$};
+\node[below] at (1,0) {$1$};
+\node[below] at (2,0) {$2$};
+\node[below] at (3,0) {$3$};
+\node[left] at (0,-6) {$-6$};
+\node[left] at (0,-4) {$-4$};
+\node[left] at (0,-2) {$-2$};
+\node[left] at (0,0) {$0$};
+\node[left] at (0,2) {$2$};
+\node[left] at (0,4) {$4$};
+\node[left] at (0,6) {$6$};
+\draw[very thick] (0,4)--(0.5,0)--(1,6)--(1.5,2)--(2.5,2)--(3,-6);
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+При $t=2\,\text{с}$ график горизонтален: $a_x=\Delta v_x/\Delta t=0\,\text{м}/\text{с}^2$.
+}
+
+% Source 6EC247: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=6EC247
+\BankTask{6EC247}{
+На рисунке представлен график зависимости модуля скорости $\upsilon$ тела от времени $t$. Найдите путь, пройденный телом за время от $0$ до $12\,\text{с}$. Результат выразите в $\text{м}$.
+\begin{center}
+\begin{tikzpicture}[x=0.35cm,y=0.18cm,>=stealth]
+\foreach \h in {5,10,15} \draw[thin,black!65] (0,\h)--(12,\h);
+\foreach \q in {2,6,8,10} \draw[thin,black!65] (\q,0)--(\q,15);
+\foreach \q in {4,12} \draw[thin,dashed] (\q,0)--(\q,15);
+\draw[->] (0,0)--(16,0) node[right] {$t,\,\text{с}$};
+\draw[->] (0,0)--(0,20) node[above] {$\upsilon,\,\text{м}/\text{с}$};
+\node[below] at (2,0) {$2$};
+\node[below] at (4,0) {$4$};
+\node[below] at (6,0) {$6$};
+\node[below] at (8,0) {$8$};
+\node[below] at (10,0) {$10$};
+\node[below] at (12,0) {$12$};
+\node[left] at (0,5) {$5$};
+\node[left] at (0,10) {$10$};
+\node[left] at (0,15) {$15$};
+\draw[very thick] (0,0)--(4,15)--(12,15);
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Путь равен площади под графиком модуля скорости: $s=4\cdot15/2+(12-4)\cdot15=150\,\text{м}$.
+}
+
+% Source 41FCF3: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=41FCF3
+\BankTask{41FCF3}{
+На рисунке приведён график зависимости проекции $\upsilon_x$ скорости тела от времени $t$.
+
+Определите путь, пройденный телом в интервале времени от $0$ до $5\,\text{с}$. Результат выразите в $\text{м}$.
+\begin{center}
+\begin{tikzpicture}[x=0.23cm,y=0.12cm,>=stealth]
+\draw[thin,black!65,xstep=1,ystep=5] (0,-15) grid (20,15);
+\draw[->] (0,0)--(22,0) node[right] {$t,\,\text{с}$};
+\draw[->] (0,-15)--(0,20) node[above] {$\upsilon_x,\,\text{м}/\text{с}$};
+\node[below] at (5,0) {$5$};
+\node[below] at (10,0) {$10$};
+\node[below] at (15,0) {$15$};
+\node[below] at (20,0) {$20$};
+\node[left] at (0,-15) {$-15$};
+\node[left] at (0,-10) {$-10$};
+\node[left] at (0,-5) {$-5$};
+\node[left] at (0,0) {$0$};
+\node[left] at (0,5) {$5$};
+\node[left] at (0,10) {$10$};
+\node[left] at (0,15) {$15$};
+\draw[very thick] (0,15)--(5,-10)--(7,-10)--(12,5)--(15,5)--(19,-5);
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Скорость обращается в нуль при $t=3\,\text{с}$. Путь равен сумме модулей площадей: $s=15\cdot3/2+10\cdot2/2=32{,}5\,\text{м}$.
+}
+
+% Source eDB1FA: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=eDB1FA
+\BankTask{eDB1FA}{
+На рисунке приведён график зависимости проекции $\upsilon_x$ скорости тела
+от времени $t$.
+
+Определите проекцию $a_{x}$ ускорения этого тела в интервале времени
+от $0$ до $2\,\text{с}$. Учитывайте знак проекции. Результат выразите в $\text{м}/\text{с}^2$.
+\begin{center}
+\begin{tikzpicture}[x=0.48cm,y=0.18cm,>=stealth]
+\draw[thin,black!65,xstep=1,ystep=3] (0,-9) grid (9,9);
+\draw[->] (0,0)--(11,0) node[right] {$t,\,\text{с}$};
+\draw[->] (0,-9)--(0,12) node[above] {$\upsilon_x,\,\text{м}/\text{с}$};
+\node[below] at (1,0) {$1$};
+\node[below] at (2,0) {$2$};
+\node[below] at (3,0) {$3$};
+\node[below] at (4,0) {$4$};
+\node[below] at (5,0) {$5$};
+\node[below] at (6,0) {$6$};
+\node[below] at (7,0) {$7$};
+\node[below] at (8,0) {$8$};
+\node[below] at (9,0) {$9$};
+\node[left] at (0,-9) {$-9$};
+\node[left] at (0,-6) {$-6$};
+\node[left] at (0,-3) {$-3$};
+\node[left] at (0,0) {$0$};
+\node[left] at (0,3) {$3$};
+\node[left] at (0,6) {$6$};
+\node[left] at (0,9) {$9$};
+\draw[very thick] (0,-9)--(3,4.5)--(5.5,4.5)--(9,-6);
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+На первых $2\,\text{с}$ $v_x$ изменяется от $-9$ до $0\,\text{м}/\text{с}$. Поэтому $a_x=(0-(-9))/2=4{,}5\,\text{м}/\text{с}^2$.
+}
+
+% Source F5e57D: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=F5e57D
+\BankTask{F5e57D}{
+Тело движется вдоль оси $Ox$. На рисунке приведён график зависимости проекции $\upsilon_x$ скорости тела от времени $t$.
+
+Определите путь, пройденный телом в интервале времени от $0$ до $20\,\text{с}$. Результат выразите в $\text{м}$.
+\begin{center}
+\begin{tikzpicture}[x=0.12cm,y=0.12cm,>=stealth]
+\draw[thin,dashed,xstep=5,ystep=5] (0,0) grid (45,25);
+\draw[->] (0,0)--(50,0) node[right] {$t,\,\text{с}$};
+\draw[->] (0,0)--(0,30) node[above] {$\upsilon_x,\,\text{м}/\text{с}$};
+\node[below] at (10,0) {$10$};
+\node[below] at (20,0) {$20$};
+\node[below] at (30,0) {$30$};
+\node[below] at (40,0) {$40$};
+\node[left] at (0,0) {$0$};
+\node[left] at (0,10) {$10$};
+\node[left] at (0,20) {$20$};
+\draw[very thick] (0,15)--(10,5)--(20,20)--(30,0)--(40,25);
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+На интервале $0\! -\!20\,\text{с}$ скорость неотрицательна. Путь $s=(15+5)\cdot10/2+(5+20)\cdot10/2=225\,\text{м}$.
+}
+
+% Source 424A13: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=424A13
+\BankTask{424A13}{
+Из населённого пункта одновременно в одном направлении выезжают грузовой автомобиль и бульдозер и движутся по дороге с постоянными скоростями. На графике показана зависимость расстояния между грузовиком и бульдозером от времени. Скорость грузовика равна $25\,\text{м}/\text{с}$, а скорость бульдозера меньше. С какой скоростью движется бульдозер? Результат выразите в $\text{м}/\text{с}$.
+\begin{center}
+\begin{tikzpicture}[x=0.065cm,y=0.055cm,>=stealth]
+\draw[thin,dashed] (0,27)--(30,27) (30,0)--(30,27) (0,54)--(60,54) (60,0)--(60,54);
+\draw[->] (0,0)--(90,0) node[right] {$t,\,\text{мин}$};
+\draw[->] (0,0)--(0,81) node[above] {$S,\,\text{км}$};
+\node[below] at (0,0) {$0$};
+\node[below] at (30,0) {$30$};
+\node[below] at (60,0) {$60$};
+\node[left] at (0,27) {$27$};
+\node[left] at (0,54) {$54$};
+\draw[very thick] (0,0)--(60,54);
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Расстояние увеличивается со скоростью $54\,\text{км}/60\,\text{мин}=15\,\text{м}/\text{с}$. Поэтому $v_{\text{б}}=v_{\text{гр}}-15=25-15=10\,\text{м}/\text{с}$.
+}
+
+% Source B61411: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B61411
+\BankTask{B61411}{
+На рисунке показан график зависимости проекции $\upsilon_x$ скорости тела от времени $t$. Какова проекция $a_x$ ускорения этого тела в интервале времени от $2$ до $3\,\text{с}$? Учитывайте знак проекции. Результат выразите в $\text{м}/\text{с}^2$.
+\begin{center}
+\begin{tikzpicture}[x=0.7cm,y=0.175cm,>=stealth]
+\draw[thin,black!65,xstep=1,ystep=4] (0,-12) grid (6,12);
+\draw[->] (0,0)--(8,0) node[right] {$t,\,\text{с}$};
+\draw[->] (0,-13.5)--(0,17.5) node[above] {$\upsilon_x,\,\text{м}/\text{с}$};
+\node[below] at (2,0) {$2$};
+\node[below] at (4,0) {$4$};
+\node[below] at (6,0) {$6$};
+\node[left] at (0,-12) {$-12$};
+\node[left] at (0,-8) {$-8$};
+\node[left] at (0,-4) {$-4$};
+\node[left] at (0,0) {$0$};
+\node[left] at (0,4) {$4$};
+\node[left] at (0,8) {$8$};
+\node[left] at (0,12) {$12$};
+\draw[very thick] (0,12)--(2,4)--(3,-12)--(4,-12)--(5,0)--(6,-8);
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$a_x=(v_x(3)-v_x(2))/(3-2)=(-12-4)/1=-16\,\text{м}/\text{с}^2$.
+}
+
+% Source BD0C23: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=BD0C23
+\BankTask{BD0C23}{
+На рисунке представлен график зависимости модуля скорости $u$ прямолинейно движущегося тела от времени $t$. Определите по графику путь, пройденный телом в интервале времени от $1$ до $5\,\text{с}$. Результат выразите в $\text{м}$.
+\begin{center}
+\begin{tikzpicture}[x=0.9cm,y=0.202cm,>=stealth]
+\draw[thin,black!65,xstep=1,ystep=5] (0,0) grid (5,10);
+\draw[->] (0,0)--(6.2,0) node[right] {$t,\,\text{с}$};
+\draw[->] (0,0)--(0,15) node[above] {$\upsilon,\,\text{м}/\text{с}$};
+\node[below] at (0,0) {$0$};
+\node[below] at (1,0) {$1$};
+\node[below] at (2,0) {$2$};
+\node[below] at (3,0) {$3$};
+\node[below] at (4,0) {$4$};
+\node[below] at (5,0) {$5$};
+\node[left] at (0,10) {$10$};
+\draw[very thick] (0,0)--(1,10)--(3,10)--(5,0);
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$s=10(3-1)+10(5-3)/2=30\,\text{м}$.
+}
+
+% Source D109D1: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=D109D1
+\BankTask{D109D1}{
+На рисунке представлен график зависимости модуля скорости $\upsilon$ автомобиля от времени $t$. Определите по графику путь, пройденный автомобилем в интервале времени от $t_1=20\,\text{с}$ до $t_2=50\,\text{с}$. Результат выразите в $\text{м}$.
+\begin{center}
+\begin{tikzpicture}[x=0.09cm,y=0.21cm,>=stealth]
+\draw[thin,black!65,xstep=10,ystep=5] (0,0) grid (50,10);
+\draw[->] (0,0)--(70,0) node[right] {$t,\,\text{с}$};
+\draw[->] (0,0)--(0,15) node[above] {$\upsilon,\,\text{м}/\text{с}$};
+\node[below] at (0,0) {$0$};
+\node[below] at (10,0) {$10$};
+\node[below] at (20,0) {$20$};
+\node[below] at (30,0) {$30$};
+\node[below] at (40,0) {$40$};
+\node[below] at (50,0) {$50$};
+\node[left] at (0,10) {$10$};
+\draw[very thick] (0,0)--(10,10)--(30,10)--(50,0);
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+От $20$ до $30\,\text{с}$ путь $100\,\text{м}$, от $30$ до $50\,\text{с}$ --- $10\cdot20/2=100\,\text{м}$. Итого $s=200\,\text{м}$.
+}
+
+% Source 7CFB3E: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=7CFB3E
+\BankTask{7CFB3E}{
+Материальная точка движется прямолинейно
+с постоянным ускорением вдоль оси $Ox$. График зависимости её координаты от времени $x=x(t)$ изображён на рисунке. Определите проекцию $a_{x}$ ускорения этого тела. Результат выразите в $\text{м}/\text{с}^2$.
+\begin{center}\begin{tikzpicture}[x=1cm,y=1cm,>=stealth]
+\draw[thin,black!65] (-2,0) grid (2,3);
+\draw[->] (-2.6,0)--(3,0) node[right] {$t,\,\text{с}$};
+\draw[->] (0,0)--(0,3.6) node[above] {$x,\,\text{м}$};
+\foreach \x in {-2,-1,0,1,2} \node[below] at (\x,0) {$\x$};
+\foreach \y in {1,2,3} \node[left] at (0,\y) {$\y$};
+\draw[thick,dashed,domain=-2.45:0,samples=40] plot (\x,{.5*\x*\x});
+\draw[very thick,domain=0:2.45,samples=40] plot (\x,{.5*\x*\x});
+\end{tikzpicture}\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Из графика $x_0=0$, $v_{0x}=0$, $x(2)=2\,\text{м}$. По $x=a_xt^2/2$ получаем $a_x=2x/t^2=2\cdot2/4=1\,\text{м}/\text{с}^2$.
+}
+
+% Source eF04e1: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=eF04e1
+\BankTask{eF04e1}{
+На рисунке показан график зависимости проекции $\upsilon_x$ скорости тела от времени $t$. Какова проекция $a_x$ ускорения этого тела в интервале времени от $0$ до $0{,}5\,\text{с}$? Учитывайте знак проекции. Результат выразите в $\text{м}/\text{с}^2$.
+\begin{center}
+\begin{tikzpicture}[x=1cm,y=0.25cm,>=stealth]
+\draw[thin,black!65,xstep=0.5,ystep=2] (0,-6) grid (3,6);
+\draw[->] (0,0)--(4.0,0) node[right] {$t,\,\text{с}$};
+\draw[->] (0,-6)--(0,8) node[above] {$\upsilon_x,\,\text{м}/\text{с}$};
+
+\node[below] at (1,0) {$1$};
+\node[below] at (2,0) {$2$};
+\node[below] at (3,0) {$3$};
+\node[left] at (0,-6) {$-6$};
+\node[left] at (0,-4) {$-4$};
+\node[left] at (0,-2) {$-2$};
+\node[left] at (0,0) {$0$};
+\node[left] at (0,2) {$2$};
+\node[left] at (0,4) {$4$};
+\node[left] at (0,6) {$6$};
+\draw[very thick] (0,-6)--(0.5,2)--(1.5,2)--(2,6)--(2.5,0)--(3,4);
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$a_x=(2-(-6))/0{,}5=16\,\text{м}/\text{с}^2$.
+}
+
+% Source ce6D67: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=ce6D67
+\BankTask{ce6D67}{
+Тело движется вдоль оси $Ox$. На рисунке приведён график зависимости проекции $\upsilon_x$ скорости тела от времени $t$.
+
+Определите путь, пройденный телом в интервале времени от $0$ до $30\,\text{с}$. Результат выразите в $\text{м}$.
+\begin{center}
+\begin{tikzpicture}[x=0.12cm,y=0.12cm,>=stealth]
+\draw[thin,dashed,xstep=5,ystep=5] (0,0) grid (45,25);
+\draw[->] (0,0)--(50,0) node[right] {$t,\,\text{с}$};
+\draw[->] (0,0)--(0,30) node[above] {$\upsilon_x,\,\text{м}/\text{с}$};
+\node[below] at (10,0) {$10$};
+\node[below] at (20,0) {$20$};
+\node[below] at (30,0) {$30$};
+\node[below] at (40,0) {$40$};
+\node[left] at (0,0) {$0$};
+\node[left] at (0,10) {$10$};
+\node[left] at (0,20) {$20$};
+\draw[very thick] (0,15)--(10,5)--(20,20)--(30,0)--(40,25)--(45,25);
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+На интервале $0\! -\!30\,\text{с}$ скорость неотрицательна. Путь $s=(15+5)10/2+(5+20)10/2+20\cdot10/2=325\,\text{м}$.
+}
+
+\end{document}

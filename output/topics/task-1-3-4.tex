@@ -1,0 +1,168 @@
+% !TEX root = task-1-3-4.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{1.3.4}{Свободное падение}
+
+
+% Source ADDAE8: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=ADDAE8
+\BankTask{ADDAE8}{
+Тело брошено вертикально вверх с поверхности Земли в момент времени $t=0$. В таблице приведены результаты измерения модуля скорости тела в зависимости от времени.
+\begin{center}{\small\setlength{\tabcolsep}{3pt}\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}\hline $t,\,\text{с}$ & $0{,}1$ & $0{,}2$ & $0{,}3$ & $0{,}4$ & $0{,}5$ & $0{,}6$ & $0{,}7$ & $0{,}8$ & $0{,}9$ & $1{,}0$ \\\hline $|v|,\,\text{м}/\text{с}$ & $4{,}0$ & $3{,}0$ & $2{,}0$ & $1{,}0$ & $0$ & $1{,}0$ & $2{,}0$ & $3{,}0$ & $4{,}0$ & $5{,}0$ \\\hline\end{tabular}}\end{center}
+\begin{enumerate}
+\item Тело поднялось на максимальную высоту, равную $0{,}8\,\text{м}$.
+\item На высоте $0{,}8\,\text{м}$ от поверхности Земли скорость тела была равна $3{,}0\,\text{м}/\text{с}$.
+\item Начальная скорость тела была равна $4\,\text{м}/\text{с}$.
+\item В момент времени $t=0{,}9\,\text{с}$ тело находилось на высоте $0{,}45\,\text{м}$ от поверхности Земли.
+\item В момент времени $t=0{,}2\,\text{с}$ тело находилось на высоте $0{,}45\,\text{м}$ от поверхности Земли.
+\end{enumerate}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По таблице $g=10\,\text{м}/\text{с}^2$, $v_0=5\,\text{м}/\text{с}$. Высота $h=5t-5t^2$, $h_{\max}=1{,}25\,\text{м}$. На высоте $0{,}8\,\text{м}$ $v^2=v_0^2-2gh=9$, то есть $|v|=3\,\text{м}/\text{с}$. При $t=0{,}9\,\text{с}$ $h=4{,}5-4{,}05=0{,}45\,\text{м}$; при $0{,}2\,\text{с}$ $h=0{,}8\,\text{м}$. Ответ: $24$.
+}
+
+% Source 589e07: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=589e07
+\BankTask{589e07}{
+Мяч подбросили вверх с крыши сарая. Как изменяются по мере подъёма модуль импульса мяча и его потенциальная энергия относительно поверхности Земли? Сопротивление воздуха не учитывать.
+\begin{enumerate}
+\item увеличивается
+\item уменьшается
+\item не изменяется
+\end{enumerate}
+\TaskChangeTable{Модуль импульса мяча}{Потенциальная энергия мяча}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+При подъёме скорость уменьшается, поэтому $p=mv$ уменьшается. Высота растёт, значит $E_{\text{п}}=mgh$ увеличивается. Ответ: $21$.
+}
+
+% Source 010677: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=010677
+\BankTask{010677}{
+Камень подбросили вверх. Как меняются по мере подъёма ускорение камня
+и его кинетическая энергия? Сопротивление воздуха не учитывать.
+\begin{enumerate}
+\item увеличивается
+\item уменьшается
+\item не меняется
+\end{enumerate}
+\TaskChangeTable{Ускорение камня}{Кинетическая энергия камня}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Ускорение свободного падения $\vec a=\vec g$ постоянно. При подъёме скорость уменьшается, поэтому $E_{\text{к}}=mv^2/2$ уменьшается. Ответ: $32$.
+}
+
+% Source 46782: https://phys-ege.sdamgia.ru/problem?id=46782
+\BankTask{46782}{
+Камень, поднятый над поверхностью земли, падает без начальной скорости вертикально вниз и за последнюю секунду своего движения проходит путь $\Delta h=10\,\text{м}$. Определите среднюю скорость камня за всё время падения. Сопротивлением воздуха пренебречь.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Средняя скорость камня равна отношению высоты H, с которой бросили камень, к времени его падения $t_0$ до поверхности земли: $v_{\text{ср}} = \frac{H}{t_0} .$
+Камень движется вертикально вниз равноускоренно с ускорением свободного падения, следовательно: $H = \frac{g t_0 ^2}{2} ,$ откуда $v_{\text{ср}} = \frac{g t_0}{2} .$ 
+Найдём путь $\Delta h,$ пройденный камнем за последнюю секунду падения: 
+
+\[\Delta h = H - h = \frac{g t_0 ^2}{2} - \frac{g ( t_0 - \Delta t ) ^2}{2} ,\]
+
+где $\Delta t = 1 \,\text{с}$ — время, за которое камень прошел путь $\Delta h.$ Отсюда получим: 
+
+$t_0 = \frac{2 \Delta h + g \Delta t ^2}{2 g \Delta t} = \frac{2 \cdot 10 + 10 \cdot 1 ^2}{2 \cdot 10 \cdot 1} = 1{,}5 \,\text{с},$ 
+$v_{\text{ср}} = \frac{g t_0}{2} = \frac{10 \cdot 1{,}5}{2} = 7{,}5 \,\text{м/с}.$
+
+Ответ: $v _{\,\text{ср}} = 7{,}5 \,\text{м/с}.$
+}
+
+% Source 25044: https://phys-ege.sdamgia.ru/problem?id=25044
+\BankTask{25044}{
+Определите скорость, с которой тело было брошено вертикально вниз, если за время падения тела на $15\,\text{м}$ его скорость увеличилась в $2$ раза. Сопротивлением воздуха пренебречь.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Движение тела при отсутствии сопротивления  — равноускоренное с ускорением свободного падения. Тогда $h= \frac{v ^2 - v _0 ^2}{2g} .$ С учетом условия: 
+
+\[h= \frac{4 v _0 ^2 - v _0 ^2}{2g} = \frac{3 v _0 ^2}{2g} .\]
+
+Тогда: 
+
+\[v _0= \sqrt{\frac{2gh}{3}} = \sqrt{\frac{2 \cdot 10 \cdot 15}{3}} =10\,\text{м/с}.\]
+
+Ответ: $10\,\text{м/с}$.
+}
+
+% Source 32266: https://phys-ege.sdamgia.ru/problem?id=32266
+\BankTask{32266}{
+\begin{center}\begin{tikzpicture}[>=stealth,line width=.55pt]\draw[->](0,.32)--(0,-6.75)node[below]{$y,\ \text{м}$};\node[left]at(0,.28){$O$};\foreach \i in {0,2,...,60}{\draw(-.09,-\i/10)--(.09,-\i/10);}\foreach \i in {0,10,...,60}{\draw(-.16,-\i/10)--(.16,-\i/10)node[right]{$\i$};}\foreach \i in {0,6,24,54}{\fill[orange!75!black](-.74,-\i/10)circle(.075);}\end{tikzpicture}\end{center}На неизвестной планете, лишенной атмосферы, космонавт уронил предмет, четыре последовательных положения которого через каждую секунду показаны на рисунке. Покажите, что движение предмета равноускоренное, и определите проекцию вектора ускорения, с которым падает предмет, на направление оси y.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Найдем ускорение шарика в моменты времени $t=1, 2, 3 \,\text{с},$ исходя из формулы равноускоренного движения без начальной скорости: $s= \frac{at ^2}{2} ,$ откуда $a= \frac{2s}{t ^2} .$ Получаем:
+
+$a_1= \frac{2 \cdot 6}{1 ^2} =12 \,\text{м/с} ^2 ;$
+$a_2= \frac{2 \cdot 24}{2 ^2} =12 \,\text{м/с} ^2 ;$
+$a_3= \frac{2 \cdot 54}{3 ^2} =12 \,\text{м/с} ^2 .$
+
+Таким образом, в любые промежутки времени ускорение оставалось неизменным. Следовательно, движение на планете было равноускоренным с ускорением $a=12 \,\text{м/с} ^2 .$
+
+Ответ: движение равноускоренное; ускорение $12\,\text{м/с}^{2}$.
+}
+
+% Source 38860: https://phys-ege.sdamgia.ru/problem?id=38860
+\BankTask{38860}{
+\begin{center}\begin{tikzpicture}[task graph,>=stealth]\draw(-.82,0)--(4,0);\draw(-.6,0)--(-.6,3.3);\draw[<->](-.6,0)--(-.6,3.3)node[midway,left]{\(H\)};\draw(-.6,3.3)--(0,3.3);\draw[<->](0,0)--(0,1.96)node[midway,left]{\(h\)};\draw[dashed](0,1.96)--(0,3.3);\draw[fill=gray!15](0,3.3)circle(.21);\draw(-.46,2.23)--(.46,1.69);\draw(0,2.33)arc(90:149:.37)node[midway,above left]{\(\alpha\)};\draw[dashed](0,1.96) parabola bend(2.35,3.02)(3.7,2.72);\draw[<->](2.35,0)--(2.35,3.02)node[midway,left]{\(h_1\)};\end{tikzpicture}\end{center}Шарик падает из состояния покоя и на высоте h  =  $1\,\text{м}$ от поверхности Земли абсолютно упруго ударяется о доску, расположенную под углом $\alpha =30 ^\circ$ к горизонту (см. рисунок). Модуль скорости шарика после отскока от доски равен модулю скорости шарика непосредственно перед ударом. После удара шарик поднялся на максимальную высоту h$_{1}$  =  $1{,}25\,\text{м}$ от поверхности Земли. Определите с какой высоты H над поверхностью Земли упал шарик, если после удара его скорость направлена под углом $2 \alpha$ к вертикали. Сопротивлением воздуха пренебречь. 
+Обоснуйте применимость используемых законов к решению задачи.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Обоснование
+Систему отсчета, связанную с Землей, будем считать инерциальной. Шарик движется поступательно, поэтому его можно принять за материальную точку. По условию задачи силой сопротивления воздуха можно пренебречь. Поэтому шарик движется в поле Земного тяготения. Следовательно, для описания движения тел до столкновения с доской можно использовать закон сохранения энергии
+Поскольку при ударе о доску модуль шарика не изменился, то можно считать, что удар абсолютно упругий, следовательно, угол отскока равен углу при падении и равен $\alpha .$
+Движение шарика после отскока от доски происходит под действием только силы тяжести, поэтому он движется с ускорением свободного падения.
+
+Перейдем к решению. \begin{center}\begin{tikzpicture}[task graph,>=stealth]\draw(-.82,0)--(1.3,0);\draw(-.6,0)--(-.6,3.3);\draw[<->](-.6,0)--(-.6,3.3)node[midway,left]{\(H\)};\draw(-.6,3.3)--(0,3.3);\draw[<->](0,0)--(0,1.96)node[midway,left]{\(h\)};\draw[dashed](0,1.96)--(0,3.3);\draw[fill=gray!15](0,3.3)circle(.21);\draw(-.46,2.23)--(.46,1.69);\draw(0,2.33)arc(90:149:.37)node[midway,above left]{\(\alpha\)};\draw[->](0,1.96)--(.57,2.84)node[above]{\(\vec n\)};\draw[->](0,1.96)--(1.28,2.54);\draw[dashed](0,1.96)--(1.36,1.96);\draw(1.02,1.96)arc(0:24.4:1.02)node[midway,right]{\(\beta\)};\draw(0,2.54)arc(90:57:.58)node[midway,above right]{\(\alpha\)};\end{tikzpicture}\end{center}
+Рассмотрим движение шарика до соударения о доску. В верхней точке он обладал потенциальной энергией $E_{\,\text{п}1}= mgH,$ в момент удара  — потенциальной $E_{\,\text{п}2}= mgh$ и кинетической $E_{\,\text{к}2}= \frac{m v ^2}{2} ,$ где m  — масса шарика, \ensuremath{\upsilon}  — скорость шарика в момент удара о доску. По закону сохранения энергии $E_{\,\text{п}1}=E_{\,\text{п}2} + E_{\,\text{к}2}.$ Тогда получаем:
+
+$mgH=mgh + \frac{m v ^2}{2} ,$
+$H=h + \frac{v ^2}{2g} . \qquad ( 1 )$
+
+Из рисунка следует, что угол между скоростью при отскоке и горизонтом равен $\beta =90 ^\circ - 2 \alpha .$
+Дальнейшее движение шарика происходило с ускорением свободного падения g. Проекция начальной скорости на вертикальную ось равна $v _y= v \sin \beta = v \sin ( 90 ^\circ - 2 \alpha ) = v \cos 2 \alpha .$ В точке максимального подъема $v_{y1}=0.$ Если выбрать в качестве начального уровня высоты точку отскока, то максимальная высота подъема при равноускоренном движении
+
+\[h_1 - h= \frac{v_{y1} ^2 - v _y ^2}{- 2g} = \frac{v ^2 \cos ^2 2 \alpha}{2g} . \qquad ( 2 )\]
+
+Объединяя формулы ($1$) и ($2$), получаем:
+
+\[H=h + \frac{h_1 - h}{\cos ^2 2 \alpha} =1 + \frac{1{,}25 - 1}{0{,}25} =2\,\text{м}.\]
+
+Ответ: $2\,\text{м}$.
+}
+
+\end{document}

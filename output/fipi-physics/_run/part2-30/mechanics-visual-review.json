@@ -1,0 +1,188 @@
+{
+  "approved": true,
+  "review_scope": "Постранично визуально просмотрены все44 финальных PNG: ученические22(5),26(8), репетиторские22(10),26(21). Проверены поля, переносы, формулы, таблица, исходные схемы и схемы сил, заголовки Решение от GPT и источники после ответа. Пустых страниц, наложений, обрезок и повреждённых глифов нет. После последней правки изменился только tutor26/page17; он повторно осмотрен.",
+  "pages": [
+    {
+      "file": "tmp/part2-30-check/preview/task-22/page-01.png",
+      "sha256": "2cd317609f811cb5da9b35521664f89b6d1e8e75c71800f289e5f11d1f571a17"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/task-22/page-02.png",
+      "sha256": "b9ab47a1c7c29ff41bb4830ed2a1bb85805e6e21be8940406cca7bbb0146a783"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/task-22/page-03.png",
+      "sha256": "3ad823b535c896d83ab1726184efc0d8b7548da54b5ea93e68cee1d47980fc32"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/task-22/page-04.png",
+      "sha256": "5e68f24b796b57aad8b8a22d02da41c5251e47745d2e20f2f94c289400225b4c"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/task-22/page-05.png",
+      "sha256": "8465d133c89c832fb548723e105c338ce7098dbc0b19566c4eec2b7b35136aa8"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-22/page-01.png",
+      "sha256": "af442b4c4601b529d6555d2df6ff89d1f5a3f412c2d448cfc615fea000c7120b"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-22/page-02.png",
+      "sha256": "8f8d1a3fbe4ef0fc332256e7171091177e0687d053e00c6a35a86a9cdac924c4"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-22/page-03.png",
+      "sha256": "f5a7355cb437a1d2bbcb2def11836a730a67083bce5b1d8efc5096a52b11f4e4"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-22/page-04.png",
+      "sha256": "d52fff6f38c6aef96d2cd6bc04d43e9d34bbed7bbcdfcfb7748de3eb477d2e8c"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-22/page-05.png",
+      "sha256": "3844b624812718c6dfe46ef0e27744d237f3d8a63516a40cf73fec04cc035a46"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-22/page-06.png",
+      "sha256": "426f728ed1d4177712e0cabef4270c645deba0ba94501e1e879cf3de65bdcfcb"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-22/page-07.png",
+      "sha256": "1f5d09dc6c67a0803132b336f73c71afab817e18fadf4a6bf99826bbf9829177"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-22/page-08.png",
+      "sha256": "061bb6cf37005890179eb4dacbad03a75a5c0471accbde9045c118f9e3defab0"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-22/page-09.png",
+      "sha256": "3bad0815c84ec9375a1974b21da79322bc0518f83fce37e7de5613ad66c49a48"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-22/page-10.png",
+      "sha256": "9230a51cc40bb99869731e919efc5afa9f938e9f08d18dfde549e33fc7e19be2"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/task-26/page-01.png",
+      "sha256": "e2aafd05315251095a1287a324c8ed2319d1249ca06dba20140a320cb96d7913"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/task-26/page-02.png",
+      "sha256": "22786270b7a0dd98934d29a360912af41674eeea57047cf43356470bd4498a90"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/task-26/page-03.png",
+      "sha256": "83bff63c5e02b689d9ce0cd25c61833854fc906d7c955321389c97a005a160b5"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/task-26/page-04.png",
+      "sha256": "8b878fdb6ce58d47712b2a92c2cefab37528396a0d991063470fbbddb7801733"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/task-26/page-05.png",
+      "sha256": "2776f2bebc15cc918b55f88e61075e940689560a37a46c99fd3500f824a87ca9"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/task-26/page-06.png",
+      "sha256": "d0cbb513c7708924ac416411bf0011ab3d28966a983120af4cc07539ee41b727"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/task-26/page-07.png",
+      "sha256": "6f42ac471639faff2ab98f4b4019700d770b51c3b3e0b1076faad1b8534e3777"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/task-26/page-08.png",
+      "sha256": "370b1b935321118ff95c1c288121f7e6747e8df928cda06af7adb12e9be129a9"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-26/page-01.png",
+      "sha256": "f180abcbaa8ffec59cfffaba214e19fcbb4be0b031f40394af576b9922c3f069"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-26/page-02.png",
+      "sha256": "2cbc9ec05fb6f2c020ce2648729036e92770b8ced1f97761768caffcea354477"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-26/page-03.png",
+      "sha256": "2fd2fa4a7b63779ede2178e90d48a9afba7ee642ac905198b70d7a5bcc2a01df"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-26/page-04.png",
+      "sha256": "e526a08fbcaca5663a6f5f04e5af6364d8fcfb99768b30f29f435ce0575dc864"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-26/page-05.png",
+      "sha256": "6ac83f38bf828e89dacd9f815cecdad5bbfb5550e5defb9d788e1b9e8ff5fa5b"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-26/page-06.png",
+      "sha256": "d287ec57aa7da5ea23e267d32cb56ff94459a7a0074888d83192b7567b0396c8"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-26/page-07.png",
+      "sha256": "f0616ab0a924e1750af171d692faf72a2f6eb925381e7947f411a591194f318a"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-26/page-08.png",
+      "sha256": "bd0453a626143600df247bba74d69f8252ce3156706168aaa2fd083b415065b2"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-26/page-09.png",
+      "sha256": "4b3799fdff74ad651b4b651afd0caadc87d1da426d0a0c92f5a103ac8c2cc983"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-26/page-10.png",
+      "sha256": "84ac6bd60c1a9e8916960688bbff834bbcbf69ecc38dd63fc1a4f9c23317a52c"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-26/page-11.png",
+      "sha256": "7e120b11f6eb8defd2dd818f262283cf0168ec8b9636e458cf120fda2f4d8c1c"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-26/page-12.png",
+      "sha256": "e3be8e00fa91c61d77cfd1145c564e43f2cf14639b71ddd6935d36b3fff8e821"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-26/page-13.png",
+      "sha256": "573fca7bb35b3c0b8aee51d3ddfc2b2ea868090b058fd7ce2e7fe20e7b153b0a"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-26/page-14.png",
+      "sha256": "dff6701aa87030ec60b76126ed216f498d04a72ddaa56a121f3f16482df228c9"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-26/page-15.png",
+      "sha256": "5607d3011c71c09cbd4bdae6ee87f666182cc24a5af2a0051b479f4470c12e3b"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-26/page-16.png",
+      "sha256": "81049f5b069116a2d2937d7bdd1df6f67cab864e90fee82b338153b816090796"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-26/page-17.png",
+      "sha256": "dace709aea03377b4aec4ff160c5f3c67298c2d675fd3a1c62a4164d7d0434b6"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-26/page-18.png",
+      "sha256": "92a5c9fbf8d6e670f63a10d183ee3a0aa6b22de8de871c3432f72dc25b78f830"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-26/page-19.png",
+      "sha256": "3982eb5a569bee7704ff101c698ea74b92a818224cbea0897d9c8e319c019cfd"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-26/page-20.png",
+      "sha256": "a2fc2d4a2d6af64bc753c35507e57ea48c51e6938a8d11114f9f888511695290"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-26/page-21.png",
+      "sha256": "787ff8e309972b1863538932d11403b75ba6b9f49c407dbff12049a169f945d6"
+    }
+  ],
+  "drafts": {
+    "22": "fe5ca3973f103a8e25f6289adabffb6940cb969ac4ea9902d3b331dba6a9a7ea",
+    "26": "20b1693037e4abd141e069e200e272530da1d2f3f4309831efe3048664018a3b"
+  },
+  "issues": [],
+  "editor_check": "Проверена командная сборка Tectonic по проектному рецепту и PDF; открытие внутри LaTeX Workshop не проверено."
+}

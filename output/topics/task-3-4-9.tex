@@ -1,0 +1,110 @@
+% !TEX root = task-3-4-9.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{3.4.9}{Эквипотенциальные поверхности}
+
+
+% Source sdamgia-9029: https://phys-ege.sdamgia.ru/problem?id=9029
+\BankTask{sdamgia-9029}{
+Однородное электростатическое поле создано равномерно заряженной протяженной горизонтальной пластиной. Линии напряженности поля направлены вертикально вверх (см. рис.).\par
+$1$. Если в точку А поместить пробный точечный отрицательный заряд, то на него со стороны пластины будет действовать сила, направленная вертикально вниз.\par
+$2$. Пластина имеет отрицательный заряд.\par
+$3$. Потенциал электростатического поля в точке В ниже, чем в точке С.\par
+$4$. Напряженность поля в точке А меньше, чем в точке С.\par
+$5$. Работа электростатического поля по перемещению пробного точечного отрицательного заряда из точки А и в точку В равна нулю.\par
+
+\begin{center}\begin{tikzpicture}[book diagram,>=stealth]
+\draw[thick](-.3,0)--(3.4,0);\foreach\x in{0,1,2,3}\draw[->](\x,0)--(\x,3.1);\node[right]at(2.2,2.65){$\vec E$};\draw(0,1)--(3,1)--(3,2.5)--cycle;\node[left]at(0,1){$A$};\node[right]at(3,1){$B$};\node[right]at(3,2.5){$C$};\draw(2.8,1)--(2.8,1.2)--(3,1.2);
+\end{tikzpicture}\end{center}
+\par
+}{
+\smallskip\noindent\textbf{Решение}\par
+Поскольку линии напряженности выходят из пластины, то, значит, пластина заряжена положительно (утверждение $2$ неверно). Если в точку А поместить пробный точечный отрицательный заряд, то на него будет действовать сила, направленная вертикально вниз (утверждение $1$ верно).\par
+Потенциал убывает при удалении от положительной пластины (утверждение $3$ неверно).\par
+Напряженность поля одинакова во всех точках над пластиной (утверждение $4$ неверно).\par
+Точки А и $B$ — это точки одинакового потенциала, а значит, работа по перемещению пробного заряда между этими точками равна нулю (утверждение $5$ верно).\par
+Ответ: $15$.\par
+}
+
+% Source sdamgia-10474: https://phys-ege.sdamgia.ru/problem?id=10474
+\BankTask{sdamgia-10474}{
+Две параллельные металлические пластины больших размеров расположены на расстоянии $d$ друг от друга и подключены к источнику постоянного напряжения (рис. $1$). Пластины закрепили на изолирующих подставках и спустя длительное время отключили от источника (рис. $2$).\par
+$1$. Напряженность электрического поля в точке А больше, чем в точке В.\par
+$2$. Потенциал электрического поля в точке А больше, чем в точке С.\par
+$3$. Если увеличить расстояние между пластинами $d$, то напряженность электрического поля в точке С не изменится.\par
+$4$. Если уменьшить расстояние между пластинами $d$, то заряд правой пластины не изменится.\par
+$5$. Если пластины полностью погрузить в керосин, то энергия электрического поля конденсатора останется неизменной.\par
+
+\begin{center}\begin{tikzpicture}[book diagram,>=stealth]
+\foreach\shift in{0,4}{\begin{scope}[xshift=\shift cm]\draw[thick](0,0)--(0,2.6)(2,0)--(2,2.6);\draw[<->](0,3)--(2,3)node[midway,above]{$d$};\draw(0,2.6)--(0,3.2)(2,2.6)--(2,3.2);\end{scope}}\draw(0,1.3)--(-.8,1.3)--(-.8,-.8)--(.65,-.8);\draw(.65,-.8)circle(.1);\draw(1.35,-.8)circle(.1);\draw(1.35,-.8)--(2.8,-.8)--(2.8,1.3)--(2,1.3);\node[above]at(.65,-.7){$-$};\node[above]at(1.35,-.7){$+$};\node at(1,-1.3){Рис.\ 1};\draw(4,1.3)--(3.5,1.3)(6,1.3)--(6.5,1.3);\foreach\x/\y/\s in{4.55/.55/A,4.55/1.7/B,5.3/1.15/C}{\fill(\x,\y)circle(1.5pt);\node[above]at(\x,\y){$\s$};}\node at(5,-1.3){Рис.\ 2};
+\end{tikzpicture}\end{center}
+\par
+}{
+\smallskip\noindent\textbf{Решение}\par
+После того как длительное время пластины были подключены к источнику постоянного напряжения, они зарядились: левая пластина — отрицательно, правая — положительно.\par
+$1$. Внутри плоского заряженного конденсатора электрическое поле однородно. Напряженности поля в точках А и В одинаковые. Утверждение $1$ неверно.\par
+$2$. Потенциал электрического поля внутри конденсатора убывает от положительной пластины к отрицательной. Потенциал электрического поля в точке А меньше, чем в точке С. Утверждение $2$ неверно.\par
+$3$. Поскольку пластины отключены от источника, то заряд и его поверхностная плотность на них не меняется при изменении расстояния. Значит, не будет изменяться и напряженность электрического поля между пластинами. Утверждение $3$ верно.\par
+$4$. Заряд пластин остается постоянным, независимо от того, сдвигают пластины или нет. Утверждение $4$ верно.\par
+$5$. Диэлектрическая проницаемость керосина больше $1$. При полном погружении в керосин энергия электрического поля конденсатора $W= \frac{ q ^2 }{ 2C }$ уменьшится. Утверждение $5$ неверно.\par
+Ответ: $34$.\par
+}
+
+% Source sdamgia-6359: https://phys-ege.sdamgia.ru/problem?id=6359
+\BankTask{sdamgia-6359}{
+Сплошной металлический шар радиусом $R$, находящийся в вакууме, имеет заряд $Q$. Установите соответствие между физическими величинами и формулами, по которым их можно рассчитать.\par
+
+\begin{center}\begin{minipage}[t]{.47\linewidth}\textbf{Физические величины}\par\smallskip А) модуль напряженности электрического поля на расстоянии $2R$ от центра шара\par
+Б) потенциал поверхности шара\end{minipage}\hfill\begin{minipage}[t]{.47\linewidth}\textbf{Формулы}\par\smallskip $1$) $\frac{ 1}{ 4 \pi \varepsilon_{0} } \cdot \frac{ Q}{ 2R }$ \par
+$2$) $0$\par
+$3$) $\frac{ 1}{ 4 \pi \varepsilon_{0} } \cdot \frac{ Q}{ R }$ \par
+$4$) $\frac{ 1}{ 4 \pi \varepsilon_{0} } \cdot \frac{ Q}{ 4R ^2 }$\end{minipage}\end{center}
+\par
+\begin{center}\small\setlength{\tabcolsep}{3pt}\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|}\hline
+$A$ & Б\\\hline
+ & \\\hline
+\end{tabular}\end{center}\par
+}{
+\smallskip\noindent\textbf{Решение}\par
+А) Модуль напряженности сферически симметричного распределения заряда вне этого заряда на расстоянии $r$ рассчитывается по формуле $E=k\frac{Q}{r^2}=\frac1{4\pi\varepsilon_0}\cdot\frac Q{r^2}.$ Следовательно, на расстоянии $2R$ модуль напряженности $E= \frac{ 1}{ 4 \pi \varepsilon _{0} } \cdot \frac{ Q}{ 4R ^2 } .$\par
+Б) Потенциал по сферически симметричного распределения заряда вне этого заряда на расстоянии $r$ рассчитывается по формуле $\varphi=k \frac{ Q}{ r } = \frac{ 1}{ 4 \pi \varepsilon _{0} } \cdot \frac{ Q}{ r } .$ Значит, на поверхности шара, то есть на расстоянии $R$, потенциал $\varphi= \frac{ 1}{ 4 \pi \varepsilon _{0} } \cdot \frac{ Q}{ R } .$\par
+Ответ: $43$.\par
+}
+
+\end{document}

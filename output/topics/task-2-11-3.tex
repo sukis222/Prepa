@@ -1,0 +1,65 @@
+% !TEX root = task-2-11-3.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{2.11.3}{Работа, совершаемая над газом}
+
+
+% Source BA6eFF: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=BA6eFF
+\BankTask{BA6eFF}{
+Двум моль газа сообщили количество теплоты, равное \(1700\ \text{Дж}\), при этом внешние силы совершили над газом работу, равную \(500\ \text{Дж}\). На сколько увеличилась внутренняя энергия газа (в $\text{Дж}$)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По первому закону термодинамики
+\[
+\Delta U=Q+A_{\text{внеш}}=1700+500=2200\ \text{Дж}.
+\]
+Ответ: \(2200\ \text{Дж}\).
+}
+
+% Source 5AD1F4: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=5AD1F4
+\BankTask{5AD1F4}{
+Газ в сосуде сжали, совершив работу, равную \(500\,\text{Дж}\). Внутренняя энергия газа при этом увеличилась на \(350\,\text{Дж}\). Какое количество теплоты отдал газ окружающей среде (в $\text{Дж}$)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По первому закону термодинамики \(\Delta U=Q+A_{\text{внеш}}\), где \(Q\) — теплота, полученная газом. Тогда \(Q=350-500=-150\,\text{Дж}\). Газ отдал окружающей среде \(Q_{\text{отд}}=150\,\text{Дж}\).
+
+Ответ: \(150\,\text{Дж}\).
+}
+
+\end{document}

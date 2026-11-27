@@ -1,0 +1,66 @@
+{
+  "approved": true,
+  "reviewed_sha256": "3203950d2ff9bb913654fff83cb35ee832258c259d422839810ca7e78b3cdb0a",
+  "pages": [
+    {
+      "file": "tmp/all-topics/optics-quantum/batch02/preview/task-6-2-1/page-01.png",
+      "sha256": "948ab2a13c999054b72935fc1481c01e5c7f01437905777857eb689534d75330"
+    },
+    {
+      "file": "tmp/all-topics/optics-quantum/batch02/preview/task-6-2-2/page-01.png",
+      "sha256": "df637f40a497ff49cbbb75abe4bb60edea489b31461f95ad1d5f27e6c23cbe55"
+    },
+    {
+      "file": "tmp/all-topics/optics-quantum/batch02/preview/task-6-2-3/page-01.png",
+      "sha256": "45a0f59b31c3d2aecddbdfcd10191ba5731ff55065a6969a6311e4c646224979"
+    },
+    {
+      "file": "tmp/all-topics/optics-quantum/batch02/preview/task-6-2-3/page-02.png",
+      "sha256": "01d76a36148b6eacf24fd54d0553ca236c5275d4282e0288de0742e556285669"
+    },
+    {
+      "file": "tmp/all-topics/optics-quantum/batch02/preview/tutor-6-2-1/page-01.png",
+      "sha256": "ce1936af73543418ce83b271ea39ab64497d9450b9bacc3055bae3748b382cb9"
+    },
+    {
+      "file": "tmp/all-topics/optics-quantum/batch02/preview/tutor-6-2-1/page-02.png",
+      "sha256": "6aa1e5e86a9ef1f346bb28e12c66b01e10c08248d5ba9e59e9fd3444789ed532"
+    },
+    {
+      "file": "tmp/all-topics/optics-quantum/batch02/preview/tutor-6-2-1/page-03.png",
+      "sha256": "4d2c6f4349fcaa03b535d40117fa6e85808e61ab9ad79cd2695e9ff94c89d15b"
+    },
+    {
+      "file": "tmp/all-topics/optics-quantum/batch02/preview/tutor-6-2-2/page-01.png",
+      "sha256": "9f680b0ead1825a8e14fa3bacb7df1ce817a5a3c7e5f91e4f496b12eb39b22e6"
+    },
+    {
+      "file": "tmp/all-topics/optics-quantum/batch02/preview/tutor-6-2-2/page-02.png",
+      "sha256": "6433469827768cec0a61ae91a953bf6a2ed0e2b0ac44fd658241b8f13a635a03"
+    },
+    {
+      "file": "tmp/all-topics/optics-quantum/batch02/preview/tutor-6-2-2/page-03.png",
+      "sha256": "f6824fdd7c412f6ee3425605d42d26c538ac576a07167fd587ad4063a2c430f4"
+    },
+    {
+      "file": "tmp/all-topics/optics-quantum/batch02/preview/tutor-6-2-3/page-01.png",
+      "sha256": "0ac31c699137f5b9f39ecbbbc3a47dd3a97eefbf4514d62d2a50d4384ee2c282"
+    },
+    {
+      "file": "tmp/all-topics/optics-quantum/batch02/preview/tutor-6-2-3/page-02.png",
+      "sha256": "f32cce43c8d88898a157329a5dafe3a18e50b3c89c00cf3aa965e8c9223cad59"
+    },
+    {
+      "file": "tmp/all-topics/optics-quantum/batch02/preview/tutor-6-2-3/page-03.png",
+      "sha256": "62a8852c9d42d775b111d0d2d3a338c085909c06b56ff1bc6ca3b0b62c27d50d"
+    },
+    {
+      "file": "tmp/all-topics/optics-quantum/batch02/preview/tutor-6-2-3/page-04.png",
+      "sha256": "1f1e665119d9549bc8e7f3a5945239af082d5a7fd282d3312fda327ecfc3c429"
+    }
+  ],
+  "checks": [
+    "All14pages inspected; formulas legible; no clipping/overlap; original solutions preserved.",
+    "Command-line project compiler build passed; editor opening not checked."
+  ]
+}

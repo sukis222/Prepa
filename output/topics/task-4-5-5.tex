@@ -1,0 +1,63 @@
+% !TEX root = task-4-5-5.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{4.5.5}{Ход лучей в рассеивающей линзе}
+
+
+% Source 29760: https://phys-ege.sdamgia.ru/problem?id=29760
+\BankTask{29760}{
+Рассеивающая линза с фокусным расстоянием $F_1=10$ см расположена перед собирающей линзой с фокусными расстоянием $F_2=15$ см. Лучи, идущие от точечного источника света, расположенного на расстоянии $d=10$ см от pacceивающей линзы, пройдя систему образовали пучок лучей, параллельный главной оптической оси. Найдите расстояние между линзами.
+}{
+\smallskip\noindent\textbf{Решение}\par
+$1$.  Найдем расстояние от рассеивающей линзы до изображения точечного источника света по формуле тонкой линзы 
+
+\[\frac{1}{d} - \frac{1}{f} = - \frac{1}{F_1} ,\]
+
+ откуда 
+
+\[f= \frac{d F_1}{d + F_1} = \frac{10 \cdot 10}{10 + 10} =5 \,\text{см}.\]
+
+ Это мнимое изображение находится перед рассеивающей линзой. 
+$2$.  Учитывая, что данная точка является источником для собирающей линзы, а лучи после прохождения через нее параллельны, делаем вывод, что эта точка находится в фокусе собирающей линзы, то есть на расстоянии $15\,\text{см}$.
+$3$.  Тогда расстояние между линзами равно $x=F_2 - f=15 - 5=10 \,\text{см}.$ 
+
+Ответ: $10\,\text{см}$.
+}
+
+\end{document}

@@ -1,0 +1,15 @@
+{
+  "batch": "mechanics-hooke",
+  "bundle_sha256": "49b1964d6a0f1ee3a23ef6841cb06a96928e51d5e1df07110e532d91488b67f0",
+  "topics": [
+    "1.9.2"
+  ],
+  "tasks": 10,
+  "pages": 6,
+  "baseline_preserved": 107,
+  "files": {
+    "task-1-9-2.tex": "0c977115d72149a122ecf235ac668657942995aa50d6f0d5dec4d710f9fa508b",
+    "tutor-1-9-2.tex": "3e3953c218ee2687bbe329f8801d0e52568dd1a998292a8d9cf56e27570d0fc9"
+  },
+  "editor_open_checked": false
+}

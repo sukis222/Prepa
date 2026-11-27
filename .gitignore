@@ -17,13 +17,28 @@ dist/
 .coverage
 htmlcov/
 
-output/
+/output/*
+!/output/fipi-physics/
+!/output/topics/
 
 # Previous checkout; use this repository root
 local-run/
 
 # Generated previews and temporary files
 tmp/
+*.log
+*.synctex.gz
+/output/fipi-physics/_run/part1-20/workshop-root.json
 
 # Local project/chat summary; not for public publication
 PROJECT_SUMMARY.md
+
+# Local student context and lesson transcripts
+/students/*
+!/students/README.md
+!/students/_template/
+/students/_template/*
+!/students/_template/context.md
+!/students/_template/README.md
+/transcripts/*
+!/transcripts/README.md

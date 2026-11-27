@@ -1,0 +1,538 @@
+{
+  "version": 1,
+  "exam_year": 2027,
+  "sections": [
+    {
+      "exam_number": 3,
+      "worksheet": {
+        "preparation_id": "fipi-ege-2027-03",
+        "version": 1,
+        "student_ids": [
+          "local"
+        ],
+        "exam": "ege",
+        "topics": [
+          "ФИПИ"
+        ],
+        "title": "ЕГЭ по физике. Задание 3",
+        "tasks": [
+          {
+            "id": "B02B49",
+            "statement_exact": "Впишите правильный ответ.\nНа тело, движущееся прямолинейно в инерциальной системе отсчёта, в течение 3 с в направлении движения действует постоянная сила 12 Н. Каково увеличение импульса тела за это время?\nОтвет: ____ кг ∙ м/с",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B02B49",
+            "page": null,
+            "images": [],
+            "sha256": "be76a4d5a2390a43a08bc106588c3deda8374a2afc101644c4ef4bedaf19a7d5",
+            "exam_part": 1,
+            "exam_number": 3,
+            "section": "Закон изменения и сохранения импульса",
+            "solution": {
+              "text": "Изменение импульса равно импульсу силы: $\\Delta p=F\\Delta t=12\\cdot3=36\\,\\text{кг}\\cdot\\text{м}/\\text{с}$. Ответ: $36\\,\\text{кг}\\cdot\\text{м}/\\text{с}$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B02B49#prepa-gpt-solution",
+              "images": [],
+              "sha256": "2e94be73000421d501821fbd04a58c669fd09aec96ae26724ba72b54c98d6095"
+            }
+          },
+          {
+            "id": "DC8C1F",
+            "statement_exact": "Впишите правильный ответ.\n[рисунок 1]\nДва тела движутся по взаимно перпендикулярным пересекающимся прямым, как показано на рисунке. Модуль импульса первого тела р $_{1}$ = 8 кг $\\cdot$ м/с, второго тела р $_{2}$ = 6 кг $\\cdot$ м/с. Каков модуль импульса системы этих тел после их абсолютно неупругого удара?\nОтвет: ____ кг ∙ м/с",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=DC8C1F",
+            "page": null,
+            "images": [
+              {
+                "data_base64": "iVBORw0KGgoAAAANSUhEUgAAAHEAAAB4CAIAAABKE4pPAAAFVUlEQVR4nO2da5OqMAyGU2gFKfL/f6cXBGnJmYIXPCsCWqXSvB92hJ3tsI9JeqFJGSICyaoCu82RiOlHRHb6I0wZY+CxJjPN1oIxvpZZeymbqzQ9X4L3QAGATwIqBcuV+VCp+nZXKwQx9btZsKbZ6aHCTRKHnTthJGPO/7o689j9p8dTFooQdH0Z1aIGLvb7rfUn87SPytK0OkHYsVvmsXlexV6YR5moirGMRaCrKhDHw/YhU/R1hjatj7qXPqqgqnq9nrFXvjBPfZ8FIWhVlqdV1O2uSO/GUwV8fbjvmiiYvs40CEScbKrj/16PjeDPZ980OZ5mcp2rQPWHUdJYptla7CouIyhKiO9G/aRXfb+uEXRxMEBphD8g+8Md1gxRvQ2mtH76EdGatPNM2WVuyhqBl7IWT58QRM9iqx2mV6DYac3b9ZTgQ0DB46lUYGvk1IcPm/texVYLdjpojOgZ1reY+oNpkmh8al/E1L6IqX0RU8eY+tahf8lOx4zqmWerf++8ix6mxnqmWMuWzTF/dy2K0brU++qLquiThbaidyf2RWMp+yKm9kVM7YuY2hcxtS9iOitTKW4pPCQ7TMMohjInrNPG/GnEDyc9+DfhSqpy39si82vF5K15lMkyKQqIkm5SxIMWme9MJ/i+LoeBkmi+/xHRWMq+iKl9EdOvMM3SdM3bdXoh0yyNzhdMyA88gB9Mt/v9UaFchRDyutwVECM2lyoXa5pHver7WZpqrUEXim/a4X3ARQiAdacUAmlaPEVdaTNfuiXr1UqbTFOKvy+/izYEeSKCu/wo4Ktw7Ds+5uVb6FaP7U4rBXx1TdHNUlmedLiK2jtSMB6l333On+/35UlBGNzsTpe5CuO4Mds04m2ZGdIUO0Xj59fQ2dTq4cklJXJfKjMGIE2Kp7WqzHpfsTvHRJ4gHmBIiPh32wT6F0wfM8Xa9E9YDXMkjfL9NphyTt5tj2ldlabLfwmpn57+jGmWmtp7zbsTlR92709D0VfEk/egXd9ZPXwrxXzNh/zgvj5GTK2vn6KvttnVp9ZE0GO4tM5kX8TUvoipfRFTV/OjXBBzZgVnCUxZTxrRXDu3fp4p659ltL/6fmnbhcRTfFSQZS7f/22mbMi7Z8ncdpcpGwfCwQo3bsVTNuU/n6VuwJjoPD9T9mslFQbX3n7s/3mnKMPXnsTdePpzupYs4HPV6WUjbOd5I1Otz261xyeNzxZPsacC5aQWxv/hJ8aqfW3O30fBffUP6x2x3WA65rtxgunLxtuaqmsVbpZQu4M9pf/9GeoS+n0cmptaVyZNxkO7BaL93D2UcAl2+mWZIzWKZrsoTzb8ZI7XuD8HwnWmUvB65WJC5nnvyKPNeq77fuhqgnubNPJws978/X46JsE93/EofZLgPoOasx6rR4k489vpvlTYr42UcRjGyTmlyCFpXZkfunteritMfzHB3ZQyqINE8Oa8XPd8/7kOlVsJGSZS1ZEMTsDXANx4P4IUAqLbSXqu26mLUnkBkXEdE1J1ke9O90cTuj6W+kWRnS6XabagBHdXmG4XlODuClNYUIK7Q0xhKQnuLj1ubRLcowcJ7nU31ILzcoip7klwZ1UJ0QYRE67yovo7F3RNrsyjsjbBffV/grsUwX5ftXfCVRzmCkGA23LGTvFZgvtZrFNTwGG5Yqf1mAR3rOFS68JlucIURyS4awXdHsxZOfGI2YgE9zTip+A3jv92gmk9lOCeRryAuDpus1SunS9v8+297v8pS+XxcKtZw+PNbcB/UdNfXa/COHFuidotpouUE76/MBFT+yKm9kVM7YuY2hcxBev6B5t9zeuDrwV8AAAAAElFTkSuQmCC",
+                "sha256": "b581b849fd5e534b80c9ad9f678ad626c18a191292ff622ad6dafe2198d3c63c",
+                "width": 113,
+                "height": 120
+              }
+            ],
+            "sha256": "b96af31adfd459ae3980625c372ae17007f99247397beeec720c0d95dbb121b3",
+            "exam_part": 1,
+            "exam_number": 3,
+            "section": "Импульс системы тел",
+            "solution": {
+              "text": "Импульс системы сохраняется. До удара импульсы перпендикулярны, поэтому $p=\\sqrt{p_1^2+p_2^2}=\\sqrt{8^2+6^2}=10\\,\\text{кг}\\cdot\\text{м}/\\text{с}$. Ответ: $10\\,\\text{кг}\\cdot\\text{м}/\\text{с}$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=DC8C1F#prepa-gpt-solution",
+              "images": [],
+              "sha256": "b39386529f54f0196f5844e0cc971a6787a0bb81056e165662a9b1c2441ab8d1"
+            }
+          },
+          {
+            "id": "225EC6",
+            "statement_exact": "Впишите правильный ответ.\nПри равномерном перемещении саней по горизонтальному участку пути длиной 50 м сила тяги совершает работу, величина которой равна 1000 Дж. Какова сила трения?\nОтвет: ____ Н",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=225EC6",
+            "page": null,
+            "images": [],
+            "sha256": "855a40b1b9a44e56efff6d3c683d183735101c05473eb7fce7e3e6cfd6d0d9ad",
+            "exam_part": 1,
+            "exam_number": 3,
+            "section": "Работа силы на малом перемещении",
+            "solution": {
+              "text": "При равномерном движении $\\Delta E_{\\text{к}}=0$, поэтому $A_{\\text{тяги}}+A_{\\text{тр}}=0$. На горизонтальном участке $A_{\\text{тр}}=-F_{\\text{тр}}s$, откуда $F_{\\text{тр}}=A_{\\text{тяги}}/s=1000/50=20\\,\\text{Н}$. Ответ: $20\\,\\text{Н}$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=225EC6#prepa-gpt-solution",
+              "images": [],
+              "sha256": "4a394bec7fd1bd3c729df7c16f55fa0cd09b5e0825ae63a06ae01ebca578128b"
+            }
+          },
+          {
+            "id": "cF941A",
+            "statement_exact": "Впишите правильный ответ.\nПри подаче скорость волейбольного мяча составила 18 м/с. Масса мяча 280 г. Какова кинетическая энергия мяча?\nОтвет: ____ Дж",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=cF941A",
+            "page": null,
+            "images": [],
+            "sha256": "86526df3dc452a95e61a4861cfb814fdfbada1c0c84a65526237bd467208bbff",
+            "exam_part": 1,
+            "exam_number": 3,
+            "section": "Кинетическая энергия материальной точки. Закон изменения кинетической энергии системы материальных точек",
+            "solution": {
+              "text": "$m=280\\,\\text{г}=0{,}28\\,\\text{кг}$. Кинетическая энергия $E_{\\text{к}}=mv^2/2=0{,}28\\cdot18^2/2=45{,}36\\,\\text{Дж}$. Ответ: $45{,}36\\,\\text{Дж}$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=cF941A#prepa-gpt-solution",
+              "images": [],
+              "sha256": "609908fe8f33e1a53686bd5660a4ee4abdd1d7ce5f39103aea9337a5319e57e4"
+            }
+          },
+          {
+            "id": "ADA046",
+            "statement_exact": "Впишите правильный ответ.\nПри упругой деформации, равной 3 см, потенциальная энергия пружины равна 6 Дж. На сколько изменится потенциальная энергия этой пружины при увеличении упругой деформации ещё на 3 см?\nОтвет: ____ Дж",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=ADA046",
+            "page": null,
+            "images": [],
+            "sha256": "d4810dd4ef37408eeea39a42bddb6712418ba618c637dd1de47d7d8af2d02017",
+            "exam_part": 1,
+            "exam_number": 3,
+            "section": "Потенциальная энергия для потенциальных сил. Потенциальная энергия материальной точки в однородном поле тяжести. Потенциальная энергия упруго деформированного тела",
+            "solution": {
+              "text": "$E_{\\text{п}}=kx^2/2$. Деформация увеличилась вдвое, поэтому $E_2=4E_1=24\\,\\text{Дж}$. Изменение энергии $\\Delta E=E_2-E_1=24-6=18\\,\\text{Дж}$. Ответ: увеличится на $18\\,\\text{Дж}$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=ADA046#prepa-gpt-solution",
+              "images": [],
+              "sha256": "46374b61af9b3aae16dd7e2a286c6fe61b2cfb5e0dcc795b79217489279c2c14"
+            }
+          },
+          {
+            "id": "E9E545",
+            "statement_exact": "Впишите правильный ответ.\nШарик массой 100 г падает с некоторой высоты. Начальная скорость шарика равна нулю. Его кинетическая энергия при падении на землю равна 6 Дж, а потеря энергии за счёт сопротивления воздуха составила 1 Дж. С какой высоты упал шарик?\nОтвет: ____ м",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=E9E545",
+            "page": null,
+            "images": [],
+            "sha256": "49a9077dadae6d219117b5d9064087d186ea786756250ca32529b662d40676e4",
+            "exam_part": 1,
+            "exam_number": 3,
+            "section": "Закон изменения и сохранения механической энергии",
+            "solution": {
+              "text": "$m=0{,}1\\,\\text{кг}$. При $g=10\\,\\text{м}/\\text{с}^2$ начальная энергия $mgh=E_{\\text{к}}+E_{\\text{потерь}}$, откуда $h=(6+1)/(0{,}1\\cdot10)=7\\,\\text{м}$. Ответ: $7\\,\\text{м}$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=E9E545#prepa-gpt-solution",
+              "images": [],
+              "sha256": "818fcc37af4f200192cbedba9f3ef78df911ccb06a4c3c4d64ec66e0f98e9df9"
+            }
+          },
+          {
+            "id": "F579FA",
+            "statement_exact": "Впишите правильный ответ.\nОтношение скорости грузовика к скорости легкового автомобиля $\\frac{\\upsilon_1}{\\upsilon_2}=\\frac{1}{2}.$ Масса грузовика $m_1=3000$ кг. Какова масса легкового автомобиля, если отношение импульса грузовика к импульсу легкового автомобиля равно 1,5?\nОтвет: ____ кг",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=F579FA",
+            "page": null,
+            "images": [],
+            "sha256": "4d4ef256907d3440c83075a43f7a2900ddfc636fefa54a07afe2abc994f0e232",
+            "exam_part": 1,
+            "exam_number": 3,
+            "section": "Импульс материальной точки",
+            "solution": {
+              "text": "$p_1/p_2=(m_1/m_2)(v_1/v_2)$. Поэтому $m_2=m_1(v_1/v_2)/(p_1/p_2)=3000\\cdot0{,}5/1{,}5=1000\\,\\text{кг}$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=F579FA#prepa-gpt-solution",
+              "images": [],
+              "sha256": "bf83558b74f15c68fbd6267cb62e51db60441cdd00960b7981f15f8243d06757"
+            }
+          },
+          {
+            "id": "72C7F7",
+            "statement_exact": "Впишите правильный ответ.\nОтношение импульса легкового автомобиля к импульсу мотоцикла $\\frac{p_1}{p_2}=5$. Каково отношение их скоростей $\\frac{\\upsilon_1}{\\upsilon_2},$ если отношение массы легкового автомобиля к массе мотоцикла $\\frac{m_1}{m_2}=2,5$?",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=72C7F7",
+            "page": null,
+            "images": [],
+            "sha256": "a27efecf048f2af20782d19691f16c282726a7eb092c1aa689ab21a77847bfc9",
+            "exam_part": 1,
+            "exam_number": 3,
+            "section": "Импульс материальной точки",
+            "solution": {
+              "text": "$v_1/v_2=(p_1/p_2)/(m_1/m_2)=5/2{,}5=2$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=72C7F7#prepa-gpt-solution",
+              "images": [],
+              "sha256": "4bb56e5ded51e99803a29a59cf077e464bed0398622c64db91a85d3ad3bb4a4d"
+            }
+          },
+          {
+            "id": "568701",
+            "statement_exact": "Впишите правильный ответ.\nТело массой 6 кг движется прямолинейно со скоростью 2 м/с в инерциальной системе отсчёта. На тело начала действовать постоянная тормозящая сила, равная по модулю 4 Н. Сколько времени пройдёт до момента остановки тела?\nОтвет: ____ с",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=568701",
+            "page": null,
+            "images": [],
+            "sha256": "a5fa0cd71a6090b6ad9976c67ee540e738fb2f2a3f0dd966a7a21e1871278502",
+            "exam_part": 1,
+            "exam_number": 3,
+            "section": "Импульс материальной точки",
+            "solution": {
+              "text": "При торможении $Ft=mv_0$. Время до остановки $t=6\\cdot2/4=3\\,\\text{с}$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=568701#prepa-gpt-solution",
+              "images": [],
+              "sha256": "7023e3d6c2cea135f4cf48a808833f0c8f600073a9709add28524e12c300953e"
+            }
+          },
+          {
+            "id": "8CAE7B",
+            "statement_exact": "Впишите правильный ответ.\nТело движется в инерциальной системе отсчёта по прямой в одном направлении под действием постоянной силы величиной 5 Н. За 4 с импульс тела увеличился и стал равен 35 кг ∙ м/с. Чему был равен первоначальный импульс тела?\nОтвет: ____ кг ∙ м/с",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=8CAE7B",
+            "page": null,
+            "images": [],
+            "sha256": "0290d5c0d243b8e7c9f17fdd87c0016e9f8bcfb38bf368b43612cffb440c0e52",
+            "exam_part": 1,
+            "exam_number": 3,
+            "section": "Импульс материальной точки; Импульс системы тел; Закон изменения и сохранения импульса; Работа силы на малом перемещении; Мощность силы; Кинетическая энергия материальной точки. Закон изменения кинети",
+            "solution": {
+              "text": "$p-p_0=Ft$, откуда $p_0=35-5\\cdot4=15\\,\\text{кг}\\cdot\\text{м}/\\text{с}$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=8CAE7B#prepa-gpt-solution",
+              "images": [],
+              "sha256": "2cd1667aa5eb63f8e5e9e7a17c660a862870d652726c404226f855654cdb5f4c"
+            }
+          },
+          {
+            "id": "107015",
+            "statement_exact": "Впишите правильный ответ.\nВ инерциальной системе отсчёта тело движется по прямой в одном направлении под действием постоянной силы. За 2 с импульс тела изменился на 8 кг $\\cdot$ м/с. Каков модуль силы?\nОтвет: ____ Н",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=107015",
+            "page": null,
+            "images": [],
+            "sha256": "4471c3655e57e71ae2e615fd95da69eff24ad61e91af4529487233c7303184ed",
+            "exam_part": 1,
+            "exam_number": 3,
+            "section": "Импульс материальной точки",
+            "solution": {
+              "text": "$F=\\Delta p/\\Delta t=8/2=4\\,\\text{Н}$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=107015#prepa-gpt-solution",
+              "images": [],
+              "sha256": "465ce00e07d32aec6228da6f632c066ee0c9e183b81be145bae6b068f79e40e1"
+            }
+          },
+          {
+            "id": "7998DB",
+            "statement_exact": "Впишите правильный ответ.\nДва тела движутся с одинаковой скоростью. Кинетическая энергия первого тела в 4 раза меньше кинетической энергии второго тела. Определите отношение $\\frac{m_1}{m_2}$ масс тел.",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=7998DB",
+            "page": null,
+            "images": [],
+            "sha256": "296d5b02301c445a7a9848cf89497fabe8379cac65e6c1fef733922d3395b6a3",
+            "exam_part": 1,
+            "exam_number": 3,
+            "section": "Кинетическая энергия материальной точки. Закон изменения кинетической энергии системы материальных точек",
+            "solution": {
+              "text": "При одинаковых скоростях $E_{\\text{к}1}/E_{\\text{к}2}=m_1/m_2=1/4=0{,}25$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=7998DB#prepa-gpt-solution",
+              "images": [],
+              "sha256": "b5060bd4d15a9f099fb5e35d1b7229de43ccf2140870f1a0b31b81a5a8a202ff"
+            }
+          },
+          {
+            "id": "354CDE",
+            "statement_exact": "Впишите правильный ответ.\nТело массой 0,1 кг вращается в горизонтальной плоскости на нити длиной\n1 м. Чему равна работа силы тяжести за один оборот вращения тела?\nОтвет: ____ Дж",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=354CDE",
+            "page": null,
+            "images": [],
+            "sha256": "a4aaa4665c2dcf0dfec5905b481dc57cb27c42be329784a28c296b026c32ee25",
+            "exam_part": 1,
+            "exam_number": 3,
+            "section": "Работа силы на малом перемещении",
+            "solution": {
+              "text": "При движении в горизонтальной плоскости $\\Delta h=0$. Работа силы тяжести $A=-mg\\Delta h=0\\,\\text{Дж}$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=354CDE#prepa-gpt-solution",
+              "images": [],
+              "sha256": "79db389ed934c43378550da358b2e077e7c9158def9ebbc629c7f04369af2a93"
+            }
+          },
+          {
+            "id": "BD865C",
+            "statement_exact": "Впишите правильный ответ.\nШайба соскальзывает по гладкой наклонной плоскости из состояния покоя\nс высоты 80 см. Какова максимальная скорость шайбы у основания наклонной плоскости? Сопротивлением воздуха пренебречь.\nОтвет: ____ м/с",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=BD865C",
+            "page": null,
+            "images": [],
+            "sha256": "d4ec599e1492ed8c62245e033342f1962579e2dd7bd47fb1b8fd2400aeaf9333",
+            "exam_part": 1,
+            "exam_number": 3,
+            "section": "Закон изменения и сохранения механической энергии",
+            "solution": {
+              "text": "$mgh=mv^2/2$. При $h=0{,}8\\,\\text{м}$ получаем $v=\\sqrt{2gh}=\\sqrt{2\\cdot10\\cdot0{,}8}=4\\,\\text{м}/\\text{с}$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=BD865C#prepa-gpt-solution",
+              "images": [],
+              "sha256": "aaaaa7ff8c50a1fb0af30466f9c2f3e2fb4f88bcea350c609df0c3b6368a3651"
+            }
+          },
+          {
+            "id": "1C4DA4",
+            "statement_exact": "Впишите правильный ответ.\nПервая пружина имеет жёсткость 20 Н/м, вторая $-$ 40 Н/м. Первая растянута на 2 см, вторая $-$ на 1 см. Чему равно отношение потенциальной энергии второй пружины к потенциальной энергии первой $\\frac{{\\text{Е}}_2}{{\\text{Е}}_1}?$",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=1C4DA4",
+            "page": null,
+            "images": [],
+            "sha256": "ec008208bb2c76e9bb68aae17e0e2d7d53e5c8e847311255d50a656bee625f2a",
+            "exam_part": 1,
+            "exam_number": 3,
+            "section": "Потенциальная энергия для потенциальных сил. Потенциальная энергия материальной точки в однородном поле тяжести. Потенциальная энергия упруго деформированного тела",
+            "solution": {
+              "text": "$E_2/E_1=k_2x_2^2/(k_1x_1^2)=(40/20)(1/2)^2=0{,}5$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=1C4DA4#prepa-gpt-solution",
+              "images": [],
+              "sha256": "374dc481318e832f3fdd791447fb73b525e3fa13623e7b72357bd2bae58b7d2c"
+            }
+          },
+          {
+            "id": "1F9FAE",
+            "statement_exact": "Впишите правильный ответ.\nЖёсткость пружины равна 7500 Н/м. Какова энергия упругой деформации этой пружины при её растяжении на 4 см?\nОтвет: ____ Дж",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=1F9FAE",
+            "page": null,
+            "images": [],
+            "sha256": "46086101cbb7d9f49b1151fd6237b4cca9497aba835b38b50f110fe39fe9d221",
+            "exam_part": 1,
+            "exam_number": 3,
+            "section": "Потенциальная энергия для потенциальных сил. Потенциальная энергия материальной точки в однородном поле тяжести. Потенциальная энергия упруго деформированного тела",
+            "solution": {
+              "text": "$x=0{,}04\\,\\text{м}$. Энергия $E=kx^2/2=7500\\cdot0{,}04^2/2=6\\,\\text{Дж}$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=1F9FAE#prepa-gpt-solution",
+              "images": [],
+              "sha256": "87eab3413b42259a45f6d96f1661e2b8f667eaf4db7365da254fb8a40e39a107"
+            }
+          },
+          {
+            "id": "B41DCC",
+            "statement_exact": "Впишите правильный ответ.\nЛегковой автомобиль и грузовик движутся по горизонтальному мосту. Масса грузовика $m=4500$ кг. Какова масса легкового автомобиля, если отношение потенциальной энергии грузовика к потенциальной энергии легкового автомобиля относительно уровня воды в реке равно 3?\nОтвет: ____ кг",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B41DCC",
+            "page": null,
+            "images": [],
+            "sha256": "c018005362244f625eadb31b776358c82829fcaf509cc475c885cf4968d26a20",
+            "exam_part": 1,
+            "exam_number": 3,
+            "section": "Потенциальная энергия для потенциальных сил. Потенциальная энергия материальной точки в однородном поле тяжести. Потенциальная энергия упруго деформированного тела",
+            "solution": {
+              "text": "На одном мосту высота над водой одинакова: $E_{\\text{п}1}/E_{\\text{п}2}=m_1/m_2$. Тогда $m_2=4500/3=1500\\,\\text{кг}$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B41DCC#prepa-gpt-solution",
+              "images": [],
+              "sha256": "6b217e3055a8bc7131aeb6e35bc58de5342b94ca43f8b3e316a5bc0c499a0c2f"
+            }
+          },
+          {
+            "id": "2785A3",
+            "statement_exact": "Впишите правильный ответ.\nМальчик на санках спустился с ледяной горы высотой 10 м и проехал по горизонтали до остановки 50 м. Чему равен коэффициент трения санок по горизонтальной поверхности? Считать, что по склону горы санки скользили без трения.",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=2785A3",
+            "page": null,
+            "images": [],
+            "sha256": "205ad933931b325b541b2fc1fd043f904fbe1bb4553edc9e458d7512d76ef041",
+            "exam_part": 1,
+            "exam_number": 3,
+            "section": "Закон изменения и сохранения механической энергии",
+            "solution": {
+              "text": "На склоне $E_{\\text{к}}=mgh$, на горизонтальном участке $\\mu mgs=mgh$. Поэтому $\\mu=h/s=10/50=0{,}2$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=2785A3#prepa-gpt-solution",
+              "images": [],
+              "sha256": "0939744488ff677682c9d5860f0efdc3ec83cd489d8e3cf8520a417ca8ac211e"
+            }
+          },
+          {
+            "id": "8CED26",
+            "statement_exact": "Впишите правильный ответ.\nСталкиваются и слипаются два разных по массе пластилиновых шарика, причём векторы их скоростей непосредственно перед столкновением направлены навстречу друг другу и одинаковы по модулю: υ $_{1}$ = υ $_{2}$ = 1 м/с. Во сколько раз масса тяжёлого шарика больше, чем лёгкого, если сразу после столкновения их скорость стала равной (по модулю) 0,5 м/с?\nОтвет: ____ раз(а)",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=8CED26",
+            "page": null,
+            "images": [],
+            "sha256": "849e30017a2a2a12dcd932df9347152a33f28f5b77a0aa9a005925964202c1e5",
+            "exam_part": 1,
+            "exam_number": 3,
+            "section": "Закон изменения и сохранения импульса",
+            "solution": {
+              "text": "Положительное направление выберем по движению тяжёлого шарика. По сохранению импульса $(M-m)\\cdot1=(M+m)\\cdot0{,}5$. Отсюда $M/m=3$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=8CED26#prepa-gpt-solution",
+              "images": [],
+              "sha256": "ad15c7edccc7281cca7570dbecf731d3fd2c8ed91e00aed7b7a7d3b8b841b02f"
+            }
+          },
+          {
+            "id": "B34015",
+            "statement_exact": "Впишите правильный ответ.\nАвтомобиль с выключенным двигателем сняли со стояночного тормоза, и он покатился под уклон, составляющий угол 30° с горизонтом. В начале горизонтального участка дороги, который следует за спуском, его скорость составляет 10 м/с. Какое расстояние автомобиль проезжает по склону? Трением пренебречь.\nОтвет: ____ м",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B34015",
+            "page": null,
+            "images": [],
+            "sha256": "b2f9444b24f15fbb1cedbcc1c58958293049ea8c0d356ad57baae9f37a11d7c1",
+            "exam_part": 1,
+            "exam_number": 3,
+            "section": "Закон изменения и сохранения механической энергии",
+            "solution": {
+              "text": "$mgs\\sin30^\\circ=mv^2/2$. Тогда $s=v^2/(2g\\sin30^\\circ)=100/(2\\cdot10\\cdot0{,}5)=10\\,\\text{м}$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B34015#prepa-gpt-solution",
+              "images": [],
+              "sha256": "60d1566d7a7f657240839ea69f7eac15fd03304a807213525193b423f030a3d1"
+            }
+          }
+        ]
+      },
+      "typeset": {
+        "source_sha256": "0550b837b728bca9c54b34ba2c184b5f4d23162265e9203d9e7cae943470f875",
+        "tasks": [
+          {
+            "id": "B02B49",
+            "condition_tex": "На тело, движущееся прямолинейно в инерциальной системе отсчёта, в течение $3\\,\\text{с}$ в направлении движения действует постоянная сила $12\\,\\text{Н}$. Каково увеличение импульса тела за это время? Выразите ответ в $\\text{кг}\\cdot\\text{м}/\\text{с}$.",
+            "solution_tex": "Изменение импульса равно импульсу силы: $\\Delta p=F\\Delta t=12\\cdot3=36\\,\\text{кг}\\cdot\\text{м}/\\text{с}$. Ответ: $36\\,\\text{кг}\\cdot\\text{м}/\\text{с}$.",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "DC8C1F",
+            "condition_tex": "Два тела движутся по взаимно перпендикулярным пересекающимся прямым, как показано на рисунке. Модуль импульса первого тела $p_1=8\\,\\text{кг}\\cdot\\text{м}/\\text{с}$, второго тела $p_2=6\\,\\text{кг}\\cdot\\text{м}/\\text{с}$. Каков модуль импульса системы этих тел после их абсолютно неупругого удара? Выразите ответ в $\\text{кг}\\cdot\\text{м}/\\text{с}$.\n\\begin{center}\n\\begin{tikzpicture}[>=stealth,scale=1.05]\n\\draw[->] (-0.65,0)--(2.25,0) node[right] {$x$};\n\\draw[->] (0,-0.65)--(0,2.1) node[above left] {$y$};\n\\draw[fill=white] (0,1.65) circle (0.14);\n\\draw[very thick,->] (0,1.49)--(0,0.45);\n\\node[left] at (-0.1,0.96) {$\\vec p_1$};\n\\draw[fill=white] (1.5,0) circle (0.14);\n\\draw[very thick,->] (1.35,0)--(0.36,0);\n\\node[below] at (0.83,-0.12) {$\\vec p_2$};\n\\end{tikzpicture}\n\\end{center}",
+            "solution_tex": "Импульс системы сохраняется. До удара импульсы перпендикулярны, поэтому $p=\\sqrt{p_1^2+p_2^2}=\\sqrt{8^2+6^2}=10\\,\\text{кг}\\cdot\\text{м}/\\text{с}$. Ответ: $10\\,\\text{кг}\\cdot\\text{м}/\\text{с}$.",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "225EC6",
+            "condition_tex": "При равномерном перемещении саней по горизонтальному участку пути длиной $50\\,\\text{м}$ сила тяги совершает работу, величина которой равна $1000\\,\\text{Дж}$. Какова сила трения? Выразите ответ в ньютонах.",
+            "solution_tex": "При равномерном движении $\\Delta E_{\\text{к}}=0$, поэтому $A_{\\text{тяги}}+A_{\\text{тр}}=0$. На горизонтальном участке $A_{\\text{тр}}=-F_{\\text{тр}}s$, откуда $F_{\\text{тр}}=A_{\\text{тяги}}/s=1000/50=20\\,\\text{Н}$. Ответ: $20\\,\\text{Н}$.",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "cF941A",
+            "condition_tex": "При подаче скорость волейбольного мяча составила $18\\,\\text{м}/\\text{с}$. Масса мяча $280\\,\\text{г}$. Какова кинетическая энергия мяча? Выразите ответ в джоулях.",
+            "solution_tex": "$m=280\\,\\text{г}=0{,}28\\,\\text{кг}$. Кинетическая энергия $E_{\\text{к}}=mv^2/2=0{,}28\\cdot18^2/2=45{,}36\\,\\text{Дж}$. Ответ: $45{,}36\\,\\text{Дж}$.",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "ADA046",
+            "condition_tex": "При упругой деформации, равной $3\\,\\text{см}$, потенциальная энергия пружины равна $6\\,\\text{Дж}$. На сколько изменится потенциальная энергия этой пружины при увеличении упругой деформации ещё на $3\\,\\text{см}$? Выразите ответ в джоулях.",
+            "solution_tex": "$E_{\\text{п}}=kx^2/2$. Деформация увеличилась вдвое, поэтому $E_2=4E_1=24\\,\\text{Дж}$. Изменение энергии $\\Delta E=E_2-E_1=24-6=18\\,\\text{Дж}$. Ответ: увеличится на $18\\,\\text{Дж}$.",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "E9E545",
+            "condition_tex": "Шарик массой $100\\,\\text{г}$ падает с некоторой высоты. Начальная скорость шарика равна нулю. Его кинетическая энергия при падении на землю равна $6\\,\\text{Дж}$, а потеря энергии за счёт сопротивления воздуха составила $1\\,\\text{Дж}$. С какой высоты упал шарик? Выразите ответ в метрах.",
+            "solution_tex": "$m=0{,}1\\,\\text{кг}$. При $g=10\\,\\text{м}/\\text{с}^2$ начальная энергия $mgh=E_{\\text{к}}+E_{\\text{потерь}}$, откуда $h=(6+1)/(0{,}1\\cdot10)=7\\,\\text{м}$. Ответ: $7\\,\\text{м}$.",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "F579FA",
+            "condition_tex": "Отношение скорости грузовика к скорости легкового автомобиля $\\frac{\\upsilon_1}{\\upsilon_2}=\\frac{1}{2}.$ Масса грузовика $m_1=3000\\,\\text{кг}$. Какова масса легкового автомобиля, если отношение импульса грузовика к импульсу легкового автомобиля равно $1{,}5$? Результат выразите в $\\text{кг}$.",
+            "solution_tex": "$p_1/p_2=(m_1/m_2)(v_1/v_2)$. Поэтому $m_2=m_1(v_1/v_2)/(p_1/p_2)=3000\\cdot0{,}5/1{,}5=1000\\,\\text{кг}$.",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "72C7F7",
+            "condition_tex": "Отношение импульса легкового автомобиля к импульсу мотоцикла $\\frac{p_1}{p_2}=5$. Каково отношение их скоростей $\\frac{\\upsilon_1}{\\upsilon_2},$ если отношение массы легкового автомобиля к массе мотоцикла $\\frac{m_1}{m_2}=2{,}5$?",
+            "solution_tex": "$v_1/v_2=(p_1/p_2)/(m_1/m_2)=5/2{,}5=2$.",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "568701",
+            "condition_tex": "Тело массой $6\\,\\text{кг}$ движется прямолинейно со скоростью $2\\,\\text{м}/\\text{с}$ в инерциальной системе отсчёта. На тело начала действовать постоянная тормозящая сила, равная по модулю $4\\,\\text{Н}$. Сколько времени пройдёт до момента остановки тела? Результат выразите в $\\text{с}$.",
+            "solution_tex": "При торможении $Ft=mv_0$. Время до остановки $t=6\\cdot2/4=3\\,\\text{с}$.",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "8CAE7B",
+            "condition_tex": "Тело движется в инерциальной системе отсчёта по прямой в одном направлении под действием постоянной силы величиной $5\\,\\text{Н}$. За $4\\,\\text{с}$ импульс тела увеличился и стал равен $35\\,\\text{кг}\\cdot\\text{м}/\\text{с}$. Чему был равен первоначальный импульс тела? Результат выразите в $\\text{кг}\\cdot\\text{м}/\\text{с}$.",
+            "solution_tex": "$p-p_0=Ft$, откуда $p_0=35-5\\cdot4=15\\,\\text{кг}\\cdot\\text{м}/\\text{с}$.",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "107015",
+            "condition_tex": "В инерциальной системе отсчёта тело движется по прямой в одном направлении под действием постоянной силы. За $2\\,\\text{с}$ импульс тела изменился на $8\\,\\text{кг}\\cdot\\text{м}/\\text{с}$. Каков модуль силы? Результат выразите в $\\text{Н}$.",
+            "solution_tex": "$F=\\Delta p/\\Delta t=8/2=4\\,\\text{Н}$.",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "7998DB",
+            "condition_tex": "Два тела движутся с одинаковой скоростью. Кинетическая энергия первого тела в $4$ раза меньше кинетической энергии второго тела. Определите отношение $\\frac{m_1}{m_2}$ масс тел.",
+            "solution_tex": "При одинаковых скоростях $E_{\\text{к}1}/E_{\\text{к}2}=m_1/m_2=1/4=0{,}25$.",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "354CDE",
+            "condition_tex": "Тело массой $0{,}1\\,\\text{кг}$ вращается в горизонтальной плоскости на нити длиной\n$1\\,\\text{м}$. Чему равна работа силы тяжести за один оборот вращения тела? Результат выразите в $\\text{Дж}$.",
+            "solution_tex": "При движении в горизонтальной плоскости $\\Delta h=0$. Работа силы тяжести $A=-mg\\Delta h=0\\,\\text{Дж}$.",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "BD865C",
+            "condition_tex": "Шайба соскальзывает по гладкой наклонной плоскости из состояния покоя\nс высоты $80\\,\\text{см}$. Какова максимальная скорость шайбы у основания наклонной плоскости? Сопротивлением воздуха пренебречь. Результат выразите в $\\text{м}/\\text{с}$.",
+            "solution_tex": "$mgh=mv^2/2$. При $h=0{,}8\\,\\text{м}$ получаем $v=\\sqrt{2gh}=\\sqrt{2\\cdot10\\cdot0{,}8}=4\\,\\text{м}/\\text{с}$.",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "1C4DA4",
+            "condition_tex": "Первая пружина имеет жёсткость $20\\,\\text{Н}/\\text{м}$, вторая — $40\\,\\text{Н}/\\text{м}$. Первая растянута на $2\\,\\text{см}$, вторая — на $1\\,\\text{см}$. Чему равно отношение потенциальной энергии второй пружины к потенциальной энергии первой $\\frac{E_2}{E_1}?$",
+            "solution_tex": "$E_2/E_1=k_2x_2^2/(k_1x_1^2)=(40/20)(1/2)^2=0{,}5$.",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "1F9FAE",
+            "condition_tex": "Жёсткость пружины равна $7500\\,\\text{Н}/\\text{м}$. Какова энергия упругой деформации этой пружины при её растяжении на $4\\,\\text{см}$? Результат выразите в $\\text{Дж}$.",
+            "solution_tex": "$x=0{,}04\\,\\text{м}$. Энергия $E=kx^2/2=7500\\cdot0{,}04^2/2=6\\,\\text{Дж}$.",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "B41DCC",
+            "condition_tex": "Легковой автомобиль и грузовик движутся по горизонтальному мосту. Масса грузовика $m=4500\\,\\text{кг}$. Какова масса легкового автомобиля, если отношение потенциальной энергии грузовика к потенциальной энергии легкового автомобиля относительно уровня воды в реке равно $3$? Результат выразите в $\\text{кг}$.",
+            "solution_tex": "На одном мосту высота над водой одинакова: $E_{\\text{п}1}/E_{\\text{п}2}=m_1/m_2$. Тогда $m_2=4500/3=1500\\,\\text{кг}$.",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "2785A3",
+            "condition_tex": "Мальчик на санках спустился с ледяной горы высотой $10\\,\\text{м}$ и проехал по горизонтали до остановки $50\\,\\text{м}$. Чему равен коэффициент трения санок по горизонтальной поверхности? Считать, что по склону горы санки скользили без трения.",
+            "solution_tex": "На склоне $E_{\\text{к}}=mgh$, на горизонтальном участке $\\mu mgs=mgh$. Поэтому $\\mu=h/s=10/50=0{,}2$.",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "8CED26",
+            "condition_tex": "Сталкиваются и слипаются два разных по массе пластилиновых шарика, причём векторы их скоростей непосредственно перед столкновением направлены навстречу друг другу и одинаковы по модулю: $\\upsilon_{1}=\\upsilon_{2}=1\\,\\text{м}/\\text{с}$. Во сколько раз масса тяжёлого шарика больше, чем лёгкого, если сразу после столкновения их скорость стала равной (по модулю) $0{,}5\\,\\text{м}/\\text{с}$?",
+            "solution_tex": "Положительное направление выберем по движению тяжёлого шарика. По сохранению импульса $(M-m)\\cdot1=(M+m)\\cdot0{,}5$. Отсюда $M/m=3$.",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "B34015",
+            "condition_tex": "Автомобиль с выключенным двигателем сняли со стояночного тормоза, и он покатился под уклон, составляющий угол $30\\,{}^\\circ$ с горизонтом. В начале горизонтального участка дороги, который следует за спуском, его скорость составляет $10\\,\\text{м}/\\text{с}$. Какое расстояние автомобиль проезжает по склону? Трением пренебречь. Результат выразите в $\\text{м}$.",
+            "solution_tex": "$mgs\\sin30^\\circ=mv^2/2$. Тогда $s=v^2/(2g\\sin30^\\circ)=100/(2\\cdot10\\cdot0{,}5)=10\\,\\text{м}$.",
+            "photo_indices": [],
+            "raster_images": []
+          }
+        ],
+        "reviewed_tex_sha256": "10b0bf9ef37a3365130d875702c3d8bf54d79f0a738ea3e2a2175783d608e85b",
+        "review": "{\"exam_number\": 3, \"approved\": true, \"reviewed_content_sha256\": \"068963a99649faac59110d2426dc2b1f049b99a186aae81268ebb483b8698d23\", \"reviewer\": \"independent Codex review with original HTML and all source images\", \"tasks\": [{\"id\": \"B02B49\", \"approved\": true, \"reason\": \"Условие и единицы сохранены. Изменение импульса равно FΔt: 36 кг·м/с. Формулы и LaTeX корректны; соответствует № 3 по переданной карте.\", \"correction\": \"\"}, {\"id\": \"DC8C1F\", \"approved\": true, \"reason\": \"Условие сохранено. TikZ передаёт исходную схему: оси, положения тел, направления импульсов вниз и влево, подписи. По закону сохранения импульса модуль равен √(8²+6²)=10 кг·м/с. LaTeX корректен; соответствует № 3 по переданной карте.\", \"correction\": \"\"}, {\"id\": \"225EC6\", \"approved\": true, \"reason\": \"Условие и единицы сохранены. При равномерном движении работа трения компенсирует работу тяги; сила трения равна 1000/50=20 Н. Формулы и LaTeX корректны; соответствует № 3 по переданной карте.\", \"correction\": \"\"}, {\"id\": \"cF941A\", \"approved\": true, \"reason\": \"Условие и единицы сохранены. Масса правильно переведена в килограммы; кинетическая энергия равна 0,28·18²/2=45,36 Дж. Формулы и LaTeX корректны; соответствует № 3 по переданной карте.\", \"correction\": \"\"}, {\"id\": \"ADA046\", \"approved\": true, \"reason\": \"Условие и единицы сохранены. По E=kx^2/2 удвоение деформации увеличивает энергию с 6 до 24 Дж; изменение равно +18 Дж. LaTeX корректен. Соответствует № 3 карты 2027. Рисунков и исключений нет.\", \"correction\": \"\"}, {\"id\": \"E9E545\", \"approved\": true, \"reason\": \"Условие полностью соответствует HTML. Баланс энергии mgh=6+1 при массе 0,1 кг и g=10 м/с² даёт высоту 7 м. Знаки, единицы и LaTeX корректны. Соответствует № 3 карты 2027. Рисунков и исключений нет.\", \"correction\": \"\"}, {\"id\": \"F579FA\", \"approved\": true, \"reason\": \"Все данные и вопрос сохранены. Из отношения импульсов следует масса автомобиля 3000·0,5/1,5=1000 кг. Формулы, единицы и LaTeX корректны. Соответствует № 3 карты 2027. Рисунков и исключений нет.\", \"correction\": \"\"}, {\"id\": \"72C7F7\", \"approved\": true, \"reason\": \"Условие и оба отношения точно переданы. Отношение скоростей равно 5/2,5=2; ответ безразмерный. Формула и LaTeX корректны. Соответствует № 3 карты 2027. Рисунков и исключений нет.\", \"correction\": \"\"}, {\"id\": \"568701\", \"approved\": true, \"reason\": \"Условие и единицы соответствуют HTML. По импульсу силы t=mv₀/F=3 с; решение и ответ верны. Соответствует № 3 карты 2027. Рисунков нет.\", \"correction\": \"\"}, {\"id\": \"8CAE7B\", \"approved\": true, \"reason\": \"Условие полностью сохранено, LaTeX корректен. Начальный импульс равен 35−5·4=15 кг·м/с; знак, расчёт и ответ верны. Соответствует № 3 карты 2027. Рисунков нет.\", \"correction\": \"\"}, {\"id\": \"107015\", \"approved\": true, \"reason\": \"Условие и единицы соответствуют HTML, LaTeX корректен. Модуль силы равен 8/2=4 Н; формула и ответ верны. Соответствует № 3 карты 2027. Рисунков нет.\", \"correction\": \"\"}, {\"id\": \"7998DB\", \"approved\": true, \"reason\": \"Условие и порядок отношения масс сохранены, LaTeX корректен. При одинаковых скоростях отношение масс равно отношению кинетических энергий: 1/4=0,25. Соответствует № 3 карты 2027. Рисунков нет.\", \"correction\": \"\"}, {\"id\": \"354CDE\", \"approved\": true, \"reason\": \"Условие соответствует HTML. При постоянной высоте работа силы тяжести равна 0 Дж. Формула, знак, единицы и оформление корректны; задача соответствует № 3 карты 2027. Рисунков нет.\", \"correction\": \"\"}, {\"id\": \"BD865C\", \"approved\": true, \"reason\": \"Условие полностью сохранено. По сохранению механической энергии скорость равна 4 м/с при g=10 м/с². Перевод высоты, формулы и LaTeX корректны; задача соответствует № 3 карты 2027. Рисунков нет.\", \"correction\": \"\"}, {\"id\": \"1C4DA4\", \"approved\": true, \"reason\": \"Все значения и порядок отношения энергий сохранены. Независимый расчёт даёт E₂/E₁=0,5. Формула отношения и LaTeX корректны; задача соответствует № 3 карты 2027. Рисунков нет.\", \"correction\": \"\"}, {\"id\": \"1F9FAE\", \"approved\": true, \"reason\": \"Условие и единица ответа соответствуют HTML. При растяжении 0,04 м энергия равна 6 Дж. Формула, вычисления и LaTeX корректны; задача соответствует № 3 карты 2027. Рисунков нет.\", \"correction\": \"\"}, {\"id\": \"B41DCC\", \"approved\": true, \"reason\": \"Условие соответствует HTML. При одинаковой высоте отношение потенциальных энергий равно отношению масс: масса автомобиля 1500 кг. LaTeX корректен; задача соответствует № 3 карты 2027. Рисунков нет.\", \"correction\": \"\"}, {\"id\": \"2785A3\", \"approved\": true, \"reason\": \"Условие передано полностью. Баланс энергии mgh=μmgs даёт коэффициент трения 0,2. Формулы и LaTeX корректны; задача соответствует № 3 карты 2027. Рисунков нет.\", \"correction\": \"\"}, {\"id\": \"8CED26\", \"approved\": true, \"reason\": \"Условие и числовые данные соответствуют HTML. Знаки импульсов выбраны верно; закон сохранения импульса даёт отношение масс 3. LaTeX корректен; задача соответствует № 3 карты 2027. Рисунков нет.\", \"correction\": \"\"}, {\"id\": \"B34015\", \"approved\": true, \"reason\": \"Условие, угол и единицы сохранены. Закон сохранения энергии и связь высоты с длиной склона применены правильно: расстояние 10 м. LaTeX корректен; задача соответствует № 3 карты 2027. Рисунков нет.\", \"correction\": \"\"}]}"
+      },
+      "reference_tex": "$g=10\\,\\text{м}/\\text{с}^2$."
+    }
+  ]
+}

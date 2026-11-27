@@ -1,0 +1,220 @@
+% EGE 2027, task 2. Source IDs and URLs are kept in comments.
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse
+\fi
+\newcounter{banktask}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}%
+  \Needspace{35mm}\par\medskip\noindent\begin{minipage}{\linewidth}%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+  \end{minipage}\par\medskip
+}
+\begin{document}
+При расчётах принимайте $g=10\,\text{м}/\text{с}^2$, если не оговорено иное.\par\medskip
+
+
+
+% Source 19F564: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=19F564
+\BankTask{19F564}{
+В инерциальной системе отсчёта некоторая сила сообщает телу массой $5\,\text{кг}$ ускорение, равное по модулю $3\,\text{м}/\text{с}^{2}$. Определите модуль ускорения, которое сообщит та же сила в той же системе отсчёта телу массой $7{,}5\,\text{кг}$ (в $\text{м}/\text{с}^{2}$).
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По второму закону Ньютона $F=m_1a_1=m_2a_2$. Тогда\[a_2=\frac{m_1a_1}{m_2}=\frac{5\cdot3}{7{,}5}=2\,\text{м}/\text{с}^{2}.\] Ответ: $2$.
+}
+
+% Source AC8852: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=AC8852
+\BankTask{AC8852}{
+Расстояние от искусственного спутника до поверхности Земли равно двум радиусам Земли. Во сколько раз увеличится сила притяжения спутника к Земле, если расстояние от него до поверхности Земли станет равным одному радиусу Земли?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Первоначально расстояние до центра Земли $r_1=3R$, затем $r_2=2R$. По закону всемирного тяготения $F=GMm/r^2$, поэтому\[\frac{F_2}{F_1}=\left(\frac{r_1}{r_2}\right)^2=\left(\frac{3}{2}\right)^2=2{,}25.\] Ответ: в $2{,}25$ раза.
+}
+
+% Source 909F5c: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=909F5c
+\BankTask{909F5c}{
+На рисунке представлен график зависимости модуля силы упругости $F$ пружины от её удлинения $x$. Чему равна жёсткость пружины (в $\text{Н}/\text{м}$)?
+\begin{center}
+\begin{tikzpicture}[x=0.68cm,y=0.68cm,>=stealth]
+\draw[step=1,black,thin] (0,0) grid (4,4);
+\draw[->] (0,0)--(4.65,0) node[right] {$x,\,10^{-2}\,\text{м}$};
+\draw[->] (0,0)--(0,4.75) node[left] {$F,\,\text{Н}$};
+\foreach \n in {1,2,3,4}{\node[below] at (\n,0) {$\n$};\node[left] at (0,\n) {$\n$};}
+\node[below left] at (0,0) {$0$};
+\draw[thick] (0,0)--(4,4);
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По графику при $x=4\cdot10^{-2}\,\text{м}$ сила упругости равна $F=4\,\text{Н}$. По закону Гука\[k=\frac{F}{x}=\frac{4}{4\cdot10^{-2}}=100\,\text{Н}/\text{м}.\] Ответ: $100$.
+}
+
+% Source 318091: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=318091
+\BankTask{318091}{
+При исследовании зависимости модуля силы трения скольжения $\vec{F}_{\text{тр}}$ от модуля нормальной составляющей силы реакции опоры $\vec{N}$ были получены следующие данные.
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}\hline
+$F_{\text{тр}},\,\text{Н}$ & $0{,}8$ & $1{,}6$ & $2{,}4$ & $3{,}2$ \\\hline
+$N,\,\text{Н}$ & $2{,}0$ & $4{,}0$ & $6{,}0$ & $8{,}0$ \\\hline
+\end{tabular}
+\end{center}
+Определите по результатам исследования коэффициент трения скольжения.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+При скольжении $F_{\text{тр}}=\mu N$, поэтому\[\mu=\frac{F_{\text{тр}}}{N}=\frac{0{,}8}{2{,}0}=0{,}4.\] Остальные пары данных дают такое же отношение. Ответ: $0{,}4$.
+}
+
+% Source 26769F: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=26769F
+\BankTask{26769F}{
+Под действием силы величиной $6\,\text{Н}$ пружина удлинилась на $3\,\text{см}$. Чему равна величина силы, под действием которой удлинение этой пружины составит $4{,}5\,\text{см}$ (в $\text{Н}$)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Для одной пружины по закону Гука $F_1=kx_1$ и $F_2=kx_2$. Следовательно,\[F_2=F_1\frac{x_2}{x_1}=6\cdot\frac{4{,}5}{3}=9\,\text{Н}.\] Ответ: $9$.
+}
+
+% Source 89A46D: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=89A46D
+\BankTask{89A46D}{
+Груз массой $200\,\text{г}$ подвешен на пружине к потолку неподвижного лифта. Лифт начинает двигаться и в течение $2\,\text{с}$ равноускоренно опускается вниз на расстояние $5\,\text{м}$. Каково удлинение пружины при опускании лифта, если её жёсткость $100\,\text{Н}/\text{м}$? Движение груза также считать равноускоренным, возникновением колебаний пренебречь. Удлинение выразите в $\text{см}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Лифт начинает движение из состояния покоя, поэтому $a=2s/t^2=2\cdot5/2^2=2{,}5\,\text{м}/\text{с}^{2}$. Ускорение направлено вниз. При $g=10\,\text{м}/\text{с}^{2}$ по второму закону Ньютона $mg-kx=ma$. Тогда\[x=\frac{m(g-a)}{k}=\frac{0{,}2(10-2{,}5)}{100}=0{,}015\,\text{м}=1{,}5\,\text{см}.\] Ответ: $1{,}5$.
+}
+
+
+% Source 2cB64F: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=2cB64F
+\BankTask{2cB64F}{
+В инерциальной системе отсчёта сила $\vec{F}$ сообщает телу массой $m$
+ускорение, модуль которого равен $0{,}6\,\text{м}/\text{с}^{2}$. Чему равен модуль ускорения тела массой $2m$ под действием силы $\frac{1}{2}\vec{F}$ в этой системе отсчёта? Результат выразите в $\text{м}/\text{с}^2$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$a_2/a_1=(F_2/F_1)(m_1/m_2)=1/4$, поэтому $a_2=0{,}6/4=0{,}15\,\text{м}/\text{с}^2$.
+}
+
+% Source 2622F3: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=2622F3
+\BankTask{2622F3}{
+В инерциальной системе отсчёта сила, равная по модулю $16\,\text{Н}$, сообщает телу массой $m$ ускорение $\vec{a}.$ Чему равен модуль силы, под действием которой тело массой $\frac{m}{2}$ будет иметь в этой системе отсчёта ускорение $\frac{\vec{a}}{4}?$ Результат выразите в $\text{Н}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$F_2/F_1=(m_2/m_1)(a_2/a_1)=1/8$. Отсюда $F_2=16/8=2\,\text{Н}$.
+}
+
+% Source 9F5549: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=9F5549
+\BankTask{9F5549}{
+Два маленьких шарика массой $m$ каждый находятся на расстоянии $40\,\text{см}$ друг от друга. Каково расстояние между шариками вдвое большей массы, если модуль сил гравитационного взаимодействия между ними такой же, как и между первыми двумя шариками? Результат выразите в $\text{см}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$Gm^2/r_1^2=G(2m)^2/r_2^2$, откуда $r_2=2r_1=80\,\text{см}$.
+}
+
+% Source 3FB779: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=3FB779
+\BankTask{3FB779}{
+Две планеты обращаются по круговым орбитам вокруг звезды. Модули сил притяжения планет к звезде одинаковы. У первой из планет радиус орбиты
+в шесть раз больше, чем у второй. Каково отношение $\frac{m_1}{m_2}$ массы первой планеты к массе второй планеты?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+При одинаковых силах $m_1/r_1^2=m_2/r_2^2$. Следовательно, $m_1/m_2=(r_1/r_2)^2=6^2=36$.
+}
+
+% Source Be34D6: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=Be34D6
+\BankTask{Be34D6}{
+При движении по горизонтальной поверхности на тело массой $50\,\text{кг}$ действует сила трения скольжения, равная $100\,\text{Н}$. Какой станет сила трения скольжения после увеличения массы тела в $1{,}5$ раза, если коэффициент трения не изменится? Результат выразите в $\text{Н}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+На горизонтальной поверхности $F_{\text{тр}}=\mu mg$. При постоянных $\mu$ и $g$ сила пропорциональна массе: $F_2=1{,}5F_1=150\,\text{Н}$.
+}
+
+% Source 41AB52: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=41AB52
+\BankTask{41AB52}{
+В инерциальной системе отсчёта сила величиной $9\,\text{Н}$ сообщает телу
+массой $3\,\text{кг}$ ускорение $\vec{a}.$ Какой должна быть масса тела, чтобы сила, равная $18\,\text{Н}$, сообщала ему в той же системе отсчёта ускорение $4 \vec{a}?$ Результат выразите в $\text{кг}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$a=9/3=3\,\text{м}/\text{с}^2$. Тогда $m_2=18/(4a)=1{,}5\,\text{кг}$.
+}
+
+% Source EC6256: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=EC6256
+\BankTask{EC6256}{
+В инерциальной системе отсчёта сила $\vec{F}$ сообщает телу массой $m$ ускорение $\vec{a}.$ Во сколько раз нужно уменьшить массу тела, чтобы вдвое меньшая сила сообщала ему в той же системе отсчёта в $3$ раза большее ускорение?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$m_2/m_1=(F_2/F_1)/(a_2/a_1)=(1/2)/3=1/6$. Массу нужно уменьшить в $6$ раз.
+}
+
+% Source 41BBCF: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=41BBCF
+\BankTask{41BBCF}{
+Два маленьких шарика массой $m$ каждый находятся на расстоянии $r$ друг от друга и притягиваются друг к другу с силой $8\,\text{нН}$. Какова сила гравитационного притяжения двух других шариков, если масса одного $2m$, масса другого $\frac{m}{2}$, а расстояние между их центрами $2r$? Результат выразите в $\text{нН}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$F_2/F_1=(2m\cdot m/2)/m^2\cdot(r/(2r))^2=1/4$. Поэтому $F_2=8/4=2\,\text{нН}$.
+}
+
+% Source BA66EA: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=BA66EA
+\BankTask{BA66EA}{
+У поверхности Луны на космонавта действует сила тяготения $120\,\text{Н}$. Какая сила тяготения действует со стороны Луны на того же космонавта
+в космическом корабле, движущемся по круговой орбите вокруг Луны
+на расстоянии двух лунных радиусов от её центра? Результат выразите в $\text{Н}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$F\sim r^{-2}$, поэтому на расстоянии $2R$ от центра Луны $F_2=F_1/4=120/4=30\,\text{Н}$.
+}
+
+% Source A129A4: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=A129A4
+\BankTask{A129A4}{
+Два одинаковых маленьких шарика массой $m$ каждый, расстояние между центрами которых равно $r$, притягиваются друг к другу с силами, равными по модулю $0{,}2\,\text{пН}$. Каков модуль сил гравитационного притяжения двух других шариков, если масса каждого из них $2m$, а расстояние между их центрами $2r$? Результат выразите в $\text{пН}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$F_2/F_1=(2m)^2/m^2\cdot(r/(2r))^2=1$. Сила не изменится: $F_2=0{,}2\,\text{пН}$.
+}
+
+% Source C97E5E: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=C97E5E
+\BankTask{C97E5E}{
+При исследовании зависимости модуля силы упругости $F_{\text{упр}}$ от удлинения пружины были получены следующие данные. Результат выразите в $\text{Н}/\text{м}$.
+\begin{center}\begin{tabular}{|c|c|c|c|c|}\hline
+$F_{\text{упр}},\,\text{Н}$ & $2{,}5$ & $5{,}0$ & $10{,}0$ & $12{,}5$ \\\hline
+$\Delta x,\,\text{м}$ & $0{,}01$ & $0{,}02$ & $0{,}04$ & $0{,}05$ \\\hline
+\end{tabular}\end{center}
+Определите по результатам исследования жёсткость пружины.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По закону Гука $k=F/\Delta x=2{,}5/0{,}01=250\,\text{Н}/\text{м}$. Остальные столбцы дают то же отношение.
+}
+
+% Source 1ccc46: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=1ccc46
+\BankTask{1ccc46}{
+Под действием силы величиной $9\,\text{Н}$ пружина удлинилась на $4{,}5\,\text{см}$. Каким станет удлинение пружины под действием силы, равной по модулю $6\,\text{Н}$? Результат выразите в $\text{см}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По закону Гука $x_2/x_1=F_2/F_1$. Тогда $x_2=4{,}5\cdot6/9=3\,\text{см}$.
+}
+
+% Source 19872D: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=19872D
+\BankTask{19872D}{
+В инерциальной системе отсчёта сила величиной $70\,\text{Н}$ сообщает телу массой $10\,\text{кг}$ некоторое ускорение. Сила какой величины сообщит телу массой $9\,\text{кг}$ в этой же системе отсчёта такое же ускорение? Результат выразите в $\text{Н}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+В первом случае $a=F_1/m_1=70/10=7\,\text{м}/\text{с}^2$. При том же ускорении $F_2=m_2a=9\cdot7=63\,\text{Н}$.
+}
+
+% Source 64F9A6: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=64F9A6
+\BankTask{64F9A6}{
+В инерциальной системе отсчёта сила, модуль которой равен $100\,\text{Н}$, сообщает некоторому телу ускорение $10\,\text{м}/\text{с}^{2}$. Каков модуль силы, которая сообщит этому телу ускорение $7\,\text{м}/\text{с}^{2}$ в этой системе отсчёта? Результат выразите в $\text{Н}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Масса $m=F_1/a_1=100/10=10\,\text{кг}$. Следовательно, $F_2=ma_2=10\cdot7=70\,\text{Н}$.
+}
+
+\end{document}

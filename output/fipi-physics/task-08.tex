@@ -1,0 +1,318 @@
+% EGE 2027, task 8. Source IDs and URLs are kept in comments.
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse
+\fi
+\newcounter{banktask}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}%
+  \Needspace{35mm}\par\medskip\noindent\begin{minipage}{\linewidth}%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+  \end{minipage}\par\medskip
+}
+\begin{document}
+Справочные величины (если в условии не оговорено иное):\par
+$p_{\text{атм}}=10^5\,\text{Па}$\par
+$c_{\text{свинца}}=130\,\text{Дж}/(\text{кг}\cdot\text{К})$\par
+$\lambda_{\text{свинца}}=2{,}5\cdot10^4\,\text{Дж}/\text{кг}$
+
+
+
+% Source BA6eFF: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=BA6eFF
+\BankTask{BA6eFF}{
+Двум моль газа сообщили количество теплоты, равное \(1700\ \text{Дж}\), при этом внешние силы совершили над газом работу, равную \(500\ \text{Дж}\). На сколько увеличилась внутренняя энергия газа (в $\text{Дж}$)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По первому закону термодинамики
+\[
+\Delta U=Q+A_{\text{внеш}}=1700+500=2200\ \text{Дж}.
+\]
+Ответ: \(2200\ \text{Дж}\).
+}
+
+% Source 14FBF5: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=14FBF5
+\BankTask{14FBF5}{
+Газ получил количество теплоты, равное \(300\ \text{Дж}\), при этом внутренняя энергия газа уменьшилась на \(100\ \text{Дж}\). Масса газа не менялась. Какую работу совершил газ в этом процессе (в $\text{Дж}$)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По первому закону термодинамики \(Q=\Delta U+A\), где \(A\) — работа газа. Так как \(\Delta U=-100\ \text{Дж}\),
+\[
+A=Q-\Delta U=300-(-100)=400\ \text{Дж}.
+\]
+Ответ: \(400\ \text{Дж}\).
+}
+
+% Source 5AD1F4: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=5AD1F4
+\BankTask{5AD1F4}{
+Газ в сосуде сжали, совершив работу, равную \(500\,\text{Дж}\). Внутренняя энергия газа при этом увеличилась на \(350\,\text{Дж}\). Какое количество теплоты отдал газ окружающей среде (в $\text{Дж}$)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По первому закону термодинамики \(\Delta U=Q+A_{\text{внеш}}\), где \(Q\) — теплота, полученная газом. Тогда \(Q=350-500=-150\,\text{Дж}\). Газ отдал окружающей среде \(Q_{\text{отд}}=150\,\text{Дж}\).
+
+Ответ: \(150\,\text{Дж}\).
+}
+
+% Source DE8578: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=DE8578
+\BankTask{DE8578}{
+При изобарном расширении постоянной массы неона при нормальном атмосферном давлении ему сообщили количество теплоты, равное \(200\,\text{кДж}\). Определите изменение объёма неона. (в $\text{м}^3$).
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Неон — одноатомный идеальный газ, поэтому \(\Delta U=\frac32p\Delta V\). По первому закону термодинамики \(Q=\Delta U+p\Delta V=\frac52p\Delta V\). Принимая нормальное атмосферное давление \(p=1{,}0\cdot10^5\,\text{Па}\), получаем
+\[
+\Delta V=\frac{2Q}{5p}=\frac{2\cdot200\cdot10^3}{5\cdot10^5}=0{,}8\,\text{м}^3.
+\]
+Ответ: \(0{,}8\,\text{м}^3\).
+}
+
+% Source F23045: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=F23045
+\BankTask{F23045}{
+\begin{center}
+\begin{tikzpicture}[task graph,x=0.65cm,y=0.65cm]
+\draw[task grid,step=1] (0,0) grid (5,5);
+\draw[task axis] (0,0)--(6,0) node[below] {$V$};
+\draw[task axis] (0,0)--(0,6) node[left] {$p$};
+\node[below left] at (0,0) {$0$};
+\draw[task curve] (1,4)--(3,4)--(5,2);
+\node[above left] at (1,4) {$1$};
+\node[above right] at (3,4) {$2$};
+\node[right] at (5,2) {$3$};
+\end{tikzpicture}
+\end{center}
+На рисунке показано, как меняется давление идеального газа в зависимости от его объёма при переходе из состояния $1$ в состояние $2$, а затем в состояние $3$. Чему равно отношение работ газа $\dfrac{A_{23}}{A_{12}}$ в этих двух процессах?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Работа газа равна площади под графиком $p(V)$. Обозначим цену клетки по осям через $\Delta p$ и $\Delta V$. Тогда
+\[
+A_{12}=4\Delta p\cdot2\Delta V=8\Delta p\Delta V,
+\qquad
+A_{23}=\frac{4\Delta p+2\Delta p}{2}\cdot2\Delta V=6\Delta p\Delta V.
+\]
+Следовательно, $\dfrac{A_{23}}{A_{12}}=\dfrac{6}{8}=0{,}75$.
+
+Ответ: $0{,}75$.
+}
+
+% Source F45AFF: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=F45AFF
+\BankTask{F45AFF}{
+\begin{center}
+\begin{tikzpicture}[task graph,x=1cm,y=1cm]
+\draw[task axis] (0,0)--(4.5,0) node[below] {$Q,\,\text{кДж}$};
+\draw (0,0)--(0,0.44);
+\draw[task axis] (0,0.68)--(0,3.35) node[left] {$T,\,\text{К}$};
+\draw (-0.09,0.46)--(0.02,0.52)--(0.12,0.48);
+\draw (-0.09,0.57)--(0.02,0.63)--(0.12,0.59);
+\node[below left] at (0,0) {$0$};
+\draw (0.42,-0.06)--(0.48,0.06);\draw (0.54,-0.06)--(0.60,0.06);
+\draw[task projection] (1.45,0)--(1.45,1.05);
+\draw[task projection] (3.1,0)--(3.1,2.6);
+\node[below] at (1.45,0) {$100$};
+\node[below] at (3.1,0) {$136$};
+\draw[task projection] (0,1.05)--(1.45,1.05);
+\draw[task projection] (0,2.6)--(3.1,2.6);
+\node[left] at (0,1.05) {$273$};
+\node[left] at (0,2.6) {$293$};
+\draw[task curve] (0.7,0.3454545)--(3.1,2.6);
+\fill (1.45,1.05) circle (1.7pt);
+\fill (3.1,2.6) circle (1.7pt);
+\end{tikzpicture}
+\end{center}
+На рисунке показана зависимость температуры металлической детали массой $2\,\text{кг}$ от переданного ей количества теплоты. Чему равна удельная теплоёмкость металла (в $\text{Дж}/(\text{кг}\cdot\text{К})$)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Используем $\Delta Q=mc\Delta T$. По графику $\Delta Q=(136-100)\,\text{кДж}=36000\,\text{Дж}$, $\Delta T=293-273=20\,\text{К}$. Тогда
+\[
+c=\frac{\Delta Q}{m\Delta T}=\frac{36000}{2\cdot20}=900\,\frac{\text{Дж}}{\text{кг}\cdot\text{К}}.
+\]
+Ответ: $900$.
+}
+
+% Source 217002: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=217002
+\BankTask{217002}{
+\begin{center}
+\begin{tikzpicture}[task graph,x=1.5cm,y=1cm]
+\draw[task axis] (0,0)--(3.8,0) node[below] {$Q,\,10^4\,\text{Дж}$};
+\draw[task axis] (0,0)--(0,3) node[left] {$t,\,{}^\circ\text{C}$};
+\node[below left] at (0,0) {$0$};
+\foreach \x in {0.5,1,1.5,2} {
+\draw[task projection] (\x,0)--(\x,1.75);
+}
+\draw[task projection] (2.55,0)--(2.55,2.50625);
+\draw[task curve] (0,0.8)--(0.5,1.75)--(2,1.75)--(2.8,2.85);
+\node[below] at (1,0) {$1$};
+\node[below] at (2,0) {$2$};
+\end{tikzpicture}
+\end{center}
+На рисунке показан график изменения температуры вещества по мере поглощения им количества теплоты. Вещество находится в сосуде под поршнем. Масса вещества равна $0{,}5\,\text{кг}$. Первоначально вещество было в жидком состоянии. Какова удельная теплота парообразования вещества (в $\text{кДж}/\text{кг}$)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Горизонтальный участок соответствует парообразованию. На него затрачено
+\[
+Q_{\text{пар}}=(2-0{,}5)\cdot10^4=1{,}5\cdot10^4\,\text{Дж}.
+\]
+Удельная теплота парообразования
+\[
+L=\frac{Q_{\text{пар}}}{m}=\frac{1{,}5\cdot10^4}{0{,}5}=3\cdot10^4\,\text{Дж}/\text{кг}=30\,\text{кДж}/\text{кг}.
+\]
+Ответ: $30$.
+}
+
+% Source 5745AB: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=5745AB
+\BankTask{5745AB}{
+\begin{center}
+\begin{tikzpicture}[task graph,x=0.19cm,y=0.95cm]
+\draw[task axis] (0,0)--(31,0) node[right] {$t,\,\text{мин.}$};
+\draw[task axis] (0,0)--(0,4) node[left] {$T$};
+\node[below left] at (0,0) {$0$};
+\foreach \x in {5,10,15,20,25}{
+  \node[below] at (\x,0) {$\x$};
+}
+\foreach \x/\y in {5/2.35,10/2.35,15/2.35,20/2.9,25/3.45}
+  \draw[task projection] (\x,0)--(\x,\y);
+\draw[task curve] (0,1.45)--(5,2.35)--(15,2.35)--(25,3.45);
+\end{tikzpicture}
+\end{center}
+Для плавления куска льда при температуре его плавления требуется количество теплоты, равное \(3\,\text{кДж}\). Этот кусок льда внесли в тёплое помещение. Зависимость температуры льда от времени представлена на рисунке. Определите среднюю тепловую мощность, подводимую к куску льда в процессе плавления. (в $\text{Вт}$).
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Плавлению соответствует горизонтальный участок графика от \(5\) до \(15\,\text{мин}\). Поэтому \(\Delta t=10\,\text{мин}=600\,\text{с}\), и средняя мощность равна
+\[
+P=\frac{Q}{\Delta t}=\frac{3000}{600}=5\,\text{Вт}.
+\]
+Ответ: \(5\,\text{Вт}\).
+}
+
+% Source 687697: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=687697
+\BankTask{687697}{
+На сколько градусов нагреются \(100\,\text{г}\) свинца, если ему сообщить \(260\,\text{Дж}\) теплоты (в ${}^\circ\text{C}$)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Используем табличную удельную теплоёмкость свинца \(c=130\,\text{Дж}/(\text{кг}\cdot\text{К})\). При \(m=0{,}1\,\text{кг}\)
+\[
+\Delta T=\frac{Q}{cm}=\frac{260}{130\cdot0{,}1}=20\,\text{К}.
+\]
+Ответ: \(20\,{}^\circ\text{C}\).
+}
+
+% Source 4EF342: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=4EF342
+\BankTask{4EF342}{
+Рабочее тело тепловой машины за цикл получает от нагревателя количество теплоты, равное \(100\,\text{Дж}\), и совершает работу \(60\,\text{Дж}\). Каков КПД тепловой машины (в $\%$)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+КПД тепловой машины:
+\[
+\eta=\frac{A}{Q_1}=\frac{60}{100}=0{,}6=60\%.
+\]
+Ответ: \(60\%\).
+}
+
+% Source 81C4BA: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=81C4BA
+\BankTask{81C4BA}{
+Рабочее тело тепловой машины с КПД \(30\%\) за цикл работы отдаёт холодильнику количество теплоты, равное \(70\,\text{Дж}\). Какое количество теплоты за цикл рабочее тело получает от нагревателя (в $\text{Дж}$)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Из \(\eta=1-\dfrac{Q_2}{Q_1}\) получаем
+\[
+Q_1=\frac{Q_2}{1-\eta}=\frac{70}{1-0{,}30}=100\,\text{Дж}.
+\]
+Ответ: \(100\,\text{Дж}\).
+}
+
+% Source 0D600A: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=0D600A
+\BankTask{0D600A}{
+У идеального теплового двигателя Карно температура нагревателя равна \(227\,^{\circ}\mathrm{C}\), а температура холодильника равна \(27\,^{\circ}\mathrm{C}\). Определите КПД теплового двигателя (в $\%$).
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Температуры резервуаров: \(T_1=227+273=500\,\text{К}\), \(T_2=27+273=300\,\text{К}\). КПД двигателя Карно:
+\[
+\eta=1-\frac{T_2}{T_1}=1-\frac{300}{500}=0{,}4=40\%.
+\]
+Ответ: \(40\%\).
+}
+
+% Source EC33AF: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=EC33AF
+\BankTask{EC33AF}{
+У идеального теплового двигателя Карно температура нагревателя \(400\,\text{К}\), температура холодильника \(300\,\text{К}\). За один цикл двигатель совершает работу \(16\,\text{кДж}\). Какое количество теплоты получает рабочее тело от нагревателя за один цикл (в $\text{кДж}$)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+КПД двигателя Карно:
+\[
+\eta=1-\frac{T_2}{T_1}=1-\frac{300}{400}=0{,}25.
+\]
+Из \(\eta=A/Q_1\) получаем:
+\[
+Q_1=\frac{A}{\eta}=\frac{16}{0{,}25}=64\,\text{кДж}.
+\]
+Ответ: \(64\,\text{кДж}\).
+}
+
+% Source 772CBF: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=772CBF
+\BankTask{772CBF}{
+Температура куска металла с удельной теплоёмкостью $900\,\text{Дж}/(\text{кг}\cdot\text{К})$ понизилась со $120\,{}^\circ\text{C}$ до $40\,{}^\circ\text{C}$. При этом выделилось количество теплоты, равное $108\,\text{кДж}$. Чему равна масса этого куска металла (в $\text{кг}$)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$Q=cm(t_1-t_2)$, откуда $m=Q/[c(t_1-t_2)]=108000/(900\cdot80)=1{,}5\,\text{кг}$. Ответ: $1{,}5\,\text{кг}$.
+}
+
+% Source 8AB566: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=8AB566
+\BankTask{8AB566}{
+Какое количество теплоты необходимо для того, чтобы расплавить $2\,\text{кг}$ свинца, взятого при температуре плавления (в $\text{кДж}$)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$Q=\lambda m=2{,}5\cdot10^4\cdot2=5\cdot10^4\,\text{Дж}=50\,\text{кДж}$. Ответ: $50\,\text{кДж}$.
+}
+
+% Source C2BD49: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=C2BD49
+\BankTask{C2BD49}{
+Тепловая машина с КПД $30\%$ за цикл работы получает от нагревателя количество теплоты, равное $120\,\text{Дж}$. Какую работу машина совершает за цикл (в $\text{Дж}$)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$\eta=A/Q_1$, поэтому $A=\eta Q_1=0{,}30\cdot120=36\,\text{Дж}$. Ответ: $36\,\text{Дж}$.
+}
+
+% Source 80CCD9: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=80CCD9
+\BankTask{80CCD9}{
+Рабочее тело теплового двигателя за цикл совершает работу, равную $15\,\text{кДж}$, и получает от нагревателя количество теплоты, равное $75\,\text{кДж}$. Какое количество теплоты рабочее тело отдаёт холодильнику за цикл (в $\text{кДж}$)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+За цикл $\Delta U=0$, поэтому $Q_1=A+Q_2$. Отданная холодильнику теплота $Q_2=75-15=60\,\text{кДж}$. Ответ: $60\,\text{кДж}$.
+}
+
+% Source D1C429: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=D1C429
+\BankTask{D1C429}{
+Рабочее тело тепловой машины за один цикл отдаёт холодильнику количество теплоты $100\,\text{Дж}$ и совершает работу $30\,\text{Дж}$. Какое количество теплоты получает рабочее тело от нагревателя за два цикла (в $\text{Дж}$)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+За один цикл $Q_1=Q_2+A=100+30=130\,\text{Дж}$. За два цикла $Q=2Q_1=260\,\text{Дж}$. Ответ: $260\,\text{Дж}$.
+}
+
+% Source B44BA2: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B44BA2
+\BankTask{B44BA2}{
+Тепловая машина с КПД $20\%$ совершает за цикл работу, равную $400\,\text{Дж}$. Какое количество теплоты машина получает за цикл от нагревателя (в $\text{Дж}$)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$\eta=A/Q_1$, поэтому $Q_1=A/\eta=400/0{,}20=2000\,\text{Дж}$. Ответ: $2000\,\text{Дж}$.
+}
+
+% Source 0E8CD8: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=0E8CD8
+\BankTask{0E8CD8}{
+При сжатии идеального одноатомного газа при постоянном давлении внешние силы совершили работу $2000\,\text{Дж}$. Какое количество теплоты было передано при этом газом окружающим телам (в $\text{Дж}$)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Работа газа $A=-2000\,\text{Дж}$. На изобаре $\Delta U=\frac32p\Delta V=\frac32 A=-3000\,\text{Дж}$. По первому началу $Q=\Delta U+A=-5000\,\text{Дж}$. Газ отдал $5000\,\text{Дж}$. Ответ: $5000\,\text{Дж}$.
+}
+
+\end{document}

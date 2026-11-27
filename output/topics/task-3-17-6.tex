@@ -1,0 +1,78 @@
+% !TEX root = task-3-17-6.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{3.17.6}{Магнитное поле катушки с током}
+
+
+% Source 063141: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=063141
+\BankTask{063141}{
+Катушка №~1 включена в электрическую цепь, состоящую из источника постоянного напряжения и реостата. Катушка №~2 помещена внутрь катушки №~1, и её обмотка замкнута. Вид с торца катушек представлен на рисунке.
+
+Ползунок реостата перемещают влево.
+\begin{enumerate}
+\item Сила тока в катушке №~1 увеличивается.
+\item Модуль вектора индукции магнитного поля, созданного катушкой №~1, увеличивается.
+\item Модуль магнитного потока, пронизывающего катушку №~2, уменьшается.
+\item Вектор магнитной индукции магнитного поля, созданного катушкой №~2 в её центре, направлен от наблюдателя.
+\item В катушке №~2 индукционный ток направлен по часовой стрелке.
+\end{enumerate}
+\begin{center}
+\begin{tikzpicture}[book diagram,x=0.85cm,y=0.85cm]
+\draw (1.65,2.25) ++(-104:0.9) arc[start angle=-104,end angle=-436,radius=0.9];
+\draw (1.65,2.25) circle[radius=0.5];
+\node at (1.65,2.37) {№ 2};
+\node at (0.36,1.98) {№ 1};
+\draw (1.432,1.377)--(0.2,1.377)--(0.2,0.38)--(0.58,0.38);
+\draw (1.868,1.377)--(3.14,1.377)--(3.14,0.38)--(2.35,0.38);
+\draw (0.58,0.18) rectangle (1.36,0.58);
+\draw (1.36,0.38)--(2.18,0.38);
+\draw (1.77,0.38)--(1.77,1.00)--(0.98,1.00);
+\draw[-{book tip}] (0.98,1.00)--(0.98,0.60);
+\draw (2.18,-0.04)--(2.18,0.80);
+\draw (2.35,0.16)--(2.35,0.60);
+\node at (1.88,-0.05) {$+$};
+\node at (2.62,-0.05) {$-$};
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+При перемещении ползунка влево сопротивление включённой части реостата уменьшается, поэтому ток в катушке №~1 и создаваемая им индукция возрастают: утверждения 1 и 2 верны. Модуль магнитного потока через катушку №~2 увеличивается, поэтому утверждение 3 неверно. Ток от положительного полюса источника идёт по катушке №~1 по часовой стрелке, создавая поле от наблюдателя. По правилу Ленца поле индукционного тока катушки №~2 направлено к наблюдателю, а сам ток идёт против часовой стрелки: утверждения 4 и 5 неверны. Ответ: 1, 2.
+}
+
+\end{document}

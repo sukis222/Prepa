@@ -1,0 +1,15 @@
+{
+  "batch": "mechanics-gravity",
+  "bundle_sha256": "72c77e46ddbae6a492d03c98cf1af6e98b49b0068730668bfd3d6c97008cb354",
+  "topics": [
+    "1.10.1"
+  ],
+  "tasks": 10,
+  "pages": 8,
+  "baseline_preserved": 107,
+  "files": {
+    "task-1-10-1.tex": "053fc8c5298d6d62470db17ad891b073336a336ff1cc0f9c1be9c0e4f16244fb",
+    "tutor-1-10-1.tex": "ab047c9ab0bce73214a3599ac1c07f698ccf6b05a0240b35e9e94a867f075583"
+  },
+  "editor_open_checked": false
+}

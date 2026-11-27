@@ -1,0 +1,86 @@
+% !TEX root = task-2-10-8.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{2.10.8}{График конденсации}
+
+
+% Source E2B7DC: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=E2B7DC
+\BankTask{E2B7DC}{
+В начальный момент в сосуде под лёгким поршнем находится только жидкий эфир. На рисунке схематично представлен график зависимости температуры \(t\) эфира от времени \(\tau\) его нагревания и последующего охлаждения.
+\begin{center}
+\begin{tikzpicture}[x=0.85cm,y=0.65cm,>=stealth]
+\draw[->] (0,0)--(6.8,0) node[below] {$\tau$};
+\draw[->] (0,0)--(0,4.7) node[left] {$t,\,{}^\circ\mathrm{C}$};
+\node[below left] at (0,0) {$0$};
+\foreach \y/\v in {1/20,2/40,3/60}{\draw (-0.08,\y)--(0.08,\y);\node[left] at (-0.1,\y) {$\v$};}
+\foreach \y in {0.5,1.5,2.5}{\draw (-0.06,\y)--(0.06,\y);}
+\draw[dashed] (0,2)--(3.35,2);
+\draw (0,1)--(0.75,2)--(2.1,2)--(2.72,3.4)--(3.35,2)--(4.7,2)--(5.35,1);
+\node[below right] at (0,1) {$A$};
+\node[above] at (0.75,2) {$B$};
+\node[above left] at (2.1,2) {$C$};
+\node[above] at (2.72,3.4) {$D$};
+\node[above right] at (3.35,2) {$E$};
+\node[above right] at (4.7,2) {$F$};
+\node[right] at (5.35,1) {$G$};
+\end{tikzpicture}
+\end{center}
+\begin{enumerate}
+\item Температура кипения эфира равна \(60\,{}^\circ\mathrm{C}\).
+\item В точке \(F\) в сосуде находился только жидкий эфир.
+\item На участке \(BC\) внутренняя энергия эфира увеличивалась.
+\item В точке \(G\) эфир отвердел.
+\item Время, за которое весь эфир выкипел, меньше, чем время, за которое он сконденсировался.
+\end{enumerate}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+1) Неверно: горизонтальный участок $BC$ соответствует кипению при $40\,{}^\circ\text{C}$.
+
+2) Верно: в точке $F$ конденсация завершилась, далее охлаждается жидкость.
+
+3) Верно: при кипении внутренняя энергия увеличивается за счёт увеличения потенциальной энергии взаимодействия молекул.
+
+4) Неверно: участок $FG$ соответствует охлаждению жидкости; признаков отвердевания нет.
+
+5) Неверно: участки $BC$ и $EF$ на схематическом графике имеют одинаковую длительность.
+
+Ответ: $23$.
+}
+
+\end{document}

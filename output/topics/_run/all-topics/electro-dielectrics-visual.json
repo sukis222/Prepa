@@ -1,0 +1,55 @@
+{
+  "approved": true,
+  "reviewed_sha256": "98e83fa24a1e601c84ca4c00f9e01282e4e115866606a479dcb91b026c16ed29",
+  "pages": [
+    {
+      "file": "tmp/all-topics/electro/preview/task-3-6/page-01.png",
+      "sha256": "ead5653c22a0afc056859419d7758efb4766fc0ce17af62d0220e998591c1e21"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/task-3-6/page-02.png",
+      "sha256": "053a055842d1f4f19da162350dc318f7fb45b5bfe0aa866275690d4691ce90cb"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/task-3-6/page-03.png",
+      "sha256": "11950b6079c4bc4f15095f3873a9896f55480bbdecde49265b9b3f323dbe374c"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/task-3-6/page-04.png",
+      "sha256": "a71e870e7fb3bc84b852216a82caf54a8ee499e65841e2593c511dbc631d7de3"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-6/page-01.png",
+      "sha256": "64e5b8da90da78317b7f9793899bee1283afe53deebcf132f80f5ca16262c6a3"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-6/page-02.png",
+      "sha256": "c56bd213d7aa911ebc9f9254382cc2527e9f1fe1d66c8b93d785ec368c8c4e9f"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-6/page-03.png",
+      "sha256": "49b94c98c0d096c3e95fe4569f152addbfea8f9e0d828fdf67fa9fc4b7a2588e"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-6/page-04.png",
+      "sha256": "33f7da4b6601bba94ac0e8f2e125170fe67f70f2563c7c34d0b2d64729608ccc"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-6/page-05.png",
+      "sha256": "2f69c142f045c02e58aeb75e257b2f486d6d64666ac2f6aab6f86658b2c77e2a"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-6/page-06.png",
+      "sha256": "3c8e41769247a36a2ddcec5e8ea5cf80c540fec91804ce27c99da0a185a9a048"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-6/page-07.png",
+      "sha256": "e452db6fc38fbabf0b7dd1b582732d8292321f0d44d1a7bbba88ce9f6694c26b"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-6/page-08.png",
+      "sha256": "32c24dddd113291a31b21a36af56e0063a7f262923a3f85978a851a4df86c65e"
+    }
+  ],
+  "scope": "Все 12 финальных страниц осмотрены; 7 новых исходных рисунков сверены с TikZ."
+}

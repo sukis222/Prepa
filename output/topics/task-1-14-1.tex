@@ -1,0 +1,177 @@
+% !TEX root = task-1-14-1.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{1.14.1}{Второй закон Ньютона в импульсной форме}
+
+
+% Source sdamgia-7997: https://phys-ege.sdamgia.ru/problem?id=7997
+\BankTask{sdamgia-7997}{
+В инерциальной системе отсчета тело массой $2\,\text{кг}$ движется по прямой в одном направлении под действием постоянной силы, равной $3\,\text{Н}$. На сколько увеличится импульс тела за $5\,\text{с}$ движения?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Изменение импульса тела равно произведению силы на время: $3\,\text{Н}\cdot5\,\text{с}=15\,\text{кг}\cdot\text{м/с}.$
+
+Ответ: $15$.
+}
+
+% Source sdamgia-7135: https://phys-ege.sdamgia.ru/problem?id=7135
+\BankTask{sdamgia-7135}{
+Тело движется по прямой под действием постоянной силы, равной по модулю $10\,\text{Н}$. Сколько времени потребуется для того, чтобы под действием этой силы импульс тела изменился на $50\,\text{кг}\cdot\text{м/с}$?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Второй закон Ньютона гласит, что в инерциальных системах отсчета производная импульса материальной точки по времени равна действующей на нее силе $\frac{dp}{dt}=F.$ Подставляя значения, получаем $dt=\frac{dp}{F}=\frac{50\,\text{кг}\cdot\text{м/с}}{10\,\text{Н}}=5\,\text{с}.$
+
+Ответ: $5$.
+}
+
+% Source sdamgia-425: https://phys-ege.sdamgia.ru/problem?id=425
+\BankTask{sdamgia-425}{
+Тело движется по прямой. Под действием постоянной силы величиной $2\,\text{Н}$ за $3\,\text{с}$ модуль импульса тела увеличился и стал равен $15\,\text{кг}\cdot\text{м/с}.$ Каков первоначальный импульс тела?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Сила, изменение импульса под действием этой силы и интервал времени, в течение которого произошло изменение, связаны согласно второму закону Ньютона, соотношением $F=\frac{\Delta p}{\Delta t}.$ Следовательно:
+
+$\Delta p=F\Delta t=2\,\text{Н}\cdot3\,\text{с}=6\,\text{кг}\cdot\text{м/с}.$
+
+Таким образом, первоначальный импульс был равен: 
+
+$p_1=p_2-\Delta p=15\,\text{кг}\cdot\text{м/с}-6\,\text{кг}\cdot\text{м/с}=9\,\text{кг}\cdot\text{м/с}.$
+
+Ответ: $9$.
+}
+
+% Source sdamgia-43185: https://phys-ege.sdamgia.ru/problem?id=43185
+\BankTask{sdamgia-43185}{
+В инерциальной системе отсчета тело движется по прямой в одном направлении под действием постоянной силы $F=20\,\text{Н}$. Модуль начального импульса тела $70\,\text{кг}\cdot\text{м/с}$. Каким станет модуль импульса тела через $4\,\text{с}$?
+}{
+\smallskip\noindent\textbf{Решение}\par
+По второму закону Ньютона в импульсной форме при движении тела в одном направлении $Ft=p_2-p_1,$ откуда конечный импульс тела равен
+
+$p_2=p_1+Ft=70+20\cdot4=150\,\text{кг}\cdot\text{м/с}.$
+
+Ответ: $150$.
+}
+
+% Source sdamgia-41548: https://phys-ege.sdamgia.ru/problem?id=41548
+\BankTask{sdamgia-41548}{
+В инерциальной системе отсчёта тело массой $50\,\text{кг}$ движется прямолинейно в одном направлении под действием постоянной силы, равной по модулю $20\,\text{Н}$. Каков модуль изменения скорости тела за $8\,\text{с}$?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Запишем второй закон Ньютона в импульсной форме при движении тела по прямой в одном направлении: $F\Delta t=m\Delta v,$ откуда изменение скорости тела
+
+$\Delta v=\frac{F\Delta t}{m}=\frac{20\cdot8}{50}=3{,}2\,\text{м/с}.$
+
+Ответ: $3{,}2$.
+}
+
+% Source sdamgia-8853: https://phys-ege.sdamgia.ru/problem?id=8853
+\BankTask{sdamgia-8853}{
+Тело свободно падает без начальной скорости. Изменение модуля импульса этого тела за промежуток времени $2\,\text{с}$ равно $10\,\text{кг}\cdot\text{м/с}$. Чему равна масса тела? Сопротивлением воздуха можно пренебречь.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Так как тело свободно падает и сопротивления воздуха нет, то второй закон Ньютона может быть записан в следующей форме:
+
+$ma=mg=\frac{\Delta p}{\Delta t}\Rightarrow m=\frac{\Delta p}{g\Delta t}=\frac{10\,\text{кг}\cdot\text{м/с}}{10\,\text{м/с}^2\cdot2\,\text{с}}=0{,}5\,\text{кг}.$
+
+Ответ: $0{,}5$.
+}
+
+% Source sdamgia-5955: https://phys-ege.sdamgia.ru/problem?id=5955
+\BankTask{sdamgia-5955}{
+Материальная точка массой $2\,\text{кг}$ движется вдоль горизонтальной оси $Ox$ под действием горизонтальной силы $\vec F.$ В начальный момент времени тело покоилось. График зависимости силы $F$ от времени $t$ изображен на рисунке. Чему равен импульс материальной точки в конце третьей секунды?
+
+
+\begin{center}\begin{tikzpicture}[task graph]
+\draw[gray!50,step=.5] (0,-1.5) grid (3.5,2);
+\draw[task axis] (-.4,0)--(3.6,0) node[below] {$t$, с};\draw[task axis] (0,-1.6)--(0,2.1) node[left] {$F$, Н};
+\foreach \t in {1,...,5}{\fill (\t*.5,0) circle (1pt);\node[below] at (\t*.5,0) {$\t$};}
+\foreach \y in {-2,-1,1,2}{\node[left] at (0,\y*.5) {$\y$};}\node[below left] at (0,0) {$0$};
+\draw[task curve] (0,1)--(1,1) (1,0)--(2,0) (2,-.5)--(2.5,-.5);
+\end{tikzpicture}\end{center}
+}{
+\smallskip\noindent\textbf{Решение}\par
+Если сила постоянна, то импульс, переданный телу за некоторый промежуток времени, равен произведению этой силы на время действия этой силы. Из рисунка находим, что в конце третьей секунды импульс материальной точки равен: $p=F_1(t_2-t_1)+F_2(t_3-t_2)=2\cdot(2-0)+0\cdot(3-2)=4\,\text{кг}\cdot\text{м/с}.$
+
+Ответ: $4$.
+}
+
+% Source sdamgia-38977: https://phys-ege.sdamgia.ru/problem?id=38977
+\BankTask{sdamgia-38977}{
+На космическом аппарате, находящемся вдали от Земли, начал работать реактивный двигатель. Из сопла двигателя ежесекундно выбрасывается $1{,}5\,\text{кг}$ газа $\left(\frac{\Delta m}{\Delta t}=1{,}5\,\text{кг/с}\right)$ со скоростью $v=600\,\text{м/с}.$ Исходная масса аппарата $M=600\,\text{кг}$. Какой будет скорость $v_{1}$ аппарата через $t=8\,\text{с}$ после старта? Начальную скорость аппарата принять равной нулю. Изменением массы аппарата за время движения пренебречь.
+}{
+\smallskip\noindent\textbf{Решение}\par
+За промежуток времени $t$ скорость космического аппарата станет равной $u$, масса газа уменьшится на величину $m=\frac{\Delta m}{\Delta t}t.$ Учитывая, что начальная скорость аппарата равнялась нулю, закон сохранения импульса для системы "аппарат+газы" будет иметь вид:
+
+$Mu-mv=0,$
+$Mu-\frac{\Delta m}{\Delta t}tv=0.$
+
+Ракета движется с ускорением $a=\frac ut=\frac{\Delta m\,v}{\Delta t\,M}.$
+Тогда скорость, приобретенная ракетой, равна
+
+$v_1=at=\frac{\Delta m\,vt}{\Delta t\,M}=\frac{1{,}5\cdot600\cdot8}{600}=12\,\text{м/с}.$
+
+Ответ: $v_1=12\,\text{м/с}.$
+}
+
+
+% Source B02B49: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B02B49
+\BankTask{B02B49}{
+На тело, движущееся прямолинейно в инерциальной системе отсчёта, в течение $3\,\text{с}$ в направлении движения действует постоянная сила $12\,\text{Н}$. Каково увеличение импульса тела за это время? Выразите ответ в $\text{кг}\cdot\text{м}/\text{с}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Изменение импульса равно импульсу силы: $\Delta p=F\Delta t=12\cdot3=36\,\text{кг}\cdot\text{м}/\text{с}$. Ответ: $36\,\text{кг}\cdot\text{м}/\text{с}$.
+}
+
+% Source 568701: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=568701
+\BankTask{568701}{
+Тело массой $6\,\text{кг}$ движется прямолинейно со скоростью $2\,\text{м}/\text{с}$ в инерциальной системе отсчёта. На тело начала действовать постоянная тормозящая сила, равная по модулю $4\,\text{Н}$. Сколько времени пройдёт до момента остановки тела? Результат выразите в $\text{с}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+При торможении $Ft=mv_0$. Время до остановки $t=6\cdot2/4=3\,\text{с}$.
+}
+
+% Source 8CAE7B: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=8CAE7B
+\BankTask{8CAE7B}{
+Тело движется в инерциальной системе отсчёта по прямой в одном направлении под действием постоянной силы величиной $5\,\text{Н}$. За $4\,\text{с}$ импульс тела увеличился и стал равен $35\,\text{кг}\cdot\text{м}/\text{с}$. Чему был равен первоначальный импульс тела? Результат выразите в $\text{кг}\cdot\text{м}/\text{с}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$p-p_0=Ft$, откуда $p_0=35-5\cdot4=15\,\text{кг}\cdot\text{м}/\text{с}$.
+}
+
+\end{document}

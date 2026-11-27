@@ -1,0 +1,117 @@
+% !TEX root = task-3-3-5.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{3.3.5}{Поле равномерно заряженной плоскости}
+
+
+% Source E5F230: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=E5F230
+\BankTask{E5F230}{
+Однородное электростатическое поле создано равномерно заряженной протяженной горизонтальной пластиной. Линии напряжённости поля направлены вертикально вверх (см. рисунок).
+\begin{enumerate}
+\item Пластина имеет отрицательный заряд.
+\item Потенциал электростатического поля в точке $A$ ниже, чем в точке $C$.
+\item Работа электростатического поля по перемещению пробного точечного отрицательного заряда из точки $A$ в точку $B$ отрицательна.
+\item Если в точку $B$ поместить пробный точечный положительный заряд, то на него со стороны пластины будет действовать сила, направленная вертикально вверх.
+\item Напряжённость поля в точках $A$, $B$ и $C$ одинакова.
+\end{enumerate}
+\begin{center}
+\begin{tikzpicture}[book diagram]
+\draw[line width=1.2pt] (-0.45,0)--(2.05,0);
+\foreach \x in {0,0.55,1.1,1.65}{
+\draw (\x,0)--(\x,2.55);
+\draw[-{book tip}] (\x,1.65)--(\x,2.03);
+}
+\draw[dashed] (0,0.8)--(1.65,0.8);
+\draw[dashed] (0,0.8)--(1.65,1.68);
+\draw (1.50,0.8)--(1.50,0.95)--(1.65,0.95);
+\fill (0,0.8) circle (2pt) node[left=3pt] {$A$};
+\fill (1.65,0.8) circle (2pt) node[right=3pt] {$B$};
+\fill (1.65,1.68) circle (2pt) node[right=3pt] {$C$};
+\node at (1.35,2.48) {$\vec E$};
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+1) Неверно: линии поля направлены от пластины, следовательно, её заряд положителен. 2) Неверно: потенциал убывает вдоль поля, поэтому $\varphi_A>\varphi_C$. 3) Неверно: точки $A$ и $B$ лежат на одной эквипотенциальной поверхности, так что $A_{AB}=q(\varphi_A-\varphi_B)=0$. 4) Верно: для положительного заряда сила $\vec F=q\vec E$ направлена вверх. 5) Верно: в однородном поле $\vec E_A=\vec E_B=\vec E_C$. Ответ: $4,\ 5$.
+}
+
+% Source 25398: https://phys-ege.sdamgia.ru/problem?id=25398
+\BankTask{25398}{
+Маленький незаряженный шарик, подвешенный на непроводящей нити, помещен над горизонтальной диэлектрической пластиной, равномерно заряженной положительным зарядом. Размеры пластины во много раз превышают длину нити. Опираясь на законы механики и электродинамики, объясните, как изменится частота малых свободных колебаний шарика, если ему сообщить отрицательный заряд.
+}{
+\smallskip\noindent\textbf{Решение}\par
+При отсутствии заряда шарика частота его колебаний определяется формулой
+
+\[v = \frac{1}{T} = \frac{1}{2 \pi} \sqrt{\frac{g}{l}} .\]
+
+
+\begin{center}\begin{tikzpicture}[>=stealth,line width=.6pt]
+
+\draw(-.36,2.97)--(.36,2.97);
+\foreach \x in {-.33,-.24,...,.33}{\draw(\x,2.97)--++(.14,.14);}
+\draw(0,2.97)--(.14,0) node[midway,left] {$l$};
+\draw(0,2.97)--(.91,.11);
+\filldraw[fill=orange!45,draw=orange!85!black] (.14,0)circle(.12) (.91,.11)circle(.12);
+\draw[->](.14,0)--(2.01,.26) node[midway,below left] {$x$};
+\draw[->,thick](.91,.11)--(.67,.87)node[above left]{$\vec T$};
+\draw[->,thick](.88,.11)--(.88,-.65)node[below left]{$\vec F_{\text{э}}$};
+\draw[->,thick](.94,.11)--(.94,-.91)node[below right]{$m\vec g$};
+\fill(.91,.11)circle(.035);
+
+\end{tikzpicture}\end{center}
+
+Если шарик зарядить, то на него со стороны заряженной пластины будет действовать электрическая сила, направленная вертикально вниз, так как пластина имеет положительный заряд, а шарик отрицательный.
+Маятник совершает малые колебания, которые являются гармоническими. Потому равнодействующая сила пропорциональна смещению $\,\text{х},$ то есть $F_x= - kx,$ и имеет период колебаний, который находится по формуле $T=2 \pi \sqrt{\frac{m}{k}} ,$ где k  — коэффициент пропорциональности.
+Равнодействующая сила равна $\vec F=\vec F_{\,\text{э}} + m\vec{g} + \vec{T},$ ее проекция на ось Ох $F_x= - ( F_{\,\text{э}} + mg ) \cdot \sin \alpha .$
+Для малых колебаний можно считать, что $\sin \alpha \approx \frac{x}{l} .$ Тогда 
+
+\[F_x= - ( F_{\,\text{э}} + mg ) \cdot \frac{x}{l} = - \frac{mg + F_{\,\text{э}}}{l} x.\]
+
+Следовательно, коэффициент пропорциональности $k= \frac{F_{\,\text{э}} + mg}{l} .$ В этом случае период колебаний равен
+
+$T=2 \pi \sqrt{\frac{ml}{mg + F_{\,\text{э}}}} ,$ а частота 
+
+$v = \frac{1}{2 \pi} \sqrt{\frac{mg + F_{\,\text{э}}}{ml}} = \frac{1}{2 \pi} \sqrt{\frac{g}{l} + \frac{F_{\,\text{э}}}{ml}} .$
+
+Сравнивая частоту колебаний в обоих случаях, делаем вывод, что она увеличилась.
+
+Ответ: увеличилась.
+}
+
+\end{document}

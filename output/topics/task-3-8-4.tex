@@ -1,0 +1,67 @@
+% !TEX root = task-3-8-4.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{3.8.4}{Скорость направленного движения зарядов}
+
+
+% Source sdamgia-6931: https://phys-ege.sdamgia.ru/problem?id=6931
+\BankTask{sdamgia-6931}{
+Пучок медленных электронов массой $m$ с зарядом $e$ разгоняется в электронно-лучевой трубке, проходя большую ускоряющую разность потенциалов $U$. Концентрация электронов в пучке после ускорения равна $n$, площадь поперечного сечения пучка $S$. Установите соответствие между физическими величинами и формулами, по которым их можно определить.\par
+
+\begin{center}\begin{minipage}[t]{.47\linewidth}\textbf{Физическая Величина}\par\smallskip А) скорость электронов в пучке после ускорения\par
+Б) сила тока в пучке после ускорения\end{minipage}\hfill\begin{minipage}[t]{.47\linewidth}\textbf{Формула}\par\smallskip $1$) $\sqrt{\frac{ eU}{ 2m }}$\par
+$2$) $\sqrt{\frac{ 2eU}{ m }}$\par
+$3$) $enS \sqrt{\frac{ 2eU}{ m }}$\par
+$4$) $enS \sqrt{\frac{ eU}{ 2m }}$\end{minipage}\end{center}
+\par
+\begin{center}\small\setlength{\tabcolsep}{3pt}\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|}\hline
+А & Б\\\hline
+ & \\\hline
+\end{tabular}\end{center}\par
+}{
+\smallskip\noindent\textbf{Решение}\par
+При ускорении в электрическом поле электроны приобретают энергию $eU.$ Таким образом, приравнивая кинетическую энергию электронов и энергию, полученную от поля можем найти скорость:\par
+\[\frac{ m v ^2 }{ 2 } =eU.\]
+$v = \sqrt{\frac{ 2eU}{ m }}$ — получили формулу под номером $2$.\par
+Сила тока может быть вычислена по формуле: $I= \frac{ \Delta q}{ \Delta t } .$ Учтем, что $\Delta q=eN=eS\Delta ln,$ где $N$ — число частиц, $\Delta l$ — малое перемещение электронов за малый интервал времени.\par
+Тогда: $I= \frac{ eSn\Delta l}{ \Delta t } =enS v =enS \sqrt{\frac{ 2eU}{ m }}$ — получили формулу под номером $3$.\par
+Ответ: $23$.\par
+}
+
+\end{document}

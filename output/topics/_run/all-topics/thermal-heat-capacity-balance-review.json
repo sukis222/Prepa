@@ -1,0 +1,107 @@
+{
+  "approved": true,
+  "reviewed_sha256": "a5ed54498faf733efa090f4bb717114dde09140e2399792d1ef7e10aae01220a",
+  "scope": "All20 conditions and published solutions read; formulas, arithmetic and units independently checked. Original graph1003 and original formula SVG renderings25351-7/8 inspected. No blocking discrepancies.",
+  "tasks": [
+    {
+      "id": "sdamgia-1004",
+      "approved": true,
+      "reason": "Physical model, formula and numerical answer verified against saved published transcription."
+    },
+    {
+      "id": "sdamgia-1109",
+      "approved": true,
+      "reason": "Physical model, formula and numerical answer verified against saved published transcription."
+    },
+    {
+      "id": "sdamgia-6231",
+      "approved": true,
+      "reason": "Physical model, formula and numerical answer verified against saved published transcription."
+    },
+    {
+      "id": "sdamgia-1003",
+      "approved": true,
+      "reason": "Physical model, formula and numerical answer verified against saved published transcription."
+    },
+    {
+      "id": "sdamgia-25242",
+      "approved": true,
+      "reason": "Physical model, formula and numerical answer verified against saved published transcription."
+    },
+    {
+      "id": "sdamgia-10956",
+      "approved": true,
+      "reason": "Physical model, formula and numerical answer verified against saved published transcription."
+    },
+    {
+      "id": "sdamgia-35142",
+      "approved": true,
+      "reason": "Physical model, formula and numerical answer verified against saved published transcription."
+    },
+    {
+      "id": "sdamgia-3757",
+      "approved": true,
+      "reason": "Physical model, formula and numerical answer verified against saved published transcription."
+    },
+    {
+      "id": "sdamgia-7059",
+      "approved": true,
+      "reason": "Physical model, formula and numerical answer verified against saved published transcription."
+    },
+    {
+      "id": "sdamgia-19745",
+      "approved": true,
+      "reason": "Physical model, formula and numerical answer verified against saved published transcription."
+    },
+    {
+      "id": "sdamgia-12859",
+      "approved": true,
+      "reason": "Physical model, formula and numerical answer verified against saved published transcription."
+    },
+    {
+      "id": "sdamgia-19663",
+      "approved": true,
+      "reason": "Physical model, formula and numerical answer verified against saved published transcription."
+    },
+    {
+      "id": "sdamgia-25242",
+      "approved": true,
+      "reason": "Physical model, formula and numerical answer verified against saved published transcription."
+    },
+    {
+      "id": "sdamgia-3449",
+      "approved": true,
+      "reason": "Physical model, formula and numerical answer verified against saved published transcription."
+    },
+    {
+      "id": "sdamgia-33038",
+      "approved": true,
+      "reason": "Physical model, formula and numerical answer verified against saved published transcription."
+    },
+    {
+      "id": "sdamgia-3805",
+      "approved": true,
+      "reason": "Physical model, formula and numerical answer verified against saved published transcription."
+    },
+    {
+      "id": "sdamgia-9290",
+      "approved": true,
+      "reason": "Physical model, formula and numerical answer verified against saved published transcription."
+    },
+    {
+      "id": "sdamgia-25351",
+      "approved": true,
+      "reason": "Physical model, formula and numerical answer verified against saved published transcription."
+    },
+    {
+      "id": "sdamgia-10963",
+      "approved": true,
+      "reason": "Physical model, formula and numerical answer verified against saved published transcription."
+    },
+    {
+      "id": "sdamgia-43507",
+      "approved": true,
+      "reason": "Physical model, formula and numerical answer verified against saved published transcription."
+    }
+  ]
+}

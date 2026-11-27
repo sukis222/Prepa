@@ -1,0 +1,87 @@
+% !TEX root = task-1-16-3.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{1.16.3}{Подвижный блок}
+
+
+% Source 41585: https://phys-ege.sdamgia.ru/problem?id=41585
+\BankTask{41585}{
+\begin{center}\begin{tikzpicture}[task graph,>=stealth]
+\draw(0,0)--(6.4,0);\foreach \x in {.2,.4,...,6.4}{\draw(\x,0)--++(-.12,-.12);}
+\draw(1.2,0)rectangle(2.7,2.8);\node at(1.95,1.8){$M$};
+\draw[->](1.2,1.3)--(.1,1.3)node[above]{$\vec F$};
+\draw(2.7,1.3)--(3.1,1.3);\draw(3.1,1.3)circle(.4);\fill(3.1,1.3)circle(1pt);
+\draw(6.2,1.7)--(3.1,1.7)arc(90:270:.4)--(4.8,.9);
+\draw(4.8,0)rectangle(6,1.2);\node at(5.4,.6){$m$};
+\draw(6.2,.9)--(6.2,2.8);\foreach \y in {1,1.2,...,2.8}{\draw(6.2,\y)--++(.12,.12);}
+\end{tikzpicture}\end{center}Брусок массой $M$  =  $2\,\text{кг}$ соединен с лёгким блоком (см. рисунок), через него переброшена лёгкая нерастяжимая нить, один конец которой привязан к стене, а к другому прикреплено тело массой $m$  =  $0{,}75\,\text{кг}$. На брусок действует сила F  =  $10$ $H$. Определите ускорение бруска. Свободные куски нити горизонтальны и лежат в одной вертикальной плоскости, тела двигаются вдоль одной прямой. Массой блока и нити, а также трением пренебречь.
+Обоснуйте применимость законов, используемых для решения задачи.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Обоснование.
+Рассмотрим движение тел в системе отсчета, связанной с Землей, которую в данных условиях можно считать инерциальной системой отсчета.
+Брусок и тело движутся поступательно, поэтому их можно описывать моделью материальной точки.
+Нить невесома, блок идеален (отсутствует трение, массой пренебрегаем), поэтому силы натяжения нити равны $T_1=T_2=T.$
+В инерциальной системе отсчета для материальных точек можно применять законы Ньютона.
+Так как нить нерастяжима, перемещение тела в $2$ раза больше перемещения бруска, то ускорения бруска и тела кинематически связаны соотношением $a_1=2a_2.$
+Перейдем к решению. 
+\begin{center}\begin{tikzpicture}[task graph,>=stealth]\draw(-1,0)--(6.2,0);\draw[fill=gray!10](0,0)rectangle(1.5,2.8);\node at(.6,.7){$M$};\draw(1.5,1.35)--(2.1,1.35);\draw(2.1,1.35)circle(.4);\draw(2.1,1.75)--(5.8,1.75);\draw(2.1,.95)--(4.3,.95);\draw[fill=gray!15](4.3,0)rectangle(5.2,.95);\node at(4.75,.5){$m$};\draw(5.8,.65)--(5.8,2.5);\foreach \yy in {.75,.95,...,2.45}{\draw(5.8,\yy)--++(.17,-.17);}\foreach \xx in {-.8,-.3,...,5.7}{\draw(\xx,0)--++(.3,-.13);}\draw[->,thick](0,1.35)--(-1.1,1.35)node[above left]{$\vec F$};\draw[->,thick](2.1,1.35)--(.9,1.35)node[above left]{$\vec T_3$};\draw[->,thick](2.1,1.75)--(3.4,1.75)node[above]{$\vec T_2$};\draw[->,thick](2.1,.95)--(3.4,.95)node[below]{$\vec T_2$};\draw[->,thick](4.3,.95)--(3.5,.95)node[above]{$\vec T_1$};\draw[->,thick](1.5,.25)--(2.8,.25)node[below]{$\vec T_4$};\draw[->,thick](.8,3.2)--(-.3,3.2)node[above]{$\vec a_2$};\draw[->,thick](5.1,-.45)--(4.2,-.45)node[below]{$\vec a_1$};\end{tikzpicture}\end{center}
+Для блока по третьему закону Ньютона силы взаимодействия блока и бруска $T_3=T_4.$ Так как блок невесомый, то $T_4=2T_2=2T.$
+Применим второй закон Ньютона на бруска и тела:
+
+$\vec F + \vec T_4=M\vec a_2;$
+$\vec T_1=m\vec a_1.$
+
+В проекции на горизонтальную ось имеем:
+
+$F - 2T=Ma_2;$
+$T=2ma_2.$
+
+При объединении получаем:
+
+\[F - 4ma_2=Ma_2,\]
+
+откуда находим ускорение бруска:
+
+\[a_2= \frac{F}{M + 4m} = \frac{10}{2 + 4 \cdot 0{,}75} =2 \,\text{м/с} ^2 .\]
+
+Ответ: $2\,\text{м/с}^{2}$.
+}
+
+\end{document}

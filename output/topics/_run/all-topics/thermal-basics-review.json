@@ -1,0 +1,243 @@
+{
+  "approved": true,
+  "reviewed_sha256": "fb7baa003846c87b2bb9167b275cc443836f5eccdf032089a250989870cf2f1a",
+  "tasks": [
+    {
+      "id": "sdamgia-806",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-3209",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-3361",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-936",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-3769",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-30494",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-7788",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-901",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-24119",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-19683",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-805",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-3286",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-3287",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-3296",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-3560",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-4485",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-7621",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-4555",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-12857",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-23295",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-810",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-827",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-828",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-836",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-837",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-3205",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-3207",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-3208",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-3211",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-3299",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-3789",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-4343",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-7695",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-3464",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-3543",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-4118",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-801",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-808",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-3204",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-3210",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-3322",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-5719",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-9735",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    },
+    {
+      "id": "sdamgia-9757",
+      "approved": true,
+      "reason": "Physics, equations, numeric answer and source condition checked."
+    }
+  ],
+  "original_figures_checked": [
+    "23295 graph: 77/427/777 C, 311625/623250/934875 m2/s2",
+    "3322 thermometer: 22 C, absolute295 K"
+  ],
+  "closed_findings": [
+    "12857 radical restored from original SVG",
+    "901 kg/mol and 4decimal precision retained",
+    "12857 mm/s and integer rounding retained",
+    "23295 g/mol and integer rounding retained",
+    "9735 eV and 0.01 precision retained"
+  ],
+  "source_caveats": [
+    "24119 published mass-variable winter label and oxygen word retained, calculations and final1.09e26 nitrogen molecules correct",
+    "Some published prose generalizes solids to crystals; answer choices remain correct"
+  ],
+  "final_revision_note": "Paragraph/HTML superscript/unit technical changes and explicit winter M index source typo correction verified; physics unchanged.",
+  "final_layout_note": "Thermometer3322 frame lower border shifted down0.3 only; scale/readout22C unchanged."
+}

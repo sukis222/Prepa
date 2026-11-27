@@ -1,0 +1,465 @@
+{
+  "topics": 8,
+  "tasks": 80,
+  "unique_source_ids": 80,
+  "tex_files": 16,
+  "pages": 45,
+  "repeat_export_identical": true,
+  "pdfs_published": false,
+  "editor_open_checked": false,
+  "compiler_recipe": "Tectonic (project)",
+  "tex_sha256": {
+    "task-1-15-1.tex": "25b3ea5b59f61159256db3dab6cca6e577f3e565cef7e3e979eae37fca0b3d27",
+    "task-1-15-2.tex": "cd2b7eb1291c1af4816ae074274d63ec819ec05023abd8bc861b2d1c73cba9c0",
+    "task-1-15-3.tex": "d1da70f426ca321addd4be2aa0d6ef63063711ac1349d241e7575e762f8ee0ba",
+    "task-1-15-4.tex": "7a00746e759c6e077cf00d3ee146d3a92b1819cce1e47282dc62faae1d87d0bc",
+    "task-1-15-5.tex": "fe9f9c9fb38fa16ed69a01ed7378fb6b844261e03bd14b003ce26b7048888365",
+    "task-1-15-6.tex": "e8db2d39e86bd5669454d2fccd11ccfd1972ca8c5fc6c13db6ea02d76620f7f6",
+    "task-1-15-7.tex": "7a37339d22061a171483e46fce8ef69464e3d490bdd873f1eac731abee7b69e5",
+    "task-1-15-8.tex": "cea961b3dcdf71a462ac2e2c1300e172ced0dddd20c3aac4451a4d7f4b3bd7ce",
+    "tutor-1-15-1.tex": "fa7a0e1d84c1b2831ce85cc2288f8440b0fb3dfea0d04b4de743543f862eb228",
+    "tutor-1-15-2.tex": "1e85ca7acb2d447d36a25e4d2d45e035365aeb52e08ccbb8a0cc3b8d5e57af09",
+    "tutor-1-15-3.tex": "5b5616b601c8e72bae036c9c8fe19cc5f5c522a1d1ddbdbc5a9d245cb2ad3d51",
+    "tutor-1-15-4.tex": "fc012b62c8243e55a22da2974df35860296bb08e9f4e37ead7e7b626605f9797",
+    "tutor-1-15-5.tex": "9072682cceab0a5c5706d9032e27da4469e6b175904b076f3c5e11c94923b42a",
+    "tutor-1-15-6.tex": "f1f954b47bd63ba4f8e606e20fb6459c6374448861d000ba0d95b48f375ec159",
+    "tutor-1-15-7.tex": "7122734ecfa2ced3a50e9a5178e73f8303f0c6d5f434aac495a910164e16fa2e",
+    "tutor-1-15-8.tex": "0d95f85bc84df0966dfb3485984bfed0216d0289ebe2bf48bcb9ad40343979cd"
+  },
+  "sources": [
+    {
+      "id": "sdamgia-501",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=501",
+      "sha256": "33a71a104197bf50a273dcbdbcde240e64f9d4cce9232ef41b7159bebb8a4d44"
+    },
+    {
+      "id": "sdamgia-529",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=529",
+      "sha256": "bb002cabfe1b1eea98f71d2e81d6c1458bc217c762cea3ed022629dee8327f43"
+    },
+    {
+      "id": "sdamgia-6335",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=6335",
+      "sha256": "423c6f5b2acac2b518f5e2bc6335332f374b98d0be5100c1c696988ae75a6bf4"
+    },
+    {
+      "id": "sdamgia-7344",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=7344",
+      "sha256": "2ae9b575319cb72579412b30723bd595cda8c9fff28cff32a5b1f9712fd3f58d"
+    },
+    {
+      "id": "sdamgia-9140",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=9140",
+      "sha256": "a2c358439538d7a7f319f4d1eeca2e8f2ec5368e7cdd25febea1d41d6972169a"
+    },
+    {
+      "id": "sdamgia-29785",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=29785",
+      "sha256": "672ea8eddc384aa9d857cc426fde5862d49921eaf37fb1cacbbf3c9cd7b70308"
+    },
+    {
+      "id": "sdamgia-37557",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=37557",
+      "sha256": "428c898601add54f99da3fe997dd015d9015a6646e2cae05a5d233c5b7929064"
+    },
+    {
+      "id": "sdamgia-3260",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=3260",
+      "sha256": "6a46193c670d8077c6b175a7acc7581716ca89892d4c2ef033d01fb11b841bf8"
+    },
+    {
+      "id": "sdamgia-4430",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=4430",
+      "sha256": "b16843cf014d9fd4fde39543bb29994788626745873b1bf0c459961e5fb9b680"
+    },
+    {
+      "id": "sdamgia-10655",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=10655",
+      "sha256": "79d84f4f8dd7060ad2a75ef5bb8c681d17c28f2dc1ecc98ae45a955060943471"
+    },
+    {
+      "id": "sdamgia-545",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=545",
+      "sha256": "bb21bfb55058eba3b9f1a5bb074c331a73f91d4daa8c318c0a1b3b5a8cc2e65e"
+    },
+    {
+      "id": "sdamgia-525",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=525",
+      "sha256": "93e424d5d2e89583369f00c01abfac3a0d29be97dffd58fb913dcefb90d82e5a"
+    },
+    {
+      "id": "sdamgia-6812",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=6812",
+      "sha256": "1fe88d6b4aa659db26ab053f0999d6e04263b417d844d2b2217e8b7f20231c44"
+    },
+    {
+      "id": "sdamgia-10308",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=10308",
+      "sha256": "4129d5e501d4c6253b9f4a2c0e8bdd820b91e6dea40b663b6fc6906f55dc067b"
+    },
+    {
+      "id": "sdamgia-27081",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=27081",
+      "sha256": "8c1363ae14ad53b547ef8d3ebea5074f0ce62497b0ccbc259abdf1bd2ad357e2"
+    },
+    {
+      "id": "sdamgia-23290",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=23290",
+      "sha256": "1ac93bd508f3dc06b8eb7f4f76c1f5df307a2ff4c7bcc2db61f2412631ea9534"
+    },
+    {
+      "id": "sdamgia-32749",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=32749",
+      "sha256": "0fe8c71a4e0ce8fc8906cec8a8bfe32e7359b4713497628f33db745715b9b352"
+    },
+    {
+      "id": "sdamgia-7280",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=7280",
+      "sha256": "cea144b51ba04d308eed7e1da6a7a2ed2ec21e98097e01429f0804660621d181"
+    },
+    {
+      "id": "sdamgia-29128",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=29128",
+      "sha256": "c3980acc320c0f0a6244aaf579098132cc9d7c10a7fceb4228715639e0c9b936"
+    },
+    {
+      "id": "sdamgia-7718",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=7718",
+      "sha256": "f8893d9a94f4791c275666790240d1c08af6e3f162c54b72ac4ffa6460ea57e3"
+    },
+    {
+      "id": "sdamgia-519",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=519",
+      "sha256": "2d9d44d5aeae73ff95f4d69e8b2f9ef8c2c3a4369ca7069306a3007e6a71136d"
+    },
+    {
+      "id": "sdamgia-520",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=520",
+      "sha256": "9b98236cf0c4dfbcf2efc45cb91d3b4f0bc23eb8db0d00634b4133f67d5e4c1f"
+    },
+    {
+      "id": "sdamgia-522",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=522",
+      "sha256": "99c497f74976d295b737d7a7fb140fe8c45edeb1083459d74f1e7cdebd201b7b"
+    },
+    {
+      "id": "sdamgia-39916",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=39916",
+      "sha256": "0ca42de13bbf6b6657e840b7a15e381bf330cc1a93739d108f07bb5206c0b5b2"
+    },
+    {
+      "id": "sdamgia-29022",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=29022",
+      "sha256": "ddb9004adc2cbd680328cdd01395c5b1d7f92710f5a35e2737010dc7c847f398"
+    },
+    {
+      "id": "sdamgia-538",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=538",
+      "sha256": "781e7229e992a348d7ed1dcbe631fe4a64b5a453f6ff63d11e8944c60a4a151e"
+    },
+    {
+      "id": "sdamgia-36749",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=36749",
+      "sha256": "53368ded8888a7df9751f5905d0404c82c8389f5f6b79c0f59d5ec5a2ba21c9a"
+    },
+    {
+      "id": "sdamgia-2941",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=2941",
+      "sha256": "cad4cc80509b53028a5afcdc0c33e41957f6b0eb8d428088a65aad346de9881c"
+    },
+    {
+      "id": "sdamgia-2945",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=2945",
+      "sha256": "85fd7edecb454082da94aa6d86c963843a0bab2b076e71529437ba44cfde5311"
+    },
+    {
+      "id": "sdamgia-42048",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=42048",
+      "sha256": "2b8e44662750910056492bb2907efb291fa62f3c840e8cff31eaacbbefbafa0e"
+    },
+    {
+      "id": "sdamgia-527",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=527",
+      "sha256": "7d43229b17bd3c6a3c6938953920aae8535d02c8560dc63c02047f4335446634"
+    },
+    {
+      "id": "sdamgia-536",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=536",
+      "sha256": "d7c87d084e7d0c437f6d29a529d096e201f43c6661365ff03ff7aba9ee1c8b3c"
+    },
+    {
+      "id": "sdamgia-736",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=736",
+      "sha256": "13e04e2402d658325d23f6cde981e9ace09c8446b96e9b3165abc576c8734e8d"
+    },
+    {
+      "id": "sdamgia-3787",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=3787",
+      "sha256": "c6e19d68a04a575c7f10001d82a6514b0d519ec8c285e8097016abb54d25cd40"
+    },
+    {
+      "id": "sdamgia-4763",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=4763",
+      "sha256": "b8bc01aa711d33e018be1f96d02a046fabb10a10bc010e8ec44529fcfc4b1381"
+    },
+    {
+      "id": "sdamgia-9016",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=9016",
+      "sha256": "34b95fab98db3a61cdb7c7a314f4d23a3c60cb9531ef9f39a573cd9efd8b0e5c"
+    },
+    {
+      "id": "sdamgia-3582",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=3582",
+      "sha256": "f496b25dab65dd8fc627ede46ce7d8b08705c91d254bbb8bb0684ba9748fc987"
+    },
+    {
+      "id": "sdamgia-9517",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=9517",
+      "sha256": "2cad22a2f5de36b5bcc2f5519a5d3fb1a036f66853361ac8e0551eeae3a378b1"
+    },
+    {
+      "id": "sdamgia-3413",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=3413",
+      "sha256": "c5338be6ad063f254e15d80f9ffdb64fff97927aed2bab6f52a0336f4a6e35a0"
+    },
+    {
+      "id": "sdamgia-51377",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=51377",
+      "sha256": "1479139cb438791ec6ac62ebdc81269872e428cc0286b1af4296d7c90e316713"
+    },
+    {
+      "id": "sdamgia-528",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=528",
+      "sha256": "201de19d99af9916027a7c2196d4baef4f204d9c7f89b4fc01afa9a84c4ff257"
+    },
+    {
+      "id": "sdamgia-4483",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=4483",
+      "sha256": "72eea4f375a153f5f4f1ea5a6aee138f7ac1f4caa96d65edd4057e835e321035"
+    },
+    {
+      "id": "sdamgia-9303",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=9303",
+      "sha256": "3dde725d732c259642023f79eb1b024996ceaeecba0c8220396f2a0b40a26da0"
+    },
+    {
+      "id": "sdamgia-46763",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=46763",
+      "sha256": "c09e78bfa4a023a86d64b2ba266c1d8aebfdac4e9e74485521c0f7bd6ed325c9"
+    },
+    {
+      "id": "sdamgia-39942",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=39942",
+      "sha256": "ff997e4470661ce7ba2f98f15e06754fc376c4b0a44c61c708647139a1b7e420"
+    },
+    {
+      "id": "sdamgia-50706",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=50706",
+      "sha256": "9bc5bc6553a22105d8e302b12d890fae7bee25d5a9d71485b1676b5e32ee48f0"
+    },
+    {
+      "id": "sdamgia-3598",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=3598",
+      "sha256": "bd4adbbcd9726ee2e871effebadfeccabebbe565daf93a72f03d6633acdab8fc"
+    },
+    {
+      "id": "sdamgia-3303",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=3303",
+      "sha256": "da85d9206df753a6769e3d9d5034f0bb0e4035303ae2a8afabface2e9ee54f37"
+    },
+    {
+      "id": "sdamgia-4207",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=4207",
+      "sha256": "3ad7eff6898e103ff92e6d062fa168246f11f756708e4b0032e7c95feff43a19"
+    },
+    {
+      "id": "sdamgia-3410",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=3410",
+      "sha256": "bc461206362e2968e6cb7a5400c76e057ca6012a701bab52bed1e5035ea9c970"
+    },
+    {
+      "id": "sdamgia-415",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=415",
+      "sha256": "20dd9755a4dddd1cc327f4fd5bdff97bce2781351691cd9a5052057e15727e1f"
+    },
+    {
+      "id": "sdamgia-537",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=537",
+      "sha256": "9b96b60169e931e92f9e17ffd353a89a2d10dd80cc836085a48fa64d5c8efb2b"
+    },
+    {
+      "id": "sdamgia-41158",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=41158",
+      "sha256": "a882da14cfe984ba34928afb79913eece94b0ceee70c34da2b999e1b83333ae2"
+    },
+    {
+      "id": "sdamgia-29977",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=29977",
+      "sha256": "cbe0e247e835ad8a6af709972e744ccadb7b602d8339e42dd877ea11640e0843"
+    },
+    {
+      "id": "sdamgia-31877",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=31877",
+      "sha256": "dfd503ec53ff03601a9e25a88be2010c3dc209896aa2c4d10de7c7aeca5fd25a"
+    },
+    {
+      "id": "sdamgia-30484",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=30484",
+      "sha256": "156cca9c84de9b3b22e786d2b0c293812bd64f163ca08f1e8f9a20a21f301174"
+    },
+    {
+      "id": "sdamgia-51009",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=51009",
+      "sha256": "9974ff6f819a401cba146666e4a60241f9d1d216dc87ce1b981e54d720d6d7ac"
+    },
+    {
+      "id": "sdamgia-29461",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=29461",
+      "sha256": "c4b202102b9f8ec6a57bd594a160a055a6d3e3155757afe3f1fb654a5e3d8d4c"
+    },
+    {
+      "id": "sdamgia-4745",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=4745",
+      "sha256": "1ff1a50d696f5a00591c9f854365881258fb4fb118dd76f72e0b21ee28af5fb3"
+    },
+    {
+      "id": "sdamgia-10234",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=10234",
+      "sha256": "8edbeb9db7ea31353270a5cc93b7fb85535618f7727eccf4f81cf6d6f880adc3"
+    },
+    {
+      "id": "sdamgia-410",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=410",
+      "sha256": "b3ba2af2e05cd094f76138f17beaf71e322c28258f3c4ebf2fdb39eca5aa030e"
+    },
+    {
+      "id": "sdamgia-505",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=505",
+      "sha256": "f6483391031629d21701417b2c47b816563e80eacd5890ec2364178397735f70"
+    },
+    {
+      "id": "sdamgia-521",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=521",
+      "sha256": "a48d025b95293d77932dac85268e12225ebe8c00fc559c352802e3dc5439123b"
+    },
+    {
+      "id": "sdamgia-744",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=744",
+      "sha256": "cfc6b3e7c557e4e2c53bcedd94ad0de2b3ba645794ea7f4fc8bb5fe9556eb2d3"
+    },
+    {
+      "id": "sdamgia-4623",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=4623",
+      "sha256": "015b5276f8af9e8eef9fb1c128008ab6d0aa98b9a3986a0824a738c278075531"
+    },
+    {
+      "id": "sdamgia-7723",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=7723",
+      "sha256": "ee0bf7193b1d4433516b5d72b43739279fd35badae5b19f799e368c81a20228b"
+    },
+    {
+      "id": "sdamgia-50705",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=50705",
+      "sha256": "69019c7af857eedf525df158d0e3f7e91acb71eb495b875775ba597346b21e0c"
+    },
+    {
+      "id": "sdamgia-5629",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=5629",
+      "sha256": "75b41e7bd371d5f62945835b25154bdaca4b5476b139a9d9e193ff678e5ece70"
+    },
+    {
+      "id": "sdamgia-7642",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=7642",
+      "sha256": "74218f3f4e1ffa61f1e81a2ca3dd645ac7bec6533218091dd89d68042d396965"
+    },
+    {
+      "id": "sdamgia-4216",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=4216",
+      "sha256": "1cb03c83154ea6f263e98e42fbf2189c62edfa18ab7ce853ff50cd7c87a309a7"
+    },
+    {
+      "id": "sdamgia-7175",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=7175",
+      "sha256": "374b5b9bcd233209960dd3e3bdfcdfdaeb0a3476cc662900473bc28aa1aa8371"
+    },
+    {
+      "id": "sdamgia-9495",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=9495",
+      "sha256": "ff2b009770d1f18fb032544d96cc81ac9f26440f529b8875ec070e4ec44f6a00"
+    },
+    {
+      "id": "sdamgia-9730",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=9730",
+      "sha256": "cd666085cbd40b1eef2a7152316ba6351494164edea56b8ea8a02df0929071f1"
+    },
+    {
+      "id": "sdamgia-51008",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=51008",
+      "sha256": "1adee9221d4431e58742656bd3f2b6fa45ca428c4b3ad9da08efe3d43f5c6e1c"
+    },
+    {
+      "id": "sdamgia-11260",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=11260",
+      "sha256": "a092d12f5c63624e13ada76a704c736af84ac960c70458ec76535e2b7b3e8b57"
+    },
+    {
+      "id": "sdamgia-7780",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=7780",
+      "sha256": "9d65f9255b92e2006a9e444684de47aef954966df7e10a0ae3dad9cb54ddb84b"
+    },
+    {
+      "id": "sdamgia-6917",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=6917",
+      "sha256": "7fd1153ba717e7c1d9db6943747e20cdbd655218ec0ce94912e427cc95e90320"
+    },
+    {
+      "id": "sdamgia-2946",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=2946",
+      "sha256": "d3c39ae00ef8a930b4f87b71c468cb0c9d2192f1369be69e5bae0f3dd2951137"
+    },
+    {
+      "id": "sdamgia-10238",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=10238",
+      "sha256": "e2a98fe866f1ffade1363ae5bb539ff007adffd49c80efe7ff03dc2cc2cca77d"
+    },
+    {
+      "id": "sdamgia-37576",
+      "url": "https://phys-ege.sdamgia.ru/problem?id=37576",
+      "sha256": "98a2eba2a8f969756175f74c4eaf6fe45706b410eba0387173b14b721b8a7da0"
+    }
+  ],
+  "difficulty": {
+    "1.15.1": {
+      "part_1": 7,
+      "part_2": 3
+    },
+    "1.15.2": {
+      "part_1": 8,
+      "part_2": 2
+    },
+    "1.15.3": {
+      "part_1": 7,
+      "part_2": 3
+    },
+    "1.15.4": {
+      "part_1": 7,
+      "part_2": 3
+    },
+    "1.15.5": {
+      "part_1": 7,
+      "part_2": 3
+    },
+    "1.15.6": {
+      "part_1": 7,
+      "part_2": 3
+    },
+    "1.15.7": {
+      "part_1": 7,
+      "part_2": 3
+    },
+    "1.15.8": {
+      "part_1": 7,
+      "part_2": 3
+    }
+  }
+}

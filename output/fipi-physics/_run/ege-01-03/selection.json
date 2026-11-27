@@ -1,0 +1,128 @@
+[
+  {
+    "exam_number": 1,
+    "source_id": "3CF615",
+    "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=3CF615",
+    "diversity_reason": "Алгебраический закон координаты: определить ускорение по коэффициенту при квадрате времени.",
+    "mapping": "content reviewed against official EGE-2027 specification; not a bank field"
+  },
+  {
+    "exam_number": 1,
+    "source_id": "B51AF2",
+    "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B51AF2",
+    "diversity_reason": "Скорость по наклону участка графика координаты, включая отрицательные координаты.",
+    "mapping": "content reviewed against official EGE-2027 specification; not a bank field"
+  },
+  {
+    "exam_number": 1,
+    "source_id": "008243",
+    "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=008243",
+    "diversity_reason": "Путь как площадь под графиком скорости: прямоугольник и трапеция.",
+    "mapping": "content reviewed against official EGE-2027 specification; not a bank field"
+  },
+  {
+    "exam_number": 1,
+    "source_id": "081272",
+    "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=081272",
+    "diversity_reason": "Безразмерное сравнение модулей ускорения по двум наклонам vₓ(t).",
+    "mapping": "content reviewed against official EGE-2027 specification; not a bank field"
+  },
+  {
+    "exam_number": 1,
+    "source_id": "38F045",
+    "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=38F045",
+    "diversity_reason": "График расстояния между телами и сложение скоростей при встречном движении; перевод км/мин в м/с.",
+    "mapping": "content reviewed against official EGE-2027 specification; not a bank field"
+  },
+  {
+    "exam_number": 1,
+    "source_id": "B5F7C7",
+    "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B5F7C7",
+    "diversity_reason": "Время равноускоренного движения через начальную и конечную скорости и путь, без графика.",
+    "mapping": "content reviewed against official EGE-2027 specification; not a bank field"
+  },
+  {
+    "exam_number": 2,
+    "source_id": "19F564",
+    "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=19F564",
+    "diversity_reason": "Второй закон Ньютона: восстановление силы по первой паре массы и ускорения, затем ускорение другой массы.",
+    "mapping": "content reviewed against official EGE-2027 specification; not a bank field"
+  },
+  {
+    "exam_number": 2,
+    "source_id": "AC8852",
+    "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=AC8852",
+    "diversity_reason": "Тяготение: переход от высоты над поверхностью к расстоянию от центра и сравнение сил.",
+    "mapping": "content reviewed against official EGE-2027 specification; not a bank field"
+  },
+  {
+    "exam_number": 2,
+    "source_id": "909F5c",
+    "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=909F5c",
+    "diversity_reason": "График силы упругости: чтение масштаба оси с множителем 10^-2 и определение жёсткости.",
+    "mapping": "content reviewed against official EGE-2027 specification; not a bank field"
+  },
+  {
+    "exam_number": 2,
+    "source_id": "318091",
+    "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=318091",
+    "diversity_reason": "Сила трения скольжения: определение безразмерного коэффициента по экспериментальной таблице.",
+    "mapping": "content reviewed against official EGE-2027 specification; not a bank field"
+  },
+  {
+    "exam_number": 2,
+    "source_id": "26769F",
+    "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=26769F",
+    "diversity_reason": "Закон Гука: сравнение двух деформаций одной пружины без графика, определение новой силы.",
+    "mapping": "content reviewed against official EGE-2027 specification; not a bank field"
+  },
+  {
+    "exam_number": 2,
+    "source_id": "89A46D",
+    "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=89A46D",
+    "diversity_reason": "Вес груза в ускоренно опускающемся лифте: ускорение по перемещению и времени, затем закон Ньютона и Гука. В исходной карточке отсутствуют коды KES; привязка к линии 2 методическая по содержанию.",
+    "mapping": "content reviewed against official EGE-2027 specification; not a bank field"
+  },
+  {
+    "exam_number": 3,
+    "source_id": "B02B49",
+    "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B02B49",
+    "diversity_reason": "Изменение импульса под действием постоянной сонаправленной силы; прямое применение импульса силы.",
+    "mapping": "content reviewed against official EGE-2027 specification; not a bank field"
+  },
+  {
+    "exam_number": 3,
+    "source_id": "DC8C1F",
+    "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=DC8C1F",
+    "diversity_reason": "Векторное сложение взаимно перпендикулярных импульсов при неупругом столкновении; исходная схема восстановлена в TikZ.",
+    "mapping": "content reviewed against official EGE-2027 specification; not a bank field"
+  },
+  {
+    "exam_number": 3,
+    "source_id": "225EC6",
+    "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=225EC6",
+    "diversity_reason": "Работа силы и равномерность движения: из работы тяги найти силу трения.",
+    "mapping": "content reviewed against official EGE-2027 specification; not a bank field"
+  },
+  {
+    "exam_number": 3,
+    "source_id": "cF941A",
+    "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=cF941A",
+    "diversity_reason": "Вычисление кинетической энергии с переводом массы из граммов в килограммы.",
+    "mapping": "content reviewed against official EGE-2027 specification; not a bank field"
+  },
+  {
+    "exam_number": 3,
+    "source_id": "ADA046",
+    "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=ADA046",
+    "diversity_reason": "Квадратичная зависимость энергии пружины от деформации; вычисление изменения энергии без определения жёсткости.",
+    "mapping": "content reviewed against official EGE-2027 specification; not a bank field"
+  },
+  {
+    "exam_number": 3,
+    "source_id": "E9E545",
+    "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=E9E545",
+    "diversity_reason": "Переход потенциальной энергии в кинетическую с учётом потерь на сопротивление воздуха; найти начальную высоту.",
+    "mapping": "content reviewed against official EGE-2027 specification; not a bank field"
+  }
+]

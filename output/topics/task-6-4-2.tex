@@ -1,0 +1,147 @@
+% !TEX root = task-6-4-2.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{6.4.2}{Спектр поглощения}
+
+
+% Source sdamgia-3161: https://phys-ege.sdamgia.ru/problem?id=3161
+\BankTask{sdamgia-3161}{
+\TaskMatchingColumns{Постулаты Бора}{А) первый\par Б) второй}{Формулировки}{1) переходя из одного состояния в другое, атом излучает (поглощает) половину разности энергий в начальном и конечном состояниях\par 2) переходя из одного состояния в другое, атом излучает (поглощает) квант энергии, равный разности энергий в начальном и конечном состояниях\par 3) атом может находиться только в одном из двух возможных состояний\par 4) атом может находиться только в одном из состояний с определённым значением энергии}\begin{center}\begin{tabular}{|c|c|}\hline А&Б\\\hline &\\\hline\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение}\par
+Первый постулат Бора гласит: «Атомная система может находиться только в особых стационарных, или квантовых, состояниях, каждому из которых соответствует определенная энергия» (А  — $4$). Второй постулат Бора: «Излучение (поглощение) света происходит только при переходе из одного стационарного состояния в другое, при этом излучается (поглощается) квант энергии равный разности энергий в начальном и конечном состояниях» (Б  — $2$).
+
+Ответ: $42$.
+}
+
+% Source sdamgia-10326: https://phys-ege.sdamgia.ru/problem?id=10326
+\BankTask{sdamgia-10326}{
+\TaskMatchingColumns{Физическая величина}{А) Энергия электрона, находящегося в атоме водорода на энергетическом уровне с номером $n$.\par Б) Энергия, которую нужно сообщить электрону в атоме водорода для того, чтобы он перешёл с $n$-го энергетического уровня на $m$-й энергетический уровень.}{Формула}{1) $E_{nm}=13{,}6\,\text{эВ}\left(\frac1{n^2}-\frac1{m^2}\right)$\par 2) $E_{nm}=13{,}6\,\text{эВ}\left(\frac1n-\frac1m\right)$\par 3) $E_n=-\frac{13{,}6\,\text{эВ}}{n^2}$\par 4) $E_n=-\frac{13{,}6\,\text{эВ}}n$}\begin{center}\begin{tabular}{|c|c|}\hline А&Б\\\hline &\\\hline\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение}\par
+Уровни энергии электрона в атоме водорода даются формулой 
+
+\[E_n= \frac{- 13{,}6\,\text{эВ}}{n ^2} ,\]
+
+где $n=1,2,3,\ldots$ Чтобы атом перешел из состояния $E_{n}$ в состояние $E_{m}$ ему надо сообщить энергию 
+
+\[E_{nm}=E_m - E_n=13{,}6\,\text{эВ} ( \frac{1}{n ^2} - \frac{1}{m ^2} ) .\]
+
+Ответ: $31$.
+}
+
+% Source sdamgia-6204: https://phys-ege.sdamgia.ru/problem?id=6204
+\BankTask{sdamgia-6204}{
+В таблице приведены значения энергии для второго и четвертого энергетических уровней атома водорода.
+
+\begin{center}\begin{tabular}{|c|c|}\hline
+Номер уровня&Энергия, $10^{-19}$ Дж\\\hline
+$2$&$-5{,}45$\\\hline
+$4$&$-1{,}36$\\\hline
+\end{tabular}\end{center}
+
+Какой должна быть энергия фотона, при поглощении которого атом переходит со второго уровня на четвертый? (в $10^{-19}$ Дж.)
+}{
+\smallskip\noindent\textbf{Решение}\par
+Для того, чтобы электрон перешел со второго уровня на четвертый под действием фотона, энергия фотона должна быть равна разности энергий четвертого и второго энергетических уровней: $[-1{,}36-(-5{,}45)]\cdot10^{-19}\,\text{Дж}=4{,}09\cdot10^{-19}\,\text{Дж}$.
+
+Ответ: $4{,}09$.
+}
+
+% Source sdamgia-8951: https://phys-ege.sdamgia.ru/problem?id=8951
+\BankTask{sdamgia-8951}{
+Электрон в атоме водорода находится в основном (самом низком, с номером n = $1$) энергетическом состоянии. Атом поглощает фотон с импульсом $6{,}8\cdot10^{-27}$ кг·м/с. Найдите номер энергетического уровня, на который в результате этого перейдет электрон.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Уровни энергии электрона в атоме водорода задаются формулой $E_n=-\frac{13{,}6\,\text{эВ}}{n^2}$, где $n=1,2,3,\ldots$ При поглощении фотона атом переходит из основного состояния $E_1$ в некоторое состояние $E_n.$ Зная импульс фотона, можем найти его энергию:
+
+\[E=p \cdot c ( \,\text{Дж} ) = \frac{p \cdot c}{1{,}6 \cdot 10 ^{ - 19 }} ( \,\text{эВ} ) ,\]
+
+где $c$ — скорость света. Запишем закон сохранения энергии:
+
+\[\frac{p \cdot c}{1{,}6 \cdot 10 ^{ - 19 }} =E_n - E_1=13{,}6 \cdot ( 1 - \frac{1}{n ^2} ) \Rightarrow n ^2 = \frac{1}{1 - \frac{p \cdot c}{1{,}6 \cdot 10 ^{ - 19 } \cdot 13{,}6}} =16.\]
+
+Отсюда находим, что электрон перейдет на уровень с номером $n=4$.
+
+Ответ: $4$.
+}
+
+% Source sdamgia-3811: https://phys-ege.sdamgia.ru/problem?id=3811
+\BankTask{sdamgia-3811}{
+
+\begin{center}\begin{tikzpicture}[book diagram,>=stealth]\draw[task axis,->](0,-.3)--(0,5.2)node[above]{$E$};\draw[thick](0,0)--(3.5,0);\node[left]at(0,0){$ E_0 $};\draw[thick](0,1.1)--(3.5,1.1);\node[left]at(0,1.1){$ E_1 $};\draw[thick](0,2.4)--(3.5,2.4);\node[left]at(0,2.4){$ E_2 $};\draw[thick](0,3.4)--(3.5,3.4);\node[left]at(0,3.4){$ E_3 $};\draw[thick](0,4.1)--(3.5,4.1);\node[left]at(0,4.1){$ E_4 $};\draw[->]( 0.7,0)--(0.7,3.4)node[midway,right]{$ 1 $};\draw[->]( 1.4,0)--(1.4,4.1)node[midway,right]{$ 2 $};\draw[->]( 2.1,2.4)--(2.1,0)node[midway,right]{$ 3 $};\draw[->]( 2.8,1.1)--(2.8,0)node[midway,right]{$ 4 $};\draw[dashed](0,5)--(3.5,5);\node[left]at(0,5){$0$};\end{tikzpicture}\end{center}
+На рисунке изображена упрощённая диаграмма энергетических уровней атома. Нумерованными стрелками отмечены некоторые возможные переходы атома между этими уровнями. \TaskMatchingColumns{Процесс}{А) Поглощение света наибольшей длины волны\par Б) Испускание света наибольшей длины волны}{Стрелка}{1) 1\par 2) 2\par 3) 3\par 4) 4}\begin{center}\begin{tabular}{|c|c|}\hline А&Б\\\hline &\\\hline\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение}\par
+Квант энергии поглощается при переходе на более высокий уровень, излучается при переходе на более низкий. При этом расстояние между уровнями обратно пропорционально длине волны: $\Delta E= \frac{hc}{\lambda} .$ Таким образом, поглощению света наибольшей длины волны соответствует энергетический переход $1$, а излучению света наибольшей длины волны отвечает переход $4$.
+
+Ответ: $14$.
+}
+
+% Source sdamgia-31893: https://phys-ege.sdamgia.ru/problem?id=31893
+\BankTask{sdamgia-31893}{
+\begin{center}\begin{tikzpicture}[book diagram,>=stealth,y=1.3cm]\draw[task axis,->](0,-.3)--(0,5.9)node[above]{$E$};\draw[thick](0,0)--(3.5,0);\node[left]at(0,0){$ -E_0 $};\draw[thick](0,2.6)--(3.5,2.6);\node[left]at(0,2.6){$ -\frac{E_0}{4} $};\draw[thick](0,3.7)--(3.5,3.7);\node[left]at(0,3.7){$ -\frac{E_0}{9} $};\draw[thick](0,4.3)--(3.5,4.3);\node[left]at(0,4.3){$ -\frac{E_0}{16} $};\draw[thick](0,4.8)--(3.5,4.8);\node[left]at(0,4.8){$ -\frac{E_0}{25} $};\draw[->]( 0.7,4.8)--(0.7,0)node[midway,right]{$  $};\draw[->]( 1.5,2.6)--(1.5,4.8)node[midway,right]{$  $};\draw[->]( 2.3,3.7)--(2.3,4.3)node[midway,right]{$  $};\draw[->]( 3.1,3.7)--(3.1,2.6)node[midway,right]{$  $};\draw[dashed](0,5.4)--(3.5,5.4);\node[left]at(0,5.4){$0$};\end{tikzpicture}\end{center}
+На рисунке изображена упрощенная диаграмма нижних энергетических уровней атома водорода ($E_0$  =  $13{,}6\,\text{эВ}$). Стрелками отмечены некоторые возможные переходы атома между этими уровнями.
+\TaskMatchingColumns{Процесс}{А) Поглощение фотона наибольшей частоты\par Б) Излучение фотона наименьшей длины волны}{Энергия фотона}{1) $0{,}84E_0$\par 2) $0{,}21E_0$\par 3) $0{,}48E_0$\par 4) $0{,}96E_0$}\begin{center}\begin{tabular}{|c|c|}\hline А&Б\\\hline &\\\hline\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение}\par
+А)  Поглощение фотонов происходит при переходе с низшего энергетического уровня на высший. Большей энергии, а соответственно, и большей частоте соответствует переход по стрелке $2$. По второму постулату Бора энергия поглощенного фотона равна:
+
+\[( 2 ) E_{\,\text{ф}}= - \frac{E_0}{25} + \frac{E_0}{4} =0{,}21E_0.\]
+
+Б)  Излучение фотонов происходит при переходе с высшего энергетического уровня на низший. Большей энергии, а соответственно, меньшей длине волны соответствует переход по стрелке $1$. По второму постулату Бора энергия излученного фотона равна:
+
+\[( 4 ) E_{\,\text{ф}}= - \frac{E_0}{25} + E_0=0{,}96E_0.\]
+
+Ответ: $24$.
+}
+
+% Source sdamgia-3048: https://phys-ege.sdamgia.ru/problem?id=3048
+\BankTask{sdamgia-3048}{
+На рисунке представлены энергетические уровни электронной оболочки атома и указаны частоты фотонов, излучаемых и поглощаемых при переходах с одного уровня на другой. Какова длина волны фотонов, поглощаемых при переходе с уровня $E_1$ на уровень $E_4$ если $\nu_{13}=6 \cdot 10 ^{ 14 } \,\text{Гц},$ $\nu_{24}=4 \cdot 10 ^{ 14 } \,\text{Гц},$ $\nu_{32}=3 \cdot 10 ^{ 14 } \,\text{Гц}.$
+\begin{center}\begin{tikzpicture}[book diagram,>=stealth]\draw[task axis,->](0,-.3)--(0,5.2)node[above]{$E$};\draw[thick](0,0.3)--(3.5,0.3);\node[left]at(0,0.3){$ 1 $};\draw[thick](0,2.3)--(3.5,2.3);\node[left]at(0,2.3){$ 2 $};\draw[thick](0,3.7)--(3.5,3.7);\node[left]at(0,3.7){$ 3 $};\draw[thick](0,4.5)--(3.5,4.5);\node[left]at(0,4.5){$ 4 $};\draw[->]( 0.8,0.3)--(0.8,3.7)node[midway,right]{$ \nu_{13} $};\draw[->]( 1.9,2.3)--(1.9,4.5)node[midway,right]{$ \nu_{24} $};\draw[->]( 3.1,3.7)--(3.1,2.3)node[midway,right]{$ \nu_{32} $};\end{tikzpicture}\end{center}
+}{
+\smallskip\noindent\textbf{Решение}\par
+Частота фотона, испускаемого или поглощаемого атомом при переходе с одного уровня энергии на другой, пропорциональна разности энергий этих уровней: $\nu_{21}= \frac{|E_2 - E_1|}{h} .$
+Поэтому запишем: $\nu _{14}=\nu _{13} + \nu _{24} - \nu _{32}= ( 6 + 4 - 3 ) \cdot 10 ^{ 14 } =7 \cdot 10 ^{ 14 } \,\text{Гц}.$ Отсюда: $\lambda _{14}= \frac{c}{\nu_{14}} .$
+
+Ответ: $\lambda _{14}\approx 4{,}3 \cdot 10 ^{ - 7 } \,\text{м}.$
+}
+
+\end{document}

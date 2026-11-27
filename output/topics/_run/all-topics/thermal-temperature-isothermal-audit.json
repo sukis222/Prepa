@@ -1,0 +1,18 @@
+{
+  "batch": "thermal-temperature-isothermal",
+  "bundle_sha256": "f88cca9fabfe61a4ce4b08b35561908c9a93d8e0aadbe7d8cb453cd5d4d096eb",
+  "topics": [
+    "2.4.2",
+    "2.6.2"
+  ],
+  "tasks": 20,
+  "pages": 15,
+  "baseline_preserved": 107,
+  "files": {
+    "task-2-4-2.tex": "b655ef2d1e394a644ea6feea061cc163ecdcb1172e14d37bf8b5e6db337155e7",
+    "tutor-2-4-2.tex": "7c525c880e38c02abb26c605d6d868cba71231be8ae69f341d85f47e20e1d533",
+    "task-2-6-2.tex": "fd0eb03029817b1154380890476fdaeb46db6db21d1044733824d715b86c69f7",
+    "tutor-2-6-2.tex": "59f8c5825b5849e8608d8ddb43d243fbd4f24a863439b51f73d75fd1b2719780"
+  },
+  "editor_open_checked": false
+}

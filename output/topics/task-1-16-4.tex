@@ -1,0 +1,77 @@
+% !TEX root = task-1-16-4.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{1.16.4}{Наклонная плоскость}
+
+
+% Source 38208: https://phys-ege.sdamgia.ru/problem?id=38208
+\BankTask{38208}{
+\begin{center}\begin{tikzpicture}[task graph,>=stealth]
+\draw(0,0)--(5,0)--(5,2.887)--cycle;\draw(-.3,0)--(6.4,0);
+\begin{scope}[shift={(2.8,1.6166)},rotate=30]\draw(0,0)rectangle(1.1,.5);\node at(.55,.8){$m$};\end{scope}
+\node at(4.4,1.2){$M$};\draw[->](5,1.45)--(6.4,1.45)node[above]{$\vec F$};
+\draw(.85,0)arc(0:30:.85);\node at(1.1,.27){$\alpha$};
+\end{tikzpicture}\end{center}Под действием постоянной горизонтальной силы $\vec F$ клин массой $M = 1 \,\text{кг}$  движется по гладкой горизонтальной поверхности стола. По шероховатой поверхности клина, составляющей угол $\alpha = 30 ^{ \circ }$ с горизонтом, равномерно (относительно клина) скользит вниз брусок массой $m = 0{,}2 \,\text{кг}.$ Коэффициент трения между бруском и клином $\mu = 0{,}6.$ Найдите модуль ускорения клина. Сопротивлением воздуха пренебречь. Сделайте рисунок с указанием сил, действующих на брусок. Обоснуйте применимость законов, используемых для решения задачи.
+}{
+\smallskip\noindent\textbf{Решение}\par
+\begin{center}\begin{tikzpicture}[task graph,>=stealth]\draw[->](-.5,-1.4)--(6,-1.4)node[right]{$x$};\draw[->](-.5,-1.4)--(-.5,3.7)node[above]{$y$};\draw(0,0)--(4.5,0)--(4.5,2.598)--cycle;\begin{scope}[shift={(2.5,1.65)},rotate=30]\draw[fill=gray!15](-.4,-.18)rectangle(.4,.18);\end{scope}\draw(.7,0)arc(0:30:.7)node[midway,right]{$\alpha$};\node at(3.9,1.3){$M$};\node[above]at(2.5,2){$m$};\draw[->,thick](2.5,1.65)--(1.85,2.776)node[above left]{$\vec N_1$};\draw[->,thick](2.5,1.65)--(3.8,2.4)node[above]{$\vec F_{\text{тр}1}$};\draw[->,thick](2.5,1.65)--(2.5,.3)node[right]{$m\vec g$};\draw[->,thick](2.1,0)--(2.1,1.1)node[left]{$\vec N_2$};\draw[->,thick](2.1,0)--(2.1,-1.1)node[below left]{$M\vec g$};\draw[->,thick](2.1,0)--(1,-.635)node[below left]{$\vec F_{\text{тр}2}$};\draw[->,thick](2.1,0)--(2.7,-1.039)node[right]{$\vec P$};\draw[->,thick](4.5,1.2)--(5.8,1.2)node[right]{$\vec F$};\draw[->,thick](5,2.8)--(6,2.8)node[above]{$\vec a$};\end{tikzpicture}\end{center}Обоснование:
+Систему отсчета, связанную с Землей, будем считать инерциальной. Движение бруска поступательное. Следовательно, его можно считать материальной точкой. 
+При движении бруска по плоскости клина на него действуют силы тяжести $mg$, трения скольжения $F_{\,\text{тр}1}$  и реакции опоры $N_1.$ На клин действуют сила тяжести Mg, сила трения между бруском и клином $F_{\,\text{тр}2},$ сила реакции опоры $N_2,$ вес бруска P и приложенная горизонтальная сила F. Движение клина по горизонтальной поверхности поступательное. Следовательно, его можно описывать моделью материальной точки.
+Так как брусок относительно клина движется равномерно, то клин и брусок относительно Земли движутся с одинаковым ускорением a. В ИСО для обоих тел выполняется второй закон Ньютона.
+Силы трения между бруском и клином – парные, по третьему закону Ньютона эти силы равны по модулю в ИСО. Вес бруска по третьему закону Ньютона равен силе реакции опоры $N_{1}$.
+Перейдем к решению.
+Запишем второй закон Ньютона для бруска:
+
+\[\vec F_{\,\text{тр}} + m\vec g + \vec N_1=m\vec a.\]
+
+Выберем оси: $Ox$ направим горизонтально вправо, $Oy$ направим вертикально вверх. В проекциях на координатные оси:
+
+$Ox$: $- N_1 \sin \alpha + F_{\,\text{тр}} \cos \alpha =ma;$
+$Oy$: $N_1 \cos \alpha + F_{\,\text{тр}} \sin \alpha - mg=0.$
+
+Сила трения между бруском и поверхностью клина $F_{\,\text{тр}}=\mu N_1.$
+Решая данную систему, находим ускорение бруска: $a= \frac{g ( \mu - \tan \alpha )}{1 + \mu \tan \alpha} .$
+Подставляя числовые значения, находим ускорение бруска (равное ускорению клина):
+
+\[a= \frac{10 \cdot ( 0{,}6 - \tan 30 ^\circ )}{1 + 0{,}6 \cdot \tan 30 ^\circ} \approx 0{,}17 \,\text{м/с} ^2 .\]
+
+Ответ: $0{,}17\,\text{м/с}^{2}$.
+}
+
+\end{document}

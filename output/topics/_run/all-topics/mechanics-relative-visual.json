@@ -1,0 +1,63 @@
+{
+  "approved": true,
+  "bundle_sha256": "bf8bc245d51a8bc73f3eb8f11383dcbf7f5f70a2524865086bccabe9b80b3b62",
+  "pages": [
+    {
+      "file": "tmp\\all-topics\\mechanics\\preview\\task-1-1-1\\page-01.png",
+      "sha256": "046f8233427899aaf9464b8e33f8e50dc64b13c087bbc93875df9db0ca44aa21"
+    },
+    {
+      "file": "tmp\\all-topics\\mechanics\\preview\\task-1-1-1\\page-02.png",
+      "sha256": "6ba6b35300e3d3727f7a82949ff70b449e2cb861971dbc0bd5fe52b69808d3a8"
+    },
+    {
+      "file": "tmp\\all-topics\\mechanics\\preview\\task-1-1-8\\page-01.png",
+      "sha256": "7ce3ad7702c492fe965e20fb8099658508d51d0af4003f89a19d71663d690659"
+    },
+    {
+      "file": "tmp\\all-topics\\mechanics\\preview\\task-1-1-8\\page-02.png",
+      "sha256": "fef9fd8a93a7bfa958350f9a37a52093f6a81fc8c33620b375a6d4a6a54152b4"
+    },
+    {
+      "file": "tmp\\all-topics\\mechanics\\preview\\tutor-1-1-1\\page-01.png",
+      "sha256": "6f81de8ebd9ad89a26246af2e705d8e819cb3a0afb64592cc0adf9902dfbd2b9"
+    },
+    {
+      "file": "tmp\\all-topics\\mechanics\\preview\\tutor-1-1-1\\page-02.png",
+      "sha256": "2f7bcbf4e3f677a2f396cf8bf2ceec1e9b2c7c8afc86c3e8be5103487de4184b"
+    },
+    {
+      "file": "tmp\\all-topics\\mechanics\\preview\\tutor-1-1-1\\page-03.png",
+      "sha256": "ed0884d7c7ff811a6d550104d0c3916596ac16c82049e98f3c71e76e7eac43b7"
+    },
+    {
+      "file": "tmp\\all-topics\\mechanics\\preview\\tutor-1-1-1\\page-04.png",
+      "sha256": "8dbb46dea5c3e2ca40b14264761efe4cbe177fabaeb9f10f3d44594afc1a66cb"
+    },
+    {
+      "file": "tmp\\all-topics\\mechanics\\preview\\tutor-1-1-8\\page-01.png",
+      "sha256": "11d36b015ef104cfed6d1bdb59530642fad6cc9f1e4e5d6c8668b2c55f8ea071"
+    },
+    {
+      "file": "tmp\\all-topics\\mechanics\\preview\\tutor-1-1-8\\page-02.png",
+      "sha256": "ccc8fef757b06eb9c5f1a779c31c2f4c45ca26b5528e257d5bd4b728e164760e"
+    },
+    {
+      "file": "tmp\\all-topics\\mechanics\\preview\\tutor-1-1-8\\page-03.png",
+      "sha256": "71f4a964796a6a6acd4864cf38d3d891d9ba83cfe04fd6ac7d3223a97d1aefba"
+    },
+    {
+      "file": "tmp\\all-topics\\mechanics\\preview\\tutor-1-1-8\\page-04.png",
+      "sha256": "2fb6bd7fece416660bbf05f2b4f7873a1bd7e75ff0530b029cb0257b9b93457f"
+    },
+    {
+      "file": "tmp\\all-topics\\mechanics\\preview\\tutor-1-1-8\\page-05.png",
+      "sha256": "4b3edde937592c5212f7b066f115170daece6d0bf8e9e72279c9aa80f3321b8f"
+    },
+    {
+      "file": "tmp\\all-topics\\mechanics\\preview\\tutor-1-1-8\\page-06.png",
+      "sha256": "8ae47716a25fdf0556af944a45e63c6aa0b59943e494a0049e58a7b224fb6bb6"
+    }
+  ],
+  "scope": "All14 final pages viewed at native readable resolution; source vector diagrams compared; no overlap/missing lines/glyphs."
+}

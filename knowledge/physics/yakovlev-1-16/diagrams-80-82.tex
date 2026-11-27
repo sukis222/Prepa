@@ -1,0 +1,59 @@
+% Native vector geometry measured from the reference in big points.
+% Ground-left origin, y upwards. Source heads are filled narrow triangles.
+\newcommand{\WorkParallelDiagram}{%
+\begin{tikzpicture}[x=1bp,y=1bp,line width=.5bp,
+ every node/.style={inner sep=0pt,outer sep=0pt,font=\fontsize{10}{12}\selectfont}]
+ \path[use as bounding box] (-.25,-30.25) rectangle (212.511,21);
+ \foreach \x in {30,170} {
+   \fill[bookgray] (\x-15,0) rectangle (\x+15,20);
+   \draw (\x-15,0)--(\x-15,20)--(\x+15,20)--(\x+15,0);
+ }
+ \draw (0,0)--(200,0);
+ \foreach \x in {0,3,...,198} {\draw (\x,0)--++(-3,-3);}
+ \foreach \x in {30,170} {
+   \draw[dash pattern=on 1.5bp off 1.5bp] (\x,10)--(\x,-30);
+ }
+ \draw[blue] (30,-26)--(170,-26);
+ \filldraw[blue] (163.106,-24.7845)--(170,-26)--(163.106,-27.2155)--cycle;
+ \node[anchor=base west] at (97.6646,-23) {$\vec s$};
+ \foreach \x in {30,170} {
+   \fill[red] (\x,10) circle[radius=1.5bp];
+   \draw[red] (\x,10)--(\x+40,10);
+   \filldraw[red] (\x+33.106,11.2155)--(\x+40,10)--(\x+33.106,8.7845)--cycle;
+   \node[anchor=base west] at (\x+36.105,13) {$\vec F$};
+ }
+\end{tikzpicture}}
+
+\newcommand{\WorkObliqueDiagram}{%
+\begin{tikzpicture}[x=1bp,y=1bp,line width=.5bp,
+ every node/.style={inner sep=0pt,outer sep=0pt,font=\fontsize{10}{12}\selectfont}]
+ \path[use as bounding box] (-.25,-30.25) rectangle (268,62);
+ \foreach \x in {50,190} {
+   \fill[bookgray] (\x-20,0) rectangle (\x+20,20);
+   \draw (\x-20,0)--(\x-20,20)--(\x+20,20)--(\x+20,0);
+ }
+ \draw (0,0)--(240,0);
+ \foreach \x in {0,3,...,240} {\draw (\x,0)--++(-3,-3);}
+ \foreach \x in {50,190} {
+   \draw[dash pattern=on 1.5bp off 1.5bp] (\x,10)--(\x,-30);
+ }
+ \draw[blue] (50,-26)--(190,-26);
+ \filldraw[blue] (183.106,-24.7845)--(190,-26)--(183.106,-27.2155)--cycle;
+ \node[anchor=base west] at (117.6646,-23) {$\vec s$};
+ \foreach \x in {50,190} {
+   \fill[red] (\x,10) circle[radius=1.5bp];
+   \draw[red] (\x,10)--(\x+60,10);
+   \filldraw[red] (\x+53.106,11.2155)--(\x+60,10)--(\x+53.106,8.7845)--cycle;
+   \draw[red] (\x,10)--(\x,50);
+   \filldraw[red] (\x-1.2155,43.106)--(\x,50)--(\x+1.2155,43.106)--cycle;
+   \draw[red] (\x,10)--(\x+60,50);
+   \filldraw[red] (\x+54.9382,45.16455)--(\x+60,50)--(\x+53.58966,47.18735)--cycle;
+   \draw[dash pattern=on 1.5bp off 1.5bp] (\x+60,50)--(\x+60,10);
+   \draw[dash pattern=on 1.5bp off 1.5bp] (\x+60,50)--(\x,50);
+   \draw (\x+30,10) arc[start angle=0,end angle=33.6900675,radius=30bp];
+   \node[anchor=base west] at (\x+63,6.953) {$\vec F_{\parallel}$};
+   \node[anchor=base west] at (\x-16.132,45.929) {$\vec F_{\perp}$};
+   \node[anchor=base west] at (\x+62.1,52.1) {$\vec F$};
+   \node[anchor=base west] at (\x+31.712,16.549) {$\alpha$};
+ }
+\end{tikzpicture}}

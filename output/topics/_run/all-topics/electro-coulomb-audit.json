@@ -1,0 +1,15 @@
+{
+  "batch": "electro-coulomb",
+  "bundle_sha256": "f31131642fa7dc92ee58e028e1e9c19f8133f237bf94214d9a829189ce7d5447",
+  "topics": [
+    "3.2"
+  ],
+  "tasks": 10,
+  "pages": 10,
+  "baseline_preserved": 107,
+  "files": {
+    "task-3-2.tex": "c8c44e0b4d0120c22c02f1359c68cbafb329e59aca4a4538b94824cd464dba67",
+    "tutor-3-2.tex": "42abc816624268fcb8b78f46165b8edb379421c92c1c78dc93cc05592b865bee"
+  },
+  "editor_open_checked": false
+}

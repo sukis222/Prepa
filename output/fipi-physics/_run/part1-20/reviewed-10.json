@@ -1,0 +1,573 @@
+{
+  "version": 1,
+  "exam_year": 2027,
+  "sections": [
+    {
+      "exam_number": 10,
+      "worksheet": {
+        "preparation_id": "fipi-ege-2027-10",
+        "version": 1,
+        "student_ids": [
+          "local"
+        ],
+        "exam": "ege",
+        "topics": [
+          "ФИПИ"
+        ],
+        "title": "ЕГЭ по физике. Задание 10",
+        "tasks": [
+          {
+            "id": "5644DE",
+            "statement_exact": "Установите соответствие и впишите ответ.\nВ цилиндре под поршнем находится идеальный одноатомный газ. Формулы А и Б позволяют рассчитать значения физических величин, характеризующих состояние газа. Использованы обозначения: p $-$ давление; V $-$ объём; ${\\overline{E}}_{\\text{к}}$ $-$ средняя кинетическая энергия поступательного теплового движения частиц газа; ν $-$ количество вещества, N $_{A}$ $-$ постоянная Авогадро.\nУстановите соответствие между формулами и физическими величинами, значение которых можно рассчитать по этим формулам.\nК каждой позиции первого столбца подберите соответствующую позицию\nиз второго столбца и запишите в таблицу выбранные цифры под соответствующими буквами.\nФОРМУЛЫ ФИЗИЧЕСКИЕ ВЕЛИЧИНЫ\nА) $\\frac{2}{3}\\frac{\\nu N_A{\\overline{E}}_{\\text{к}}}{V}$\nБ) $\\frac{3}{2}\\frac{p V}{N_A{\\overline{E}}_{\\text{к}}}$\n1) масса газа\n2) количество вещества\n3) давление\n4) абсолютная температура\nОтвет: А — Б —",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=5644DE",
+            "page": null,
+            "images": [],
+            "sha256": "6a20ba6c884ef8fd2d4bc9b007d228acdbabacca14c8d9fe9af71782c0d697c7",
+            "exam_part": 1,
+            "exam_number": 10,
+            "section": "Связь между давлением и средней кинетической энергией посту-пательного теплового движения молекул идеального газа (основное уравнение МКТ)",
+            "solution": {
+              "text": "Основное уравнение МКТ: \\(pV=\\frac{2}{3}N\\overline{E}_{\\text{к}}\\), где \\(N=\\nu N_A\\). Поэтому \\(p=\\frac{2}{3}\\frac{\\nu N_A\\overline{E}_{\\text{к}}}{V}\\): А — 3. Выражая количество вещества, получаем \\(\\nu=\\frac{3}{2}\\frac{pV}{N_A\\overline{E}_{\\text{к}}}\\): Б — 2.\n\nОтвет: А — 3, Б — 2; \\(32\\).",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=5644DE#prepa-gpt-solution",
+              "images": [],
+              "sha256": "b3dd9709cb111034ebd24369d057a7411720b5316d7c7f3eda30b313ec1ea0de"
+            }
+          },
+          {
+            "id": "CD1D80",
+            "statement_exact": "Установите соответствие и впишите ответ.\nВ цилиндре под поршнем находится идеальный одноатомный газ. Формулы А и Б позволяют рассчитать значения физических величин, характеризующих состояние газа. Обозначения: р $-$ давление; Т $-$ абсолютная температура; N $-$ число атомов газа; k $-$ постоянная Больцмана, V $-$ объём газа.\nУстановите соответствие между формулами и физическими величинами, значение которых можно рассчитать по этим формулам.\nК каждой позиции первого столбца подберите соответствующую позицию\nиз второго столбца и запишите в таблицу выбранные цифры под соответствующими буквами.\nФОРМУЛЫ ФИЗИЧЕСКИЕ ВЕЛИЧИНЫ\nА) $\\frac{p}{k T}$\nБ) $\\frac{p V}{N k}$\n1) абсолютная температура\n2) концентрация молекул\n3) давление\n4) внутренняя энергия\nОтвет: А — Б —",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=CD1D80",
+            "page": null,
+            "images": [],
+            "sha256": "2759edcacb1258c61e920cd85453720cf3a0447425ca83a0a30388a519782f0b",
+            "exam_part": 1,
+            "exam_number": 10,
+            "section": "Уравнение p=nkT",
+            "solution": {
+              "text": "Из \\(p=nkT\\) следует \\(n=\\frac{p}{kT}\\), то есть формула А определяет концентрацию молекул: А — 2. Из \\(pV=NkT\\) получаем \\(T=\\frac{pV}{Nk}\\), то есть формула Б определяет абсолютную температуру: Б — 1.\n\nОтвет: А — 2, Б — 1; \\(21\\).",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=CD1D80#prepa-gpt-solution",
+              "images": [],
+              "sha256": "b2e3b567a2be26eed18e86b2a8d14732e1ea2acdf511300a932422a7f661df93"
+            }
+          },
+          {
+            "id": "B5F219",
+            "statement_exact": "Установите соответствие и впишите ответ.\nОдноатомный идеальный газ в количестве 0,04 моль, находящийся в сосуде под подвижным поршнем, изотермически расширяется при температуре 450 К. Масса газа в сосуде остаётся неизменной.\nУстановите соответствие между физическими величинами, характеризующими газ, и формулами, выражающими их зависимость от объёма V газа.\nК каждой позиции первого столбца подберите соответствующую позицию из второго столбца и запишите в таблицу выбранные цифры под соответствующими буквами.\nФИЗИЧЕСКИЕ ВЕЛИЧИНЫ ФОРМУЛЫ\nА) давление газа $p(V)$\nБ) внутренняя энергия газа $U(V)$\n1) 18·V\n2) $\\frac{149,58}{V}$\n3) 224,37\n4) 27\nОтвет: А — Б —",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B5F219",
+            "page": null,
+            "images": [],
+            "sha256": "0c637d470c51848269b541dc75b7a09b5c988e2a3f03da6af2d2fe12cf665f1d",
+            "exam_part": 1,
+            "exam_number": 10,
+            "section": "Модель идеального газа в термодинамике; Закон Дальтона для давления смеси разреженных газов",
+            "solution": {
+              "text": "При \\(R=8{,}31\\,\\text{Дж}/(\\text{моль}\\cdot\\text{К})\\) имеем \\(\\nu RT=0{,}04\\cdot8{,}31\\cdot450=149{,}58\\,\\text{Дж}\\). По уравнению состояния \\(p(V)=\\frac{\\nu RT}{V}=\\frac{149{,}58}{V}\\) (давление в паскалях при объёме в \\(\\text{м}^3\\)): А — 2. Внутренняя энергия одноатомного газа \\(U=\\frac{3}{2}\\nu RT=224{,}37\\,\\text{Дж}\\) постоянна: Б — 3.\n\nОтвет: А — 2, Б — 3; \\(23\\).",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B5F219#prepa-gpt-solution",
+              "images": [],
+              "sha256": "6acafc0081fb3cea8be8e40ab8a14dda77091ea29e209a054a1cbffa5d321c86"
+            }
+          },
+          {
+            "id": "65ACC9",
+            "statement_exact": "Установите соответствие и впишите ответ.\nАргон в количестве $\\nu$ моль помещают в открытый сверху сосуд под тяжёлый подвижный поршень и начинают охлаждать. Начальное давление газа $-$ p $_{0}$. Трением между поршнем и стенками сосуда пренебречь.\nУстановите соответствие между физическими величинами, характеризующими газ, и формулами, выражающими их зависимость от абсолютной температуры T газа (R $-$ универсальная газовая постоянная).\nК каждой позиции первого столбца подберите соответствующую позицию\nиз второго столбца и запишите в таблицу выбранные цифры под соответствующими буквами.\nФИЗИЧЕСКИЕ ВЕЛИЧИНЫ ФОРМУЛЫ\nА) объём газа $V(T)$\nБ) внутренняя энергия газа $U(T)$\n1) $\\frac{\\nu R T}{p_0}$\n2) $\\frac{\\nu R p_0}{T}$\n3) $\\frac{3}{2}\\nu R T$\n4) $\\frac{3}{2}\\frac{\\nu R T}{p_0}$\nОтвет: А — Б —",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=65ACC9",
+            "page": null,
+            "images": [],
+            "sha256": "df32e51d4f8c02209e04d72a4df0546f6512ff918146fd81a648996f36b4595c",
+            "exam_part": 1,
+            "exam_number": 10,
+            "section": "Модель идеального газа в термодинамике; Закон Дальтона для давления смеси разреженных газов",
+            "solution": {
+              "text": "Тяжёлый подвижный поршень поддерживает постоянное давление $p=p_0$. Из уравнения состояния $p_0V=\\nu RT$ получаем $V(T)=\\dfrac{\\nu RT}{p_0}$: А — 1. Аргон — одноатомный идеальный газ, поэтому $U(T)=\\dfrac{3}{2}\\nu RT$: Б — 3.\n\nОтвет: А — 1, Б — 3.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=65ACC9#prepa-gpt-solution",
+              "images": [],
+              "sha256": "15b021105df5fa499d288259ad0836eec12eb4908b2c4b660cfe10d5cc37c15a"
+            }
+          },
+          {
+            "id": "8054C4",
+            "statement_exact": "Установите соответствие и впишите ответ.\nАргон массой 160 г при комнатной температуре помещают в герметичный закрытый сосуд объёмом 20 л и начинают нагревать. Масса газа в сосуде остаётся неизменной.\nУстановите соответствие между физическими величинами, характеризующими аргон, и формулами, выражающими их зависимость от абсолютной температуры T газа в условиях данной задачи.\nК каждой позиции первого столбца подберите соответствующую позицию\nиз второго столбца и запишите в таблицу выбранные цифры под соответствующими буквами.\nФИЗИЧЕСКИЕ ВЕЛИЧИНЫ ФОРМУЛЫ\nА) давление газа $p(T)$\nБ) внутренняя энергия газа $U(T)$\n1) $a T,$ $a=1662~\\frac{\\text{Па}}{\\text{К}}$\n2) $b T,$ $b=49,86~\\frac{\\text{Дж}}{\\text{К}}$\n3) $\\frac{c}{T},$ $c=80~\\text{Дж}\\cdot \\text{К}$\n4) $d T,$ $d=4,986~\\frac{\\text{Па}}{\\text{К}}$\nОтвет: А — Б —",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=8054C4",
+            "page": null,
+            "images": [],
+            "sha256": "54b5f3a3abf8acec1bd5f7b33318ebe7d2ca27bb2260507bfcff6b2610162949",
+            "exam_part": 1,
+            "exam_number": 10,
+            "section": "Модель идеального газа в термодинамике; Закон Дальтона для давления смеси разреженных газов",
+            "solution": {
+              "text": "Используем молярную массу аргона $M=40\\,\\text{г/моль}$. Тогда $\\nu=m/M=4\\,\\text{моль}$, $V=0{,}020\\,\\text{м}^3$.\n\\[\np(T)=\\frac{\\nu R}{V}T=\\left(1662\\,\\frac{\\text{Па}}{\\text{К}}\\right)T,\n\\qquad\nU(T)=\\frac32\\nu RT=\\left(49{,}86\\,\\frac{\\text{Дж}}{\\text{К}}\\right)T.\n\\]\nДавлению соответствует формула 1, внутренней энергии одноатомного газа — формула 2.\n\nОтвет: А — 1, Б — 2.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=8054C4#prepa-gpt-solution",
+              "images": [],
+              "sha256": "f64ab73361b5e39ccad2440cdbccf1a4dce5de097eea4ae188bd45e5d4962131"
+            }
+          },
+          {
+            "id": "D67CAF",
+            "statement_exact": "Установите соответствие и впишите ответ.\nТемпература нагревателя идеального теплового двигателя, работающего по циклу Карно, равна T $_{1}$, а коэффициент полезного действия этого двигателя равен $\\eta$. За цикл рабочее тело двигателя получает от нагревателя количество теплоты Q $_{1}$.\nУстановите соответствие между физическими величинами и формулами, по которым их можно рассчитать.\nК каждой позиции первого столбца подберите соответствующую позицию\nиз второго столбца и запишите в таблицу выбранные цифры под соответствующими буквами.\nФИЗИЧЕСКИЕ ВЕЛИЧИНЫ ФОРМУЛЫ\nА) количество теплоты, отдаваемое рабочим телом двигателя за цикл\nБ) температура холодильника\n1) $\\frac{T_1}{1-\\eta}$\n2) $T_1(1-\\eta)$\n3) $Q_1(1-\\eta)$\n4) $Q_1 \\eta$\nОтвет: А — Б —",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=D67CAF",
+            "page": null,
+            "images": [],
+            "sha256": "4231aa9926ea220126722a4fe23a4ae213f7b778bcc8503b32de772d2803677a",
+            "exam_part": 1,
+            "exam_number": 10,
+            "section": "Принципы действия тепловых машин. КПД",
+            "solution": {
+              "text": "Обозначим отданное холодильнику количество теплоты через $Q_2>0$. Из $\\eta=\\dfrac{Q_1-Q_2}{Q_1}$ следует $Q_2=Q_1(1-\\eta)$: А — 3. Для цикла Карно $\\eta=1-\\dfrac{T_2}{T_1}$, поэтому $T_2=T_1(1-\\eta)$: Б — 2.\n\nОтвет: А — 3, Б — 2.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=D67CAF#prepa-gpt-solution",
+              "images": [],
+              "sha256": "cab8ef356d2f1a209e68dbd8ebbef48e2afe3762feea506cfa267ac7dd75fbb8"
+            }
+          },
+          {
+            "id": "A53641",
+            "statement_exact": "Установите соответствие и впишите ответ.\n[рисунок 1]\nВ цилиндре под поршнем находилось твёрдое вещество массой m. Цилиндр поместили в печь. На рисунке схематично показан график изменения температуры t вещества по мере поглощения им количества теплоты Q. Формулы А и Б позволяют рассчитать значения физических величин, характеризующих происходящие с веществом тепловые процессы.\nУстановите соответствие между формулами и физическими величинами, значение которых можно рассчитать по этим формулам.\nК каждой позиции первого столбца подберите соответствующую позицию из второго столбца и запишите в таблицу выбранные цифры под соответствующими буквами.\nФОРМУЛЫ ФИЗИЧЕСКИЕ ВЕЛИЧИНЫ\nА) $\\frac{\\Delta Q_1}{m \\Delta t_1}$\nБ) $\\frac{\\Delta Q_2}{m}$\n1) удельная теплота плавления\n2) удельная теплота парообразования\n3) удельная теплоёмкость твёрдого вещества\n4) удельная теплоёмкость жидкости\nОтвет: А — Б —",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=A53641",
+            "page": null,
+            "images": [
+              {
+                "data_base64": "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",
+                "sha256": "2cf92230053d6f0010b08103695b33f0b660a0300661a06d767b8236bf676320",
+                "width": 281,
+                "height": 185
+              }
+            ],
+            "sha256": "0c6020dc88fd6a7ca52ef48d40639b5d2e98e7cdd925bb6fbd6818f2d55a139c",
+            "exam_part": 1,
+            "exam_number": 10,
+            "section": "Количество теплоты. Удельная теплоемкость вещества; Удельная теплота парообразования. Удельная теплота плавления. Удельная теплота сгорания топлива",
+            "solution": {
+              "text": "А: первый наклонный участок соответствует нагреванию твёрдого вещества. Из $\\Delta Q_1=mc_{\\text{тв}}\\Delta t_1$ получаем $c_{\\text{тв}}=\\dfrac{\\Delta Q_1}{m\\Delta t_1}$, поэтому А~--- 3.\n\nБ: первый горизонтальный участок соответствует плавлению при постоянной температуре. Из $\\Delta Q_2=\\lambda m$ получаем $\\lambda=\\dfrac{\\Delta Q_2}{m}$, поэтому Б~--- 1.\n\nОтвет: $31$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=A53641#prepa-gpt-solution",
+              "images": [],
+              "sha256": "c9090c5c9639d742aee2f6140440745973eee83db765fa86c58050acd9e4bdd6"
+            }
+          },
+          {
+            "id": "F5A444",
+            "statement_exact": "Впишите правильный ответ.\nОдин моль одноатомного идеального газа участвует в процессе 1 $-$ 2 $-$ 3, график которого изображён на рисунке в координатах p $-$ T, где p $-$ давление газа, T $-$ абсолютная температура газа. Как изменяются объём газа V в ходе процесса 1 $-$ 2 и плотность газа ρ в ходе процесса 2 $-$ 3?\n[рисунок 1]\nДля каждой величины определите соответствующий характер изменения:\n1) увеличивается\n2) уменьшается\n3) не изменяется\nЗапишите в таблицу выбранные цифры для каждой физической величины. Цифры в ответе могут повторяться.\nОбъём газа\nв ходе процесса 1 $-$ 2\nПлотность газа\nв ходе процесса 2 $-$ 3",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=F5A444",
+            "page": null,
+            "images": [
+              {
+                "data_base64": "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",
+                "sha256": "2be50a52fdb2242c89b991177d8bfb4038c3275ac801720665c667bf6c1ef7be",
+                "width": 170,
+                "height": 164
+              }
+            ],
+            "sha256": "fd5cbf744ec390e30c2e3cdcafa0620313d96610b71d956dc559e8ddc013fd42",
+            "exam_part": 1,
+            "exam_number": 10,
+            "section": "Изопроцессы в разреженном газе с постоянным числом молекул N (с постоянным количеством вещества ν)",
+            "solution": {
+              "text": "Из $pV=\\nu RT$ следует $V=\\nu RT/p$. На участке $1$--$2$ прямая проходит через начало координат, поэтому $p/T=\\mathrm{const}$ и объём не изменяется (3).\n\nНа участке $2$--$3$ температура постоянна, давление увеличивается, поэтому объём уменьшается. При постоянной массе $\\rho=m/V$ увеличивается (1).\n\nОтвет: $31$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=F5A444#prepa-gpt-solution",
+              "images": [],
+              "sha256": "377042ffcbf6ada3fc195fda9340e4c82d28c3232b5f5f4dfcda093c18f1d1ac"
+            }
+          },
+          {
+            "id": "F0D87A",
+            "statement_exact": "Впишите правильный ответ.\n1 моль одноатомного идеального газа участвует в процессе 1 $-$ 2 $-$ 3, график которого изображён на рисунке в координатах p $-$ V, где p $-$ давление газа,\nV $-$ объём газа. Как изменяются концентрация молекул n газа в ходе процесса\n1 $-$ 2 и абсолютная температура Т газа в ходе процесса 2 $-$ 3? Масса газа остаётся постоянной.\n[рисунок 1]\nДля каждой величины определите соответствующий характер изменения:\n1) увеличивается\n2) уменьшается\n3) не изменяется\nЗапишите в таблицу выбранные цифры для каждой физической величины. Цифры в ответе могут повторяться.\nКонцентрация молекул газа\nв ходе процесса 1 $-$ 2\nАбсолютная температура\nгаза в ходе процесса 2 $-$ 3",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=F0D87A",
+            "page": null,
+            "images": [
+              {
+                "data_base64": "iVBORw0KGgoAAAANSUhEUgAAAMEAAAC0CAIAAACiz9+5AAAGvklEQVR4nO3d21KjShhA4T4A40UKzOn9H9AohvJCA929i2BiJkY3zh8Mh/VdqeNoSpfdDYSODiEoQMBI/jNAQ7gCxiFI0RCkaAhSNAQpGoJU1PLzsvk6svUbwe0qZ6PEaqW0d+Wu2r4Up5+5XK0fNw/iB4bRjUPb/KEsnVYhKJtEyr2+lTvnjbWx/vzJy9X62o8Twx+HlFLa2KCUVWHzlCul0tl83yCz4dS1LSCdza3dT16lO/zXegTyynf46DAErUeRphh3svrRav+hvy63MYtNUNuGtDVGOXcYg9JZZq3V/uMjZ4hpOlo1lM4yo7Vy4TgI6Ti2Jrjq/KAME9RuHDJWm4+lTzZfxVa53S4vzo/qO3mMGMFxmbb71ZBNmkpi7ctXRiC0bqhe+iSJdtUmrw/p2+Nk40S0mctMPZH5LxbPmLz/H4d0bI1yx7NC32gucTTzHZc7puO7htJ0ESU2sjooG93ZRZY+bTkKw08aKoqnb/4V+PH1MgxOup9Jmqviwe2e8m0X34UrpqMOKKqfYfG4eahc0DZZZGkX34iGximtL0Ypd3h2VyhL75Ux+6eAXRtz2TgVLxemrY6eZME4NA3G6lCxHsI/SrNFkpjw1VMsxBiHxiydzRerdRzboLRJ/izmWRffhfXQmBUv+ektFcbabJZe/ek6jEOTsM0fqnoqM6aDXzgNTUXo7Ko5DU2J976Do3vWQ2O+ymEON5Hu3zVut+viucs0NGzp/X29dn5+Pv8H74K3wdRPuFiu1kmkytdOAqKhMQSk9m+cZXTxPHVHWA+NraffR0MjUXyezn4LDY1BcbuAaGjYiufnOIrjKL7tw2AcghQNQYqGIEVDkKIhSNEQpGgIUjQEKRqCFA1BioYgRUOQoiFI0RCkaAhSNAQpGoIUDUGKhiBFQ5CiIUjREKRoCFI0BCkaghQNQYqGIEVDkKIhSNEQpGgIUjQEKRqCFA1BioYgRUOQoiFI0dCALVdr1QM0BCkaGoPlTQckGoIUDQ3Vsh+LIRrCFTAOjcTydsMSDQ3SsjcTGa+jOFSPm4fTmI7v3gTjEKRoCFI0BCkaghQNQYqGIEVDkKIhSNEQpGgIUjQEKRqCFA1BioYgRUOQoiFI0RCkaAhSNAQpGoIUDUGKhiBFQ5CiIUhF4q8w/ntJb3sHYP8NqaH0/r55o3h+vtWNyb3qKT38QNL7+1/+mQyyoePP67Z3m/fqRveeYD2EyYxDp35nQvk85PRqIlN/j803NJiGmvn+9yf+vnVzqnh+vu1KqKFDCNf9in3YzQSTHofS2Ty6i4xy5Wu1fSlu/XCGLZuvI/v+tnbVJs/H31A2X8V3/XpIw5XN19a/Peb132E2X0U2Wi0W5e76f5n9Oi7b5pvHzUPlbv04hi9NF8a/PW3fc9nmm8qpYKw9DEtXxB/9OBXF09lHgneqi4L6Ng6hO9oYrZzrYIynoenQ3rkuDlNoaBLSdGGtc+WVz+M0aGj80llmIxM6OCJr0ND46TjWbpcXXZ1so6GRy+Yrq8rjQX4XOLafQED59mNSS6y/9qRGQ6OV1eemtVLJ8QkI8V2iXZWP+zx1mi2Wq/oST1A2uvuzms9v/YiGHtA5769/gqhf41CxPT+7in+zzTfqt/RrHMIQ0RCkaAhSNAQpGoIUDUGKhiBFQ5CiIUjREKRoCFI0BCkawriu22OIe8DREKR7wP1s34/jHgDfbADATmFTcNrTD9ZD2Xwda1e9vj1uHkoV8STDyXr8e0BqOw6l2SKJjdu932KSpososar82BUAY/KjPeDaroe0sco77w/vexe8taaTPQDQEy03Ims1Dr3vK/X3Gqie2iw7TaHlesjUdwh4dRyFGkEpYzjBNHkkgFs2pOvblc7GJkxPu4Z8vWYyDFoQHJf54JXSOpulza3a+zu3E+UCW7eO/h7Z5nxy8xs/Ln/DyWmdVuNQ8bKtN2EzJytoY7Xp5MZb3Nw235SvVagXK/Up5eZgvG5gt/P+/YOn5wVbr4ecc14324ru90SyxlWcYByv/cxzNs/UA8eFszn/eL0suN1xRxKMT3NGUJ38lvdzWayqC3th/ey6/TbnFRSmwZzvGaLjRLu3p0ubqXF+CJfo+sxNczx+2Atr99XShYbw1WbW78ucNFvE2n+zpywN4Sv1CeT6CRqx+v5VPmgIFzXrId1mU2Iawrl0ltVLaq9MnOhQ/u+mxDSEz4w2+xcZUlWbMzg0hMsH9vUyumx1HYKG8IlW9etYtt7G+vqv54qpYRyCFA1BioYgRUOQoiFI0RCkaAhSNAQpGoIUDUGKhqCE/gNjUV9CK++zMQAAAABJRU5ErkJggg==",
+                "sha256": "cacf73670a47133bf5f45ff1e4e191a3748c5f79ed75197bd738c2b46ec4e60c",
+                "width": 193,
+                "height": 180
+              }
+            ],
+            "sha256": "2825055ec21a2ebb2d69320f0f9be111d0e6970b1357aff0031ba7659fbeb138",
+            "exam_part": 1,
+            "exam_number": 10,
+            "section": "Изопроцессы в разреженном газе с постоянным числом молекул N (с постоянным количеством вещества ν)",
+            "solution": {
+              "text": "На участке $1$--$2$ объём увеличивается. Число молекул $N$ постоянно, поэтому концентрация $n=N/V$ уменьшается (2).\n\nНа участке $2$--$3$ объём постоянен, давление увеличивается. Из $T=pV/(\\nu R)$ следует, что температура увеличивается (1).\n\nОтвет: $21$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=F0D87A#prepa-gpt-solution",
+              "images": [],
+              "sha256": "b3d0a57d125d3b1f385bff79d24e82f197bd1777f404ffd19831cdfae47fcb95"
+            }
+          },
+          {
+            "id": "F12DcD",
+            "statement_exact": "Впишите правильный ответ.\n[рисунок 1]\nОдин моль идеального газа участвует в процессе 1–2–3, график которого изображён на рисунке в координатах V–T, где V – объём газа, T – абсолютная температура газа. Как изменяются давление газа p в ходе процесса 1–2 и концентрация молекул газа n в ходе процесса 2–3? Масса газа остаётся постоянной.\nДля каждой величины определите соответствующий характер изменения:\n1) увеличивается\n2) уменьшается\n3) не изменяется\nЗапишите в таблицу выбранные цифры для каждой физической величины. Цифры в ответе могут повторяться.\nДавление газа\nв ходе процесса 1–2\nКонцентрация молекул газа\nв ходе процесса 2–3",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=F12DcD",
+            "page": null,
+            "images": [
+              {
+                "data_base64": "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",
+                "sha256": "8e2a2883ff91650c1498285aaf13a61e951029832613f107359c90f98b0d0a4c",
+                "width": 176,
+                "height": 184
+              }
+            ],
+            "sha256": "d9c27e1ac70eee7a21f3bc56814189ac12f3d1f843a2bba83dc138345e455dd9",
+            "exam_part": 1,
+            "exam_number": 10,
+            "section": "Молекулярная физика",
+            "solution": {
+              "text": "В процессе \\(1\\text{–}2\\) температура постоянна, а объём уменьшается. Из \\(p=\\nu RT/V\\) следует, что давление увеличивается (\\(1\\)). В процессе \\(2\\text{–}3\\) объём уменьшается при постоянном числе молекул, поэтому концентрация \\(n=N/V\\) увеличивается (\\(1\\)).\n\nОтвет: \\(11\\).",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=F12DcD#prepa-gpt-solution",
+              "images": [],
+              "sha256": "24e88b28202fd0898a1e3654e9585d8bda7c0165b09e4422ed1046a0953bc558"
+            }
+          },
+          {
+            "id": "298FF1",
+            "statement_exact": "Впишите правильный ответ.\n[рисунок 1]\nВ цилиндрическом сосуде под поршнем находится газ. Поршень не закреплён и может перемещаться в сосуде без трения. На дне сосуда лежит стальной шарик (см. рисунок). Газ нагревают. Как изменятся в результате этого давление газа и действующая на шарик сила Архимеда? Атмосферное давление неизменно.\nДля каждой величины определите соответствующий характер изменения:\n1) увеличится\n2) уменьшится\n3) не изменится\nЗапишите в таблицу выбранные цифры для каждой физической величины. Цифры в ответе могут повторяться.\nДавление газа\nСила Архимеда",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=298FF1",
+            "page": null,
+            "images": [
+              {
+                "data_base64": "iVBORw0KGgoAAAANSUhEUgAAAGwAAAC0CAIAAAD+aV7YAAAL/klEQVR4nO2dXWwUVRuAz/53f2a7u10oYFotVUBIFmNSsGBMtEYJQVAuDFwZG6MxSqKJlUhiuKNGYryBRI0gGCONgQtrq4GkQQlKkcSEmth6URpbalmhO7s7OzO729ndL877fSfH2Rb4wtupW97nounOds7MPPue856/to5KpcKIO8N5h+cTJBEHikQESCICJBEBkogASUSAJCJAEhEgiQiQRARIIgIkEQGSiABJRIAkIkASESCJCJBEBEgiAiQRAZKIAElEknjs2DGHyf79+zHKXLSsX78eRI2MjIjHKRIRIIkIkEQESCICJBEBkogASUSAJCJAEhEgiQiQRARIIgIkEQGSiABJRIAkIkASESCJCJBEBEgiAiQRAXf1oStXrhSLRYzCFxX33HPP7Uo8duzYiy++OP+3VHskEom5YstancngXAwNDcmyfLvVmTG2d+/eLVu2zFne3cfu3buvXbs217uUWBAgiQiQRARIIgIkEQGSiABJRIAkIkASESCJCJBEBGYfO584ceL06dMY5S8SUqnU/yExkUgMDQ2Nm8zzjdUeXq/3tiSePXu2q6tL0zRb7qqW2LFjR3d398TExK0lxmKxI0eO2HVjNUZ3d/esxymxIEASESCJCJBEBEgiAiQRAZKIAElEgCQiQBIRIIkIkEQESCICJBEBkogASUSAJCJAEhEgiQiQRARIIgIkEQGSiABJRIAkIkASESCJCJBEBEgiAiQRAZKIAElEgCQiQBIRIIkIkEQESCICJBEBkogASUSAJCJAEhEgiQiQRARIIgIkEQGSiABJRIAkIkASESCJCJBEBEgiAiQRAZKIAElEgCQiQBIRIIkIkEQESCICJBEBkogASUSAJM7bH+ZdEFKp1MWLFy+bMMb6+vpyuVxjY+Pjjz/OGNu4cWNbW9vGjRvd7n/RPQMLf0OKopw6deqLL74YGBiAI14Tp9O5bNkyVVX7+/t1Xe/p6WGMhUKhF154YefOnY899ti/x+ZC3odhGCdPnnzjjTeSyaTP52tubm5paYnH416v1+PxOEwqJqVSqVgsTk5OXrly5ZNPPjl8+HBra+vx48c3b97M7maJly5deumll4aGhsLh8KZNm1asWOH3++vq6iAM3W63w+FwOp2VSqVcLoPEaDS6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",
+                "sha256": "afbdff03a77fa135ce46ce1111fc45ccbb952c2b841c77902164a445a4d16161",
+                "width": 108,
+                "height": 180
+              }
+            ],
+            "sha256": "d320aa6581a67e7bdb4af68a2a14631606706d08aa99bb8823f4d301f9874b25",
+            "exam_part": 1,
+            "exam_number": 10,
+            "section": "Изопроцессы в разреженном газе с постоянным числом молекул N (с постоянным количеством вещества ν)",
+            "solution": {
+              "text": "Равновесие свободного поршня даёт \\(p=p_{\\text{атм}}+Mg/S\\), где \\(M\\) — масса поршня, \\(S\\) — его площадь. Поэтому давление не изменится (\\(3\\)). При нагревании газ расширяется, его плотность \\(\\rho\\) уменьшается. Следовательно, сила Архимеда \\(F_A=\\rho gV_{\\text{ш}}\\) уменьшится (\\(2\\)).\n\nОтвет: \\(32\\).",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=298FF1#prepa-gpt-solution",
+              "images": [],
+              "sha256": "a7f07b9a7b233311a06bdd78c56c84af29b4a648697a7f5188de6cbfd70caf23"
+            }
+          },
+          {
+            "id": "28120c",
+            "statement_exact": "Впишите правильный ответ.\n[рисунок 1]\nВ цилиндре под поршнем находятся жидкость и её насыщенный пар (см. рисунок). Как изменятся давление и концентрация молекул пара при медленном перемещении поршня вниз, если температура останется неизменной? В процессе движения поршень не касается поверхности жидкости.\nДля каждой величины определите соответствующий характер изменения:\n1) увеличится\n2) уменьшится\n3) не изменится\nЗапишите в таблицу выбранные цифры для каждой физической величины. Цифры в ответе могут повторяться.\nДавление пара\nКонцентрация молекул пара",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=28120c",
+            "page": null,
+            "images": [
+              {
+                "data_base64": "iVBORw0KGgoAAAANSUhEUgAAAFQAAACeCAIAAAAjerpEAAADK0lEQVR4nOXdwU4TURTG8T+fY5iExHFBpJKohD2sYFdWWjedJ+AN9AnkBdQ36BPIE8iOruhKZEN3uKAUkoESpJMgKaDB2GqDVRKCQyz9fpvb3s6c3tPTueldzO3Q5uZmGIaYabVaExMTQRiGuVwuq6Dr1WoxjtM07fZEUbT0/v301BT9JG2PUNkGLZVKFzPvvE2pVKIvCWPCmDAmjAljwpgwJgysVCr37t8vxrFj8pcRxoQxYUwYE8aEMWFMGBPGhDFhTBgTxoQxYUwYE8aEMWFMGBPGhDFhTBgTxoQxYUwYE8aEMWFMGBPGhDFhTBhTs9lcqVTq9Tp9r9VqrVQq69VqVgH1YXW1GMfvFhfpe41GoxjHCwsLWQUUxoQxYUwYE8aEMWFMGBPGgk6zVa+vVCr/Hm5vb++vnZkEbzQaZCrY398HFtu4Gcvl8nK5nFW07Z2dqx+8sbGx12h0lgPNNO3UYHZmpvNqUN/e5lZpHh5e/eDlcvnVr7VAtX2fbxiG9VrN4prP5/M9PbMzM927xgc8+empqSiKLvs4xKCb+734xWKx+3jwk79Y6iiKLt7JLwZdfKHUPd8CMeget/11/hMGugV3TD7fznlsbKxn6w5hU/lnT5/29AsDncv+zx88ejA6yq0yMjJyjbPm8vmeqR4IHrVnwkLheaFQyGRw9a2ts29fu0/v3gkeP3mSSeTPh4dv37yenJy8xrnz8/PdOb/r55L2x2QwPZ3FCMkqzhXXy1f0Z9kxueYvI4wJY8KYMCaMCWPCmDAmjAljwpgwJowJY8KYMCaMCWPCmDAmjAljwpgwJowJY8KYMCaMCWPCmDAmjAljwpgwJowJY8KYMCaMCWPCmDAmjAljwpgwJowJY8KYMCaMCWNBpzk7Oz3+8oX+1jo+vpHkP218Wlpaor8dHR1lG1AYE8aEMWFMGBPGhDFhTBgTxoQxYUwYE8aEMWFMGBPGhDFhTBgLOk2SJPS9k9OTbAMGD3O5H8nvJsluclv2dMwq1FCSJB/X1qrZ/SfSjRoeHn754kV3p+5rS9M0iqKhWq2WaxffysHBwfj4+ND5+fn/Hsl/8x1UA8fJeZpv+QAAAABJRU5ErkJggg==",
+                "sha256": "48698e58822e19b977244dc22a989b3ad49bfccd7e88952ff580964df5ed10da",
+                "width": 84,
+                "height": 158
+              }
+            ],
+            "sha256": "7a618346dd00ba5912c9f3e5d02d86c89c3a1c1f017e099dd6140ed98176877e",
+            "exam_part": 1,
+            "exam_number": 10,
+            "section": "Насыщенные и ненасыщенные пары. Качественная зависимость плотности и давления насыщенного пара от температуры, их независимость от объёма насыщенного пара",
+            "solution": {
+              "text": "При медленном изотермическом сжатии часть насыщенного пара конденсируется. Пока присутствуют жидкость и пар, давление \\(p_{\\text{нас}}(T)\\) при неизменной температуре постоянно (\\(3\\)). Из \\(n=p_{\\text{нас}}/(kT)\\) следует, что концентрация молекул пара также не изменяется (\\(3\\)).\n\nОтвет: \\(33\\).",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=28120c#prepa-gpt-solution",
+              "images": [],
+              "sha256": "217f91d0df372f96bfd6fe5c1a035b5b6e86172099a41da6c9a6ebcb7c7572a4"
+            }
+          },
+          {
+            "id": "C427F7",
+            "statement_exact": "Впишите правильный ответ.\nОбъём сосуда с идеальным газом уменьшили вдвое, выпустив половину газа и поддерживая температуру газа в сосуде постоянной. Как изменились при этом давление газа в сосуде и его внутренняя энергия?\nДля каждой величины определите соответствующий характер изменения:\n1) увеличилась\n2) уменьшилась\n3) не изменилась\nЗапишите в таблицу выбранные цифры для каждой физической величины. Цифры в ответе могут повторяться.\nДавление газа\nв сосуде\nВнутренняя энергия газа в сосуде",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=C427F7",
+            "page": null,
+            "images": [],
+            "sha256": "c0daca0a7b19c3c02c691038e43c12e9316490608508cbaa7626ef35688681d4",
+            "exam_part": 1,
+            "exam_number": 10,
+            "section": "Молекулярная физика",
+            "solution": {
+              "text": "При постоянной температуре \\(p=\\nu RT/V\\). Поскольку \\(\\nu_2=\\nu_1/2\\) и \\(V_2=V_1/2\\), получаем \\(p_2=p_1\\): давление не изменилось (\\(3\\)). Внутренняя энергия идеального газа при неизменной температуре пропорциональна количеству вещества: \\(U_2=U_1/2\\), поэтому она уменьшилась (\\(2\\)).\n\nОтвет: \\(32\\).",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=C427F7#prepa-gpt-solution",
+              "images": [],
+              "sha256": "575bcdb5a198bfcf407b210223e5783454d935f8da6a5ce655fd38e75493d9f8"
+            }
+          },
+          {
+            "id": "FB5B0D",
+            "statement_exact": "Впишите правильный ответ.\nВ сосуде неизменного объёма при комнатной температуре находилась смесь неона и аргона, по 2 моль каждого. Половину смеси выпустили, а затем добавили в сосуд 2 моль аргона. Как в результате этого изменились парциальное давление аргона и давление смеси газов, если температура смеси оставалась неизменной? Для каждой величины определите соответствующий характер изменения:\n1) увеличилась\n2) уменьшилась\n3) не изменилась\nЗапишите в таблицу выбранные цифры для каждой физической величины. Цифры в ответе могут повторяться.\nПарциальное давление аргона\nДавление смеси газов\nв сосуде",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=FB5B0D",
+            "page": null,
+            "images": [],
+            "sha256": "6cf01f46ef8648f5628ccd24e65a1cf52f5ea2e00bca827fc73c764cced3d70a",
+            "exam_part": 1,
+            "exam_number": 10,
+            "section": "Модель идеального газа в термодинамике",
+            "solution": {
+              "text": "После выпуска половины смеси осталось по \\(1\\,\\text{моль}\\) каждого газа. После добавления аргона \\(\\nu_{\\mathrm{Ar},2}=3\\,\\text{моль}\\), а общее количество вещества \\(\\nu_2=4\\,\\text{моль}\\). При постоянных \\(T\\) и \\(V\\) давление пропорционально количеству вещества. Поэтому парциальное давление аргона увеличилось в \\(3/2\\) раза (\\(1\\)), а давление смеси не изменилось, поскольку первоначально также было \\(4\\,\\text{моль}\\) газа (\\(3\\)).\n\nОтвет: \\(13\\).",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=FB5B0D#prepa-gpt-solution",
+              "images": [],
+              "sha256": "1d3f39c014d6c58bc71b0ad34bcde39bb36e8ad07b7d2f40dd04d3f6346f15ea"
+            }
+          },
+          {
+            "id": "1D2B0A",
+            "statement_exact": "Впишите правильный ответ.\nПостоянная масса одноатомного идеального газа в изохорном процессе отдаёт количество теплоты Q > 0. Как меняются в этом процессе объём и внутренняя энергия газа?\nДля каждой величины определите соответствующий характер изменения:\n1) увеличивается\n2) уменьшается\n3) не изменяется\nЗапишите в таблицу выбранные цифры для каждой физической величины. Цифры в ответе могут повторяться.\nОбъём газа\nВнутренняя энергия газа",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=1D2B0A",
+            "page": null,
+            "images": [],
+            "sha256": "b78dfdff8e0447afe2ea8022e60a9e70c91ca813e49bd330685f3996388d4e05",
+            "exam_part": 1,
+            "exam_number": 10,
+            "section": "Первый закон термодинамики",
+            "solution": {
+              "text": "В изохорном процессе объём не изменяется (\\(3\\)), работа газа \\(A=0\\). Газ отдаёт теплоту, поэтому полученная им теплота равна \\(-Q\\). По первому закону термодинамики \\(\\Delta U=-Q-A=-Q<0\\): внутренняя энергия уменьшается (\\(2\\)).\n\nОтвет: \\(32\\).",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=1D2B0A#prepa-gpt-solution",
+              "images": [],
+              "sha256": "77279b237fa22341fc0ee3c0087a2fbbbec79dfb5f3dd4d6be51bca37e98ab89"
+            }
+          },
+          {
+            "id": "70D177",
+            "statement_exact": "Впишите правильный ответ.\nВ калориметр со льдом, имеющим температуру 0 °С, добавили воду при комнатной температуре. Как изменятся в результате установления теплового равновесия удельная теплоёмкость воды и масса льда в калориметре?\nДля каждой величины определите соответствующий характер изменения:\n1) увеличится\n2) уменьшится\n3) не изменится\nЗапишите в таблицу выбранные цифры для каждой физической величины. Цифры в ответе могут повторяться.\nУдельная теплоёмкость воды\nМасса льда",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=70D177",
+            "page": null,
+            "images": [],
+            "sha256": "07956a41aa3142c6fc4a76f82c343e7585b60a275447698e4c6dd0b15fe417a8",
+            "exam_part": 1,
+            "exam_number": 10,
+            "section": "Изменение агрегатных состояний вещества: плавление и кристаллизация; Количество теплоты. Удельная теплоемкость вещества",
+            "solution": {
+              "text": "Удельная теплоёмкость воды в принятой модели постоянна: \\(c=4200\\,\\text{Дж}/(\\text{кг}\\cdot\\text{К})\\), поэтому не изменится (3). Вода при охлаждении отдаёт теплоту, которая расходуется на плавление льда: \\(Q=\\lambda\\Delta m\\). Масса льда уменьшится (2).\n\n\\(\\boxed{32}\\).",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=70D177#prepa-gpt-solution",
+              "images": [],
+              "sha256": "a320df2dd26c22a96d44c9093603995087b12e62b1e6d9f2ae8f04a2ba6b81fc"
+            }
+          },
+          {
+            "id": "135B3C",
+            "statement_exact": "Впишите правильный ответ.\nТонкая, упругая и мягкая оболочка герметичного воздушного шара наполнена воздухом. Как изменяются с высотой при быстром подъёме температура воздуха и концентрация молекул в шаре? Теплопроводностью оболочки шара пренебречь.\nДля каждой величины определите соответствующий характер изменения:\n1) увеличивается\n2) уменьшается\n3) не изменяется\nЗапишите в таблицу выбранные цифры для каждой физической величины. Цифры в ответе могут повторяться.\nТемпература воздуха\nКонцентрация молекул",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=135B3C",
+            "page": null,
+            "images": [],
+            "sha256": "303bab74cab2cf2aa14b9e6194221dd6816e579987ccbe14b54d17979b9fc009",
+            "exam_part": 1,
+            "exam_number": 10,
+            "section": "Модель идеального газа в термодинамике",
+            "solution": {
+              "text": "С высотой атмосферное давление уменьшается, и воздух в шаре расширяется. При быстром подъёме \\(Q=0\\), поэтому \\(\\Delta U=-A<0\\): температура уменьшается (2). Шар герметичен, число молекул \\(N\\) постоянно, а объём растёт, поэтому концентрация \\(n=N/V\\) уменьшается (2).\n\n\\(\\boxed{22}\\).",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=135B3C#prepa-gpt-solution",
+              "images": [],
+              "sha256": "dc93bb30c92d0d635089d45df26b17dda6b27e9b8346fd48fc1163fc901e2b74"
+            }
+          },
+          {
+            "id": "0D4FC9",
+            "statement_exact": "Впишите правильный ответ.\nПри исследовании изопроцессов использовался закрытый сосуд переменного объёма, заполненный неоном и соединённый с манометром. Объём сосуда медленно увеличивают, сохраняя давление неона в нём постоянным. Как изменяются при этом внутренняя энергия и плотность неона в сосуде?\nДля каждой величины определите соответствующий характер её изменения:\n1) увеличивается\n2) уменьшается\n3) не изменяется\nЗапишите в таблицу выбранные цифры для каждого ответа. Цифры в ответе могут повторяться.\nВнутренняя энергия неона в сосуде\nПлотность неона\nв сосуде",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=0D4FC9",
+            "page": null,
+            "images": [],
+            "sha256": "df062ad7de432cd47b6da8679b367dfcea2fc85fe0f2e5a662a7d8c38059bfa9",
+            "exam_part": 1,
+            "exam_number": 10,
+            "section": "Первый закон термодинамики",
+            "solution": {
+              "text": "Для одноатомного идеального газа \\(U=\\frac32\\nu RT=\\frac32pV\\). При постоянном давлении увеличение объёма приводит к увеличению внутренней энергии (1). Масса газа в закрытом сосуде постоянна, поэтому плотность \\(\\rho=m/V\\) уменьшается (2).\n\n\\(\\boxed{12}\\).",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=0D4FC9#prepa-gpt-solution",
+              "images": [],
+              "sha256": "20f086611db4470674245f15a260ac71e38b955d441fe4e94340a5b63d772266"
+            }
+          },
+          {
+            "id": "3BDF8F",
+            "statement_exact": "Впишите правильный ответ.\nВ сосуде постоянного объёма абсолютную температуру одноатомного идеального газа увеличили в 3 раза, выпустив при этом 1/3 газа из сосуда. Как изменились в результате этого плотность газа в сосуде и его внутренняя энергия?\nДля каждой величины определите соответствующий характер изменения:\n1) увеличилась\n2) уменьшилась\n3) не изменилась\nЗапишите в таблицу выбранные цифры для каждой физической величины. Цифры в ответе могут повторяться.\nПлотность газа\nв сосуде\nВнутренняя энергия\nгаза в сосуде",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=3BDF8F",
+            "page": null,
+            "images": [],
+            "sha256": "070dc46165802a6422a5cdf3f41067a1c8546288bd0cd8a3df752097b12148de",
+            "exam_part": 1,
+            "exam_number": 10,
+            "section": "Молекулярная физика",
+            "solution": {
+              "text": "При постоянном объёме \\(\\rho=m/V\\). После выпуска газа \\(m_2=\\frac{2}{3}m_1\\), поэтому \\(\\rho_2=\\frac{2}{3}\\rho_1\\): плотность уменьшилась (\\(2\\)).\n\nДля одноатомного идеального газа \\(U=\\frac{3}{2}\\nu RT\\), поэтому\n\\[\n\\frac{U_2}{U_1}=\\frac{\\nu_2}{\\nu_1}\\frac{T_2}{T_1}=\\frac{2}{3}\\cdot3=2.\n\\]\nВнутренняя энергия увеличилась (\\(1\\)). Ответ: \\(21\\).",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=3BDF8F#prepa-gpt-solution",
+              "images": [],
+              "sha256": "9d463d637e0e0b1a9f48b744480c38f872826267712f867eaf4c606f37b97773"
+            }
+          },
+          {
+            "id": "352D7e",
+            "statement_exact": "Впишите правильный ответ.\nВ тепловом двигателе, работающем по циклу Карно, температуру нагревателя понизили. Температура холодильника и количество теплоты, отданное рабочим телом холодильнику за цикл, остались прежними. Как изменились при этом КПД теплового двигателя и работа теплового двигателя за цикл?\nДля каждой величины определите соответствующий характер её изменения:\n1) увеличилась\n2) уменьшилась\n3) не изменилась\nЗапишите в таблицу выбранные цифры для каждой физической величины. Цифры в ответе могут повторяться.\nКПД теплового двигателя\nРабота теплового двигателя\nза цикл",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=352D7e",
+            "page": null,
+            "images": [],
+            "sha256": "788a31e84dc440c48e1999cf87b85812c55ed67b47ce61191c0eaded9c0ff131",
+            "exam_part": 1,
+            "exam_number": 10,
+            "section": "Термодинамика",
+            "solution": {
+              "text": "Обозначим абсолютные температуры нагревателя и холодильника через \\(T_{\\text{н}}\\) и \\(T_{\\text{х}}\\), а модуль теплоты, отданной холодильнику, через \\(Q_{\\text{х}}\\). КПД цикла Карно\n\\[\n\\eta=1-\\frac{T_{\\text{х}}}{T_{\\text{н}}}\n\\]\nпри понижении \\(T_{\\text{н}}\\) уменьшается (\\(2\\)). Из \\(Q_{\\text{н}}/Q_{\\text{х}}=T_{\\text{н}}/T_{\\text{х}}\\) следует\n\\[\nA=Q_{\\text{н}}-Q_{\\text{х}}=Q_{\\text{х}}\\left(\\frac{T_{\\text{н}}}{T_{\\text{х}}}-1\\right).\n\\]\nПри неизменных \\(Q_{\\text{х}}\\) и \\(T_{\\text{х}}\\) работа также уменьшается (\\(2\\)). Ответ: \\(22\\).",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=352D7e#prepa-gpt-solution",
+              "images": [],
+              "sha256": "91e3dac94841e8b6f3d08bc6af53e24c034b54342f878f16e09d2358c6176b2c"
+            }
+          }
+        ]
+      },
+      "typeset": {
+        "source_sha256": "03be9d177e75d67087d30f17f5e5ea67070460617b5072442fd559aca0c28c69",
+        "tasks": [
+          {
+            "id": "5644DE",
+            "condition_tex": "В цилиндре под поршнем находится идеальный одноатомный газ. Формулы А и Б позволяют рассчитать значения физических величин, характеризующих состояние газа. Использованы обозначения: \\(p\\) — давление; \\(V\\) — объём; \\(\\overline{E}_{\\text{к}}\\) — средняя кинетическая энергия поступательного теплового движения частиц газа; \\(\\nu\\) — количество вещества, \\(N_A\\) — постоянная Авогадро.\n\nУстановите соответствие между формулами и физическими величинами, значение которых можно рассчитать по этим формулам.\n\n\\begin{center}\n\\begin{tabular}{ll}\n\\textbf{ФОРМУЛЫ} & \\textbf{ФИЗИЧЕСКИЕ ВЕЛИЧИНЫ} \\\\\nА) \\(\\displaystyle\\frac{2}{3}\\frac{\\nu N_A\\overline{E}_{\\text{к}}}{V}\\) & 1) масса газа \\\\\nБ) \\(\\displaystyle\\frac{3}{2}\\frac{pV}{N_A\\overline{E}_{\\text{к}}}\\) & 2) количество вещества \\\\\n& 3) давление \\\\\n& 4) абсолютная температура\n\\end{tabular}\n\n\\begin{tabular}{|c|c|}\n\\hline\nА & Б \\\\\n\\hline\n\\phantom{0} & \\phantom{0} \\\\\n\\hline\n\\end{tabular}\n\\end{center}",
+            "solution_tex": "Основное уравнение МКТ: \\(pV=\\frac{2}{3}N\\overline{E}_{\\text{к}}\\), где \\(N=\\nu N_A\\). Поэтому \\(p=\\frac{2}{3}\\frac{\\nu N_A\\overline{E}_{\\text{к}}}{V}\\): А — 3. Выражая количество вещества, получаем \\(\\nu=\\frac{3}{2}\\frac{pV}{N_A\\overline{E}_{\\text{к}}}\\): Б — 2.\n\nОтвет: А — 3, Б — 2; \\(32\\).",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "CD1D80",
+            "condition_tex": "В цилиндре под поршнем находится идеальный одноатомный газ. Формулы А и Б позволяют рассчитать значения физических величин, характеризующих состояние газа. Обозначения: \\(p\\) — давление; \\(T\\) — абсолютная температура; \\(N\\) — число атомов газа; \\(k\\) — постоянная Больцмана, \\(V\\) — объём газа.\n\nУстановите соответствие между формулами и физическими величинами, значение которых можно рассчитать по этим формулам.\n\n\\begin{center}\n\\begin{tabular}{ll}\n\\textbf{ФОРМУЛЫ} & \\textbf{ФИЗИЧЕСКИЕ ВЕЛИЧИНЫ} \\\\\nА) \\(\\displaystyle\\frac{p}{kT}\\) & 1) абсолютная температура \\\\\nБ) \\(\\displaystyle\\frac{pV}{Nk}\\) & 2) концентрация молекул \\\\\n& 3) давление \\\\\n& 4) внутренняя энергия\n\\end{tabular}\n\n\\begin{tabular}{|c|c|}\n\\hline\nА & Б \\\\\n\\hline\n\\phantom{0} & \\phantom{0} \\\\\n\\hline\n\\end{tabular}\n\\end{center}",
+            "solution_tex": "Из \\(p=nkT\\) следует \\(n=\\frac{p}{kT}\\), то есть формула А определяет концентрацию молекул: А — 2. Из \\(pV=NkT\\) получаем \\(T=\\frac{pV}{Nk}\\), то есть формула Б определяет абсолютную температуру: Б — 1.\n\nОтвет: А — 2, Б — 1; \\(21\\).",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "B5F219",
+            "condition_tex": "Одноатомный идеальный газ в количестве \\(0{,}04\\,\\text{моль}\\), находящийся в сосуде под подвижным поршнем, изотермически расширяется при температуре \\(450\\,\\text{К}\\). Масса газа в сосуде остаётся неизменной.\n\nУстановите соответствие между физическими величинами, характеризующими газ, и формулами, выражающими их зависимость от объёма \\(V\\) газа.\n\n\\begin{center}\n\\begin{tabular}{ll}\n\\textbf{ФИЗИЧЕСКИЕ ВЕЛИЧИНЫ} & \\textbf{ФОРМУЛЫ} \\\\\nА) давление газа \\(p(V)\\) & 1) \\(18\\cdot V\\) \\\\\nБ) внутренняя энергия газа \\(U(V)\\) & 2) \\(\\displaystyle\\frac{149{,}58}{V}\\) \\\\\n& 3) \\(224{,}37\\) \\\\\n& 4) \\(27\\)\n\\end{tabular}\n\n\\begin{tabular}{|c|c|}\n\\hline\nА & Б \\\\\n\\hline\n\\phantom{0} & \\phantom{0} \\\\\n\\hline\n\\end{tabular}\n\\end{center}",
+            "solution_tex": "При \\(R=8{,}31\\,\\text{Дж}/(\\text{моль}\\cdot\\text{К})\\) имеем \\(\\nu RT=0{,}04\\cdot8{,}31\\cdot450=149{,}58\\,\\text{Дж}\\). По уравнению состояния \\(p(V)=\\frac{\\nu RT}{V}=\\frac{149{,}58}{V}\\) (давление в паскалях при объёме в \\(\\text{м}^3\\)): А — 2. Внутренняя энергия одноатомного газа \\(U=\\frac{3}{2}\\nu RT=224{,}37\\,\\text{Дж}\\) постоянна: Б — 3.\n\nОтвет: А — 2, Б — 3; \\(23\\).",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "65ACC9",
+            "condition_tex": "Аргон в количестве $\\nu\\,\\text{моль}$ помещают в открытый сверху сосуд под тяжёлый подвижный поршень и начинают охлаждать. Начальное давление газа — $p_0$. Трением между поршнем и стенками сосуда пренебречь.\n\nУстановите соответствие между физическими величинами, характеризующими газ, и формулами, выражающими их зависимость от абсолютной температуры $T$ газа ($R$ — универсальная газовая постоянная).\n\n\\noindent\\begin{minipage}[t]{0.48\\linewidth}\n\\textbf{ФИЗИЧЕСКИЕ ВЕЛИЧИНЫ}\n\nА) объём газа $V(T)$\n\nБ) внутренняя энергия газа $U(T)$\n\\end{minipage}\\hfill\n\\begin{minipage}[t]{0.48\\linewidth}\n\\textbf{ФОРМУЛЫ}\n\n1) $\\dfrac{\\nu RT}{p_0}$\n\n2) $\\dfrac{\\nu Rp_0}{T}$\n\n3) $\\dfrac{3}{2}\\nu RT$\n\n4) $\\dfrac{3}{2}\\dfrac{\\nu RT}{p_0}$\n\\end{minipage}\n\n\\begin{center}\n\\begin{tabular}{|c|c|}\\hline\nА & Б \\\\ \\hline\n\\phantom{00} & \\phantom{00} \\\\ \\hline\n\\end{tabular}\n\\end{center}",
+            "solution_tex": "Тяжёлый подвижный поршень поддерживает постоянное давление $p=p_0$. Из уравнения состояния $p_0V=\\nu RT$ получаем $V(T)=\\dfrac{\\nu RT}{p_0}$: А — 1. Аргон — одноатомный идеальный газ, поэтому $U(T)=\\dfrac{3}{2}\\nu RT$: Б — 3.\n\nОтвет: А — 1, Б — 3.",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "8054C4",
+            "condition_tex": "Аргон массой $160\\,\\text{г}$ при комнатной температуре помещают в герметичный закрытый сосуд объёмом $20\\,\\text{л}$ и начинают нагревать. Масса газа в сосуде остаётся неизменной.\n\nУстановите соответствие между физическими величинами, характеризующими аргон, и формулами, выражающими их зависимость от абсолютной температуры $T$ газа в условиях данной задачи.\n\n\\noindent\\begin{minipage}[t]{0.48\\linewidth}\n\\textbf{ФИЗИЧЕСКИЕ ВЕЛИЧИНЫ}\n\nА) давление газа $p(T)$\n\nБ) внутренняя энергия газа $U(T)$\n\\end{minipage}\\hfill\n\\begin{minipage}[t]{0.48\\linewidth}\n\\textbf{ФОРМУЛЫ}\n\n1) $aT$, $a=1662\\,\\dfrac{\\text{Па}}{\\text{К}}$\n\n2) $bT$, $b=49{,}86\\,\\dfrac{\\text{Дж}}{\\text{К}}$\n\n3) $\\dfrac{c}{T}$, $c=80\\,\\text{Дж}\\cdot\\text{К}$\n\n4) $dT$, $d=4{,}986\\,\\dfrac{\\text{Па}}{\\text{К}}$\n\\end{minipage}\n\n\\begin{center}\n\\begin{tabular}{|c|c|}\\hline\nА & Б \\\\ \\hline\n\\phantom{00} & \\phantom{00} \\\\ \\hline\n\\end{tabular}\n\\end{center}",
+            "solution_tex": "Используем молярную массу аргона $M=40\\,\\text{г/моль}$. Тогда $\\nu=m/M=4\\,\\text{моль}$, $V=0{,}020\\,\\text{м}^3$.\n\\[\np(T)=\\frac{\\nu R}{V}T=\\left(1662\\,\\frac{\\text{Па}}{\\text{К}}\\right)T,\n\\qquad\nU(T)=\\frac32\\nu RT=\\left(49{,}86\\,\\frac{\\text{Дж}}{\\text{К}}\\right)T.\n\\]\nДавлению соответствует формула 1, внутренней энергии одноатомного газа — формула 2.\n\nОтвет: А — 1, Б — 2.",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "D67CAF",
+            "condition_tex": "Температура нагревателя идеального теплового двигателя, работающего по циклу Карно, равна $T_1$, а коэффициент полезного действия этого двигателя равен $\\eta$. За цикл рабочее тело двигателя получает от нагревателя количество теплоты $Q_1$.\n\nУстановите соответствие между физическими величинами и формулами, по которым их можно рассчитать.\n\n\\noindent\\begin{minipage}[t]{0.58\\linewidth}\n\\textbf{ФИЗИЧЕСКИЕ ВЕЛИЧИНЫ}\n\nА) количество теплоты, отдаваемое рабочим телом двигателя за цикл\n\nБ) температура холодильника\n\\end{minipage}\\hfill\n\\begin{minipage}[t]{0.38\\linewidth}\n\\textbf{ФОРМУЛЫ}\n\n1) $\\dfrac{T_1}{1-\\eta}$\n\n2) $T_1(1-\\eta)$\n\n3) $Q_1(1-\\eta)$\n\n4) $Q_1\\eta$\n\\end{minipage}\n\n\\begin{center}\n\\begin{tabular}{|c|c|}\\hline\nА & Б \\\\ \\hline\n\\phantom{00} & \\phantom{00} \\\\ \\hline\n\\end{tabular}\n\\end{center}",
+            "solution_tex": "Обозначим отданное холодильнику количество теплоты через $Q_2>0$. Из $\\eta=\\dfrac{Q_1-Q_2}{Q_1}$ следует $Q_2=Q_1(1-\\eta)$: А — 3. Для цикла Карно $\\eta=1-\\dfrac{T_2}{T_1}$, поэтому $T_2=T_1(1-\\eta)$: Б — 2.\n\nОтвет: А — 3, Б — 2.",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "A53641",
+            "condition_tex": "\\begin{center}\n\\begin{tikzpicture}[x=1cm,y=1cm,>=stealth]\n\\draw[->] (0,0)--(6.6,0) node[right] {$Q$};\n\\draw[->] (0,0)--(0,4) node[left] {$t$};\n\\draw (0,0.55)--(0.8,1.4)--(2.25,1.4)--(3.45,2.35)--(4.35,2.35)--(5.45,3.1);\n\\foreach \\x/\\y in {0.8/1.4,2.25/1.4,3.45/2.35,4.35/2.35,5.45/3.1} {\n\\draw[dashed] (\\x,0)--(\\x,\\y);\n\\draw (\\x,0.1)--(\\x,-0.1);\n}\n\\foreach \\y in {0.55,1.4,2.35,3.1} {\\draw (-0.1,\\y)--(0.1,\\y);}\n\\draw[dashed] (0,1.4)--(0.8,1.4);\n\\draw[dashed] (0,2.35)--(3.45,2.35);\n\\draw[dashed] (0,3.1)--(5.45,3.1);\n\\node[left] at (0,0.98) {$\\Delta t_1$};\n\\node[left] at (0,1.88) {$\\Delta t_2$};\n\\node[left] at (0,2.73) {$\\Delta t_3$};\n\\node[below] at (0.4,-0.06) {$\\Delta Q_1$};\n\\node[below] at (1.525,-0.06) {$\\Delta Q_2$};\n\\node[below] at (2.85,-0.06) {$\\Delta Q_3$};\n\\node[below] at (3.9,-0.06) {$\\Delta Q_4$};\n\\node[below] at (4.9,-0.06) {$\\Delta Q_5$};\n\\end{tikzpicture}\n\\end{center}\nВ цилиндре под поршнем находилось твёрдое вещество массой $m$. Цилиндр поместили в печь. На рисунке схематично показан график изменения температуры $t$ вещества по мере поглощения им количества теплоты $Q$. Формулы А и Б позволяют рассчитать значения физических величин, характеризующих происходящие с веществом тепловые процессы.\n\nУстановите соответствие между формулами и физическими величинами, значение которых можно рассчитать по этим формулам.\n\nК каждой позиции первого столбца подберите соответствующую позицию из второго столбца и запишите в таблицу выбранные цифры под соответствующими буквами.\n\n\\begin{center}\n\\begin{tabular}{ll}\nФОРМУЛЫ & ФИЗИЧЕСКИЕ ВЕЛИЧИНЫ \\\\\nА) $\\displaystyle\\frac{\\Delta Q_1}{m\\Delta t_1}$ & 1) удельная теплота плавления \\\\\nБ) $\\displaystyle\\frac{\\Delta Q_2}{m}$ & 2) удельная теплота парообразования \\\\\n& 3) удельная теплоёмкость твёрдого вещества \\\\\n& 4) удельная теплоёмкость жидкости\n\\end{tabular}\n\n\\begin{tabular}{|c|c|}\n\\hline\nА & Б \\\\\n\\hline\n\\phantom{3} & \\phantom{1} \\\\\n\\hline\n\\end{tabular}\n\\end{center}",
+            "solution_tex": "А: первый наклонный участок соответствует нагреванию твёрдого вещества. Из $\\Delta Q_1=mc_{\\text{тв}}\\Delta t_1$ получаем $c_{\\text{тв}}=\\dfrac{\\Delta Q_1}{m\\Delta t_1}$, поэтому А~--- 3.\n\nБ: первый горизонтальный участок соответствует плавлению при постоянной температуре. Из $\\Delta Q_2=\\lambda m$ получаем $\\lambda=\\dfrac{\\Delta Q_2}{m}$, поэтому Б~--- 1.\n\nОтвет: $31$.",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "F5A444",
+            "condition_tex": "Один моль одноатомного идеального газа участвует в процессе $1$--$2$--$3$, график которого изображён на рисунке в координатах $p$--$T$, где $p$~--- давление газа, $T$~--- абсолютная температура газа. Как изменяются объём газа $V$ в ходе процесса $1$--$2$ и плотность газа $\\rho$ в ходе процесса $2$--$3$?\n\n\\begin{center}\n\\begin{tikzpicture}[x=1cm,y=1cm,>=stealth]\n\\draw[->] (0,0)--(4,0) node[below] {$T$};\n\\draw[->] (0,0)--(0,3.3) node[left] {$p$};\n\\node[below left] at (0,0) {$0$};\n\\draw (0,0)--(2.9,1.22)--(2.9,3.05);\n\\fill (1.03,0.433) circle (1.2pt) node[above left] {$1$};\n\\fill (2.9,1.22) circle (1.2pt) node[right] {$2$};\n\\fill (2.9,3.05) circle (1.2pt) node[right] {$3$};\n\\draw[->] (1.4,0.589)--(1.95,0.82);\n\\draw[->] (2.9,1.7)--(2.9,2.2);\n\\end{tikzpicture}\n\\end{center}\nДля каждой величины определите соответствующий характер изменения:\n\n\\begin{enumerate}\n\\item увеличивается\n\\item уменьшается\n\\item не изменяется\n\\end{enumerate}\nЦифры в ответе могут повторяться.\n\n\\begin{center}\n\\begin{tabular}{|c|c|}\n\\hline\n\\shortstack{Объём газа\\\\в ходе процесса $1$--$2$} & \\shortstack{Плотность газа\\\\в ходе процесса $2$--$3$} \\\\\n\\hline\n\\phantom{3} & \\phantom{1} \\\\\n\\hline\n\\end{tabular}\n\\end{center}",
+            "solution_tex": "Из $pV=\\nu RT$ следует $V=\\nu RT/p$. На участке $1$--$2$ прямая проходит через начало координат, поэтому $p/T=\\mathrm{const}$ и объём не изменяется (3).\n\nНа участке $2$--$3$ температура постоянна, давление увеличивается, поэтому объём уменьшается. При постоянной массе $\\rho=m/V$ увеличивается (1).\n\nОтвет: $31$.",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "F0D87A",
+            "condition_tex": "$1$ моль одноатомного идеального газа участвует в процессе $1$--$2$--$3$, график которого изображён на рисунке в координатах $p$--$V$, где $p$~--- давление газа, $V$~--- объём газа. Как изменяются концентрация молекул $n$ газа в ходе процесса $1$--$2$ и абсолютная температура $T$ газа в ходе процесса $2$--$3$? Масса газа остаётся постоянной.\n\n\\begin{center}\n\\begin{tikzpicture}[x=1cm,y=1cm,>=stealth]\n\\draw[->] (0,0)--(4.2,0) node[below] {$V$};\n\\draw[->] (0,0)--(0,3.5) node[left] {$p$};\n\\node[below left] at (0,0) {$0$};\n\\draw (0.8,0.9)--(3.2,0.9)--(3.2,2.9);\n\\fill (0.8,0.9) circle (1.2pt) node[below left] {$1$};\n\\fill (3.2,0.9) circle (1.2pt) node[below right] {$2$};\n\\fill (3.2,2.9) circle (1.2pt) node[above right] {$3$};\n\\draw[->] (1.4,0.9)--(2,0.9);\n\\draw[->] (3.2,1.4)--(3.2,1.95);\n\\end{tikzpicture}\n\\end{center}\nДля каждой величины определите соответствующий характер изменения:\n\n\\begin{enumerate}\n\\item увеличивается\n\\item уменьшается\n\\item не изменяется\n\\end{enumerate}\nЦифры в ответе могут повторяться.\n\n\\begin{center}\n\\begin{tabular}{|c|c|}\n\\hline\n\\shortstack{Концентрация молекул газа\\\\в ходе процесса $1$--$2$} & \\shortstack{Абсолютная температура\\\\газа в ходе процесса $2$--$3$} \\\\\n\\hline\n\\phantom{2} & \\phantom{1} \\\\\n\\hline\n\\end{tabular}\n\\end{center}",
+            "solution_tex": "На участке $1$--$2$ объём увеличивается. Число молекул $N$ постоянно, поэтому концентрация $n=N/V$ уменьшается (2).\n\nНа участке $2$--$3$ объём постоянен, давление увеличивается. Из $T=pV/(\\nu R)$ следует, что температура увеличивается (1).\n\nОтвет: $21$.",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "F12DcD",
+            "condition_tex": "\\begin{center}\n\\begin{tikzpicture}[>=stealth,scale=0.85]\n\\draw[->] (0,0)--(4,0) node[below] {$T$};\n\\draw[->] (0,0)--(0,3.8) node[left] {$V$};\n\\node[below left] at (0,0) {$0$};\n\\coordinate (A) at (2.5,3.2);\n\\coordinate (B) at (2.5,1);\n\\coordinate (C) at (1.3,0.52);\n\\draw[dashed] (0,0)--(C);\n\\draw (A)--(B)--(C);\n\\draw[->] (2.5,2.65)--(2.5,1.95);\n\\draw[->] (2.25,0.9)--(1.75,0.7);\n\\fill (A) circle (1.5pt) node[right] {$1$};\n\\fill (B) circle (1.5pt) node[right] {$2$};\n\\fill (C) circle (1.5pt) node[above left] {$3$};\n\\end{tikzpicture}\n\\end{center}\nОдин моль идеального газа участвует в процессе \\(1\\text{–}2\\text{–}3\\), график которого изображён на рисунке в координатах \\(V\\text{–}T\\), где \\(V\\) — объём газа, \\(T\\) — абсолютная температура газа. Как изменяются давление газа \\(p\\) в ходе процесса \\(1\\text{–}2\\) и концентрация молекул газа \\(n\\) в ходе процесса \\(2\\text{–}3\\)? Масса газа остаётся постоянной.\n\nДля каждой величины определите соответствующий характер изменения:\n\\begin{enumerate}\n\\item увеличивается\n\\item уменьшается\n\\item не изменяется\n\\end{enumerate}\nЦифры в ответе могут повторяться.\n\\begin{center}\n\\begin{tabular}{|c|c|}\n\\hline\n\\shortstack{Давление газа\\\\в ходе процесса \\(1\\text{–}2\\)} & \\shortstack{Концентрация молекул газа\\\\в ходе процесса \\(2\\text{–}3\\)}\\\\\n\\hline\n\\rule{0pt}{0.6cm} & \\\\\n\\hline\n\\end{tabular}\n\\end{center}",
+            "solution_tex": "В процессе \\(1\\text{–}2\\) температура постоянна, а объём уменьшается. Из \\(p=\\nu RT/V\\) следует, что давление увеличивается (\\(1\\)). В процессе \\(2\\text{–}3\\) объём уменьшается при постоянном числе молекул, поэтому концентрация \\(n=N/V\\) увеличивается (\\(1\\)).\n\nОтвет: \\(11\\).",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "298FF1",
+            "condition_tex": "\\begin{center}\n\\begin{tikzpicture}[>=stealth,scale=0.9]\n\\draw[line width=1.2pt] (0,3.8)--(0,0)--(2.5,0)--(2.5,3.8);\n\\filldraw[fill=gray!40,line width=0.9pt] (0.08,2.85) rectangle (2.42,3.2);\n\\shade[ball color=gray!45] (1.25,0.53) circle (0.52);\n\\draw (1.25,0.53) circle (0.52);\n\\end{tikzpicture}\n\\end{center}\nВ цилиндрическом сосуде под поршнем находится газ. Поршень не закреплён и может перемещаться в сосуде без трения. На дне сосуда лежит стальной шарик (см. рисунок). Газ нагревают. Как изменятся в результате этого давление газа и действующая на шарик сила Архимеда? Атмосферное давление неизменно.\n\nДля каждой величины определите соответствующий характер изменения:\n\\begin{enumerate}\n\\item увеличится\n\\item уменьшится\n\\item не изменится\n\\end{enumerate}\nЦифры в ответе могут повторяться.\n\\begin{center}\n\\begin{tabular}{|c|c|}\n\\hline\nДавление газа & Сила Архимеда\\\\\n\\hline\n\\rule{0pt}{0.6cm} & \\\\\n\\hline\n\\end{tabular}\n\\end{center}",
+            "solution_tex": "Равновесие свободного поршня даёт \\(p=p_{\\text{атм}}+Mg/S\\), где \\(M\\) — масса поршня, \\(S\\) — его площадь. Поэтому давление не изменится (\\(3\\)). При нагревании газ расширяется, его плотность \\(\\rho\\) уменьшается. Следовательно, сила Архимеда \\(F_A=\\rho gV_{\\text{ш}}\\) уменьшится (\\(2\\)).\n\nОтвет: \\(32\\).",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "28120c",
+            "condition_tex": "\\begin{center}\n\\begin{tikzpicture}[>=stealth,scale=0.85]\n\\fill[gray!35] (0,0.6) rectangle (1.5,2.15);\n\\fill[gray!60] (0,0) rectangle (1.5,0.6);\n\\fill[black!90] (0,2.15) rectangle (1.5,2.5);\n\\fill[black!90,rounded corners=1pt] (0.66,2.5) rectangle (0.84,4.1);\n\\draw[line width=0.9pt] (0,2.8)--(0,0)--(1.5,0)--(1.5,2.8);\n\\draw[->,line width=0.8pt] (2,3.9)--(2,2.15);\n\\end{tikzpicture}\n\\end{center}\nВ цилиндре под поршнем находятся жидкость и её насыщенный пар (см. рисунок). Как изменятся давление и концентрация молекул пара при медленном перемещении поршня вниз, если температура останется неизменной? В процессе движения поршень не касается поверхности жидкости.\n\nДля каждой величины определите соответствующий характер изменения:\n\\begin{enumerate}\n\\item увеличится\n\\item уменьшится\n\\item не изменится\n\\end{enumerate}\nЦифры в ответе могут повторяться.\n\\begin{center}\n\\begin{tabular}{|c|c|}\n\\hline\nДавление пара & Концентрация молекул пара\\\\\n\\hline\n\\rule{0pt}{0.6cm} & \\\\\n\\hline\n\\end{tabular}\n\\end{center}",
+            "solution_tex": "При медленном изотермическом сжатии часть насыщенного пара конденсируется. Пока присутствуют жидкость и пар, давление \\(p_{\\text{нас}}(T)\\) при неизменной температуре постоянно (\\(3\\)). Из \\(n=p_{\\text{нас}}/(kT)\\) следует, что концентрация молекул пара также не изменяется (\\(3\\)).\n\nОтвет: \\(33\\).",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "C427F7",
+            "condition_tex": "Объём сосуда с идеальным газом уменьшили вдвое, выпустив половину газа и поддерживая температуру газа в сосуде постоянной. Как изменились при этом давление газа в сосуде и его внутренняя энергия?\n\nДля каждой величины определите соответствующий характер изменения:\n\n\\begin{enumerate}\n\\item увеличилась\n\\item уменьшилась\n\\item не изменилась\n\\end{enumerate}\n\nЦифры в ответе могут повторяться.\n\n\\begin{center}\n\\begin{tabular}{|p{4cm}|p{4cm}|}\n\\hline\nДавление газа в сосуде & Внутренняя энергия газа в сосуде \\\\\n\\hline\n\\rule{0pt}{0.6cm} & \\\\\n\\hline\n\\end{tabular}\n\\end{center}",
+            "solution_tex": "При постоянной температуре \\(p=\\nu RT/V\\). Поскольку \\(\\nu_2=\\nu_1/2\\) и \\(V_2=V_1/2\\), получаем \\(p_2=p_1\\): давление не изменилось (\\(3\\)). Внутренняя энергия идеального газа при неизменной температуре пропорциональна количеству вещества: \\(U_2=U_1/2\\), поэтому она уменьшилась (\\(2\\)).\n\nОтвет: \\(32\\).",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "FB5B0D",
+            "condition_tex": "В сосуде неизменного объёма при комнатной температуре находилась смесь неона и аргона, по \\(2\\,\\text{моль}\\) каждого. Половину смеси выпустили, а затем добавили в сосуд \\(2\\,\\text{моль}\\) аргона. Как в результате этого изменились парциальное давление аргона и давление смеси газов, если температура смеси оставалась неизменной? Для каждой величины определите соответствующий характер изменения:\n\n\\begin{enumerate}\n\\item увеличилась\n\\item уменьшилась\n\\item не изменилась\n\\end{enumerate}\n\nЦифры в ответе могут повторяться.\n\n\\begin{center}\n\\begin{tabular}{|p{4cm}|p{4cm}|}\n\\hline\nПарциальное давление аргона & Давление смеси газов в сосуде \\\\\n\\hline\n\\rule{0pt}{0.6cm} & \\\\\n\\hline\n\\end{tabular}\n\\end{center}",
+            "solution_tex": "После выпуска половины смеси осталось по \\(1\\,\\text{моль}\\) каждого газа. После добавления аргона \\(\\nu_{\\mathrm{Ar},2}=3\\,\\text{моль}\\), а общее количество вещества \\(\\nu_2=4\\,\\text{моль}\\). При постоянных \\(T\\) и \\(V\\) давление пропорционально количеству вещества. Поэтому парциальное давление аргона увеличилось в \\(3/2\\) раза (\\(1\\)), а давление смеси не изменилось, поскольку первоначально также было \\(4\\,\\text{моль}\\) газа (\\(3\\)).\n\nОтвет: \\(13\\).",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "1D2B0A",
+            "condition_tex": "Постоянная масса одноатомного идеального газа в изохорном процессе отдаёт количество теплоты \\(Q>0\\). Как меняются в этом процессе объём и внутренняя энергия газа?\n\nДля каждой величины определите соответствующий характер изменения:\n\n\\begin{enumerate}\n\\item увеличивается\n\\item уменьшается\n\\item не изменяется\n\\end{enumerate}\n\nЦифры в ответе могут повторяться.\n\n\\begin{center}\n\\begin{tabular}{|p{4cm}|p{4cm}|}\n\\hline\nОбъём газа & Внутренняя энергия газа \\\\\n\\hline\n\\rule{0pt}{0.6cm} & \\\\\n\\hline\n\\end{tabular}\n\\end{center}",
+            "solution_tex": "В изохорном процессе объём не изменяется (\\(3\\)), работа газа \\(A=0\\). Газ отдаёт теплоту, поэтому полученная им теплота равна \\(-Q\\). По первому закону термодинамики \\(\\Delta U=-Q-A=-Q<0\\): внутренняя энергия уменьшается (\\(2\\)).\n\nОтвет: \\(32\\).",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "70D177",
+            "condition_tex": "В калориметр со льдом, имеющим температуру \\(0\\,^{\\circ}\\mathrm{C}\\), добавили воду при комнатной температуре. Как изменятся в результате установления теплового равновесия удельная теплоёмкость воды и масса льда в калориметре?\n\nДля каждой величины определите соответствующий характер изменения:\n\\begin{enumerate}\n\\item увеличится\n\\item уменьшится\n\\item не изменится\n\\end{enumerate}\nЦифры в ответе могут повторяться.\n\n\\begin{center}\n\\begin{tabular}{|c|c|}\n\\hline\nУдельная теплоёмкость воды & Масса льда \\\\\n\\hline\n\\rule{0pt}{0.6cm} & \\\\\n\\hline\n\\end{tabular}\n\\end{center}",
+            "solution_tex": "Удельная теплоёмкость воды в принятой модели постоянна: \\(c=4200\\,\\text{Дж}/(\\text{кг}\\cdot\\text{К})\\), поэтому не изменится (3). Вода при охлаждении отдаёт теплоту, которая расходуется на плавление льда: \\(Q=\\lambda\\Delta m\\). Масса льда уменьшится (2).\n\n\\(\\boxed{32}\\).",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "135B3C",
+            "condition_tex": "Тонкая, упругая и мягкая оболочка герметичного воздушного шара наполнена воздухом. Как изменяются с высотой при быстром подъёме температура воздуха и концентрация молекул в шаре? Теплопроводностью оболочки шара пренебречь.\n\nДля каждой величины определите соответствующий характер изменения:\n\\begin{enumerate}\n\\item увеличивается\n\\item уменьшается\n\\item не изменяется\n\\end{enumerate}\nЦифры в ответе могут повторяться.\n\n\\begin{center}\n\\begin{tabular}{|c|c|}\n\\hline\nТемпература воздуха & Концентрация молекул \\\\\n\\hline\n\\rule{0pt}{0.6cm} & \\\\\n\\hline\n\\end{tabular}\n\\end{center}",
+            "solution_tex": "С высотой атмосферное давление уменьшается, и воздух в шаре расширяется. При быстром подъёме \\(Q=0\\), поэтому \\(\\Delta U=-A<0\\): температура уменьшается (2). Шар герметичен, число молекул \\(N\\) постоянно, а объём растёт, поэтому концентрация \\(n=N/V\\) уменьшается (2).\n\n\\(\\boxed{22}\\).",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "0D4FC9",
+            "condition_tex": "При исследовании изопроцессов использовался закрытый сосуд переменного объёма, заполненный неоном и соединённый с манометром. Объём сосуда медленно увеличивают, сохраняя давление неона в нём постоянным. Как изменяются при этом внутренняя энергия и плотность неона в сосуде?\n\nДля каждой величины определите соответствующий характер её изменения:\n\\begin{enumerate}\n\\item увеличивается\n\\item уменьшается\n\\item не изменяется\n\\end{enumerate}\nЦифры в ответе могут повторяться.\n\n\\begin{center}\n\\begin{tabular}{|c|c|}\n\\hline\nВнутренняя энергия неона в сосуде & Плотность неона в сосуде \\\\\n\\hline\n\\rule{0pt}{0.6cm} & \\\\\n\\hline\n\\end{tabular}\n\\end{center}",
+            "solution_tex": "Для одноатомного идеального газа \\(U=\\frac32\\nu RT=\\frac32pV\\). При постоянном давлении увеличение объёма приводит к увеличению внутренней энергии (1). Масса газа в закрытом сосуде постоянна, поэтому плотность \\(\\rho=m/V\\) уменьшается (2).\n\n\\(\\boxed{12}\\).",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "3BDF8F",
+            "condition_tex": "В сосуде постоянного объёма абсолютную температуру одноатомного идеального газа увеличили в \\(3\\) раза, выпустив при этом \\(\\frac{1}{3}\\) газа из сосуда. Как изменились в результате этого плотность газа в сосуде и его внутренняя энергия?\n\nДля каждой величины определите соответствующий характер изменения:\n\\begin{enumerate}\n\\item увеличилась\n\\item уменьшилась\n\\item не изменилась\n\\end{enumerate}\nЦифры в ответе могут повторяться.\n\n\\begin{center}\n\\begin{tabular}{|c|c|}\n\\hline\n\\shortstack{Плотность газа\\\\в сосуде} & \\shortstack{Внутренняя энергия\\\\газа в сосуде} \\\\\n\\hline\n\\phantom{000} & \\phantom{000} \\\\\n\\hline\n\\end{tabular}\n\\end{center}",
+            "solution_tex": "При постоянном объёме \\(\\rho=m/V\\). После выпуска газа \\(m_2=\\frac{2}{3}m_1\\), поэтому \\(\\rho_2=\\frac{2}{3}\\rho_1\\): плотность уменьшилась (\\(2\\)).\n\nДля одноатомного идеального газа \\(U=\\frac{3}{2}\\nu RT\\), поэтому\n\\[\n\\frac{U_2}{U_1}=\\frac{\\nu_2}{\\nu_1}\\frac{T_2}{T_1}=\\frac{2}{3}\\cdot3=2.\n\\]\nВнутренняя энергия увеличилась (\\(1\\)). Ответ: \\(21\\).",
+            "photo_indices": [],
+            "raster_images": []
+          },
+          {
+            "id": "352D7e",
+            "condition_tex": "В тепловом двигателе, работающем по циклу Карно, температуру нагревателя понизили. Температура холодильника и количество теплоты, отданное рабочим телом холодильнику за цикл, остались прежними. Как изменились при этом КПД теплового двигателя и работа теплового двигателя за цикл?\n\nДля каждой величины определите соответствующий характер её изменения:\n\\begin{enumerate}\n\\item увеличилась\n\\item уменьшилась\n\\item не изменилась\n\\end{enumerate}\nЦифры в ответе могут повторяться.\n\n\\begin{center}\n\\begin{tabular}{|c|c|}\n\\hline\n\\shortstack{КПД теплового\\\\двигателя} & \\shortstack{Работа теплового двигателя\\\\за цикл} \\\\\n\\hline\n\\phantom{000} & \\phantom{000} \\\\\n\\hline\n\\end{tabular}\n\\end{center}",
+            "solution_tex": "Обозначим абсолютные температуры нагревателя и холодильника через \\(T_{\\text{н}}\\) и \\(T_{\\text{х}}\\), а модуль теплоты, отданной холодильнику, через \\(Q_{\\text{х}}\\). КПД цикла Карно\n\\[\n\\eta=1-\\frac{T_{\\text{х}}}{T_{\\text{н}}}\n\\]\nпри понижении \\(T_{\\text{н}}\\) уменьшается (\\(2\\)). Из \\(Q_{\\text{н}}/Q_{\\text{х}}=T_{\\text{н}}/T_{\\text{х}}\\) следует\n\\[\nA=Q_{\\text{н}}-Q_{\\text{х}}=Q_{\\text{х}}\\left(\\frac{T_{\\text{н}}}{T_{\\text{х}}}-1\\right).\n\\]\nПри неизменных \\(Q_{\\text{х}}\\) и \\(T_{\\text{х}}\\) работа также уменьшается (\\(2\\)). Ответ: \\(22\\).",
+            "photo_indices": [],
+            "raster_images": []
+          }
+        ],
+        "reviewed_tex_sha256": "c579152bd1ab1099a7f2184ab88671cfc3a3634da9ae0ff012714d2124085cb0",
+        "review": "{\"exam_number\": 10, \"approved\": true, \"reviewed_content_sha256\": \"976affa36b3c0bbf8978d8ad5ef69270fac4a9eded55fe10acf32ed4a45fe454\", \"reviewer\": \"independent Codex review with original HTML and all source images\", \"tasks\": [{\"id\": \"5644DE\", \"approved\": true, \"reason\": \"Условие, формулы, варианты и структура таблиц соответствуют HTML; рисунков нет. Из pV=(2/3)νN_AĒк следуют А — давление, Б — количество вещества. Ответ 32 верен. LaTeX корректен; соответствует № 10 карты 2027.\", \"correction\": \"\"}, {\"id\": \"CD1D80\", \"approved\": true, \"reason\": \"Условие, обозначения, обе формулы, варианты и таблицы сохранены; рисунков нет. По p=nkT и pV=NkT получаем А — 2, Б — 1. Ответ 21 верен. LaTeX корректен; соответствует № 10 карты 2027.\", \"correction\": \"\"}, {\"id\": \"B5F219\", \"approved\": true, \"reason\": \"Все числа, условия, варианты формул и таблицы соответствуют HTML; рисунков нет. Независимый расчёт: νRT=149,58 Дж, U=224,37 Дж, p=149,58/V в СИ. Ответ 23 верен; единицы и LaTeX корректны. Соответствует № 10 карты 2027.\", \"correction\": \"\"}, {\"id\": \"65ACC9\", \"approved\": true, \"reason\": \"Условие, обозначения, четыре варианта и структура соответствия сохранены; рисунков нет. При постоянном давлении p₀ объём V=νRT/p₀, для одноатомного аргона U=3νRT/2. Ответ А — 1, Б — 3 верен. LaTeX корректен; соответствует № 10 карты 2027.\", \"correction\": \"\"}, {\"id\": \"8054C4\", \"approved\": true, \"reason\": \"Условие, формулы, единицы и таблица соответствуют HTML. Независимый расчёт даёт p(T)=1662T и U(T)=49,86T в СИ; ответ 12 верен. Соответствует № 10 переданной карты.\", \"correction\": \"\"}, {\"id\": \"D67CAF\", \"approved\": true, \"reason\": \"Условие и все варианты переданы корректно. Из формул КПД следуют Q₂=Q₁(1−η) и T₂=T₁(1−η); ответ 32 верен. LaTeX корректен, задание соответствует № 10 переданной карты.\", \"correction\": \"\"}, {\"id\": \"A53641\", \"approved\": true, \"reason\": \"Условие, варианты и структура таблиц сохранены. TikZ воспроизводит стадии, подписи, проекции и пропорции исходного схематического графика. Формулы определяют теплоёмкость твёрдого вещества и теплоту плавления; ответ 31 верен. Соответствует № 10 переданной карты.\", \"correction\": \"\"}, {\"id\": \"F5A444\", \"approved\": true, \"reason\": \"Условие, варианты изменений и таблица сохранены. TikZ корректно передаёт прямую через начало координат, вертикальный участок и направления процесса. Объём на первом участке постоянен, плотность на втором увеличивается; ответ 31 верен. Соответствует № 10 переданной карты.\", \"correction\": \"\"}, {\"id\": \"F0D87A\", \"approved\": true, \"reason\": \"Условие, варианты и таблица сохранены; TikZ соответствует исходному графику. При расширении концентрация уменьшается, при изохорном повышении давления температура растёт. Ответ 21 верен; соответствует № 10 карты 2027.\", \"correction\": \"\"}, {\"id\": \"F12DcD\", \"approved\": true, \"reason\": \"Условие, варианты, таблица и график переданы корректно, включая штриховое продолжение к началу координат и направления процессов. Давление и концентрация увеличиваются. Ответ 11 верен; соответствует № 10 карты 2027.\", \"correction\": \"\"}, {\"id\": \"298FF1\", \"approved\": true, \"reason\": \"Условие, варианты, таблица и схема сохранены. Давление под свободным поршнем постоянно; при нагревании плотность газа и сила Архимеда уменьшаются. Формулы и ответ 32 корректны; соответствует № 10 карты 2027.\", \"correction\": \"\"}, {\"id\": \"28120c\", \"approved\": true, \"reason\": \"Условие, варианты, таблица и схема с направленной вниз стрелкой сохранены. При изотермическом сжатии насыщенного пара происходит конденсация, давление и концентрация остаются постоянными. Формулы и ответ 33 корректны; соответствует № 10 карты 2027. Растровые исключения не используются.\", \"correction\": \"\"}, {\"id\": \"C427F7\", \"approved\": true, \"reason\": \"Условие, варианты и таблица соответствуют HTML. При постоянной температуре отношение количества вещества к объёму сохраняется, давление неизменно; внутренняя энергия уменьшается вдвое. Ответ 32 верен. Соответствует № 10 карты 2027. Рисунков нет.\", \"correction\": \"\"}, {\"id\": \"FB5B0D\", \"approved\": true, \"reason\": \"Условие, числа, варианты и таблица переданы корректно. В итоге аргона 3 моль вместо 2 моль, всего газа 4 моль: парциальное давление аргона увеличивается, общее давление сохраняется. Ответ 13 верен. LaTeX корректен. Соответствует № 10 карты 2027. Рисунков нет.\", \"correction\": \"\"}, {\"id\": \"1D2B0A\", \"approved\": true, \"reason\": \"Условие, варианты и таблица соответствуют HTML. При изохорном процессе работа равна нулю; отдача теплоты означает уменьшение внутренней энергии. Знак в формуле учтён правильно, ответ 32 верен. LaTeX корректен. Соответствует № 10 карты 2027. Рисунков нет.\", \"correction\": \"\"}, {\"id\": \"70D177\", \"approved\": true, \"reason\": \"Условие, температура, варианты и таблица сохранены. В принятой школьной модели удельная теплоёмкость воды постоянна; тёплая вода плавит лёд, уменьшая его массу. Формулы и единицы набраны корректно, ответ 32 верен. Соответствует № 10 карты 2027. Рисунков нет.\", \"correction\": \"\"}, {\"id\": \"135B3C\", \"approved\": true, \"reason\": \"Условие, варианты и структура таблицы соответствуют HTML. При адиабатическом расширении температура и концентрация уменьшаются; ответ 22 верен. Формулы набраны корректно. Соответствует № 10 переданной карты 2027. Изображений и исключений нет.\", \"correction\": \"\"}, {\"id\": \"0D4FC9\", \"approved\": true, \"reason\": \"Условие, варианты и таблица сохранены. При постоянном давлении U=3pV/2 увеличивается, а плотность при постоянной массе уменьшается; ответ 12 верен. LaTeX корректен. Соответствует № 10 переданной карты 2027. Изображений и исключений нет.\", \"correction\": \"\"}, {\"id\": \"3BDF8F\", \"approved\": true, \"reason\": \"Условие, числа, варианты и порядок столбцов соответствуют HTML. Плотность уменьшается до 2/3 исходной, внутренняя энергия увеличивается вдвое; ответ 21 верен. Формулы и числа корректно набраны LaTeX. Соответствует № 10 переданной карты 2027. Изображений и исключений нет.\", \"correction\": \"\"}, {\"id\": \"352D7e\", \"approved\": true, \"reason\": \"Условие, варианты и таблица соответствуют HTML. Формулы Карно и работы применены правильно: КПД и работа уменьшаются; ответ 22 верен. Обозначения и LaTeX корректны. Соответствует № 10 переданной карты 2027. Изображений и исключений нет.\", \"correction\": \"\"}]}"
+      },
+      "reference_tex": ""
+    }
+  ]
+}

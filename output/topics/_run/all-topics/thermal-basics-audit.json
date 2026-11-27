@@ -1,0 +1,24 @@
+{
+  "batch": "thermal-basics",
+  "bundle_sha256": "fb7baa003846c87b2bb9167b275cc443836f5eccdf032089a250989870cf2f1a",
+  "topics": [
+    "2.3",
+    "2.1.2",
+    "2.2",
+    "2.4.3"
+  ],
+  "tasks": 44,
+  "pages": 28,
+  "baseline_preserved": 107,
+  "files": {
+    "task-2-3.tex": "bd0e9a21c657599d1cf7d6f318cfbcee2eb4b1c0808048f4fbbe44104225cfd1",
+    "tutor-2-3.tex": "8a4986b8aeeccfd2ddf35a19f2f6cc124e4e976f551e4948c38882e3e3413121",
+    "task-2-1-2.tex": "41aa79dd0fd964321e65e71b46f7db0effd65d7e7f9f61f21bf6db04c1b5dc47",
+    "tutor-2-1-2.tex": "c2b9f3bab9fc59486b24121942d8df98c39ec8cd879d0e5fc9bf4ea4079a8432",
+    "task-2-2.tex": "acbe81c765d7aae5f0d98998088bc1fb56e1e12961fc6901465fbf0e42af61d6",
+    "tutor-2-2.tex": "b76af641c1be222128d1cd358b28d6e54bfefa380a5d6bf9e17c132699ea6281",
+    "task-2-4-3.tex": "f2df58f33159654fe097b9cacd6c0df741a9eba1c96d00d1c007f05534aa6d10",
+    "tutor-2-4-3.tex": "1f445b13962f0c33614b722b838e373acfd763e84ccf5bf90a7be1ff48a86cd9"
+  },
+  "editor_open_checked": false
+}

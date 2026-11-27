@@ -1,0 +1,15 @@
+{
+  "batch": "mechanics-satellites",
+  "bundle_sha256": "c0cdcb469ddae740aa0a5409d395033f6efa9acfc2b8867b58441f52577d24de",
+  "topics": [
+    "1.10.4"
+  ],
+  "tasks": 10,
+  "pages": 9,
+  "baseline_preserved": 107,
+  "files": {
+    "task-1-10-4.tex": "e0412448799bf49345df3dbab80c897d78b702e0c5d1d1384d616491aa1d6970",
+    "tutor-1-10-4.tex": "0de8d6a1cdf11290fdbbc7874a659736e20081969afb3685a885bade90c10b9e"
+  },
+  "editor_open_checked": false
+}

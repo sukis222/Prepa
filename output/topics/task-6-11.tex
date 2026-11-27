@@ -1,0 +1,259 @@
+% !TEX root = task-6-11.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{6.11}{Ядерные реакции}
+
+
+% Source sdamgia-2104: https://phys-ege.sdamgia.ru/problem?id=2104
+\BankTask{sdamgia-2104}{
+В результате реакции синтеза ядра дейтерия с ядром ${}^{X}_{Y}\mathrm{Z}$ образуется ядро бора и нейтрон в соответствии с реакцией:
+
+\[{}^{2}_{1}\mathrm{H} + {}^{X}_{Y}\mathrm{Z} \to {}^{10}_{5}\mathrm{B} + {}^{1}_{0}\mathrm{n}.\]
+
+Каковы массовое число X и заряд Y (в единицах элементарного заряда) ядра, вступившего в реакцию с дейтерием?
+
+\begin{center}\small\renewcommand{\arraystretch}{1.25}\begin{tabular}{|p{0.450\linewidth}|p{0.450\linewidth}|}\hline
+X & Y\\\hline
+ & \\\hline
+\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение}\par
+В ходе ядерной реакции выполняется закон сохранения массового числа, то есть суммарного числа протонов и нейтронов. Следовательно, массовое число неизвестного ядра равно $X=10 + 1 - 2=9.$ Кроме того, выполняется закон сохранения электрического заряда, отсюда находим, что заряд ядра равен $Y=5 - 1=4.$
+
+Ответ: $94$.
+}
+
+% Source sdamgia-5477: https://phys-ege.sdamgia.ru/problem?id=5477
+\BankTask{sdamgia-5477}{
+Каково массовое число ядра $X$ в реакции деления урана ${}^{1}_{0}\mathrm{n} + {}^{235}_{92}\mathrm{U} \longrightarrow {}^{141}_{56}\mathrm{Ba} + X + 3 {}^{1}_{0}\mathrm{n}$?
+}{
+\smallskip\noindent\textbf{Решение}\par
+В ходе ядерной реакции выполняется закон сохранения массового числа, то есть суммарного числа протонов и нейтронов. Следовательно, массовое число неизвестного ядра $1 + 235 - 141 - 3=92.$
+
+Ответ: $92$.
+}
+
+% Source sdamgia-5547: https://phys-ege.sdamgia.ru/problem?id=5547
+\BankTask{sdamgia-5547}{
+Каково массовое число ядра $X$ в реакции ${}^{241}_{95}\mathrm{Am} + {}^{4}_{2}\mathrm{He}\longrightarrow X + 2 {}^{1}_{0}\mathrm{n}$?
+}{
+\smallskip\noindent\textbf{Решение}\par
+В ходе ядерной реакции выполняется закон сохранения массового числа, поэтому сумма массовых чисел до реакции равна сумме массовых чисел после реакции. Следовательно, массовое число ядра $X$ равно $241 + 4 - 2=243.$
+
+Ответ: $243$.
+}
+
+% Source sdamgia-9063: https://phys-ege.sdamgia.ru/problem?id=9063
+\BankTask{sdamgia-9063}{
+Определите, сколько $\alpha $-частиц и сколько протонов получается в результате реакции термоядерного синтеза ${}^{3}_{2}\mathrm{He} + {}^{6}_{3}\mathrm{Li}$ → $? \cdot  {}^{4}_{2}\mathrm{He} + ? \cdot  {}^{1}_{1}\mathrm{p}.$
+
+\begin{center}\small\renewcommand{\arraystretch}{1.25}\begin{tabular}{|p{0.450\linewidth}|p{0.450\linewidth}|}\hline
+Количество $\alpha $-частиц & Количество протонов\\\hline
+ & \\\hline
+\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение}\par
+В ходе реакции синтеза выполняется закон сохранения зарядового и массового числа. Таким образом, при осуществлении этой реакции должно получится $2$ $\alpha $-частицы и $1$ протон:
+
+\[\begin{cases}3 + 6=2 \cdot  4 + 1,\\ 2 + 3=2 \cdot  2 + 1.\end{cases} .\]
+
+Ответ: $21$.
+}
+
+% Source sdamgia-9319: https://phys-ege.sdamgia.ru/problem?id=9319
+\BankTask{sdamgia-9319}{
+В результате цепной реакции деления урана ${}^{1}_{0}\mathrm{n} + {}^{235}_{92}\mathrm{U} \rightarrow  {}^{A}_{Z}\mathrm{X} + {}^{139}_{56}\mathrm{Ba} + 3 {}^{1}_{0}\mathrm{n}$ образуется ядро химического элемента ${}^{A}_{Z}\mathrm{X}.$ Каковы заряд образовавшегося ядра Z (в единицах элементарного заряда) и его массовое число A?
+
+В ответе запишите числа слитно без пробела.
+
+\begin{center}\small\renewcommand{\arraystretch}{1.25}\begin{tabular}{|p{0.450\linewidth}|p{0.450\linewidth}|}\hline
+Заряд ядра Z & Массовое число ядра $A$\\\hline
+ & \\\hline
+\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение}\par
+В соответствии с законами сохранения массового числа и заряда получаем:
+
+\[\begin{cases}1 + 235 = A + 139 + 3 \cdot  1,\\ 0 + 92 = Z + 56 + 3 \cdot  0.\end{cases} \Longleftrightarrow  \begin{cases}A = 94,\\ Z = 36.\end{cases}\]
+
+Ответ: $3694$.
+}
+
+% Source sdamgia-9746: https://phys-ege.sdamgia.ru/problem?id=9746
+\BankTask{sdamgia-9746}{
+Определите число протонов и нейтронов в атомном ядре неизвестного элемента X, участвующего в ядерной реакции ${}^{A}_{Z}\mathrm{X} + {}^{1}_{1}\mathrm{H} \rightarrow  {}^{3}_{2}\mathrm{He} + {}^{4}_{2}\mathrm{He}.$ В ответе запишите число протонов и число нейтронов слитно без знаков препинания между ними.
+
+\begin{center}\small\renewcommand{\arraystretch}{1.25}\begin{tabular}{|p{0.450\linewidth}|p{0.450\linewidth}|}\hline
+Число протонов & Число нейтронов\\\hline
+ & \\\hline
+\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение}\par
+В соответствии с законами сохранения массового числа и заряда получаем:
+
+\[\begin{cases}A + 1 = 3 + 4,\\ Z + 1=2 + 2.\end{cases} \Longleftrightarrow  \begin{cases}A = 6,\\ Z = 3.\end{cases}\]
+
+Отсюда следует, что в неизвестном ядре $Z=3$ протона и $A - Z=3$ нейтрона.
+
+Ответ: $33$.
+}
+
+% Source sdamgia-10078: https://phys-ege.sdamgia.ru/problem?id=10078
+\BankTask{sdamgia-10078}{
+Ядро бора может захватить нейтрон, в результате чего происходит ядерная реакция ${}^{1}_{0}\mathrm{n} + {}^{10}_{5}\mathrm{B} \rightarrow  {}^{A}_{Z}\mathrm{X} + {}^{4}_{2}\mathrm{He}$ с образованием ядра химического элемента ${}^{A}_{Z}\mathrm{X}.$ Каковы заряд образовавшегося ядра Z (в единицах элементарного заряда) и его массовое число A?
+
+\begin{center}\small\renewcommand{\arraystretch}{1.25}\begin{tabular}{|p{0.450\linewidth}|p{0.450\linewidth}|}\hline
+Заряд ядра Z & Массовое число ядра $A$\\\hline
+ & \\\hline
+\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение}\par
+В соответствии с законами сохранения массового числа и заряда получаем:
+
+\[\begin{cases}1 + 10 =A + 4,\\ 0 + 5=Z + 2.\end{cases} \Longleftrightarrow  \begin{cases}A = 7,\\ Z = 3.\end{cases}\]
+
+Отсюда следует, что в неизвестном ядре $3$ протона и $7$ нуклонов.
+
+Ответ: $37$.
+}
+
+% Source sdamgia-10477: https://phys-ege.sdamgia.ru/problem?id=10477
+\BankTask{sdamgia-10477}{
+Ядро бора может захватить альфа-частицу, в результате чего происходит ядерная реакция ${}^{4}_{2}\mathrm{He} + {}^{11}_{5}\mathrm{B} \rightarrow  {}^{A}_{Z}\mathrm{X} + {}^{1}_{0}\mathrm{n}$ с образованием ядра химического элемента ${}^{A}_{Z}\mathrm{X}.$ Каковы заряд образовавшегося ядра Z (в единицах элементарного заряда) и его массовое число A?
+
+В ответе запишите числа слитно без пробела.
+
+\begin{center}\small\renewcommand{\arraystretch}{1.25}\begin{tabular}{|p{0.450\linewidth}|p{0.450\linewidth}|}\hline
+Заряд ядра Z & Массовое число ядра $A$\\\hline
+ & \\\hline
+\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение}\par
+В ходе ядерной реакции выполняются законы сохранения зарядового и массового чисел. Следовательно, заряд ядра неизвестного элемента равен $Z=2 + 5 - 0=7,$ а его массовое число $A=4 + 11 - 1=14.$
+
+Ответ: $714$.
+}
+
+% Source sdamgia-10649: https://phys-ege.sdamgia.ru/problem?id=10649
+\BankTask{sdamgia-10649}{
+В результате реакции ${}^{27}_{13}\mathrm{Al} + {}^{1}_{0}\mathrm{n}\rightarrow  {}^{A}_{Z}\mathrm{X} + {}^{4}_{2}\mathrm{He}$ образуется некоторое ядро X. Каковы заряд образовавшегося ядра Z (в единицах элементарного заряда) и его массовое число A?
+
+\begin{center}\small\renewcommand{\arraystretch}{1.25}\begin{tabular}{|p{0.450\linewidth}|p{0.450\linewidth}|}\hline
+Заряд ядра Z & Массовое число ядра $A$\\\hline
+ & \\\hline
+\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение}\par
+В ходе реакции должен выполняться закон сохранения зарядового и массового числа. 
+
+\[\begin{cases}27 + 1=A + 4,\\ 13 + 0=Z + 2.\end{cases} \Longleftrightarrow  \begin{cases}A=24,\\ Z=11.\end{cases} .\]
+
+Ответ: $1124$.
+}
+
+% Source sdamgia-29038: https://phys-ege.sdamgia.ru/problem?id=29038
+\BankTask{sdamgia-29038}{
+Ядро ${}^{207}_{82}\mathrm{Pb}$ поглотило нейтрон. Сколько протонов содержится в ядре, образовавшемся в результате этой реакции?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Нейтрон имеет заряд $0$. Потому при поглощении нейтрона зарядовое число не изменилось и осталось равным $82$.
+
+Ответ: $82$.
+}
+
+
+% Source F3BEA3: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=F3BEA3
+\BankTask{F3BEA3}{
+В результате ядерной реакции синтеза \({}_{1}^{2}\mathrm{H}+{}_{1}^{2}\mathrm{H}\to{}_{Z}^{A}X+{}_{1}^{1}\mathrm{p}\) образуется ядро химического элемента \({}_{Z}^{A}X\). Каковы заряд образовавшегося ядра \(Z\) (в единицах элементарного заряда) и его массовое число \(A\)?
+\begin{center}\begin{tabular}{|c|c|}\hline
+Заряд ядра $Z$ & Массовое число ядра $A$ \\ \hline
+\rule{0pt}{1.5em} & \\ \hline
+\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По закону сохранения заряда \(Z=1+1-1=1\). По закону сохранения массового числа \(A=2+2-1=3\). Ответ: \(Z=1\), \(A=3\).
+}
+
+% Source AC25E0: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=AC25E0
+\BankTask{AC25E0}{
+При взаимодействии ядра изотопа бора \({}_{5}^{10}\mathrm{B}\) с нейтроном образуются \(\alpha\)-частица и ядро \({}_{Z}^{A}X\). Определите массовое число и зарядовое число ядра \({}_{Z}^{A}X\).
+\begin{center}\begin{tabular}{|c|c|}\hline
+Массовое число $A$ & Зарядовое число $Z$ \\ \hline
+\rule{0pt}{1.5em} & \\ \hline
+\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Реакция имеет вид \({}_{5}^{10}\mathrm{B}+{}_{0}^{1}\mathrm{n}\to{}_{2}^{4}\mathrm{He}+{}_{Z}^{A}X\). Из сохранения массового числа и заряда получаем \(A=10+1-4=7\), \(Z=5-2=3\). Ответ: \(A=7\), \(Z=3\).
+}
+
+% Source 018DD9: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=018DD9
+\BankTask{018DD9}{
+Ядро азота захватывает альфа-частицу, в результате чего происходит ядерная реакция ${}_{7}^{14}\mathrm{N}+{}_{2}^{4}\mathrm{He}\to{}_{Z}^{A}X+{}_{1}^{1}\mathrm{p}$ с образованием ядра химического элемента ${}_{Z}^{A}X$. Каков заряд $Z$ образовавшегося ядра (в единицах элементарного заряда)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По закону сохранения электрического заряда $7+2=Z+1$. Следовательно, $Z=8$. Ответ: $8$.
+}
+
+% Source A21154: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=A21154
+\BankTask{A21154}{
+Ядро урана захватывает нейтрон, в результате чего происходит ядерная реакция ${}_{0}^{1}\mathrm{n}+{}_{92}^{238}\mathrm{U}\to{}_{Z}^{A}X+2{}_{0}^{1}\mathrm{n}$ с образованием ядра химического элемента ${}_{Z}^{A}X$. Каков заряд образовавшегося ядра $Z$ (в единицах элементарного заряда)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По закону сохранения электрического заряда $0+92=Z+2\cdot0$. Следовательно, заряд образовавшегося ядра в единицах элементарного заряда равен $Z=92$.
+}
+
+% Source 2787C9: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=2787C9
+\BankTask{2787C9}{
+Ядро лития может захватить протон, в результате чего происходит ядерная реакция ${}_{1}^{1}\mathrm{p}+{}_{3}^{7}\mathrm{Li}\to{}_{Z}^{A}X+{}_{2}^{4}\mathrm{He}$ с образованием ядра химического элемента ${}_{Z}^{A}X$. Каковы заряд образовавшегося ядра $Z$ (в единицах элементарного заряда) и его массовое число $A$?
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Заряд ядра $Z$ & Массовое число ядра $A$ \\
+\hline
+ & \\
+\hline
+\end{tabular}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По закону сохранения электрического заряда $1+3=Z+2$, откуда $Z=2$. По закону сохранения массового числа $1+7=A+4$, поэтому $A=4$. Ответ: $2$; $4$.
+}
+
+\end{document}

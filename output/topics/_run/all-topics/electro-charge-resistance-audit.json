@@ -1,0 +1,18 @@
+{
+  "batch": "electro-charge-resistance",
+  "bundle_sha256": "f88fbb76b987306bd2a4cdb20221701c7716696c4682bd6678316e95d9ad624f",
+  "topics": [
+    "3.1.2",
+    "3.9.2"
+  ],
+  "tasks": 21,
+  "pages": 20,
+  "baseline_preserved": 107,
+  "files": {
+    "task-3-1-2.tex": "0bdd2f58d0595c6a7b4a9e133253b5d66e5763ea0fb85ad3659c7930fc30c982",
+    "tutor-3-1-2.tex": "22e5480c455bf6a4e797487bd17de9aa9d796c0445d5b108d9a9a5d85089e4fa",
+    "task-3-9-2.tex": "f58189119eff031896177d484d0917892c95b6538119f7775083ba69de8f4ceb",
+    "tutor-3-9-2.tex": "6bd50c347665b4c9ddf42f8d258c93736879472e13e5f4a821a1abcdeeab699d"
+  },
+  "editor_open_checked": false
+}

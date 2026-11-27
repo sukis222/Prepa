@@ -1,0 +1,15 @@
+{
+  "batch": "electro-dielectrics",
+  "bundle_sha256": "98e83fa24a1e601c84ca4c00f9e01282e4e115866606a479dcb91b026c16ed29",
+  "topics": [
+    "3.6"
+  ],
+  "tasks": 10,
+  "pages": 12,
+  "baseline_preserved": 107,
+  "files": {
+    "task-3-6.tex": "5467d994df84e7aaef6983d8278456533a9d168908bc182d044d9b579bd55cb3",
+    "tutor-3-6.tex": "fe671e431e4d01aafd4b3b4955e5d141d0b4982e5e9eae84274cc26a9f65353d"
+  },
+  "editor_open_checked": false
+}

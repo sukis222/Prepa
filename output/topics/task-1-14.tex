@@ -1,0 +1,167 @@
+% !TEX root = task-1-14.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{1.14}{Импульс}
+
+
+% Source F579FA: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=F579FA
+\BankTask{F579FA}{
+Отношение скорости грузовика к скорости легкового автомобиля $\frac{\upsilon_1}{\upsilon_2}=\frac{1}{2}.$ Масса грузовика $m_1=3000\,\text{кг}$. Какова масса легкового автомобиля, если отношение импульса грузовика к импульсу легкового автомобиля равно $1{,}5$? Результат выразите в $\text{кг}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$p_1/p_2=(m_1/m_2)(v_1/v_2)$. Поэтому $m_2=m_1(v_1/v_2)/(p_1/p_2)=3000\cdot0{,}5/1{,}5=1000\,\text{кг}$.
+}
+
+% Source 72C7F7: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=72C7F7
+\BankTask{72C7F7}{
+Отношение импульса легкового автомобиля к импульсу мотоцикла $\frac{p_1}{p_2}=5$. Каково отношение их скоростей $\frac{\upsilon_1}{\upsilon_2},$ если отношение массы легкового автомобиля к массе мотоцикла $\frac{m_1}{m_2}=2{,}5$?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$v_1/v_2=(p_1/p_2)/(m_1/m_2)=5/2{,}5=2$.
+}
+
+% Source D82e7B: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=D82e7B
+\BankTask{D82e7B}{
+Два тела, каждое массой $2\,\text{кг}$, движутся на одной прямой, вдоль которой направлена ось $O x$ На рисунке приведены графики зависимости проекций $\upsilon_x$ их скорости от времени $t.$
+\begin{center}\begin{tikzpicture}[x=.225cm,y=.45cm,>=stealth]
+\draw[thin,dashed,xstep=2,ystep=1] (0,0) grid (20,8);
+\draw[->] (0,0)--(22,0) node[right] {$t,\,\text{с}$};
+\draw[->] (0,0)--(0,9) node[above] {$\upsilon_x,\,\text{м}/\text{с}$};
+\foreach \x in {0,4,8,12,16} \node[below] at (\x,0) {$\x$};
+\foreach \y in {2,4,6} \node[left] at (0,\y) {$\y$};
+\draw[very thick] (0,7)--(20,{19/7}); \node at (6,6.8) {$1$};
+\draw[very thick] (0,.5)--(20,5.5); \node at (8,1.7) {$2$};
+\end{tikzpicture}\end{center}
+\begin{enumerate}
+\item Равнодействующая сил, действующих на тело $1$, остаётся постоянной в течение всего времени наблюдения.
+\item В промежутке времени от $0$ до $14\,\text{с}$ тела двигались навстречу друг другу.
+\item Путь, пройденный телом $1$ за промежуток времени от $0$ до $18\,\text{с}$, больше пути, пройденного телом $2$ за тот же промежуток времени.
+\item Кинетическая энергия тела $2$ за промежуток времени от $6$ до $14\,\text{с}$ увеличилась в $2$ раза.
+\item Модуль импульса тела $2$ в момент времени $t=10\,\text{с}$ равен $10\,\text{кг}\cdot\text{м}/\text{с}$.
+\end{enumerate}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Линейные графики задают $v_{1x}=7-\frac{3}{14}t$ и $v_{2x}=0{,}5+0{,}25t$ в СИ. Равнодействующая на тело $1$ постоянна; обе скорости положительны. За первые $18\,\text{с}$ пути $s_1=7\cdot18-\frac{3}{28}\cdot18^2=\frac{639}{7}\,\text{м}\approx91{,}3\,\text{м}$ и $s_2=(0{,}5+5)18/2=49{,}5\,\text{м}$, значит $s_1>s_2$. Для тела $2$ $E_{\text{к}}(14)/E_{\text{к}}(6)=(4/2)^2=4$, $p(10)=2\cdot3=6\,\text{кг}\cdot\text{м}/\text{с}$. Ответ: $13$.
+}
+
+% Source D4E9EE: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=D4E9EE
+\BankTask{D4E9EE}{
+В инерциальной системе отсчёта вдоль оси $Ox$ движется тело массой $20\,\text{кг}$. На рисунке приведён график зависимости проекции скорости $V_{x}$ этого тела от времени $t$.
+\begin{center}
+\begin{tikzpicture}[x=0.06cm,y=0.6cm,>=stealth]
+\draw[thin,black!65,xstep=10,ystep=1] (0,0) grid (100,4);
+\draw[->] (0,0)--(110,0) node[right] {$t,\,\text{с}$};
+\draw[->] (0,0)--(0,5) node[above] {$v_x,\,\text{м}/\text{с}$};
+
+\node[below] at (10,0) {$10$};
+\node[below] at (20,0) {$20$};
+\node[below] at (30,0) {$30$};
+\node[below] at (40,0) {$40$};
+\node[below] at (50,0) {$50$};
+\node[below] at (60,0) {$60$};
+\node[below] at (70,0) {$70$};
+\node[below] at (80,0) {$80$};
+\node[below] at (90,0) {$90$};
+\node[below] at (100,0) {$100$};
+\node[left] at (0,0) {$0$};
+\node[left] at (0,1) {$1$};
+\node[left] at (0,2) {$2$};
+\node[left] at (0,3) {$3$};
+\node[left] at (0,4) {$4$};
+\draw[very thick] (0,0)--(20,4)--(60,4)--(80,3)--(100,0);
+\end{tikzpicture}
+\end{center}
+\begin{enumerate}
+\item Модуль ускорения тела в промежутке времени от $0$ до $20\,\text{с}$ в два раза больше модуля ускорения тела в промежутке времени от $60$ до $80\,\text{с}$
+\item В промежутке времени от $0$ до $10\,\text{с}$ тело переместилось на $20\,\text{м}$
+\item В момент времени $40\,\text{с}$ равнодействующая сил, действующих на тело, равна $0$
+\item В промежутке времени от $80$ до $100\,\text{с}$ импульс тела уменьшился на $60\,\text{кг}\cdot\text{м}/\text{с}$
+\item Кинетическая энергия тела в промежутке времени от $10$ до $20\,\text{с}$ увеличилась в $2$ раза
+\end{enumerate}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$|a_{0-20}|=4/20=0{,}2\,\text{м}/\text{с}^2$, $|a_{60-80}|=(4-3)/20=0{,}05\,\text{м}/\text{с}^2$ (отношение $4$). За первые $10\,\text{с}$ путь $2\cdot10/2=10\,\text{м}$. При $t=40\,\text{с}$ $a=0$ и $F=0$. За $80\! -\!100\,\text{с}$ импульс уменьшился на $20(3-0)=60\,\text{кг}\cdot\text{м}/\text{с}$. При $10\! -\!20\,\text{с}$ скорость удваивается, энергия увеличивается вчетверо. Ответ: $34$.
+}
+
+% Source DB3508: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=DB3508
+\BankTask{DB3508}{
+Шайба массой $m$ съезжает без трения из состояния покоя с вершины горки. У подножия горки потенциальная энергия шайбы равна нулю, а модуль её импульса равен $p$. Каковы высота горки и потенциальная энергия шайбы на её вершине? Ускорение свободного падения равно $g$.
+\TaskMatchingColumns[.53\linewidth]{Физические величины}{
+А) высота горки\par
+Б) потенциальная энергия шайбы на вершине горки
+}{Формулы}{
+1) $\frac{p^2}{2m^2g}$\par
+2) $\frac{p^2}{2mg}$\par
+3) $\frac{p^2}{2m}$\par
+4) $\frac{mp^2}{2g}$\par
+}\begin{center}\begin{tabular}{|c|c|}\hline А & Б \\\hline\rule{0pt}{1.2em}\hspace{1cm} & \hspace{1cm} \\\hline\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$mgh=mv^2/2=p^2/(2m)$. Поэтому $h=p^2/(2m^2g)$ (формула $1$), $E_{\text{п}}=p^2/(2m)$ (формула $3$). Ответ: $13$.
+}
+
+% Source 589e07: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=589e07
+\BankTask{589e07}{
+Мяч подбросили вверх с крыши сарая. Как изменяются по мере подъёма модуль импульса мяча и его потенциальная энергия относительно поверхности Земли? Сопротивление воздуха не учитывать.
+\begin{enumerate}
+\item увеличивается
+\item уменьшается
+\item не изменяется
+\end{enumerate}
+\TaskChangeTable{Модуль импульса мяча}{Потенциальная энергия мяча}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+При подъёме скорость уменьшается, поэтому $p=mv$ уменьшается. Высота растёт, значит $E_{\text{п}}=mgh$ увеличивается. Ответ: $21$.
+}
+
+% Source 9A9FD1: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=9A9FD1
+\BankTask{9A9FD1}{
+Спортсмен спускается на парашюте с постоянной скоростью. Как изменяются с течением времени в процессе спуска импульс спортсмена и его потенциальная энергия?
+\begin{enumerate}
+\item увеличивается
+\item уменьшается
+\item не изменяется
+\end{enumerate}
+\TaskChangeTable{Импульс}{Потенциальная энергия}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+При постоянной скорости $\vec p=m\vec v$ не меняется. Высота уменьшается, поэтому $E_{\text{п}}=mgh$ уменьшается. Ответ: $32$.
+}
+
+\end{document}

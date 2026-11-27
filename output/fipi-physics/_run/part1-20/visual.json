@@ -1,0 +1,1498 @@
+[
+  {
+    "exam_number": 1,
+    "tex_sha256": "2beb830775667759edad6ec31029a7fb4957ddc1438c916cd92b056d3bc9499d",
+    "original_report": "tmp\\part1-20-check\\visual-01.json",
+    "review": {
+      "exam_number": 1,
+      "reviewer": "agent /root/part1_07_13, independent visual review",
+      "approved": true,
+      "student_pages_viewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "tutor_pages_viewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "evidence": "All thirteen pages viewed separately through view_image. Every plot, axis label, grid, condition and formula readable. No clipping, overlaps, missing glyphs, student answers or student source credits. GPT solutions labeled. Command builds completed without overflow.",
+      "editor_view_checked": false
+    },
+    "editions": [
+      {
+        "mode": "student",
+        "pages": 6,
+        "pdf_sha256": "f5d68acb332a471b38e172574a31463593e59a7cf3c6d4381da6cb2f9b42ebbe",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 0,
+        "overflow": []
+      },
+      {
+        "mode": "tutor",
+        "pages": 7,
+        "pdf_sha256": "97a019409987ab0c5c083de36d7b110a8709c60723654c18f9d921d66e741ad0",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 20,
+        "overflow": []
+      }
+    ]
+  },
+  {
+    "exam_number": 2,
+    "tex_sha256": "e07c2b7a20321f097ee017fb0747e31eee5bbdbb78b263988fa6d41920eab738",
+    "original_report": ".scratch\\task-harvester\\part1-20\\task-02-visual.json",
+    "review": {
+      "exam_number": 2,
+      "approved": true,
+      "reviewer": "root",
+      "tex_sha256": "e07c2b7a20321f097ee017fb0747e31eee5bbdbb78b263988fa6d41920eab738",
+      "editions": [
+        {
+          "mode": "student",
+          "pages": 2,
+          "pdf_sha256": "656442429bbcf81ad5a7c190c11ffea69f259468e6bf04cc5e4d333c51ef3270",
+          "all_pages_individually_viewed": true
+        },
+        {
+          "mode": "tutor",
+          "pages": 4,
+          "pdf_sha256": "24570c6059b1616a68fe026cdd636e35572dfa8e97335a29a8bb71cfb2e4b44c",
+          "all_pages_individually_viewed": true
+        }
+      ],
+      "layout": "All pages inspected: readable text/formulas, complete figures and tables, no clipped content or collisions.",
+      "editor_view_checked": false
+    },
+    "editions": [
+      {
+        "mode": "student",
+        "pages": 2,
+        "pdf_sha256": "656442429bbcf81ad5a7c190c11ffea69f259468e6bf04cc5e4d333c51ef3270",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 0,
+        "overflow": []
+      },
+      {
+        "mode": "tutor",
+        "pages": 4,
+        "pdf_sha256": "24570c6059b1616a68fe026cdd636e35572dfa8e97335a29a8bb71cfb2e4b44c",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 20,
+        "overflow": []
+      }
+    ]
+  },
+  {
+    "exam_number": 3,
+    "tex_sha256": "7496c31b2539012e9ed581cfac57804bfb5a15afea3e7a339a3832e00c3615b3",
+    "original_report": ".scratch\\task-harvester\\part1-20\\task-03-visual.json",
+    "review": {
+      "exam_number": 3,
+      "approved": true,
+      "reviewer": "root",
+      "tex_sha256": "7496c31b2539012e9ed581cfac57804bfb5a15afea3e7a339a3832e00c3615b3",
+      "editions": [
+        {
+          "mode": "student",
+          "pages": 2,
+          "pdf_sha256": "f2f66595224211d3f78b5d8a5361cab6d75d33b9d2a375cfcd3c78d9a8d3ca18",
+          "all_pages_individually_viewed": true
+        },
+        {
+          "mode": "tutor",
+          "pages": 3,
+          "pdf_sha256": "145768050ca4c8a886b951469acf8ef3518353e57cfe604cacf41d7df9f7fce2",
+          "all_pages_individually_viewed": true
+        }
+      ],
+      "layout": "All pages inspected: readable text/formulas, complete figures and tables, no clipped content or collisions.",
+      "editor_view_checked": false
+    },
+    "editions": [
+      {
+        "mode": "student",
+        "pages": 2,
+        "pdf_sha256": "f2f66595224211d3f78b5d8a5361cab6d75d33b9d2a375cfcd3c78d9a8d3ca18",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 0,
+        "overflow": []
+      },
+      {
+        "mode": "tutor",
+        "pages": 3,
+        "pdf_sha256": "145768050ca4c8a886b951469acf8ef3518353e57cfe604cacf41d7df9f7fce2",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 20,
+        "overflow": []
+      }
+    ]
+  },
+  {
+    "exam_number": 4,
+    "tex_sha256": "e4a96ded050d3f7ac42c62bd4b54ecd4c2eb9bc04a15d6380a9051ac11f0119f",
+    "original_report": ".scratch\\task-harvester\\part1-20\\task-04-visual.json",
+    "review": {
+      "exam_number": 4,
+      "approved": true,
+      "status": "passed",
+      "reviewer": "independent agent; all full-size rendered pages personally inspected individually",
+      "tex": "D:\\GitHub\\Prepa-GPT\\output\\fipi-physics\\task-04.tex",
+      "tex_sha256": "e4a96ded050d3f7ac42c62bd4b54ecd4c2eb9bc04a15d6380a9051ac11f0119f",
+      "recipe": "Tectonic (project)",
+      "editor_view_checked": false,
+      "issues": [],
+      "editions": {
+        "student": {
+          "pages": 2,
+          "pages_inspected": [
+            1,
+            2
+          ],
+          "tex": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\student\\task-04.tex",
+          "tex_sha256": "e4a96ded050d3f7ac42c62bd4b54ecd4c2eb9bc04a15d6380a9051ac11f0119f",
+          "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\student\\task-04.pdf",
+          "pdf_sha256": "7dcefd77e49302f3802a586d1449d462a84a2f1d72057fd60b5791f1894f5656",
+          "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\previews\\student-04",
+          "page_sha256": {
+            "page-01.png": "d822e0d9a9f39b92998c3ba0eac43497670e5cd3699a7ab09263cfdbd2e9ea06",
+            "page-02.png": "193b08572470c5ac249dbbd58206b34256bb9804db040264047e99f99f789a78"
+          },
+          "checks": "Readable text/formulas/tables/diagram labels; no overlaps, clipping, missing glyphs or unwanted student solutions/sources."
+        },
+        "tutor": {
+          "pages": 3,
+          "pages_inspected": [
+            1,
+            2,
+            3
+          ],
+          "tex": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\tutor\\task-04.tex",
+          "tex_sha256": "a0ee2deed3d2e565652aa419b1943b3001c0eb0ad8304ef134be80b1b7c71b96",
+          "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\tutor\\task-04.pdf",
+          "pdf_sha256": "f622182d81ace14941b716dbe464f59604e7ef9d68fa44be0351f62c51f8823c",
+          "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\previews\\tutor-04",
+          "page_sha256": {
+            "page-01.png": "a8fa99a424763caaad987b401c00d2267b253d26544d95ab36218ce384afdf8e",
+            "page-02.png": "24a7f1e89b1f286f0871545a616e19e690e6d9e2063baac47bc955bbc9b287de",
+            "page-03.png": "c0b0b7bde3b71a576e788f86fa691fa7e3877155701e1caa2d0e66be03433eb0"
+          },
+          "checks": "Readable text/formulas/tables/diagram labels; no overlaps, clipping, missing glyphs or unwanted student solutions/sources."
+        }
+      }
+    },
+    "editions": [
+      {
+        "mode": "student",
+        "pages": 2,
+        "pdf_sha256": "7dcefd77e49302f3802a586d1449d462a84a2f1d72057fd60b5791f1894f5656",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 0,
+        "overflow": []
+      },
+      {
+        "mode": "tutor",
+        "pages": 3,
+        "pdf_sha256": "f622182d81ace14941b716dbe464f59604e7ef9d68fa44be0351f62c51f8823c",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 20,
+        "overflow": []
+      }
+    ]
+  },
+  {
+    "exam_number": 5,
+    "tex_sha256": "42f8168a1f18f307c8090c2ef778a826c8efdbc269baed968d75e171f14b7bf3",
+    "original_report": ".scratch\\task-harvester\\part1-20\\task-05-visual.json",
+    "review": {
+      "exam_number": 5,
+      "approved": true,
+      "status": "passed",
+      "reviewer": "independent agent; all full-size rendered pages personally inspected individually",
+      "tex": "D:\\GitHub\\Prepa-GPT\\output\\fipi-physics\\task-05.tex",
+      "tex_sha256": "42f8168a1f18f307c8090c2ef778a826c8efdbc269baed968d75e171f14b7bf3",
+      "recipe": "Tectonic (project)",
+      "editor_view_checked": false,
+      "issues": [],
+      "editions": {
+        "student": {
+          "pages": 9,
+          "pages_inspected": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "tex": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\student\\task-05.tex",
+          "tex_sha256": "42f8168a1f18f307c8090c2ef778a826c8efdbc269baed968d75e171f14b7bf3",
+          "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\student\\task-05.pdf",
+          "pdf_sha256": "643a446eab1db18d6639686a583bc78aa77a9b8c634894e3bd125260759a6140",
+          "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\previews\\student-05",
+          "page_sha256": {
+            "page-01.png": "442111c0c67e1b9cb336fa654aefefb6b6f6429c2957d89d6df62e71e672e65a",
+            "page-02.png": "15a7b29d94f6fd57f46812ea96346aedea18d0c8c5668117bd321c55840c76e2",
+            "page-03.png": "a9ce5bed7b60bf07a43633531b8a0fd3d219cf4de2a61c6a61358fb93d859371",
+            "page-04.png": "5a543dfe1311c292cc64934823ca5eb110d4185c81e33a214c916cb122135cd5",
+            "page-05.png": "1c1ca59100c96f85d75c599c4b3530d00a65ec10b5dc31b95a802657dc859667",
+            "page-06.png": "01a8b2b95d4945c36e66e61aed2a3deab4dc3f939319aa36fc3d44e691ff945b",
+            "page-07.png": "797ff74e29e952d307169495d69bac17b5c53136133b86e1196afc45fb4b30dc",
+            "page-08.png": "0baedfe95be7f969a153dd6cb0b47a771fdb4b49c98717e1e41760763d8b609d",
+            "page-09.png": "d9d2127ca53b8162aee493e5fe94d4ca3147bdb044d4decf03ee31968ac06b40"
+          },
+          "checks": "Readable text/formulas/tables/diagram labels; no overlaps, clipping, missing glyphs or unwanted student solutions/sources."
+        },
+        "tutor": {
+          "pages": 14,
+          "pages_inspected": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "tex": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\tutor\\task-05.tex",
+          "tex_sha256": "17e0a87e188accde3509dcb7b93675ad50295d4855d18287eb9c26c10e76966e",
+          "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\tutor\\task-05.pdf",
+          "pdf_sha256": "ccceea963c1afc99637d93df26a6347579b089339ed7a2d6949974d5d6150d69",
+          "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\previews\\tutor-05",
+          "page_sha256": {
+            "page-01.png": "d5962956282bcce47c19de2a4b74b251c653cd15fafdd9df1a0859ba98233214",
+            "page-02.png": "77261ac6d9e3c547193e8284893a6b502b4b270804aac6cd9d2fa87c42898c38",
+            "page-03.png": "623a3cd33c82a775a5b5b996030f9d82fa9943456e866e39fb97337a356ec520",
+            "page-04.png": "e57b580d40e7bf028105b1cd8b4a38966d1182b460877d474860ff04af47f379",
+            "page-05.png": "58818471a41029eb6af7673fe9923064076de2399bf61ffe15e948f915d7616e",
+            "page-06.png": "11730a75499fbb20056433d68a642f8a4568f4364da0a3d192d84c854fa86294",
+            "page-07.png": "70271fdac9daf4f090b68520ca8b6d1f1fcf745b11c28bdffe9097c0e7fd8501",
+            "page-08.png": "8a1b488ff2b2365c132bcf68b48c72bbf62fa7812d0eec546c9c12e4b48a0599",
+            "page-09.png": "f9acd17d7b835cdea09d2493ed5a4a920863c99f32f223cea3c024e9c5dff6d9",
+            "page-10.png": "30a608e38cb05a8ab4773f3ca184937772b7c52bc1794b0dc500faf9420452f4",
+            "page-11.png": "9c98af22b64431280076749a309d91d46f6922451962eaf004aa12c20bb93c0f",
+            "page-12.png": "3a5198049104d88ea5d5a63b9c33a46ac9f4b8c5403dae857f6e69914b49397f",
+            "page-13.png": "0258cfa33fdc3fd846b3a0d8c0148fbd98de349ad3b14d137a315e7763f60cab",
+            "page-14.png": "4907b7f8ee81abdaab4be581b22b23d59306aa78a09afa6f3408c85052119bec"
+          },
+          "checks": "Readable text/formulas/tables/diagram labels; no overlaps, clipping, missing glyphs or unwanted student solutions/sources."
+        }
+      }
+    },
+    "editions": [
+      {
+        "mode": "student",
+        "pages": 9,
+        "pdf_sha256": "643a446eab1db18d6639686a583bc78aa77a9b8c634894e3bd125260759a6140",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 0,
+        "overflow": []
+      },
+      {
+        "mode": "tutor",
+        "pages": 14,
+        "pdf_sha256": "ccceea963c1afc99637d93df26a6347579b089339ed7a2d6949974d5d6150d69",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 20,
+        "overflow": []
+      }
+    ]
+  },
+  {
+    "exam_number": 6,
+    "tex_sha256": "17bcf2bdce202299b3369fa2fdc380b26d3080f59892ed336ab43a634ca80a33",
+    "original_report": "tmp\\part1-20-check\\visual-06.json",
+    "review": {
+      "exam_number": 6,
+      "reviewer": "agent /root/part1_07_13, independent visual review",
+      "approved": true,
+      "student_pages_viewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "tutor_pages_viewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "evidence": "Every page opened separately through view_image at native page resolution. Conditions, both matching lists, answer tables, formulas, GPT labels and solutions are readable; no clipping, overlaps, missing glyphs, sources or student answers. Formula lists are compact but readable. No source figures in this section.",
+      "editor_view_checked": false
+    },
+    "editions": [
+      {
+        "mode": "student",
+        "pages": 6,
+        "pdf_sha256": "c835ded1ecee103775c46af0a3da5280e6ccef96c72f0f3eb52248979977676f",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 0,
+        "overflow": []
+      },
+      {
+        "mode": "tutor",
+        "pages": 7,
+        "pdf_sha256": "0aab78528eabcf12b02b1f06bff00588f55a2c5dc12965cb1ce813e652e4c712",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 20,
+        "overflow": []
+      }
+    ]
+  },
+  {
+    "exam_number": 7,
+    "tex_sha256": "424652eb2f19527252300a80a24ee2da06a0d1722ae1b4877ba8024a8000dc80",
+    "original_report": ".scratch\\task-harvester\\part1-20\\task-07-visual.json",
+    "review": {
+      "exam_number": 7,
+      "approved": true,
+      "status": "passed",
+      "reviewer": "independent agent; all full-size rendered pages personally inspected individually",
+      "tex": "D:\\GitHub\\Prepa-GPT\\output\\fipi-physics\\task-07.tex",
+      "tex_sha256": "424652eb2f19527252300a80a24ee2da06a0d1722ae1b4877ba8024a8000dc80",
+      "recipe": "Tectonic (project)",
+      "editor_view_checked": false,
+      "issues": [],
+      "editions": {
+        "student": {
+          "pages": 3,
+          "pages_inspected": [
+            1,
+            2,
+            3
+          ],
+          "tex": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\student\\task-07.tex",
+          "tex_sha256": "424652eb2f19527252300a80a24ee2da06a0d1722ae1b4877ba8024a8000dc80",
+          "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\student\\task-07.pdf",
+          "pdf_sha256": "052c36ed61f1531ea2ca4af67f8037ace22c823255cf9848b9c2abd5898f1b75",
+          "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\previews\\student-07",
+          "page_sha256": {
+            "page-01.png": "a54301dca523a100c84df6b44f6571ac6c032fb0c45ce3e84bf6316fb8a627cd",
+            "page-02.png": "001674ca58cf2853e1beb405f83f6d818b3ed77bf4339cb0e0e72e7ef653972c",
+            "page-03.png": "b6b603a577d1cf39783520b48c10003f2bced18f0cec4740fd8e11a8f11845af"
+          },
+          "checks": "Readable text/formulas/tables/diagram labels; no overlaps, clipping, missing glyphs or unwanted student solutions/sources."
+        },
+        "tutor": {
+          "pages": 5,
+          "pages_inspected": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "tex": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\tutor\\task-07.tex",
+          "tex_sha256": "afea4f4e61e69635a9faeca266818bd5e167d1bcf63f80bc02423381358e1d17",
+          "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\tutor\\task-07.pdf",
+          "pdf_sha256": "e8f449e9b7895f9baa6d568e02eae5dd451e6c4909ec11fcbfced45f06d8612e",
+          "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\previews\\tutor-07",
+          "page_sha256": {
+            "page-01.png": "7c3f5f129a1fdf2bcc470d24454ded6bead7e56cfa6588430b5e00d9d34ab10f",
+            "page-02.png": "9405cf360ef5700c1889c353e3a32fbe87695b5eacafa8dd94dfd720f9a3d4e7",
+            "page-03.png": "438a808585975fd411e45e577436603d74efc8d882a187093a754cc374681184",
+            "page-04.png": "60d666f605129ddec3f3d9523a45444ee4ad6a572569ecdb303037b2fde4f7bd",
+            "page-05.png": "12acfa9a2d6b858a48633a6b96ff829ed4a5a1bdddc4a217928a5615e0643d4a"
+          },
+          "checks": "Readable text/formulas/tables/diagram labels; no overlaps, clipping, missing glyphs or unwanted student solutions/sources."
+        }
+      }
+    },
+    "editions": [
+      {
+        "mode": "student",
+        "pages": 3,
+        "pdf_sha256": "052c36ed61f1531ea2ca4af67f8037ace22c823255cf9848b9c2abd5898f1b75",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 0,
+        "overflow": []
+      },
+      {
+        "mode": "tutor",
+        "pages": 5,
+        "pdf_sha256": "e8f449e9b7895f9baa6d568e02eae5dd451e6c4909ec11fcbfced45f06d8612e",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 20,
+        "overflow": []
+      }
+    ]
+  },
+  {
+    "exam_number": 8,
+    "tex_sha256": "f7e381d676c114eb083411ae9d4b49cca2acbc1fa46573d05dff869745cecda9",
+    "original_report": "tmp\\part1-20-check\\visual-08.json",
+    "review": {
+      "exam_number": 8,
+      "reviewer": "agent /root/part1_07_13, independent visual review of final reference header and conditions",
+      "approved": true,
+      "student_pages_viewed": [
+        1,
+        2,
+        3
+      ],
+      "tutor_pages_viewed": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "evidence": "Every final page opened through view_image. Reference constants each on a separate readable line; all conditions, original units, four TikZ plots and solutions legible. No overlaps, clipped text, missing glyphs or student solutions. Tectonic student/tutor builds completed without overflow. Generated solutions clearly marked.",
+      "editor_view_checked": false
+    },
+    "editions": [
+      {
+        "mode": "student",
+        "pages": 3,
+        "pdf_sha256": "65ea3a7edd3426e938164bee012c92fcd6e173f292e08f2db9173602acabf482",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 0,
+        "overflow": []
+      },
+      {
+        "mode": "tutor",
+        "pages": 5,
+        "pdf_sha256": "9db042ac215f8bf6e20d2768305ef702e02f2bcbbaf3eb880ec2e12971a49775",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 20,
+        "overflow": []
+      }
+    ]
+  },
+  {
+    "exam_number": 9,
+    "tex_sha256": "1748ed9f89a3898a9aa4045fe0a705e346181a07cfeaa83f3c21d954881616a6",
+    "original_report": ".scratch\\task-harvester\\part1-20\\task-09-visual.json",
+    "review": {
+      "exam_number": 9,
+      "approved": true,
+      "reviewer": "Independent visual inspection by part1_01_06; authored by another agent",
+      "tex_sha256": "1748ed9f89a3898a9aa4045fe0a705e346181a07cfeaa83f3c21d954881616a6",
+      "build": "Configured Tectonic recipe; missing-glyph and overflow checks passed",
+      "modes": {
+        "student": {
+          "pages": 8,
+          "reviewed_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "pdf_sha256": "5e689d9403b5c52b918db5f6324819dca0c5d3951ceaa8a90df11591787bce63",
+          "all_pages_viewed": true,
+          "gpt_solution_labels": 0
+        },
+        "tutor": {
+          "pages": 19,
+          "reviewed_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "pdf_sha256": "9c517d96a8972f6995e9e10d264dbe110c802bd691608ce77753644bdab0fcaa",
+          "all_pages_viewed": true,
+          "gpt_solution_labels": 20
+        }
+      },
+      "checks": [
+        "Every page PNG viewed individually after final reference/header refresh",
+        "Conditions, matching lists, tables and native diagrams readable",
+        "No clipping, overlap, missing glyph or watermark observed",
+        "GPT solutions labelled and hidden in student mode",
+        "Reference constants separated without duplicates"
+      ],
+      "editor_view_checked": false
+    },
+    "editions": [
+      {
+        "mode": "student",
+        "pages": 8,
+        "pdf_sha256": "5e689d9403b5c52b918db5f6324819dca0c5d3951ceaa8a90df11591787bce63",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 0,
+        "overflow": []
+      },
+      {
+        "mode": "tutor",
+        "pages": 19,
+        "pdf_sha256": "9c517d96a8972f6995e9e10d264dbe110c802bd691608ce77753644bdab0fcaa",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 20,
+        "overflow": []
+      }
+    ]
+  },
+  {
+    "exam_number": 10,
+    "tex_sha256": "e464ee3d4a1354d027a9258a6debb32b730fc79cf57c7e997bc66ade196efd09",
+    "original_report": ".scratch\\task-harvester\\part1-20\\task-10-visual.json",
+    "review": {
+      "exam_number": 10,
+      "approved": true,
+      "reviewer": "Independent visual inspection by part1_01_06; authored by another agent",
+      "tex_sha256": "e464ee3d4a1354d027a9258a6debb32b730fc79cf57c7e997bc66ade196efd09",
+      "build": "Configured Tectonic recipe; missing-glyph and overflow checks passed",
+      "modes": {
+        "student": {
+          "pages": 9,
+          "reviewed_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "pdf_sha256": "763ba63890f299f425e8f699752b8350b6f6d418a1e0f68882195b81c1c66d2d",
+          "all_pages_viewed": true,
+          "gpt_solution_labels": 0
+        },
+        "tutor": {
+          "pages": 13,
+          "reviewed_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "pdf_sha256": "92854818b4de32816ad144debaa5e242da01eb10464817576aed647789a708bc",
+          "all_pages_viewed": true,
+          "gpt_solution_labels": 20
+        }
+      },
+      "checks": [
+        "Every page PNG viewed individually after final reference/header refresh",
+        "Conditions, matching lists, tables and native diagrams readable",
+        "No clipping, overlap, missing glyph or watermark observed",
+        "GPT solutions labelled and hidden in student mode",
+        "Reference constants separated without duplicates"
+      ],
+      "editor_view_checked": false
+    },
+    "editions": [
+      {
+        "mode": "student",
+        "pages": 9,
+        "pdf_sha256": "763ba63890f299f425e8f699752b8350b6f6d418a1e0f68882195b81c1c66d2d",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 0,
+        "overflow": []
+      },
+      {
+        "mode": "tutor",
+        "pages": 13,
+        "pdf_sha256": "92854818b4de32816ad144debaa5e242da01eb10464817576aed647789a708bc",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 20,
+        "overflow": []
+      }
+    ]
+  },
+  {
+    "exam_number": 11,
+    "tex_sha256": "1382fd2ba32c8bc8493451b3bb72a9d2096c84b9511f60d05937b12ed3120a41",
+    "original_report": "tmp\\part1-20-check\\visual-11.json",
+    "review": {
+      "exam_number": 11,
+      "reviewer": "agent /root/part1_07_13, final visual review",
+      "approved": true,
+      "student_pages_viewed": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "tutor_pages_viewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "evidence": "Every page of the final configured compiler build was opened with view_image. Photos 18/19, digital readings and component labels are legible. All circuit boundaries and graph labels are visible. No clipping, overlapping text, missing glyphs or material layout defects were observed. Student pages contain no solutions or source credits.",
+      "editor_view_checked": false
+    },
+    "editions": [
+      {
+        "mode": "student",
+        "pages": 5,
+        "pdf_sha256": "dbbb50ba1dbbb16bfdefd09689a4d326825aae2a14f376903d6acbb79a760629",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 0,
+        "overflow": []
+      },
+      {
+        "mode": "tutor",
+        "pages": 9,
+        "pdf_sha256": "0bf625f704843b930b59e0bb03c7cc7996b33dc6c78fb9eb9dde73a9b1522ded",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 20,
+        "overflow": []
+      }
+    ]
+  },
+  {
+    "exam_number": 12,
+    "tex_sha256": "6b295dc7e30a1f4b18fed7443f4cdff897c2f0ee497182422a7cc40383b62d2a",
+    "original_report": "tmp\\part1-20-check\\visual-12.json",
+    "review": {
+      "exam_number": 12,
+      "reviewer": "agent /root/part1_07_13, final visual review",
+      "approved": true,
+      "student_pages_viewed": [
+        1,
+        2,
+        3
+      ],
+      "tutor_pages_viewed": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "evidence": "Every page of the final refreshed configured compiler build was opened with view_image after the final unit placement cleanup. All three diagrams are complete and legible. Equations, units and solutions render without missing glyphs, overlap or clipping. Student pages contain no solutions or source credits.",
+      "editor_view_checked": false
+    },
+    "editions": [
+      {
+        "mode": "student",
+        "pages": 3,
+        "pdf_sha256": "dd917e7b3dba267aa8caa3ed03b5f58e2c038ffa50f5fafd69488eba1c05a35b",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 0,
+        "overflow": []
+      },
+      {
+        "mode": "tutor",
+        "pages": 5,
+        "pdf_sha256": "302df32b6bb08a094c2115553ff9960b854634e5c9725560d0e572d12b448afa",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 20,
+        "overflow": []
+      }
+    ]
+  },
+  {
+    "exam_number": 13,
+    "tex_sha256": "9929986a3b41972c7e37846d0d280f56824ceb5f86e7db683d4606dbc49f71c8",
+    "original_report": ".scratch\\task-harvester\\part1-20\\task-13-visual.json",
+    "review": {
+      "exam_number": 13,
+      "approved": true,
+      "status": "passed",
+      "reviewer": "independent agent; all full-size rendered pages personally inspected individually",
+      "tex": "D:\\GitHub\\Prepa-GPT\\output\\fipi-physics\\task-13.tex",
+      "tex_sha256": "9929986a3b41972c7e37846d0d280f56824ceb5f86e7db683d4606dbc49f71c8",
+      "recipe": "Tectonic (project)",
+      "editor_view_checked": false,
+      "issues": [],
+      "editions": {
+        "student": {
+          "pages": 3,
+          "pages_inspected": [
+            1,
+            2,
+            3
+          ],
+          "tex": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\student\\task-13.tex",
+          "tex_sha256": "9929986a3b41972c7e37846d0d280f56824ceb5f86e7db683d4606dbc49f71c8",
+          "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\student\\task-13.pdf",
+          "pdf_sha256": "7af111e0e73418dbcb94826349df7e83aa700fa90ecda67e51c8287256251ad9",
+          "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\previews\\student-13",
+          "page_sha256": {
+            "page-01.png": "c69b5085d03e69f9a24d1ab1c3c9d1698bf0bde86837475da4b2ea7cc60a605b",
+            "page-02.png": "0cab98632780a8ccb608c7ddc81370b079d23c31e741f96a3d33256944816c50",
+            "page-03.png": "3b21240785bf04c7fa772ad812361dc920744b3371957e6418fea9e2ee744e3c"
+          },
+          "checks": "Readable text/formulas/tables/diagram labels; no overlaps, clipping, missing glyphs or unwanted student solutions/sources."
+        },
+        "tutor": {
+          "pages": 6,
+          "pages_inspected": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "tex": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\tutor\\task-13.tex",
+          "tex_sha256": "305a2a663d1fe06aa56db9375227871aecc7295622d9fdc3949ce50262250e6c",
+          "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\tutor\\task-13.pdf",
+          "pdf_sha256": "f26e5b41881cd1cacf25a2d1ad169f0fc9105e7fdfe9920ce90f292532917783",
+          "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\previews\\tutor-13",
+          "page_sha256": {
+            "page-01.png": "baa2da3802ea6d771baf04825fdbfe7b3140bba803fa074276b65b6d409bcfdf",
+            "page-02.png": "7f1281ed3b6ef58631e8838334585f32ac4bd46dea4bdc401dfd88d5598b155f",
+            "page-03.png": "3004508670f1ffd91f7f7bf6d970aaa99649bc9a6a4e199ca3d7eea0807e6a4f",
+            "page-04.png": "96a608a730965a2dd0eb53318fb426be2507d465879eb302e7be1d907582794f",
+            "page-05.png": "4ff6bdc66a2502cc62cbc0a861d02d401e0c9169ae7129da7be204e3c3f1b93f",
+            "page-06.png": "ba07eb043bcdcec77cc970ca44840673ca15d215092b4320d585bd7d8cea1594"
+          },
+          "checks": "Readable text/formulas/tables/diagram labels; no overlaps, clipping, missing glyphs or unwanted student solutions/sources."
+        }
+      }
+    },
+    "editions": [
+      {
+        "mode": "student",
+        "pages": 3,
+        "pdf_sha256": "7af111e0e73418dbcb94826349df7e83aa700fa90ecda67e51c8287256251ad9",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 0,
+        "overflow": []
+      },
+      {
+        "mode": "tutor",
+        "pages": 6,
+        "pdf_sha256": "f26e5b41881cd1cacf25a2d1ad169f0fc9105e7fdfe9920ce90f292532917783",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 20,
+        "overflow": []
+      }
+    ]
+  },
+  {
+    "exam_number": 14,
+    "tex_sha256": "842dc7a160b3b3f141ba9be641046ded8cc4ae5b8828804950faf9e3e14f65f5",
+    "original_report": ".scratch\\task-harvester\\part1-20\\task-14-visual.json",
+    "review": {
+      "exam_number": 14,
+      "approved": true,
+      "status": "passed",
+      "reviewer": "independent agent; all full-size rendered pages personally inspected individually",
+      "tex": "D:\\GitHub\\Prepa-GPT\\output\\fipi-physics\\task-14.tex",
+      "tex_sha256": "842dc7a160b3b3f141ba9be641046ded8cc4ae5b8828804950faf9e3e14f65f5",
+      "recipe": "Tectonic (project)",
+      "editor_view_checked": false,
+      "issues": [],
+      "editions": {
+        "student": {
+          "pages": 12,
+          "pages_inspected": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "tex": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\student\\task-14.tex",
+          "tex_sha256": "842dc7a160b3b3f141ba9be641046ded8cc4ae5b8828804950faf9e3e14f65f5",
+          "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\student\\task-14.pdf",
+          "pdf_sha256": "d5091ddb5677e36abaf4784f0c8674302c6eefae016b1bd04e57a32b20691f4f",
+          "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\previews\\student-14",
+          "page_sha256": {
+            "page-01.png": "af0865f8303ebbc71280852f194a4c591910d90b60ad2c44dd85944f47ff5331",
+            "page-02.png": "a53c93e99826d6e897bd27fa720f0c7b3afe4ad56f031ce709f9a8014fecfd2a",
+            "page-03.png": "a7214040640305219e2caa5de08b3ca4a95e230836a51d17e5f40bb173bc3c7b",
+            "page-04.png": "fa24d40ff32fdd4127fbe93b854147c3c73f3f59010198a1c6fdebd1439b8303",
+            "page-05.png": "e3a78dc0814aadfa62c85c5987702fd0ae9e3aff7dc4dab31667fdecbf40c6ce",
+            "page-06.png": "ee100d3dabbbd0b0890dc517e3036602691e459095cee8ec0777f91f91430dfe",
+            "page-07.png": "6d58b08ddad55a8be0562b62cddfffc48a32abfcfd0d6afabd0fa51d42d99b85",
+            "page-08.png": "e92a0a215eb2e43f585418c085195fa29a7e884287806c528b8a065c46c1362f",
+            "page-09.png": "aa83b3392a2c709adff7222b70583991278985c37f7f7860d33366b22c898e4e",
+            "page-10.png": "ac558a0ab1686007391ced44bc840d344382c2955a6e68433d02ea5530a8ba9e",
+            "page-11.png": "cafe73dc73275e7dcfd16adcd7752a451dc4ae556d6e732ea0dd0bc996091d99",
+            "page-12.png": "6f8f4048b52c22492d03b6b839976cf8ac03cc01b5b58514c5c1b1895beb30b6"
+          },
+          "checks": "Readable text/formulas/tables/diagram labels; no overlaps, clipping, missing glyphs or unwanted student solutions/sources."
+        },
+        "tutor": {
+          "pages": 19,
+          "pages_inspected": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "tex": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\tutor\\task-14.tex",
+          "tex_sha256": "9c466d2b8478f39c53fd2a87c222ca9ff32e229580fb4351331a9bf874211488",
+          "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\tutor\\task-14.pdf",
+          "pdf_sha256": "305d715b42d044de66d4339ef9c0055ed3fd0e74b9cde7531bcdb419c4e04e5e",
+          "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\previews\\tutor-14",
+          "page_sha256": {
+            "page-01.png": "5ea0c649955a36417a32776599d7312a2aae16cfe0e324f3fc5ca3acc1af434e",
+            "page-02.png": "ca232a9b4d40124d24a7dffa833f06ef173dd7784d62a46ff9f3b26a7d53a143",
+            "page-03.png": "6633e02c983b58514c8504d83d5bf2b26cd8deeb6f94a4bb117b354bce70fa8b",
+            "page-04.png": "5f15d43198883418761f5c5dec3a0d104ee145ced5172dfd2e014608889c8e79",
+            "page-05.png": "409498791ca5f759e336ad96e7aa27232f20aac22b4ced3bcd4b6224ceab4e50",
+            "page-06.png": "ea8802d4c6e5ecb6380283a343db7eabac303e612c054e79c38ffde6f45a60b5",
+            "page-07.png": "aaab59823519ae729d1c2e2fa0bdb182d15c59f2dea6b387775c11f88d66ce71",
+            "page-08.png": "53c2a11ddb5f79ad3c2265ce91ade54f65118fa643a486625ba2ccdf6f503b86",
+            "page-09.png": "f2a352656fa0c09cf90c66d5804a5d8dcc8e2f10f88ae3127c8ea74c47eefe57",
+            "page-10.png": "19074ef643ee0dcb625123776cd2aa223121ebbbee3d405e7715b471a058bb70",
+            "page-11.png": "d55a5c664b5ea793dcf0617968436374d144d5f82823762f48754aceeb210474",
+            "page-12.png": "abd0e193d34046c0f5be0578683170c8da0ad1e31ccf6c6eda6d9cb65a3b754d",
+            "page-13.png": "ff17afb2681543cbd527fdd2a0a99228126383b0c7c07705344cef1fe241acef",
+            "page-14.png": "e4873456b35ec192b123a00537c08b2dc518f8bd98071ddae7085a41924c1540",
+            "page-15.png": "ecbc0ded68f7913fc2e77fb8063066f011ca51b35902d52ae51a80390b05c1eb",
+            "page-16.png": "0881fec43d993a36375e6d753fc740b8e84b70762a85ddb927f68ea4ebaf3b3f",
+            "page-17.png": "ec7e6abcdba7b35240919ce314ba502a1e5637c05779bc0ba112eee42928813f",
+            "page-18.png": "3835eead383de8b380b4de2d9be5e9b3a0f92336455c62fe15ce7b9682df3375",
+            "page-19.png": "b78d971e5ab54c5e5f9ada1cabf07a162d01ddd845258aec3aff0323be71cf54"
+          },
+          "checks": "Readable text/formulas/tables/diagram labels; no overlaps, clipping, missing glyphs or unwanted student solutions/sources."
+        }
+      }
+    },
+    "editions": [
+      {
+        "mode": "student",
+        "pages": 12,
+        "pdf_sha256": "d5091ddb5677e36abaf4784f0c8674302c6eefae016b1bd04e57a32b20691f4f",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 0,
+        "overflow": []
+      },
+      {
+        "mode": "tutor",
+        "pages": 19,
+        "pdf_sha256": "305d715b42d044de66d4339ef9c0055ed3fd0e74b9cde7531bcdb419c4e04e5e",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 20,
+        "overflow": []
+      }
+    ]
+  },
+  {
+    "exam_number": 15,
+    "tex_sha256": "92a6854afa0819b1a6663ce581454f53f0c2de793cf20ebf3257f94a5ba4566f",
+    "original_report": ".scratch\\task-harvester\\part1-20\\task-15-visual.json",
+    "review": {
+      "exam_number": 15,
+      "approved": true,
+      "reviewer": "Independent visual inspection by part1_01_06; authored by another agent",
+      "tex_sha256": "92a6854afa0819b1a6663ce581454f53f0c2de793cf20ebf3257f94a5ba4566f",
+      "build": "Configured Tectonic recipe; missing-glyph and overflow checks passed",
+      "modes": {
+        "student": {
+          "pages": 10,
+          "reviewed_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "pdf_sha256": "2990460f3463d6083b9673f5be58a0478b9502e7acb0445a5655c3d9c03b012e",
+          "all_pages_viewed": true
+        },
+        "tutor": {
+          "pages": 15,
+          "reviewed_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "pdf_sha256": "e425f1d7d5411c0d0bbb329a24a1bffe3741dbbd19b14f79bee54075cc4e442e",
+          "all_pages_viewed": true
+        }
+      },
+      "checks": [
+        "All25 page PNGs viewed individually",
+        "Conditions, matching lists, tables, circuit diagrams and graphs readable",
+        "No clipping, overlap, missing glyph or watermark observed",
+        "GPT solutions labelled and hidden in student mode"
+      ],
+      "editor_view_checked": false,
+      "notes": [
+        "Earlier suspicion of clipped student-page8 circuit was disproved by viewing a separate crop; complete lower wire and footer both visible."
+      ]
+    },
+    "editions": [
+      {
+        "mode": "student",
+        "pages": 10,
+        "pdf_sha256": "2990460f3463d6083b9673f5be58a0478b9502e7acb0445a5655c3d9c03b012e",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 0,
+        "overflow": []
+      },
+      {
+        "mode": "tutor",
+        "pages": 15,
+        "pdf_sha256": "e425f1d7d5411c0d0bbb329a24a1bffe3741dbbd19b14f79bee54075cc4e442e",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 20,
+        "overflow": []
+      }
+    ]
+  },
+  {
+    "exam_number": 16,
+    "tex_sha256": "02c160762c675eb3db8eb0bebc56c1251ee913799029e3287ec8a778674b7d12",
+    "original_report": ".scratch\\task-harvester\\part1-20\\task-16-visual.json",
+    "review": {
+      "exam_number": 16,
+      "approved": true,
+      "status": "passed",
+      "reviewer": "independent agent; all full-size rendered pages personally inspected individually",
+      "tex": "D:\\GitHub\\Prepa-GPT\\output\\fipi-physics\\task-16.tex",
+      "tex_sha256": "02c160762c675eb3db8eb0bebc56c1251ee913799029e3287ec8a778674b7d12",
+      "recipe": "Tectonic (project)",
+      "editor_view_checked": false,
+      "issues": [],
+      "editions": {
+        "student": {
+          "pages": 3,
+          "pages_inspected": [
+            1,
+            2,
+            3
+          ],
+          "tex": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\student\\task-16.tex",
+          "tex_sha256": "02c160762c675eb3db8eb0bebc56c1251ee913799029e3287ec8a778674b7d12",
+          "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\student\\task-16.pdf",
+          "pdf_sha256": "ff2df396a293a64fc0976b74215b1d31ae5ba546bc765159f34619e3361f9be5",
+          "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\previews\\student-16",
+          "page_sha256": {
+            "page-01.png": "b3085b6ebe25d46cec0cd6d5768e75633f7bb47544876ce0e00d74a5127ab9dd",
+            "page-02.png": "3d5d9a53ecb12765e21febb7d26cf0a6a3f06d3293c4aadcf30b89f0baf390ce",
+            "page-03.png": "c39fc6b4ed893a375aba063c77944f4f179143862d29d52abe57f55e6912bd3b"
+          },
+          "checks": "Readable text/formulas/tables/diagram labels; no overlaps, clipping, missing glyphs or unwanted student solutions/sources."
+        },
+        "tutor": {
+          "pages": 5,
+          "pages_inspected": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "tex": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\tutor\\task-16.tex",
+          "tex_sha256": "2b0ccf26ec06151f334e4f70c9fc2c035e77faf32fce919b6e64634c7f5a87cf",
+          "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\tutor\\task-16.pdf",
+          "pdf_sha256": "9f1776d077605be23aed5635d01a94a5da633799b9479286612a92d4fa9b95ca",
+          "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\previews\\tutor-16",
+          "page_sha256": {
+            "page-01.png": "ec3fa038d93a835de1593e25c463738278dd45c5e2ffa0777463f3bc78e34eeb",
+            "page-02.png": "1c23de7b7712f1aa7a8b205dc6823b4d9793eb7af68ddd80b3839f9921950558",
+            "page-03.png": "0d664b832581978a3c901bf15d0a71e540104346fb4473bd2f804d2c2bc69bca",
+            "page-04.png": "63a92419e7ead20ab4e6f53b687cd261d138d74cec23e8516cee915ff704a17f",
+            "page-05.png": "413a2f5b7edfa04ffb865e3fe07ea9e9ba9452e29644f1ee2f7d208c9846f230"
+          },
+          "checks": "Readable text/formulas/tables/diagram labels; no overlaps, clipping, missing glyphs or unwanted student solutions/sources."
+        }
+      }
+    },
+    "editions": [
+      {
+        "mode": "student",
+        "pages": 3,
+        "pdf_sha256": "ff2df396a293a64fc0976b74215b1d31ae5ba546bc765159f34619e3361f9be5",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 0,
+        "overflow": []
+      },
+      {
+        "mode": "tutor",
+        "pages": 5,
+        "pdf_sha256": "9f1776d077605be23aed5635d01a94a5da633799b9479286612a92d4fa9b95ca",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 20,
+        "overflow": []
+      }
+    ]
+  },
+  {
+    "exam_number": 17,
+    "tex_sha256": "ddb01e5da40ab49fed03a1213c1de96f380d0bb4deb52dd9ca3bff4172ef689c",
+    "original_report": ".scratch\\task-harvester\\part1-20\\task-17-visual.json",
+    "review": {
+      "exam_number": 17,
+      "approved": true,
+      "status": "passed",
+      "reviewer": "independent agent; all full-size rendered pages personally inspected individually",
+      "tex": "D:\\GitHub\\Prepa-GPT\\output\\fipi-physics\\task-17.tex",
+      "tex_sha256": "ddb01e5da40ab49fed03a1213c1de96f380d0bb4deb52dd9ca3bff4172ef689c",
+      "recipe": "Tectonic (project)",
+      "editor_view_checked": false,
+      "issues": [],
+      "editions": {
+        "student": {
+          "pages": 13,
+          "pages_inspected": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "tex": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\student\\task-17.tex",
+          "tex_sha256": "ddb01e5da40ab49fed03a1213c1de96f380d0bb4deb52dd9ca3bff4172ef689c",
+          "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\student\\task-17.pdf",
+          "pdf_sha256": "a0164e9636726b7a96bf86bcda2f9c6242fa79a9d1dc85e20532bafd6d83b9fc",
+          "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\previews\\student-17",
+          "page_sha256": {
+            "page-01.png": "9eae9d797fc5595df59c58870d0b7f48f2642ec91aac6372b4abd031e5281f0d",
+            "page-02.png": "42759fcfbf2405493d440336622193befe1c6fb3b76cd6c94d57ac7d9a39707f",
+            "page-03.png": "de834f14401a20d0db2fdd58454434329824ed562c06a84ba2635926e8013d50",
+            "page-04.png": "f4c9a89427addca5007ff3e333805fbede8b3232c1fa9da91ef117f5ec0f9557",
+            "page-05.png": "1fa7d44339b8a08e475ec1ebd3a06e567ea91850b2045c1c684b19ea2feedf8f",
+            "page-06.png": "e50c37e82a3cd5e046e7f723a8d3d9cc655aeeafbceac058746d67c6bda1ac7e",
+            "page-07.png": "056f9756bed94d4794a8426f7c763f422d6f9dd4927af0b749699e92ce61f212",
+            "page-08.png": "e7c64e60fa3e20a5b2e3995d7f118449088af3af573803562afd0657adb0e1d3",
+            "page-09.png": "23d1a1e0bed8257ce842682b4a1f0dbcac0e8f369c16b0c71a7c314d8cd3d063",
+            "page-10.png": "d3be49ac258ecfb664e8177fcd25b2b9151d1397f820ed1556320202e6609ce6",
+            "page-11.png": "938689c9857bcb91415728095c8a370fb7f2491e735ddc439e1eabdb538624f2",
+            "page-12.png": "bb5f75003a599e14cf9f1d7b46e67191d349df2f1a48107309307be27766804c",
+            "page-13.png": "4802a604b2ff2c12754518c042aa3d593cf56412cf90a961311d5ee3bd0b7c26"
+          },
+          "checks": "Readable text/formulas/tables/diagram labels; no overlaps, clipping, missing glyphs or unwanted student solutions/sources."
+        },
+        "tutor": {
+          "pages": 17,
+          "pages_inspected": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "tex": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\tutor\\task-17.tex",
+          "tex_sha256": "e3ddcbaaa37654bbd25d09cec239d56b91cd1ceec52d971a59cfa4b4d6d97b48",
+          "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\tutor\\task-17.pdf",
+          "pdf_sha256": "4de4db74efb1615af1c884b456cdb49b998a8235508750d41f5ac8e0eb02c7aa",
+          "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\previews\\tutor-17",
+          "page_sha256": {
+            "page-01.png": "adb058edd1709f8e3b12ab6025711b3ab7473eb2e707741b5dcbf7868eb3491f",
+            "page-02.png": "bc83181871d4aa3c1724ad4e8741d4511a23b9a1058c3d5b27829a8553023cc6",
+            "page-03.png": "048e89fb29d1d35dcfc1721ab37abacd73e26679be7211e4c871db7df608ccdc",
+            "page-04.png": "d19a35e3efe38be62c8a255b4e8a80ee5daecc8e8ddeeda9ceb89bbbd14f1fbd",
+            "page-05.png": "4e3fea3ec5bf8329f922dcc4b3d510e4db7b22705c200e998a7836351b841e8d",
+            "page-06.png": "b5a5ad22ed89a56004aeb7b8bbb510983e88738cdd5fa7f9cfc32bea8820f18c",
+            "page-07.png": "e46a1eca69974df88f43a94832283abdacd790161e5b81158a1cb5b84eeb66fa",
+            "page-08.png": "ce88576f791a44e1094a61a1faf9fdabdb6ffaa0bc7d68915b48eeeb4159bd28",
+            "page-09.png": "8c0ade92f6b4d57b827f8a0452976f017a3767557690ead5698195d7846fb13c",
+            "page-10.png": "03d39bdf997398da58990f0036e82167c446b557f8428df2901e746e9972d05b",
+            "page-11.png": "df6d711ecf5c72ecd37bf5e8179fc111a5a5e854b1cda92f19298dd7946acf8d",
+            "page-12.png": "ec0be285b4fcf38691611476407459f2403ba341466b2155ccc34a8b2b00e90d",
+            "page-13.png": "858f9f01369bae8eb7633e7fea1762e4cebc36c272d13214578550288f3189ef",
+            "page-14.png": "09cc1150c18f0395313f3c079acbc7390d94415221e80e245fabb6a7c5d18cd8",
+            "page-15.png": "30e75c2e3a4dac7d0e1f6061dc57d1df339a3af18d3c4e3590e43bfad1dc2b41",
+            "page-16.png": "53520ef2e9c977037945af28aceba0712e9c54fca0784edbf6f682486ff5458e",
+            "page-17.png": "f5ac62d9e365400726cb3e0ae182d59dea518203be713aa0386411d974eeabae"
+          },
+          "checks": "Readable text/formulas/tables/diagram labels; no overlaps, clipping, missing glyphs or unwanted student solutions/sources."
+        }
+      }
+    },
+    "editions": [
+      {
+        "mode": "student",
+        "pages": 13,
+        "pdf_sha256": "a0164e9636726b7a96bf86bcda2f9c6242fa79a9d1dc85e20532bafd6d83b9fc",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 0,
+        "overflow": []
+      },
+      {
+        "mode": "tutor",
+        "pages": 17,
+        "pdf_sha256": "4de4db74efb1615af1c884b456cdb49b998a8235508750d41f5ac8e0eb02c7aa",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 20,
+        "overflow": []
+      }
+    ]
+  },
+  {
+    "exam_number": 18,
+    "tex_sha256": "cdc6e766c374cabfbe0e0e8e526f7b2c6cfc831bdbb9d74e2d0771adcb1db382",
+    "original_report": ".scratch\\task-harvester\\part1-20\\task-18-visual.json",
+    "review": {
+      "exam_number": 18,
+      "approved": true,
+      "status": "passed",
+      "reviewer": "independent agent; all full-size rendered pages personally inspected individually",
+      "tex": "D:\\GitHub\\Prepa-GPT\\output\\fipi-physics\\task-18.tex",
+      "tex_sha256": "cdc6e766c374cabfbe0e0e8e526f7b2c6cfc831bdbb9d74e2d0771adcb1db382",
+      "recipe": "Tectonic (project)",
+      "editor_view_checked": false,
+      "issues": [],
+      "editions": {
+        "student": {
+          "pages": 6,
+          "pages_inspected": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "tex": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\student\\task-18.tex",
+          "tex_sha256": "cdc6e766c374cabfbe0e0e8e526f7b2c6cfc831bdbb9d74e2d0771adcb1db382",
+          "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\student\\task-18.pdf",
+          "pdf_sha256": "3f999cfea953d08bfe40e9e4212e47deee8f8603a7734855cde8decd9b584258",
+          "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\previews\\student-18",
+          "page_sha256": {
+            "page-01.png": "1fd0072ede1d3414a6505e243b759b1dc0c94cf8700f334ee7213f0c1912bb78",
+            "page-02.png": "f7f67f0a13bdbfaaa1b746c83f8882998537252a0a50ba31cc5d36a08610702c",
+            "page-03.png": "72155037bab3c018c198ce0b5edba5a19983244f7cef23eb239320ebcb022f9e",
+            "page-04.png": "5067b152dbe82ff864b2d68403bf1505a1080c164c8ef2240107a624f91a8563",
+            "page-05.png": "c54b9db0eab6bac074515251375bfdf830cb74fb5bdafc719dd0df0339637fc0",
+            "page-06.png": "b90472e1e51b62fb07b43175be6a83b306cc2cd18676b60c8f704814e95ce88a"
+          },
+          "checks": "Readable text/formulas/tables/diagram labels; no overlaps, clipping, missing glyphs or unwanted student solutions/sources."
+        },
+        "tutor": {
+          "pages": 10,
+          "pages_inspected": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "tex": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\tutor\\task-18.tex",
+          "tex_sha256": "81fba4b22629d678f5bccf740a3c7e815b56aff9d9f4e41bf28bac2716a562d4",
+          "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\tutor\\task-18.pdf",
+          "pdf_sha256": "eb71f85dc4d88c41f2c63099dbc675384caec0bfb4771b0e5ceec78ec561252e",
+          "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\previews\\tutor-18",
+          "page_sha256": {
+            "page-01.png": "fca5d19ab4440e725060e94fd39babc27618b387fea54c2608430af1bb9b8b3d",
+            "page-02.png": "a3620d4ccf6baabeac1cc438a1466675ad34fc74e64ae858375d26237cb54bcc",
+            "page-03.png": "6f759df44a2429124ad78a968a803698aed8b0359db0b06e8505e20d70b6443e",
+            "page-04.png": "436161de095cdb698ae13515c644307fa8f772f9c1b9aa75a3773133ede8adc2",
+            "page-05.png": "fbd5abc68a6d9d154fc09e947f22c4431db59decde864af0e906b870281ed9cc",
+            "page-06.png": "a06efa0f219356f62df0408bb840a59f6f180924bc91e138056c1312c2d32a83",
+            "page-07.png": "4221ccce8f3fc0f3ee37cf099fe8e756d752b614459cdea251c9a9f3f72d7a74",
+            "page-08.png": "7ee360e72a8548cec56a6fe6fcf814d5dbd30274bb28c404a6757170f1b9d938",
+            "page-09.png": "7221d8b1babc3c829fee29ae3c3a3f7a823bccdad66036f26211a7233d3658ed",
+            "page-10.png": "dce7ceefe86e65040f9ef9e28848d47e7168cd1daf389ad132578cd67a402437"
+          },
+          "checks": "Readable text/formulas/tables/diagram labels; no overlaps, clipping, missing glyphs or unwanted student solutions/sources."
+        }
+      }
+    },
+    "editions": [
+      {
+        "mode": "student",
+        "pages": 6,
+        "pdf_sha256": "3f999cfea953d08bfe40e9e4212e47deee8f8603a7734855cde8decd9b584258",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 0,
+        "overflow": []
+      },
+      {
+        "mode": "tutor",
+        "pages": 10,
+        "pdf_sha256": "eb71f85dc4d88c41f2c63099dbc675384caec0bfb4771b0e5ceec78ec561252e",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 20,
+        "overflow": []
+      }
+    ]
+  },
+  {
+    "exam_number": 19,
+    "tex_sha256": "3100fab7a11fc86f4827dbda637977fce045d186d83c3fc663684f54a1fc2119",
+    "original_report": ".scratch\\task-harvester\\part1-20\\task-19-visual.json",
+    "review": {
+      "exam_number": 19,
+      "approved": true,
+      "reviewer": "Independent visual inspection by part1_01_06; authored by another agent",
+      "tex_sha256": "3100fab7a11fc86f4827dbda637977fce045d186d83c3fc663684f54a1fc2119",
+      "build": "Configured Tectonic recipe; missing-glyph and overflow checks passed",
+      "modes": {
+        "student": {
+          "pages": 13,
+          "reviewed_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "pdf_sha256": "46fbef2d368eec1ceb7e7402b74253d5d2f9cc3a5630fbbd814269834a13b74e",
+          "all_pages_viewed": true,
+          "gpt_solution_labels": 0
+        },
+        "tutor": {
+          "pages": 16,
+          "reviewed_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "pdf_sha256": "51f4538217359909bf33880ef32a097b081cf9115b7fb344029227d597ab9abb",
+          "all_pages_viewed": true,
+          "gpt_solution_labels": 20
+        }
+      },
+      "checks": [
+        "Every one of 29 page PNGs viewed individually",
+        "Source photographs and enlarged instrument scales readable at rendered page size",
+        "Conditions, units and uncertainty notation present and readable",
+        "Native dynamometer and electric circuit diagrams complete and within margins",
+        "No clipping, overlap or missing glyph observed",
+        "GPT solutions labelled and hidden in student mode"
+      ],
+      "editor_view_checked": false
+    },
+    "editions": [
+      {
+        "mode": "student",
+        "pages": 13,
+        "pdf_sha256": "46fbef2d368eec1ceb7e7402b74253d5d2f9cc3a5630fbbd814269834a13b74e",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 0,
+        "overflow": []
+      },
+      {
+        "mode": "tutor",
+        "pages": 16,
+        "pdf_sha256": "51f4538217359909bf33880ef32a097b081cf9115b7fb344029227d597ab9abb",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 20,
+        "overflow": []
+      }
+    ]
+  },
+  {
+    "exam_number": 20,
+    "tex_sha256": "14f23ce3c2eaa0d13f74a061a1547b7821653a7ec9254dca94a3602bb3b761dc",
+    "original_report": ".scratch\\task-harvester\\part1-20\\task-20-visual.json",
+    "review": {
+      "exam_number": 20,
+      "approved": true,
+      "status": "passed",
+      "reviewer": "independent agent; all full-size rendered pages personally inspected individually",
+      "tex": "D:\\GitHub\\Prepa-GPT\\output\\fipi-physics\\task-20.tex",
+      "tex_sha256": "14f23ce3c2eaa0d13f74a061a1547b7821653a7ec9254dca94a3602bb3b761dc",
+      "recipe": "Tectonic (project)",
+      "editor_view_checked": false,
+      "issues": [],
+      "editions": {
+        "student": {
+          "pages": 6,
+          "pages_inspected": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "tex": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\student\\task-20.tex",
+          "tex_sha256": "14f23ce3c2eaa0d13f74a061a1547b7821653a7ec9254dca94a3602bb3b761dc",
+          "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\student\\task-20.pdf",
+          "pdf_sha256": "88fc74d3f14f2f7dc30ef687665ee4d60d3231892b0cdc1a5d4ffad629f37b6b",
+          "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\previews\\student-20",
+          "page_sha256": {
+            "page-01.png": "539d119c614e0e6dd0e564c3c83fad116c54348ead9d99d729c5e8cfc380aa1e",
+            "page-02.png": "0c06c75ca9a076ed03da0d72d72434bddccbe0248eb2cbc47446ae9e190d594b",
+            "page-03.png": "0bb3eca4d0d697c53da70883f81b83e69691a645c82da50c4b7d204f3ebbc4b4",
+            "page-04.png": "1f41b2302d5c9ae579a85ccc87403f42e569be943b9e2ffb44f48d8b2798bca3",
+            "page-05.png": "3fdd9d5bed08037551a428c067caa69a50696d21d3a229d7f07f3ddbdb0ec005",
+            "page-06.png": "c9d2c186f580d696432329f981b8cf5cf3a17394df1c0d4be5f4fb025e8cadd8"
+          },
+          "checks": "Readable text/formulas/tables/diagram labels; no overlaps, clipping, missing glyphs or unwanted student solutions/sources."
+        },
+        "tutor": {
+          "pages": 11,
+          "pages_inspected": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "tex": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\tutor\\task-20.tex",
+          "tex_sha256": "3d27c88987484112fcf6e01caa9b3154c5109704cca0cf71e17cbc1745ba0d5e",
+          "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\tutor\\task-20.pdf",
+          "pdf_sha256": "5f0fb99f9fb72a5e8e34d85ad43e12bbe0fc9054503255394d03e38aeb8102b4",
+          "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\previews\\tutor-20",
+          "page_sha256": {
+            "page-01.png": "1cf1a500392a1c1f9f5183efd1bd55499d38438dcaa8f2a7a5a1c630706abae9",
+            "page-02.png": "a11b31ea753166a59bfded3b164741742ec3143566fb186d3ba9968816510c00",
+            "page-03.png": "5cda635b3a320948e5a62aac3083b7bf72bcf3587776c461c93913766acd71b0",
+            "page-04.png": "c3c3b396ad53e8680cd6675de478e35d758611898d134e9a4cc9401f18a43414",
+            "page-05.png": "68c21fe72f3a8a3e7331b4d4f878164ce5022232ef9692e6f705ac3656d82155",
+            "page-06.png": "ed3d6e5e6c08e75ec6c1493b60e638f24ded8b0fd0e1af4299d981431b849527",
+            "page-07.png": "9e38a446bbe06e69fe2fce3b84676a3e95067f29711938fc858475561717fc4d",
+            "page-08.png": "53b4fa5d431f1bcf4fc94dcf4f1025030c5199a6832fe05d99b93630a6c3b400",
+            "page-09.png": "4b9ee766454480f6115312ad6d16baedd23ff33d8c2cb64fbcd076b915c349d1",
+            "page-10.png": "d2fa15035219d44fa14b4552932daf2cc127199631d1bb90dd273685cf6adec6",
+            "page-11.png": "58ff72d58f759304aaab4b4a74b270161d2c05cb8aa39cad0c1a1f2636e61cf9"
+          },
+          "checks": "Readable text/formulas/tables/diagram labels; no overlaps, clipping, missing glyphs or unwanted student solutions/sources."
+        }
+      }
+    },
+    "editions": [
+      {
+        "mode": "student",
+        "pages": 6,
+        "pdf_sha256": "88fc74d3f14f2f7dc30ef687665ee4d60d3231892b0cdc1a5d4ffad629f37b6b",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 0,
+        "overflow": []
+      },
+      {
+        "mode": "tutor",
+        "pages": 11,
+        "pdf_sha256": "5f0fb99f9fb72a5e8e34d85ad43e12bbe0fc9054503255394d03e38aeb8102b4",
+        "all_pages_visually_reviewed": true,
+        "solution_labels": 20,
+        "overflow": []
+      }
+    ]
+  }
+]

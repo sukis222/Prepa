@@ -1,0 +1,214 @@
+% !TEX root = task-1-18-2.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{1.18.2}{Звук}
+
+
+% Source sdamgia-640: https://phys-ege.sdamgia.ru/problem?id=640
+\BankTask{sdamgia-640}{
+Какова частота звуковых колебаний в среде, если скорость звука в этой среде $v =500\,\text{м/с},$ а длина волны $\lambda =2\,\text{м}$?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Частота, длина и скорость распространения звуковых волн в среде связаны соотношением $\lambda \nu = v _{\,\text{зв}}.$ Отсюда находим частоту звуковых колебаний:
+
+$\nu = \frac{v _{\,\text{зв}}}{\lambda} = \frac{500\,\text{м/с}}{2\,\text{м}} =250\,\text{Гц}.$
+
+Ответ: $250$.
+}
+
+% Source sdamgia-39917: https://phys-ege.sdamgia.ru/problem?id=39917
+\BankTask{sdamgia-39917}{
+Чему равна скорость звуковой волны в воздухе, если её длина равна $1{,}65\,\text{м}$, а частота колебаний $\nu = 200\,\text{Гц}?$
+}{
+\smallskip\noindent\textbf{Решение}\par
+Скорость распространения волны равна
+
+$v =\lambda \nu=1{,}65 \cdot 200=330 \,\text{м/с} .$
+
+Ответ: $330$.
+}
+
+% Source sdamgia-621: https://phys-ege.sdamgia.ru/problem?id=621
+\BankTask{sdamgia-621}{
+Диапазон голоса мужского баса занимает частоты от $\nu_1 = 80\,\text{Гц}$ до $\nu_2 = 400\,\text{Гц}.$ Каково отношение граничных длин звуковых волн $\frac{\lambda_1}{\lambda_2}$ этого диапазона?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Частота, длина и скорость распространения звуковых волн связаны соотношением $\lambda \nu =c.$ Отсюда находим отношение граничных длин волн:
+
+$\frac{\lambda _1}{\lambda _2} = \frac{c/\nu _1}{c/\nu _2} = \frac{\nu _2}{\nu _1} = \frac{400\,\text{Гц}}{80\,\text{Гц}} =5.$
+
+Ответ: $5$.
+}
+
+% Source sdamgia-626: https://phys-ege.sdamgia.ru/problem?id=626
+\BankTask{sdamgia-626}{
+Человеческое ухо воспринимает звуковые волны, длины которых лежат в интервале от $\lambda_1=16\,\text{мм}$ до $\lambda_2=20\,\text{м}.$ Каково отношение граничных частот звуковых волн $\frac{\nu_1}{\nu_2}$ этого интервала?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Частота, длина и скорость распространения звуковых волн связаны соотношением $\lambda \nu =c.$ Отсюда находим отношение граничных частот волн:
+
+$\frac{\nu_1}{\nu_2} = \frac{c/\lambda_1}{c/\lambda_2} = \frac{\lambda_2}{\lambda_1} = \frac{20\,\text{м}}{0{,}016\,\text{м}} =1250.$
+
+Ответ: $1250$.
+}
+
+% Source sdamgia-642: https://phys-ege.sdamgia.ru/problem?id=642
+\BankTask{sdamgia-642}{
+На расстоянии $400\,\text{м}$ от наблюдателя рабочие вбивают сваи с помощью копра. Каково время между видимым ударом молота о сваю и звуком удара, услышанным наблюдателем? Скорость звука в воздухе $330\,\text{м/с}.$ Округлите ответ с точностью до десятых.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Можно считать, что свет преодолевает расстояние в $400$ метров практически мгновенно. Звуку на это требуется:
+
+$\frac{400\,\text{м}}{330\,\text{м/с}} \approx 1{,}2\,\text{с}.$
+
+Ответ: $1{,}2$.
+}
+
+% Source sdamgia-3355: https://phys-ege.sdamgia.ru/problem?id=3355
+\BankTask{sdamgia-3355}{
+Звуковой сигнал, отразившись от препятствия, вернулся обратно к источнику через $5\,\text{с}$ после его испускания. Каково расстояние от источника до препятствия, если скорость звука в воздухе $340\,\text{м/с}$?
+}{
+\smallskip\noindent\textbf{Решение}\par
+За $5\,\text{с}$ звуковой сигнал успел дважды пройти расстояние между источником и препятствием, а значит, это расстояние равно:
+
+$\frac{v t}{2} = \frac{340 \cdot 5}{2} =850$ м.
+
+Ответ: $850$.
+}
+
+% Source sdamgia-643: https://phys-ege.sdamgia.ru/problem?id=643
+\BankTask{sdamgia-643}{
+Для экспериментального определения скорости звука ученик встал на расстоянии $30\,\text{м}$ от стены и хлопнул в ладоши. В момент хлопка включился электронный секундомер, который выключился отраженным звуком. Время, отмеченное секундомером, равно $0{,}18\,\text{с}$. Какова скорость звука, определенная учеником? Округлите до целых.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Звук проделал путь до стены и обратно перед тем, как выключить секундомер. Следовательно, скорость звука, определенная учеником, равна:
+
+$v = \frac{2S}{t} = \frac{2 \cdot 30\,\text{м}}{0{,}18\,\text{с}} \approx 333\,\text{м/с}.$
+
+Ответ: $333$.
+}
+
+% Source sdamgia-6640: https://phys-ege.sdamgia.ru/problem?id=6640
+\BankTask{sdamgia-6640}{
+Гидроакустик, находящийся на корабле, переговаривается по рации с матросом, находящимся на лодке. Во время разговора матрос наносит удар гаечным ключом по корпусу своей лодки. Звук от этого удара гидроакустик сначала слышит через рацию, а через $10$ секунд  — через свою гидроакустическую аппаратуру. Считая, что второй звук распространяется в воде со скоростью $1500\,\text{м/с}$, найдите расстояние между кораблем и лодкой.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Считая, что сигнал по рации приходит почти мгновенно, найдем расстояние, которое проходит звук от лодки до корабля: $1500\,\text{м/с} \cdot 10\,\text{с} = 15 000\,\text{м} = 15\,\text{км}.$
+
+Ответ: $15$.
+}
+
+% Source sdamgia-24945: https://phys-ege.sdamgia.ru/problem?id=24945
+\BankTask{sdamgia-24945}{
+Две лодки покоятся на поверхности озера на некотором расстоянии друг от друга. С первой лодки одновременно посылаются два коротких звуковых сигнала, один из которых идет в воздухе, а второй  — в воде. На второй лодке один из сигналов был принят через $0{,}8\,\text{с}$ после отправки, а другой  — на $2{,}7\,\text{с}$ позже первого сигнала. Найдите отношение скорости звука в воде к скорости звука в воздухе. Ответ округлите до десятых долей.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Оба сигнала прошли одинаковое расстояние: $s= v _1t,$ $s= v _2 ( t + \Delta t ) .$ Тогда получаем отношение скорости звука в воде к скорости звука в воздухе: 
+
+$\frac{v _1}{v _2} = \frac{t + \Delta t}{t} = \frac{0{,}8 + 2{,}7}{0{,}8} \approx 4{,}4.$
+
+Ответ: $4{,}4$.
+}
+
+% Source sdamgia-11659: https://phys-ege.sdamgia.ru/problem?id=11659
+\BankTask{sdamgia-11659}{
+На поверхности моря покоится катер. Непосредственно под ним на глубине $50\,\text{м}$ работает водолаз, который в некоторый момент ударяет молотком по металлической детали. Сидящий на катере гидроакустик слышит два звука от удара с интервалом времени между ними $1\,\text{с}$. Скорость звука в воде $1400\,\text{м/с}$. Чему равна глубина моря в этом месте?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Обозначим за $h$ глубину, на которой работает водолаз, $x$ — расстояние от водолаза до дна моря, $H$ — глубину моря в данной точке. Тогда время прихода гидроакустику первой звуковой волны равно $t_1= \frac{h}{v} ,$ второй звуковой волны  — $t_2= \frac{2x + h}{v} .$ Таким образом, вторая волна пришла позже первой на промежуток времени $\Delta t=t_2 - t_1= \frac{2x}{v} .$
+Тогда расстояние от водолаза до дна равно $x= \frac{v \Delta t}{2} ,$ а глубина моря:
+
+$H=h + x=h + \frac{v \Delta t}{2} =50 + \frac{1400 \cdot 1}{2} =750\,\text{м}.$
+
+Ответ: $750$.
+}
+
+
+% Source A784FF: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=A784FF
+\BankTask{A784FF}{
+Человек услышал звук грома через $8\,\text{с}$ после вспышки молнии. Считая, что скорость звука в воздухе равна $340\,\text{м}/\text{с}$, определите, на каком расстоянии от человека ударила молния. Результат выразите в $\text{м}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Время распространения света пренебрежимо мало. Расстояние $s=vt=340\cdot8=2720\,\text{м}$.
+}
+
+% Source 3F1DFE: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=3F1DFE
+\BankTask{3F1DFE}{
+У входа в вертикальную шахту произведён выстрел. Через какое время после выстрела звук выстрела вернётся к стрелку, отразившись от дна шахты, если её глубина $170\,\text{м}$? Скорость звука в воздухе принять равной $340\,\text{м}/\text{с}$. Результат выразите в $\text{с}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Звук проходит путь $2h$, поэтому $t=2h/v=2\cdot170/340=1\,\text{с}$.
+}
+
+% Source 991714: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=991714
+\BankTask{991714}{
+Труба (бас) издаёт звуки в диапазоне от $\nu_{1}=60\,\text{Гц}$ до $\nu_{2}=6000\,\text{Гц}$.
+Чему равно отношение граничных длин звуковых волн $\frac{\lambda_1}{\lambda_2}$ этого диапазона?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+В одной среде $\lambda=v/\nu$, поэтому $\lambda_1/\lambda_2=\nu_2/\nu_1=6000/60=100$.
+}
+
+% Source E92D12: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=E92D12
+\BankTask{E92D12}{
+Каков период колебаний $T$ звуковых волн в среде, если скорость звука
+в этой среде равна $1000\,\text{м}/\text{с}$, а длина волны $l=5\,\text{м}$? Результат выразите в $\text{с}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$v=\lambda/T$, откуда $T=\lambda/v=5/1000=0{,}005\,\text{с}$.
+}
+
+% Source 4e8F5A: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=4e8F5A
+\BankTask{4e8F5A}{
+Звуковая волна частотой $2\,\text{кГц}$ распространяется в среде со скоростью $340\,\text{м}/\text{с}$. Чему равна длина звуковой волны? Результат выразите в $\text{м}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$\nu=2000\,\text{Гц}$. Длина волны $\lambda=v/\nu=340/2000=0{,}17\,\text{м}$.
+}
+
+% Source 39CA85: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=39CA85
+\BankTask{39CA85}{
+Точно посередине между наблюдателем и скалой в дерево ударила молния.
+Наблюдатель услышал первый раскат грома через $1\,\text{с}$ после вспышки молнии. Через какое время после вспышки молнии наблюдатель услышит отражённый от скалы звук? Результат выразите в $\text{с}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Пусть расстояние до молнии $d$. Первый звук проходит $d$ за $1\,\text{с}$. До скалы от молнии также $d$, затем от скалы до наблюдателя $2d$; отражённый звук проходит $3d$ и придёт через $3\,\text{с}$ после вспышки.
+}
+
+\end{document}

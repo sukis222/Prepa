@@ -1,0 +1,47 @@
+{
+  "approved": true,
+  "bundle_sha256": "b857e9944f6ab009a812a99bacb2b03b8b7b1e13e5d26dd8896d4ac4f7d95d1f",
+  "pages": [
+    {
+      "file": "tmp\\all-topics\\lever\\preview\\task-1-16-1\\page-01.png",
+      "sha256": "f5566ada9354377dfd9e72a5d5583b8bee3a3f51e4e8c26688a728aa0e51c87d"
+    },
+    {
+      "file": "tmp\\all-topics\\lever\\preview\\task-1-16-1\\page-02.png",
+      "sha256": "2c022d45ea55a0149c009cb8980b5502b62941ffb449c735171182de217bc591"
+    },
+    {
+      "file": "tmp\\all-topics\\lever\\preview\\task-1-16-1\\page-03.png",
+      "sha256": "d1f5b3aa7e2fe734b207a443200c2a7296178dfc3d997f84265b6b73256f3d48"
+    },
+    {
+      "file": "tmp\\all-topics\\lever\\preview\\tutor-1-16-1\\page-01.png",
+      "sha256": "5cc71e9321d3ebb929868002fe9a6561b87f88df9970730148a1e8b31a5e621c"
+    },
+    {
+      "file": "tmp\\all-topics\\lever\\preview\\tutor-1-16-1\\page-02.png",
+      "sha256": "910b3d3749ca6f593761b1dbff214c5809fee53f8c70ee4be581b6be8573465b"
+    },
+    {
+      "file": "tmp\\all-topics\\lever\\preview\\tutor-1-16-1\\page-03.png",
+      "sha256": "78b8ff7ab69a4495a483c137faf3851dba2f218f173ebae60e63c843130bf7ef"
+    },
+    {
+      "file": "tmp\\all-topics\\lever\\preview\\tutor-1-16-1\\page-04.png",
+      "sha256": "9f38076ea6ee3510a6d7cadf4cfd8b467abd100e0ccb717cb63f690173352571"
+    },
+    {
+      "file": "tmp\\all-topics\\lever\\preview\\tutor-1-16-1\\page-05.png",
+      "sha256": "c2972878d95be1ef11b1387e578241c774aee8fd0594110920fd0f230184509b"
+    },
+    {
+      "file": "tmp\\all-topics\\lever\\preview\\tutor-1-16-1\\page-06.png",
+      "sha256": "e2e2498a9001f5348c9d514ce8de02f7fd55db77304a39f84b2d9f2866ad449a"
+    },
+    {
+      "file": "tmp\\all-topics\\lever\\preview\\tutor-1-16-1\\page-07.png",
+      "sha256": "e46731861e476aea2a8ef8884ab53657ada54a00489da41b21b6e0f493a64f5d"
+    }
+  ],
+  "scope": "Every rendered page viewed; diagrams, lines, tables and typeset formulas checked. Editor opening not checked."
+}

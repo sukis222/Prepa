@@ -1,0 +1,22 @@
+% Калибровка высоты двух иллюстраций по строкам оригинала (единица bp).
+% Рисунки остаются собственными TikZ-объектами; здесь только размещение.
+\newcommand{\ReplicaPlacedWorkFigure}[5]{%
+  \par\begingroup
+  \setbox0=\hbox{#1}%
+  \dimen0=\prevdepth
+  \kern\dimexpr #2bp-\dimen0-\ht0+30.25bp\relax
+  \nointerlineskip
+  \hbox to\textwidth{\hspace*{#3bp}\box0\hfil}%
+  \setbox1=\hbox{#4}%
+  \kern\dimexpr #5bp-\ht1\relax
+  \nointerlineskip\hbox to\textwidth{\hfil\box1\hfil}%
+  \endgroup
+}
+\newcommand{\ReplicaWorkFigureOne}{%
+  \ReplicaPlacedWorkFigure{\WorkParallelDiagram}{45.256}{149.118}{Рис.~1.48. $A=Fs$}{24.409}%
+  \vskip10.384bp\relax
+}
+\newcommand{\ReplicaWorkFigureTwo}{%
+  \ReplicaPlacedWorkFigure{\WorkObliqueDiagram}{84.256}{124.118}{Рис.~1.49. $A=Fs\cos\alpha$}{24.409}%
+  \vskip11.466bp\relax
+}

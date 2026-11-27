@@ -1,0 +1,269 @@
+{
+  "scope": "layout-only; graph catalogue awaits user approval before corpus-wide migration",
+  "changed_sections": [
+    6,
+    8,
+    9,
+    10,
+    13,
+    15,
+    17
+  ],
+  "source_ids_order_math_and_exact_solutions_unchanged": true,
+  "existing_file_export_preserves_layout_edits": true,
+  "tex_sha256": {
+    "task-01.tex": "2beb830775667759edad6ec31029a7fb4957ddc1438c916cd92b056d3bc9499d",
+    "task-02.tex": "e07c2b7a20321f097ee017fb0747e31eee5bbdbb78b263988fa6d41920eab738",
+    "task-03.tex": "7496c31b2539012e9ed581cfac57804bfb5a15afea3e7a339a3832e00c3615b3",
+    "task-04.tex": "e4a96ded050d3f7ac42c62bd4b54ecd4c2eb9bc04a15d6380a9051ac11f0119f",
+    "task-05.tex": "42f8168a1f18f307c8090c2ef778a826c8efdbc269baed968d75e171f14b7bf3",
+    "task-06.tex": "110171b0c3fa20eb4fc1710004c612260ac4779b0707de73d7a1b546f63029b9",
+    "task-07.tex": "424652eb2f19527252300a80a24ee2da06a0d1722ae1b4877ba8024a8000dc80",
+    "task-08.tex": "bad96645106231a9271ea6ff51ddb01906990dcc636a6d58740cd884992c82f8",
+    "task-09.tex": "0ef60ce1662eb12d1a47d64e0901975741144c86f0e563a8060773e11b350bb8",
+    "task-10.tex": "b42227cce15f64764f3836ac8157ec55643deddee7e47d530530a3cfc6a8c6a0",
+    "task-11.tex": "1382fd2ba32c8bc8493451b3bb72a9d2096c84b9511f60d05937b12ed3120a41",
+    "task-12.tex": "6b295dc7e30a1f4b18fed7443f4cdff897c2f0ee497182422a7cc40383b62d2a",
+    "task-13.tex": "6ec3235ed3d47eeb947c99cf88d71fcaa282ac21c65afa14f28c1a54a5e23e76",
+    "task-14.tex": "842dc7a160b3b3f141ba9be641046ded8cc4ae5b8828804950faf9e3e14f65f5",
+    "task-15.tex": "278b81e42334779d69f3d36a6e43bcd34a74d633cee6ededdd8bc0d3901fe5b0",
+    "task-16.tex": "02c160762c675eb3db8eb0bebc56c1251ee913799029e3287ec8a778674b7d12",
+    "task-17.tex": "9900e1a9c13420267a6fb71d48935708b2228c61f6ff93df1f14ba81571d96e1",
+    "task-18.tex": "cdc6e766c374cabfbe0e0e8e526f7b2c6cfc831bdbb9d74e2d0771adcb1db382",
+    "task-19.tex": "3100fab7a11fc86f4827dbda637977fce045d186d83c3fc663684f54a1fc2119",
+    "task-20.tex": "14f23ce3c2eaa0d13f74a061a1547b7821653a7ec9254dca94a3602bb3b761dc"
+  },
+  "shared_style_sha256": "5639c8829140489919cf64d78e2b03b81c81759c517fad956bed2c9b495ef7c3",
+  "samples_sha256": "8c59e9c06dd1256f5598af269b2010081a94a5367d96e1b2f5a21f0d3a4c4200",
+  "graphs": {
+    "approved": true,
+    "documents": {
+      "output/fipi-physics/task-08.tex": {
+        "student_pages_reviewed": [
+          1,
+          2,
+          3
+        ],
+        "tutor_pages_reviewed": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "changes": [
+          "F23045: continuous main line emphasized above a lighter grid",
+          "F45AFF: full coordinate projections with the shared fine dash pattern",
+          "217002 and 5745AB: identical fine projection pattern, main curve drawn last"
+        ],
+        "data_and_solutions_unchanged": true
+      },
+      "output/fipi-physics/graph-style-samples.tex": {
+        "pages_reviewed": [
+          1,
+          2,
+          3
+        ],
+        "source_ids": [
+          "F23045",
+          "F45AFF",
+          "217002",
+          "5745AB",
+          "7CFB3E",
+          "7CCC09"
+        ],
+        "status": "proposal-awaiting-user-approval"
+      }
+    },
+    "recipe": ".vscode/settings.json: Tectonic (project)",
+    "overflow": [],
+    "missing_glyphs": false,
+    "editor_view_checked": false,
+    "new_pdfs_in_output": false
+  },
+  "matching": {
+    "approved": true,
+    "reviewer": "matching_layout",
+    "scope": "Bold matching headings use the current surrounding font and size. No content or document edits in this follow-up.",
+    "method": "All eight editions rebuilt. Focused full-page visual regression review of the changed heading style, including task06 item2, task06 item13, long task15 headings, and task17 formula lists. The preceding full 104-page contact-sheet review is retained separately.",
+    "previous_full_review": "visual-review-before-bold.json",
+    "tex_sha256": {
+      "task-06.tex": "110171b0c3fa20eb4fc1710004c612260ac4779b0707de73d7a1b546f63029b9",
+      "task-10.tex": "b42227cce15f64764f3836ac8157ec55643deddee7e47d530530a3cfc6a8c6a0",
+      "task-15.tex": "278b81e42334779d69f3d36a6e43bcd34a74d633cee6ededdd8bc0d3901fe5b0",
+      "task-17.tex": "9900e1a9c13420267a6fb71d48935708b2228c61f6ff93df1f14ba81571d96e1"
+    },
+    "shared_style_sha256": "5639c8829140489919cf64d78e2b03b81c81759c517fad956bed2c9b495ef7c3",
+    "pages": [
+      {
+        "task": 6,
+        "mode": "student",
+        "pages_built": 7,
+        "pages_reviewed": [
+          1,
+          5
+        ],
+        "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\layout-check\\matching\\student\\task-06-pages",
+        "overflow": []
+      },
+      {
+        "task": 6,
+        "mode": "tutor",
+        "pages_built": 9,
+        "pages_reviewed": [
+          1,
+          6
+        ],
+        "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\layout-check\\matching\\tutor\\task-06-pages",
+        "overflow": []
+      },
+      {
+        "task": 10,
+        "mode": "student",
+        "pages_built": 10,
+        "pages_reviewed": [
+          1
+        ],
+        "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\layout-check\\matching\\student\\task-10-pages",
+        "overflow": []
+      },
+      {
+        "task": 10,
+        "mode": "tutor",
+        "pages_built": 15,
+        "pages_reviewed": [],
+        "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\layout-check\\matching\\tutor\\task-10-pages",
+        "overflow": []
+      },
+      {
+        "task": 15,
+        "mode": "student",
+        "pages_built": 14,
+        "pages_reviewed": [
+          1
+        ],
+        "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\layout-check\\matching\\student\\task-15-pages",
+        "overflow": []
+      },
+      {
+        "task": 15,
+        "mode": "tutor",
+        "pages_built": 16,
+        "pages_reviewed": [
+          1
+        ],
+        "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\layout-check\\matching\\tutor\\task-15-pages",
+        "overflow": []
+      },
+      {
+        "task": 17,
+        "mode": "student",
+        "pages_built": 16,
+        "pages_reviewed": [
+          3
+        ],
+        "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\layout-check\\matching\\student\\task-17-pages",
+        "overflow": []
+      },
+      {
+        "task": 17,
+        "mode": "tutor",
+        "pages_built": 18,
+        "pages_reviewed": [
+          3
+        ],
+        "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\layout-check\\matching\\tutor\\task-17-pages",
+        "overflow": []
+      }
+    ],
+    "editor_view_checked": false,
+    "findings": [
+      "Heading font family and size match the following list; only font weight differs.",
+      "Focused inspected pages have readable spacing, complete tables and no collisions.",
+      "All builds have no overflow or missing glyphs."
+    ],
+    "total_pages_reviewed": 9,
+    "total_pages_built": 105
+  },
+  "data_table_borders": {
+    "approved": true,
+    "sections": [
+      {
+        "exam_number": 9,
+        "tasks": [
+          "6ECE95"
+        ],
+        "source_tex": "output/fipi-physics/task-09.tex",
+        "source_sha256": "0ef60ce1662eb12d1a47d64e0901975741144c86f0e563a8060773e11b350bb8",
+        "pages": {
+          "student": [
+            4
+          ],
+          "tutor": [
+            11
+          ]
+        }
+      },
+      {
+        "exam_number": 13,
+        "tasks": [
+          "17CD9F",
+          "5F286F"
+        ],
+        "source_tex": "output/fipi-physics/task-13.tex",
+        "source_sha256": "6ec3235ed3d47eeb947c99cf88d71fcaa282ac21c65afa14f28c1a54a5e23e76",
+        "pages": {
+          "student": [
+            1,
+            2
+          ],
+          "tutor": [
+            2,
+            3
+          ]
+        }
+      }
+    ],
+    "builds": [
+      {
+        "document": "D:\\GitHub\\Prepa-GPT\\tmp\\layout-check\\table-borders\\student\\task-09.tex",
+        "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\layout-check\\table-borders\\student\\task-09.pdf",
+        "pages": 8,
+        "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\layout-check\\table-borders\\previews\\student-09",
+        "recipe": "Tectonic (project)",
+        "overflow": []
+      },
+      {
+        "document": "D:\\GitHub\\Prepa-GPT\\tmp\\layout-check\\table-borders\\student\\task-13.tex",
+        "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\layout-check\\table-borders\\student\\task-13.pdf",
+        "pages": 3,
+        "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\layout-check\\table-borders\\previews\\student-13",
+        "recipe": "Tectonic (project)",
+        "overflow": []
+      },
+      {
+        "document": "D:\\GitHub\\Prepa-GPT\\tmp\\layout-check\\table-borders\\tutor\\task-09.tex",
+        "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\layout-check\\table-borders\\tutor\\task-09.pdf",
+        "pages": 19,
+        "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\layout-check\\table-borders\\previews\\tutor-09",
+        "recipe": "Tectonic (project)",
+        "overflow": []
+      },
+      {
+        "document": "D:\\GitHub\\Prepa-GPT\\tmp\\layout-check\\table-borders\\tutor\\task-13.tex",
+        "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\layout-check\\table-borders\\tutor\\task-13.pdf",
+        "pages": 6,
+        "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\layout-check\\table-borders\\previews\\tutor-13",
+        "recipe": "Tectonic (project)",
+        "overflow": []
+      }
+    ],
+    "visual_review": "All six affected pages inspected: complete outer borders and row/column rules; all data and units fit. No overflow or glyph loss.",
+    "analogue_audit": "All 20 task files audited. The only remaining unframed tabular are nested periodic-element layout in task16 and diagram layout in task20; these are not data tables.",
+    "editor_view_checked": false
+  },
+  "targeted_tests": "47 passed",
+  "ruff": "passed",
+  "editor_view_checked": false,
+  "new_pdfs_in_output": false
+}

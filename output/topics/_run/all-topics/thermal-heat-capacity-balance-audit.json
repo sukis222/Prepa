@@ -1,0 +1,18 @@
+{
+  "batch": "thermal-heat-capacity-balance",
+  "bundle_sha256": "a5ed54498faf733efa090f4bb717114dde09140e2399792d1ef7e10aae01220a",
+  "topics": [
+    "2.9.1",
+    "2.9.2"
+  ],
+  "tasks": 20,
+  "pages": 12,
+  "baseline_preserved": 107,
+  "files": {
+    "task-2-9-1.tex": "3ff75016380e18be61b11b4ab3560e8d0d6050d4d32f3cb7c642b7bae715a020",
+    "tutor-2-9-1.tex": "ab5bd085d6c403138535ca7f571eba231dc3f691aa70091c88795beb0ac86562",
+    "task-2-9-2.tex": "cfb4e8b90d3489f052a939824527b88fd2b246117e654dca5e7a9dce4393e5f6",
+    "tutor-2-9-2.tex": "5d5df67cc4fbd3066cc485e06d66bb16a76be629f67b5e46e47049896b2cd514"
+  },
+  "editor_open_checked": false
+}

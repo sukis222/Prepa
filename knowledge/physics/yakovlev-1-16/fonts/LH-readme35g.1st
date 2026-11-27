@@ -1,0 +1,24 @@
+ver 3.5 patch level 7 (August 2009) --
+---------------------------------------
+In this version there were fixed metric
+bugs
+*) in typewriter fonts  (T2* encoding);
+this  fix  changes  metrics  for fonts, 
+started   with    la*/lb*/lc*   letters
+(example with la* fonts):
+latt latc last lait laltt8
+
+*) in ligature of uppercase  letter tse
+(OT2 encoding);  this  fix  changes all
+metrics of wn* fonts.
+(Please remember that wncy* fonts  like
+wncyr10, do not belong to this package)
+                            
+I hope that the old documents are still
+work  with  new  version - the  bug  of
+ff-ligatures was visible  and  could be
+corrected with usage of T1 fonts;    in
+wn* fonts just new ligature was added.
+
+The font metrics are still going  to be
+stable.

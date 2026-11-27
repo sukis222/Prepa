@@ -1,0 +1,50 @@
+{
+  "navigator_url": "https://fipi.ru/navigator-podgotovki/navigator-ege#fi",
+  "documents": [
+    {
+      "id": "fi-1-mehanika",
+      "url": "https://doc.fipi.ru/navigator-podgotovki/navigator-ege/2026/fi-1-mehanika.pdf",
+      "file": "fi-1-mehanika.pdf",
+      "year": 2026,
+      "pages": 10,
+      "sha256": "fd2eaee517a2e633d9a507c248c259858ea794e2ca25556f56828aa54e030378",
+      "retrieved_at": "2026-11-14"
+    },
+    {
+      "id": "fi-2-molekuljarnaja-fizika",
+      "url": "https://doc.fipi.ru/navigator-podgotovki/navigator-ege/2026/fi-2-molekuljarnaja-fizika.pdf",
+      "file": "fi-2-molekuljarnaja-fizika.pdf",
+      "year": 2026,
+      "pages": 7,
+      "sha256": "e237804e3651887821f60d734e81ce3ba93f9ecf5a4b2735a995c3076f4063cd",
+      "retrieved_at": "2026-11-14"
+    },
+    {
+      "id": "fi-3-elektrodinamika",
+      "url": "https://doc.fipi.ru/navigator-podgotovki/navigator-ege/2026/fi-3-elektrodinamika.pdf",
+      "file": "fi-3-elektrodinamika.pdf",
+      "year": 2026,
+      "pages": 7,
+      "sha256": "c966f0142a4f1add9465b80d3c46c67bcfcb639d7f09db7268320dbc10e49ca1",
+      "retrieved_at": "2026-11-14"
+    },
+    {
+      "id": "fi-4-indukcija",
+      "url": "https://doc.fipi.ru/navigator-podgotovki/navigator-ege/2026/fi-4-indukcija.pdf",
+      "file": "fi-4-indukcija.pdf",
+      "year": 2026,
+      "pages": 7,
+      "sha256": "8908da95e138a7a64a0d0ff4f701fce65e93ee89f7b58547895dafb0e74edb05",
+      "retrieved_at": "2026-11-14"
+    },
+    {
+      "id": "fi-5-kvant",
+      "url": "https://doc.fipi.ru/navigator-podgotovki/navigator-ege/2026/fi-5-kvant.pdf",
+      "file": "fi-5-kvant.pdf",
+      "year": 2026,
+      "pages": 5,
+      "sha256": "4f0e88c8c2016223a1628e2ab84bbb9ecdd1c7fb196a008f4163232b736d13b7",
+      "retrieved_at": "2026-11-14"
+    }
+  ]
+}

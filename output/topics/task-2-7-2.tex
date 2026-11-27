@@ -1,0 +1,78 @@
+% !TEX root = task-2-7-2.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{2.7.2}{Динамическое равновесие}
+
+
+% Source 4DBED7: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=4DBED7
+\BankTask{4DBED7}{
+\begin{center}
+\begin{tikzpicture}[>=stealth,x=0.85cm,y=0.85cm]
+\draw[->] (0,0)--(4.5,0) node[below] {$t$};
+\draw[->] (0,0)--(0,2.8) node[left] {$n$};
+\node[below left] at (0,0) {$0$};
+\draw[thick] (0,0.48) .. controls (0.65,1.2) and (1.15,1.85) .. (1.9,1.85)--(4.05,1.85);
+\node at (0.65,1.7) {$1$};
+\node at (2.8,2.23) {$2$};
+\end{tikzpicture}
+\end{center}
+В стеклянную колбу налили немного воды и герметично закрыли её пробкой. Вода постепенно испарялась. На рисунке показан график изменения со временем \(t\) концентрации \(n\) молекул водяного пара внутри колбы. Температура в колбе в течение всего времени проведения опыта оставалась постоянной.
+
+В конце опыта в колбе ещё оставалась вода.
+\begin{enumerate}
+\item На участке \(1\) плотность водяных паров уменьшалась.
+\item На участке \(2\) давление водяных паров не менялось.
+\item На участке \(1\) водяной пар ненасыщенный, а на участке \(2\) насыщенный.
+\item На участке \(1\) давление водяных паров уменьшалось.
+\item На участке \(2\) плотность водяных паров увеличивалась.
+\end{enumerate}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+При постоянной температуре \(p=nkT\), а плотность пара \(\rho=m_0n\), где \(m_0\) — масса молекулы воды.
+\begin{enumerate}
+\item Неверно: на участке \(1\) концентрация и плотность растут.
+\item Верно: на участке \(2\) концентрация постоянна, поэтому давление не меняется.
+\item Верно: на участке \(1\) пар ещё ненасыщенный; на участке \(2\) устанавливается равновесие с оставшейся водой, пар насыщенный.
+\item Неверно: на участке \(1\) давление растёт вместе с концентрацией.
+\item Неверно: на участке \(2\) плотность постоянна.
+\end{enumerate}
+\(\boxed{23}\).
+}
+
+\end{document}

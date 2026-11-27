@@ -1,0 +1,63 @@
+% !TEX root = task-6-5-3.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{6.5.3}{Планетарная модель атома}
+
+
+% Source sdamgia-7047: https://phys-ege.sdamgia.ru/problem?id=7047
+\BankTask{sdamgia-7047}{
+Какое утверждение соответствует планетарной модели атома?\par 1) Ядро  — в центре атома, заряд ядра положителен, электроны  — на орбитах вокруг ядра.\par 2) Ядро  — в центре атома, заряд ядра отрицателен, электроны  — на орбитах вокруг ядра.\par 3) Электроны  — в центре атома, ядро обращается вокруг электронов, заряд ядра положителен.\par 4) Электроны  — в центре атома, ядро обращается вокруг электронов, заряд ядра отрицателен.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Планетарной модели атома соответствует модель «ядро  — в центре атома, заряд ядра положителен, электроны  — на орбитах вокруг ядра».
+
+Правильный ответ указан под номером $1$.
+}
+
+% Source sdamgia-7079: https://phys-ege.sdamgia.ru/problem?id=7079
+\BankTask{sdamgia-7079}{
+Какое представление о строении атома соответствует модели атома Резерфорда?\par 1) Ядро  — в центре атома, заряд ядра положителен, бóльшая часть массы атома сосредоточена в электронах.\par 2) Ядро  — в центре атома, заряд ядра отрицателен, бóльшая часть массы атома сосредоточена в электронной оболочке.\par 3) Ядро  — в центре атома, заряд ядра отрицателен, бóльшая часть массы атома сосредоточена в ядре.\par 4) Ядро  — в центре атома, заряд ядра положителен, бóльшая часть массы атома сосредоточена в ядре
+}{
+\smallskip\noindent\textbf{Решение}\par
+Модели Резерфорда соответствует следующая модель: ядро  — в центре атома, заряд ядра положителен, бóльшая часть массы атома сосредоточена в ядре.
+
+Правильный ответ указан под номером $4$.
+}
+
+\end{document}

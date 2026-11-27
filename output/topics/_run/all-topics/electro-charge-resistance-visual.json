@@ -1,0 +1,87 @@
+{
+  "approved": true,
+  "reviewed_sha256": "f88fbb76b987306bd2a4cdb20221701c7716696c4682bd6678316e95d9ad624f",
+  "pages": [
+    {
+      "file": "tmp/all-topics/electro/preview/task-3-1-2/page-01.png",
+      "sha256": "b0579b4593e73be47f51cf28298fabb857358a730a8941261d09b077034ebf7a"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/task-3-1-2/page-02.png",
+      "sha256": "00e0583addecd67316e5acd14bc07efb436f2cff47b9e1754171149088235150"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/task-3-1-2/page-03.png",
+      "sha256": "ff3d52266a2a22ec9f03ee57fb0e3b423f7234120ee6bd824f04d4c8bcbb1e5b"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/task-3-9-2/page-01.png",
+      "sha256": "62e282038f9958a21b25df05bd284468b2d6ad037fa14bf6d2cb21a0382ff54f"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/task-3-9-2/page-02.png",
+      "sha256": "f3013cf7b58fe10725c7e8b001c217c995d096746d3182ea3a64e5502dda790d"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/task-3-9-2/page-03.png",
+      "sha256": "7a13fba2b8cf2993b4ce73588bf7a4ba7fd1a78d1b8bde73ff1abc3ef436ad04"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-1-2/page-01.png",
+      "sha256": "edef88c7eddc13fec6ce399c51533289ea0fe932c20d1f01125b090af3880f8b"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-1-2/page-02.png",
+      "sha256": "a475d2ffc4ce4624b8eb6628a10f398170730787d3f230325ec9a2a8e185ba71"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-1-2/page-03.png",
+      "sha256": "01828adf156f8c7744d43ff0c8cef6c077055ccc7526e7f4f95a3b88f3e9bd91"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-1-2/page-04.png",
+      "sha256": "98e6d7f345f3b0ed591a9958129a7da1f83f61ab625037e8d1d229c46748b93d"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-1-2/page-05.png",
+      "sha256": "5591832040ebd6ba364a913e76cccc901ccad88779569ae7da0154a8b3b4aac8"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-1-2/page-06.png",
+      "sha256": "5c5d390073ad12312bbed73c2e97ddf405b18dfd52cd2859537fbd305147292e"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-1-2/page-07.png",
+      "sha256": "a37027dd92d04deac2145278a50ad4b5e1e65d7d2fe2997ed06e346dbec66be0"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-1-2/page-08.png",
+      "sha256": "4b419b448c472c8b446ed5ce7fb1e0c0d2853361356790a47e5bc0484709ed0e"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-9-2/page-01.png",
+      "sha256": "9111026613cf6422443221144aa181692689769a40cc61b0e7cc82f79961c500"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-9-2/page-02.png",
+      "sha256": "543898299dddde8dcff1b04e1e18c550da1d33fe6cd2351d423e0b16c4f802c4"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-9-2/page-03.png",
+      "sha256": "d317ab41d716a454e8871e5beebf4cc41d5ec608aa0bf1a2397b34b44f560bbd"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-9-2/page-04.png",
+      "sha256": "dd14936c5d0d8a3bc520206a7cf02c43b8f4082d8199f3f0ad2784e695cf47e9"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-9-2/page-05.png",
+      "sha256": "5aecd341662109467a279397515cde9908558d6467c73bf4a6a9b505e2f9750a"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-9-2/page-06.png",
+      "sha256": "f06635dc6338562ee9279abbe7c296145c9b97fea3a330e0333389ffa2b91d84"
+    }
+  ],
+  "scope": "Все страницы просмотрены:26 на5af63229d7; последние9изменённых пересмотрены наadffa7ae27,17остальных равны побайтово. Формулы/двусторонние стрелки сверены."
+}

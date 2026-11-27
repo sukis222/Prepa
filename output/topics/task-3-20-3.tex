@@ -1,0 +1,108 @@
+% !TEX root = task-3-20-3.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{3.20.3}{Энергия магнитного поля}
+
+
+% Source 458c72: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=458c72
+\BankTask{458c72}{
+Чему равна индуктивность катушки (в $\text{мГн}$), если при силе тока \(5\,\text{А}\) энергия её магнитного поля равна \(12{,}5\,\text{мДж}\)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Энергия магнитного поля катушки \(W=\dfrac{LI^2}{2}\), поэтому
+\[
+L=\frac{2W}{I^2}=\frac{2\cdot12{,}5\cdot10^{-3}}{5^2}=10^{-3}\,\text{Гн}=1\,\text{мГн}.
+\]
+Ответ: \(1\).
+}
+
+% Source D747BC: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=D747BC
+\BankTask{D747BC}{
+Какова энергия магнитного поля катушки индуктивностью \(0{,}4\,\text{Гн}\), если сила тока в катушке равна \(6\,\text{А}\) (в $\text{Дж}$)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Энергия магнитного поля катушки:
+\[
+W=\frac{LI^2}{2}=\frac{0{,}4\cdot 6^2}{2}=7{,}2\,\text{Дж}.
+\]
+Ответ: \(7{,}2\,\text{Дж}\).
+}
+
+% Source C453EB: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=C453EB
+\BankTask{C453EB}{
+Энергия магнитного поля катушки с током равна \(0{,}64\,\text{Дж}\). Индуктивность катушки равна \(20\,\text{мГн}\). Какова сила тока в катушке (в $\text{А}$)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Из \(W=LI^2/2\), учитывая \(L=20\,\text{мГн}=0{,}020\,\text{Гн}\), получаем:
+\[
+I=\sqrt{\frac{2W}{L}}=\sqrt{\frac{2\cdot0{,}64}{0{,}020}}=8\,\text{А}.
+\]
+Ответ: \(8\,\text{А}\).
+}
+
+% Source 9CFC20: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=9CFC20
+\BankTask{9CFC20}{
+В катушке индуктивностью $20\,\text{мГн}$ сила тока $I$ зависит от времени $t$, как показано на графике, приведённом на рисунке.
+
+\begin{enumerate}
+\item Модуль ЭДС самоиндукции в катушке максимален в интервале времени от $0$ до $1\,\text{с}$.
+\item Энергия магнитного поля катушки в интервале времени от $2$ до $3\,\text{с}$ равна $40\,\text{мДж}$.
+\item Модуль ЭДС самоиндукции в катушке в интервале времени от $3$ до $5\,\text{с}$ равен $10\,\text{мВ}$.
+\item Модуль ЭДС самоиндукции в катушке минимален в интервале времени от $3$ до $4\,\text{с}$.
+\item Модуль скорости изменения тока в катушке максимален в интервале времени от $5$ до $6\,\text{с}$.
+\end{enumerate}
+
+\begin{center}
+\begin{tikzpicture}[book diagram,x=0.75cm,y=0.75cm]
+\draw[thin] (0,1)--(6,1) (0,2)--(6,2) (0,3)--(6,3) (0,4)--(6,4);
+\foreach \x in {1,2,3,4,5,6} {\draw[thin] (\x,0)--(\x,4);}
+\draw[-{book tip}] (0,0)--(6.75,0) node[right] {$t,\,\text{с}$};
+\draw[-{book tip}] (0,0)--(0,4.9) node[above left] {$I,\,\text{А}$};
+\node[below left] at (0,0) {$0$};
+\foreach \x in {1,2,3,4,5,6} {\node[below] at (\x,0) {$\x$};}
+\foreach \y in {1,2,3,4} {\node[left] at (0,\y) {$\y$};}
+\draw[thick] (0,0)--(2,4)--(3,4)--(5,3)--(6,0);
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Используем $|\mathcal E|=L|\Delta I/\Delta t|$: на интервалах $0$–$2$, $2$–$3$, $3$–$5$ и $5$–$6\,\text{с}$ модуль скорости изменения тока равен соответственно $2$, $0$, $0{,}5$ и $3\,\text{А}/\text{с}$, поэтому утверждение 1 неверно, а 5 верно. При $2<t<3\,\text{с}$ энергия $W=LI^2/2=0{,}02\cdot4^2/2=0{,}16\,\text{Дж}=160\,\text{мДж}$, поэтому утверждение 2 неверно. На интервале $3$–$5\,\text{с}$ получаем $|\mathcal E|=0{,}02\cdot0{,}5=0{,}01\,\text{В}=10\,\text{мВ}$, поэтому утверждение 3 верно. Минимальная ЭДС равна нулю на интервале $2$–$3\,\text{с}$, поэтому утверждение 4 неверно. Ответ: 3, 5.
+}
+
+\end{document}

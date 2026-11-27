@@ -1,0 +1,91 @@
+{
+  "approved": true,
+  "bundle_sha256": "333a4111886ad72485cc50a001f380bc55206697301f20fde04506fc472cde3b",
+  "reviewed_sha256": "333a4111886ad72485cc50a001f380bc55206697301f20fde04506fc472cde3b",
+  "pages": [
+    {
+      "file": "tmp/all-topics/thermal/preview/task-2-5-1/page-01.png",
+      "sha256": "21f81e28fb950bbea8dcec33175986571c12a9e3290b12978fd8957b84d2c891"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/task-2-5-1/page-02.png",
+      "sha256": "c0ad78032a8ab9d6b460fed91f025e7288d82394639f49fa37bcc6801cfc51dd"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/task-2-5-2/page-01.png",
+      "sha256": "5e89ed1512763c2a10984e5976ac2a4edfc6853b619c6eb3a4632800af80899e"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/task-2-5-2/page-02.png",
+      "sha256": "a4b59e4868e01d200866992badef6ce636bf243271d8404cf3166c56fee69298"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/task-2-5-4/page-01.png",
+      "sha256": "f8a9d4b972ad7482d1c176fc3023c654e288c8095f48907408c1238418a19494"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/task-2-5-4/page-02.png",
+      "sha256": "72cb16fd88a5af0bcf899e6d15037020905a730c63281fa2c4051e0cf5feb262"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/tutor-2-5-1/page-01.png",
+      "sha256": "b9bf4060ae9f0df52e7d7485f23d2d7c10f9e0f93451b89b79ec3d2deccd62cc"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/tutor-2-5-1/page-02.png",
+      "sha256": "6518c9ea0259acb901206c95daaf39db53d0b493338ce489078014abe06f4a1f"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/tutor-2-5-1/page-03.png",
+      "sha256": "30cf6229c87f57bd681addd75bbe2088b46c6d5c2bad49e59cede037eca483ee"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/tutor-2-5-1/page-04.png",
+      "sha256": "671a577e903971fce73458e3f1a65e3ae73585658c5f3b1da860818c8c0974e8"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/tutor-2-5-1/page-05.png",
+      "sha256": "51b9a2d847a5e1bc4834b6a2c7bf6a86d8a71d3fade6336a847a192e7f765a1f"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/tutor-2-5-2/page-01.png",
+      "sha256": "bc594991acac00e690b4998a5728d4722aa6451bda77cbbff3a5eb9f6f5b1f2f"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/tutor-2-5-2/page-02.png",
+      "sha256": "fbcfd45c91d80922e039485debc7fc00917f1738e9dff4cadbf10d9eabc7264e"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/tutor-2-5-2/page-03.png",
+      "sha256": "4f75170750a305de214633f85007a72d7729b0aa4e303f5f0a7957b4cb7e901c"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/tutor-2-5-2/page-04.png",
+      "sha256": "79e0f0a23dae605305ab90d5a5c94c4848efd26ba7ad954120394134f6d7c25d"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/tutor-2-5-2/page-05.png",
+      "sha256": "777e21057bec27e695ab89911ab37681c388fadd66ea091ee1730f1ce8a1e679"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/tutor-2-5-4/page-01.png",
+      "sha256": "affed4530e2e29c6432f8ab604be81042c5448dd628a4b512c912d2ff9dc96b0"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/tutor-2-5-4/page-02.png",
+      "sha256": "c34da8721ef1daa0cf7e8c47bb1226e43f2b4b1e92eefae28fbb54106773e0ce"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/tutor-2-5-4/page-03.png",
+      "sha256": "fde49ca4f0f8d61457f44fb40d9961d37de98e9ac1e781bac411aa386cb55fe2"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/tutor-2-5-4/page-04.png",
+      "sha256": "3811d28c302de081dda2467cbd1d5a6d23f1288bf7c98c7eb8189cb619026dd3"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/tutor-2-5-4/page-05.png",
+      "sha256": "6d865608545f0d6a9e37a94c5b0b262ce9243322d29ae9e951a4a516897035c7"
+    }
+  ]
+}

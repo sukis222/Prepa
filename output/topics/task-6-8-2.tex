@@ -1,0 +1,242 @@
+% !TEX root = task-6-8-2.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{6.8.2}{Изотопы}
+
+
+% Source sdamgia-3717: https://phys-ege.sdamgia.ru/problem?id=3717
+\BankTask{sdamgia-3717}{
+Во сколько раз число протонов в ядре изотопа плутония ${}^{235}_{94}\mathrm{Pu}$ превышает число нуклонов в ядре изотопа ванадия ${}^{47}_{23}\mathrm{V}$?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Число протонов в ядре называется зарядовым числом, оно записывается перед обозначением элемента внизу. Таким образом, в ядре изотопа плутония ${}^{235}_{94}\mathrm{Pu}$ $94$ протона. Число нуклонов в ядре определяет массовое число, его записывают перед обозначением элемента сверху. Следовательно, у изотопа ванадия ${}^{47}_{23}\mathrm{V}$ $47$ нуклонов. А значит, число протонов в ядре изотопа плутония ${}^{235}_{94}\mathrm{Pu}$ превышает число нуклонов в ядре изотопа ванадия ${}^{47}_{23}\mathrm{V}$ в $\frac{94}{47} =2$ раза.
+
+Ответ: $2$.
+}
+
+% Source sdamgia-12974: https://phys-ege.sdamgia.ru/problem?id=12974
+\BankTask{sdamgia-12974}{
+Натрий имеет порядковый номер $11$ в периодической системе элементов Д. И. Менделеева. В настоящее время науке известны $20$ изотопов натрия, массовые числа которых отличаются на единицу. Самый легкий из них имеет массовое число $18$. Укажите минимальное и максимальное число нейтронов, которое может содержаться в известном науке изотопе натрия.
+
+\begin{center}\small\renewcommand{\arraystretch}{1.25}\begin{tabular}{|p{0.450\linewidth}|p{0.450\linewidth}|}\hline
+Минимальное число нейтронов & Максимальное число нейтронов\\\hline
+ & \\\hline
+\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение}\par
+Количество протонов в ядре совпадает с порядковым номером элемента. У ядра натрия $11$ протонов. Массовое число равно сумме количества протонов и нейтронов. У самого легкого изотопа массовое число $18$, и, значит, его ядро содержит $18$ — $11 = 7$ нейтронов. У самого тяжелого изотопа массовое число $37$, и, значит, его ядро содержит $37$ — $11 = 26$ нейтронов. 
+
+Ответ: $726$.
+}
+
+% Source sdamgia-23242: https://phys-ege.sdamgia.ru/problem?id=23242
+\BankTask{sdamgia-23242}{
+Ядро атома золота имеет электрический заряд, который в $79$ раз превышает модуль заряда электрона. В настоящее время известны изотопы золота с числом нейтронов от $90$ до $126$. Определите для известных изотопов золота массовое число самого легкого изотопа, а также разность атомных масс самого тяжелого и самого легкого изотопов.
+
+\begin{center}\small\renewcommand{\arraystretch}{1.25}\begin{tabular}{|p{0.450\linewidth}|p{0.450\linewidth}|}\hline
+Массовое число самого легкого изотопа & Разность атомных масс самого тяжелого и самого легкого изотопов\\\hline
+ & \\\hline
+\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение}\par
+Число протонов равно числу электронов. Из условия следует, что в ядре атома золота $79$ протонов. Массовое число равно сумме числа протонов и нейтронов. Значит, у легкого ядра массовое число равно $79 + 90 = 169$, у тяжелого $79 + 126 = 205$. Разность массовых чисел тяжелого и легкого ядер равна $205 - 169 = 36$.
+
+Ответ: $16936$.
+}
+
+% Source sdamgia-23306: https://phys-ege.sdamgia.ru/problem?id=23306
+\BankTask{sdamgia-23306}{
+Из известных изотопов свинца самый легкий обозначается ${}^{178}_{82}\mathrm{Pb},$ а самый тяжелый — ${}^{220}_{82}\mathrm{Pb}.$ Сколько протонов Z содержит ядро свинца и на какую величину $\Delta N$ число нейтронов в ядре самого тяжелого известного изотопа свинца превышает число нейтронов в ядре его самого легкого известного изотопа?
+
+\begin{center}\small\renewcommand{\arraystretch}{1.25}\begin{tabular}{|p{0.450\linewidth}|p{0.450\linewidth}|}\hline
+Заряд ядра Z & Превышение $\Delta N$\\\hline
+ & \\\hline
+\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение}\par
+У первого изотопа свинца число протонов равно Z = $82$, число нейтронов $N = A$ − Z = $178 - 82 = 96$. У второго изотопа свинца число протонов также Z = $82$, число нейтронов $N = 220 - 82 = 138$. Следовательно, число нейтронов уменьшилось на $42$.
+
+Ответ: $8242$.
+}
+
+% Source sdamgia-8869: https://phys-ege.sdamgia.ru/problem?id=8869
+\BankTask{sdamgia-8869}{
+Электронная оболочка электрически нейтрального атома криптона содержит $36$ электронов. Сколько нейтронов содержится в ядрах изотопов криптона-$78$ и криптона-$86$? 
+
+В ответе запишите только числа, не разделяя их пробелом или другим знаком.
+
+\begin{center}\small\renewcommand{\arraystretch}{1.25}\begin{tabular}{|p{0.450\linewidth}|p{0.450\linewidth}|}\hline
+Число нейтронов в ядре
+
+криптона-$78$ & Число нейтронов в ядре
+
+криптона-$86$\\\hline
+ & \\\hline
+\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение}\par
+В электрически нейтральном атоме количество электронов равно количеству протонов, значит, в атоме криптона содержится $36$ протонов. В ядре изотопа криптона-$78$ содержится $78 - 36 = 42$ нейтрона, В ядре изотопа криптона-$86$ — $86 - 36 = 50$ нейтронов.
+
+Ответ: $4250$.
+}
+
+% Source sdamgia-19672: https://phys-ege.sdamgia.ru/problem?id=19672
+\BankTask{sdamgia-19672}{
+В составе изотопа некоторого элемента число протонов в $1{,}5$ раза меньше числа нуклонов. Определите число протонов и число нуклонов в этом ядре, если известно, что его массовое число равно $6$.
+
+\begin{center}\small\renewcommand{\arraystretch}{1.25}\begin{tabular}{|p{0.450\linewidth}|p{0.450\linewidth}|}\hline
+Число протонов & Число нуклонов\\\hline
+ & \\\hline
+\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение}\par
+$1$. Число протонов: массовое число / $1{,}5 = 4$ протона.
+
+$2$. Число нуклонов = сумма протонов и нейтронов = массовое число = $6$.
+
+Ответ: $46$.
+}
+
+% Source sdamgia-24960: https://phys-ege.sdamgia.ru/problem?id=24960
+\BankTask{sdamgia-24960}{
+Атом изотопа бериллия ${}^{7}_{4}\mathrm{Be}$ подвергся двойной ионизации, в результате чего образовался положительный ион B$e^{2+}$. Сколько нейтронов содержит ядро этого атома, и сколько электронов осталось у иона?
+
+\begin{center}\small\renewcommand{\arraystretch}{1.25}\begin{tabular}{|p{0.450\linewidth}|p{0.450\linewidth}|}\hline
+Число нейтронов в ядре атома & Число электронов у иона\\\hline
+ & \\\hline
+\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение}\par
+В атоме бериллия содержалось $4$ протона, $4$ электрона и $3$ нейтрона. При двойной ионизации число протонов и нейтронов не изменилось, электронов стало $2$. 
+
+Ответ: $32$.
+}
+
+% Source sdamgia-32296: https://phys-ege.sdamgia.ru/problem?id=32296
+\BankTask{sdamgia-32296}{
+Укажите число протонов и число нейтронов в ядре изотопа ксенона ${}^{112}_{54}\mathrm{Xe}.$
+
+\begin{center}\small\renewcommand{\arraystretch}{1.25}\begin{tabular}{|p{0.450\linewidth}|p{0.450\linewidth}|}\hline
+Число протонов & Число нейтронов\\\hline
+ & \\\hline
+\end{tabular}\end{center}
+
+Ответ запишите в виде ряда чисел без пробелов.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Число протонов равно зарядовому числу изотопа $Z=54.$
+
+Число нейтронов $N=A - Z=112 - 54=58.$
+
+Ответ: $5458$.
+}
+
+% Source sdamgia-35999: https://phys-ege.sdamgia.ru/problem?id=35999
+\BankTask{sdamgia-35999}{
+В настоящее время самым тяжелым искусственно синтезированным химическим элементом является оганесон ${}^{294}_{118}\mathrm{Og}.$ Сколько нейтронов содержится в ядре атома этого элемента?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Зарядовое число равно числу протонов и равно $Z = 118,$ массовое число равно числу нуклонов и равно $A = 294.$ Тогда число нейтронов найдем по формуле:
+
+\[N = A - Z = 294 - 118 = 176.\]
+
+Ответ: $176$.
+}
+
+% Source sdamgia-37570: https://phys-ege.sdamgia.ru/problem?id=37570
+\BankTask{sdamgia-37570}{
+Чему равно количество нейтронов в ядре изотопа натрия ${}^{22}_{11}\mathrm{Na}?$
+}{
+\smallskip\noindent\textbf{Решение}\par
+Зарядовое число равно числу протонов в ядре. Значит, для натрия $Z = 11.$ Массовое число $A = 22.$ Тогда число нейтронов в ядре равно: 
+
+\[N = A - Z = 22 - 11 = 11.\]
+
+Ответ: $11$.
+}
+
+
+% Source B00348: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B00348
+\BankTask{B00348}{
+На рисунке представлен фрагмент Периодической системы элементов Д.И. Менделеева. Под названием каждого элемента приведены массовые числа его основных стабильных изотопов. При этом нижний индекс около массового числа указывает (в процентах) распространённость изотопа в природе.
+
+Запишите в таблицу число протонов и число нейтронов в ядре самого распространённого изотопа галлия.
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Число протонов & Число нейтронов \\
+\hline
+\rule{0pt}{1.5em} & \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{|c|c||c|c|c|}
+\hline
+\(2\) & II &
+\begin{tabular}{@{}l@{\hspace{1cm}}r@{}}\(\mathbf{Li}\)&\(3\)\\\multicolumn{2}{c}{\textbf{литий}}\\\multicolumn{2}{c}{\(7_{93}\;6_{7}\)}\end{tabular}&
+\begin{tabular}{@{}l@{\hspace{1cm}}r@{}}\(\mathbf{Be}\)&\(4\)\\\multicolumn{2}{c}{\textbf{бериллий}}\\\multicolumn{2}{c}{\(9_{100}\)}\end{tabular}&
+\begin{tabular}{@{}l@{\hspace{1cm}}r@{}}\(5\)&\(\mathbf{B}\)\\\multicolumn{2}{c}{\textbf{бор}}\\\multicolumn{2}{c}{\(11_{80}\;10_{20}\)}\end{tabular}\\
+\hline
+\(3\) & III &
+\begin{tabular}{@{}l@{\hspace{1cm}}r@{}}\(\mathbf{Na}\)&\(11\)\\\multicolumn{2}{c}{\textbf{натрий}}\\\multicolumn{2}{c}{\(23_{100}\)}\end{tabular}&
+\begin{tabular}{@{}l@{\hspace{1cm}}r@{}}\(\mathbf{Mg}\)&\(12\)\\\multicolumn{2}{c}{\textbf{магний}}\\\multicolumn{2}{c}{\(24_{79}\;26_{11}\;25_{10}\)}\end{tabular}&
+\begin{tabular}{@{}l@{\hspace{1cm}}r@{}}\(13\)&\(\mathbf{Al}\)\\\multicolumn{2}{c}{\textbf{алюминий}}\\\multicolumn{2}{c}{\(27_{100}\)}\end{tabular}\\
+\hline
+\raisebox{-2em}{\(4\)} & IV &
+\begin{tabular}{@{}l@{\hspace{1cm}}r@{}}\(\mathbf{K}\)&\(19\)\\\multicolumn{2}{c}{\textbf{калий}}\\\multicolumn{2}{c}{\(39_{93}\;41_{6{,}7}\)}\end{tabular}&
+\begin{tabular}{@{}l@{\hspace{1cm}}r@{}}\(\mathbf{Ca}\)&\(20\)\\\multicolumn{2}{c}{\textbf{кальций}}\\\multicolumn{2}{c}{\(40_{97}\;44_{2{,}1}\)}\end{tabular}&
+\begin{tabular}{@{}l@{\hspace{1cm}}r@{}}\(\mathbf{Sc}\)&\(21\)\\\multicolumn{2}{c}{\textbf{скандий}}\\\multicolumn{2}{c}{\(45_{100}\)}\end{tabular}\\
+\cline{2-5}
+ & V &
+\begin{tabular}{@{}l@{\hspace{1cm}}r@{}}\(29\)&\(\mathbf{Cu}\)\\\multicolumn{2}{c}{\textbf{медь}}\\\multicolumn{2}{c}{\(63_{69}\;65_{31}\)}\end{tabular}&
+\begin{tabular}{@{}l@{\hspace{1cm}}r@{}}\(30\)&\(\mathbf{Zn}\)\\\multicolumn{2}{c}{\textbf{цинк}}\\\multicolumn{2}{c}{\(64_{49}\;66_{28}\;68_{19}\)}\end{tabular}&
+\begin{tabular}{@{}l@{\hspace{1cm}}r@{}}\(31\)&\(\mathbf{Ga}\)\\\multicolumn{2}{c}{\textbf{галлий}}\\\multicolumn{2}{c}{\(69_{60}\;71_{40}\)}\end{tabular}\\
+\hline
+\end{tabular}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Самый распространённый изотоп галлия имеет массовое число \(A=69\), его распространённость равна \(60\%\). Число протонов равно атомному номеру \(Z=31\), а число нейтронов \(N=A-Z=69-31=38\). Ответ: \(31;\ 38\).
+}
+
+\end{document}

@@ -1,0 +1,39 @@
+{
+  "approved": true,
+  "bundle_sha256": "9001d7ee4e9f5429ae637d78859f95766f465eece8b233dda0cc1816cc0b3e2b",
+  "pages": [
+    {
+      "file": "tmp\\all-topics\\speed\\preview\\task-1-1-5\\page-01.png",
+      "sha256": "4a2defef0b7fed0d0d324854cb6c395d6b387fc66bae934de4c5d1d98ce91807"
+    },
+    {
+      "file": "tmp\\all-topics\\speed\\preview\\task-1-1-5\\page-02.png",
+      "sha256": "50fc4926a2d4cb44b9a670d7a8ec07f9bc61abd428bd03e98082eb557b9a03eb"
+    },
+    {
+      "file": "tmp\\all-topics\\speed\\preview\\tutor-1-1-5\\page-01.png",
+      "sha256": "0f3933b3c0686e9e6f14c52dd84bd9169930ba56f52868dd77b5acaf311ca50a"
+    },
+    {
+      "file": "tmp\\all-topics\\speed\\preview\\tutor-1-1-5\\page-02.png",
+      "sha256": "d810d9f6243959b07309f6834aae62698cc244ab4b2529d6e73465110c4563a5"
+    },
+    {
+      "file": "tmp\\all-topics\\speed\\preview\\tutor-1-1-5\\page-03.png",
+      "sha256": "a62111eb6545563ed22e9a01ca654bfa7308161f62f639550b475b0bd337df67"
+    },
+    {
+      "file": "tmp\\all-topics\\speed\\preview\\tutor-1-1-5\\page-04.png",
+      "sha256": "83d6aff8b91e83ae5bf502765bf2eb754348ce52ac25fcfc18aadb18bd33d4d7"
+    },
+    {
+      "file": "tmp\\all-topics\\speed\\preview\\tutor-1-1-5\\page-05.png",
+      "sha256": "4b3edde937592c5212f7b066f115170daece6d0bf8e9e72279c9aa80f3321b8f"
+    },
+    {
+      "file": "tmp\\all-topics\\speed\\preview\\tutor-1-1-5\\page-06.png",
+      "sha256": "8ae47716a25fdf0556af944a45e63c6aa0b59943e494a0049e58a7b224fb6bb6"
+    }
+  ],
+  "scope": "Every rendered page viewed; diagrams, lines, tables and typeset formulas checked. Editor opening not checked."
+}

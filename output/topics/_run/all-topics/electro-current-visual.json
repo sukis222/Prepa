@@ -1,0 +1,31 @@
+{
+  "approved": true,
+  "reviewed_sha256": "4ae2419feb6bacbbadf0e3e4537a199a66b50b19bbacbf0a07b3554ab5307adc",
+  "pages": [
+    {
+      "file": "tmp/all-topics/electro/preview/task-3-8-3/page-01.png",
+      "sha256": "75e11cb5cad633a9d268fba765fd9bd596ef0634a166131f1d753d84cefea1f3"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/task-3-8-3/page-02.png",
+      "sha256": "cffd4fb3dc354f2e2010fd6dd8c7a2c7758d2ec409ad1e217abc449e029d07c2"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-8-3/page-01.png",
+      "sha256": "421dbc58fb211316a3cde6d6f28d0a1faefe03e19f81a5ff792cdb47b8bf2747"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-8-3/page-02.png",
+      "sha256": "4c9688359ca1a7ae6e9e961332a27a15dac0b01b3e3b5d56b5fab32306cc5111"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-8-3/page-03.png",
+      "sha256": "14f4203d8a91f36bdaef95acceb747a8f784a955aa1ec430dfdc75aeb87fc6d4"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-8-3/page-04.png",
+      "sha256": "4bd43fe3e052ceb47b21aebdafc67d894793e659c1f67f85b7d7311f19e73101"
+    }
+  ],
+  "scope": "Все страницы просмотрены:26 на5af63229d7; последние9изменённых пересмотрены наadffa7ae27,17остальных равны побайтово. Формулы/двусторонние стрелки сверены."
+}

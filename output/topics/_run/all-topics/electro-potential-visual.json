@@ -1,0 +1,51 @@
+{
+  "approved": true,
+  "reviewed_sha256": "13af544d7f786464184f4c034b14a95562b9d7956d15b5519b187cf34cac007a",
+  "pages": [
+    {
+      "file": "tmp/all-topics/electro/preview/task-3-4/page-01.png",
+      "sha256": "8cf2c471adb42bd533862350b5e79c41d52549e964e33087f8a49083f3e72def"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/task-3-4/page-02.png",
+      "sha256": "d62915a14644c5c1a63f4e80ec87a4ee1afa4b77e8e450c1f553a43401d86d2d"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/task-3-4/page-03.png",
+      "sha256": "fce898bb66487691cc2a8b80ade455952d945151ac3a6fef1a94d2f0d9707482"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-4/page-01.png",
+      "sha256": "96c1702aed3f60ca6ade0b444ebddeae3aa9c2857dccc3802f13ceca1bcd6d69"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-4/page-02.png",
+      "sha256": "b86ac12c3e13473bb22428b6ad520667b3c62967334bc155922edd659482470c"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-4/page-03.png",
+      "sha256": "b0a59756bb124328c0d3d45ec481d18d88d208661f432fa4404341a182f936d0"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-4/page-04.png",
+      "sha256": "ca37d88bcd604e3aadc73fc2b42a56604ba62b41b9e70ff5362748a27334bce3"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-4/page-05.png",
+      "sha256": "f804dd410acd79bbbf7e3f2d9c0fb339b07a579dde6a3b389de38f35f088c848"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-4/page-06.png",
+      "sha256": "fb35d0d46e91b4dd672e3c87e9807b6e77417236eb78cdf5d57789311aa9bb9b"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-4/page-07.png",
+      "sha256": "45bec40f89db77e293f031dade515aea6440fde5cb62982b61517b56fb405f92"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-4/page-08.png",
+      "sha256": "cbf6fe3f5afc865cc6f8008473e40261f781d7351474b3f1a66dbc0a96c270d3"
+    }
+  ],
+  "scope": "Все11страниц двух редакций лично просмотрены на свежихcollection-3-4-26cffa118d-01..03. Все6исходныхиллюстраций и4сложныхSVGформул осмотрены и восстановлены. Рольусловие/решение2993сверена. Последние2изменённые страницы единицы8876пересмотрены наpotential-final-0a2d263bc6;9остальных побайтово прежние."
+}
