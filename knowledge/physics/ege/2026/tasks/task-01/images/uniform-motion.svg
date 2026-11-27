@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320">
+ 
+ <rect width="900" height="320" rx="16" fill="#f5f8fc"/>
+ <g font-family="Arial, sans-serif" fill="#182b43">
+ <text x="36" y="43" font-size="24" font-weight="bold">Равномерное движение вдоль оси x</text>
+ <line x1="65" y1="216" x2="838" y2="216" stroke="#546477" stroke-width="2"/>
+ <text x="846" y="223" font-size="22" font-style="italic">x</text>
+ <g stroke="#546477" stroke-width="2"><path d="M105 209V223M235 209V223M615 209V223"/></g>
+ <text x="98" y="250" font-size="20">0</text><text x="224" y="250" font-size="22">x₀</text><text x="609" y="250" font-size="22">x</text>
+ <circle cx="235" cy="170" r="13" fill="#fff" stroke="#2563a6" stroke-width="3"/><circle cx="615" cy="170" r="13" fill="#2563a6"/>
+ <path d="M235 189V204M615 189V204" stroke="#a3b1c1" stroke-width="2" stroke-dasharray="4 4"/>
+ <line x1="260" y1="170" x2="360" y2="170" stroke="#2563a6" stroke-width="3"/><line x1="640" y1="170" x2="740" y2="170" stroke="#2563a6" stroke-width="3"/>
+ <text x="282" y="148" font-size="21">vₓ &gt; 0</text><text x="662" y="148" font-size="21">vₓ &gt; 0</text>
+ <line x1="235" y1="99" x2="615" y2="99" stroke="#2563a6" stroke-width="2"/>
+ <text x="350" y="85" font-size="22">x − x₀ = vₓt</text>
+ <g fill="#2563a6"><path d="M360 170L346 163L346 177Z M740 170L726 163L726 177Z M235 99L248 92L248 106Z M615 99L602 92L602 106Z"/></g>
+ <path d="M838 216L825 210L825 222Z" fill="#546477"/>
+ <text x="36" y="291" font-size="19" fill="#546477">Скорость постоянна. Показан случай vₓ &gt; 0: координата увеличивается.</text>
+ </g>
+</svg>

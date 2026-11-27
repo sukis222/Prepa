@@ -1,0 +1,77 @@
+The current distribution includes all files for work under MikTeX or TeXLive.
+That means that most header files of fonts are created on the fly by
+font utilities. If it is not happen please read install file and 
+texmf\source\fonts\lh\tex\00readme.txt file.
+
+
+Zipped variant:
+===============
+
+lhfnt35*-source.zip - NECESSARY PART: source files and documentation
+lhfnt35*-gen-mf.zip - OPTIONAL PART [these files were generated from 
+                      texmf\sorce folder-directory;
+                      you may generate them using *install*
+                      documentation]:  generated METAFONT files (ready-to-use
+                      addition with TeX Directory Structure for teTeX/TeXLive
+                      and MikTeX platforms).
+                      This package could NOT have "unzipped version" on CTAN.
+
+
+Unzipped variant:
+=================
+
+lhfnt35*-source.zip
+-------------------
+texmf\doc\fonts\lh\beresta\*.*          - documentation files of all T2* letters
+texmf\doc\fonts\lh\lhfonts\*.*          - package documentation (history and
+                                          advanced installation)
+texmf\doc\fonts\lh\fonttest\*.*         - font testing files
+texmf\doc\fonts\lh\samples\*.*          - LaTeX testing files of LH package
+=================================================================================
+texmf\fonts\source\lh\base\*.*          - base METAFONT files for T2*/X2 and
+                                          traditional encodings
+texmf\fonts\source\lh\nont2\*.*         - additional letters for other encodings
+texmf\fonts\source\lh\specific\*.*      - letters in specific forms (Concrete
+                                          and Russian small caps)
+texmf\fonts\source\lh\lh-conc\*.*       - font headers for bold faced Concrete
+                                          Cyrillic 
+=================================================================================
+Here are also source files which create files which lie in lhfnt35*-gen-mf.zip:
+texmf\source\fonts\lh\tex\*.*           - tex-files to generate METAFONT files
+                                          for different encodings
+texmf\source\fonts\lh\tex\wrk\<subdirs> - please read 09readme.txt file in
+<subdirs: lh-lcy,lh-ot2,                  texmf\source\fonts\lh\tex\ directory
+          lh-t2a,lh-t2b,lh-t2c,lh-t2d,    and make sure that there are necessary
+          lh-x2,lh-xSlav,lh-temp>         empty dirs for succefull TeXing                           
+---------------------------------------------------------------------------------
+texmf\source\latex\lh*.*                - dtx- and ins- files for installation
+                                          of LaTeX packages and font definition
+                                          files  
+=================================================================================
+texmf\source\fonts\lh\*.mfj             - maybe obsolete already: the MFjob files
+                                          for EmTeX which create font files LH
+                                          (these files have not their own folder
+                                          in TDS structure)
+=================================================================================
+texmf\tex\plain\lh\*.*                  - the testfox.tex and testkern.tex
+                                          files for font tests
+
+lhfnt35*-gen-mf.zip 
+-------------------
+In following folders lie only font headers which cannot be generated automatically
+with MikTeX and TeXlive font creation utilities (if you need anyway to create
+ALL font headers please read the 00readme.txt file in texmf\fonts\source\lh\tex
+folder and edit necessary settings in setter.tex file)
+texmf\fonts\source\lh\lh-lcy\*.*        - generated METAFONT files for DOS
+                                          encoding
+texmf\fonts\source\lh\lh-ot2\*.*        - generated METAFONT files for WNCYR
+                                          transliteration encoding
+texmf\fonts\source\lh\lh-t2*\*.*        - generated METAFONT files for T2A,
+                                          T2B, T2C,T2D LaTeX Cyrillic encodings
+texmf\fonts\source\lh\lh-x2\*.*         - generated METAFONT files for
+                                          X2 Cyrillic container
+texmf\fonts\source\lh\lh-xSlav\*.*      - generated METAFONT files for fonts
+                                          with old Slav letters
+                                          (LaTeX support absent)
+=================================================================================
+texmf\tex\latex\lh\*.*                  - minor LaTeX support for LH fonts

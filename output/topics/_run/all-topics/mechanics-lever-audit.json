@@ -1,0 +1,15 @@
+{
+  "batch": "mechanics-lever",
+  "bundle_sha256": "b857e9944f6ab009a812a99bacb2b03b8b7b1e13e5d26dd8896d4ac4f7d95d1f",
+  "topics": [
+    "1.16.1"
+  ],
+  "tasks": 10,
+  "pages": 10,
+  "baseline_preserved": 107,
+  "files": {
+    "task-1-16-1.tex": "0f3a7e5f316fd141902875b44d37069ff16ff39474ee5cb94be6a35b3190b48c",
+    "tutor-1-16-1.tex": "c8fce77d23e0d032750a848b8089f94939af9fbed1c96d467e8de81aaeef3ce5"
+  },
+  "editor_open_checked": false
+}

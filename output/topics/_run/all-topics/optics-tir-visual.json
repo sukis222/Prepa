@@ -1,0 +1,36 @@
+{
+  "approved": true,
+  "reviewed_sha256": "c34e831b2ff60cdcd7b627e2031af1944da71f89a9b907a400db11cda369df5a",
+  "pages": [
+    {
+      "file": "tmp/all-topics/optics-quantum/batch01-preview/task-4-3-4/page-01.png",
+      "sha256": "e33718c4337968c0b36bfecd73c54e155e0c63bd97a973cedad585a36bedf8e4"
+    },
+    {
+      "file": "tmp/all-topics/optics-quantum/batch01-preview/tutor-4-3-4/page-01.png",
+      "sha256": "d80ba11564e89546fe0eaa79243a05e8e48106eaf10feeda277cfeb1d18b2aec"
+    },
+    {
+      "file": "tmp/all-topics/optics-quantum/batch01-preview/tutor-4-3-4/page-02.png",
+      "sha256": "cf3db178566c4c4dac75d52f76b5edefdcf6ecbb83bee27c2606c7247cd5424a"
+    },
+    {
+      "file": "tmp/all-topics/optics-quantum/batch01-preview/tutor-4-3-4/page-03.png",
+      "sha256": "a8e8d1c17d0d09716e59771b4b6abc54690b8af9f0d0047bb904bffc064a331c"
+    },
+    {
+      "file": "tmp/all-topics/optics-quantum/batch01-preview/tutor-4-3-4/page-04.png",
+      "sha256": "4c165a6d6588d2d973972714277592e0120595983405998aa075646d1c09eff2"
+    },
+    {
+      "file": "tmp/all-topics/optics-quantum/batch01-preview/tutor-4-3-4/page-05.png",
+      "sha256": "39606388aecb53884333d9e7c2a320f6df6028904d97fede723bd2577709a18e"
+    }
+  ],
+  "checks": [
+    "All six final pages viewed",
+    "Original five diagrams viewed and compared",
+    "Both project Tectonic builds pass with no overflow",
+    "LaTeX Workshop editor opening not checked"
+  ]
+}

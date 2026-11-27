@@ -1,0 +1,67 @@
+{
+  "approved": true,
+  "reviewed_sha256": "2755234a14571d7d3841feb70b642ebc7f75f3534433c3bcdb35b9a0a53d8b9d",
+  "pages": [
+    {
+      "file": "tmp/all-topics/electro/preview/task-3-5/page-01.png",
+      "sha256": "7c2801fa6693b888888b6af3f6a901b56da58d84587a891efb6120a8da41a56f"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/task-3-5/page-02.png",
+      "sha256": "86b8e43cced59f9778c174b5cdd5e24f30aaa15510bd2cd4d2f21bea1cc89b75"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/task-3-5/page-03.png",
+      "sha256": "ae3138d82bb9d212e52545e8c5b5d9eb705f7e1e499b72450ab2233f4eacab7d"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/task-3-5/page-04.png",
+      "sha256": "5e8de870f5f93d4afc2a65d27a51ed4e4bd187063b878f63868a00b22696b61c"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/task-3-5/page-05.png",
+      "sha256": "c635b5897645ec33d7d09ab381615aa2bab5e117ec12dd2e4776e31106f16ecc"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-5/page-01.png",
+      "sha256": "b47cb47e324a46cbf3da57192f1493b0c0ca32ce2d9dbdbeca237fa9bfc0f68f"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-5/page-02.png",
+      "sha256": "3fb5431ba6f7f30364480611170adf792333042a29ba3019a278d6a9cef38b79"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-5/page-03.png",
+      "sha256": "2882f3f9582ab90eb709e96aa054e2759cba719284facb5fde13581bcf5d5344"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-5/page-04.png",
+      "sha256": "7946fdf216af7eea0e8765d4234b54be4dab7ec56c910ad671884a9ae0127761"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-5/page-05.png",
+      "sha256": "13c003c0feeed8c34532a206eb346b2f7f2b7d8109eb81a30958961ce3d9ba16"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-5/page-06.png",
+      "sha256": "2c90a0f12481fbbe46e86b9756716988b50e98569b025d3faaea3714a7d0c857"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-5/page-07.png",
+      "sha256": "937f6f0618d9377500f1c195e080fb6e9f8c14b0d8b77584c5b74c701d71ffa3"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-5/page-08.png",
+      "sha256": "dc67464962236cc36575804404fd1a66127dccd056adf6a9e5738848e8348b1d"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-5/page-09.png",
+      "sha256": "94d7d593c1144d8b85ee81e9ea07b459bf019394575b36ea8a743f984a18f5d6"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-5/page-10.png",
+      "sha256": "0d472a5df960248ccca2bf9c85c09c64f5094a2dbdbd910cd43d8e9d2c49e0d7"
+    }
+  ],
+  "scope": "Все15страниц двух редакций просмотрены наcollection-3-5-807a9b28be-01..04. Все8новыхоригинальныхсхем отдельно осмотрены и полностью восстановлены вTikZ;4повторные задачи сохранены по проверенным пакетам, форматы обновлены без изменения содержания."
+}

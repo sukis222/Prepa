@@ -1,0 +1,74 @@
+% !TEX root = task-2-10-4.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{2.10.4}{График кристаллизации}
+
+
+% Source 35852E: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=35852E
+\BankTask{35852E}{
+Горячее вещество, первоначально находившееся в жидком состоянии, медленно охлаждали. Мощность теплоотвода постоянна. В таблице приведены результаты измерений температуры вещества с течением времени.
+\begin{center}
+\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+\hline
+Время, $\text{мин}$ & \(0\) & \(5\) & \(10\) & \(15\) & \(20\) & \(25\) & \(30\) & \(35\) \\
+\hline
+Температура, \({}^{\circ}\mathrm{C}\) & \(250\) & \(242\) & \(234\) & \(232\) & \(232\) & \(232\) & \(230\) & \(216\) \\
+\hline
+\end{tabular}
+\end{center}
+\begin{enumerate}
+\item Температура плавления вещества в данных условиях равна \(232\,{}^{\circ}\mathrm{C}\).
+\item Через \(20\,\text{мин}\). после начала измерений вещество находилось только в твёрдом состоянии.
+\item Удельная теплоёмкость вещества в жидком и твёрдом состояниях одинакова.
+\item Через \(30\,\text{мин}\). после начала измерений вещество находилось только в твёрдом состоянии.
+\item Процесс кристаллизации вещества занял более \(25\,\text{мин}\).
+\end{enumerate}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+\begin{enumerate}
+\item Верно: участок постоянной температуры соответствует кристаллизации, поэтому \(T_{\text{пл}}=232\,{}^{\circ}\mathrm{C}\).
+\item Неверно: в момент \(t=20\,\text{мин}\) идёт кристаллизация, присутствуют жидкая и твёрдая фазы.
+\item Неверно: при постоянной мощности \(P=mc\lvert\Delta T/\Delta t\rvert\). Скорости охлаждения жидкости и твёрдого вещества равны соответственно \(8/5=1{,}6\) и \(14/5=2{,}8\,{}^{\circ}\mathrm{C}/\text{мин}\); теплоёмкости различны.
+\item Верно: через \(30\,\text{мин}\) температура \(230\,{}^{\circ}\mathrm{C}\) ниже температуры кристаллизации, вещество полностью затвердело.
+\item Неверно: кристаллизация началась после \(10\,\text{мин}\) и завершилась до \(30\,\text{мин}\), поэтому её длительность меньше \(20\,\text{мин}\).
+\end{enumerate}
+Ответ: \(14\).
+}
+
+\end{document}

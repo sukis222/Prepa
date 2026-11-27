@@ -1,0 +1,79 @@
+{
+  "approved": true,
+  "bundle_sha256": "7c35791ee172bd453b88d6bff2749bcbe0490922f672c0a77e04eeda755b3bde",
+  "pages": [
+    {
+      "file": "tmp\\all-topics\\kinematics2\\preview\\task-1-1-6\\page-01.png",
+      "sha256": "b8fbbdc9519f8b3e81375b14aa69015a50d99a2a9920f3f015f2a3fba5bf2258"
+    },
+    {
+      "file": "tmp\\all-topics\\kinematics2\\preview\\task-1-1-6\\page-02.png",
+      "sha256": "7914330a55ef7e7433261c0f9d00da58bb08239f54be11cc16ab0e790509daab"
+    },
+    {
+      "file": "tmp\\all-topics\\kinematics2\\preview\\task-1-1-6\\page-03.png",
+      "sha256": "74594fc8eeb64cd42030a9d48166b27145fd77312fea53ae81466420ae821bd1"
+    },
+    {
+      "file": "tmp\\all-topics\\kinematics2\\preview\\task-1-2-1\\page-01.png",
+      "sha256": "3302e46a32298473f96619f50c64c039bc7f3073f4cdfacbecf52b664826e78e"
+    },
+    {
+      "file": "tmp\\all-topics\\kinematics2\\preview\\task-1-2-1\\page-02.png",
+      "sha256": "09d4cf841fcd09f142e14c45ab3bec40dc1aff7fc8c74c950826ee69af5b46cc"
+    },
+    {
+      "file": "tmp\\all-topics\\kinematics2\\preview\\task-1-2-1\\page-03.png",
+      "sha256": "b19ba23b34ab8b0c46062eacfa389a60af775a3d8862a5f9c6176e1554eba532"
+    },
+    {
+      "file": "tmp\\all-topics\\kinematics2\\preview\\tutor-1-1-6\\page-01.png",
+      "sha256": "a80a8fdf361c34bec6045f2e61a61c1cbf14739d0ed968f58039ddd7143b35dc"
+    },
+    {
+      "file": "tmp\\all-topics\\kinematics2\\preview\\tutor-1-1-6\\page-02.png",
+      "sha256": "5e933b7ffd6c4d5560222270035a8a95c645246cc58683e45d55ecea6aa66b9d"
+    },
+    {
+      "file": "tmp\\all-topics\\kinematics2\\preview\\tutor-1-1-6\\page-03.png",
+      "sha256": "2320cd8d18d7c1e9e6b1fc696a89d3821fd772982a2688e91a73f04fc393aaf7"
+    },
+    {
+      "file": "tmp\\all-topics\\kinematics2\\preview\\tutor-1-1-6\\page-04.png",
+      "sha256": "28fbde2a4956c6a4212fde179c752053515f88e48f403d204222672ef8769e32"
+    },
+    {
+      "file": "tmp\\all-topics\\kinematics2\\preview\\tutor-1-1-6\\page-05.png",
+      "sha256": "24376b27b4307e9d9ffffbb760401fcc7d079525463f2b030563235096f76ec3"
+    },
+    {
+      "file": "tmp\\all-topics\\kinematics2\\preview\\tutor-1-1-6\\page-06.png",
+      "sha256": "ae25ba8b514c440115b46d417d230355204b66393b058c1b3098af19e035c249"
+    },
+    {
+      "file": "tmp\\all-topics\\kinematics2\\preview\\tutor-1-2-1\\page-01.png",
+      "sha256": "953e46f09aa426aeb28c3fa08d76eb40e00303ad73e9b063e0b02f477371b1de"
+    },
+    {
+      "file": "tmp\\all-topics\\kinematics2\\preview\\tutor-1-2-1\\page-02.png",
+      "sha256": "393cdd5c2844ab99d72adc271de84b0cc14c20609e3689cfce3052525cd9b88f"
+    },
+    {
+      "file": "tmp\\all-topics\\kinematics2\\preview\\tutor-1-2-1\\page-03.png",
+      "sha256": "94c6b2ca1e3a0f0548e8473501d9c209f9b553802208c125e286c2adbdee4aa2"
+    },
+    {
+      "file": "tmp\\all-topics\\kinematics2\\preview\\tutor-1-2-1\\page-04.png",
+      "sha256": "8c81efd61a60f59e640d08386b0c2b8be0b43b7fbe39e47d57ed7c02ae7e63de"
+    },
+    {
+      "file": "tmp\\all-topics\\kinematics2\\preview\\tutor-1-2-1\\page-05.png",
+      "sha256": "2b340f833a7eab88102304f20185bb48aecc5d713c303c1e355640b4651ad511"
+    },
+    {
+      "file": "tmp\\all-topics\\kinematics2\\preview\\tutor-1-2-1\\page-06.png",
+      "sha256": "8ae47716a25fdf0556af944a45e63c6aa0b59943e494a0049e58a7b224fb6bb6"
+    }
+  ],
+  "scope": "Every rendered page viewed; diagrams, lines, tables and typeset formulas checked. Editor opening not checked."
+}

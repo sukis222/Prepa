@@ -1,0 +1,10 @@
+{
+  "idempotent": true,
+  "tex_sha256": {
+    "D:\\GitHub\\Prepa-GPT\\output\\fipi-physics\\task-01.tex": "2beb830775667759edad6ec31029a7fb4957ddc1438c916cd92b056d3bc9499d"
+  },
+  "known_export_refresh": true,
+  "replaced_hashes": {
+    "D:\\GitHub\\Prepa-GPT\\output\\fipi-physics\\task-01.tex": "029c5773560d408fc1fef693b3f3c4c59a0a270c74682962023df806a6ed20b1"
+  }
+}

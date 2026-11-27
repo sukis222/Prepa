@@ -1,0 +1,120 @@
+{
+  "approved": true,
+  "reviewed_sha256": "f88fbb76b987306bd2a4cdb20221701c7716696c4682bd6678316e95d9ad624f",
+  "reviewer": "root",
+  "scope": "Every condition and published solution read independently; physical models, formulas, arithmetic and units checked. Original diagrams/graphs inspected and compared with TikZ. Final page layout is covered by the separate visual report.",
+  "closed_issues": [
+    "Coulomb products q_1 q_2 and lamp products U_2 I_1 restored",
+    "Unit symbols and work A distinguished",
+    "Preposition in electron-beam condition restored",
+    "Original meter pointers restored",
+    "Duplicate parentheses removed"
+  ],
+  "tasks": [
+    {
+      "topic": "3.1.2",
+      "id": "sdamgia-9088",
+      "approved": true
+    },
+    {
+      "topic": "3.1.2",
+      "id": "sdamgia-11271",
+      "approved": true
+    },
+    {
+      "topic": "3.1.2",
+      "id": "sdamgia-27948",
+      "approved": true
+    },
+    {
+      "topic": "3.1.2",
+      "id": "sdamgia-29986",
+      "approved": true
+    },
+    {
+      "topic": "3.1.2",
+      "id": "sdamgia-8177",
+      "approved": true
+    },
+    {
+      "topic": "3.1.2",
+      "id": "sdamgia-39257",
+      "approved": true
+    },
+    {
+      "topic": "3.1.2",
+      "id": "sdamgia-9744",
+      "approved": true
+    },
+    {
+      "topic": "3.1.2",
+      "id": "sdamgia-3067",
+      "approved": true
+    },
+    {
+      "topic": "3.1.2",
+      "id": "sdamgia-6067",
+      "approved": true
+    },
+    {
+      "topic": "3.1.2",
+      "id": "sdamgia-38948",
+      "approved": true
+    },
+    {
+      "topic": "3.9.2",
+      "id": "sdamgia-7355",
+      "approved": true
+    },
+    {
+      "topic": "3.9.2",
+      "id": "sdamgia-10223",
+      "approved": true
+    },
+    {
+      "topic": "3.9.2",
+      "id": "sdamgia-24367",
+      "approved": true
+    },
+    {
+      "topic": "3.9.2",
+      "id": "sdamgia-45485",
+      "approved": true
+    },
+    {
+      "topic": "3.9.2",
+      "id": "sdamgia-11805",
+      "approved": true
+    },
+    {
+      "topic": "3.9.2",
+      "id": "sdamgia-24955",
+      "approved": true
+    },
+    {
+      "topic": "3.9.2",
+      "id": "sdamgia-36761",
+      "approved": true
+    },
+    {
+      "topic": "3.9.2",
+      "id": "sdamgia-4206",
+      "approved": true
+    },
+    {
+      "topic": "3.9.2",
+      "id": "sdamgia-38950",
+      "approved": true
+    },
+    {
+      "topic": "3.9.2",
+      "id": "sdamgia-41152",
+      "approved": true
+    },
+    {
+      "topic": "3.9.2",
+      "id": "sdamgia-8557",
+      "approved": true
+    }
+  ]
+}

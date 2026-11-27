@@ -1,0 +1,30 @@
+% Контрольное восстановление §1.16 предоставленного учебника И. В. Яковлева.
+% Текст и все рисунки редактируемы. Основной файл для LaTeX Workshop.
+\documentclass[12pt,a4paper]{article}
+\usepackage[T2A]{fontenc}
+\renewcommand{\rmdefault}{cmr}
+\renewcommand{\familydefault}{\rmdefault}
+\usepackage{newunicodechar}
+\input{yakovlev-1-16/fonts/cyrillic-unicode.tex}
+\DeclareFontShape{T2A}{cmr}{m}{n}{<8>larm0800 <10.95>larm1095 <12>larm1200 <14.4>larm1200 <17.28>larm1728}{}
+\DeclareFontShape{T2A}{cmr}{bx}{n}{<14.4>labx1440 <17.28>labx1728 <12>labx1200}{}
+\usepackage[russian]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage[left=43.654bp,textwidth=510.236bp,top=52.169bp,textheight=750bp,footskip=7.161bp]{geometry}
+\usepackage{xcolor,tikz,wrapfig}
+\definecolor{booklink}{rgb}{0,.3,.9}
+\definecolor{bookgray}{rgb}{.9,.9,.9}
+\usepackage[unicode,hypertexnames=false,colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\AtBeginDvi{\special{pdf:mapfile +cm-super-t2a.map}}
+\setlength{\parindent}{17.625pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{0pt}
+\pagestyle{plain}
+\input{yakovlev-1-16/diagrams-80-82.tex}
+\input{yakovlev-1-16/diagrams-83-86.tex}
+\input{yakovlev-1-16/layout.tex}
+\begin{document}
+\setcounter{page}{80}
+\input{yakovlev-1-16/part-80-82.tex}
+\input{yakovlev-1-16/part-83-86.tex}
+\end{document}

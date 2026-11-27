@@ -1,0 +1,259 @@
+% !TEX root = task-3-8-3.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{3.8.3}{Сила тока и перенос электрического заряда}
+
+
+% Source sdamgia-3227: https://phys-ege.sdamgia.ru/problem?id=3227
+\BankTask{sdamgia-3227}{
+Сила тока в проводнике постоянна и равна $0{,}5 \,\text{А}$. Какой заряд пройдет по проводнику за $20$ минут? (В кулонах.)\par
+}{
+\smallskip\noindent\textbf{Решение}\par
+Сила тока, по определению, есть скорость протекания заряда. Таким образом, за $20$ минут при силе тока в проводнике $0{,}5 \,\text{А}$ по нему пройдет заряд $q=It=0{,}5\,\text{А} \cdot ( 20 \cdot 60\,\text{с} ) =600\,\text{Кл}.$\par
+Ответ: $600$.\par
+}
+
+% Source sdamgia-3229: https://phys-ege.sdamgia.ru/problem?id=3229
+\BankTask{sdamgia-3229}{
+На графике представлена зависимость от времени заряда, прошедшего по проводнику. Какова сила тока в проводнике? (В амперах.)\par
+
+\begin{center}\begin{tikzpicture}[book diagram,>=stealth]
+\draw[gray!45,thin,step=.5](0,0)grid(3.5,3);\draw[->](0,0)--(3.8,0)node[right]{$t,\,\text{с}$};\draw[->](0,0)--(0,3.2)node[above]{$q,\,\text{Кл}$};\node[below left]at(0,0){$0$};\foreach\x in{1,...,5}\node[below]at(\x*.5,0){$\x$};\node[left]at(0,1){$0{,}1$};\node[left]at(0,2){$0{,}2$};\draw[thick](0,0)--(2.5,2.5);
+\end{tikzpicture}\end{center}
+\par
+}{
+\smallskip\noindent\textbf{Решение}\par
+Сила тока, по определению, есть скорость протекания заряда через проводник. Из графика видно, что зависимость прошедшего по проводнику заряда от времени линейна, а значит, сила тока оставалась постоянна на протяжении всего времени наблюдения. Используя две любые удобные точки на графике, находим силу тока в проводнике: $I= \frac{ \Delta q}{ \Delta t } = \frac{ ( 0{,}2\,\text{Кл} - 0{,}1\,\text{Кл} ) }{ ( 4\,\text{с} - 2\,\text{с} ) } =0{,}05\,\text{А}.$\par
+Ответ: $0{,}05$.\par
+}
+
+% Source sdamgia-8864: https://phys-ege.sdamgia.ru/problem?id=8864
+\BankTask{sdamgia-8864}{
+Через проводник постоянного сечения течет постоянный ток силой $1 \,\text{нА}$. Сколько электронов в среднем проходит через поперечное сечение этого проводника за $0{,}72 \,\text{мкс}$?\par
+}{
+\smallskip\noindent\textbf{Решение}\par
+Сила тока показывает какой заряд $q$ проходит через поперечное сечение проводника за время $t$:\par
+\[I= \frac{ q}{ t } = \frac{ Nq_{e}}{ t } ,\]
+где $q_{e}$ — заряд электрона, $N$ — число электронов.\par
+Найдем отсюда число электронов:\par
+\[N= \frac{ It}{ q_{e} } = \frac{ 1 \cdot 10 ^{ - 9 } \cdot 0{,}72 \cdot 10 ^{ - 6 } }{ 1{,}6 \cdot 10 ^{ - 19 } } =4500.\]
+Ответ: $4500$.\par
+}
+
+% Source sdamgia-9288: https://phys-ege.sdamgia.ru/problem?id=9288
+\BankTask{sdamgia-9288}{
+Через поперечное сечение проводников за $8 \,\text{с}$ прошло $10^{20}$ электронов. Какова сила тока в проводнике?\par
+}{
+\smallskip\noindent\textbf{Решение}\par
+Сила тока определяется как отношение заряда, прошедшего через поперечное сечение проводника, ко времени, в течение которого он проходил:\par
+\[I= \frac{ q}{ t } = \frac{ 1{,}6 \cdot 10 ^{ - 19 } \cdot 10 ^{ 20 } }{ 8 } =2\,\text{А}.\]
+Ответ: $2$.\par
+}
+
+% Source sdamgia-4139: https://phys-ege.sdamgia.ru/problem?id=4139
+\BankTask{sdamgia-4139}{
+Восьмиклассник исследовал процесс протекания постоянного тока через проволоку и установил, что при силе тока через проволоку $0{,}25 \,\text{А}$ вольтметр, подсоединенный к ее концам, показывает напряжение $3{,}6 \,\text{В}$. Установите соответствие между зависимостями, характеризующими протекание тока через проволоку, и уравнениями, выражающими эти зависимости, приведенными ниже.\par
+
+\begin{center}\begin{minipage}[t]{.47\linewidth}\textbf{Зависимости}\par\smallskip А) Зависимость работы постоянного электрического тока от времени\par
+Б) Зависимость заряда, протекающего через проволоку, от времени\end{minipage}\hfill\begin{minipage}[t]{.47\linewidth}\textbf{Уравнения}\par\smallskip $1$) $q=Ft, \text{где}\ F= 0{,}25 \,\text{Кл}/\,\text{с}$\par
+$2$) $A = Ct, \text{где}\ C = 0{,}9 \,\text{Дж}/\,\text{с}$\par
+$3$) $A = Dt, \text{где}\ D = 0{,}225 \,\text{Дж}/\,\text{с}$\par
+$4$) $q = Gt, \text{где}\ G = 3{,}6 \,\text{Кл}/\,\text{с}$\end{minipage}\end{center}
+\par
+\begin{center}\small\setlength{\tabcolsep}{3pt}\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|}\hline
+$A$ & Б\\\hline
+ & \\\hline
+\end{tabular}\end{center}\par
+}{
+\smallskip\noindent\textbf{Решение}\par
+Работа постоянного тока равна $A=UIt=3{,}6\,\text{В} \cdot 0{,}25\,\text{А} \cdot t=0{,}9 \,\text{Вт} \cdot t=0{,}9 \,\text{Дж}/\,\text{с} \cdot t.$\par
+Правильная формула указана под номером $2$.\par
+Зависимость заряда, протекающего через проволоку, от времени: $q=It=0{,}25\,\text{А} \cdot t = 0{,}25 \,\text{Кл}/\,\text{с} \cdot t$\par
+Это соответствует формуле $1$.\par
+Ответ: $21$.\par
+}
+
+% Source sdamgia-29033: https://phys-ege.sdamgia.ru/problem?id=29033
+\BankTask{sdamgia-29033}{
+На графике представлена зависимость силы тока $I$ в проводнике от времени $t$. Определите заряд, прошедший через этот проводник за первые $20 \,\text{с}$.\par
+(В Кл.)\par
+
+\begin{center}\begin{tikzpicture}[book diagram,>=stealth]
+\draw[gray!45,thin,xstep=1,ystep=.6](0,0)grid(4,2.4);\draw[->](0,0)--(4.6,0)node[right]{$t,\,\text{с}$};\draw[->](0,0)--(0,2.8)node[above]{$I,\,\text{А}$};\node[below left]at(0,0){$0$};\foreach\x/\v in{1/5,2/10,3/15,4/20}\node[below]at(\x,0){$\v$};\node[left]at(0,1.2){$1$};\node[left]at(0,2.4){$2$};\draw[thick](0,0)--(1,2.4)--(2,1.2)--(4,1.2);
+\end{tikzpicture}\end{center}
+\par
+}{
+\smallskip\noindent\textbf{Решение}\par
+Заряд, прошедший через проводник, можно найти как площадь фигуры под графиком, которая состоит из прямоугольного треугольника, прямоугольной трапеции и прямоугольника. Тогда:\par
+\[q=S_{1} + S_{2} + S_{3}= \frac{ 2 \cdot 5}{ 2 } + \frac{ 2 + 1}{ 2 } \cdot 5 + 10 \cdot 1=22{,}5\,\text{Кл}.\]
+Ответ: $22{,}5$.\par
+}
+
+% Source sdamgia-23237: https://phys-ege.sdamgia.ru/problem?id=23237
+\BankTask{sdamgia-23237}{
+На рисунке изображена схема электрической цепи, состоящей из источника постоянного напряжения с ЭДС $5 \,\text{В}$ и пренебрежимо малым внутренним сопротивлением, ключа, резистора с сопротивлением $2 \,\text{Ом}$ и соединительных проводов. Ключ замыкают. Какой заряд протечет через резистор за $10$ минут? (В кулонах.)\par
+
+\begin{center}\begin{tikzpicture}[book diagram,>=stealth]
+\draw(0,0)--(0,2.5)--(.6,2.5);\draw(.6,2.3)rectangle(2,2.7);\node[below]at(1.3,2.3){$R$};\draw(2,2.5)--(2.6,2.5)--(2.6,1.65);\fill(2.6,1.65)circle(1.2pt);\fill(2.6,1.15)circle(1.2pt);\draw(2.6,1.65)--(2.28,1.25);\node[right]at(2.7,1.4){$\text{К}$};\draw(2.6,1.15)--(2.6,0)--(1.4,0);\draw(0,0)--(1.15,0);\draw[thick](1.15,-.16)--(1.15,.16)(1.4,-.3)--(1.4,.3);\node[below]at(1.25,-.3){$\mathcal E$};
+\end{tikzpicture}\end{center}
+\par
+}{
+\smallskip\noindent\textbf{Решение}\par
+По закону Ома для полной цепи $I= \frac{ \mathcal E}{ R } .$ Заряд через резистор за $10 \,\text{мин}$. = $600 \,\text{с}$ протечет $q=It= \frac{ \mathcal E t}{ R } = \frac{ 5 \cdot 600}{ 2 } =1500\,\text{Кл}.$\par
+Ответ: $1500$.\par
+}
+
+% Source sdamgia-11669: https://phys-ege.sdamgia.ru/problem?id=11669
+\BankTask{sdamgia-11669}{
+Изначально незаряженный конденсатор емкостью $0{,}5 \,\text{мкФ}$ заряжается в течение $10 \,\text{с}$ электрическим током, средняя сила которого за время зарядки равна $0{,}2 \,\text{мА}$. Чему будет равна энергия, запасенная в конденсаторе к моменту окончания его зарядки?\par
+(В Джоулях.)\par
+}{
+\smallskip\noindent\textbf{Решение}\par
+Заряд, накопленный на конденсаторе, равен: $q = It = 0{,}2 \cdot 10 ^{ - 3 } \,\text{А} \cdot 10\,\text{с} = 2 \cdot 10 ^{ - 3 } \,\text{Кл}.$ Энергия, запасенная в конденсаторе, вычисляется по формуле: $W = \frac{ q ^2 }{ 2C } = \frac{ 4 \cdot 10 ^{ - 6 } \,\text{Кл} ^2 }{ 2 \cdot 0{,}5 \cdot 10 ^{ - 6 } \,\text{Ф} } = 4\,\text{Дж}.$\par
+Ответ: $4$.\par
+}
+
+% Source sdamgia-10187: https://phys-ege.sdamgia.ru/problem?id=10187
+\BankTask{sdamgia-10187}{
+Поток вектора магнитной индукции через некоторый проводящий контур изменяется от $10 \,\text{мкВб}$ до $30 \,\text{мкВб}$. Сопротивление контура $5 \,\text{Ом}$. Найдите модуль электрического заряда, который при этом протекает через контур. (В мкКл.)\par
+}{
+\smallskip\noindent\textbf{Решение}\par
+При изменении магнитного потока в контуре возникает ЭДС индукции:\par
+\[\mathcal E=\lvert \frac{ \Delta\Phi }{ \Delta t } |.\]
+Под действием этой ЭДС возникает ток, равный, согласно закону Ома для полной цепи, $I= \frac{ \mathcal E}{ R } .$\par
+С другой стороны, сила тока есть отношение заряда, прошедшего за единицу времени: $I= \frac{ \Delta q}{ \Delta t } .$\par
+Объединяя все уравнения, получим выражения для электрического заряда в контуре:\par
+\[\Delta q= \frac{ |\Delta \Phi|}{ R } =4\,\text{мкКл}.\]
+Ответ: $4$.\par
+}
+
+% Source sdamgia-6931: https://phys-ege.sdamgia.ru/problem?id=6931
+\BankTask{sdamgia-6931}{
+Пучок медленных электронов массой $m$ с зарядом $e$ разгоняется в электронно-лучевой трубке, проходя большую ускоряющую разность потенциалов $U$. Концентрация электронов в пучке после ускорения равна $n$, площадь поперечного сечения пучка $S$. Установите соответствие между физическими величинами и формулами, по которым их можно определить.\par
+
+\begin{center}\begin{minipage}[t]{.47\linewidth}\textbf{Физическая Величина}\par\smallskip А) скорость электронов в пучке после ускорения\par
+Б) сила тока в пучке после ускорения\end{minipage}\hfill\begin{minipage}[t]{.47\linewidth}\textbf{Формула}\par\smallskip $1$) $\sqrt{\frac{ eU}{ 2m }}$\par
+$2$) $\sqrt{\frac{ 2eU}{ m }}$\par
+$3$) $enS \sqrt{\frac{ 2eU}{ m }}$\par
+$4$) $enS \sqrt{\frac{ eU}{ 2m }}$\end{minipage}\end{center}
+\par
+\begin{center}\small\setlength{\tabcolsep}{3pt}\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|}\hline
+А & Б\\\hline
+ & \\\hline
+\end{tabular}\end{center}\par
+}{
+\smallskip\noindent\textbf{Решение}\par
+При ускорении в электрическом поле электроны приобретают энергию $eU.$ Таким образом, приравнивая кинетическую энергию электронов и энергию, полученную от поля можем найти скорость:\par
+\[\frac{ m v ^2 }{ 2 } =eU.\]
+$v = \sqrt{\frac{ 2eU}{ m }}$ — получили формулу под номером $2$.\par
+Сила тока может быть вычислена по формуле: $I= \frac{ \Delta q}{ \Delta t } .$ Учтем, что $\Delta q=eN=eS\Delta ln,$ где $N$ — число частиц, $\Delta l$ — малое перемещение электронов за малый интервал времени.\par
+Тогда: $I= \frac{ eSn\Delta l}{ \Delta t } =enS v =enS \sqrt{\frac{ 2eU}{ m }}$ — получили формулу под номером $3$.\par
+Ответ: $23$.\par
+}
+
+
+% Source D1ECFE: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=D1ECFE
+\BankTask{D1ECFE}{
+Сила тока, текущего по проводнику, равна \(6\ \text{А}\). Какой заряд пройдёт по проводнику за \(30\ \text{с}\) (в $\text{Кл}$)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+\(q=It=6\cdot30=180\ \text{Кл}\).
+
+Ответ: \(180\ \text{Кл}\).
+}
+
+% Source 30BB4c: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=30BB4c
+\BankTask{30BB4c}{
+По проводнику течёт постоянный электрический ток. Величина заряда, прошедшего через поперечное сечение проводника, возрастает с течением времени согласно графику (см. рисунок). Определите силу тока в проводнике.
+
+\begin{center}
+\begin{tikzpicture}[x=0.8cm,y=4cm,>=stealth]
+\draw[->] (0,0)--(5.25,0) node[below] {\(t,\text{с}\)};
+\draw[->] (0,0)--(0,1.02) node[left] {\(q,\text{Кл}\)};
+\foreach \x in {1,2,3,4}{
+  \draw[thin] (\x,0.47)--(\x,0.88);
+  \draw (\x,0)--(\x,0.055);
+  \node[below] at (\x,0) {\(\x\)};
+}
+\foreach \y/\lab in {0.2/{0{,}2},0.4/{0{,}4},0.6/{0{,}6},0.8/{0{,}8}}{
+  \draw[thin] (0,\y)--(2,\y);
+  \draw[thin] (4.15,\y)--(4.6,\y);
+  \node[left] at (0,\y) {\(\lab\)};
+}
+\node[below left] at (0,0) {\(0\)};
+\draw[thick] (0,0)--(3,0.6);
+\end{tikzpicture}
+\end{center} (в $\text{А}$).
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Сила тока равна наклону графика: \(I=\dfrac{\Delta q}{\Delta t}=\dfrac{0{,}6}{3}=0{,}2\ \text{А}\).
+
+Ответ: \(0{,}2\ \text{А}\).
+}
+
+% Source 8EB8E6: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=8EB8E6
+\BankTask{8EB8E6}{
+\begin{center}
+\begin{tikzpicture}[x=0.23cm,y=0.08cm,>=stealth]
+\draw[thin] (0,10)--(20,10);
+\draw[thin] (0,20)--(20,20);
+\draw[thin] (0,30)--(20,30);
+\foreach \x in {5,10,15,20}{\draw[thin] (\x,0)--(\x,30);}
+\draw[->] (0,0)--(24,0) node[below] {\(t,\text{с}\)};
+\draw[->] (0,0)--(0,39) node[left] {\(I,\text{мА}\)};
+\foreach \x in {5,10,15,20}{\node[below] at (\x,0) {\(\x\)};}
+\foreach \y in {10,20,30}{\node[left] at (0,\y) {\(\y\)};}
+\node[below left] at (0,0) {\(0\)};
+\draw[thick] (0,0)--(5,30)--(10,20)--(15,20)--(20,0);
+\end{tikzpicture}
+\end{center}
+
+На рисунке показана зависимость силы тока \(I\) в проводнике от времени \(t\). Определите заряд, прошедший по проводнику за интервал времени от \(5\) до \(15\ \text{с}\). (в $\text{мКл}$).
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Заряд равен площади под графиком тока за указанный интервал:
+\[
+q=\frac{30+20}{2}\cdot(10-5)+20\cdot(15-10)=225\ \text{мКл},
+\]
+так как \(1\ \text{мА}\cdot\text{с}=1\ \text{мКл}\).
+
+Ответ: \(225\ \text{мКл}\).
+}
+
+\end{document}

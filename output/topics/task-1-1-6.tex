@@ -1,0 +1,183 @@
+% !TEX root = task-1-1-6.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{1.1.6}{Ускорение}
+
+
+% Source sdamgia-3323: https://phys-ege.sdamgia.ru/problem?id=3323
+\BankTask{sdamgia-3323}{
+На графике приведена зависимость скорости прямолинейно движущегося тела от времени. Определите модуль ускорения тела. (В метрах в секунду в квадрате.)
+
+\begin{center}\begin{tikzpicture}[task graph,x=1cm,y=0.09cm]\draw[task grid,xstep=0.5,ystep=5](0,0)grid(5,55);\draw[task axis](0,0)--(5.225,0)node[right]{$t,\,\text{с}$};\draw[task axis](0,0)--(0,57.25)node[above]{$v,\,\text{м/с}$};\node[below left]at(0,0){$0$};\fill(1,0)circle(1pt);\node[below]at(1,0){$1$};\fill(2,0)circle(1pt);\node[below]at(2,0){$2$};\fill(3,0)circle(1pt);\node[below]at(3,0){$3$};\fill(4,0)circle(1pt);\node[below]at(4,0){$4$};\fill(0,15)circle(1pt);\node[left]at(0,15){$15$};\fill(0,30)circle(1pt);\node[left]at(0,30){$30$};\fill(0,45)circle(1pt);\node[left]at(0,45){$45$};\draw[task curve](0,50)--(4,10);\end{tikzpicture}\end{center}
+}{
+\smallskip\noindent\textbf{Решение}\par
+Из графика видно, что скорость тела зависит линейно от времени, а значит, его ускорение постоянно. Для определения модуля ускорения можно взять любые две точки на графике: $|a\rvert=\lvert \frac{\Delta v}{\Delta t} \rvert=\lvert \frac{10\,\text{м/с} - 40\,\text{м/с}}{4\,\text{с} - 1\,\text{с}} \rvert=10\,\text{м/с} ^2 .$
+
+Ответ: $10$.
+}
+
+% Source sdamgia-4514: https://phys-ege.sdamgia.ru/problem?id=4514
+\BankTask{sdamgia-4514}{
+На графике приведена зависимость скорости тела от времени при прямолинейном движении. Определите по графику ускорение тела. (В метрах в секунду в квадрате.)
+
+\begin{center}\begin{tikzpicture}[task graph,x=0.8cm,y=0.09cm]\draw[task grid,xstep=0.5,ystep=5](0,0)grid(6,50);\draw[task axis](0,0)--(6.225,0)node[right]{$t,\,\text{с}$};\draw[task axis](0,0)--(0,52.25)node[above]{$v,\,\text{м/с}$};\node[below left]at(0,0){$0$};\fill(1,0)circle(1pt);\node[below]at(1,0){$1$};\fill(2,0)circle(1pt);\node[below]at(2,0){$2$};\fill(3,0)circle(1pt);\node[below]at(3,0){$3$};\fill(4,0)circle(1pt);\node[below]at(4,0){$4$};\fill(5,0)circle(1pt);\node[below]at(5,0){$5$};\fill(0,20)circle(1pt);\node[left]at(0,20){$20$};\fill(0,40)circle(1pt);\node[left]at(0,40){$40$};\draw[task curve](0,10)--(5,40);\end{tikzpicture}\end{center}
+}{
+\smallskip\noindent\textbf{Решение}\par
+Из графика видно, что скорость тела линейно зависит от времени, а значит, его ускорение является постоянным, поэтому для поиска ускорения можно использовать любой удобный интервал времени:
+
+\[a= \frac{\Delta v}{\Delta t} = \frac{v ( 5\,\text{с} ) - v ( 0\,\text{с} )}{5\,\text{с}-0\,\text{с}} = \frac{40\,\text{м/с} - 10\,\text{м/с}}{5\,\text{с} - 0\,\text{с}} =6\,\text{м/с} ^2 .\]
+
+Ответ: $6$.
+}
+
+% Source sdamgia-104: https://phys-ege.sdamgia.ru/problem?id=104
+\BankTask{sdamgia-104}{
+Автомобиль движется по прямой улице. На графике представлена зависимость скорости автомобиля от времени. Чему равен максимальный модуль ускорения? (В метрах на секунду в квадрате.)
+
+\begin{center}\begin{tikzpicture}[task graph,x=0.1cm,y=0.16cm]\draw[task grid,xstep=5,ystep=2.5](0,0)grid(50,25);\draw[task axis](0,0)--(52.25,0)node[right]{$t,\,\text{с}$};\draw[task axis](0,0)--(0,26.125)node[above]{$v_x,\,\text{м/с}$};\node[below left]at(0,0){$0$};\fill(20,0)circle(1pt);\node[below]at(20,0){$20$};\fill(40,0)circle(1pt);\node[below]at(40,0){$40$};\fill(0,10)circle(1pt);\node[left]at(0,10){$10$};\fill(0,20)circle(1pt);\node[left]at(0,20){$20$};\draw[task curve](0,15)--(10,0)--(20,20)--(30,10)--(40,15);\end{tikzpicture}\end{center}
+}{
+\smallskip\noindent\textbf{Решение}\par
+На всех рассматриваемых интервалах времени скорость автомобиля меняется равномерно, следовательно, ускорение на каждом интервале постоянно. Рассчитаем ускорения:
+
+в интервале от $0$ до $10\,\text{с}$: $a_x= \frac{0 - 15}{10} = - 1{,}5\,\text{м/с} ^2 ;$
+
+в интервале от $10$ до $20\,\text{с}$: $a_x= \frac{20 - 0}{10} =2\,\text{м/с} ^2 ;$
+
+в интервале от $20$ до $30\,\text{с}$: $a_x= \frac{10 - 20}{10} = - 1\,\text{м/с} ^2 ;$
+
+в интервале от $30$ до $40\,\text{с}$: $a_x= \frac{15 - 10}{10} =0{,}5\,\text{м/с} ^2 .$
+
+Максимальный модуль ускорения равен $2\,\text{м/с}^{2}$.
+
+Ответ: $2$.
+}
+
+% Source sdamgia-6331: https://phys-ege.sdamgia.ru/problem?id=6331
+\BankTask{sdamgia-6331}{
+Материальная точка движется с постоянным по модулю ускорением. Из этого следует, что скорость данной материальной точки
+
+$1$) изменяется только по модулю
+
+$2$) изменяется только по направлению
+
+$3$) может изменяться и по модулю, и по направлению
+
+$4$) не изменяется ни по модулю, ни по направлению
+}{
+\smallskip\noindent\textbf{Решение}\par
+Ускорение точки может быть направлено как параллельно начальной скорости точки, так и под углом. Следовательно, скорость точки может изменяться и по направлению, и по модулю. Примером такого движения может служить движение в поле силы тяжести.
+
+Правильный ответ указан под номером $3$.
+}
+
+% Source sdamgia-30486: https://phys-ege.sdamgia.ru/problem?id=30486
+\BankTask{sdamgia-30486}{
+Человек, находящийся на балконе высокого дома, подбрасывает вертикально вверх монету, сообщая ей начальную скорость $2\,\text{м/с}$. Через какое время после начала свободного полета монеты модуль ее скорости увеличится в два раза, если монета к данному моменту еще не упадет на землю? Сопротивление воздуха пренебрежимо мало. (В секундах.)
+}{
+\smallskip\noindent\textbf{Решение}\par
+Монета вначале будет двигаться замедленно до остановки. На ее полет вверх будет затрачено время $t_1= \frac{v _0}{g} .$ Далее монета будет двигаться ускоренно вниз с начальной скоростью, равной нулю. Время движения вниз $t_2= \frac{2 v _0}{g} .$ Тогда общее время движения монетки:
+
+\[t=t_1 + t_2= \frac{v _0}{g} + \frac{2 v _0}{g} = \frac{3 v _0}{g} = \frac{3 \cdot  2}{10} =0{,}6\,\text{с}.\]
+
+Ответ: $0{,}6$.
+}
+
+% Source sdamgia-6074: https://phys-ege.sdamgia.ru/problem?id=6074
+\BankTask{sdamgia-6074}{
+\begin{center}\begin{tikzpicture}[task graph,x=0.65cm,y=0.55cm]\draw[task grid,xstep=1,ystep=1](0,-3)grid(6,4);\draw[task axis](0,0)--(6.45,0)node[right]{$t,\,\text{с}$};\draw[task axis](0,-3)--(0,4.45)node[above]{$v_x,\,\text{м/с}$};\node[below left]at(0,0){$0$};\fill(1,0)circle(1pt);\node[below]at(1,0){$1$};\fill(2,0)circle(1pt);\node[below]at(2,0){$2$};\fill(3,0)circle(1pt);\node[below]at(3,0){$3$};\fill(4,0)circle(1pt);\node[below]at(4,0){$4$};\fill(0,-2)circle(1pt);\node[left]at(0,-2){$-2$};\fill(0,-1)circle(1pt);\node[left]at(0,-1){$-1$};\fill(0,1)circle(1pt);\node[left]at(0,1){$1$};\fill(0,2)circle(1pt);\node[left]at(0,2){$2$};\draw[task curve](0,-2)--(1,2)--(2,2)--(5,0);\end{tikzpicture}\end{center}Тело массой $2\,\text{кг}$ движется вдоль оси Ox. На рисунке представлен график зависимости проекции скорости $\upsilon _{x}$ этого тела от времени $t$. Чему равен модуль проекции силы $F_{x}$, действующей на это тело в течение первой секунды? (В ньютонах.)
+}{
+\smallskip\noindent\textbf{Решение}\par
+Из графика видно, что в течение первой секунды движение тела равноускоренное. Ускорение, с которым двигалось тело, равно $\frac{(2-(-2))\,\text{м/с}}{1\,\text{с}}=4\,\text{м/с}^2$. Следовательно, модуль проекции силы, действующей на это тело, равен $2\,\text{кг}\cdot4\,\text{м/с}^2=8\,\text{Н}$.\par Ответ: $8$.
+}
+
+% Source sdamgia-25233: https://phys-ege.sdamgia.ru/problem?id=25233
+\BankTask{sdamgia-25233}{
+\begin{center}\begin{tikzpicture}[task graph,x=0.35cm,y=0.55cm]\draw[task grid,xstep=2,ystep=1](0,-3)grid(16,4);\draw[task axis](0,0)--(16.9,0)node[right]{$t,\,\text{с}$};\draw[task axis](0,-3)--(0,4.45)node[above]{$a_x,\,\text{м/с}^2$};\node[below left]at(0,0){$0$};\fill(2,0)circle(1pt);\node[below]at(2,0){$2$};\fill(4,0)circle(1pt);\node[below]at(4,0){$4$};\fill(6,0)circle(1pt);\node[below]at(6,0){$6$};\fill(8,0)circle(1pt);\node[below]at(8,0){$8$};\fill(10,0)circle(1pt);\node[below]at(10,0){$10$};\fill(12,0)circle(1pt);\node[below]at(12,0){$12$};\fill(0,-2)circle(1pt);\node[left]at(0,-2){$-2$};\fill(0,2)circle(1pt);\node[left]at(0,2){$2$};\draw[task curve](0,-2)--(16,-2);\end{tikzpicture}\end{center}Точечное тело движется вдоль прямой OX по гладкой горизонтальной поверхности. На рисунке изображен график зависимости проекции $a_{x}$ ускорения этого тела от времени $t$. В момент времени $t = 5\,\text{с}$ проекция скорости этого тела на ось OX равна $10\,\text{м/с}$. Чему был равен модуль скорости этого тела в момент начала движения при $t = 0$?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Из графика следует, что проекция ускорения равна $a_x= - 2\,\text{м/с} ^2 .$ При равноускоренном движении проекция скорости равна:
+
+\[v _x= v_{0x} + a_x t\Rightarrow v_{0x}= v _x - a_x t=10 + 2 \cdot  5=20\,\text{м/с}.\]
+
+Ответ: $20$.
+}
+
+% Source sdamgia-4500: https://phys-ege.sdamgia.ru/problem?id=4500
+\BankTask{sdamgia-4500}{
+Мимо остановки по прямой улице проезжает грузовик со скоростью $10\,\text{м/с}$. Через $5\,\text{с}$ от остановки вдогонку грузовику отъезжает мотоциклист, движущийся с постоянным ускорением, и догоняет грузовик на расстоянии $150\,\text{м}$ от остановки. Чему равно ускорение мотоцикла? (В метрах на секунду в квадрате.)
+}{
+\smallskip\noindent\textbf{Решение}\par
+Обозначим через $t$ момент времени, когда мотоциклист догоняет грузовик. К этому моменту времени грузовик успеет пройти расстояние $S= v t,$ откуда $t= \frac{S}{v} = \frac{150\,\text{м}}{10\,\text{м/с}} =15\,\text{с}.$ Мотоциклист стартует с задержкой, поэтому его путь определяется выражением $S= \frac{a ( t - 5\,\text{с} ) ^2}{2} ,$ откуда $a= \frac{2S}{( t - 5\,\text{с} ) ^2} = \frac{2 \cdot  150\,\text{м}}{( 10\,\text{с} ) ^2} =3\,\text{м/с} ^2 .$
+
+Ответ: $3$.
+}
+
+% Source sdamgia-33078: https://phys-ege.sdamgia.ru/problem?id=33078
+\BankTask{sdamgia-33078}{
+Поезд тронулся с места и двигался равноускоренно. За первый километр поезд разогнался до $10\,\text{м/с}$. Найдите, какое расстояние прошел поезд, если время движения составило $400\,\text{с}$.
+}{
+\smallskip\noindent\textbf{Решение}\par
+При равноускоренном движении без начальной скорости $s_1= \frac{v ^2}{2a} .$
+
+Тогда ускорение, с которым ехал поезд, равно $a= \frac{v ^2}{2s_1} .$
+
+Найдем расстояние, которое проехал поезд за время $400\,\text{с}$:
+
+\[s= \frac{at ^2}{2} = \frac{( v t ) ^2}{4s_1} = \frac{( 10 \cdot  400 ) ^2}{4 \cdot  1000} =4000\,\text{м}=4\,\text{км}.\]
+
+Ответ: $4\,\text{км}$.
+}
+
+% Source sdamgia-11568: https://phys-ege.sdamgia.ru/problem?id=11568
+\BankTask{sdamgia-11568}{
+Тело замедлялось с постоянным ускорением и на последние $10\,\text{м/с}$ перед остановкой скорость тела упала за $200$ секунд. Какой путь прошло тело за это время?
+}{
+\smallskip\noindent\textbf{Решение}\par
+\begin{center}\begin{tikzpicture}[task graph]
+\draw[task axis](0,0)--(6.4,0)node[right]{$t,\,\text{с}$};\draw[task axis](0,0)--(0,3.6)node[above]{$v,\,\text{м/с}$};
+\draw[task curve](0,3)--(5.5,0);\draw[red,thick](2.8,1.47)--(5.5,0);\draw[red](2.8,1.47)--(2.8,0);\draw(0,1.47)--(2.8,1.47);
+\draw[<->](-.2,0)--(-.2,1.47)node[midway,left]{$10\,\text{м/с}$};\draw[<->](2.8,-.3)--(5.5,-.3)node[midway,below]{$200\,\text{с}$};
+\end{tikzpicture}\end{center}Изобразим график зависимости скорости движения тела от времени, площадь выделенного участка и будет искомым расстоянием.
+
+Площадь фигуры под графиком: $\frac{1}{2} \cdot  200 \cdot  10=1000\,\text{м}.$
+
+Ответ: $1000\,\text{м}$.
+}
+
+\end{document}

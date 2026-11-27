@@ -1,0 +1,15 @@
+{
+  "batch": "mechanics-speed",
+  "bundle_sha256": "9001d7ee4e9f5429ae637d78859f95766f465eece8b233dda0cc1816cc0b3e2b",
+  "topics": [
+    "1.1.5"
+  ],
+  "tasks": 10,
+  "pages": 8,
+  "baseline_preserved": 107,
+  "files": {
+    "task-1-1-5.tex": "4b2908f62977b11fcc8df2da38bca165bb881a77999267bb94afcd1f0a105724",
+    "tutor-1-1-5.tex": "886c738f27dd32bd5021750effa4ef1f4676c39a08b13dbd4ff9587b9637b1e1"
+  },
+  "editor_open_checked": false
+}

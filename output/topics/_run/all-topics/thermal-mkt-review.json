@@ -1,0 +1,170 @@
+{
+  "approved": true,
+  "reviewed_sha256": "333a4111886ad72485cc50a001f380bc55206697301f20fde04506fc472cde3b",
+  "tasks": [
+    {
+      "id": "sdamgia-817",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-9735",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-11663",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-12961",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-20018",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-50742",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-23234",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-3695",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-19683",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-29808",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-803",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-811",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-3506",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-8675",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-11265",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-35990",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-31885",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-9162",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-24114",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-29733",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-813",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-35222",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-19725",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-26722",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-31410",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-44613",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-6893",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-1206",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-6433",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    },
+    {
+      "id": "sdamgia-11812",
+      "approved": true,
+      "reason": "Condition, published solution, formula, units and numerical answer checked against source; transcription findings corrected."
+    }
+  ],
+  "originals_reviewed": [
+    "thermal/asset-preview-2.png (24114)",
+    "thermal/asset-preview-3.png (19725)"
+  ],
+  "resolved": [
+    "3695 full radicals",
+    "9162 full fraction under radical",
+    "20018 removed math-encoded boilerplate",
+    "26722 nu and complete chemical indices",
+    "6893 Greek nu",
+    "35222 source index typo recorded by author",
+    "35990 SI formatting",
+    "generic answer commands stripped"
+  ]
+}

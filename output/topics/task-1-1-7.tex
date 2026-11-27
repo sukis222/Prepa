@@ -1,0 +1,92 @@
+% !TEX root = task-1-1-7.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{1.1.7}{Примеры вычисления скорости и ускорения}
+
+
+% Source 8c1642: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=8c1642
+\BankTask{8c1642}{
+На рисунке показан график зависимости координаты $x$ тела, движущегося вдоль оси $Ox$, от времени $t$.
+\begin{center}\begin{tikzpicture}[x=1cm,y=.8cm,>=stealth]
+\draw[->] (0,0)--(5.4,0) node[right] {$t$};
+\draw[->] (0,0)--(0,5.1) node[above] {$x$};
+\node[below left] at (0,0) {$0$};
+\draw[very thick] (0,1.6) .. controls (.3,1.0) and (.45,.8) .. (.75,.8) .. controls (1.5,.8) and (1.75,2.1) .. (2.5,3.7) .. controls (2.875,4.5) and (3.10546875,4.8) .. (3.45,4.8) .. controls (3.9,4.8) and (4.3,4.0) .. (4.65,3.0) .. controls (4.72,2.8) and (4.8,2.6) .. (4.9,2.3);
+\fill (.75,.8) circle (1.5pt) node[below] {$A$};
+\fill (2.5,3.7) circle (1.5pt) node[above left] {$B$};
+\fill (3.45,4.8) circle (1.5pt) node[above] {$C$};
+\fill (4.65,3.0) circle (1.5pt) node[right] {$D$};
+\end{tikzpicture}\end{center}
+\begin{enumerate}
+\item На участке $CD$ модуль скорости тела увеличивается.
+\item В точке $A$ проекция ускорения тела на ось $Ox$ отрицательна.
+\item На участке $BC$ модуль скорости тела увеличивается.
+\item В точке $B$ ускорение тела и его скорость направлены в противоположные стороны.
+\item В точке $B$ проекция скорости тела на ось $Ox$ отрицательна.
+\end{enumerate}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+На участке $CD$ отрицательный наклон графика по модулю растёт, значит модуль скорости увеличивается. В точке $A$ минимум координаты, кривизна направлена вверх: $a_x>0$. В точке $B$ наклон положителен, но уменьшается при приближении к $C$: $v_x>0$, $a_x<0$. Ответ: $14$.
+}
+
+% Source 72e2A7: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=72e2A7
+\BankTask{72e2A7}{
+На рисунке приведены графики зависимости координаты $x$ от времени $t$ для двух точечных тел $1$ и $2$, движущихся по прямой, вдоль которой направлена ось $Ox$. Масса каждого тела равна $0{,}5\,\text{кг}$.
+\begin{center}\begin{tikzpicture}[x=.25cm,y=.5cm,>=stealth]
+\draw[thin,black!65,xstep=2,ystep=1] (0,0) grid (20,8);
+\draw[->] (0,0)--(22,0) node[right] {$t,\,\text{с}$};
+\draw[->] (0,0)--(0,9) node[above] {$x,\,\text{м}$};
+\foreach \x in {0,4,8,12,16,20} \node[below] at (\x,0) {$\x$};
+\foreach \y in {2,4,6} \node[left] at (0,\y) {$\y$};
+\draw[very thick] (0,.5)--(20,5.5);\node at (12,3.9) {$1$};
+\draw[very thick,domain=0:19.2,samples=60] plot (\x,{1+(\x-10)^2/16});\node at (17,1.7) {$2$};
+\end{tikzpicture}\end{center}
+\begin{enumerate}
+\item Проекция скорости тела $2$ на ось $Ox$ в момент времени $4\,\text{с}$ отрицательна.
+\item Тело $1$ движется со скоростью $3\,\text{м}/\text{с}$.
+\item Проекция ускорения тела $2$ на ось $Ox$ отрицательна.
+\item Кинетическая энергия тела $1$ в момент времени $10\,\text{с}$ равна $2{,}25\,\text{Дж}$.
+\item Расстояние между точками встречи тел равно $3\,\text{м}$.
+\end{enumerate}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+При $t=4\,\text{с}$ график тела $2$ убывает, значит $v_{2x}<0$. Скорость тела $1$ равна наклону прямой: $v_1=(5-2)/(18-6)=0{,}25\,\text{м}/\text{с}$, а его энергия $E_{\text{к}1}=0{,}5\cdot0{,}25^2/2\ne2{,}25\,\text{Дж}$. Парабола вогнута вверх, поэтому $a_{2x}>0$. Координаты встреч $x_a=2\,\text{м}$ и $x_b=5\,\text{м}$ отличаются на $3\,\text{м}$. Ответ: $15$.
+}
+
+\end{document}

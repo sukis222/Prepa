@@ -1,0 +1,111 @@
+% Proposed graph templates; awaiting user approval before corpus-wide migration.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\begin{document}
+\noindent\textbf{Графики: предложение для согласования}\par\medskip
+Шесть образцов из уже отобранных задач ФИПИ. Предлагается сохранять данные и смысл графика, а качество линий, сеток и проекций задавать единым шаблоном.\par\medskip
+% FIPI source F23045; original editable diagram in task bank.
+\noindent\textbf{1. Сетка и ломаная}\par\smallskip
+Основная линия выделена относительно сетки: 0,85 пт против 0,25 пт. Сетка светлая; данные и число клеток сохранены.\par
+\begin{center}
+\begin{tikzpicture}[task graph,x=0.65cm,y=0.65cm]
+\draw[task grid,step=1] (0,0) grid (5,5);
+\draw[task axis] (0,0)--(6,0) node[below] {$V$};
+\draw[task axis] (0,0)--(0,6) node[left] {$p$};
+\node[below left] at (0,0) {$0$};
+\draw[task curve] (1,4)--(3,4)--(5,2);
+\node[above left] at (1,4) {$1$};
+\node[above right] at (3,4) {$2$};
+\node[right] at (5,2) {$3$};
+\end{tikzpicture}
+\end{center}\medskip
+% FIPI source F45AFF; original editable diagram in task bank.
+\noindent\textbf{2. Линейная зависимость с разрывом осей}\par\smallskip
+Разрывы показывают сокращённую шкалу. Координаты отмечены полными проекциями с мелким одинаковым пунктиром.\par
+\begin{center}
+\begin{tikzpicture}[task graph,x=1cm,y=1cm]
+\draw[task axis] (0,0)--(4.5,0) node[below] {$Q,\,\text{кДж}$};
+\draw (0,0)--(0,0.44);
+\draw[task axis] (0,0.68)--(0,3.35) node[left] {$T,\,\text{К}$};
+\draw (-0.09,0.46)--(0.02,0.52)--(0.12,0.48);
+\draw (-0.09,0.57)--(0.02,0.63)--(0.12,0.59);
+\node[below left] at (0,0) {$0$};
+\draw (0.42,-0.06)--(0.48,0.06);\draw (0.54,-0.06)--(0.60,0.06);
+\draw[task projection] (1.45,0)--(1.45,1.05);
+\draw[task projection] (3.1,0)--(3.1,2.6);
+\node[below] at (1.45,0) {$100$};
+\node[below] at (3.1,0) {$136$};
+\draw[task projection] (0,1.05)--(1.45,1.05);
+\draw[task projection] (0,2.6)--(3.1,2.6);
+\node[left] at (0,1.05) {$273$};
+\node[left] at (0,2.6) {$293$};
+\draw[task curve] (0.7,0.3454545)--(3.1,2.6);
+\fill (1.45,1.05) circle (1.7pt);
+\fill (3.1,2.6) circle (1.7pt);
+\end{tikzpicture}
+\end{center}\medskip
+\clearpage
+% FIPI source 217002; original editable diagram in task bank.
+\noindent\textbf{3. Нагревание и фазовый переход: теплота}\par\smallskip
+Участки соединены непрерывно. Вспомогательные линии одинаковы по толщине и длине штрихов.\par
+\begin{center}
+\begin{tikzpicture}[task graph,x=1.5cm,y=1cm]
+\draw[task axis] (0,0)--(3.8,0) node[below] {$Q,\,10^4\,\text{Дж}$};
+\draw[task axis] (0,0)--(0,3) node[left] {$t,\,{}^\circ\text{C}$};
+\node[below left] at (0,0) {$0$};
+\foreach \x in {0.5,1,1.5,2} {
+\draw[task projection] (\x,0)--(\x,1.75);
+}
+\draw[task projection] (2.55,0)--(2.55,2.50625);
+\draw[task curve] (0,0.8)--(0.5,1.75)--(2,1.75)--(2.8,2.85);
+\node[below] at (1,0) {$1$};
+\node[below] at (2,0) {$2$};
+\end{tikzpicture}
+\end{center}\medskip
+% FIPI source 5745AB; original editable diagram in task bank.
+\noindent\textbf{4. Нагревание и фазовый переход: время}\par\smallskip
+Тот же шаблон проекций. Длинные разрывы исходного растра заменены читаемым пунктиром; данные не меняются.\par
+\begin{center}
+\begin{tikzpicture}[task graph,x=0.19cm,y=0.95cm]
+\draw[task axis] (0,0)--(31,0) node[right] {$t,\,\text{мин.}$};
+\draw[task axis] (0,0)--(0,4) node[left] {$T$};
+\node[below left] at (0,0) {$0$};
+\foreach \x in {5,10,15,20,25}{
+  \node[below] at (\x,0) {$\x$};
+}
+\foreach \x/\y in {5/2.35,10/2.35,15/2.35,20/2.9,25/3.45}
+  \draw[task projection] (\x,0)--(\x,\y);
+\draw[task curve] (0,1.45)--(5,2.35)--(15,2.35)--(25,3.45);
+\end{tikzpicture}
+\end{center}\medskip
+\clearpage
+% FIPI source 7CFB3E; original editable diagram in task bank.
+\noindent\textbf{5. Аналитическая парабола}\par\smallskip
+Кривая задана функцией, а не обводкой пикселей. Штриховая левая ветвь сохраняет особенность исходного графика и отличается от координатных проекций.\par
+\begin{center}
+\begin{tikzpicture}[task graph,x=1cm,y=1cm]
+\draw[task grid] (-2,0) grid (2,3);
+\draw[task axis] (-2.6,0)--(3,0) node[right] {$t,\,\text{с}$};
+\draw[task axis] (0,0)--(0,3.6) node[above] {$x,\,\text{м}$};
+\foreach \x in {-2,-1,0,1,2} \node[below] at (\x,0) {$\x$};
+\foreach \y in {1,2,3} \node[left] at (0,\y) {$\y$};
+\draw[task curve,dash pattern=on 3pt off 2pt,domain=-2.45:0,samples=40] plot (\x,{.5*\x*\x});
+\draw[task curve,domain=0:2.45,samples=40] plot (\x,{.5*\x*\x});
+\end{tikzpicture}
+\end{center}\medskip
+% FIPI source 7CCC09; original editable diagram in task bank.
+\noindent\textbf{6. Гармоническая зависимость}\par\smallskip
+Плавная аналитическая кривая; одинаковая толщина осей и одинаковые деления. Амплитуда и период исходного графика сохранены.\par
+\begin{center}
+\begin{tikzpicture}[task graph,x=0.85cm,y=0.42cm]
+\draw[task axis] (-1,0)--(7.2,0) node[below] {$t,\text{ мкс}$};
+\draw[task axis] (0,-7)--(0,7) node[left] {$I,\text{ мА}$};
+\node[below left] at (0,0) {$0$};
+\draw (-0.15,5)--(0.15,5) node[left=5pt] {$5$};
+\draw (-0.15,-5)--(0.15,-5) node[left=5pt] {$-5$};
+\foreach \x in {1,2,3,4,5,6} \draw (\x,0.15)--(\x,-0.15);
+\foreach \x in {1,3,5,6} \node[below] at (\x,-0.3) {$\x$};
+\draw[task curve,smooth,samples=121,domain=0:6] plot (\x,{5*sin(90*\x)});
+\end{tikzpicture}
+\end{center}\medskip
+\end{document}

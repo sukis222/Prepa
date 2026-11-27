@@ -1,0 +1,154 @@
+{
+  "approved": true,
+  "reviewed_sha256": "5d0a8f1b2972769dea6b11758adf1be63064706b74bb9c2fc7237d7b3ed09b08",
+  "source_snapshots": {
+    "D:\\GitHub\\Prepa-GPT\\.scratch\\all-topics\\optics-quantum\\3161.html": "f63dc08f70c33b6f286d6c89b03c15e01a0f4d134c72f2822971b03e244bb1e2",
+    "D:\\GitHub\\Prepa-GPT\\.scratch\\all-topics\\optics-quantum\\9513.html": "335bd98d79a2c53c42fd03c1ee02424466e6fc285714789e7fa30652e3f7302e",
+    "D:\\GitHub\\Prepa-GPT\\.scratch\\all-topics\\optics-quantum\\10326.html": "befc516bee95ca3e94a40fd6cf9a1bef767a0125e0985908c9178fca69014e98",
+    "D:\\GitHub\\Prepa-GPT\\.scratch\\all-topics\\optics-quantum\\6204.html": "f273ea2281f70449dbf935d64f412f3d7444112b499cc017111e5613be8d7d86",
+    "D:\\GitHub\\Prepa-GPT\\.scratch\\all-topics\\optics-quantum\\23308.html": "1cc446d32d3da61a1d1b311027f0e50af766ebfed474b941dc766b5bbbc26a34",
+    "D:\\GitHub\\Prepa-GPT\\.scratch\\all-topics\\optics-quantum\\8951.html": "1d3fbb6b859ee9c40b62f8fa6cab0363713b88ff057c23c861bce486d09c7c63",
+    "D:\\GitHub\\Prepa-GPT\\.scratch\\all-topics\\optics-quantum\\10650.html": "d1743a21f546c8bf4e1946bfc96aaba0ba1ec55de61d5be85c27123c59569de4",
+    "D:\\GitHub\\Prepa-GPT\\.scratch\\all-topics\\optics-quantum\\25253.html": "d81ebc5fa0ecfdffa7d734d24f8e9f9b1f8abb7e61d8ebdb3f134fecd5ba8b1a",
+    "D:\\GitHub\\Prepa-GPT\\.scratch\\all-topics\\optics-quantum\\3811.html": "0cf95b87c9bed5fcac81b4afc07a750acd0f90fe8164236cf2ecf8ef8b5bb840",
+    "D:\\GitHub\\Prepa-GPT\\.scratch\\all-topics\\optics-quantum\\4495.html": "82a0541a00c4aa966c55de0729a94db4c0e858a174aba8db02665d04c9a8ae27",
+    "D:\\GitHub\\Prepa-GPT\\.scratch\\all-topics\\optics-quantum\\31893.html": "09f925a2365bc318cf96a7e2062311d9e0349787554829a8bc12f893eb3c186e",
+    "D:\\GitHub\\Prepa-GPT\\.scratch\\all-topics\\optics-quantum\\51370.html": "ce14a1d97aa8ac7df5491b48feb75e0e40a86ef0732dc664f5b278ae5f14390f",
+    "D:\\GitHub\\Prepa-GPT\\.scratch\\all-topics\\optics-quantum\\3045.html": "f712e3a0d9d7fe2d2fe51236defdb35f56af30d4f0e976e38ff844531f42e420",
+    "D:\\GitHub\\Prepa-GPT\\.scratch\\all-topics\\optics-quantum\\3047.html": "3c40e6a1534c16fe2c61989cff69d509a037e4b2ff2a42d3b7ec3f19cba0b34d",
+    "D:\\GitHub\\Prepa-GPT\\.scratch\\all-topics\\optics-quantum\\3048.html": "b9d92606534e00150cfa826ddeee545595508b0aedcd2098f6e6ddc214dbed46",
+    "D:\\GitHub\\Prepa-GPT\\.scratch\\all-topics\\optics-quantum\\4758.html": "5eb205a8be211d5c6523b2da8344da6a5bd35b1bb843b2bc1a3a6d113dd2d4c1",
+    "D:\\GitHub\\Prepa-GPT\\.scratch\\all-topics\\optics-quantum\\5388.html": "e42c74c45744126cc25ae5334d3c3ce4bc8cf41cc800fef29bb15b2273259896",
+    "D:\\GitHub\\Prepa-GPT\\.scratch\\all-topics\\optics-quantum\\6513.html": "300962ae77f1c34e0816e3bb7634d450ae03b16ac19138a3d1db97d1fe3a12f9",
+    "D:\\GitHub\\Prepa-GPT\\.scratch\\all-topics\\optics-quantum\\6913.html": "65f8bc5eae038f5caed738c28b4cf785512f80135438eb29a5d4473577020515",
+    "D:\\GitHub\\Prepa-GPT\\.scratch\\all-topics\\optics-quantum\\11522.html": "19ec9286375eee3f1e6999498caa0294dcdeef16615057d70e0d986f898957f2",
+    "D:\\GitHub\\Prepa-GPT\\.scratch\\all-topics\\optics-quantum\\7047.html": "4a7810a84d27cecb35a5fad5ecc6ea85401a4ea50cc14cf07efcbf8acd9f67cd",
+    "D:\\GitHub\\Prepa-GPT\\.scratch\\all-topics\\optics-quantum\\7079.html": "4f6f7dd2be01126b8ed027b60e6db4695a2ef298ea4a892e9a31f7b6b473f0d9",
+    "D:\\GitHub\\Prepa-GPT\\.scratch\\all-topics\\optics-quantum\\2041.html": "d9089c6e62107eabcacd4e93463db0037fc16684cd2688df517867bf8bedde7a",
+    "D:\\GitHub\\Prepa-GPT\\.scratch\\all-topics\\optics-quantum\\8870.html": "0a6c04f7a5304682861b200d94cc8d2207f113d506e3fc4c25c3c40ef215a799"
+  },
+  "scope": "All24 conditions/solutions read independently and answers recomputed: Bohr postulates and levels, photon energy/momentum, absorption/emission signs, spectral series and mixtures, electron collisions and photoeffect. All13 original diagrams viewed and compared with TikZ. All requested notation, unit and emission-sign fixes confirmed.",
+  "tasks": [
+    {
+      "topic": "6.6.1",
+      "id": "sdamgia-3161",
+      "approved": true
+    },
+    {
+      "topic": "6.6.1",
+      "id": "sdamgia-9513",
+      "approved": true
+    },
+    {
+      "topic": "6.6.1",
+      "id": "sdamgia-10326",
+      "approved": true
+    },
+    {
+      "topic": "6.6.1",
+      "id": "sdamgia-6204",
+      "approved": true
+    },
+    {
+      "topic": "6.6.1",
+      "id": "sdamgia-23308",
+      "approved": true
+    },
+    {
+      "topic": "6.6.1",
+      "id": "sdamgia-8951",
+      "approved": true
+    },
+    {
+      "topic": "6.6.1",
+      "id": "sdamgia-10650",
+      "approved": true
+    },
+    {
+      "topic": "6.6.1",
+      "id": "sdamgia-25253",
+      "approved": true
+    },
+    {
+      "topic": "6.6.1",
+      "id": "sdamgia-3811",
+      "approved": true
+    },
+    {
+      "topic": "6.6.1",
+      "id": "sdamgia-4495",
+      "approved": true
+    },
+    {
+      "topic": "6.6.1",
+      "id": "sdamgia-31893",
+      "approved": true
+    },
+    {
+      "topic": "6.6.1",
+      "id": "sdamgia-51370",
+      "approved": true
+    },
+    {
+      "topic": "6.6.1",
+      "id": "sdamgia-3045",
+      "approved": true
+    },
+    {
+      "topic": "6.6.1",
+      "id": "sdamgia-3047",
+      "approved": true
+    },
+    {
+      "topic": "6.6.1",
+      "id": "sdamgia-3048",
+      "approved": true
+    },
+    {
+      "topic": "6.6.1",
+      "id": "sdamgia-4758",
+      "approved": true
+    },
+    {
+      "topic": "6.6.1",
+      "id": "sdamgia-5388",
+      "approved": true
+    },
+    {
+      "topic": "6.6.1",
+      "id": "sdamgia-6513",
+      "approved": true
+    },
+    {
+      "topic": "6.6.1",
+      "id": "sdamgia-6913",
+      "approved": true
+    },
+    {
+      "topic": "6.6.1",
+      "id": "sdamgia-11522",
+      "approved": true
+    },
+    {
+      "topic": "6.5.3",
+      "id": "sdamgia-7047",
+      "approved": true
+    },
+    {
+      "topic": "6.5.3",
+      "id": "sdamgia-7079",
+      "approved": true
+    },
+    {
+      "topic": "6.2.4",
+      "id": "sdamgia-2041",
+      "approved": true
+    },
+    {
+      "topic": "6.4.3",
+      "id": "sdamgia-8870",
+      "approved": true
+    }
+  ],
+  "issues": []
+}

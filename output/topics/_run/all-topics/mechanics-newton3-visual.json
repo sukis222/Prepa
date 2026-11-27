@@ -1,0 +1,31 @@
+{
+  "approved": true,
+  "bundle_sha256": "99b76aed8881d90a42e1fad3e3929f3249fcdb29706007a13838fa83ffecdfca",
+  "pages": [
+    {
+      "file": "tmp\\all-topics\\newton3\\preview\\task-1-8-3\\page-01.png",
+      "sha256": "2676ee0f961f3df7e24b362f6124d82d086d53f9d2fd85cd6fef4f99dfbc5ba4"
+    },
+    {
+      "file": "tmp\\all-topics\\newton3\\preview\\task-1-8-3\\page-02.png",
+      "sha256": "1f4c942a3607b06eb764a6f7bae809af93200c1273bc885a6435e8d9d58c6b0a"
+    },
+    {
+      "file": "tmp\\all-topics\\newton3\\preview\\tutor-1-8-3\\page-01.png",
+      "sha256": "7875473296f849c581280cb869531ebd04d2e338a2ce31df8a85568f110c7c97"
+    },
+    {
+      "file": "tmp\\all-topics\\newton3\\preview\\tutor-1-8-3\\page-02.png",
+      "sha256": "dac8cbfd3bdb098f3bab116c6f7c7dd1c9e33980828fb85d8bfaceba3300716e"
+    },
+    {
+      "file": "tmp\\all-topics\\newton3\\preview\\tutor-1-8-3\\page-03.png",
+      "sha256": "e349aa9871754dc23034c9969a0653fcd64a971185fc14f8913fcd0692ac7d64"
+    },
+    {
+      "file": "tmp\\all-topics\\newton3\\preview\\tutor-1-8-3\\page-04.png",
+      "sha256": "e6fda092680b7b52cfb6aa8e78d4c04b7e21950c08003b28af32f7ff12aeb7ac"
+    }
+  ],
+  "scope": "Every rendered page viewed; diagrams, lines, tables and typeset formulas checked. Editor opening not checked."
+}

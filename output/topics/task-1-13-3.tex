@@ -1,0 +1,83 @@
+% !TEX root = task-1-13-3.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{1.13.3}{Гидравлический пресс}
+
+
+% Source sdamgia-9496: https://phys-ege.sdamgia.ru/problem?id=9496
+\BankTask{sdamgia-9496}{
+Гидравлический пресс изготовлен с использованием двух вертикальных цилиндрических сообщающихся сосудов, заполненных жидкостью и закрытых легкими поршнями. Радиус большего поршня этого пресса превосходит радиус меньшего поршня в $5$ раз. На малый поршень положили груз массой $20 \,\text{кг}$, удерживая больший поршень неподвижным. Определите модуль силы давления жидкости на больший поршень. Атмосферным давлением пренебречь.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Запишем закон гидравлического пресса:
+
+$S_{2}/S_{1} = F_{2}/F_{1},$
+
+где $S= \pi R ^{2}$ — площадь поршня, $F$ — сила, действующая на соответствующий поршень.
+ 
+На малый поршень действует сила тяжести груза, а на большой — сила, по модулю равная силе давления жидкости (согласно третьему закону Ньютона).
+Найдем, чему равна сила давления жидкости на большой поршень:
+
+$F_{2}= \frac{ S_{2}F_{1}}{ S_{1} } = \frac{ R_{2} ^{2} }{ R_{1} ^{2} } \cdot mg=25 \cdot 200=5000\,\text{Н}.$
+
+Ответ: $5000$.
+}
+
+% Source sdamgia-9528: https://phys-ege.sdamgia.ru/problem?id=9528
+\BankTask{sdamgia-9528}{
+Гидравлический пресс изготовлен с использованием двух вертикальных цилиндрических сообщающихся сосудов, заполненных жидкостью и закрытых легкими поршнями. Если на малый поршень этого пресса положить груз массой $40 \,\text{кг}$, удерживая больший поршень неподвижным, то сила давления жидкости на больший поршень увеличится на 
+ $900 \,\text{Н}$. Во сколько раз радиус большего поршня пресса превосходит радиус меньшего поршня? Атмосферным давлением пренебречь.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Запишем закон гидравлического пресса:
+
+$S_{2}/S_{1} = F_{2}/F_{1},$
+
+где $S= \pi R ^{2}$ — площадь поршня, $F$ — сила, действующая на соответствующий поршень.
+На малый поршень действует сила тяжести груза, а на большой — сила, по модулю равная силе давления жидкости (согласно третьему закону Ньютона).
+Найдем чему равно отношение радиусов поршней:
+
+$\frac{ R_{2} ^{2} }{ R_{1} ^{2} } = \frac{ F_{2}}{ F_{1} } = \frac{ F_{2}}{ mg } = \frac{ 9}{ 4 } \Longleftrightarrow \frac{ R_{2}}{ R_{1} } = \frac{ 3}{ 2 } .$
+
+Таким образом, радиус большого поршня в $1{,}5$ раза больше радиуса первого поршня.
+ 
+Ответ: $1{,}5$.
+}
+
+\end{document}

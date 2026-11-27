@@ -1,0 +1,116 @@
+{
+  "approved": true,
+  "reviewed_sha256": "fcc414acc81c3dd806f57e8a8005b7f1ae7465883a1531fcc575197d6cbb003a",
+  "tasks": [
+    {
+      "id": "sdamgia-1707",
+      "approved": true,
+      "reason": "Source condition/published solution and all required figures independently checked; geometry, formulas, units and answer correct."
+    },
+    {
+      "id": "sdamgia-1708",
+      "approved": true,
+      "reason": "Source condition/published solution and all required figures independently checked; geometry, formulas, units and answer correct."
+    },
+    {
+      "id": "sdamgia-29119",
+      "approved": true,
+      "reason": "Source condition/published solution and all required figures independently checked; geometry, formulas, units and answer correct."
+    },
+    {
+      "id": "sdamgia-9520",
+      "approved": true,
+      "reason": "Source condition/published solution and all required figures independently checked; geometry, formulas, units and answer correct."
+    },
+    {
+      "id": "sdamgia-32637",
+      "approved": true,
+      "reason": "Source condition/published solution and all required figures independently checked; geometry, formulas, units and answer correct."
+    },
+    {
+      "id": "sdamgia-32638",
+      "approved": true,
+      "reason": "Source condition/published solution and all required figures independently checked; geometry, formulas, units and answer correct."
+    },
+    {
+      "id": "sdamgia-6072",
+      "approved": true,
+      "reason": "Source condition/published solution and all required figures independently checked; geometry, formulas, units and answer correct."
+    },
+    {
+      "id": "sdamgia-5368",
+      "approved": true,
+      "reason": "Source condition/published solution and all required figures independently checked; geometry, formulas, units and answer correct."
+    },
+    {
+      "id": "sdamgia-6897",
+      "approved": true,
+      "reason": "Source condition/published solution and all required figures independently checked; geometry, formulas, units and answer correct."
+    },
+    {
+      "id": "sdamgia-31888",
+      "approved": true,
+      "reason": "Source condition/published solution and all required figures independently checked; geometry, formulas, units and answer correct."
+    },
+    {
+      "id": "sdamgia-35173",
+      "approved": true,
+      "reason": "Source condition/published solution and all required figures independently checked; geometry, formulas, units and answer correct."
+    },
+    {
+      "id": "sdamgia-1739",
+      "approved": true,
+      "reason": "Source condition/published solution and all required figures independently checked; geometry, formulas, units and answer correct."
+    },
+    {
+      "id": "sdamgia-1740",
+      "approved": true,
+      "reason": "Source condition/published solution and all required figures independently checked; geometry, formulas, units and answer correct."
+    },
+    {
+      "id": "sdamgia-1711",
+      "approved": true,
+      "reason": "Source condition/published solution and all required figures independently checked; geometry, formulas, units and answer correct."
+    },
+    {
+      "id": "sdamgia-3590",
+      "approved": true,
+      "reason": "Source condition/published solution and all required figures independently checked; geometry, formulas, units and answer correct."
+    },
+    {
+      "id": "sdamgia-9092",
+      "approved": true,
+      "reason": "Source condition/published solution and all required figures independently checked; geometry, formulas, units and answer correct."
+    },
+    {
+      "id": "sdamgia-3901",
+      "approved": true,
+      "reason": "Source condition/published solution and all required figures independently checked; geometry, formulas, units and answer correct."
+    }
+  ],
+  "original_diagrams_viewed": 21,
+  "resolved_issues": [
+    "27101 rejected: incorrect published model of equinox shadow speed. Correct minimum is h omega/cos(phi), not h omega tan(phi).",
+    "1739/1740 arrow restored to y0..-1; mirror and eye coordinates verified against original; half-arrow and one-cell displacement results now follow.",
+    "3901 real ray with two actual reflections and subsequent refraction added; reflection geometry and thin-lens law independently verified."
+  ],
+  "arithmetic": {
+    "1707": "D=.1*3=.3m",
+    "1708": "shadow=1/tan45=1m",
+    "29119": "screen distance=2*1-1=1m",
+    "9520": "h<<R, r~sqrt(2Rh), heightfactor4 givesdistancefactor2",
+    "32637": "umbra diameter=1+3/(4-3)*(1-.5)=2.5m",
+    "32638": "outerD=6m; penumbra area=pi*(36-4)/4=25.13m2",
+    "6072": "moire period=.1*50/10=.5m",
+    "5368": "2*(60-25)=70cm",
+    "6897": "distance decrease=2*.3=.6m",
+    "31888": "factor18/12=1.5",
+    "35173": "move .9-.9/3=.6m",
+    "1739": "visible virtual y>=-.5, arrow[-1,0], fraction.5",
+    "1740": "eye up.5(onegridcell) makes lower visible bound-1",
+    "1711": "imagevelocity projection-v",
+    "3590": "2images; explicit reflection positions checked",
+    "9092": "3to2images, nearest separation increases sqrt2r tosqrt3r",
+    "3901": "double-reflection virtual object2f above lens; real image2f below lens"
+  }
+}

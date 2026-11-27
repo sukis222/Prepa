@@ -1,0 +1,58 @@
+% !TEX root = task-1-16-6.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{1.16.6}{КПД механизма}
+
+
+% Source 33074: https://phys-ege.sdamgia.ru/problem?id=33074
+\BankTask{33074}{
+Лазер испускает световые импульсы с энергией $0{,}1\,\text{Дж}$. Частота повторения импульсов $10\,\text{Гц}$. Через охлаждающую систему лазера прокачивается вода массой $8{,}5\,\text{кг}$, которая в течение часа нагрелась на $10$ \ensuremath{{}^\circ}C. Найдите КПД лазера, если он определяется как отношение излучаемой энергии к потребляемой им.
+}{
+\smallskip\noindent\textbf{Решение}\par
+КПД лазера равен $\eta= \frac{Q_1}{Q_2} ,$ где $Q_{2}$  — количество теплоты, подводимой к лазеру, $Q_{1}$  — количество теплоты, испускаемой лазером за час работы.
+Энергия, испускаемая лазером равна суммарной энергии всех фотонов $Q_1=NE$ Число импульсов, испускаемых за указанное время, равно $N=\nu t,$ E  — энергия одного импульса.
+$Q_{2}$  — затраченная энергия, равная $Q_2=cm\Delta t + Q_1.$
+Таким образом, КПД лазера
+
+\[\eta= \frac{\nu tE}{\nu tE + mc\Delta t} = \frac{10 \cdot 3600 \cdot 0{,}1}{10 \cdot 3600 \cdot 0{,}1 + 4200 \cdot 8{,}5 \cdot 10} \approx 1\%.\]
+
+Ответ: $1$\%.
+}
+
+\end{document}

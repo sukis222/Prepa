@@ -1,0 +1,61 @@
+{
+  "approved": true,
+  "reviewed_sha256": "49b1964d6a0f1ee3a23ef6841cb06a96928e51d5e1df07110e532d91488b67f0",
+  "tasks": [
+    {
+      "id": "sdamgia-302",
+      "approved": true,
+      "reason": "Source condition and published solution compared; formulas, dimensions and numerical result independently checked."
+    },
+    {
+      "id": "sdamgia-328",
+      "approved": true,
+      "reason": "Source condition and published solution compared; formulas, dimensions and numerical result independently checked."
+    },
+    {
+      "id": "sdamgia-333",
+      "approved": true,
+      "reason": "Source condition and published solution compared; formulas, dimensions and numerical result independently checked."
+    },
+    {
+      "id": "sdamgia-32578",
+      "approved": true,
+      "reason": "Source condition and published solution compared; formulas, dimensions and numerical result independently checked."
+    },
+    {
+      "id": "sdamgia-38042",
+      "approved": true,
+      "reason": "Source condition and published solution compared; formulas, dimensions and numerical result independently checked."
+    },
+    {
+      "id": "sdamgia-38487",
+      "approved": true,
+      "reason": "Source condition and published solution compared; formulas, dimensions and numerical result independently checked."
+    },
+    {
+      "id": "sdamgia-46762",
+      "approved": true,
+      "reason": "Source condition and published solution compared; formulas, dimensions and numerical result independently checked."
+    },
+    {
+      "id": "sdamgia-35249",
+      "approved": true,
+      "reason": "Source condition and published solution compared; formulas, dimensions and numerical result independently checked."
+    },
+    {
+      "id": "sdamgia-3720",
+      "approved": true,
+      "reason": "Source condition and published solution compared; formulas, dimensions and numerical result independently checked."
+    },
+    {
+      "id": "sdamgia-50848",
+      "approved": true,
+      "reason": "Source condition and published solution compared; formulas, dimensions and numerical result independently checked."
+    }
+  ],
+  "physics": "All10 correct; spring equilibrium and oscillator extensions agree; source table38487 restored exactly. Original69996 visually inspected: two compressed collinear springs with block and k1/k2 labels faithfully rebuilt. Old3720/50848 sources also checked.",
+  "format_issues": [],
+  "resolved_issues": [
+    "General answer commands removed with output units retained"
+  ]
+}

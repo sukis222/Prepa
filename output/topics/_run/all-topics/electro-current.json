@@ -1,0 +1,151 @@
+{
+  "topics": [
+    {
+      "number": "3.8.3",
+      "title": "Сила тока и перенос электрического заряда",
+      "requested_count": 10,
+      "tasks": [
+        {
+          "id": "sdamgia-3227",
+          "source_url": "https://phys-ege.sdamgia.ru/problem?id=3227",
+          "source_snapshot": "D:/GitHub/Prepa-GPT/.scratch/all-topics/electro/originals/3227.html",
+          "source_snapshot_sha256": "cb39a2bc98d2ec05f45039b590bacdfb73b178dfe2598f0c71c40fe70cf6e247",
+          "exam_number": 11,
+          "exam_part": 1,
+          "condition_tex": "Сила тока в проводнике постоянна и равна $0{,}5 \\,\\text{А}$. Какой заряд пройдет по проводнику за $20$ минут? (В кулонах.)\\par",
+          "solution_tex": "Сила тока, по определению, есть скорость протекания заряда. Таким образом, за $20$ минут при силе тока в проводнике $0{,}5 \\,\\text{А}$ по нему пройдет заряд $q=It=0{,}5\\,\\text{А} \\cdot ( 20 \\cdot 60\\,\\text{с} ) =600\\,\\text{Кл}.$\\par\nОтвет: $600$.\\par",
+          "solution_kind": "published",
+          "difficulty_rank": 1,
+          "selection_note": "Постоянный ток, наклон q(t), поток электронов, функциональные зависимости, площадь I(t), цепь с источником, зарядка конденсатора, интеграл индукционного тока, ускоренный электронный пучок.",
+          "part_evidence": "Тип 11 № 3227"
+        },
+        {
+          "id": "sdamgia-3229",
+          "source_url": "https://phys-ege.sdamgia.ru/problem?id=3229",
+          "source_snapshot": "D:/GitHub/Prepa-GPT/.scratch/all-topics/electro/originals/3229.html",
+          "source_snapshot_sha256": "bafed0124bce9e3f18c7c02bc95312a02ba7218c05f82a41514013c2c20f715c",
+          "exam_number": 11,
+          "exam_part": 1,
+          "condition_tex": "На графике представлена зависимость от времени заряда, прошедшего по проводнику. Какова сила тока в проводнике? (В амперах.)\\par\n\n\\begin{center}\\begin{tikzpicture}[book diagram,>=stealth]\n\\draw[gray!45,thin,step=.5](0,0)grid(3.5,3);\\draw[->](0,0)--(3.8,0)node[right]{$t,\\,\\text{с}$};\\draw[->](0,0)--(0,3.2)node[above]{$q,\\,\\text{Кл}$};\\node[below left]at(0,0){$0$};\\foreach\\x in{1,...,5}\\node[below]at(\\x*.5,0){$\\x$};\\node[left]at(0,1){$0{,}1$};\\node[left]at(0,2){$0{,}2$};\\draw[thick](0,0)--(2.5,2.5);\n\\end{tikzpicture}\\end{center}\n\\par",
+          "solution_tex": "Сила тока, по определению, есть скорость протекания заряда через проводник. Из графика видно, что зависимость прошедшего по проводнику заряда от времени линейна, а значит, сила тока оставалась постоянна на протяжении всего времени наблюдения. Используя две любые удобные точки на графике, находим силу тока в проводнике: $I= \\frac{ \\Delta q}{ \\Delta t } = \\frac{ ( 0{,}2\\,\\text{Кл} - 0{,}1\\,\\text{Кл} ) }{ ( 4\\,\\text{с} - 2\\,\\text{с} ) } =0{,}05\\,\\text{А}.$\\par\nОтвет: $0{,}05$.\\par",
+          "solution_kind": "published",
+          "difficulty_rank": 2,
+          "selection_note": "Постоянный ток, наклон q(t), поток электронов, функциональные зависимости, площадь I(t), цепь с источником, зарядка конденсатора, интеграл индукционного тока, ускоренный электронный пучок.",
+          "part_evidence": "Тип 11 № 3229"
+        },
+        {
+          "id": "sdamgia-8864",
+          "source_url": "https://phys-ege.sdamgia.ru/problem?id=8864",
+          "source_snapshot": "D:/GitHub/Prepa-GPT/.scratch/all-topics/electro/originals/8864.html",
+          "source_snapshot_sha256": "0669d3d693e3365e6761ae56a0cf383779feae5963b3bf50fbe8ae0ad62702a7",
+          "exam_number": 11,
+          "exam_part": 1,
+          "condition_tex": "Через проводник постоянного сечения течет постоянный ток силой $1 \\,\\text{нА}$. Сколько электронов в среднем проходит через поперечное сечение этого проводника за $0{,}72 \\,\\text{мкс}$?\\par",
+          "solution_tex": "Сила тока показывает какой заряд $q$ проходит через поперечное сечение проводника за время $t$:\\par\n\\[I= \\frac{ q}{ t } = \\frac{ Nq_{e}}{ t } ,\\]\nгде $q_{e}$ — заряд электрона, $N$ — число электронов.\\par\nНайдем отсюда число электронов:\\par\n\\[N= \\frac{ It}{ q_{e} } = \\frac{ 1 \\cdot 10 ^{ - 9 } \\cdot 0{,}72 \\cdot 10 ^{ - 6 } }{ 1{,}6 \\cdot 10 ^{ - 19 } } =4500.\\]\nОтвет: $4500$.\\par",
+          "solution_kind": "published",
+          "difficulty_rank": 3,
+          "selection_note": "Постоянный ток, наклон q(t), поток электронов, функциональные зависимости, площадь I(t), цепь с источником, зарядка конденсатора, интеграл индукционного тока, ускоренный электронный пучок.",
+          "part_evidence": "Тип 11 № 8864"
+        },
+        {
+          "id": "sdamgia-9288",
+          "source_url": "https://phys-ege.sdamgia.ru/problem?id=9288",
+          "source_snapshot": "D:/GitHub/Prepa-GPT/.scratch/all-topics/electro/originals/9288.html",
+          "source_snapshot_sha256": "6951f55c95d4ef70203ceff44f2968953383cc8cee67de74de730cbb2fd949f2",
+          "exam_number": 11,
+          "exam_part": 1,
+          "condition_tex": "Через поперечное сечение проводников за $8 \\,\\text{с}$ прошло $10^{20}$ электронов. Какова сила тока в проводнике?\\par",
+          "solution_tex": "Сила тока определяется как отношение заряда, прошедшего через поперечное сечение проводника, ко времени, в течение которого он проходил:\\par\n\\[I= \\frac{ q}{ t } = \\frac{ 1{,}6 \\cdot 10 ^{ - 19 } \\cdot 10 ^{ 20 } }{ 8 } =2\\,\\text{А}.\\]\nОтвет: $2$.\\par",
+          "solution_kind": "published",
+          "difficulty_rank": 4,
+          "selection_note": "Постоянный ток, наклон q(t), поток электронов, функциональные зависимости, площадь I(t), цепь с источником, зарядка конденсатора, интеграл индукционного тока, ускоренный электронный пучок.",
+          "part_evidence": "Тип 11 № 9288"
+        },
+        {
+          "id": "sdamgia-4139",
+          "source_url": "https://phys-ege.sdamgia.ru/problem?id=4139",
+          "source_snapshot": "D:/GitHub/Prepa-GPT/.scratch/all-topics/electro/originals/4139.html",
+          "source_snapshot_sha256": "554b603b915657035f6529aff00515832d92bda82bfc9dd03768f1959a3aa867",
+          "exam_number": 15,
+          "exam_part": 1,
+          "condition_tex": "Восьмиклассник исследовал процесс протекания постоянного тока через проволоку и установил, что при силе тока через проволоку $0{,}25 \\,\\text{А}$ вольтметр, подсоединенный к ее концам, показывает напряжение $3{,}6 \\,\\text{В}$. Установите соответствие между зависимостями, характеризующими протекание тока через проволоку, и уравнениями, выражающими эти зависимости, приведенными ниже.\\par\n\n\\begin{center}\\begin{minipage}[t]{.47\\linewidth}\\textbf{Зависимости}\\par\\smallskip А) Зависимость работы постоянного электрического тока от времени\\par\nБ) Зависимость заряда, протекающего через проволоку, от времени\\end{minipage}\\hfill\\begin{minipage}[t]{.47\\linewidth}\\textbf{Уравнения}\\par\\smallskip $1$) $q=Ft, \\text{где}\\ F= 0{,}25 \\,\\text{Кл}/\\,\\text{с}$\\par\n$2$) $A = Ct, \\text{где}\\ C = 0{,}9 \\,\\text{Дж}/\\,\\text{с}$\\par\n$3$) $A = Dt, \\text{где}\\ D = 0{,}225 \\,\\text{Дж}/\\,\\text{с}$\\par\n$4$) $q = Gt, \\text{где}\\ G = 3{,}6 \\,\\text{Кл}/\\,\\text{с}$\\end{minipage}\\end{center}\n\\par\n\\begin{center}\\small\\setlength{\\tabcolsep}{3pt}\\begin{tabular}{|p{0.45\\linewidth}|p{0.45\\linewidth}|}\\hline\n$A$ & Б\\\\\\hline\n & \\\\\\hline\n\\end{tabular}\\end{center}\\par",
+          "solution_tex": "Работа постоянного тока равна $A=UIt=3{,}6\\,\\text{В} \\cdot 0{,}25\\,\\text{А} \\cdot t=0{,}9 \\,\\text{Вт} \\cdot t=0{,}9 \\,\\text{Дж}/\\,\\text{с} \\cdot t.$\\par\nПравильная формула указана под номером $2$.\\par\nЗависимость заряда, протекающего через проволоку, от времени: $q=It=0{,}25\\,\\text{А} \\cdot t = 0{,}25 \\,\\text{Кл}/\\,\\text{с} \\cdot t$\\par\nЭто соответствует формуле $1$.\\par\nОтвет: $21$.\\par",
+          "solution_kind": "published",
+          "difficulty_rank": 5,
+          "selection_note": "Постоянный ток, наклон q(t), поток электронов, функциональные зависимости, площадь I(t), цепь с источником, зарядка конденсатора, интеграл индукционного тока, ускоренный электронный пучок.",
+          "part_evidence": "Тип 15 № 4139"
+        },
+        {
+          "id": "sdamgia-29033",
+          "source_url": "https://phys-ege.sdamgia.ru/problem?id=29033",
+          "source_snapshot": "D:/GitHub/Prepa-GPT/.scratch/all-topics/electro/originals/29033.html",
+          "source_snapshot_sha256": "2fbda89ff53c9c940ac60ffb2f53bbc45c3c917cf13004dab35d06044ed0fd0a",
+          "exam_number": 11,
+          "exam_part": 1,
+          "condition_tex": "На графике представлена зависимость силы тока $I$ в проводнике от времени $t$. Определите заряд, прошедший через этот проводник за первые $20 \\,\\text{с}$.\\par\n(В Кл.)\\par\n\n\\begin{center}\\begin{tikzpicture}[book diagram,>=stealth]\n\\draw[gray!45,thin,xstep=1,ystep=.6](0,0)grid(4,2.4);\\draw[->](0,0)--(4.6,0)node[right]{$t,\\,\\text{с}$};\\draw[->](0,0)--(0,2.8)node[above]{$I,\\,\\text{А}$};\\node[below left]at(0,0){$0$};\\foreach\\x/\\v in{1/5,2/10,3/15,4/20}\\node[below]at(\\x,0){$\\v$};\\node[left]at(0,1.2){$1$};\\node[left]at(0,2.4){$2$};\\draw[thick](0,0)--(1,2.4)--(2,1.2)--(4,1.2);\n\\end{tikzpicture}\\end{center}\n\\par",
+          "solution_tex": "Заряд, прошедший через проводник, можно найти как площадь фигуры под графиком, которая состоит из прямоугольного треугольника, прямоугольной трапеции и прямоугольника. Тогда:\\par\n\\[q=S_{1} + S_{2} + S_{3}= \\frac{ 2 \\cdot 5}{ 2 } + \\frac{ 2 + 1}{ 2 } \\cdot 5 + 10 \\cdot 1=22{,}5\\,\\text{Кл}.\\]\nОтвет: $22{,}5$.\\par",
+          "solution_kind": "published",
+          "difficulty_rank": 6,
+          "selection_note": "Постоянный ток, наклон q(t), поток электронов, функциональные зависимости, площадь I(t), цепь с источником, зарядка конденсатора, интеграл индукционного тока, ускоренный электронный пучок.",
+          "part_evidence": "Тип 11 № 29033"
+        },
+        {
+          "id": "sdamgia-23237",
+          "source_url": "https://phys-ege.sdamgia.ru/problem?id=23237",
+          "source_snapshot": "D:/GitHub/Prepa-GPT/.scratch/all-topics/electro/originals/23237.html",
+          "source_snapshot_sha256": "bab6752e88b89c6f18feed67422c2885525973997cae4d25cb32d8c7e174eab8",
+          "exam_number": 11,
+          "exam_part": 1,
+          "condition_tex": "На рисунке изображена схема электрической цепи, состоящей из источника постоянного напряжения с ЭДС $5 \\,\\text{В}$ и пренебрежимо малым внутренним сопротивлением, ключа, резистора с сопротивлением $2 \\,\\text{Ом}$ и соединительных проводов. Ключ замыкают. Какой заряд протечет через резистор за $10$ минут? (В кулонах.)\\par\n\n\\begin{center}\\begin{tikzpicture}[book diagram,>=stealth]\n\\draw(0,0)--(0,2.5)--(.6,2.5);\\draw(.6,2.3)rectangle(2,2.7);\\node[below]at(1.3,2.3){$R$};\\draw(2,2.5)--(2.6,2.5)--(2.6,1.65);\\fill(2.6,1.65)circle(1.2pt);\\fill(2.6,1.15)circle(1.2pt);\\draw(2.6,1.65)--(2.28,1.25);\\node[right]at(2.7,1.4){$\\text{К}$};\\draw(2.6,1.15)--(2.6,0)--(1.4,0);\\draw(0,0)--(1.15,0);\\draw[thick](1.15,-.16)--(1.15,.16)(1.4,-.3)--(1.4,.3);\\node[below]at(1.25,-.3){$\\mathcal E$};\n\\end{tikzpicture}\\end{center}\n\\par",
+          "solution_tex": "По закону Ома для полной цепи $I= \\frac{ \\mathcal E}{ R } .$ Заряд через резистор за $10 \\,\\text{мин}$. = $600 \\,\\text{с}$ протечет $q=It= \\frac{ \\mathcal E t}{ R } = \\frac{ 5 \\cdot 600}{ 2 } =1500\\,\\text{Кл}.$\\par\nОтвет: $1500$.\\par",
+          "solution_kind": "published",
+          "difficulty_rank": 7,
+          "selection_note": "Постоянный ток, наклон q(t), поток электронов, функциональные зависимости, площадь I(t), цепь с источником, зарядка конденсатора, интеграл индукционного тока, ускоренный электронный пучок.",
+          "part_evidence": "Тип 11 № 23237"
+        },
+        {
+          "id": "sdamgia-11669",
+          "source_url": "https://phys-ege.sdamgia.ru/problem?id=11669",
+          "source_snapshot": "D:/GitHub/Prepa-GPT/.scratch/all-topics/electro/originals/11669.html",
+          "source_snapshot_sha256": "7242f534d62b8a4edaeb7b65a2bffe56fe5e8dc3d06c93640cb5e45508ff8d5c",
+          "exam_number": 11,
+          "exam_part": 1,
+          "condition_tex": "Изначально незаряженный конденсатор емкостью $0{,}5 \\,\\text{мкФ}$ заряжается в течение $10 \\,\\text{с}$ электрическим током, средняя сила которого за время зарядки равна $0{,}2 \\,\\text{мА}$. Чему будет равна энергия, запасенная в конденсаторе к моменту окончания его зарядки?\\par\n(В Джоулях.)\\par",
+          "solution_tex": "Заряд, накопленный на конденсаторе, равен: $q = It = 0{,}2 \\cdot 10 ^{ - 3 } \\,\\text{А} \\cdot 10\\,\\text{с} = 2 \\cdot 10 ^{ - 3 } \\,\\text{Кл}.$ Энергия, запасенная в конденсаторе, вычисляется по формуле: $W = \\frac{ q ^2 }{ 2C } = \\frac{ 4 \\cdot 10 ^{ - 6 } \\,\\text{Кл} ^2 }{ 2 \\cdot 0{,}5 \\cdot 10 ^{ - 6 } \\,\\text{Ф} } = 4\\,\\text{Дж}.$\\par\nОтвет: $4$.\\par",
+          "solution_kind": "published",
+          "difficulty_rank": 8,
+          "selection_note": "Постоянный ток, наклон q(t), поток электронов, функциональные зависимости, площадь I(t), цепь с источником, зарядка конденсатора, интеграл индукционного тока, ускоренный электронный пучок.",
+          "part_evidence": "Тип Д11 B11 № 11669"
+        },
+        {
+          "id": "sdamgia-10187",
+          "source_url": "https://phys-ege.sdamgia.ru/problem?id=10187",
+          "source_snapshot": "D:/GitHub/Prepa-GPT/.scratch/all-topics/electro/originals/10187.html",
+          "source_snapshot_sha256": "a463515b4ee9cf7cb350bfb7808e281c17b10d2263f09017f7b91db7a1f132a8",
+          "exam_number": 12,
+          "exam_part": 1,
+          "condition_tex": "Поток вектора магнитной индукции через некоторый проводящий контур изменяется от $10 \\,\\text{мкВб}$ до $30 \\,\\text{мкВб}$. Сопротивление контура $5 \\,\\text{Ом}$. Найдите модуль электрического заряда, который при этом протекает через контур. (В мкКл.)\\par",
+          "solution_tex": "При изменении магнитного потока в контуре возникает ЭДС индукции:\\par\n\\[\\mathcal E=\\lvert \\frac{ \\Delta\\Phi }{ \\Delta t } |.\\]\nПод действием этой ЭДС возникает ток, равный, согласно закону Ома для полной цепи, $I= \\frac{ \\mathcal E}{ R } .$\\par\nС другой стороны, сила тока есть отношение заряда, прошедшего за единицу времени: $I= \\frac{ \\Delta q}{ \\Delta t } .$\\par\nОбъединяя все уравнения, получим выражения для электрического заряда в контуре:\\par\n\\[\\Delta q= \\frac{ |\\Delta \\Phi|}{ R } =4\\,\\text{мкКл}.\\]\nОтвет: $4$.\\par",
+          "solution_kind": "published",
+          "difficulty_rank": 9,
+          "selection_note": "Постоянный ток, наклон q(t), поток электронов, функциональные зависимости, площадь I(t), цепь с источником, зарядка конденсатора, интеграл индукционного тока, ускоренный электронный пучок.",
+          "part_evidence": "Тип 12 № 10187"
+        },
+        {
+          "id": "sdamgia-6931",
+          "source_url": "https://phys-ege.sdamgia.ru/problem?id=6931",
+          "source_snapshot": "D:/GitHub/Prepa-GPT/.scratch/all-topics/electro/originals/6931.html",
+          "source_snapshot_sha256": "4eafd9e939ec585b4192bd453ae93ab630960506085c36a56f1c84efc754c127",
+          "exam_number": 15,
+          "exam_part": 1,
+          "condition_tex": "Пучок медленных электронов массой $m$ с зарядом $e$ разгоняется в электронно-лучевой трубке, проходя большую ускоряющую разность потенциалов $U$. Концентрация электронов в пучке после ускорения равна $n$, площадь поперечного сечения пучка $S$. Установите соответствие между физическими величинами и формулами, по которым их можно определить.\\par\n\n\\begin{center}\\begin{minipage}[t]{.47\\linewidth}\\textbf{Физическая Величина}\\par\\smallskip А) скорость электронов в пучке после ускорения\\par\nБ) сила тока в пучке после ускорения\\end{minipage}\\hfill\\begin{minipage}[t]{.47\\linewidth}\\textbf{Формула}\\par\\smallskip $1$) $\\sqrt{\\frac{ eU}{ 2m }}$\\par\n$2$) $\\sqrt{\\frac{ 2eU}{ m }}$\\par\n$3$) $enS \\sqrt{\\frac{ 2eU}{ m }}$\\par\n$4$) $enS \\sqrt{\\frac{ eU}{ 2m }}$\\end{minipage}\\end{center}\n\\par\n\\begin{center}\\small\\setlength{\\tabcolsep}{3pt}\\begin{tabular}{|p{0.45\\linewidth}|p{0.45\\linewidth}|}\\hline\nА & Б\\\\\\hline\n & \\\\\\hline\n\\end{tabular}\\end{center}\\par",
+          "solution_tex": "При ускорении в электрическом поле электроны приобретают энергию $eU.$ Таким образом, приравнивая кинетическую энергию электронов и энергию, полученную от поля можем найти скорость:\\par\n\\[\\frac{ m v ^2 }{ 2 } =eU.\\]\n$v = \\sqrt{\\frac{ 2eU}{ m }}$ — получили формулу под номером $2$.\\par\nСила тока может быть вычислена по формуле: $I= \\frac{ \\Delta q}{ \\Delta t } .$ Учтем, что $\\Delta q=eN=eS\\Delta ln,$ где $N$ — число частиц, $\\Delta l$ — малое перемещение электронов за малый интервал времени.\\par\nТогда: $I= \\frac{ eSn\\Delta l}{ \\Delta t } =enS v =enS \\sqrt{\\frac{ 2eU}{ m }}$ — получили формулу под номером $3$.\\par\nОтвет: $23$.\\par",
+          "solution_kind": "published",
+          "difficulty_rank": 10,
+          "selection_note": "Постоянный ток, наклон q(t), поток электронов, функциональные зависимости, площадь I(t), цепь с источником, зарядка конденсатора, интеграл индукционного тока, ускоренный электронный пучок.",
+          "part_evidence": "Тип 15 № 6931"
+        }
+      ]
+    }
+  ]
+}

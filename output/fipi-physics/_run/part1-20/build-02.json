@@ -1,0 +1,18 @@
+[
+  {
+    "document": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\student\\task-02.tex",
+    "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\student\\task-02.pdf",
+    "pages": 2,
+    "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\previews\\student-02",
+    "recipe": "Tectonic (project)",
+    "overflow": []
+  },
+  {
+    "document": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\tutor\\task-02.tex",
+    "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\tutor\\task-02.pdf",
+    "pages": 4,
+    "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\previews\\tutor-02",
+    "recipe": "Tectonic (project)",
+    "overflow": []
+  }
+]

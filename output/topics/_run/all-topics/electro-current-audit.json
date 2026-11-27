@@ -1,0 +1,15 @@
+{
+  "batch": "electro-current",
+  "bundle_sha256": "4ae2419feb6bacbbadf0e3e4537a199a66b50b19bbacbf0a07b3554ab5307adc",
+  "topics": [
+    "3.8.3"
+  ],
+  "tasks": 10,
+  "pages": 6,
+  "baseline_preserved": 107,
+  "files": {
+    "task-3-8-3.tex": "bf42dd99250b33f5c9793dc8e0f83e1eb88addfb17506ac87bef8349113811b7",
+    "tutor-3-8-3.tex": "e2f0e52fc5fa96cc7ac6d91cc6f0bb3bed6cf04beabc916d67b73112e9321141"
+  },
+  "editor_open_checked": false
+}

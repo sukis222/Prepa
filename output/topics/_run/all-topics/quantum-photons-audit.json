@@ -1,0 +1,21 @@
+{
+  "batch": "quantum-photons",
+  "bundle_sha256": "3203950d2ff9bb913654fff83cb35ee832258c259d422839810ca7e78b3cdb0a",
+  "topics": [
+    "6.2.1",
+    "6.2.2",
+    "6.2.3"
+  ],
+  "tasks": 30,
+  "pages": 14,
+  "baseline_preserved": 107,
+  "files": {
+    "task-6-2-1.tex": "daf51827c763d988e89611f7ed57f5183dd6bc5b2c05c91f905346d3b0823fb7",
+    "tutor-6-2-1.tex": "c22c7131f483088a804cd088d7f9ebffe0c1bb02f91a1daa20b9f8320b457c01",
+    "task-6-2-2.tex": "f0ecc8ade2faf1c3676378c7ba368ef5a01546a89d3fe9bbe197d8080d3eccd2",
+    "tutor-6-2-2.tex": "9b3f3b252b934c20adfb10bfc7bbd82ce9713bd9a35154e458ec37ef5c551c32",
+    "task-6-2-3.tex": "85677869a298a9344c3b901fdd05cb9c7cd086917a1708856a4afd1d46d5bf49",
+    "tutor-6-2-3.tex": "bfb3ca3c3bed31311479691ad9b10c26945b532fde524b788f33b983c7c2be57"
+  },
+  "editor_open_checked": false
+}

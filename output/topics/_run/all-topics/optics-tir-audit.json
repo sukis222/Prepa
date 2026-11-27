@@ -1,0 +1,15 @@
+{
+  "batch": "optics-tir",
+  "bundle_sha256": "c34e831b2ff60cdcd7b627e2031af1944da71f89a9b907a400db11cda369df5a",
+  "topics": [
+    "4.3.4"
+  ],
+  "tasks": 10,
+  "pages": 6,
+  "baseline_preserved": 107,
+  "files": {
+    "task-4-3-4.tex": "7283a6d73967b226d6d536f00c31fa483dedd3875e88637208d49eb6782bc07b",
+    "tutor-4-3-4.tex": "b7ee7fd46519c5cfa177a3552e48597886f3011c02aa26c74653b6f037fdc0f2"
+  },
+  "editor_open_checked": false
+}

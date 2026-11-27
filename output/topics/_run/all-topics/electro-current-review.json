@@ -1,0 +1,65 @@
+{
+  "approved": true,
+  "reviewed_sha256": "4ae2419feb6bacbbadf0e3e4537a199a66b50b19bbacbf0a07b3554ab5307adc",
+  "reviewer": "root",
+  "scope": "Every condition and published solution read independently; physical models, formulas, arithmetic and units checked. Original diagrams/graphs inspected and compared with TikZ. Final page layout is covered by the separate visual report.",
+  "closed_issues": [
+    "Coulomb products q_1 q_2 and lamp products U_2 I_1 restored",
+    "Unit symbols and work A distinguished",
+    "Preposition in electron-beam condition restored",
+    "Original meter pointers restored",
+    "Duplicate parentheses removed"
+  ],
+  "tasks": [
+    {
+      "topic": "3.8.3",
+      "id": "sdamgia-3227",
+      "approved": true
+    },
+    {
+      "topic": "3.8.3",
+      "id": "sdamgia-3229",
+      "approved": true
+    },
+    {
+      "topic": "3.8.3",
+      "id": "sdamgia-8864",
+      "approved": true
+    },
+    {
+      "topic": "3.8.3",
+      "id": "sdamgia-9288",
+      "approved": true
+    },
+    {
+      "topic": "3.8.3",
+      "id": "sdamgia-4139",
+      "approved": true
+    },
+    {
+      "topic": "3.8.3",
+      "id": "sdamgia-29033",
+      "approved": true
+    },
+    {
+      "topic": "3.8.3",
+      "id": "sdamgia-23237",
+      "approved": true
+    },
+    {
+      "topic": "3.8.3",
+      "id": "sdamgia-11669",
+      "approved": true
+    },
+    {
+      "topic": "3.8.3",
+      "id": "sdamgia-10187",
+      "approved": true
+    },
+    {
+      "topic": "3.8.3",
+      "id": "sdamgia-6931",
+      "approved": true
+    }
+  ]
+}

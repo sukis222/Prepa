@@ -1,0 +1,132 @@
+% !TEX root = task-6-1-2.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{6.1.2}{Вольт-амперная характеристика фотоэффекта}
+
+
+% Source sdamgia-3641: https://phys-ege.sdamgia.ru/problem?id=3641
+\BankTask{sdamgia-3641}{
+\begin{center}\begin{tikzpicture}[book diagram,>=stealth]\begin{scope}[scale=.6]\draw[task grid,step=1](-5,0)grid(7,7);\draw[task axis,->](-5,0)--(7,0)node[right]{$U,\,\text{В}$};\draw[task axis,->](0,0)--(0,7)node[above]{$I,\,\text{мА}$};\draw[task curve](-4,0)..controls(-2,0)and(-.3,1.2)..(0,3)..controls(.5,5.2)and(3,5.5)..(5.7,5.5);\foreach\x in{-4,-3,...,5}{\fill(\x,0)circle(1.5pt);\node[below]at(\x,0){$\x$};}\foreach\y in{1,2,...,5}{\fill(0,\y)circle(1.5pt);\node[left]at(0,\y){$\y$};}\end{scope}\end{tikzpicture}\end{center}
+В опыте по изучению фотоэффекта одну из пластин плоского конденсатора облучают светом с энергией фотона $6\,\text{эВ}$. Напряжение между пластинами изменяют с помощью реостата, силу фототока в цепи измеряют амперметром. На графике приведена зависимость фототока I от напряжения U между пластинами. Какова работа выхода электрона с поверхности металла, из которого сделаны пластины конденсатора? (в электрон-вольтах.)
+}{
+\smallskip\noindent\textbf{Решение}\par
+Из графика видно, что фототок пропадает, если подать на пластины конденсатора обратное напряжение в $4\,\text{В}$. Это так называемое запирающее напряжение, когда все вылетающие фотоэлектроны, не успев долететь до противоположной пластины, возвращаются назад под действием электрического поля пластин. Согласно уравнению фотоэффекта Эйнштейна, энергия фотонов связана с работой выхода и запирающим напряжением соотношением: $E_{\,\text{фот}}=A_{\,\text{вых}} + eU.$ Следовательно, работа выхода для пластины конденсатора равна: 
+
+\[A_{\,\text{вых}}=E_{\,\text{фот}} - eU=6\,\text{эВ} - 4\,\text{эВ}=2\,\text{эВ}.\]
+
+Ответ: $2$.
+}
+
+% Source sdamgia-6159: https://phys-ege.sdamgia.ru/problem?id=6159
+\BankTask{sdamgia-6159}{
+\begin{center}\begin{tikzpicture}[book diagram,>=stealth]\draw[task axis,->](-.2,0)--(3.8,0)node[right]{$U,\,\text{В}$};\draw[task axis,->](0,-.2)--(0,2.5)node[above]{$I,\,\text{мА}$};\node[below left]at(0,0){$0$};\draw[task curve](0,2.2)..controls(.2,1.1)and(.9,.25)..(2,0);\foreach\x in{1,2}{\fill(\x,0)circle(1.4pt);\node[below]at(\x,0){$\x$};}\end{tikzpicture}\end{center}
+Работа выхода для некоторого металла равна $3\,\text{эВ}$. На пластинку из этого металла падает свет. На рисунке показана зависимость силы I фототока от приложенного обратного напряжения U. Какова энергия фотона светового излучения, падающего на эту пластинку? (в электрон-вольтах.)
+}{
+\smallskip\noindent\textbf{Решение}\par
+При вылете фотоэлектрона часть энергии фотона затрачивается на преодоление работы выхода металла, а оставшаяся часть уходит на увеличение кинетической энергии электрона $h\nu=A_{\,\text{вых}} + E_{\,\text{кин}}.$ При увеличении запирающего напряжения фототок будет уменьшаться, в связи с тем, что кинетической энергии электронов не будет хватать для преодоления электрического поля. Фототок исчезнет, когда потенциальная энергия электронов в электрическом поле станет равной их кинетической энергии $E_{\,\text{кин}}=Ue.$ Из рисунка видим, что фототок исчезает при напряжении $2\,\text{В}$. Следовательно, максимальная энергия фотоэлектронов $2\,\text{эВ}$. Значит, энергия фотона светового излучения равна $2$ + $3$  =  $5\,\text{эВ}$.
+
+Ответ: $5$.
+}
+
+% Source sdamgia-7933: https://phys-ege.sdamgia.ru/problem?id=7933
+\BankTask{sdamgia-7933}{
+В опыте по изучению фотоэффекта катод освещается желтым светом, в результате чего в цепи возникает ток (см. рис. $1$). Зависимость показаний амперметра I от напряжения U между анодом и катодом приведена на втором рисунке. Используя законы фотоэффекта и предполагая, что отношение числа фотоэлектронов к числу поглощенных фотонов не зависит от частоты света, объясните, как изменится представленная зависимость I(U), если освещать катод зеленым светом, оставив мощность поглощенного катодом света неизменной. 
+
+\begin{center}\begin{tikzpicture}[book diagram,>=stealth]\draw(0,1.4)ellipse(1.4 and .8);\draw(-1.1,.9)--(-1.1,1.9) (1.1,.9)--(1.1,1.9);\draw(-1.1,1.4)--(-2,1.4)--(-2,-1)--(-1.2,-1);\draw(-.9,-1)circle(.3)node{$A$};\draw(-.6,-1)--(.8,-1) (1,-1)--(2,-1)--(2,1.4)--(1.1,1.4);\draw[thick](.8,-1.15)--(.8,-.85) (1,-1.3)--(1,-.7);\node[below]at(.9,-1.35){$\mathcal E$};\foreach\y in{1.2,1.55,1.9}{\draw[->]({-.3+2*(\y-1.2)},2.5)--(-1.1,\y);}\node[above]at(.4,2.5){свет};\end{tikzpicture}\end{center}
+
+Рис. $1$
+
+\begin{center}\begin{tikzpicture}[book diagram,>=stealth]\draw[task axis,->](-1.4,0)--(3.8,0)node[right]{$U$};\draw[task axis,->](0,-.2)--(0,2.5)node[above]{$I$};\node[below left]at(0,0){$0$};\draw[task curve]( -1,0)..controls(0,0)and(.15,.35)..(.6,1.2)..controls(1.05,2.05)and(1.65,2)..(2,2)--(3.2,2);\draw[task projection](0,2)--(2,2);\node[below]at(-1,0){$U_{\text{з}}$};\node[left]at(0,2){$I_{\text{нас}}$};\end{tikzpicture}\end{center}
+
+Рис. $2$
+}{
+\smallskip\noindent\textbf{Решение}\par
+$1$.  При изменении света с желтого на зеленый его длина волны уменьшится, частота увеличится ($\nu_{\,\text{з}}$ > $\nu_{\,\text{ж}}$). 
+$2$.  Работа выхода электронов из материала не зависит от частоты падающего света, поэтому в соответствии с уравнением Эйнштейна для фотоэффекта: $h\nu$ = $A_{\,\text{вых}}$ + $E_{max}$  — увеличится максимальная кинетическая энергия фотоэлектронов $E_{max}$. Так как $E_{\max}=e|U_{\,\text{з}}|,$ то увеличится и модуль запирающего напряжения $U_{\,\text{з}}$. 
+$3$.  Мощность поглощенного света связана с частотой волны $\nu$ соотношением P  =  $N_{\varphi }$$E_{\varphi }$  =  $N_{\varphi }$h$\nu$, где $N_{\varphi }$  — число фотонов, падающих на катод за $1\,\text{с}$, $E_{\varphi }$= h$\nu$ — энергия одного фотона (соотношение Планка). Так как мощность света не изменилась, а энергия фотонов $E_{\varphi }$ увеличилась, то уменьшится число фотонов, падающих на катод за $1\,\text{с}$.
+$4$.  Сила тока насыщения $I_{\,\text{нас}}$ определяется числом выбитых светом за $1\,\text{с}$ электронов $N_{e}$, которое пропорционально числу падающих на катод за $1\,\text{с}$ фотонов, поэтому сила тока насыщения уменьшится. 
+
+Ответ: точка отрыва графика от горизонтальной оси U сдвинется влево, горизонтальная асимптота графика $I_{\,\text{нас}}$ сдвинется вниз.
+}
+
+% Source sdamgia-9331: https://phys-ege.sdamgia.ru/problem?id=9331
+\BankTask{sdamgia-9331}{
+\begin{center}\begin{tikzpicture}[book diagram,>=stealth]\draw[task axis,->](-1.4,0)--(3.8,0)node[right]{$U,\,\text{В}$};\draw[task axis,->](0,-.2)--(0,2.5)node[above]{$I,\,\text{мА}$};\node[below left]at(0,0){$0$};\draw[task curve]( -1,0)..controls(0,0)and(.15,.35)..(.6,1.2)..controls(1.05,2.05)and(1.65,2)..(2,2)--(3.2,2);\draw[task projection](0,2)--(2,2);\foreach\x in{-1,1,2,3}{\draw(\x,.05)--(\x,-.05);\node[below]at(\x,0){$\x$};}\foreach\y in{1,2}{\draw(-.05,\y)--(.05,\y);\node[left]at(0,\y){$\y$};}\end{tikzpicture}\end{center}
+В опыте по изучению фотоэффекта свет частотой $\nu$ = $6{,}1$ · $10^{14}$ Гц падает на поверхность катода, в результате чего в цепи возникает ток. График зависимости силы тока I от напряжения U между анодом и катодом приведен на рисунке. Какова мощность падающего света P, если в среднем один из $20$ фотонов, падающих на катод, выбивает электрон?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Из графика находим величину тока насыщения, которая равна $2$ мА. Ток насыщения соответствует максимальному потоку электронов, которое способно выбивать в единицу времени излучение мощностью $P.$
+По определению, сила тока  — это количество заряда, прошедшего за единицу времени:
+
+\[I= \frac{q}{t} = \frac{N_e |e|}{t} .\]
+
+Мощность светового потока  — это энергия, которую несут фотоны за единицу времени:
+
+\[P= \frac{W}{t} = \frac{N_{\,\text{ф}} h\nu}{t} .\]
+
+Учтем, что один электрон выбивается каждые $20$ фотонов, то есть $N_{\,\text{ф}}=20N_e:$
+
+\[P= \frac{20N_e h\nu}{t} = \frac{20I_{\,\text{н}}h\nu}{|e|} = \frac{20 \cdot 2 \cdot 10 ^{ - 3 } \cdot 6{,}6 \cdot 10 ^{ - 34 } \cdot 6{,}1 \cdot 10 ^{ 14 }}{1{,}6 \cdot 10 ^{ - 19 }} \approx0{,}1\,\text{Вт}.\]
+
+Ответ: $0{,}1$ Вт
+}
+
+% Source sdamgia-30003: https://phys-ege.sdamgia.ru/problem?id=30003
+\BankTask{sdamgia-30003}{
+\begin{center}\begin{tikzpicture}[book diagram,>=stealth]\draw[task axis,->](-1.4,0)--(3.8,0)node[right]{$U,\,\text{В}$};\draw[task axis,->](0,-.2)--(0,2.5)node[above]{$I,\,\text{мА}$};\node[below left]at(0,0){$0$};\draw[task curve]( -1,0)..controls(0,0)and(.15,.35)..(.6,1.2)..controls(1.05,2.05)and(1.65,2)..(2,2)--(3.2,2);\draw[task projection](0,2)--(2,2);\foreach\x in{-1,1,2,3}{\draw(\x,.05)--(\x,-.05);\node[below]at(\x,0){$\x$};}\foreach\y in{1,2}{\draw(-.05,\y)--(.05,\y);\node[left]at(0,\y){$\y$};}\end{tikzpicture}\end{center}
+В опыте по изучению фотоэффекта монохроматическое излучение мощностью P  =  $0{,}21$ Вт падает на поверхность катода, в результате чего в цепи возникает ток. График зависимости силы тока I от напряжения U между анодом и катодом приведен на рисунке. Какова частота $\nu$ падающего света, если в среднем один из $30$ фотонов, падающих на катод, выбивает электрон?
+}{
+\smallskip\noindent\textbf{Решение}\par
+$1$.  По определению силы тока $I= \frac{q}{t} ,$ где q  — заряд, прошедший через поперечное сечение проводника за время t. 
+$2$.  Когда ток в цепи достигает насыщения, все фотоэлектроны, выбитые из катода, достигают анода. Тогда за время t через поперечное сечение проводника проходит заряд $q=N_e e t,$ где e  — модуль заряда электрона, $N_{e}$  — количество фотоэлектронов, выбитых из катода за $1$ c. Так как $N_e= \frac{1}{30} N_{\,\text{Ф}},$ (где $N_{\,\text{Ф}}$ количество фотонов, падающих на катод зa $1$ c), то 
+
+\[I_{\max} = \frac{1}{30} N_\Phi e.\]
+
+$3$.  Так как энергия фотона $E_ \varphi =h \nu ,$ то мощность излучения 
+
+\[P= \frac{W}{t} =N_\Phi h\nu= \frac{30 I_{\max} h \nu}{e} .\]
+
+$4$.  Окончательно получим: $\nu= \frac{P e}{30 I_{\max} h} .$ Согласно приведенному графику сила тока насыщения $I_{\max} =2 \,\text{мА} ,$ тогда 
+
+\[\nu= \frac{0{,}21 \cdot 1{,}6 \cdot 10 ^{ - 19 }}{30 \cdot 0{,}002 \cdot 6{,}6 \cdot 10 ^{ - 34 }} \approx 8{,}5 \cdot 10 ^{ 14 } \,\text{Гц}.\]
+
+Ответ: $\nu \approx 8{,}5 \cdot 10 ^{ 14 } \,\text{Гц}.$
+}
+
+\end{document}

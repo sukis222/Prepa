@@ -1,0 +1,81 @@
+% !TEX root = task-4-12-3.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{4.12.3}{Дифракционная решётка}
+
+
+% Source 43126: https://phys-ege.sdamgia.ru/problem?id=43126
+\BankTask{43126}{
+К решетке вплотную поставили линзу, которая собирает лучи в одной точке на экране. Линза расположена между решеткой и экраном. Расстояние от линзы до экрана $2\,\text{м}$. Ширина спектра второго порядка $8\,\text{см}$. Длина волны красного света $8$ · $10^{-7}$ и фиолетового света $4$ · $10^{-7}$ м. Найдите, сколько штрихов приходится на $1\,\text{см}$ решетки. $\sin \varphi \approx \tan \varphi \approx \varphi.$
+}{
+\smallskip\noindent\textbf{Решение}\par
+Условие дифракционного максимума $d \sin \varphi =k\lambda,$ где для малых углов $\sin \varphi \approx \tan \varphi = \frac{b}{L} .$
+Тогда для максимума фиолетового и красного света получаем
+
+$\frac{db_1}{L} =k\lambda_1$
+$\frac{db_2}{L} =k\lambda_2.$
+
+Откуда находим период решетки:
+
+\[d= \frac{Lk ( \lambda_1 - \lambda_2 )}{\Delta b} = \frac{2 \cdot 2 \cdot ( 8 \cdot 10 ^{ - 7 } - 4 \cdot 10 ^{ - 7 } )}{8 \cdot 10 ^{ - 2 }} =2 \cdot 10 ^{ - 5 } \,\text{м}=2 \cdot 10 ^{ - 3 } \,\text{см}.\]
+
+Тогда на $1\,\text{см}$ приходится количество штрихов:
+
+\[N= \frac{1\,\text{см}}{d} = \frac{1}{2 \cdot 10 ^{ - 3 }} =500.\]
+
+Ответ: $500$.
+}
+
+% Source 9333: https://phys-ege.sdamgia.ru/problem?id=9333
+\BankTask{9333}{
+Плоская монохроматическая световая волна с частотой $8{,}0$ · $10^{14}$ Гц падает по нормали на дифракционную решетку. Параллельно решетке позади нее размещена собирающая линза с фокусным расстоянием $21\,\text{см}$. Дифракционная картина наблюдается на экране в задней фокальной плоскости линзы. Расстояние между ее главными максимумами $1$-го и $2$-го порядков равно $18\,\text{мм}$. Найдите период решетки. Ответ выразите в микрометрах (мкм), округлив до десятых. Считать для малых углов ($\varphi \ll 1$ в радианах) $\tan \varphi \approx \sin \varphi \approx \varphi.$
+}{
+\smallskip\noindent\textbf{Решение}\par
+Запишем условия максимума для $1$-го и $2$-го порядков:
+
+\[\begin{cases}d\sin\varphi_1=\lambda,\\d\sin\varphi_2=2\lambda.\end{cases}\quad\Longleftrightarrow\quad\begin{cases}\tan\varphi_1\approx\sin\varphi_1=\frac{\lambda}{d}=\frac{c}{\nu d},\\\tan\varphi_2\approx\sin\varphi_2=\frac{2\lambda}{d}=\frac{2c}{\nu d}.\end{cases}\]
+
+На экране максимумы смещены на расстояния $x_1=f \tan \varphi_1$ и $x_2=f \tan \varphi_2$ от центрального максимума, где f  — фокусное расстояние линзы. По условию $x_2 - x_1=\Delta x = 18\,\text{мм}.$ Из чего получаем
+
+\[\frac{2fc}{\nu d} - \frac{fc}{\nu d} =\Delta x \Longleftrightarrow d= \frac{fc}{\nu \Delta x} = \frac{0{,}21 \cdot 3 \cdot 10 ^{8}}{8{,}0 \cdot 10 ^{ 14 } \cdot 18 \cdot 10 ^{ - 3 }} \approx 4{,}4 \cdot 10 ^{ - 6 } \,\text{м} = 4{,}4\,\text{мкм}.\]
+
+Ответ: $4{,}4$
+}
+
+\end{document}

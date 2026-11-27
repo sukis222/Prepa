@@ -1,0 +1,67 @@
+{
+  "approved": true,
+  "reviewed_sha256": "f31131642fa7dc92ee58e028e1e9c19f8133f237bf94214d9a829189ce7d5447",
+  "tasks": [
+    {
+      "id": "sdamgia-8008",
+      "approved": true,
+      "reason": "All conditions, source published equations, arithmetic, force directions and units independently verified."
+    },
+    {
+      "id": "sdamgia-28084",
+      "approved": true,
+      "reason": "All conditions, source published equations, arithmetic, force directions and units independently verified."
+    },
+    {
+      "id": "sdamgia-1331",
+      "approved": true,
+      "reason": "All conditions, source published equations, arithmetic, force directions and units independently verified."
+    },
+    {
+      "id": "sdamgia-20888",
+      "approved": true,
+      "reason": "All conditions, source published equations, arithmetic, force directions and units independently verified."
+    },
+    {
+      "id": "sdamgia-6823",
+      "approved": true,
+      "reason": "All conditions, source published equations, arithmetic, force directions and units independently verified."
+    },
+    {
+      "id": "sdamgia-7859",
+      "approved": true,
+      "reason": "All conditions, source published equations, arithmetic, force directions and units independently verified."
+    },
+    {
+      "id": "sdamgia-39257",
+      "approved": true,
+      "reason": "All conditions, source published equations, arithmetic, force directions and units independently verified."
+    },
+    {
+      "id": "sdamgia-3659",
+      "approved": true,
+      "reason": "All conditions, source published equations, arithmetic, force directions and units independently verified."
+    },
+    {
+      "id": "sdamgia-3063",
+      "approved": true,
+      "reason": "All conditions, source published equations, arithmetic, force directions and units independently verified."
+    },
+    {
+      "id": "sdamgia-31902",
+      "approved": true,
+      "reason": "All conditions, source published equations, arithmetic, force directions and units independently verified."
+    }
+  ],
+  "originals_viewed": [
+    "20888 solution",
+    "31902 solution",
+    "6823 solution",
+    "7859 condition and options",
+    "39257 condition"
+  ],
+  "resolved": [
+    "3659 positive root chosen explicitly in final expressions; source typo recorded",
+    "3659 Newton unit normalized"
+  ]
+}

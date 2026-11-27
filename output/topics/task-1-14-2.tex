@@ -1,0 +1,117 @@
+% !TEX root = task-1-14-2.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{1.14.2}{Пример вычисления силы}
+
+
+% Source sdamgia-6885: https://phys-ege.sdamgia.ru/problem?id=6885
+\BankTask{sdamgia-6885}{
+Под действием постоянной силы за $10\,\text{с}$ импульс тела, движущегося по прямой в одном направлении, изменился на $50\,\text{кг}\cdot\text{м/с}$. Чему равен модуль силы?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Второй закон Ньютона гласит, что в инерциальных системах отсчета производная импульса материальной точки по времени равна действующей на нее силе $\frac{dp}{dt}=F.$ Подставляя значения, получаем $F=\frac{50\,\text{кг}\cdot\text{м/с}}{10\,\text{с}}=5\,\text{Н}.$
+
+Ответ: $5$.
+}
+
+% Source sdamgia-7849: https://phys-ege.sdamgia.ru/problem?id=7849
+\BankTask{sdamgia-7849}{
+Тело движется по прямой в одном направлении. Под действием постоянной силы, направленной вдоль этой прямой, за $3\,\text{с}$ импульс тела увеличился от $5\,\text{кг}\cdot\text{м/с}$ до $50\,\text{кг}\cdot\text{м/с}$. Каков модуль силы?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Модуль силы равен $F=\frac{\Delta p}{\Delta t}=\frac{50\,\text{кг}\cdot\text{м/с}-5\,\text{кг}\cdot\text{м/с}}{3\,\text{с}}=15\,\text{Н}.$
+
+Ответ: $15$.
+}
+
+% Source sdamgia-11546: https://phys-ege.sdamgia.ru/problem?id=11546
+\BankTask{sdamgia-11546}{
+Под действием постоянной силы за $2\,\text{с}$ скорость тела массой $2\,\text{кг}$, движущегося по прямой в одном направлении, изменилась на $6\,\text{м/с}$. Чему равен модуль силы?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Для того чтобы выразить силу, воспользуемся следующей формулой: $\Delta p=Ft\Longleftrightarrow m\Delta v=Ft\Longleftrightarrow F=\frac{m\Delta v}{t}.$ Подставим в данную формулу имеющиеся значения: $F=\frac{2\,\text{кг}\cdot6\,\text{м/с}}{2\,\text{с}}=6\,\text{Н}.$
+
+Ответ: $6$.
+}
+
+% Source sdamgia-7615: https://phys-ege.sdamgia.ru/problem?id=7615
+\BankTask{sdamgia-7615}{
+Точечное тело движется по гладкой горизонтальной поверхности под действием постоянной горизонтальной силы, направленной вдоль оси $Ox$. Известно, что проекция импульса этого тела на указанную ось изменяется со временем по закону: $p_x=-10+4t.$ Чему равен модуль силы, действующей на это тело?
+}{
+\smallskip\noindent\textbf{Решение}\par
+В данном примере под действием силы тело движется равноускоренно. Уравнение для скорости при этом принимает вид: $V=V_0+at.$ Импульс — это произведение скорости тела на его массу. Тогда имеем: 
+
+$p_x=mV_0+mat=mV_0+F_xt.$
+
+При условии, что сила действует вдоль направления $OX$, и сравнивая полученное выражение с данным в условии, находим, что модуль силы равен $4\,\text{Н}$.
+
+Ответ: $4$.
+}
+
+% Source sdamgia-51007: https://phys-ege.sdamgia.ru/problem?id=51007
+\BankTask{sdamgia-51007}{
+Скорость тела массой $3\,\text{кг}$, движущегося вдоль оси $Ox$ в инерциальной системе отсчета, изменяется со временем в соответствии с графиком (см. рисунок). Определите равнодействующую приложенных к телу сил в момент времени $t=10\,\text{с}$. 
+
+
+\begin{center}\begin{tikzpicture}[task graph]
+\draw[gray!50] (0,0) grid[xstep=.6,ystep=.6] (1.2,2.4);
+\draw[task axis] (0,0)--(2.2,0) node[below] {$t$, с};\draw[task axis] (0,0)--(0,3) node[left] {$v_x$, м/с};
+\draw[task curve] (0,0)--(1.2,2.4);\node[below left] at (0,0) {$0$};
+\foreach \x/\v in {.6/10,1.2/20}{\node[below] at (\x,0) {$\v$};}
+\foreach \y/\v in {.6/10,1.2/20,1.8/30,2.4/40}{\node[left] at (0,\y) {$\v$};}
+\end{tikzpicture}\end{center}
+}{
+\smallskip\noindent\textbf{Решение}\par
+По второму закону Ньютона в векторном виде $F\Delta t=m(v_2-v_1),$ откуда равнодействующая сила равна
+
+$F=\frac{m(v_2-v_1)}{\Delta t}=\frac{3\cdot(20-0)}{10}=6\,\text{Н}.$
+
+Ответ: $6$.
+}
+
+
+% Source 107015: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=107015
+\BankTask{107015}{
+В инерциальной системе отсчёта тело движется по прямой в одном направлении под действием постоянной силы. За $2\,\text{с}$ импульс тела изменился на $8\,\text{кг}\cdot\text{м}/\text{с}$. Каков модуль силы? Результат выразите в $\text{Н}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$F=\Delta p/\Delta t=8/2=4\,\text{Н}$.
+}
+
+\end{document}

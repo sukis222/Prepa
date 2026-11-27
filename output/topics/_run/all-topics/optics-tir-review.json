@@ -1,0 +1,67 @@
+{
+  "approved": true,
+  "reviewed_sha256": "c34e831b2ff60cdcd7b627e2031af1944da71f89a9b907a400db11cda369df5a",
+  "scope": "All ten published conditions and solutions compared with sources-stage1.json; all five original diagrams visually inspected; independent physical and arithmetic review.",
+  "tasks": [
+    {
+      "id": "sdamgia-1924",
+      "approved": true,
+      "reason": "Condition and published reasoning/formulas/answer agree with source; physics and arithmetic correct."
+    },
+    {
+      "id": "sdamgia-3488",
+      "approved": true,
+      "reason": "Condition and published reasoning/formulas/answer agree with source; physics and arithmetic correct."
+    },
+    {
+      "id": "sdamgia-3496",
+      "approved": true,
+      "reason": "Condition and published reasoning/formulas/answer agree with source; physics and arithmetic correct."
+    },
+    {
+      "id": "sdamgia-3502",
+      "approved": true,
+      "reason": "Condition and published reasoning/formulas/answer agree with source; physics and arithmetic correct."
+    },
+    {
+      "id": "sdamgia-31414",
+      "approved": true,
+      "reason": "Condition and published solution verified; previously reported output-unit/rounding omission corrected."
+    },
+    {
+      "id": "sdamgia-8719",
+      "approved": true,
+      "reason": "Condition and published solution verified; previously reported output-unit/rounding omission corrected."
+    },
+    {
+      "id": "sdamgia-3156",
+      "approved": true,
+      "reason": "Condition and published reasoning/formulas/answer agree with source; physics and arithmetic correct."
+    },
+    {
+      "id": "sdamgia-3022",
+      "approved": true,
+      "reason": "Condition and published reasoning/formulas/answer agree with source; physics and arithmetic correct."
+    },
+    {
+      "id": "sdamgia-3049",
+      "approved": true,
+      "reason": "Condition and published reasoning/formulas/answer agree with source; physics and arithmetic correct."
+    },
+    {
+      "id": "sdamgia-52052",
+      "approved": true,
+      "reason": "Condition and published reasoning/formulas/answer agree with source; physics and arithmetic correct."
+    }
+  ],
+  "diagram_review": {
+    "3488/3496": "Normal, incident ray and grazing refracted ray retained; branding removed.",
+    "3022": "A/B/C, vertical ray, limiting ray and reflected ray preserved. Radius formula3/sqrt(1.33^2-1)=3.42m correct.",
+    "3049": "AK is slanted distance, not horizontal radius; 2*1.33/sqrt(1.33^2-1)=3.03m correct.",
+    "52052": "Vertical minimum-time and grazing maximum-time rays retained.50*1.5/sqrt(1.5^2-1)=67.08ns correct."
+  },
+  "resolved_issues": [
+    "31414 required km/s retained in question",
+    "8719 rounding to hundredths restored"
+  ]
+}

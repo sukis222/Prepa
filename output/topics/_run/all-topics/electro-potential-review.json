@@ -1,0 +1,66 @@
+{
+  "approved": true,
+  "reviewed_sha256": "13af544d7f786464184f4c034b14a95562b9d7956d15b5519b187cf34cac007a",
+  "scope": "All11 conditions and published solutions independently read and checked: potential differences/signs, isolated capacitor, charged sphere, work-energy, transverse motion, elastic suspension and ion acceleration. All6 original diagrams inspected and compared with TikZ. Numerical results and units recomputed.",
+  "closed_issues": [
+    "8876 charge unit included in math",
+    "6359 unambiguous radius-symbol typo corrected with audit"
+  ],
+  "tasks": [
+    {
+      "topic": "3.4",
+      "id": "sdamgia-1306",
+      "approved": true
+    },
+    {
+      "topic": "3.4",
+      "id": "sdamgia-1429",
+      "approved": true
+    },
+    {
+      "topic": "3.4",
+      "id": "sdamgia-10644",
+      "approved": true
+    },
+    {
+      "topic": "3.4",
+      "id": "sdamgia-4104",
+      "approved": true
+    },
+    {
+      "topic": "3.4",
+      "id": "sdamgia-9029",
+      "approved": true
+    },
+    {
+      "topic": "3.4",
+      "id": "sdamgia-10474",
+      "approved": true
+    },
+    {
+      "topic": "3.4",
+      "id": "sdamgia-6359",
+      "approved": true
+    },
+    {
+      "topic": "3.4",
+      "id": "sdamgia-8876",
+      "approved": true
+    },
+    {
+      "topic": "3.4",
+      "id": "sdamgia-2990",
+      "approved": true
+    },
+    {
+      "topic": "3.4",
+      "id": "sdamgia-2993",
+      "approved": true
+    },
+    {
+      "topic": "3.4",
+      "id": "sdamgia-4511",
+      "approved": true
+    }
+  ]
+}

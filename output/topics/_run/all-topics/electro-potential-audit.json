@@ -1,0 +1,15 @@
+{
+  "batch": "electro-potential",
+  "bundle_sha256": "13af544d7f786464184f4c034b14a95562b9d7956d15b5519b187cf34cac007a",
+  "topics": [
+    "3.4"
+  ],
+  "tasks": 11,
+  "pages": 11,
+  "baseline_preserved": 107,
+  "files": {
+    "task-3-4.tex": "dd7e93acf256944092d5c00456de7fcbfbea2fb2fd0378f0a4db6e6772961f0c",
+    "tutor-3-4.tex": "27e76fcbcd5ba0c2e483a046178badd35dabf7baad159d7d6093257704be8483"
+  },
+  "editor_open_checked": false
+}

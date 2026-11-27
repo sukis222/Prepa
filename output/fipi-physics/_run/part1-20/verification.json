@@ -1,0 +1,522 @@
+{
+  "exam_year": 2027,
+  "exam_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "tasks": 400,
+  "per_number": 20,
+  "unique_source_ids_case_insensitive": 400,
+  "source": "FIPI",
+  "all_solutions_generated_and_marked": true,
+  "independent_physics_and_source_reviews": true,
+  "repeated_export_tex_identical": true,
+  "new_pdfs_published": false,
+  "all_pdf_pages_visually_reviewed": 317,
+  "recipe": "Tectonic (project), exact .vscode/settings.json arguments",
+  "editor_view_checked": false,
+  "editor_check_error": "Windows computer-use kernel failed: helper_unknown_error: setup refresh had errors",
+  "tests_passed": 847,
+  "ruff": "passed",
+  "mypy_changed_modules": "5 passed",
+  "checks": [
+    {
+      "exam_number": 1,
+      "count": 20,
+      "tex": "task-01.tex",
+      "tex_sha256": "2beb830775667759edad6ec31029a7fb4957ddc1438c916cd92b056d3bc9499d",
+      "editions": [
+        {
+          "mode": "student",
+          "pages": 6,
+          "pdf_sha256": "f5d68acb332a471b38e172574a31463593e59a7cf3c6d4381da6cb2f9b42ebbe",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 0,
+          "overflow": []
+        },
+        {
+          "mode": "tutor",
+          "pages": 7,
+          "pdf_sha256": "97a019409987ab0c5c083de36d7b110a8709c60723654c18f9d921d66e741ad0",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 20,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "exam_number": 2,
+      "count": 20,
+      "tex": "task-02.tex",
+      "tex_sha256": "e07c2b7a20321f097ee017fb0747e31eee5bbdbb78b263988fa6d41920eab738",
+      "editions": [
+        {
+          "mode": "student",
+          "pages": 2,
+          "pdf_sha256": "656442429bbcf81ad5a7c190c11ffea69f259468e6bf04cc5e4d333c51ef3270",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 0,
+          "overflow": []
+        },
+        {
+          "mode": "tutor",
+          "pages": 4,
+          "pdf_sha256": "24570c6059b1616a68fe026cdd636e35572dfa8e97335a29a8bb71cfb2e4b44c",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 20,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "exam_number": 3,
+      "count": 20,
+      "tex": "task-03.tex",
+      "tex_sha256": "7496c31b2539012e9ed581cfac57804bfb5a15afea3e7a339a3832e00c3615b3",
+      "editions": [
+        {
+          "mode": "student",
+          "pages": 2,
+          "pdf_sha256": "f2f66595224211d3f78b5d8a5361cab6d75d33b9d2a375cfcd3c78d9a8d3ca18",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 0,
+          "overflow": []
+        },
+        {
+          "mode": "tutor",
+          "pages": 3,
+          "pdf_sha256": "145768050ca4c8a886b951469acf8ef3518353e57cfe604cacf41d7df9f7fce2",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 20,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "exam_number": 4,
+      "count": 20,
+      "tex": "task-04.tex",
+      "tex_sha256": "e4a96ded050d3f7ac42c62bd4b54ecd4c2eb9bc04a15d6380a9051ac11f0119f",
+      "editions": [
+        {
+          "mode": "student",
+          "pages": 2,
+          "pdf_sha256": "7dcefd77e49302f3802a586d1449d462a84a2f1d72057fd60b5791f1894f5656",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 0,
+          "overflow": []
+        },
+        {
+          "mode": "tutor",
+          "pages": 3,
+          "pdf_sha256": "f622182d81ace14941b716dbe464f59604e7ef9d68fa44be0351f62c51f8823c",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 20,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "exam_number": 5,
+      "count": 20,
+      "tex": "task-05.tex",
+      "tex_sha256": "42f8168a1f18f307c8090c2ef778a826c8efdbc269baed968d75e171f14b7bf3",
+      "editions": [
+        {
+          "mode": "student",
+          "pages": 9,
+          "pdf_sha256": "643a446eab1db18d6639686a583bc78aa77a9b8c634894e3bd125260759a6140",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 0,
+          "overflow": []
+        },
+        {
+          "mode": "tutor",
+          "pages": 14,
+          "pdf_sha256": "ccceea963c1afc99637d93df26a6347579b089339ed7a2d6949974d5d6150d69",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 20,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "exam_number": 6,
+      "count": 20,
+      "tex": "task-06.tex",
+      "tex_sha256": "17bcf2bdce202299b3369fa2fdc380b26d3080f59892ed336ab43a634ca80a33",
+      "editions": [
+        {
+          "mode": "student",
+          "pages": 6,
+          "pdf_sha256": "c835ded1ecee103775c46af0a3da5280e6ccef96c72f0f3eb52248979977676f",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 0,
+          "overflow": []
+        },
+        {
+          "mode": "tutor",
+          "pages": 7,
+          "pdf_sha256": "0aab78528eabcf12b02b1f06bff00588f55a2c5dc12965cb1ce813e652e4c712",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 20,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "exam_number": 7,
+      "count": 20,
+      "tex": "task-07.tex",
+      "tex_sha256": "424652eb2f19527252300a80a24ee2da06a0d1722ae1b4877ba8024a8000dc80",
+      "editions": [
+        {
+          "mode": "student",
+          "pages": 3,
+          "pdf_sha256": "052c36ed61f1531ea2ca4af67f8037ace22c823255cf9848b9c2abd5898f1b75",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 0,
+          "overflow": []
+        },
+        {
+          "mode": "tutor",
+          "pages": 5,
+          "pdf_sha256": "e8f449e9b7895f9baa6d568e02eae5dd451e6c4909ec11fcbfced45f06d8612e",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 20,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "exam_number": 8,
+      "count": 20,
+      "tex": "task-08.tex",
+      "tex_sha256": "f7e381d676c114eb083411ae9d4b49cca2acbc1fa46573d05dff869745cecda9",
+      "editions": [
+        {
+          "mode": "student",
+          "pages": 3,
+          "pdf_sha256": "65ea3a7edd3426e938164bee012c92fcd6e173f292e08f2db9173602acabf482",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 0,
+          "overflow": []
+        },
+        {
+          "mode": "tutor",
+          "pages": 5,
+          "pdf_sha256": "9db042ac215f8bf6e20d2768305ef702e02f2bcbbaf3eb880ec2e12971a49775",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 20,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "exam_number": 9,
+      "count": 20,
+      "tex": "task-09.tex",
+      "tex_sha256": "1748ed9f89a3898a9aa4045fe0a705e346181a07cfeaa83f3c21d954881616a6",
+      "editions": [
+        {
+          "mode": "student",
+          "pages": 8,
+          "pdf_sha256": "5e689d9403b5c52b918db5f6324819dca0c5d3951ceaa8a90df11591787bce63",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 0,
+          "overflow": []
+        },
+        {
+          "mode": "tutor",
+          "pages": 19,
+          "pdf_sha256": "9c517d96a8972f6995e9e10d264dbe110c802bd691608ce77753644bdab0fcaa",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 20,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "exam_number": 10,
+      "count": 20,
+      "tex": "task-10.tex",
+      "tex_sha256": "e464ee3d4a1354d027a9258a6debb32b730fc79cf57c7e997bc66ade196efd09",
+      "editions": [
+        {
+          "mode": "student",
+          "pages": 9,
+          "pdf_sha256": "763ba63890f299f425e8f699752b8350b6f6d418a1e0f68882195b81c1c66d2d",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 0,
+          "overflow": []
+        },
+        {
+          "mode": "tutor",
+          "pages": 13,
+          "pdf_sha256": "92854818b4de32816ad144debaa5e242da01eb10464817576aed647789a708bc",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 20,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "exam_number": 11,
+      "count": 20,
+      "tex": "task-11.tex",
+      "tex_sha256": "1382fd2ba32c8bc8493451b3bb72a9d2096c84b9511f60d05937b12ed3120a41",
+      "editions": [
+        {
+          "mode": "student",
+          "pages": 5,
+          "pdf_sha256": "dbbb50ba1dbbb16bfdefd09689a4d326825aae2a14f376903d6acbb79a760629",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 0,
+          "overflow": []
+        },
+        {
+          "mode": "tutor",
+          "pages": 9,
+          "pdf_sha256": "0bf625f704843b930b59e0bb03c7cc7996b33dc6c78fb9eb9dde73a9b1522ded",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 20,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "exam_number": 12,
+      "count": 20,
+      "tex": "task-12.tex",
+      "tex_sha256": "6b295dc7e30a1f4b18fed7443f4cdff897c2f0ee497182422a7cc40383b62d2a",
+      "editions": [
+        {
+          "mode": "student",
+          "pages": 3,
+          "pdf_sha256": "dd917e7b3dba267aa8caa3ed03b5f58e2c038ffa50f5fafd69488eba1c05a35b",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 0,
+          "overflow": []
+        },
+        {
+          "mode": "tutor",
+          "pages": 5,
+          "pdf_sha256": "302df32b6bb08a094c2115553ff9960b854634e5c9725560d0e572d12b448afa",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 20,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "exam_number": 13,
+      "count": 20,
+      "tex": "task-13.tex",
+      "tex_sha256": "9929986a3b41972c7e37846d0d280f56824ceb5f86e7db683d4606dbc49f71c8",
+      "editions": [
+        {
+          "mode": "student",
+          "pages": 3,
+          "pdf_sha256": "7af111e0e73418dbcb94826349df7e83aa700fa90ecda67e51c8287256251ad9",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 0,
+          "overflow": []
+        },
+        {
+          "mode": "tutor",
+          "pages": 6,
+          "pdf_sha256": "f26e5b41881cd1cacf25a2d1ad169f0fc9105e7fdfe9920ce90f292532917783",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 20,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "exam_number": 14,
+      "count": 20,
+      "tex": "task-14.tex",
+      "tex_sha256": "842dc7a160b3b3f141ba9be641046ded8cc4ae5b8828804950faf9e3e14f65f5",
+      "editions": [
+        {
+          "mode": "student",
+          "pages": 12,
+          "pdf_sha256": "d5091ddb5677e36abaf4784f0c8674302c6eefae016b1bd04e57a32b20691f4f",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 0,
+          "overflow": []
+        },
+        {
+          "mode": "tutor",
+          "pages": 19,
+          "pdf_sha256": "305d715b42d044de66d4339ef9c0055ed3fd0e74b9cde7531bcdb419c4e04e5e",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 20,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "exam_number": 15,
+      "count": 20,
+      "tex": "task-15.tex",
+      "tex_sha256": "92a6854afa0819b1a6663ce581454f53f0c2de793cf20ebf3257f94a5ba4566f",
+      "editions": [
+        {
+          "mode": "student",
+          "pages": 10,
+          "pdf_sha256": "2990460f3463d6083b9673f5be58a0478b9502e7acb0445a5655c3d9c03b012e",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 0,
+          "overflow": []
+        },
+        {
+          "mode": "tutor",
+          "pages": 15,
+          "pdf_sha256": "e425f1d7d5411c0d0bbb329a24a1bffe3741dbbd19b14f79bee54075cc4e442e",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 20,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "exam_number": 16,
+      "count": 20,
+      "tex": "task-16.tex",
+      "tex_sha256": "02c160762c675eb3db8eb0bebc56c1251ee913799029e3287ec8a778674b7d12",
+      "editions": [
+        {
+          "mode": "student",
+          "pages": 3,
+          "pdf_sha256": "ff2df396a293a64fc0976b74215b1d31ae5ba546bc765159f34619e3361f9be5",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 0,
+          "overflow": []
+        },
+        {
+          "mode": "tutor",
+          "pages": 5,
+          "pdf_sha256": "9f1776d077605be23aed5635d01a94a5da633799b9479286612a92d4fa9b95ca",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 20,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "exam_number": 17,
+      "count": 20,
+      "tex": "task-17.tex",
+      "tex_sha256": "ddb01e5da40ab49fed03a1213c1de96f380d0bb4deb52dd9ca3bff4172ef689c",
+      "editions": [
+        {
+          "mode": "student",
+          "pages": 13,
+          "pdf_sha256": "a0164e9636726b7a96bf86bcda2f9c6242fa79a9d1dc85e20532bafd6d83b9fc",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 0,
+          "overflow": []
+        },
+        {
+          "mode": "tutor",
+          "pages": 17,
+          "pdf_sha256": "4de4db74efb1615af1c884b456cdb49b998a8235508750d41f5ac8e0eb02c7aa",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 20,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "exam_number": 18,
+      "count": 20,
+      "tex": "task-18.tex",
+      "tex_sha256": "cdc6e766c374cabfbe0e0e8e526f7b2c6cfc831bdbb9d74e2d0771adcb1db382",
+      "editions": [
+        {
+          "mode": "student",
+          "pages": 6,
+          "pdf_sha256": "3f999cfea953d08bfe40e9e4212e47deee8f8603a7734855cde8decd9b584258",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 0,
+          "overflow": []
+        },
+        {
+          "mode": "tutor",
+          "pages": 10,
+          "pdf_sha256": "eb71f85dc4d88c41f2c63099dbc675384caec0bfb4771b0e5ceec78ec561252e",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 20,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "exam_number": 19,
+      "count": 20,
+      "tex": "task-19.tex",
+      "tex_sha256": "3100fab7a11fc86f4827dbda637977fce045d186d83c3fc663684f54a1fc2119",
+      "editions": [
+        {
+          "mode": "student",
+          "pages": 13,
+          "pdf_sha256": "46fbef2d368eec1ceb7e7402b74253d5d2f9cc3a5630fbbd814269834a13b74e",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 0,
+          "overflow": []
+        },
+        {
+          "mode": "tutor",
+          "pages": 16,
+          "pdf_sha256": "51f4538217359909bf33880ef32a097b081cf9115b7fb344029227d597ab9abb",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 20,
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "exam_number": 20,
+      "count": 20,
+      "tex": "task-20.tex",
+      "tex_sha256": "14f23ce3c2eaa0d13f74a061a1547b7821653a7ec9254dca94a3602bb3b761dc",
+      "editions": [
+        {
+          "mode": "student",
+          "pages": 6,
+          "pdf_sha256": "88fc74d3f14f2f7dc30ef687665ee4d60d3231892b0cdc1a5d4ffad629f37b6b",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 0,
+          "overflow": []
+        },
+        {
+          "mode": "tutor",
+          "pages": 11,
+          "pdf_sha256": "5f0fb99f9fb72a5e8e34d85ad43e12bbe0fc9054503255394d03e38aeb8102b4",
+          "all_pages_visually_reviewed": true,
+          "solution_labels": 20,
+          "overflow": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,331 @@
+% !TEX root = task-6-2-1.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{6.2.1}{Энергия фотона}
+
+
+% Source sdamgia-2003: https://phys-ege.sdamgia.ru/problem?id=2003
+\BankTask{sdamgia-2003}{
+Длина волны рентгеновского излучения равна $10 ^{ - 10 } \,\text{м}.$ Во сколько раз энергия одного фотона этого излучения превосходит энергию фотона видимого света длиной волны $4 \cdot 10 ^{ - 7 } \,\text{м}$?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Энергия фотона: $E=h\nu.$ Учитывая связь $\lambda \nu =c,$ получаем выражение для энергии фотона через длину волны: $E= \frac{hc}{\lambda} .$ Таким образом, энергия рентгеновского фотона больше энергии фотона видимого света в 
+
+\[\frac{E_{\,\text{рент}}.}{E_{\,\text{вид}}. \,\text{св}.} = \frac{\lambda _{\,\text{вид}}. \,\text{св}.}{\lambda _{\,\text{рент}}.} = \frac{4 \cdot 10 ^{ - 7 }}{10 ^{ - 10 }} =4000\,\text{раз}.\]
+
+Ответ: $4000$.
+}
+
+% Source sdamgia-2016: https://phys-ege.sdamgia.ru/problem?id=2016
+\BankTask{sdamgia-2016}{
+Атом испустил фотон с энергией $6 \cdot 10 ^{ - 18 } \,\text{Дж}.$ На сколько уменьшится импульс атома? (в $10 ^{ - 26 } \,\text{кг} \cdot \,\text{м/с}.$)
+}{
+\smallskip\noindent\textbf{Решение}\par
+Энергия и импульс фотона связаны соотношением $E=pc.$ Следовательно, фотон унес импульс
+
+\[p= \frac{E}{c} = \frac{6 \cdot 10 ^{ - 18 } \,\text{Дж}}{3 \cdot 10 ^{8} \,\text{м/с}} =2 \cdot 10 ^{ - 26 } \,\text{кг} \cdot \,\text{м/с}.\]
+
+Согласно закону сохранения импульса, полный импульс системы не должен изменяться. Следовательно, импульс атома уменьшился на $2 \cdot 10 ^{ - 26 } \,\text{кг} \cdot \,\text{м/с}.$
+
+Ответ: $2$.
+}
+
+% Source sdamgia-3196: https://phys-ege.sdamgia.ru/problem?id=3196
+\BankTask{sdamgia-3196}{
+Фотон с энергией $E$ движется в вакууме. Пусть $h$ — постоянная Планка, $c$ — скорость света в вакууме. Чему равны частота и импульс фотона?
+\TaskMatchingColumns{Физическая величина}{А) Частота фотона\\Б) Импульс фотона}{Выражение для неё}{1) $hc/E$\\2) $E/c^2$\\3) $E/c$\\4) $E/h$}
+\begin{center}\begin{tabular}{|c|c|}\hline А&Б\\\hline &\\\hline\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение}\par
+Энергия фотона связана с частотой света соотношением $E=h\nu .$ Следовательно, частота фотона равна $\nu = \frac{E}{h}$ (А  — $4$). Импульс и энергия фотона связаны соотношением $E=pc.$ Таким образом, импульс фотона равен $p= \frac{E}{c}$ (Б  — $3$).
+
+Ответ: $43$.
+}
+
+% Source sdamgia-5160: https://phys-ege.sdamgia.ru/problem?id=5160
+\BankTask{sdamgia-5160}{
+Энергия фотона в рентгеновском дефектоскопе в $2$ раза больше энергии фотона в рентгеновском медицинском аппарате. Каково отношение частоты электромагнитных колебаний в первом пучке рентгеновских лучей к частоте во втором пучке?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Энергия фотона связана с частотой соотношением $E=h\nu.$ Таким образом, искомое отношение частоты электромагнитных колебаний в первом пучке рентгеновских лучей к частоте во втором пучке равно
+
+\[\frac{\nu_1}{\nu_2} = \frac{E_1}{E_2} =2.\]
+
+Ответ: $2$.
+}
+
+% Source sdamgia-5195: https://phys-ege.sdamgia.ru/problem?id=5195
+\BankTask{sdamgia-5195}{
+Модуль импульса фотона в рентгеновском дефектоскопе $2$ раза больше модуля импульса фотона в рентгеновском медицинском аппарате. Каково отношение энергии фотона в первом пучке рентгеновских лучей к энергии фотона во втором пучке?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Энергия фотона связана с импульсом соотношением $E=pc.$ Таким образом, искомое отношение энергии фотона в первом пучке рентгеновских лучей к энергии фотона во втором пучке равно
+
+\[\frac{E_1}{E_2} = \frac{p_1}{p_2} =2.\]
+
+Ответ: $2$.
+}
+
+% Source sdamgia-7361: https://phys-ege.sdamgia.ru/problem?id=7361
+\BankTask{sdamgia-7361}{
+В вакууме распространяются два параллельных пучка света. Свет первого пучка характеризуется длиной волны $300\,\text{нм}$, а свет второго пучка  — частотой $0{,}5 \cdot 10 ^{ 15 } \,\text{Гц}.$ Во сколько раз отличается энергия фотона из первого пучка от энергии фотона из второго пучка? Скорость света принять равной $3$·$10$$^{8}$ м/с.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Энергия фотона равна $E=h\nu= \frac{hc}{\lambda} .$ Отношение $\frac{E_1}{E_2} = \frac{\frac{hc}{\lambda_1}}{h\nu_2} = \frac{c}{\lambda_1\nu_2} = \frac{3 \cdot 10 ^{8}}{300 \cdot 10 ^{ - 9 } \cdot 0{,}5 \cdot 10 ^{ 15 }} =2.$
+
+Ответ: $2$.
+}
+
+% Source sdamgia-7866: https://phys-ege.sdamgia.ru/problem?id=7866
+\BankTask{sdamgia-7866}{
+Зеленый свет ($\lambda$ = $550\,\text{нм}$) переходит из воздуха в стекло с показателем преломления $1{,}5$. Определите отношение энергии фотона в воздухе к его энергии в стекле.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Энергия фотона равна $E=h\nu.$ При переходе из одной среды в другую частота фотона $\nu$ не меняется, значит, и энергия остается неизменной. Отношение энергий равно единице.
+
+Ответ: $1$.
+}
+
+% Source sdamgia-6221: https://phys-ege.sdamgia.ru/problem?id=6221
+\BankTask{sdamgia-6221}{
+Мощность излучения лазерной указки с длиной волны $\lambda$  =  $600\,\text{нм}$ равна P  =  $2$ мВт. Определите число фотонов, излучаемых указкой за $1\,\text{с}$.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Один фотон света с частотой $\nu$ обладает энергией $h\nu=h \frac{c}{\lambda} .$ Энергия излучаемая за время t указкой  — $E=Pt.$ Значит, число фотонов N, излучаемых указкой за время $t:$
+
+\[N= \frac{E}{h\nu} = \frac{P\lambda t}{hc} = \frac{2 \cdot 10 ^{ - 3 } \cdot 1 \cdot 600 \cdot 10 ^{ - 9 }}{6{,}6 \cdot 10 ^{ - 34 } \cdot 3 \cdot 10 ^{8}} \approx0{,}6 \cdot 10 ^{ 16 } =6 \cdot 10 ^{ 15 } \,\text{фотонов}.\]
+
+Ответ: $6 \cdot 10 ^{ 15 } \,\text{фотонов}.$
+}
+
+% Source sdamgia-29865: https://phys-ege.sdamgia.ru/problem?id=29865
+\BankTask{sdamgia-29865}{
+Какой должна быть длина волны фотона, чтобы его энергия равнялась кинетической энергии протона, движущегося со скоростью $2$ · $10$$^{4}$ м/c?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Кинетическая энергия протона равна $E_k= \frac{m_p v ^2}{2} .$ Энергия фотона определяется формулой $E_{\,\text{ф}}=h v = \frac{h c}{\lambda} .$ Учитывая, что эти энергии равны, получаем $\frac{m_p v ^2}{2} = \frac{h c}{\lambda} .$ Откуда 
+
+\[\lambda= \frac{2 h c}{m_p v ^2} = \frac{2 \cdot 6{,}6 \cdot 10 ^{ - 34 } \cdot 3 \cdot 10 ^{ 8 }}{1{,}673 \cdot 10 ^{ - 27 } \cdot 4 \cdot 10 ^{ 8 }} \approx5{,}92 \cdot 10 ^{ - 7 } \,\text{м}=592 \,\text{нм}.\]
+
+Ответ: $592\,\text{нм}$.
+}
+
+% Source sdamgia-3723: https://phys-ege.sdamgia.ru/problem?id=3723
+\BankTask{sdamgia-3723}{
+Энергия ионизации атома кислорода равна $14\,\text{эВ}$. Найдите максимальную длину волны света, которая может вызвать ионизацию атома кислорода.
+
+Справочные данные: постоянная Планка $h=6{,}6 \cdot 10 ^{ - 34 } \,\text{Дж} \cdot \,\text{с},$ $1\,\text{эВ}=1{,}6 \cdot 10 ^{ - 19 } \,\text{Дж}.$ (В нанометрах; округлите до целого.)
+}{
+\smallskip\noindent\textbf{Решение}\par
+Длина волны связана с частотой и скоростью света соотношением: $\lambda\nu=c.$ Следовательно, максимально возможной длине волны, соответствует минимально возможная частота. 
+Согласно постулатам Бора, для перехода электрона на более высокий уровень необходимо, чтобы атом поглотил квант энергии, равный по величине разности энергий конечного и начального состояний. Для ионизации атома необходимо, чтобы энергия поглощаемого фотона была не меньше энергии ионизации: $E_{\,\text{фот}} > \,\text{или} \,\text{равно} E_{\,\text{ион}}.$ Энергия фотона пропорциональна частоте света: $E_{\,\text{фот}}=h\nu.$ Таким образом, максимальная длина волны света, которая может вызвать ионизацию атома кислорода равна: 
+
+\[\lambda= \frac{c}{\nu} = \frac{\,\text{с}}{E_{\,\text{ион}}/h} = \frac{hc}{E_{\,\text{ион}}} = \frac{6{,}6 \cdot 10 ^{ - 34 } \,\text{Дж} \cdot \,\text{с} \cdot 3 \cdot 10 ^{8} \,\text{м/с}}{14 \cdot 1{,}6 \cdot 10 ^{ - 19 } \,\text{Дж}} \approx 0{,}88 \cdot 10 ^{ - 7 } \,\text{м}=88\,\text{нм}.\]
+
+Ответ: $88\,\text{нм}$.
+}
+
+
+% Source 7D7448: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=7D7448
+\BankTask{7D7448}{
+Установите соответствие между физическими величинами и формулами, по которым их можно рассчитать ($E$ — энергия фотона; $h$ — постоянная Планка; $p$ — импульс фотона).
+
+\TaskMatchingColumns[.53\linewidth]{Физические величины}{
+А) длина волны фотона\par
+Б) частота фотона
+}{Формулы}{
+1) $\dfrac{p}{h}$\par
+2) $\dfrac{h}{p}$\par
+3) $\dfrac{E}{p}$\par
+4) $\dfrac{E}{h}$
+}
+
+\medskip
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{2} & \phantom{4} \\
+\hline
+\end{tabular}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Из соотношения $p=h/\lambda$ получаем $\lambda=h/p$, поэтому А соответствует формуле 2. По формуле Планка $E=h\nu$, откуда $\nu=E/h$, поэтому Б соответствует формуле 4. Ответ: $24$.
+}
+
+% Source 64FC99: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=64FC99
+\BankTask{64FC99}{
+Установите соответствие между физическими величинами и формулами, по которым их можно рассчитать ($\lambda$ — длина волны фотона; $c$ — скорость света в вакууме; $h$ — постоянная Планка).
+
+\TaskMatchingColumns[.53\linewidth]{Физические величины}{
+А) частота фотона\par
+Б) импульс фотона
+}{Формулы}{
+1) $\dfrac{h}{\lambda}$\par
+2) $\dfrac{h\lambda}{c}$\par
+3) $\dfrac{c}{\lambda}$\par
+4) $c\lambda$
+}
+
+\medskip
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{3} & \phantom{1} \\
+\hline
+\end{tabular}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Из $c=\lambda\nu$ следует $\nu=c/\lambda$, поэтому А соответствует формуле 3. Импульс фотона $p=h/\lambda$, поэтому Б соответствует формуле 1. Ответ: $31$.
+}
+
+% Source D4FFF9: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=D4FFF9
+\BankTask{D4FFF9}{
+Установите соответствие между графиками, представленными на рисунках, и зависимостями, которые они могут выражать.
+
+\par\medskip\TaskMatchHeading{Графики}
+
+А) рисунок 1
+
+Б) рисунок 2
+
+\par\medskip\TaskMatchHeading{Зависимости}
+
+1) зависимость силы фототока от напряжения между электродами при неизменной освещённости
+
+2) зависимость энергии фотона от длины волны
+
+3) зависимость максимальной энергии фотоэлектронов от частоты света
+
+4) зависимость энергии фотона от частоты света
+
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{2} & \phantom{3} \\
+\hline
+\end{tabular}
+
+\medskip
+\begin{center}
+\begin{tikzpicture}[book diagram, x=0.024cm, y=0.024cm]
+\draw[-{book tip}] (0,0) -- (150,0);
+\draw[-{book tip}] (0,0) -- (0,127);
+\node[below left] at (0,0) {$0$};
+\draw[line width=0.5pt] (21,125) .. controls (22,118) and (21,105) .. (23,94) .. controls (26,73) and (32,58) .. (42,48) .. controls (54,36) and (69,29) .. (87,25) .. controls (104,21) and (125,19) .. (143,19);
+\draw (0,103) -- (22,103);
+\draw (22,103) -- (22,80);
+\draw (22,32) -- (22,8);
+\draw (0,23) -- (7,23);
+\draw (32,23) -- (55,23);
+\draw (80,23) -- (104,23);
+\draw (104,23) -- (104,0);
+\node[below] at (72,-18) {А) Рисунок 1};
+\end{tikzpicture}
+\hspace{1cm}
+\begin{tikzpicture}[book diagram, x=0.024cm, y=0.024cm]
+\draw[-{book tip}] (0,0) -- (163,0);
+\draw[-{book tip}] (0,0) -- (0,127);
+\node[below left] at (0,0) {$0$};
+\draw[line width=0.7pt] (0,0) -- (52,0) -- (151,99);
+\node[below] at (76,-18) {Б) Рисунок 2};
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+График А — убывающая гипербола: $E=hc/\lambda$, поэтому ему соответствует зависимость 2. График Б описывает линейный рост максимальной энергии фотоэлектронов выше пороговой частоты: $K_{\max}=h\nu-A_{\text{вых}}$, то есть зависимость 3. Зависимость 1 представляет рост фототока с выходом на насыщение, а зависимость 4 — прямую $E=h\nu$, проходящую через начало координат; они не соответствуют данным графикам. Ответ: $23$.
+}
+
+% Source 369826: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=369826
+\BankTask{369826}{
+На металлическую пластинку падает пучок монохроматического света. При этом наблюдается явление фотоэффекта.
+
+На графике А представлена зависимость энергии фотонов, падающих на катод, от физической величины \(x_1\), а на графике Б — зависимость максимальной кинетической энергии фотоэлектронов от физической величины \(x_2\).
+
+Какая из физических величин отложена на горизонтальной оси на графике А и какая — на графике Б?
+
+\TaskMatchingColumns[.53\linewidth]{Графики}{
+А) график А\par
+Б) график Б
+}{Физическая величина \(x\)}{
+1) частота\par
+2) длина волны\par
+3) массовое число\par
+4) заряд ядра
+}
+
+\medskip
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{2} & \phantom{1} \\
+\hline
+\end{tabular}
+
+\medskip
+\begin{tikzpicture}[book diagram,x=0.45cm,y=0.23cm]
+\node at (3.5,20.5) {А)};
+\draw[-{book tip}] (0,0) -- (7.3,0) node[below] {$x_1$};
+\draw[-{book tip}] (0,0) -- (0,18.5) node[left] {$E$};
+\node[below left] at (0,0) {$0$};
+\foreach \y in {0.5,1,...,17.5} {\draw (-0.09,\y) -- (0.09,\y);}
+\foreach \y in {5,10,15} {\node[left] at (-0.14,\y) {$\y$};}
+\foreach \xx/\yy in {1/15,2/7.5,3/5,4/3.75,5/3,6/2.5} {
+\draw[thin] (0,\yy) -- (\xx,\yy) -- (\xx,0);
+}
+\draw[thick] plot[domain=0.82:7,samples=100] (\x,{15/\x});
+\foreach \x/\y in {1/15,2/7.5,3/5,4/3.75,5/3,6/2.5}{\fill (\x,\y) circle[radius=1pt];}
+\end{tikzpicture}
+\qquad
+\begin{tikzpicture}[book diagram,x=0.45cm,y=0.45cm]
+\node at (3.5,5.25) {Б)};
+\draw[-{book tip}] (0,0) -- (7.1,0) node[below] {$x_2$};
+\draw[-{book tip}] (0,-1.25) -- (0,4.7) node[left] {$E$};
+\node[left] at (0,0) {$0$};
+\draw[thick] (0,0) -- (2,0) -- (5.7,3.7);
+\end{tikzpicture}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Энергия фотона \(E=h\nu=hc/\lambda\), поэтому убывающая гипербола А соответствует длине волны (2). По уравнению Эйнштейна \(K_{\max}=h\nu-A_{\text{вых}}\), поэтому возрастающая прямая Б соответствует частоте (1). Массовое число (3) и заряд ядра (4) не являются переменными в этих зависимостях. Ответ: А — 2, Б — 1.
+}
+
+\end{document}

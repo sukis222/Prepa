@@ -1,0 +1,39 @@
+{
+  "approved": true,
+  "reviewed_sha256": "53e2ebb29e59bcafd2022a5770fe5a13bb47fb5c46ae628b284b3fb32f58154f",
+  "pages": [
+    {
+      "file": "tmp/all-topics/electro/preview/task-3-9-1/page-01.png",
+      "sha256": "9066c08cf88b0742246b6002a21b5e7a582db60dcf63b2d1a6b3a8144a1049bb"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/task-3-9-1/page-02.png",
+      "sha256": "2b640ae97bb365112febef0036f5dfca9706910b17fddeaa0aeaeb0bf87b8adf"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/task-3-9-1/page-03.png",
+      "sha256": "7cdc5776c9eb865ec6628f240336bf24f3c83073173a28ad6fa2e8a091a46600"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-9-1/page-01.png",
+      "sha256": "5ff7af43dfd4ac4c6d8bd55d9ba29a89f7358052c6d17c0c1773e48966c63b50"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-9-1/page-02.png",
+      "sha256": "e3d8d4fe4132ed8ecd6e1b3396fbbe336f35427d7c1416ce371b1a2ebded25b8"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-9-1/page-03.png",
+      "sha256": "1957105bb7a98a8b8ae168da8ec4e5e56d556c18a584fb583f2ec66ec5d8eaec"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-9-1/page-04.png",
+      "sha256": "20b3f7a13998c78310e004ac21cd94ef757e34a61b70f94606c43736190bc300"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-9-1/page-05.png",
+      "sha256": "537fb7624f71792677554dea4781e0517200cda9d864d5831e497188e9f2196b"
+    }
+  ],
+  "scope": "Все8 финальных страниц осмотрены, включая полный PNGtutorpage03;5новых первичных схем/графиков осмотрены и векторизованы."
+}

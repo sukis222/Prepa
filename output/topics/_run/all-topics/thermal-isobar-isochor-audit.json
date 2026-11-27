@@ -1,0 +1,18 @@
+{
+  "batch": "thermal-isobar-isochor",
+  "bundle_sha256": "c976644b14fc33257d30f1ee6755b177abf70ff76ea070c2308d5206e7b05e8b",
+  "topics": [
+    "2.6.4",
+    "2.6.6"
+  ],
+  "tasks": 20,
+  "pages": 13,
+  "baseline_preserved": 107,
+  "files": {
+    "task-2-6-4.tex": "fcfa968b7a6f2da4657549c9e0082a21ed3f717e8b6cb359d4c5d2a660f8e864",
+    "tutor-2-6-4.tex": "7bcf5cdadb4e4771d57423752ee82cb0ad3e22d60552988c168f15904228248c",
+    "task-2-6-6.tex": "8ce03a16088ab2e01c4986334e636b6d7a4c1da4fe54da3ee8e0ceffcb60ca74",
+    "tutor-2-6-6.tex": "9cd5dc6033db508c6ffd9fb5e3b6fb83eb8f18e03b83436fd0661e117f83ea73"
+  },
+  "editor_open_checked": false
+}

@@ -1,0 +1,18 @@
+{
+  "batch": "electro-capacitors",
+  "bundle_sha256": "b42f44c1b6bc4d009e1ad783aae49b7066930b5b6dba6d31f9bd4edc74e4c945",
+  "topics": [
+    "3.7.2",
+    "3.7.3"
+  ],
+  "tasks": 20,
+  "pages": 18,
+  "baseline_preserved": 107,
+  "files": {
+    "task-3-7-2.tex": "21f9ca0ce36b413056c7ad69158017209193f3ad2727dbd6ac597444acb4296c",
+    "tutor-3-7-2.tex": "febb50570fea3a9d27229f8a7922ee679c5b24290c5b2c4578bf5f5ce3fd3847",
+    "task-3-7-3.tex": "2aaa69198f3772bd710e65adeb79bb6bb370515ad8829a04a63b796d67f95331",
+    "tutor-3-7-3.tex": "6dab704ba0c20ce2908edc63bd2c4319d40e39d6861107927cf8882d5e21279f"
+  },
+  "editor_open_checked": false
+}

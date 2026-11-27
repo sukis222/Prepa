@@ -1,0 +1,79 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{physics-textbook}[2026/11/14 Shared physics textbook layout]
+% One source of layout settings. Material files contain only their contents.
+\RequirePackage{iftex}
+\ifXeTeX\else
+  \PackageError{physics-textbook}{Use the project Tectonic (XeTeX) recipe}{This package uses local CM-Super OpenType fonts.}
+\fi
+\RequirePackage[no-math]{fontspec}
+\setmainfont{sfrm1200.otf}[
+  ItalicFont=sfti1200.otf,
+  BoldFont=sfbx1200.otf,
+  Ligatures=TeX]
+\newfontfamily\booksectionfont{sfbx1728.otf}[Ligatures=TeX]
+\newfontfamily\booksubsectionfont{sfbx1440.otf}[Ligatures=TeX]
+\RequirePackage[russian]{babel}
+\RequirePackage{amsmath,amssymb}
+\RequirePackage[left=43.654bp,textwidth=510.236bp,top=52.169bp,textheight=724.603bp,footskip=29.887bp]{geometry}
+\RequirePackage{xcolor,tikz,wrapfig}
+% A fixed textbook arrow head; no dependency on optional TikZ libraries.
+\pgfarrowsdeclare{book tip}{book tip}{%
+  \pgfarrowsleftextend{-6.9bp}\pgfarrowsrightextend{0bp}%
+}{%
+  \pgfpathmoveto{\pgfpoint{0bp}{0bp}}%
+  \pgfpathlineto{\pgfpoint{-6.9bp}{1.225bp}}%
+  \pgfpathlineto{\pgfpoint{-6.9bp}{-1.225bp}}%
+  \pgfpathclose\pgfusepathqfill
+}
+\definecolor{bookforce}{rgb}{1,0,0}
+\definecolor{bookmotion}{rgb}{0,0,1}
+\definecolor{bookbody}{rgb}{.9,.9,.9}
+\tikzset{
+  book diagram/.style={line width=.5bp,font=\fontsize{10}{12}\selectfont},
+  book arrow/.style={-{book tip}},
+  book force/.style={book arrow,draw=bookforce},
+  book displacement/.style={book arrow,draw=bookmotion},
+  book body/.style={draw=black,fill=bookbody},
+  book projection/.style={densely dashed,draw=black}
+}
+% Task graph primitives. Physical data belong to the material, visual weights here.
+\tikzset{
+  task graph/.style={line width=.5pt,font=\small,line cap=round,line join=round,>=stealth},
+  task axis/.style={->,line width=.5pt},
+  task curve/.style={line width=.85pt},
+  task projection/.style={line width=.4pt,dash pattern=on 1.5pt off 1.5pt},
+  task grid/.style={line width=.25pt,draw=black!35},
+  task tick/.style={line width=.5pt}
+}
+\RequirePackage{tabularx}
+\newcommand{\TaskMatchHeading}[1]{{\bfseries #1\par}\vspace{.4em}}
+\newcommand{\TaskMatchingColumns}[5][.53\linewidth]{%
+  \par\medskip\noindent
+  \begin{minipage}[t]{#1}\vspace{.5\baselineskip}\raggedright
+    \setlength{\parindent}{0pt}\setlength{\parskip}{.35em}%
+    \TaskMatchHeading{#2}#3\par
+  \end{minipage}\hfill
+  \begin{minipage}[t]{\dimexpr.96\linewidth-#1\relax}\vspace{.5\baselineskip}\raggedright
+    \setlength{\parindent}{0pt}\setlength{\parskip}{.35em}%
+    \TaskMatchHeading{#4}#5\par
+  \end{minipage}\par\medskip
+}
+\newcommand{\TaskChangeTable}[2]{%
+  \par\medskip\noindent\begingroup
+  \renewcommand{\arraystretch}{1.3}%
+  \begin{tabularx}{\linewidth}{|X|X|}\hline
+    #1 & #2 \\\hline
+    \rule{0pt}{1.4em} & \\\hline
+  \end{tabularx}\par\endgroup\medskip
+}
+\RequirePackage[unicode,hypertexnames=false,colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\setlength{\parindent}{17.625pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1em}
+\pagestyle{plain}
+\AtBeginDocument{\fontsize{12}{14.5}\selectfont\frenchspacing}
+\renewcommand{\section}{\@startsection{section}{1}{\z@}{-3.5ex plus -1ex minus -.2ex}{2.3ex plus .2ex}{\normalfont\booksectionfont\fontsize{17.28}{20.74}\selectfont}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{\z@}{-3.25ex plus -1ex minus -.2ex}{1.5ex plus .2ex}{\normalfont\booksubsectionfont\fontsize{14.4}{17.28}\selectfont}}
+\newcommand{\BookParagraph}[2]{\section*{#1\quad #2}}
+\newcommand{\BookSubsection}[2]{\subsection*{#1\quad #2}}
+\endinput

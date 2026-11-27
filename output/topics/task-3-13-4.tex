@@ -1,0 +1,98 @@
+% !TEX root = task-3-13-4.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{3.13.4}{Зависимость сопротивления от температуры}
+
+
+% Source sdamgia-8557: https://phys-ege.sdamgia.ru/problem?id=8557
+\BankTask{sdamgia-8557}{
+Вольт-амперная характеристика лампы накаливания изображена на рисунке. При напряжении источника $12 \,\text{В}$ температура нити лампы равна $3100 \,\text{К}$. Сопротивление нити прямо пропорционально ее температуре. Какова температура нити накала при напряжении источника $6 \,\text{В}$?\par
+
+\begin{center}\begin{tikzpicture}[book diagram,>=stealth]
+\draw[task grid,xstep=.5,ystep=.4](0,0)grid(4,4.8);\draw[task axis](0,0)--(4.4,0)node[right]{$U,\,\text{В}$};\draw[task axis](0,0)--(0,5.2)node[above]{$I,\,\text{А}$};\foreach\x in{0,2,4,6,8,10,12,14}\node[below]at(\x/4,0){$\x$};\foreach\y in{.2,.4,.6,.8,1,1.2,1.4,1.6,1.8,2}\node[left]at(0,2*\y){$\y$};\draw[task curve]plot[smooth]coordinates{(0,0)(.5,1.3)(1,2.2)(1.5,2.8)(2,3.3)(2.5,3.7)(3,4)(3.5,4.25)(4,4.45)};
+\end{tikzpicture}\end{center}
+\par
+}{
+\smallskip\noindent\textbf{Решение}\par
+$1$. При напряжении источника $U_{1}=12 \,\text{В}$ сила тока через лампу определяется из графика: $I_{1}=2 \,\text{А}$.\par
+$2$. Сопротивление нити накала при этом определяется законом Ома: $R_{1}= \frac{ U_{1}}{ I_{1} } =6\,\text{Ом}$.\par
+$3$. При напряжении $U_{2}=6 \,\text{В}$ сила тока равна $I_{2}=1{,}4 \,\text{А}$ (см. вольт-амперную характеристику).\par
+$4$. Сопротивление нити накала при этом напряжении $R_{2}= \frac{ U_{2}}{ I_{2} } \approx4{,}3\,\text{Ом}$.\par
+$5$. Поскольку сопротивление нити пропорционально температуре $R= \beta T,$ то $\frac{ T_{2}}{ T_{1} } = \frac{ R_{2}}{ R_{1} }$ и\par
+$T_{2}=T_{1} \frac{ R_{2}}{ R_{1} } =T_{1} \frac{ U_{2}I_{1}}{ I_{2}U_{1} } =3100 \cdot \frac{ 6 \cdot 2}{ 1{,}4 \cdot 12 } \approx2214\,\text{К}$.\par
+Ответ: $2214\,\text{К}$.\par
+}
+
+
+% Source 5D79D1: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=5D79D1
+\BankTask{5D79D1}{
+При нагревании спирали лампы накаливания протекающим по ней электрическим током основная часть подводимой энергии теряется в виде теплового излучения. На рисунке изображены графики зависимости мощности тепловых потерь лампы от температуры спирали $P=P(T)$ и силы тока от приложенного напряжения $I=I(U)$.
+\begin{enumerate}
+\item С уменьшением приложенного напряжения температура спирали уменьшается пропорционально мощности.
+\item При напряжении $100\,\text{В}$ сопротивление спирали лампы равно $50\,\text{Ом}$.
+\item Сопротивление спирали лампы постоянно и не зависит от температуры.
+\item Температура спирали лампы при приложенном напряжении $U=120\,\text{В}$ меньше $3600\,\text{К}$.
+\item С увеличением силы протекающего тока температура спирали увеличивается.
+\end{enumerate}
+\begin{center}
+\begin{tikzpicture}[book diagram,x=1cm,y=1cm]
+\begin{scope}
+\draw[thin,step=0.5] (0,0) grid (4,2.5);
+\draw[-{book tip}] (0,0)--(4.85,0) node[below] {$T,\,\text{К}$};
+\draw[-{book tip}] (0,0)--(0,2.95) node[left] {$P,\,\text{Вт}$};
+\foreach \x/\t in {0/2000,1/2400,2/2800,3/3200,4/3600}{\node[below,font=\small] at (\x,0) {$\t$};}
+\foreach \y/\p in {0/0,1/100,2/200}{\node[left,font=\small] at (0,\y) {$\p$};}
+\draw[thin] plot[smooth] coordinates {(0,0.17) (0.5,0.25) (1,0.40) (1.5,0.58) (2,0.77) (2.5,1.02) (3,1.33) (3.5,1.71) (4,2.14)};
+\end{scope}
+\begin{scope}[xshift=6.3cm]
+\draw[thin,step=0.4] (0,0) grid (4,2.8);
+\draw[-{book tip}] (0,0)--(4.85,0) node[below] {$U,\,\text{В}$};
+\draw[-{book tip}] (0,0)--(0,3.15) node[left] {$I,\,\text{А}$};
+\foreach \x/\u in {0/50,2/100,4/150}{\node[below,font=\small] at (\x,0) {$\u$};}
+\foreach \y/\i in {0/{1{,}2},0.8/{1{,}6},1.6/{2{,}0},2.4/{2{,}4}}{\node[left,font=\small] at (0,\y) {$\i$};}
+\draw[thin] plot[smooth] coordinates {(0,0.4) (0.4,0.65) (0.8,0.89) (1.2,1.13) (1.6,1.37) (2,1.6) (2.4,1.82) (2.8,2.03) (3.2,2.22) (3.6,2.40) (4,2.56)};
+\end{scope}
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Утверждение 1 неверно: график $P(T)$ нелинейный, поэтому температура не пропорциональна мощности. Утверждение 2 верно: при $U=100\,\text{В}$ ток $I=2\,\text{А}$, следовательно, $R=U/I=50\,\text{Ом}$. Утверждение 3 неверно: отношение $U/I$ меняется, например при $50\,\text{В}$ оно равно примерно $36\,\text{Ом}$. Утверждение 4 неверно: при $120\,\text{В}$ мощность $UI\approx264\,\text{Вт}$ превышает тепловые потери при $3600\,\text{К}$, поэтому температура выше $3600\,\text{К}$. Утверждение 5 верно: рост тока сопровождается ростом напряжения и мощности, а значит, температуры спирали. Ответ: 2, 5.
+}
+
+\end{document}

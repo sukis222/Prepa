@@ -1,0 +1,15 @@
+{
+  "batch": "mechanics-newton3",
+  "bundle_sha256": "99b76aed8881d90a42e1fad3e3929f3249fcdb29706007a13838fa83ffecdfca",
+  "topics": [
+    "1.8.3"
+  ],
+  "tasks": 10,
+  "pages": 6,
+  "baseline_preserved": 107,
+  "files": {
+    "task-1-8-3.tex": "78e35ca6d44789f06c6fc60d5b360fd915ec9610fe635bf49f22128a9821e1cb",
+    "tutor-1-8-3.tex": "1acf3ca1e2623dda53c8f344db3df79af30b2171a99c8e314348f085aecdf84f"
+  },
+  "editor_open_checked": false
+}

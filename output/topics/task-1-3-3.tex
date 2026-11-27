@@ -1,0 +1,145 @@
+% !TEX root = task-1-3-3.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{1.3.3}{Прямолинейное равноускоренное движение}
+
+
+% Source B5F7C7: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B5F7C7
+\BankTask{B5F7C7}{
+Начальная скорость движения тела равна $5\,\text{м}/\text{с}$. Сколько потребуется времени, чтобы увеличить его скорость в $3$ раза при равноускоренном движении по прямой в одном направлении на пути в $20\,\text{м}$? Время выразите в секундах.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Конечная скорость $v=3v_0=15\,\text{м}/\text{с}$. При равноускоренном движении в одном направлении $s=\dfrac{v_0+v}{2}t$. Отсюда $t=\dfrac{2s}{v_0+v}=\dfrac{2\cdot20}{5+15}=2\,\text{с}$.
+}
+
+% Source A32BC5: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=A32BC5
+\BankTask{A32BC5}{
+Какой путь пройдет тело за $2\,\text{с}$, двигаясь по прямой в одном направлении, если его скорость за это время уменьшается в $3$ раза? Модуль ускорения тела равен $5\,\text{м}/\text{с}^{2}$. Результат выразите в $\text{м}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$v_0=3v$, $v_0-v=at=10\,\text{м}/\text{с}$. Тогда $v=5\,\text{м}/\text{с}$, $v_0=15\,\text{м}/\text{с}$. Путь $s=(v_0+v)t/2=20\,\text{м}$.
+}
+
+% Source 9D2AE0: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=9D2AE0
+\BankTask{9D2AE0}{
+В лаборатории исследовали прямолинейное движение тела массой $m=300\,\text{г}$ из состояния покоя. В таблице приведена экспериментально полученная зависимость пути, пройденного телом, от времени.
+\begin{center}{\small\setlength{\tabcolsep}{3pt}\begin{tabular}{|c|c|c|c|c|c|c|c|c|}\hline $t,\,\text{с}$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ \\\hline $L,\,\text{м}$ & $0$ & $1$ & $4$ & $9$ & $16$ & $25$ & $36$ & $49$ \\\hline\end{tabular}}\end{center}
+\begin{enumerate}
+\item Тело двигалось равноускоренно.
+\item Скорость тела в момент времени $4\,\text{с}$ равнялась $8\,\text{м}/\text{с}$.
+\item Кинетическая энергия тела в момент времени $5\,\text{с}$ равна $25\,\text{Дж}$.
+\item Равнодействующая сил, действующих на тело, всё время возрастала.
+\item За первые $3\,\text{с}$ работа равнодействующей сил, действующих на тело, была равна $5{,}4\,\text{Дж}$.
+\end{enumerate}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По данным $L=t^2=at^2/2$, значит $a=2\,\text{м}/\text{с}^2$ и $v=2t$. При $t=4\,\text{с}$ $v=8\,\text{м}/\text{с}$; сила $ma=0{,}6\,\text{Н}$ постоянна. При $t=5\,\text{с}$ $E_{\text{к}}=15\,\text{Дж}$. Работа за первые $3\,\text{с}$ $A=\Delta E_{\text{к}}=0{,}3\cdot6^2/2=5{,}4\,\text{Дж}$. Ответ: $125$.
+}
+
+% Source 25400: https://phys-ege.sdamgia.ru/problem?id=25400
+\BankTask{25400}{
+В процессе прямолинейного равноускоренного движения тело за $2$ секунды прошло путь $20\,\text{м}$, при этом его скорость уменьшилась в $3$ раза. Какой была начальная скорость тела?
+}{
+\smallskip\noindent\textbf{Решение}\par
+\begin{center}\begin{tikzpicture}[x=.65cm,y=.65cm,>=stealth]
+\draw[step=1,gray!50,very thin] (0,0) grid (8,8);
+\fill[orange!65,opacity=.8] (0,0)--(0,6)--(6,2)--(6,0)--cycle;
+\draw[thick] (0,6)--(6,2);
+\draw[->,thick] (-1,0)--(8,0) node[below right] {$t,\,\text{с}$};
+\draw[->,thick] (0,-.9)--(0,8) node[left] {$v,\,\text{м/с}$};
+\node[below left] at (0,0) {$0$};
+\node[left] at (0,6) {$v_0$};
+\node[left] at (0,2) {$v$};
+\node[below] at (6,0) {$t$};
+\end{tikzpicture}\end{center}
+Поскольку тело двигалось прямолинейно, пройденный путь численно равен площади под графиком функции скорости в зависимости от времени. Поскольку тело двигалось равноускоренно, скорость зависела от времени линейно, а потому искомая площадь (см. рис.) является площадью трапеции с основаниями $v_0$ и \ensuremath{\upsilon} и высотой t:
+
+\[s= \frac{v _0 + v}{2} t.\]
+
+Учитывая, что $v = \frac{v _0}{3} ,$ получаем $s= \frac{2 v _0t}{3} ,$ откуда:
+
+\[v _0= \frac{3s}{2t} = \frac{3 \cdot 20}{2 \cdot 2} =15\,\text{м/с}.\]
+
+Ответ: $15\,\text{м/с}$.
+}
+
+% Source 41569: https://phys-ege.sdamgia.ru/problem?id=41569
+\BankTask{41569}{
+Прямолинейно движущийся поезд последние перед остановкой $1200\,\text{м}$ своего пути преодолел за $2$ минуты. Определите скорость поезда за $30\,\text{с}$ до остановки. Ускорение поезда считать постоянным.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Движение поезда равноускоренное. Поэтому пройденный путь $s= v _0t - \frac{at ^2}{2} ,$ где a  — модуль ускорения поезда. Скорость поезда при этом $v = v _0 - at=0,$ откуда находим скорость в начале торможения $v _0=at.$ 
+Объединяя формулы, получаем $s= \frac{at ^2}{2} ,$ откуда ускорение поезда $a= \frac{2s}{t ^2} .$
+Из формулы $v = v _1 - at_1=0$ находим скорость поезда за $30\,\text{с}$ до остановки:
+
+\[v _1=at_1= \frac{2st_1}{t ^2} = \frac{2 \cdot 1200 \cdot 30}{120 ^2} =5 \,\text{м/с} .\]
+
+Ответ: $5\,\text{м/с}$.
+}
+
+% Source 35155: https://phys-ege.sdamgia.ru/problem?id=35155
+\BankTask{35155}{
+Поезд отходит от станции и начинает двигаться равноускоренно. На первом километре пути его скорость увеличилась на $10\,\text{м/с}$. Весь его путь составил $4$ км. Найдите время разгона поезда.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Поскольку поезд отходит от станции, то его начальная скорость $v _0=0.$ Значит, к концу прохождения первого участка его скорость равна $v _1=10 \,\text{м/с} .$ Движение поезда равноускоренное. На первом участке пути $s_1= \frac{v _1 ^2}{2a} ,$ откуда $a= \frac{v _1 ^2}{2s_1} .$
+Весь путь, пройденный из состояния покоя, $s= \frac{at ^2}{2} .$ Тогда время разгона поезда равно:
+
+\[t= \sqrt{\frac{2s}{a}} = \sqrt{\frac{4ss_1}{v _1 ^2}} = \frac{2}{v _1} \sqrt{ss_1} = \frac{2}{10} \cdot \sqrt{4 \cdot 10 ^3 \cdot 10 ^3} =400\,\text{с}.\]
+
+Ответ: $400\,\text{с}$.
+}
+
+% Source 32266: https://phys-ege.sdamgia.ru/problem?id=32266
+\BankTask{32266}{
+\begin{center}\begin{tikzpicture}[>=stealth,line width=.55pt]\draw[->](0,.32)--(0,-6.75)node[below]{$y,\ \text{м}$};\node[left]at(0,.28){$O$};\foreach \i in {0,2,...,60}{\draw(-.09,-\i/10)--(.09,-\i/10);}\foreach \i in {0,10,...,60}{\draw(-.16,-\i/10)--(.16,-\i/10)node[right]{$\i$};}\foreach \i in {0,6,24,54}{\fill[orange!75!black](-.74,-\i/10)circle(.075);}\end{tikzpicture}\end{center}На неизвестной планете, лишенной атмосферы, космонавт уронил предмет, четыре последовательных положения которого через каждую секунду показаны на рисунке. Покажите, что движение предмета равноускоренное, и определите проекцию вектора ускорения, с которым падает предмет, на направление оси y.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Найдем ускорение шарика в моменты времени $t=1, 2, 3 \,\text{с},$ исходя из формулы равноускоренного движения без начальной скорости: $s= \frac{at ^2}{2} ,$ откуда $a= \frac{2s}{t ^2} .$ Получаем:
+
+$a_1= \frac{2 \cdot 6}{1 ^2} =12 \,\text{м/с} ^2 ;$
+$a_2= \frac{2 \cdot 24}{2 ^2} =12 \,\text{м/с} ^2 ;$
+$a_3= \frac{2 \cdot 54}{3 ^2} =12 \,\text{м/с} ^2 .$
+
+Таким образом, в любые промежутки времени ускорение оставалось неизменным. Следовательно, движение на планете было равноускоренным с ускорением $a=12 \,\text{м/с} ^2 .$
+
+Ответ: движение равноускоренное; ускорение $12\,\text{м/с}^{2}$.
+}
+
+\end{document}

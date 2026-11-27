@@ -1,0 +1,47 @@
+{
+  "approved": true,
+  "reviewed_sha256": "f31131642fa7dc92ee58e028e1e9c19f8133f237bf94214d9a829189ce7d5447",
+  "pages": [
+    {
+      "file": "tmp/all-topics/electro/preview/task-3-2/page-01.png",
+      "sha256": "f7898a6bf8dc1e82632d296620bd8ec221bc3490308b7bfae19a8b34821adc70"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/task-3-2/page-02.png",
+      "sha256": "05949d080318310e56f367938e977a2c94cd248769a045eb19e5b6d2e6ab0c80"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-2/page-01.png",
+      "sha256": "cbb769594d955757b6c315056d293f87aaa12225da945e696b7011c289a6d754"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-2/page-02.png",
+      "sha256": "27e772cae42fac9b521f0e0ee557ad4766fb14d7b13bdd2b7c28d94acf65994e"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-2/page-03.png",
+      "sha256": "182877fee872a4a6d31c9abd3e62ba8b43e430661869c7145dad25f7a4b45203"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-2/page-04.png",
+      "sha256": "13a73f31f6809de0776d6e5976266e2894787812eebcee575843e526941a01aa"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-2/page-05.png",
+      "sha256": "25f2788d5b127989c088047e413df45fe8e3c85b0b7007e0a28c22ecf75feff7"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-2/page-06.png",
+      "sha256": "559b817b927e4626b018aaa901bf6f4653b68517e47ff0cd8ccd7bcb07902425"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-2/page-07.png",
+      "sha256": "533e491e7f82a42d1453c0394ba752cba7edc81ebfd2afb479475ec1d8100d28"
+    },
+    {
+      "file": "tmp/all-topics/electro/preview/tutor-3-2/page-08.png",
+      "sha256": "4fa776ab200672169af7677acaeff9a74a8506aeb1ad519ec568bcff8b4aa9a8"
+    }
+  ],
+  "scope": "Все10 страниц двух редакций просмотрены на свежих collection-3-2-23fac34c40-01..03; все исходные схемы и неоднозначные формулы SVG отдельно осмотрены. Без переполнений/пропавших символов. Последние2изменённые страницы пересмотрены наcoulomb-final-82d76bbcbc;8остальных побайтово равны предыдущему просмотру."
+}

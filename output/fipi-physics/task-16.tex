@@ -1,0 +1,300 @@
+% EGE 2027, task 16. Source IDs and URLs are kept in comments.
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse
+\fi
+\newcounter{banktask}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}%
+  \Needspace{35mm}\par\medskip\noindent\begin{minipage}{\linewidth}%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+  \end{minipage}\par\medskip
+}
+\begin{document}
+
+
+% Source B00348: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B00348
+\BankTask{B00348}{
+На рисунке представлен фрагмент Периодической системы элементов Д.И. Менделеева. Под названием каждого элемента приведены массовые числа его основных стабильных изотопов. При этом нижний индекс около массового числа указывает (в процентах) распространённость изотопа в природе.
+
+Запишите в таблицу число протонов и число нейтронов в ядре самого распространённого изотопа галлия.
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Число протонов & Число нейтронов \\
+\hline
+\rule{0pt}{1.5em} & \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{|c|c||c|c|c|}
+\hline
+\(2\) & II &
+\begin{tabular}{@{}l@{\hspace{1cm}}r@{}}\(\mathbf{Li}\)&\(3\)\\\multicolumn{2}{c}{\textbf{литий}}\\\multicolumn{2}{c}{\(7_{93}\;6_{7}\)}\end{tabular}&
+\begin{tabular}{@{}l@{\hspace{1cm}}r@{}}\(\mathbf{Be}\)&\(4\)\\\multicolumn{2}{c}{\textbf{бериллий}}\\\multicolumn{2}{c}{\(9_{100}\)}\end{tabular}&
+\begin{tabular}{@{}l@{\hspace{1cm}}r@{}}\(5\)&\(\mathbf{B}\)\\\multicolumn{2}{c}{\textbf{бор}}\\\multicolumn{2}{c}{\(11_{80}\;10_{20}\)}\end{tabular}\\
+\hline
+\(3\) & III &
+\begin{tabular}{@{}l@{\hspace{1cm}}r@{}}\(\mathbf{Na}\)&\(11\)\\\multicolumn{2}{c}{\textbf{натрий}}\\\multicolumn{2}{c}{\(23_{100}\)}\end{tabular}&
+\begin{tabular}{@{}l@{\hspace{1cm}}r@{}}\(\mathbf{Mg}\)&\(12\)\\\multicolumn{2}{c}{\textbf{магний}}\\\multicolumn{2}{c}{\(24_{79}\;26_{11}\;25_{10}\)}\end{tabular}&
+\begin{tabular}{@{}l@{\hspace{1cm}}r@{}}\(13\)&\(\mathbf{Al}\)\\\multicolumn{2}{c}{\textbf{алюминий}}\\\multicolumn{2}{c}{\(27_{100}\)}\end{tabular}\\
+\hline
+\raisebox{-2em}{\(4\)} & IV &
+\begin{tabular}{@{}l@{\hspace{1cm}}r@{}}\(\mathbf{K}\)&\(19\)\\\multicolumn{2}{c}{\textbf{калий}}\\\multicolumn{2}{c}{\(39_{93}\;41_{6{,}7}\)}\end{tabular}&
+\begin{tabular}{@{}l@{\hspace{1cm}}r@{}}\(\mathbf{Ca}\)&\(20\)\\\multicolumn{2}{c}{\textbf{кальций}}\\\multicolumn{2}{c}{\(40_{97}\;44_{2{,}1}\)}\end{tabular}&
+\begin{tabular}{@{}l@{\hspace{1cm}}r@{}}\(\mathbf{Sc}\)&\(21\)\\\multicolumn{2}{c}{\textbf{скандий}}\\\multicolumn{2}{c}{\(45_{100}\)}\end{tabular}\\
+\cline{2-5}
+ & V &
+\begin{tabular}{@{}l@{\hspace{1cm}}r@{}}\(29\)&\(\mathbf{Cu}\)\\\multicolumn{2}{c}{\textbf{медь}}\\\multicolumn{2}{c}{\(63_{69}\;65_{31}\)}\end{tabular}&
+\begin{tabular}{@{}l@{\hspace{1cm}}r@{}}\(30\)&\(\mathbf{Zn}\)\\\multicolumn{2}{c}{\textbf{цинк}}\\\multicolumn{2}{c}{\(64_{49}\;66_{28}\;68_{19}\)}\end{tabular}&
+\begin{tabular}{@{}l@{\hspace{1cm}}r@{}}\(31\)&\(\mathbf{Ga}\)\\\multicolumn{2}{c}{\textbf{галлий}}\\\multicolumn{2}{c}{\(69_{60}\;71_{40}\)}\end{tabular}\\
+\hline
+\end{tabular}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Самый распространённый изотоп галлия имеет массовое число \(A=69\), его распространённость равна \(60\%\). Число протонов равно атомному номеру \(Z=31\), а число нейтронов \(N=A-Z=69-31=38\). Ответ: \(31;\ 38\).
+}
+
+% Source BA68F8: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=BA68F8
+\BankTask{BA68F8}{
+Сколько нейтронов содержится в ядре изотопа платины ${}_{78}^{187}\mathrm{Pt}$ и сколько электронов в электронной оболочке нейтрального атома этого изотопа?
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Число нейтронов & Число электронов \\
+\hline
+\rule{0pt}{1.5em} & \\ \hline
+\end{tabular}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Число нейтронов равно $N=A-Z=187-78=109$. В нейтральном атоме число электронов равно числу протонов: $N_e=Z=78$. Ответ: $109;\ 78$.
+}
+
+% Source A2B69D: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=A2B69D
+\BankTask{A2B69D}{
+Радиоактивный изотоп висмута ${}_{83}^{212}\mathrm{Bi}$ претерпевает $\alpha$-распад. Укажите число протонов и число нейтронов в образовавшемся ядре.
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Число протонов & Число нейтронов \\
+\hline
+\rule{0pt}{1.5em} & \\ \hline
+\end{tabular}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+При $\alpha$-распаде массовое число уменьшается на $4$, а зарядовое — на $2$: $A'=212-4=208$, $Z'=83-2=81$. Поэтому в дочернем ядре $81$ протон и $N'=208-81=127$ нейтронов. Ответ: $81;\ 127$.
+}
+
+% Source 2B6FF4: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=2B6FF4
+\BankTask{2B6FF4}{
+Ядро таллия ${}_{81}^{210}\mathrm{Tl}$ испытывает электронный $\beta$-распад, при этом образуются электрон и ядро элемента ${}_Z^A X$. Каковы заряд $Z$ (в единицах элементарного заряда) и массовое число $A$ ядра $X$?
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Заряд ядра $Z$ & Массовое число ядра $A$ \\
+\hline
+\rule{0pt}{1.5em} & \\ \hline
+\end{tabular}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+При электронном $\beta^-$-распаде нейтрон превращается в протон с испусканием электрона и электронного антинейтрино. Поэтому зарядовое число увеличивается на единицу, а массовое сохраняется: $Z=81+1=82$, $A=210$. Ответ: $82;\ 210$.
+}
+
+% Source 6E1C06: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=6E1C06
+\BankTask{6E1C06}{
+В результате цепной реакции деления урана \({}_{0}^{1}\mathrm{n}+{}_{92}^{235}\mathrm{U}\to X+{}_{36}^{94}\mathrm{Kr}+3{}_{0}^{1}\mathrm{n}\) образуется ядро химического элемента \({}_{Z}^{A}X\). Каковы заряд \(Z\) образовавшегося ядра (в единицах элементарного заряда) и его массовое число \(A\)?
+\begin{center}\begin{tabular}{|c|c|}\hline
+Заряд ядра $Z$ & Массовое число ядра $A$ \\ \hline
+\rule{0pt}{1.5em} & \\ \hline
+\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По закону сохранения заряда \(Z=92-36=56\). По закону сохранения массового числа \(A=1+235-94-3=139\). Ответ: \(Z=56\), \(A=139\).
+}
+
+% Source F3BEA3: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=F3BEA3
+\BankTask{F3BEA3}{
+В результате ядерной реакции синтеза \({}_{1}^{2}\mathrm{H}+{}_{1}^{2}\mathrm{H}\to{}_{Z}^{A}X+{}_{1}^{1}\mathrm{p}\) образуется ядро химического элемента \({}_{Z}^{A}X\). Каковы заряд образовавшегося ядра \(Z\) (в единицах элементарного заряда) и его массовое число \(A\)?
+\begin{center}\begin{tabular}{|c|c|}\hline
+Заряд ядра $Z$ & Массовое число ядра $A$ \\ \hline
+\rule{0pt}{1.5em} & \\ \hline
+\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По закону сохранения заряда \(Z=1+1-1=1\). По закону сохранения массового числа \(A=2+2-1=3\). Ответ: \(Z=1\), \(A=3\).
+}
+
+% Source AC25E0: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=AC25E0
+\BankTask{AC25E0}{
+При взаимодействии ядра изотопа бора \({}_{5}^{10}\mathrm{B}\) с нейтроном образуются \(\alpha\)-частица и ядро \({}_{Z}^{A}X\). Определите массовое число и зарядовое число ядра \({}_{Z}^{A}X\).
+\begin{center}\begin{tabular}{|c|c|}\hline
+Массовое число $A$ & Зарядовое число $Z$ \\ \hline
+\rule{0pt}{1.5em} & \\ \hline
+\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Реакция имеет вид \({}_{5}^{10}\mathrm{B}+{}_{0}^{1}\mathrm{n}\to{}_{2}^{4}\mathrm{He}+{}_{Z}^{A}X\). Из сохранения массового числа и заряда получаем \(A=10+1-4=7\), \(Z=5-2=3\). Ответ: \(A=7\), \(Z=3\).
+}
+
+% Source 4C2E4A: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=4C2E4A
+\BankTask{4C2E4A}{
+Период полураспада \(T\) изотопа селена \({}_{34}^{81}\mathrm{Se}\) равен \(18\,\text{мин}\). Какая масса (в \(\text{мг}\)) этого изотопа осталась в образце, содержавшем первоначально \(120\,\text{мг}\) \({}_{34}^{81}\mathrm{Se}\), через \(54\,\text{мин}\)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+За \(54\,\text{мин}\) проходит \(n=t/T=54/18=3\) периода полураспада. Оставшаяся масса \(m=m_0\cdot2^{-n}=120/8=15\,\text{мг}\). Ответ: \(15\,\text{мг}\).
+}
+
+% Source 453BF5: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=453BF5
+\BankTask{453BF5}{
+Дан график зависимости числа нераспавшихся ядер некоторого изотопа от времени. Каков период полураспада этого изотопа?
+\begin{center}
+\begin{tikzpicture}[book diagram,x=0.15cm,y=0.75cm]
+\draw[thin] (0,0) grid[xstep=5,ystep=1] (35,7);
+\draw[-{book tip}] (0,0) -- (37,0);
+\draw[-{book tip}] (0,0) -- (0,7.85);
+\foreach \x in {5,10,15,20,25,30,35}{\node[below] at (\x,0) {\(\x\)};}
+\foreach \y in {1,2,3,4,5,6,7}{\node[left] at (0,\y) {\(\y\)};}
+\node[below left] at (0,0) {\(0\)};
+\node[anchor=east] at (-0.3,7.75) {\(N,\,10^{20}\)};
+\node[anchor=west] at (37,0) {\(t,\,\text{мин.}\)};
+\draw[thick,smooth,domain=0:30,samples=121] plot (\x,{6*pow(2,-\x/5)});
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По графику начальное число ядер равно \(N_0=6\cdot10^{20}\). Число ядер уменьшается вдвое, до \(3\cdot10^{20}\), за \(5\,\text{мин}\), поэтому период полураспада \(T=5\,\text{мин}\). Ответ: \(5\,\text{мин}\).
+}
+
+% Source 8F0C7B: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=8F0C7B
+\BankTask{8F0C7B}{
+Закон радиоактивного распада ядер некоторого изотопа имеет вид: \(N=N_0\cdot2^{-\lambda t}\), где \(\lambda=0{,}04\ \text{с}^{-1}\). Определите период полураспада этих ядер (в \(\text{с}\)).
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+За период полураспада \(N/N_0=1/2\), поэтому \(2^{-\lambda T}=2^{-1}\) и \(\lambda T=1\). Следовательно, \(T=1/\lambda=1/0{,}04=25\,\text{с}\). Ответ: \(25\,\text{с}\).
+}
+
+% Source AB2CB2: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=AB2CB2
+\BankTask{AB2CB2}{
+Образец радиоактивного радия \({}_{88}^{224}\mathrm{Ra}\) находится в закрытом сосуде, из которого откачан воздух. Ядра радия испытывают \(\alpha\)-распад с периодом полураспада \(3{,}6\,\text{суток}\). Определите число моль гелия в сосуде через \(10{,}8\,\text{суток}\), если образец в момент его помещения в сосуд имел в своём составе \(6\cdot10^{23}\) атомов радия-224, а атомов гелия в сосуде не было.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+За время \(t=10{,}8\,\text{суток}\) проходит \(t/T=10{,}8/3{,}6=3\) периода полураспада, поэтому распадается \(N_0(1-2^{-3})=\frac78N_0\) ядер радия. При каждом \(\alpha\)-распаде образуется одно ядро гелия, поэтому \(\nu_{\mathrm{He}}=\frac{7N_0}{8N_A}=\frac{7\cdot6\cdot10^{23}}{8\cdot6\cdot10^{23}}=0{,}875\ \text{моль}\). Ответ: \(0{,}875\,\text{моль}\).
+}
+
+% Source BCED39: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=BCED39
+\BankTask{BCED39}{
+Чему равен период (в годах) полураспада ядер изотопа \({}_{11}^{22}\mathrm{Na}\), если за \(9\,\text{лет}\) исходно большое число нераспавшихся ядер атомов этого изотопа уменьшилось в \(8\) раз?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По закону радиоактивного распада \(N/N_0=2^{-t/T}=1/8=2^{-3}\), следовательно, \(t/T=3\). Период полураспада \(T=9/3=3\,\text{года}\). Ответ: \(3\,\text{года}\).
+}
+
+% Source BFC0DC: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=BFC0DC
+\BankTask{BFC0DC}{
+Сколько электронов содержится в электронной оболочке нейтрального атома изотопа тория ${}_{90}^{234}\mathrm{Th}$?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+В нейтральном атоме число электронов равно числу протонов: $N_e=Z=90$. Ответ: $90$ электронов.
+}
+
+% Source 2B1449: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=2B1449
+\BankTask{2B1449}{
+Сколько протонов и сколько нейтронов содержится в ядре ${}_{50}^{119}\mathrm{Sn}$?
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Число протонов & Число нейтронов \\
+\hline
+\rule{0pt}{1.5em} & \\
+\hline
+\end{tabular}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Число протонов равно зарядовому числу: $Z=50$. Число нейтронов $N=A-Z=119-50=69$. Ответ: $50$ протонов, $69$ нейтронов.
+}
+
+% Source 018DD9: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=018DD9
+\BankTask{018DD9}{
+Ядро азота захватывает альфа-частицу, в результате чего происходит ядерная реакция ${}_{7}^{14}\mathrm{N}+{}_{2}^{4}\mathrm{He}\to{}_{Z}^{A}X+{}_{1}^{1}\mathrm{p}$ с образованием ядра химического элемента ${}_{Z}^{A}X$. Каков заряд $Z$ образовавшегося ядра (в единицах элементарного заряда)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По закону сохранения электрического заряда $7+2=Z+1$. Следовательно, $Z=8$. Ответ: $8$.
+}
+
+% Source A21154: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=A21154
+\BankTask{A21154}{
+Ядро урана захватывает нейтрон, в результате чего происходит ядерная реакция ${}_{0}^{1}\mathrm{n}+{}_{92}^{238}\mathrm{U}\to{}_{Z}^{A}X+2{}_{0}^{1}\mathrm{n}$ с образованием ядра химического элемента ${}_{Z}^{A}X$. Каков заряд образовавшегося ядра $Z$ (в единицах элементарного заряда)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По закону сохранения электрического заряда $0+92=Z+2\cdot0$. Следовательно, заряд образовавшегося ядра в единицах элементарного заряда равен $Z=92$.
+}
+
+% Source 2787C9: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=2787C9
+\BankTask{2787C9}{
+Ядро лития может захватить протон, в результате чего происходит ядерная реакция ${}_{1}^{1}\mathrm{p}+{}_{3}^{7}\mathrm{Li}\to{}_{Z}^{A}X+{}_{2}^{4}\mathrm{He}$ с образованием ядра химического элемента ${}_{Z}^{A}X$. Каковы заряд образовавшегося ядра $Z$ (в единицах элементарного заряда) и его массовое число $A$?
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Заряд ядра $Z$ & Массовое число ядра $A$ \\
+\hline
+ & \\
+\hline
+\end{tabular}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По закону сохранения электрического заряда $1+3=Z+2$, откуда $Z=2$. По закону сохранения массового числа $1+7=A+4$, поэтому $A=4$. Ответ: $2$; $4$.
+}
+
+% Source E423E8: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=E423E8
+\BankTask{E423E8}{
+Через сколько лет из $2\cdot10^{10}$ ядер радиоактивного изотопа цезия ${}_{55}^{137}\mathrm{Cs}$, имеющего период полураспада $T=26\,\text{лет}$, нераспавшимися останутся $2{,}5\cdot10^9$ ядер изотопа?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По закону радиоактивного распада $N=N_0\cdot2^{-t/T}$. Отношение $N_0/N=(2\cdot10^{10})/(2{,}5\cdot10^9)=8=2^3$, поэтому прошло три периода полураспада. Следовательно, $t=3T=78\,\text{лет}$.
+}
+
+% Source DCA275: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=DCA275
+\BankTask{DCA275}{
+Какая доля (в процентах) от исходного большого количества радиоактивных ядер распадётся за интервал времени, равный двум периодам полураспада?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+За два периода полураспада останется доля ядер $N/N_0=2^{-2}=1/4$. Доля распавшихся ядер равна $1-1/4=3/4=75\,\%$. Ответ: $75\,\%$.
+}
+
+% Source 38C6C8: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=38C6C8
+\BankTask{38C6C8}{
+Образец радиоактивного полония ${}_{84}^{218}\mathrm{Po}$ находится в закрытом сосуде, из которого откачан воздух. Ядра полония испытывают $\alpha$-распад с периодом полураспада $3\,\text{мин}$. Определите число моль полония-218 в сосуде через $9\,\text{мин.}$, если образец в момент его помещения в сосуд имел в своём составе $2{,}4\times10^{23}$ атомов полония-218.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+За время $9\,\text{мин}$ проходит $t/T=9/3=3$ периода полураспада. Число оставшихся атомов полония-218 равно $N=N_0\cdot2^{-3}=3\times10^{22}$. Количество вещества $\nu=N/N_A=\dfrac{3\times10^{22}}{6\times10^{23}}\,\text{моль}=0{,}05\,\text{моль}$. Ответ: $0{,}05\,\text{моль}$.
+}
+
+\end{document}

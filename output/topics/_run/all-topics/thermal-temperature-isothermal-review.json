@@ -1,0 +1,119 @@
+{
+  "approved": true,
+  "reviewed_sha256": "f88cca9fabfe61a4ce4b08b35561908c9a93d8e0aadbe7d8cb453cd5d4d096eb",
+  "tasks": [
+    {
+      "id": "sdamgia-3360",
+      "approved": true,
+      "reason": "All20 condition/solution pairs recalculated; published formulas, dimensions and source checked."
+    },
+    {
+      "id": "sdamgia-6116",
+      "approved": true,
+      "reason": "All20 condition/solution pairs recalculated; published formulas, dimensions and source checked."
+    },
+    {
+      "id": "sdamgia-3725",
+      "approved": true,
+      "reason": "All20 condition/solution pairs recalculated; published formulas, dimensions and source checked."
+    },
+    {
+      "id": "sdamgia-36755",
+      "approved": true,
+      "reason": "All20 condition/solution pairs recalculated; published formulas, dimensions and source checked."
+    },
+    {
+      "id": "sdamgia-12859",
+      "approved": true,
+      "reason": "All20 condition/solution pairs recalculated; published formulas, dimensions and source checked."
+    },
+    {
+      "id": "sdamgia-19663",
+      "approved": true,
+      "reason": "All20 condition/solution pairs recalculated; published formulas, dimensions and source checked."
+    },
+    {
+      "id": "sdamgia-10943",
+      "approved": true,
+      "reason": "All20 condition/solution pairs recalculated; published formulas, dimensions and source checked."
+    },
+    {
+      "id": "sdamgia-4217",
+      "approved": true,
+      "reason": "All20 condition/solution pairs recalculated; published formulas, dimensions and source checked."
+    },
+    {
+      "id": "sdamgia-38954",
+      "approved": true,
+      "reason": "All20 condition/solution pairs recalculated; published formulas, dimensions and source checked."
+    },
+    {
+      "id": "sdamgia-9757",
+      "approved": true,
+      "reason": "All20 condition/solution pairs recalculated; published formulas, dimensions and source checked."
+    },
+    {
+      "id": "sdamgia-44611",
+      "approved": true,
+      "reason": "All20 condition/solution pairs recalculated; published formulas, dimensions and source checked."
+    },
+    {
+      "id": "sdamgia-12964",
+      "approved": true,
+      "reason": "All20 condition/solution pairs recalculated; published formulas, dimensions and source checked."
+    },
+    {
+      "id": "sdamgia-3105",
+      "approved": true,
+      "reason": "All20 condition/solution pairs recalculated; published formulas, dimensions and source checked."
+    },
+    {
+      "id": "sdamgia-28083",
+      "approved": true,
+      "reason": "All20 condition/solution pairs recalculated; published formulas, dimensions and source checked."
+    },
+    {
+      "id": "sdamgia-32063",
+      "approved": true,
+      "reason": "All20 condition/solution pairs recalculated; published formulas, dimensions and source checked."
+    },
+    {
+      "id": "sdamgia-6065",
+      "approved": true,
+      "reason": "All20 condition/solution pairs recalculated; published formulas, dimensions and source checked."
+    },
+    {
+      "id": "sdamgia-2806",
+      "approved": true,
+      "reason": "All20 condition/solution pairs recalculated; published formulas, dimensions and source checked."
+    },
+    {
+      "id": "sdamgia-4928",
+      "approved": true,
+      "reason": "All20 condition/solution pairs recalculated; published formulas, dimensions and source checked."
+    },
+    {
+      "id": "sdamgia-37906",
+      "approved": true,
+      "reason": "All20 condition/solution pairs recalculated; published formulas, dimensions and source checked."
+    },
+    {
+      "id": "sdamgia-31427",
+      "approved": true,
+      "reason": "All20 condition/solution pairs recalculated; published formulas, dimensions and source checked."
+    }
+  ],
+  "originals_viewed": [
+    "4928 figure: two isotherms",
+    "36755 figure: fixed heat-conducting partition A/B"
+  ],
+  "resolved": [
+    "19728 excluded because absolute internal-energy comparison was not justified",
+    "36755 replacement: both gases reach303K, correct34",
+    "4217 source formula faithfully retyped",
+    "3725 boilerplate removed; physical question and table retained"
+  ],
+  "notes": [
+    "28083 source itself has no answer AB table; none was omitted."
+  ]
+}

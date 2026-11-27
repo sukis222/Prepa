@@ -1,0 +1,108 @@
+{
+  "approved": true,
+  "reviewed_sha256": "c976644b14fc33257d30f1ee6755b177abf70ff76ea070c2308d5206e7b05e8b",
+  "scope": "All20 conditions/published solutions independently read. Isobaric/isochoric laws, work signs, heat capacities, mixed processes and numeric results recomputed. Source snapshot hashes and published-solution prose checked. All four requested transcription fixes closed. No source figures in this batch.",
+  "issues": [],
+  "tasks": [
+    {
+      "topic": "2.6.4",
+      "id": "sdamgia-43309",
+      "approved": true
+    },
+    {
+      "topic": "2.6.4",
+      "id": "sdamgia-43814",
+      "approved": true
+    },
+    {
+      "topic": "2.6.4",
+      "id": "sdamgia-2608",
+      "approved": true
+    },
+    {
+      "topic": "2.6.4",
+      "id": "sdamgia-6065",
+      "approved": true
+    },
+    {
+      "topic": "2.6.4",
+      "id": "sdamgia-12858",
+      "approved": true
+    },
+    {
+      "topic": "2.6.4",
+      "id": "sdamgia-11267",
+      "approved": true
+    },
+    {
+      "topic": "2.6.4",
+      "id": "sdamgia-12962",
+      "approved": true
+    },
+    {
+      "topic": "2.6.4",
+      "id": "sdamgia-3442",
+      "approved": true
+    },
+    {
+      "topic": "2.6.4",
+      "id": "sdamgia-11893",
+      "approved": true
+    },
+    {
+      "topic": "2.6.4",
+      "id": "sdamgia-6060",
+      "approved": true
+    },
+    {
+      "topic": "2.6.6",
+      "id": "sdamgia-9500",
+      "approved": true
+    },
+    {
+      "topic": "2.6.6",
+      "id": "sdamgia-29027",
+      "approved": true
+    },
+    {
+      "topic": "2.6.6",
+      "id": "sdamgia-3297",
+      "approved": true
+    },
+    {
+      "topic": "2.6.6",
+      "id": "sdamgia-39946",
+      "approved": true
+    },
+    {
+      "topic": "2.6.6",
+      "id": "sdamgia-43061",
+      "approved": true
+    },
+    {
+      "topic": "2.6.6",
+      "id": "sdamgia-7111",
+      "approved": true
+    },
+    {
+      "topic": "2.6.6",
+      "id": "sdamgia-11269",
+      "approved": true
+    },
+    {
+      "topic": "2.6.6",
+      "id": "sdamgia-3438",
+      "approved": true
+    },
+    {
+      "topic": "2.6.6",
+      "id": "sdamgia-3890",
+      "approved": true
+    },
+    {
+      "topic": "2.6.6",
+      "id": "sdamgia-9753",
+      "approved": true
+    }
+  ]
+}

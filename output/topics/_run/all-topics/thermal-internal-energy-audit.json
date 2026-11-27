@@ -1,0 +1,15 @@
+{
+  "batch": "thermal-internal-energy",
+  "bundle_sha256": "6902c6ff056c1c950b3b161c30c6f398ffec88923919fe7fc7a831eb9efe4a09",
+  "topics": [
+    "2.8.1"
+  ],
+  "tasks": 10,
+  "pages": 6,
+  "baseline_preserved": 107,
+  "files": {
+    "task-2-8-1.tex": "da09509c1e415a05a76c8ca6982df5934dd75a636377d4adc02d5bb34a11ab62",
+    "tutor-2-8-1.tex": "14b34a418b5758500a5763b13f5761355abba6e690811a029c448fb1fc058d80"
+  },
+  "editor_open_checked": false
+}

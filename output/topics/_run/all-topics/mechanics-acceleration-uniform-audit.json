@@ -1,0 +1,18 @@
+{
+  "batch": "mechanics-acceleration-uniform",
+  "bundle_sha256": "7c35791ee172bd453b88d6bff2749bcbe0490922f672c0a77e04eeda755b3bde",
+  "topics": [
+    "1.1.6",
+    "1.2.1"
+  ],
+  "tasks": 20,
+  "pages": 18,
+  "baseline_preserved": 107,
+  "files": {
+    "task-1-1-6.tex": "7c9493ddfca41d75178337ccda8cf4bc6a15dbdc8498eb1abadbefd4d86fa861",
+    "tutor-1-1-6.tex": "598f37f07d9880fc0e049862ae45a1663e7a8c630bf3b1a7bbd1cf6de6419308",
+    "task-1-2-1.tex": "309b51211bcc36ffe76f1cf73ceb577d71e02c1b6874973aa5a274261e992c0d",
+    "tutor-1-2-1.tex": "544955136edb9a0371b8bcfd4ae2830a328cb7e0920829881ab348215f0ff202"
+  },
+  "editor_open_checked": false
+}

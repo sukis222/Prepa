@@ -1,0 +1,31 @@
+{
+  "approved": true,
+  "bundle_sha256": "49b1964d6a0f1ee3a23ef6841cb06a96928e51d5e1df07110e532d91488b67f0",
+  "pages": [
+    {
+      "file": "tmp\\all-topics\\hooke\\preview\\task-1-9-2\\page-01.png",
+      "sha256": "3d5371a472d54b78d1e5e56d33b967a6a28eff2f230129288e7918622309ea7a"
+    },
+    {
+      "file": "tmp\\all-topics\\hooke\\preview\\task-1-9-2\\page-02.png",
+      "sha256": "fdc2c1c14ba894214b23e767d9692d4c631b3c763169a2ea673b1821a9d1e0bc"
+    },
+    {
+      "file": "tmp\\all-topics\\hooke\\preview\\tutor-1-9-2\\page-01.png",
+      "sha256": "bcd0f8e0197ea86c46c099268bae45ef462524860872f78b5fbf62dcf02c85c2"
+    },
+    {
+      "file": "tmp\\all-topics\\hooke\\preview\\tutor-1-9-2\\page-02.png",
+      "sha256": "18a87790aa20c8803c2fe928b49da6b9329455f83dfc71586619e55ccc0dc5a5"
+    },
+    {
+      "file": "tmp\\all-topics\\hooke\\preview\\tutor-1-9-2\\page-03.png",
+      "sha256": "f6c4bbcda07e4aee857294c6e2bb7bb9a1a5699ad60798598af67b8f79a58fc4"
+    },
+    {
+      "file": "tmp\\all-topics\\hooke\\preview\\tutor-1-9-2\\page-04.png",
+      "sha256": "1b26f3bce335306081ae3e8f5e996bbf6fc6b2a4994f4ba7b98b586f02b62f27"
+    }
+  ],
+  "scope": "Every rendered page viewed; diagrams, lines, tables and typeset formulas checked. Editor opening not checked."
+}

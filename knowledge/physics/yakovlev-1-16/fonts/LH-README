@@ -1,0 +1,15 @@
+lhfonts 3.5g
+Cyrillic alphabet fonts ("LH") with support of LaTeX standard encodings.
+
+     The LH fonts address the problem  of the wide variety  of alphabets
+     that are written with Cyrillic-style characters.  The fonts are the
+     original basis of the set of T2* and X2 encodings that are now used
+     when LaTeX users need to write in Cyrillic languages.
+
+     There are also offered the latex/lh bundle of packages for standard
+     LaTeX Cyrillic and traditional encodings.
+
+Please look installation documentation in the install
+
+     report errors to Olga Lapko, 
+     e-mail: Lapko.O@g23.relcom.ru, tr-paw@yandex.ru

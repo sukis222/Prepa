@@ -1,0 +1,138 @@
+{
+  "approved": true,
+  "reviewed_sha256": "b42f44c1b6bc4d009e1ad783aae49b7066930b5b6dba6d31f9bd4edc74e4c945",
+  "tasks": [
+    {
+      "id": "sdamgia-6653",
+      "approved": true,
+      "reason": "14:В/м,Ф",
+      "source_snapshot_sha256": "8e838e38b96cea3351528f609d663cd959a5aa71fe75271c33c771cd740f22ef"
+    },
+    {
+      "id": "sdamgia-3191",
+      "approved": true,
+      "reason": "34:q=CU,E=U/d",
+      "source_snapshot_sha256": "517dd4020ee3f2174f1fc8b1b81b83619353ea4dd8288f3304d7abe82c7b684b"
+    },
+    {
+      "id": "sdamgia-9058",
+      "approved": true,
+      "reason": "20мкКл",
+      "source_snapshot_sha256": "328147142c9f12e2d5c27113028afe3f215a9e81b02f673b8e653ee68fc19b70"
+    },
+    {
+      "id": "sdamgia-6930",
+      "approved": true,
+      "reason": "32:qпостоянен,Eпостоянна,Cуменьшается",
+      "source_snapshot_sha256": "1918e920c1710d6576dc73c1941692672010b9ed1d98327de862f740927d5465"
+    },
+    {
+      "id": "sdamgia-19667",
+      "approved": true,
+      "reason": "17.7Кл",
+      "source_snapshot_sha256": "7b9626c1cf3d512c5596176b0575714a77a7647dc7822c971d7394a6246f4ba8"
+    },
+    {
+      "id": "sdamgia-12863",
+      "approved": true,
+      "reason": "24пФ",
+      "source_snapshot_sha256": "db900d413981c950c2467c464c0d9b93c407ce45c1e0f032f2efa29d2e591451"
+    },
+    {
+      "id": "sdamgia-8866",
+      "approved": true,
+      "reason": "134:S20см²,C25с11.8пФ,E5кВ/м,U20с7В",
+      "source_snapshot_sha256": "c19d1e8e5acf6ce70a8637833e85e2a21a83b8c69f87c7cfd1e84c61a4777c7b"
+    },
+    {
+      "id": "sdamgia-7713",
+      "approved": true,
+      "reason": "C1/C=d/(d−b)=6",
+      "source_snapshot_sha256": "41cc7394b0e949e9791309baa4150550fd9f2ba40d0fa2cc11f59c115fc0080d"
+    },
+    {
+      "id": "sdamgia-52050",
+      "approved": true,
+      "reason": "1.6мкКл",
+      "source_snapshot_sha256": "85150b7070a68cf23c3dea95fdcfc07ab989889c3efb7cccecf8a3a0104bb7bd"
+    },
+    {
+      "id": "sdamgia-29127",
+      "approved": true,
+      "reason": "Параллельные площади:±ε0aU(ε−1)V/d,переломa/V",
+      "source_snapshot_sha256": "54da74f6baf0d73f066b40f2fd8b4e83dbe63616a7c84b8eef159507052d9c94"
+    },
+    {
+      "id": "sdamgia-11559",
+      "approved": true,
+      "reason": "13",
+      "source_snapshot_sha256": "0d61dca78c99489f538a869be3c8dac49d71425347f955b5b3dc1072de786a74"
+    },
+    {
+      "id": "sdamgia-3761",
+      "approved": true,
+      "reason": "14:E=q/ε0S,W=q²d/(2ε0S)",
+      "source_snapshot_sha256": "386fee1e6cbacc4746ea9e3e969b90d74bd5201103bd47004e7a67f823e95bbb"
+    },
+    {
+      "id": "sdamgia-3524",
+      "approved": true,
+      "reason": "4мкДж,работаисточникаCЭДС²",
+      "source_snapshot_sha256": "6c65f7d790b6a90ef1d744e2ab9682f4dc14dc617dcda9a30e4cea104c886f1f"
+    },
+    {
+      "id": "sdamgia-11669",
+      "approved": true,
+      "reason": "4Дж",
+      "source_snapshot_sha256": "7242f534d62b8a4edaeb7b65a2bffe56fe5e8dc3d06c93640cb5e45508ff8d5c"
+    },
+    {
+      "id": "sdamgia-3530",
+      "approved": true,
+      "reason": "1,теплоCЭДС²/2независитотR",
+      "source_snapshot_sha256": "631ea19d41215f9c66e7063c1bf821e6b1c0ab54b92b50a3f64a20ee4d6c8416"
+    },
+    {
+      "id": "sdamgia-2441",
+      "approved": true,
+      "reason": "2Дж",
+      "source_snapshot_sha256": "dd9449aab65ffec93c61ccabdba65b226375ec2e8651b26d744ea0497c2ca796"
+    },
+    {
+      "id": "sdamgia-6358",
+      "approved": true,
+      "reason": "14:18мкДж,3мкКл",
+      "source_snapshot_sha256": "e648368b3831532996b1779cbea3f73e7c7a72591338e605658c66f5b440a88f"
+    },
+    {
+      "id": "sdamgia-6662",
+      "approved": true,
+      "reason": "864мкДж",
+      "source_snapshot_sha256": "b0f63ee7a00c4af30947772c284f784e51efc43356e00b664729183ca0a2bbfc"
+    },
+    {
+      "id": "sdamgia-19878",
+      "approved": true,
+      "reason": "100нДж",
+      "source_snapshot_sha256": "398d03aa748d7eef319d48374322e04e32e311ac39d680fcfa93574f758be880"
+    },
+    {
+      "id": "sdamgia-8025",
+      "approved": true,
+      "reason": "30мДж",
+      "source_snapshot_sha256": "f7030208b9f64b06bf7955b928cae1a21bb7f6f73668fe0e5ca7293ff777e1c9"
+    }
+  ],
+  "scope": "Все20условий и опубликованных решений прочитаны, сверены с первичнымиHTML, физические модели и вычисления проверены независимо. Пять оригинальных рисунков лично просмотрены и сопоставлены сTikZ.",
+  "figures_viewed": [
+    "8866-condition-0",
+    "29127-condition-1",
+    "29127-solution-12",
+    "2441-solution-1",
+    "8025-condition-0"
+  ],
+  "resolved": [
+    "В6662служебнаякомандавыраженияответа заменена кратким указанием единиц."
+  ],
+  "issues": []
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="340" viewBox="0 0 900 340">
+ 
+ <rect width="900" height="340" rx="16" fill="#f5f8fc"/>
+ <g font-family="Arial, sans-serif" fill="#182b43">
+ <text x="36" y="43" font-size="24" font-weight="bold">Сила упругости направлена против деформации</text>
+ <path d="M99 105V231M86 109L99 122M86 136L99 149M86 163L99 176M86 190L99 203M86 217L99 230" stroke="#8d9eb2" stroke-width="2"/>
+ <path d="M100 170H130L146 147L178 193L210 147L242 193L274 147L306 193L338 147L370 193L402 147L434 193L450 170H490" fill="none" stroke="#546477" stroke-width="3"/>
+ <rect x="490" y="140" width="86" height="61" rx="4" fill="#dcebf9" stroke="#2563a6" stroke-width="2"/>
+ <path d="M534 170H399" stroke="#2563a6" stroke-width="3"/><text x="396" y="120" font-size="22" fill="#2563a6">Fупр</text>
+ <path d="M99 257H784" stroke="#546477" stroke-width="2"/><text x="797" y="264" font-size="22">x</text>
+ <path d="M352 222V266M534 222V266" stroke="#8d9eb2" stroke-width="2" stroke-dasharray="5 4"/>
+ <text x="345" y="289" font-size="21">0</text><text x="522" y="289" font-size="21">x &gt; 0</text>
+ <text x="621" y="143" font-size="25">Fₓ = −kx &lt; 0</text><text x="621" y="182" font-size="20">Пружина растянута.</text><text x="621" y="212" font-size="20">Сила направлена влево.</text>
+ <path d="M399 170L413 163L413 177Z" fill="#2563a6"/><path d="M784 257L771 251L771 263Z" fill="#546477"/>
+ <text x="36" y="320" font-size="18" fill="#546477">x = 0 — положение центра бруска при недеформированной пружине.</text>
+ </g>
+</svg>

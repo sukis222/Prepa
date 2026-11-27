@@ -1,0 +1,114 @@
+% !TEX root = task-3-11-1.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{3.11.1}{Работа тока}
+
+
+% Source sdamgia-1406: https://phys-ege.sdamgia.ru/problem?id=1406
+\BankTask{sdamgia-1406}{
+Чему равно время прохождения тока силой $5$ А по проводнику, если при напряжении на его концах $120$ В в проводнике выделяется количество теплоты, равное $540$ кДж? (Ответ дайте в секундах.)
+}{
+\smallskip\noindent\textbf{Решение}\par
+Согласно закону Джоуля — Ленца количество выделяемого тепла в проводнике определяется выражением $Q=UIt.$ Отсюда находим время прохождения тока по проводнику:
+
+\[t= \frac{Q}{UI} = \frac{540\,\text{\,\text{кДж}}}{120\,\text{В} \cdot  5\,\text{А}} = \frac{540 \cdot  10 ^3\,\text{Дж}}{120\,\text{В} \cdot  5\,\text{А}} =900\,\text{с}.\]
+
+Ответ: $900$.
+}
+
+% Source sdamgia-4910: https://phys-ege.sdamgia.ru/problem?id=4910
+\BankTask{sdamgia-4910}{
+Комната освещается четырьмя одинаковыми параллельно включенными лампочками. Расход электроэнергии за час равен Q. Каким должно быть число параллельно включенных лампочек, чтобы расход электроэнергии в час был равен $2$Q?
+}{
+\smallskip\noindent\textbf{Решение}\par
+При параллельном соединении ко всем лампочкам приложено одинаковое напряжение $U.$ Независимо от общего количества лампочек за $1$ час каждая лампочка расходует одинаковое количество энергии $\frac{U ^2}{R} \cdot  1\,\text{ч},$ где $R$ — сопротивление лампочки. Согласно условию, расход $4$ лампочек равен $Q=4 \cdot  \frac{U ^2}{R} \cdot  1\,\text{ч}.$ Следовательно, чтобы расход энергии за час стал равен $2Q,$ необходимо, чтобы было включено $8$ лампочек (параллельно соединенных).
+
+Ответ: $8$.
+}
+
+% Source sdamgia-19720: https://phys-ege.sdamgia.ru/problem?id=19720
+\BankTask{sdamgia-19720}{
+Показания квартирного электросчетчика за некоторое время возросли на $200$ кВт · ч. Какую работу совершил за это время электрический ток, протекавший через установленные в данной квартире электроприборы? Ответ запишите в мегаджоулях.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Работа электрического тока равна потребленной электроэнергии, которая по условию равна $200$ кВт · ч. 
+
+Переводим эту величину в Джоули: $200$ кВт · ч = $200$ · $1000\,\text{Вт}$ · $3600\,\text{с} = 720$ · $10$\textasciicircum{}\{$6$\} Дж = $720$ МДж.
+
+Ответ: $720$.
+}
+
+% Source sdamgia-42639: https://phys-ege.sdamgia.ru/problem?id=42639
+\BankTask{sdamgia-42639}{
+При прохождении по проводнику постоянный электрический ток силой $3$ А в течение $60\,\text{с}$ совершает работу, равную $270$ кДж. Чему равно сопротивление проводника? Ответ запишите в омах.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Из формулы работы электрического тока $A=I ^2 Rt$ находим сопротивление проводника:
+
+\[R= \frac{A}{I ^2 t} = \frac{270000}{9 \cdot  60} =500\,\text{Ом}.\]
+
+Ответ: $500$.
+}
+
+% Source sdamgia-46771: https://phys-ege.sdamgia.ru/problem?id=46771
+\BankTask{sdamgia-46771}{
+Паяльник подключили к источнику постоянного напряжения $220$ В. Какое количество теплоты выделится за $20$ минут работы паяльника, если сила тока в цепи его питания равна $1{,}2$ А? Ответ дайте в килоджоулях.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Количество теплоты, выделяющееся в проводнике при прохождении тока равно работе тока
+
+\[Q = UIt = 220 \cdot  1{,}2 \cdot  1200 = 316800\,\text{Дж} = 316{,}8\,\text{\,\text{кДж}}.\]
+
+Ответ: $316{,}8$.
+}
+
+
+% Source 0990BD: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=0990BD
+\BankTask{0990BD}{
+При прохождении по проводнику постоянный электрический ток силой $3\,\text{А}$ в течение $60\,\text{с}$ совершает работу, равную $270\,\text{кДж}$. Чему равно сопротивление проводника (в $\text{Ом}$)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Работа постоянного тока $A=I^2Rt$. Следовательно,
+\[
+R=\frac{A}{I^2t}=\frac{270\cdot10^3}{3^2\cdot60}=500\,\text{Ом}.
+\]
+Ответ: $500\,\text{Ом}$.
+}
+
+\end{document}

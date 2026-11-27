@@ -1,0 +1,39 @@
+{
+  "approved": true,
+  "bundle_sha256": "72c77e46ddbae6a492d03c98cf1af6e98b49b0068730668bfd3d6c97008cb354",
+  "pages": [
+    {
+      "file": "tmp\\all-topics\\gravity\\preview\\task-1-10-1\\page-01.png",
+      "sha256": "3d8ebccaaaf5adcf2c85f4b688b91b975567f8a6317009db4c5f2d30869a9f96"
+    },
+    {
+      "file": "tmp\\all-topics\\gravity\\preview\\task-1-10-1\\page-02.png",
+      "sha256": "383fc8931198810c1e0051da021f2b07be47022b5e41200fd8841b6ef3ee7072"
+    },
+    {
+      "file": "tmp\\all-topics\\gravity\\preview\\tutor-1-10-1\\page-01.png",
+      "sha256": "ecc17c81aaec25302a2b36dc9a18d4a13c2345c6e7d0f361fa041a300b7007f5"
+    },
+    {
+      "file": "tmp\\all-topics\\gravity\\preview\\tutor-1-10-1\\page-02.png",
+      "sha256": "0e6d78d268e01b2eb82205f402573ffa65f974c622a0a28b0d95e1060f29b633"
+    },
+    {
+      "file": "tmp\\all-topics\\gravity\\preview\\tutor-1-10-1\\page-03.png",
+      "sha256": "221d651fac456cea0b6f0c68b7bc7742e200d0a3c8e19911299392ff6e1f5e92"
+    },
+    {
+      "file": "tmp\\all-topics\\gravity\\preview\\tutor-1-10-1\\page-04.png",
+      "sha256": "99124b840d1162e05fb43981c9e31311b2dd026553f1fbd74d7a219a85377771"
+    },
+    {
+      "file": "tmp\\all-topics\\gravity\\preview\\tutor-1-10-1\\page-05.png",
+      "sha256": "e790e7ccf317a4c5bcba47fdc0452dd877d274349fccf5f79fd7a3891900d9fb"
+    },
+    {
+      "file": "tmp\\all-topics\\gravity\\preview\\tutor-1-10-1\\page-06.png",
+      "sha256": "4d15349f836dbd815fd0a367fc28a2502688e389369bcbfa0611b2ae9f940978"
+    }
+  ],
+  "scope": "Every rendered page viewed; diagrams, lines, tables and typeset formulas checked. Editor opening not checked."
+}

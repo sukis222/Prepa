@@ -1,0 +1,132 @@
+% !TEX root = task-3-20-1.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{3.20.1}{Индуктивность}
+
+
+% Source DB72A1: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=DB72A1
+\BankTask{DB72A1}{
+Сила тока в катушке с индуктивностью \(0{,}2\,\text{Гн}\) за \(0{,}05\,\text{с}\) равномерно увеличилась от \(2\,\text{А}\) до \(5\,\text{А}\). Чему равен модуль ЭДС самоиндукции в катушке (в $\text{В}$)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+\[
+|\mathcal{E}_{\text{си}}|=L\frac{|\Delta I|}{\Delta t}=0{,}2\cdot\frac{5-2}{0{,}05}=12\,\text{В}.
+\]
+Ответ: \(12\,\text{В}\).
+}
+
+% Source B8FD36: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B8FD36
+\BankTask{B8FD36}{
+При равномерном изменении силы тока в катушке на \(10\,\text{А}\) за \(0{,}02\,\text{с}\) в ней возникает ЭДС самоиндукции, равная \(200\,\text{В}\). Чему равна индуктивность катушки (в $\text{Гн}$)?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Из \(|\mathcal{E}_{\text{си}}|=L|\Delta I|/\Delta t\) получаем
+\[
+L=\frac{|\mathcal{E}_{\text{си}}|\Delta t}{|\Delta I|}=\frac{200\cdot0{,}02}{10}=0{,}4\,\text{Гн}.
+\]
+Ответ: \(0{,}4\,\text{Гн}\).
+}
+
+% Source 159D34: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=159D34
+\BankTask{159D34}{
+В катушке индуктивностью \(1\,\text{мГн}\) сила тока в течение \(0{,}1\,\text{с}\) равномерно возрастает от \(0\) до некоторого конечного значения. При этом в катушке наблюдается ЭДС самоиндукции, модуль которой равен \(0{,}2\,\text{В}\). Определите конечное значение силы тока в катушке (в $\text{А}$).
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По закону самоиндукции \(|\mathcal{E}|=L\dfrac{\Delta I}{\Delta t}\). Начальный ток равен нулю, поэтому
+\[
+I=\frac{|\mathcal{E}|\Delta t}{L}=\frac{0{,}2\cdot0{,}1}{10^{-3}}=20\,\text{А}.
+\]
+Ответ: \(20\).
+}
+
+% Source 31DAF4: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=31DAF4
+\BankTask{31DAF4}{
+На рисунке приведён график зависимости силы тока от времени в электрической цепи, содержащей катушку, индуктивность которой равна \(1\,\text{мГн}\). Определите модуль ЭДС самоиндукции (в $\text{мкВ}$) в интервале от \(0\) до \(5\,\text{с}\).
+\begin{center}
+\begin{tikzpicture}[x=0.25cm,y=0.142cm,>=stealth]
+\draw[thin] (0,10)--(20,10) (0,20)--(20,20) (0,30)--(20,30);
+\draw[thin] (5,0)--(5,30) (10,0)--(10,30) (15,0)--(15,30) (20,0)--(20,30);
+\draw[->] (0,0)--(23,0) node[right] {\(t,\,\text{с}\)};
+\draw[->] (0,0)--(0,39);
+\node[anchor=east] at (-0.8,38) {\(I,\,\text{мА}\)};
+\node[below left] at (0,0) {\(0\)};
+\foreach \x in {5,10,15,20} \node[below] at (\x,0) {\(\x\)};
+\foreach \y in {10,20,30} \node[left] at (0,\y) {\(\y\)};
+\draw[thick] (0,0)--(5,30)--(10,20)--(15,20)--(20,0);
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+В интервале от \(0\) до \(5\,\text{с}\) ток равномерно возрастает от \(0\) до \(30\,\text{мА}\). Тогда
+\[
+|\mathcal{E}|=L\frac{|\Delta I|}{\Delta t}=10^{-3}\frac{30\cdot10^{-3}}{5}=6\cdot10^{-6}\,\text{В}=6\,\text{мкВ}.
+\]
+Ответ: \(6\).
+}
+
+% Source 9CFC20: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=9CFC20
+\BankTask{9CFC20}{
+В катушке индуктивностью $20\,\text{мГн}$ сила тока $I$ зависит от времени $t$, как показано на графике, приведённом на рисунке.
+
+\begin{enumerate}
+\item Модуль ЭДС самоиндукции в катушке максимален в интервале времени от $0$ до $1\,\text{с}$.
+\item Энергия магнитного поля катушки в интервале времени от $2$ до $3\,\text{с}$ равна $40\,\text{мДж}$.
+\item Модуль ЭДС самоиндукции в катушке в интервале времени от $3$ до $5\,\text{с}$ равен $10\,\text{мВ}$.
+\item Модуль ЭДС самоиндукции в катушке минимален в интервале времени от $3$ до $4\,\text{с}$.
+\item Модуль скорости изменения тока в катушке максимален в интервале времени от $5$ до $6\,\text{с}$.
+\end{enumerate}
+
+\begin{center}
+\begin{tikzpicture}[book diagram,x=0.75cm,y=0.75cm]
+\draw[thin] (0,1)--(6,1) (0,2)--(6,2) (0,3)--(6,3) (0,4)--(6,4);
+\foreach \x in {1,2,3,4,5,6} {\draw[thin] (\x,0)--(\x,4);}
+\draw[-{book tip}] (0,0)--(6.75,0) node[right] {$t,\,\text{с}$};
+\draw[-{book tip}] (0,0)--(0,4.9) node[above left] {$I,\,\text{А}$};
+\node[below left] at (0,0) {$0$};
+\foreach \x in {1,2,3,4,5,6} {\node[below] at (\x,0) {$\x$};}
+\foreach \y in {1,2,3,4} {\node[left] at (0,\y) {$\y$};}
+\draw[thick] (0,0)--(2,4)--(3,4)--(5,3)--(6,0);
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Используем $|\mathcal E|=L|\Delta I/\Delta t|$: на интервалах $0$–$2$, $2$–$3$, $3$–$5$ и $5$–$6\,\text{с}$ модуль скорости изменения тока равен соответственно $2$, $0$, $0{,}5$ и $3\,\text{А}/\text{с}$, поэтому утверждение 1 неверно, а 5 верно. При $2<t<3\,\text{с}$ энергия $W=LI^2/2=0{,}02\cdot4^2/2=0{,}16\,\text{Дж}=160\,\text{мДж}$, поэтому утверждение 2 неверно. На интервале $3$–$5\,\text{с}$ получаем $|\mathcal E|=0{,}02\cdot0{,}5=0{,}01\,\text{В}=10\,\text{мВ}$, поэтому утверждение 3 верно. Минимальная ЭДС равна нулю на интервале $2$–$3\,\text{с}$, поэтому утверждение 4 неверно. Ответ: 3, 5.
+}
+
+\end{document}

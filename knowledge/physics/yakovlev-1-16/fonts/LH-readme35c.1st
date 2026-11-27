@@ -1,0 +1,9 @@
+ver 3.5 patch level 4 (March 2006) --
+---------------------------------------
+In this version was corrected the width
+bug in file  lgt2upu.mf - corrected the 
+widths of letters  ZHE_dsc  and  K_dsc:
+restored  widths  of  roman shape  from 
+version 3.4. 
+The font metrics are going to be stable 
+(as ec fonts).

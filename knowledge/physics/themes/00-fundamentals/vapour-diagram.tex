@@ -1,0 +1,21 @@
+% !TeX root = fundamentals.tex
+\begin{center}
+\begin{tikzpicture}[book diagram,x=1cm,y=1cm,
+  every node/.style={font=\fontsize{10}{12}\selectfont,inner sep=2pt}]
+  \foreach \origin in {0,4} {
+    \draw (\origin,0) rectangle ++(2.2,1.35);
+    \node at (\origin+1.1,1.65) {$V,\ T=\mathrm{const}$};
+  }
+  \foreach \x in {.4,1.1,1.8} {
+    \foreach \y in {.38,.96} {\fill[bookmotion] (\x,\y) circle[radius=1.4bp];}
+  }
+  \foreach \x in {4.3,4.83,5.37,5.9} {
+    \foreach \y in {.25,.68,1.1} {\fill[bookmotion] (\x,\y) circle[radius=1.4bp];}
+  }
+  \node at (1.1,-.35) {$\varphi_1=20\%,\quad n_1$};
+  \node at (5.1,-.35) {$\varphi_2=40\%,\quad n_2=2n_1$};
+  \draw[book arrow] (2.6,.68)--(3.6,.68);
+\end{tikzpicture}
+
+{\small Рис. 0.1. Сравнение равных объёмов воздуха. Число точек условно.}
+\end{center}

@@ -1,0 +1,15 @@
+{
+  "batch": "electro-ohm",
+  "bundle_sha256": "53e2ebb29e59bcafd2022a5770fe5a13bb47fb5c46ae628b284b3fb32f58154f",
+  "topics": [
+    "3.9.1"
+  ],
+  "tasks": 10,
+  "pages": 8,
+  "baseline_preserved": 107,
+  "files": {
+    "task-3-9-1.tex": "baaa404e59098f104c594f8e67eaa8a2553e022b8a3094b779bba4d9840c5c92",
+    "tutor-3-9-1.tex": "05d70a59cb0e7d0384c9a6aa908974a3d2b8a2953c5b75daab594b25ce7f59ac"
+  },
+  "editor_open_checked": false
+}

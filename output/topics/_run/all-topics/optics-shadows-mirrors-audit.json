@@ -1,0 +1,18 @@
+{
+  "batch": "optics-shadows-mirrors",
+  "bundle_sha256": "fcc414acc81c3dd806f57e8a8005b7f1ae7465883a1531fcc575197d6cbb003a",
+  "topics": [
+    "4.1.1",
+    "4.2.2"
+  ],
+  "tasks": 17,
+  "pages": 16,
+  "baseline_preserved": 107,
+  "files": {
+    "task-4-1-1.tex": "1f167792b30be80ddb909718aeb43911aabc8380bb8768b5e86d50ddac978d42",
+    "tutor-4-1-1.tex": "7b77e22a29548854a9626ba966d2c74cd9222ec6de8a0e63cbc78dfd7e5bc696",
+    "task-4-2-2.tex": "71ebc2a25547878899029aae8e984638c347f42cd0ed964e6ee29d14dbbfc72f",
+    "tutor-4-2-2.tex": "36b3ad7cc1979183201dfe9d3b2b9263a5b3b34ecd4a738ba87c8f7860b7ec9d"
+  },
+  "editor_open_checked": false
+}

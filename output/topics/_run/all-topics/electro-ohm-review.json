@@ -1,0 +1,57 @@
+{
+  "approved": true,
+  "reviewed_sha256": "53e2ebb29e59bcafd2022a5770fe5a13bb47fb5c46ae628b284b3fb32f58154f",
+  "scope": "All10 conditions/solutions read and independently recalculated; six source diagrams inspected1407/1408/24955/25421/1916/3332. Two typography fixes1408/11948 verified; no physical discrepancies.",
+  "tasks": [
+    {
+      "id": "sdamgia-5381",
+      "approved": true,
+      "reason": "Physical model, formulas, arithmetic and source diagram correspondence verified."
+    },
+    {
+      "id": "sdamgia-3145",
+      "approved": true,
+      "reason": "Physical model, formulas, arithmetic and source diagram correspondence verified."
+    },
+    {
+      "id": "sdamgia-1407",
+      "approved": true,
+      "reason": "Physical model, formulas, arithmetic and source diagram correspondence verified."
+    },
+    {
+      "id": "sdamgia-2519",
+      "approved": true,
+      "reason": "Physical model, formulas, arithmetic and source diagram correspondence verified."
+    },
+    {
+      "id": "sdamgia-1408",
+      "approved": true,
+      "reason": "Physical model, formulas, arithmetic and source diagram correspondence verified."
+    },
+    {
+      "id": "sdamgia-3332",
+      "approved": true,
+      "reason": "Physical model, formulas, arithmetic and source diagram correspondence verified."
+    },
+    {
+      "id": "sdamgia-24955",
+      "approved": true,
+      "reason": "Physical model, formulas, arithmetic and source diagram correspondence verified."
+    },
+    {
+      "id": "sdamgia-1916",
+      "approved": true,
+      "reason": "Physical model, formulas, arithmetic and source diagram correspondence verified."
+    },
+    {
+      "id": "sdamgia-11948",
+      "approved": true,
+      "reason": "Physical model, formulas, arithmetic and source diagram correspondence verified."
+    },
+    {
+      "id": "sdamgia-25421",
+      "approved": true,
+      "reason": "Physical model, formulas, arithmetic and source diagram correspondence verified."
+    }
+  ]
+}

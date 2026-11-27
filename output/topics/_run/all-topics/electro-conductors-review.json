@@ -1,0 +1,87 @@
+{
+  "approved": true,
+  "reviewed_sha256": "2755234a14571d7d3841feb70b642ebc7f75f3534433c3bcdb35b9a0a53d8b9d",
+  "tasks": [
+    {
+      "id": "sdamgia-9088",
+      "approved": true,
+      "reason": "Электростатическая индукция.",
+      "source_snapshot_sha256": "256fb1aadc60b1169f002e732d7ee00e17d95bfead9bdc790aeb1a9ef78cd3bf"
+    },
+    {
+      "id": "sdamgia-6359",
+      "approved": true,
+      "reason": "E(2R)=kQ/(4R²), φ(R)=kQ/R:43.",
+      "source_snapshot_sha256": "7736ba298413056618d245a33862100f4eb3de3995370975484f998348cdd59d"
+    },
+    {
+      "id": "sdamgia-16857",
+      "approved": true,
+      "reason": "Внутри E=0, потенциал равен поверхности; A,C на2R:25.",
+      "source_snapshot_sha256": "bf2251b8bc5214aebc95c04d3f5380916400ac9464d1bed7f0ac3769549fe247"
+    },
+    {
+      "id": "sdamgia-4577",
+      "approved": true,
+      "reason": "Внутри E_A=0, E_B=E_C/4:14.",
+      "source_snapshot_sha256": "ec462bd5a723f162ac54fbfc5087f35f5cbf657ea756c1206368c5854f63abea"
+    },
+    {
+      "id": "sdamgia-4507",
+      "approved": true,
+      "reason": "Осевая симметрия E_A=E_C, E_B=0:21.",
+      "source_snapshot_sha256": "edc51c327dcf692d67a9b0897a58fa54704194f6e465266f83de530147d8a7aa"
+    },
+    {
+      "id": "sdamgia-4682",
+      "approved": true,
+      "reason": "Симметрия прямоугольного бруска E_N=E_M, точкаPвнутри:21.",
+      "source_snapshot_sha256": "90c3b61af96f869aed57388622d752c5d59afa7d23745a96d3c40a4e09482335"
+    },
+    {
+      "id": "sdamgia-31415",
+      "approved": true,
+      "reason": "Электроны вправо, стекло суммарно нейтрально, кубик3положителен, металл эквипотенциален:245.",
+      "source_snapshot_sha256": "6c38d4c774e655c4e447f11b22c46e275fc7088a754a1288d7a1a1bda0e97d93"
+    },
+    {
+      "id": "sdamgia-6431",
+      "approved": true,
+      "reason": "Восемь лучей изqвполости и восемь наружных нормальных лучей, в металлеE=0.",
+      "source_snapshot_sha256": "5eda06a19e9da951fdda94c3ee21780b2c7d2daa17f481dc64f88f00dbdeeae9"
+    },
+    {
+      "id": "sdamgia-4218",
+      "approved": true,
+      "reason": "Наружный заряд3нКл равномерен; E=27В/м радиальнонаружу.",
+      "source_snapshot_sha256": "af69892534b5c242a23f87298b81bca55ad6498ed22590688a0a76c998d98cfd"
+    },
+    {
+      "id": "sdamgia-6067",
+      "approved": true,
+      "reason": "Корпус заземляется отдельно от стержня; остаточный положительный заряд корпуса индуцирует разделение зарядов стержня.",
+      "source_snapshot_sha256": "fd3dcbf2dba602d373d0419b144175cd15e6213f5fff4d0cb972caf4cf385093"
+    },
+    {
+      "id": "sdamgia-38948",
+      "approved": true,
+      "reason": "Первый электрометр отрицателен, второй положителен, заряды равны по модулю.",
+      "source_snapshot_sha256": "01f839273cb04965bce923df81cbd7ec54cef37c7af4511cc97dec49f5c95534"
+    }
+  ],
+  "issues": [],
+  "scope": "Все11условий/решений прочитаны и независимо проверены по первичнымHTML;11оригинальных рисунков лично просмотрены и сопоставлены сTikZ. Предметныйreview без изменения общего оформления.",
+  "figures_viewed": [
+    "16857-condition-0",
+    "4577-condition-0",
+    "4507-condition-0",
+    "4682-condition-0",
+    "31415-condition-0",
+    "6431-condition-0",
+    "6431-solution-0",
+    "4218-condition-4",
+    "6067-condition-0",
+    "38948-condition-0",
+    "38948-condition-1"
+  ]
+}

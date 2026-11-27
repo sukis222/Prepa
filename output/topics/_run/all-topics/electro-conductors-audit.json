@@ -1,0 +1,15 @@
+{
+  "batch": "electro-conductors",
+  "bundle_sha256": "2755234a14571d7d3841feb70b642ebc7f75f3534433c3bcdb35b9a0a53d8b9d",
+  "topics": [
+    "3.5"
+  ],
+  "tasks": 11,
+  "pages": 15,
+  "baseline_preserved": 107,
+  "files": {
+    "task-3-5.tex": "9ffba59f8af33c9c42aea5e95f9f57e44e8a4f9d721cc8ae18913e0d1c2a1a97",
+    "tutor-3-5.tex": "7b80848530420c86a8eefac50071cc14cd05bb486074bc3725318744036f2e60"
+  },
+  "editor_open_checked": false
+}

@@ -1,0 +1,24 @@
+{
+  "batch": "quantum-atoms",
+  "bundle_sha256": "5d0a8f1b2972769dea6b11758adf1be63064706b74bb9c2fc7237d7b3ed09b08",
+  "topics": [
+    "6.6.1",
+    "6.5.3",
+    "6.2.4",
+    "6.4.3"
+  ],
+  "tasks": 24,
+  "pages": 29,
+  "baseline_preserved": 107,
+  "files": {
+    "task-6-6-1.tex": "1d0c8432972fc242dadb7f4130f6e5046ffe3ee93a4afc02a6529fe53065a6e8",
+    "tutor-6-6-1.tex": "d2b8cdf998efbf9d3e587fbc7c75924b3d4f49412f70eae6f69242050c65a3c7",
+    "task-6-5-3.tex": "511a4d9db7c5930bc7ac54ad5f80ab79a2ae07411f60b24217237bd2bcc80a79",
+    "tutor-6-5-3.tex": "3b368a28237035c9cb824c991e9410d445c07c26ef6497f6c824f01a8e068863",
+    "task-6-2-4.tex": "ceb5475c3de577fb8dde81887e63ba31d1927c95f007d58f436e33d88ec09237",
+    "tutor-6-2-4.tex": "fbc92b2304dab1bb71e4f051b4601f69d282dd99116cc57de0ddb52e757e5bba",
+    "task-6-4-3.tex": "69b16b26528ff9d5242c0a03ad2df91801a9552b7014c13fb959e25386e2c941",
+    "tutor-6-4-3.tex": "99fab74382976b397b056c7808aa2635b08903ebf5a3bcb142146ae75d6e8b6c"
+  },
+  "editor_open_checked": false
+}

@@ -1,0 +1,244 @@
+% !TEX root = task-6-2-2.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{6.2.2}{Импульс фотона}
+
+
+% Source sdamgia-2002: https://phys-ege.sdamgia.ru/problem?id=2002
+\BankTask{sdamgia-2002}{
+Один лазер излучает монохроматический свет с длиной волны $\lambda$$_{1}$  =  $300\,\text{нм}$, другой  — с длиной волны $\lambda$$_{2}$  =  $700\,\text{нм}$. Каково отношение импульсов $\frac{p_1}{p_2}$ фотонов, излучаемых лазерами? (Округлите до десятых.)
+}{
+\smallskip\noindent\textbf{Решение}\par
+Импульс фотона связан с длиной волны соотношением $p= \frac{h}{\lambda} .$ Следовательно, отношение импульсов фотонов, излучаемых лазерами, равно 
+
+\[\frac{p_1}{p_2} = \frac{( h/\lambda _1 )}{( h/\lambda _2 )} = \frac{\lambda _2}{\lambda _1} = \frac{700}{300} = \frac{7}{3} \approx2{,}3.\]
+
+Ответ: $2{,}3$.
+}
+
+% Source sdamgia-2016: https://phys-ege.sdamgia.ru/problem?id=2016
+\BankTask{sdamgia-2016}{
+Атом испустил фотон с энергией $6 \cdot 10 ^{ - 18 } \,\text{Дж}.$ На сколько уменьшится импульс атома? (в $10 ^{ - 26 } \,\text{кг} \cdot \,\text{м/с}.$)
+}{
+\smallskip\noindent\textbf{Решение}\par
+Энергия и импульс фотона связаны соотношением $E=pc.$ Следовательно, фотон унес импульс
+
+\[p= \frac{E}{c} = \frac{6 \cdot 10 ^{ - 18 } \,\text{Дж}}{3 \cdot 10 ^{8} \,\text{м/с}} =2 \cdot 10 ^{ - 26 } \,\text{кг} \cdot \,\text{м/с}.\]
+
+Согласно закону сохранения импульса, полный импульс системы не должен изменяться. Следовательно, импульс атома уменьшился на $2 \cdot 10 ^{ - 26 } \,\text{кг} \cdot \,\text{м/с}.$
+
+Ответ: $2$.
+}
+
+% Source sdamgia-2025: https://phys-ege.sdamgia.ru/problem?id=2025
+\BankTask{sdamgia-2025}{
+Модуль импульса фотона в первом пучке света в $2$ раза больше, чем во втором пучке. Каково отношение частоты света первого пучка к частоте второго?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Модуль импульса фотона связан с частотой света соотношением $p= \frac{h\nu}{c} .$ По условию, $\frac{p_1}{p_2} =2,$ а значит, отношение частоты света первого пучка к частоте второго равно 
+
+\[\frac{\nu _1}{\nu _2} = \frac{( p_1c/h )}{( p_2c/h )} = \frac{p_1}{p_2} =2.\]
+
+Ответ: $2$.
+}
+
+% Source sdamgia-2026: https://phys-ege.sdamgia.ru/problem?id=2026
+\BankTask{sdamgia-2026}{
+Модуль импульса фотона в первом пучке света в $2$ раза больше модуля импульса фотона во втором пучке. Каково отношение длины волны в первом пучке света к длине волны во втором пучке?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Модуль импульса фотона связан с длиной волны света соотношением $p= \frac{h}{\lambda} .$ По условию, $\frac{p_1}{p_2} =2,$ а значит, отношение длины волны света в первом пучке к длине волны во втором пучке равно 
+
+\[\frac{\lambda _1}{\lambda _2} = \frac{( h/p_1 )}{( h/p_2 )} = \frac{p_2}{p_1} = \frac{1}{2} .\]
+
+Ответ: $0{,}5$.
+}
+
+% Source sdamgia-2043: https://phys-ege.sdamgia.ru/problem?id=2043
+\BankTask{sdamgia-2043}{
+Покоящийся атом поглотил фотон с энергией $1{,}2 \cdot 10 ^{ - 17 } \,\text{Дж}.$ Чему равен импульс атома после поглощения? (в $10 ^{ - 26 } \,\text{кг} \cdot \,\text{м/с}.$)
+}{
+\smallskip\noindent\textbf{Решение}\par
+Энергия и импульс фотона связаны соотношением $E=pc.$ Следовательно, фотон имел импульс $p= \frac{E}{c} = \frac{1{,}2 \cdot 10 ^{ - 17 } \,\text{Дж}}{3 \cdot 10 ^{8} \,\text{м/с}} =4 \cdot 10 ^{ - 26 } \,\text{кг} \cdot \,\text{м/с}.$ Согласно закону сохранения импульса, полный импульс системы не должен изменяться. Следовательно, импульс атома равен $4 \cdot 10 ^{ - 26 } \,\text{кг} \cdot \,\text{м/с}.$
+
+Ответ: $4$.
+}
+
+% Source sdamgia-5195: https://phys-ege.sdamgia.ru/problem?id=5195
+\BankTask{sdamgia-5195}{
+Модуль импульса фотона в рентгеновском дефектоскопе $2$ раза больше модуля импульса фотона в рентгеновском медицинском аппарате. Каково отношение энергии фотона в первом пучке рентгеновских лучей к энергии фотона во втором пучке?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Энергия фотона связана с импульсом соотношением $E=pc.$ Таким образом, искомое отношение энергии фотона в первом пучке рентгеновских лучей к энергии фотона во втором пучке равно
+
+\[\frac{E_1}{E_2} = \frac{p_1}{p_2} =2.\]
+
+Ответ: $2$.
+}
+
+% Source sdamgia-29191: https://phys-ege.sdamgia.ru/problem?id=29191
+\BankTask{sdamgia-29191}{
+Модуль импульса первого фотона равен $10$$^{-28}$ кг · м/с, а длина волны второго фотона $\lambda=0{,}6 \,\text{мкм}$ Во сколько раз модуль импульса второго фотона превышает модуль импульса первого фотона? Округлите до целого числа.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Импульс фотона определяется формулой $p= \frac{h}{\lambda} .$ Тогда отношение импульса второго фотона к импульсу первого фотона 
+
+\[\frac{p_2}{p_1} = \frac{h}{\lambda p_1} = \frac{6{,}6 \cdot 10 ^{ - 34 }}{6 \cdot 10 ^{ - 7 } \cdot 10 ^{ - 28 }} =11.\]
+
+Ответ: $11$.
+}
+
+% Source sdamgia-3084: https://phys-ege.sdamgia.ru/problem?id=3084
+\BankTask{sdamgia-3084}{
+Источник в монохроматическом пучке параллельных лучей за время $\Delta t=8 \cdot 10 ^{ - 4 } c$ излучает $N=5 \cdot 10 ^{ 14 }$ фотонов. Лучи падают по нормали на площадку $S=0{,}7\,\text{см} ^2$ и создают давление $P=1{,}5 \cdot 10 ^{ - 5 } \,\text{Па}$ . При этом $40\%$ фотонов отражается, а $60\%$ поглощается. Определите длину волны излучения.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Выражение для давления света 
+
+ $P=P_{\,\text{отр}} + P_{\,\text{погл}}= \frac{N_{\,\text{отр}}\Delta p_{\,\text{отр}} + N_{\,\text{погл}}\Delta p_{\,\text{погл}}}{S\Delta t} .$   ($1$) 
+
+ Формула ($1$) следует из: $\vec F= \frac{\Delta \vec p}{\Delta t}$ и $P= \frac{F}{S} .$
+Формулы для изменения импульса фотона при отражении и поглощении лучей $\Delta p_{\,\text{отр}}=2p,$ $\Delta p_{\,\text{погл}}=p,$ число отраженных $N_{\,\text{отр}}=0{,}4N$ и поглощенных $N_{\,\text{погл}}=0{,}6N$ фотонов. 
+
+ Тогда выражение ($1$) принимает вид $P= \frac{1{,}4Np}{S\Delta t} .$ 
+
+ Для импульса фотона $p= \frac{h}{\lambda} .$ 
+
+ Выражение для длины волны излучения $\lambda = \frac{1{,}4Nh}{PS\Delta t}$
+
+Ответ: $\lambda = \frac{1{,}4 \cdot 5 \cdot 10 ^{ 14 } \cdot 6{,}6 \cdot 10 ^{ - 34 }}{1{,}5 \cdot 10 ^{ - 5 } \cdot 0{,}7 \cdot 10 ^{ - 4 } \cdot 8 \cdot 10 ^{ - 4 }} =5{,}5 \cdot 10 ^{ - 7 } \,\text{м}.$
+}
+
+% Source sdamgia-5563: https://phys-ege.sdamgia.ru/problem?id=5563
+\BankTask{sdamgia-5563}{
+Покоящийся атом излучает фотон с энергией $16{,}32 \cdot 10 ^{ - 19 }$ Дж в результате перехода электрона из возбужденного состояния в основное. Атом в результате отдачи начинает двигаться поступательно в противоположном направлении с кинетической энергией $8{,}81 \cdot 10 ^{ - 27 }$ Дж. Найдите массу атома. Скорость атома считать малой по сравнению со скоростью света.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Ядерные силы намного больше внешней силы тяжести, действующей на атом и фотон, поэтому система является замкнутой и выполняется закон сохранения импульса. Изначально атом покоился и импульс системы был равен нулю. Следовательно, импульс фотона равен импульсу излучившего атома: $p_{\,\text{ф}}=p_{\,\text{ат}}.$
+
+Импульс тела связан с его кинетической энергией. Скорость атома мала по сравнению со скоростью света, поэтому для атома эта связь выражается нерелятивистским соотношением: $E_{\,\text{ат}}= \frac{p_{\,\text{ат}} ^2}{2m_{\,\text{ат}}} ,$ а для фотона $E_{\,\text{ф}}=p_{\,\text{ф}}c.$ Выражая отсюда импульсы и подставляя их в закон сохранения, получаем
+
+\[\frac{E_{\,\text{ф}}}{c} = \sqrt{2m_{\,\text{ат}} E_{\,\text{ат}}} \Longleftrightarrow m_{\,\text{ат}}= \frac{E_{\,\text{ф}} ^2}{2E_{\,\text{ат}}c ^2} .\]
+
+Тогда после подстановки получим $m_{\,\text{ат}}=1{,}67 \cdot 10 ^{ - 27 } \,\text{кг}.$
+
+Ответ: $m_{\,\text{ат}}=1{,}67 \cdot 10 ^{ - 27 } \,\text{кг}.$
+}
+
+% Source sdamgia-33055: https://phys-ege.sdamgia.ru/problem?id=33055
+\BankTask{sdamgia-33055}{
+На идеальное зеркало перпендикулярно ему падают лучи монохроматического света. При их отражении возникает сила давления F, действующая на зеркало. Найти F, если мощность падающего света Р  =  $300$ кВт.
+}{
+\smallskip\noindent\textbf{Решение}\par
+При зеркальном отражении света происходит изменение направления светового пучка, при этом изменение импульса равно $\Delta p.$ Это изменение можно найти из второго закона Ньютона в импульсной форме
+
+\[\Delta p=F\Delta t.\]
+
+Мощность падающего света равна энергии падающих фотонов в единицу времени 
+
+\[P= \frac{Nh\nu}{\Delta t} .\]
+
+Поскольку импульс светового пучка изменился на противоположный, причем $\vec p_1= - \vec p_2,$ то изменение импульса равно $\Delta p=2p_1.$
+Импульс фотона $p_1= \frac{h\nu}{c} .$ Тогда сила равна 
+
+\[F= \frac{2h\nu N}{c\Delta t} .\]
+
+С учетом формулы мощности получаем:
+
+\[F= \frac{2P}{c} = \frac{2 \cdot 3 \cdot 10 ^{5}}{3 \cdot 10 ^{8}} =2\,\text{мН}.\]
+
+Ответ: $2$ мН.
+}
+
+
+% Source 7D7448: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=7D7448
+\BankTask{7D7448}{
+Установите соответствие между физическими величинами и формулами, по которым их можно рассчитать ($E$ — энергия фотона; $h$ — постоянная Планка; $p$ — импульс фотона).
+
+\TaskMatchingColumns[.53\linewidth]{Физические величины}{
+А) длина волны фотона\par
+Б) частота фотона
+}{Формулы}{
+1) $\dfrac{p}{h}$\par
+2) $\dfrac{h}{p}$\par
+3) $\dfrac{E}{p}$\par
+4) $\dfrac{E}{h}$
+}
+
+\medskip
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{2} & \phantom{4} \\
+\hline
+\end{tabular}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Из соотношения $p=h/\lambda$ получаем $\lambda=h/p$, поэтому А соответствует формуле 2. По формуле Планка $E=h\nu$, откуда $\nu=E/h$, поэтому Б соответствует формуле 4. Ответ: $24$.
+}
+
+% Source 64FC99: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=64FC99
+\BankTask{64FC99}{
+Установите соответствие между физическими величинами и формулами, по которым их можно рассчитать ($\lambda$ — длина волны фотона; $c$ — скорость света в вакууме; $h$ — постоянная Планка).
+
+\TaskMatchingColumns[.53\linewidth]{Физические величины}{
+А) частота фотона\par
+Б) импульс фотона
+}{Формулы}{
+1) $\dfrac{h}{\lambda}$\par
+2) $\dfrac{h\lambda}{c}$\par
+3) $\dfrac{c}{\lambda}$\par
+4) $c\lambda$
+}
+
+\medskip
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{3} & \phantom{1} \\
+\hline
+\end{tabular}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Из $c=\lambda\nu$ следует $\nu=c/\lambda$, поэтому А соответствует формуле 3. Импульс фотона $p=h/\lambda$, поэтому Б соответствует формуле 1. Ответ: $31$.
+}
+
+\end{document}

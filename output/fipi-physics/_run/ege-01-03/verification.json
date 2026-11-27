@@ -1,0 +1,81 @@
+{
+  "tasks": 18,
+  "per_exam_number": 6,
+  "exam_numbers": [
+    1,
+    2,
+    3
+  ],
+  "source": "FIPI",
+  "exam_year": 2027,
+  "independent_physics_review": true,
+  "source_diagrams_reviewed": true,
+  "source_table_reviewed": true,
+  "repeated_export_tex_identical": true,
+  "editor_view_checked": false,
+  "new_pdfs_in_output": false,
+  "checks": [
+    {
+      "number": 1,
+      "mode": "student",
+      "pages": 2,
+      "raster_images": 0,
+      "visual_review": "passed",
+      "recipe": "Tectonic (project)"
+    },
+    {
+      "number": 2,
+      "mode": "student",
+      "pages": 1,
+      "raster_images": 0,
+      "visual_review": "passed",
+      "recipe": "Tectonic (project)"
+    },
+    {
+      "number": 3,
+      "mode": "student",
+      "pages": 1,
+      "raster_images": 0,
+      "visual_review": "passed",
+      "recipe": "Tectonic (project)"
+    },
+    {
+      "number": 1,
+      "mode": "tutor",
+      "pages": 2,
+      "raster_images": 0,
+      "visual_review": "passed",
+      "recipe": "Tectonic (project)"
+    },
+    {
+      "number": 2,
+      "mode": "tutor",
+      "pages": 2,
+      "raster_images": 0,
+      "visual_review": "passed",
+      "recipe": "Tectonic (project)"
+    },
+    {
+      "number": 3,
+      "mode": "tutor",
+      "pages": 2,
+      "raster_images": 0,
+      "visual_review": "passed",
+      "recipe": "Tectonic (project)"
+    }
+  ],
+  "tex_files": [
+    {
+      "path": "output\\fipi-physics\\task-01.tex",
+      "sha256": "71e61d5afaa8403a47c3c0e80b9fb2a89ea2846af88cfc9afb5e842fb676642d"
+    },
+    {
+      "path": "output\\fipi-physics\\task-02.tex",
+      "sha256": "7045f1d88015e17ef0db54b077a526c3ad7b66949a109950f05ef47a4b64b7cb"
+    },
+    {
+      "path": "output\\fipi-physics\\task-03.tex",
+      "sha256": "31ffd7aef29e831fa7edc75b2b48563681b36e3eb4b4322274fc880fc9dd708d"
+    }
+  ]
+}

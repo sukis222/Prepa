@@ -1,0 +1,68 @@
+% !TEX root = task-2-10-2.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{2.10.2}{График плавления}
+
+
+% Source 5745AB: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=5745AB
+\BankTask{5745AB}{
+\begin{center}
+\begin{tikzpicture}[task graph,x=0.19cm,y=0.95cm]
+\draw[task axis] (0,0)--(31,0) node[right] {$t,\,\text{мин.}$};
+\draw[task axis] (0,0)--(0,4) node[left] {$T$};
+\node[below left] at (0,0) {$0$};
+\foreach \x in {5,10,15,20,25}{
+  \node[below] at (\x,0) {$\x$};
+}
+\foreach \x/\y in {5/2.35,10/2.35,15/2.35,20/2.9,25/3.45}
+  \draw[task projection] (\x,0)--(\x,\y);
+\draw[task curve] (0,1.45)--(5,2.35)--(15,2.35)--(25,3.45);
+\end{tikzpicture}
+\end{center}
+Для плавления куска льда при температуре его плавления требуется количество теплоты, равное \(3\,\text{кДж}\). Этот кусок льда внесли в тёплое помещение. Зависимость температуры льда от времени представлена на рисунке. Определите среднюю тепловую мощность, подводимую к куску льда в процессе плавления. (в $\text{Вт}$).
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Плавлению соответствует горизонтальный участок графика от \(5\) до \(15\,\text{мин}\). Поэтому \(\Delta t=10\,\text{мин}=600\,\text{с}\), и средняя мощность равна
+\[
+P=\frac{Q}{\Delta t}=\frac{3000}{600}=5\,\text{Вт}.
+\]
+Ответ: \(5\,\text{Вт}\).
+}
+
+\end{document}

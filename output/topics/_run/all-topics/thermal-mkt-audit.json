@@ -1,0 +1,21 @@
+{
+  "batch": "thermal-mkt",
+  "bundle_sha256": "333a4111886ad72485cc50a001f380bc55206697301f20fde04506fc472cde3b",
+  "topics": [
+    "2.5.1",
+    "2.5.2",
+    "2.5.4"
+  ],
+  "tasks": 30,
+  "pages": 21,
+  "baseline_preserved": 107,
+  "files": {
+    "task-2-5-1.tex": "2237ffc43a6054b229bf1794646c1f3be35574261009c910003b1b7e4008e8db",
+    "tutor-2-5-1.tex": "37f2198d6b2210059dfc9851b0d54558ad97c3e612b9e2f1f7b20324eae4cd18",
+    "task-2-5-2.tex": "bb6a0e71c430c20cd12aad0c0564802e4a2fdb7b7accb9ff73fff48c39cc5c73",
+    "tutor-2-5-2.tex": "5dae85de1a790fd45777e2f5140c7d4d509d1dd0844ce72868434bd704d7c40d",
+    "task-2-5-4.tex": "05dcb880148276e6e131ccfb8418a904d82e4b37b3fc44509d8240500dc01aa1",
+    "tutor-2-5-4.tex": "420018c51a10d81edc4eba351ad531f6529f02c43e29ec394c372e9f76de9202"
+  },
+  "editor_open_checked": false
+}

@@ -1,0 +1,156 @@
+% !TEX root = task-1-18-1.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{1.18.1}{Продольные и поперечные волны}
+
+
+% Source sdamgia-639: https://phys-ege.sdamgia.ru/problem?id=639
+\BankTask{sdamgia-639}{
+Сидящий на причале рыбак, заметив гребень волны, включил секундомер. Пятый гребень прошел мимо рыбака через $10$ секунд. Каков период колебаний поплавка на волнах?
+}{
+\smallskip\noindent\textbf{Решение}\par
+То, что за $10\,\text{с}$ мимо рыбака, сидящего на пристани, прошло $5$ гребней, означает, что волна прошла расстояние, равное $4$ длинам волн (длина волны  — это расстояние между ближайшими точками, колеблющимися в одной фазе). За $10\,\text{с}$ прошло $4$ колебания. Следовательно, период колебаний поплавка на волнах равен:
+
+$\frac{10\,\text{с}}{4}=2{,}5\,\text{с}.$
+
+Ответ: $2{,}5$.
+}
+
+% Source sdamgia-3756: https://phys-ege.sdamgia.ru/problem?id=3756
+\BankTask{sdamgia-3756}{
+Скорость звука в воде $1{,}5\,\text{км/с}$. Чему равна длина звуковой волны, распространяющейся в воде, при частоте звука $3\,\text{кГц}$?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Длина волны связана с частотой звука и скоростью распространения соотношением: $\lambda\nu=c.$ Следовательно, искомая длина волны равна:
+
+$\lambda= \frac{c}{\nu} = \frac{1500\,\text{м/с}}{3000\,\text{Гц}} =0{,}5\,\text{м}.$
+
+Ответ: $0{,}5$.
+}
+
+% Source sdamgia-24354: https://phys-ege.sdamgia.ru/problem?id=24354
+\BankTask{sdamgia-24354}{
+Колеблющаяся струна издает звук с длиной волны $0{,}17\,\text{м}$. Какова частота ее колебаний, если скорость звука в воздухе $340\,\text{м/с}$?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Частота колебаний струны находится по формуле $\nu= \frac{v}{\lambda} = \frac{340}{0{,}17} =2000\,\text{Гц}.$
+
+Ответ: $2000$.
+}
+
+% Source sdamgia-41133: https://phys-ege.sdamgia.ru/problem?id=41133
+\BankTask{sdamgia-41133}{
+Чему равна длина звуковой волны в воздухе, если скорость звука в воздухе равна $v$  =  $330\,\text{м/с}$, а период колебаний равен $T$  =  $4\,\text{мс}$?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Длина волны равна $\lambda= v T=330 \cdot 4 \cdot 10 ^{ - 3 } =1{,}32\,\text{м}.$
+
+Ответ: $1{,}32$.
+}
+
+% Source sdamgia-27084: https://phys-ege.sdamgia.ru/problem?id=27084
+\BankTask{sdamgia-27084}{
+Звуковая волна переходит из одной однородной среды в другую однородную среду. При этом скорость волны уменьшается. Определите, как при этом изменяются частота и длина звуковой волны.
+
+\noindent 1. Увеличивается.\par
+\noindent 2. Уменьшается.\par
+\noindent 3. Не изменяется.\par
+
+\TaskChangeTable{Частота звуковой волны}{Длина звуковой волны}
+}{
+\smallskip\noindent\textbf{Решение}\par
+Переход волны не влияет на частоту, поэтому частота звуковой волны не меняется ($3$). Длина волны $\lambda= \frac{v}{\nu}$ при уменьшении скорости также уменьшается ($2$).
+
+Ответ: $32$.
+}
+
+% Source sdamgia-4191: https://phys-ege.sdamgia.ru/problem?id=4191
+\BankTask{sdamgia-4191}{
+\begin{center}\begin{tikzpicture}[task graph,x=1.4cm,y=.8cm]
+\draw[task axis] (-1.1,0)--(2.2,0);\draw[task axis] (0,-1.4)--(0,1.25);\draw[task curve,domain=-1:2,samples=80] plot (\x,{cos(90*\x)});
+\draw[task projection] (1,0)--(1,-1.4);\draw[task axis,<->] (0,-1.35)--(1,-1.35) node[midway,below] {$25\,\text{см}$};
+\end{tikzpicture}\end{center}На рисунке изображен участок натянутого резинового шнура, по которому распространяется поперечная волна, имеющая частоту $1{,}25\,\text{Гц}$. Чему равна скорость распространения волны?
+}{
+\smallskip\noindent\textbf{Решение}\par
+Скорость распространения волны связана с частотой и длиной волны соотношением $\lambda\nu=V.$ На рисунке за $25\,\text{см}$ обозначена $1/4$ часть периода, следовательно, длина волны равна $\lambda=1\,\text{м}.$ Таким образом, скорость распространения волны равна $v =1\,\text{м} \cdot 1{,}25\,\text{Гц}=1{,}25\,\text{м/с}.$
+
+Ответ: $1{,}25$.
+}
+
+% Source sdamgia-6485: https://phys-ege.sdamgia.ru/problem?id=6485
+\BankTask{sdamgia-6485}{
+Учитель продемонстрировал опыт по распространению волны по длинному шнуру. 
+\begin{center}\begin{tikzpicture}[task graph,x=1cm,y=.65cm]
+\draw[task projection] (-.8,0)--(5.1,0);\draw[task curve,domain=-.6:5.2,samples=100] plot (\x,{sin(90*\x)});
+\draw[task projection] (0,0)--(0,-1.5);\draw[task projection] (4,0)--(4,-1.5);\draw[task axis,<->] (0,-1.35)--(4,-1.35) node[midway,above] {$0{,}5\,\text{м}$};
+\end{tikzpicture}\end{center}
+В один из моментов времени форма шнура оказалась такой, как показано на рисунке. Скорость распространения колебаний по шнуру равна $2\,\text{м/с}$. Определите частоту колебаний.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Из рисунка видно, что длина волны равна $0{,}5\,\text{м}$. Частота колебаний равна отношению скорости распространения волны к длине волны: $\nu= \frac{v}{\lambda} = \frac{2\,\text{м/с}}{0{,}5\,\text{м}} =4\,\text{Гц}.$
+
+Ответ: $4$.
+}
+
+% Source sdamgia-4136: https://phys-ege.sdamgia.ru/problem?id=4136
+\BankTask{sdamgia-4136}{
+Две одинаковые звуковые волны частотой $1\,\text{кГц}$ распространяются навстречу друг другу. Расстояние между источниками волн очень велико. В точках А и В, расположенных на расстоянии $99\,\text{см}$ друг от друга, амплитуда колебаний минимальна. На каком расстоянии от точки А находятся ближайшие к ней точки, в которой амплитуда колебаний также минимальна? Скорость звука в воздухе $330\,\text{м/с}$.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Определим параметры волн:
+$1$.  циклическая частоты $\omega = 2 \pi \nu,$
+$2$.  длина волны $\lambda = \frac{v}{\nu} ,$
+$3$.  волновое число $k= \frac{2 \pi}{\lambda} = \frac{2 \pi \nu}{v} = \frac{\omega}{v} .$
+При складывании двух встречных волн одинаковой частоты образуется стоячая волна: 
+
+$A \cos ( \omega t - kx ) + A \cos ( \omega t + kx ) =2A \cos ( \omega t ) \cos ( kx ) .$
+
+Точкам минимальной амплитуды соответствуют узлы: $\cos ( kx ) =0.$ Корни этого уравнения $x_n= \frac{\pi}{2k} + \frac{n \pi}{k} ,$ где $n\in\mathbb Z.$
+Ясно, что минимальное расстояние $l$ между узлами равно $l= \frac{\pi}{k} .$
+Таким образом, точка с минимальной амплитудой отстоит от точки А на расстояние
+
+$l= \frac{\pi v}{2 \pi \nu} = \frac{v}{2\nu} = \frac{330\,\text{м/с}}{2 \cdot 10 ^3 \,\text{Гц}} =0{,}165\,\text{м}.$
+
+Примечание.
+Можно рассуждать иначе: расстояние между ближайшими минимумами равно половине длины волны. Тогда приходим к итоговой формуле 
+$l= \frac{v}{2\nu} = \frac{330\,\text{м/с}}{2 \cdot 10 ^3 \,\text{Гц}} =0{,}165\,\text{м}.$
+Ответ: $0{,}165\,\text{м}$.
+}
+
+\end{document}

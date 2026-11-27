@@ -1,0 +1,885 @@
+% EGE 2027, task 15. Source IDs and URLs are kept in comments.
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse
+\fi
+\newcounter{banktask}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}%
+  \Needspace{35mm}\par\medskip\noindent\begin{minipage}{\linewidth}%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+  \end{minipage}\par\medskip
+}
+\begin{document}
+
+
+% Source D91D57: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=D91D57
+\BankTask{D91D57}{
+Медное кольцо на горизонтальном коромысле поворачивается вокруг вертикальной оси $OB$ под действием движущегося магнита (см. рисунок).
+
+Установите соответствие между направлением движения магнита, вращением коромысла с кольцом и направлением индукционного тока в кольце (1 --- верхняя точка кольца; 2 --- ближняя к нам точка кольца; 3 --- нижняя точка кольца).
+
+\TaskMatchingColumns[0.39\linewidth]{Направление движения магнита}{
+А) движется по направлению к кольцу\par
+Б) движется по направлению от кольца
+}{Поворот коромысла и ток в кольце}{
+1) Коромысло с кольцом поворачивается, отталкиваясь от магнита; ток идёт по направлению $3\to2\to1$.\par
+2) Коромысло с кольцом поворачивается, отталкиваясь от магнита; ток идёт по направлению от $1\to2\to3$.\par
+3) Коромысло с кольцом поворачивается, притягиваясь к магниту; ток идёт по направлению от $3\to2\to1$.\par
+4) Коромысло с кольцом поворачивается, притягиваясь к магниту; ток идёт по направлению от $1\to2\to3$.
+}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{0} & \phantom{0} \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}[book diagram, x=0.035cm,y=0.035cm,line cap=round,line join=round]
+\filldraw[fill=gray!45,draw=black] (173,14) ellipse[x radius=35,y radius=13];
+\draw (173,17)--(173,154);
+\fill (173,17) circle[radius=1.5];
+\node[above right] at (173,22) {$B$};
+\node[above left] at (173,154) {$O$};
+\draw (173,154)--(202,202)--(202,178);
+\draw (146,58)--(146,108)--(173,154);
+\draw (146,58)--(165,88);
+\draw (118,29)--(146,72);
+\draw (124,69)--(165,69);
+\draw (146,69) ellipse[x radius=11,y radius=40];
+\draw[line width=1.1pt] (146,109) arc[start angle=90,end angle=270,x radius=11,y radius=40];
+\draw (146,29)--(146,109);
+\draw (135,52)--(157,86);
+\node[above left] at (146,109) {1};
+\node[left] at (135,57) {2};
+\node[below left] at (146,29) {3};
+\draw (0,69)--(146,69);
+\draw[gray] (12,77) .. controls (12,94) and (81,94) .. (81,77) .. controls (81,63) and (12,63) .. (12,77);
+\draw[gray] (12,57) .. controls (12,73) and (81,73) .. (81,57) .. controls (81,43) and (12,43) .. (12,57);
+\filldraw[fill=gray!65] (30,60)--(43,60)--(43,73)--(30,73)--cycle;
+\filldraw[fill=gray!35] (43,60)--(59,60)--(59,73)--(43,73)--cycle;
+\filldraw[fill=gray!20] (30,73)--(39,81)--(52,81)--(43,73)--cycle;
+\filldraw[fill=gray!10] (43,73)--(52,81)--(67,81)--(59,73)--cycle;
+\filldraw[fill=gray!45] (59,60)--(67,68)--(67,81)--(59,73)--cycle;
+\node at (35,52) {$S$};
+\node at (55,52) {$N$};
+\filldraw[fill=white] (192,161)--(192,177) arc[start angle=180,end angle=360,x radius=10,y radius=5] --(212,161) arc[start angle=0,end angle=-180,x radius=10,y radius=5];
+\draw[fill=white] (202,177) ellipse[x radius=10,y radius=5];
+\draw (202,177)--(202,195);
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+К кольцу обращён северный полюс магнита. По правилу Ленца при приближении магнита кольцо отталкивается; со стороны магнита у него образуется северный полюс, что соответствует току $3\to2\to1$ (вариант 1). При удалении магнита кольцо притягивается; ток меняет направление на $1\to2\to3$ (вариант 4). Ответ: А --- 1, Б --- 4.
+}
+
+% Source DDF127: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=DDF127
+\BankTask{DDF127}{
+В первой экспериментальной установке положительно заряженная частица влетает в однородное электрическое поле так, что вектор $\vec{\upsilon}_0$ перпендикулярен вектору напряжённости электрического поля $\vec{E}$ (рис. 1). Во второй экспериментальной установке вектор $\vec{\upsilon}_0$ такой же частицы параллелен вектору индукции магнитного поля $\vec{B}$ (рис. 2).
+
+По каким траекториям движутся частицы в этих установках? Силу тяжести не учитывать.
+
+\TaskMatchingColumns[0.47\linewidth]{Движение частицы}{
+А) в первой установке\par
+Б) во второй установке
+}{Траектория}{
+1) прямая линия\par
+2) окружность\par
+3) спираль\par
+4) парабола
+}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{0} & \phantom{0} \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}[book diagram,line cap=round,line join=round]
+\begin{scope}[x=0.65cm,y=0.65cm]
+\foreach \x in {0,1,2,3,4,5}{
+  \foreach \y in {0,1,2,3,4,5}{
+    \draw (\x,\y) circle[radius=0.20];
+    \fill (\x,\y) circle[radius=0.035];
+  }
+}
+\draw[fill=white] (3.37,2.52) circle[radius=0.23];
+\node at (3.37,2.52) {$+$};
+\draw[-{book tip}] (2.33,2.52)--(3.03,2.52);
+\node[above] at (2.67,2.59) {$\vec{\upsilon}_0$};
+\node at (5.58,3.55) {$\vec E$};
+\node at (2.5,-0.65) {Рис. 1};
+\end{scope}
+\begin{scope}[shift={(5.4cm,0cm)},x=0.65cm,y=0.65cm]
+\foreach \x in {0,1.2,2.4}{
+  \draw[-{book tip}] (\x,0.4)--(\x,4.75);
+}
+\draw[fill=white] (0.45,2.75) circle[radius=0.23];
+\node at (0.45,2.75) {$+$};
+\draw[-{book tip}] (0.45,2.46)--(0.45,1.78);
+\node[right] at (0.48,2.03) {$\vec{\upsilon}_0$};
+\node[right] at (2.45,4.75) {$\vec B$};
+\node at (1.2,-0.65) {Рис. 2};
+\end{scope}
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+В первой установке постоянная сила $\vec F=q\vec E$ сообщает частице ускорение, перпендикулярное начальной скорости: $x=\upsilon_0t$, $z=qEt^2/(2m)$, поэтому траектория --- парабола (4). Во второй установке $\vec\upsilon_0$ антипараллелен $\vec B$, как показано на рисунке, поэтому $F_{\text{Л}}=q\upsilon B\sin180^\circ=0$ и частица движется по прямой (1). Окружность (2) требует поперечной магнитной силы, а спираль (3) --- одновременно ненулевых продольной и поперечной составляющих скорости в магнитном поле; здесь этих условий нет. Ответ: А --- 4, Б --- 1.
+}
+
+% Source AE92AD: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=AE92AD
+\BankTask{AE92AD}{
+В первой экспериментальной установке положительно заряженная частица влетает в однородное электрическое поле так, что вектор скорости $\vec{\upsilon}_0$ частицы параллелен вектору напряжённости электрического поля $\vec{E}$ (рис. 1). Во второй установке вектор скорости $\vec{\upsilon}_0$ отрицательно заряженной частицы перпендикулярен вектору индукции магнитного поля $\vec{B}$ (рис. 2).
+
+По каким траекториям движутся частицы в этих установках? Силой тяжести пренебречь.
+
+\TaskMatchingColumns[0.47\linewidth]{Движение частицы}{
+А) в первой установке\par
+Б) во второй установке
+}{Траектория}{
+1) прямая линия\par
+2) окружность\par
+3) спираль\par
+4) парабола
+}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{0} & \phantom{0} \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}[book diagram,line cap=round,line join=round]
+\begin{scope}[x=0.70cm,y=0.70cm]
+\foreach \x in {0,1.2,2.4}{
+  \draw[-{book tip}] (\x,4.4)--(\x,0);
+}
+\draw[fill=white] (0.45,2.35) circle[radius=0.23];
+\node at (0.45,2.35) {$+$};
+\draw[-{book tip}] (0.45,2.64)--(0.45,3.30);
+\node[right] at (0.47,3.05) {$\vec{\upsilon}_0$};
+\node[right] at (2.45,4.35) {$\vec E$};
+\node at (1.2,-0.65) {Рис. 1};
+\end{scope}
+\begin{scope}[shift={(4.5cm,0.45cm)},x=0.70cm,y=0.70cm]
+\foreach \x in {0,1.6,3.2}{
+  \foreach \y in {0,1.6,3.2}{
+    \draw (\x-0.25,\y-0.25)--(\x+0.25,\y+0.25);
+    \draw (\x-0.25,\y+0.25)--(\x+0.25,\y-0.25);
+  }
+}
+\draw[fill=white] (1.10,2.40) circle[radius=0.30];
+\node at (1.10,2.40) {$-$};
+\draw[-{book tip}] (1.43,2.40)--(3.05,2.40);
+\node[above] at (2.30,2.50) {$\vec{\upsilon}_0$};
+\node[right] at (3.45,0.80) {$\vec B$};
+\node at (1.6,-1.29) {Рис. 2};
+\end{scope}
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+В первой установке сила $\vec F=q\vec E$ направлена вдоль той же прямой, что и начальная скорость, поэтому траектория --- прямая (1), в том числе после возможной остановки и движения обратно. Во второй установке сила Лоренца перпендикулярна скорости и служит центростремительной: $|q|\upsilon B=m\upsilon^2/r$, поэтому траектория --- окружность (2). Спирали (3) нет, поскольку отсутствует составляющая скорости вдоль магнитного поля; параболы (4) нет, поскольку в первой установке отсутствует начальная поперечная скорость. Ответ: А --- 1, Б --- 2.
+}
+
+% Source D0C61D: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=D0C61D
+\BankTask{D0C61D}{
+Протон массой $m$ и зарядом $q$ движется перпендикулярно линиям индукции однородного магнитного поля $\vec{B}$ по окружности со скоростью $\upsilon$. Действием силы тяжести пренебречь.
+
+Установите соответствие между физическими величинами и формулами, по которым их можно рассчитать.
+
+\TaskMatchingColumns[0.53\linewidth]{Физические величины}{
+А) модуль ускорения протона\par
+Б) период обращения протона по окружности
+}{Формулы}{
+1) $q\upsilon B$\par
+2) $\dfrac{m\upsilon}{qB}$\par
+3) $\dfrac{2\pi m}{qB}$\par
+4) $\dfrac{q\upsilon B}{m}$
+}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{4} & \phantom{3} \\
+\hline
+\end{tabular}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Сила Лоренца $F_{\text{Л}}=q\upsilon B$ сообщает протону ускорение $a=F_{\text{Л}}/m=q\upsilon B/m$, поэтому А соответствует формуле 4. Из $m\upsilon^2/r=q\upsilon B$ получаем $r=m\upsilon/(qB)$ и $T=2\pi r/\upsilon=2\pi m/(qB)$, поэтому Б соответствует формуле 3. Формулы 1 и 2 определяют соответственно силу и радиус окружности. Ответ: $43$.
+}
+
+% Source CB965A: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=CB965A
+\BankTask{CB965A}{
+Протон массой $m$ и зарядом $q$ движется перпендикулярно линиям индукции однородного магнитного поля $\vec{B}$ по окружности со скоростью $\upsilon$. Действием силы тяжести пренебречь.
+
+Установите соответствие между физическими величинами и формулами, по которым их можно рассчитать.
+
+\TaskMatchingColumns[0.53\linewidth]{Физические величины}{
+А) радиус окружности, по которой движется протон\par
+Б) модуль силы, действующей на протон со стороны магнитного поля
+}{Формулы}{
+1) $\dfrac{2\pi m}{qB}$\par
+2) $\dfrac{m\upsilon}{qB}$\par
+3) $\dfrac{2\pi B}{\upsilon}$\par
+4) $q\upsilon B$
+}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{2} & \phantom{4} \\
+\hline
+\end{tabular}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+При движении перпендикулярно магнитному полю сила Лоренца равна $F_{\text{Л}}=q\upsilon B$, поэтому Б соответствует формуле 4. Из равенства $m\upsilon^2/r=q\upsilon B$ находим $r=m\upsilon/(qB)$, поэтому А соответствует формуле 2. Формула 1 определяет период обращения, а формула 3 не определяет ни радиус, ни силу. Ответ: $24$.
+}
+
+% Source FDFAF7: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=FDFAF7
+\BankTask{FDFAF7}{
+Спираль лампочки расположена вблизи главной оптической оси тонкой рассеивающей линзы с фокусным расстоянием, равным по модулю $F$, перпендикулярно этой оси. Расстояние $a$ от линзы до спирали меньше $F$. Затем рассеивающую линзу заменили на собирающую с фокусным расстоянием $F$. Установите соответствие между видом линзы, использовавшейся в опыте, и свойствами даваемого ею изображения.
+
+\TaskMatchingColumns[0.36\linewidth]{Вид линзы}{
+А) линза собирающая\par
+Б) линза рассеивающая
+}{Свойства изображения}{
+1) действительное, перевёрнутое, увеличенное\par
+2) мнимое, прямое, уменьшенное\par
+3) мнимое, прямое, увеличенное\par
+4) действительное, перевёрнутое, уменьшенное
+}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{3} & \phantom{2} \\
+\hline
+\end{tabular}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По формуле тонкой линзы $1/f=1/a+1/b$ для собирающей линзы при $a<F$ получаем $b=aF/(a-F)<0$ и увеличение $\Gamma=-b/a=F/(F-a)>1$: изображение мнимое, прямое, увеличенное (А — 3). Для рассеивающей линзы $f=-F$, поэтому $b=-aF/(a+F)<0$ и $\Gamma=F/(a+F)<1$: изображение мнимое, прямое, уменьшенное (Б — 2). Свойства 1 и 4 не подходят, поскольку оба изображения мнимые и прямые. Ответ: $32$.
+}
+
+% Source EFF8E5: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=EFF8E5
+\BankTask{EFF8E5}{
+Спираль лампочки расположена вблизи главной оптической оси тонкой рассеивающей линзы на расстоянии \(a\) от неё перпендикулярно этой оси, причём \(F<a<2F\), где \(F\) — модуль фокусного расстояния линзы. Затем рассеивающую линзу заменили на собирающую с фокусным расстоянием \(F\). Установите соответствие между видом линзы, использованной в опыте, и свойствами даваемого ею изображения.
+
+\begin{center}
+\TaskMatchingColumns[0.36\linewidth]{Вид линзы}{
+А) линза рассеивающая\par
+Б) линза собирающая
+}{Свойства изображения}{
+1) действительное, перевёрнутое, увеличенное\par
+2) мнимое, прямое, уменьшенное\par
+3) действительное, прямое, увеличенное\par
+4) мнимое, перевёрнутое, увеличенное
+}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{2} & \phantom{1} \\
+\hline
+\end{tabular}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Для рассеивающей линзы \(-1/F=1/a+1/b\), поэтому \(b=-aF/(a+F)<0\), а увеличение \(\Gamma=-b/a=F/(a+F)<1\): изображение мнимое, прямое, уменьшенное (2). Для собирающей линзы \(b=aF/(a-F)>0\) и \(|\Gamma|=F/(a-F)>1\), поскольку \(F<a<2F\): изображение действительное, перевёрнутое, увеличенное (1). Вариант 3 невозможен, поскольку действительное изображение предмета в тонкой линзе перевёрнутое; вариант 4 также невозможен, поскольку мнимое изображение здесь прямое. Ответ: \(\boxed{21}\).
+}
+
+% Source 626E20: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=626E20
+\BankTask{626E20}{
+Пучок монохроматического света переходит из стекла в воздух. Длина волны света в воздухе — \(\lambda\); скорость света в воздухе — \(c\); показатель преломления стекла относительно воздуха — \(n\).
+
+Установите соответствие между физическими величинами и формулами, по которым их можно рассчитать.
+
+\begin{center}
+\TaskMatchingColumns[0.56\linewidth]{Физические величины}{
+А) частота света в воздухе\par
+Б) скорость света в стекле
+}{Формулы}{
+1) \(\dfrac{c}{\lambda}\)\par
+2) \(\dfrac{n\cdot\lambda}{c}\)\par
+3) \(\dfrac{n\cdot c}{\lambda}\)\par
+4) \(\dfrac{c}{n}\)
+}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{1} & \phantom{4} \\
+\hline
+\end{tabular}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Частота света в воздухе определяется равенством \(c=\lambda\nu\), откуда \(\nu=c/\lambda\) (1). По определению относительного показателя преломления \(n=c/v_{\text{ст}}\), поэтому скорость света в стекле \(v_{\text{ст}}=c/n\) (4). Формула 2 имеет размерность времени, а формула 3 даёт \(n\nu\), поэтому они не подходят. Ответ: \(\boxed{14}\).
+}
+
+% Source AE8774: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=AE8774
+\BankTask{AE8774}{
+Пучок монохроматического света переходит из воды в воздух. Скорость света в воде — \(\upsilon\); скорость света в воздухе — \(c\); длина световой волны в воде — \(\lambda\). Установите соответствие между физическими величинами и формулами, по которым их можно рассчитать.
+
+\begin{center}
+\TaskMatchingColumns[0.56\linewidth]{Физические величины}{
+А) длина световой волны в воздухе\par
+Б) показатель преломления воды относительно воздуха
+}{Формулы}{
+1) \(\dfrac{\upsilon}{c}\)\par
+2) \(\dfrac{c}{\upsilon}\)\par
+3) \(\dfrac{\upsilon\cdot\lambda}{c}\)\par
+4) \(\dfrac{\lambda\cdot c}{\upsilon}\)
+}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{4} & \phantom{2} \\
+\hline
+\end{tabular}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Частота при переходе света через границу сред сохраняется: \(\nu=\upsilon/\lambda\), поэтому длина волны в воздухе \(\lambda_{\text{возд}}=c/\nu=\lambda c/\upsilon\) (4). Показатель преломления воды относительно воздуха равен \(n=c/\upsilon\) (2). Формула 1 даёт обратный показатель преломления, а формула 3 ошибочно уменьшает длину волны при переходе в воздух, поэтому они не подходят. Ответ: \(\boxed{42}\).
+}
+
+% Source e435F2: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=e435F2
+\BankTask{e435F2}{
+Идеальный колебательный контур состоит из конденсатора и катушки индуктивности. Напряжение между обкладками конденсатора изменяется во времени в соответствии с формулой \(U(t)=U_m\cdot\cos\omega t\).
+
+Приведённые ниже графики А и Б представляют зависимость физических величин, характеризующих электромагнитные колебания в контуре, от времени \(t\) (\(T\) — период колебаний). Установите соответствие между графиками и физическими величинами, зависимость которых от времени эти графики могут представлять.
+
+\TaskMatchingColumns[.53\linewidth]{Графики}{
+А) график А\par
+Б) график Б
+}{Физические величины}{
+1) сила тока в катушке\par
+2) энергия магнитного поля катушки\par
+3) энергия электрического поля конденсатора\par
+4) заряд одной из обкладок конденсатора
+}
+
+\medskip
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{00} & \phantom{00} \\
+\hline
+\end{tabular}
+
+\medskip
+\begin{tikzpicture}[book diagram]
+\node at (2.1,1.25) {А)};
+\draw[-{book tip}] (0,-1.05)--(0,1.8);
+\draw[-{book tip}] (0,0)--(4.55,0) node[below right] {$t$};
+\node[below left] at (0,0) {$0$};
+\node[below left] at (4,0) {$T$};
+\draw plot[domain=0:4.2,samples=101] (\x,{-0.76*sin(90*\x)});
+\end{tikzpicture}
+\qquad
+\begin{tikzpicture}[book diagram]
+\node at (2.1,2.55) {Б)};
+\draw[-{book tip}] (0,-0.35)--(0,2.5);
+\draw[-{book tip}] (0,0)--(4.55,0) node[below right] {$t$};
+\node[below left] at (0,0) {$0$};
+\node[below] at (4,0) {$T$};
+\draw plot[domain=0:4,samples=121] (\x,{2.15*(sin(90*\x))^2});
+\end{tikzpicture}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Заряд \(q=CU_m\cos\omega t\), поэтому сила тока \(I=dq/dt=-\omega CU_m\sin\omega t\): график А соответствует величине 1. Энергия магнитного поля \(W_L=LI^2/2\propto\sin^2\omega t\), поэтому график Б соответствует величине 2. Величины 3 и 4 не подходят: \(W_C=CU_m^2\cos^2\omega t/2\) и \(q=CU_m\cos\omega t\) при \(t=0\) отличны от нуля. Ответ: А — 1, Б — 2.
+}
+
+% Source 646A9F: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=646A9F
+\BankTask{646A9F}{
+На рисунке приведён график зависимости силы тока от времени в катушке индуктивности идеального колебательного контура.
+
+Графики А и Б представляют изменения физических величин, характеризующих колебания в контуре. Установите соответствие между графиками и физическими величинами, зависимость которых от времени эти графики могут представлять.
+
+\TaskMatchingColumns[.53\linewidth]{Графики}{
+А) график А\par
+Б) график Б
+}{Физические величины}{
+1) индуктивность катушки\par
+2) напряжение на обкладках конденсатора\par
+3) энергия электрического поля конденсатора\par
+4) энергия магнитного поля катушки
+}
+
+\medskip
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{00} & \phantom{00} \\
+\hline
+\end{tabular}
+
+\medskip
+\begin{tikzpicture}[book diagram]
+\draw[-{book tip}] (0,-1.05)--(0,1.8) node[left] {$I$};
+\draw[-{book tip}] (-0.18,0)--(3.75,0) node[below right] {$t$};
+\node[below left] at (0,0) {$0$};
+\draw plot[domain=0:3.3,samples=101] (\x,{0.88*cos(360*\x/3.3)});
+\draw[dashed] (3.3,0)--(3.3,0.88);
+\node[below] at (3.3,0) {$T$};
+\end{tikzpicture}
+
+\medskip
+\begin{tikzpicture}[book diagram]
+\node at (1.4,1.8) {А)};
+\draw[-{book tip}] (0,-0.25)--(0,1.55);
+\draw[-{book tip}] (-0.18,0)--(3.12,0) node[below right] {$t$};
+\node[below left] at (0,0) {$0$};
+\draw plot[domain=0:2.7,samples=121] (\x,{1.15*(cos(360*\x/2.7))^2});
+\draw (2.7,0.3)--(2.7,1.15);
+\node[below] at (2.7,0) {$T$};
+\end{tikzpicture}
+\qquad
+\begin{tikzpicture}[book diagram]
+\node at (1.4,1.8) {Б)};
+\draw[-{book tip}] (0,-0.8)--(0,1.3);
+\draw[-{book tip}] (-0.18,0)--(3.05,0) node[below right] {$t$};
+\node[below left] at (0,0) {$0$};
+\draw plot[domain=0:2.78,samples=101] (\x,{0.57*sin(360*\x/2.6)});
+\node[below left] at (2.6,0) {$T$};
+\end{tikzpicture}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По исходному графику \(I=I_m\cos\omega t\), поэтому \(W_L=LI_m^2\cos^2\omega t/2\): график А соответствует величине 4. Напряжение \(U=-L\,dI/dt=\omega LI_m\sin\omega t\), что соответствует графику Б и величине 2. Индуктивность (1) постоянна, а энергия электрического поля (3) пропорциональна \(\sin^2\omega t\), неотрицательна и в начальный момент равна нулю, поэтому эти варианты не подходят. Ответ: А — 4, Б — 2.
+}
+
+% Source 1FA129: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=1FA129
+\BankTask{1FA129}{
+Идеальный колебательный контур состоит из конденсатора электроёмкостью \(50\text{ мкФ}\) и катушки индуктивности. Заряд на одной из пластин конденсатора изменяется во времени в соответствии с формулой \(q(t)=4\cdot10^{-4}\cdot\sin(2000t)\) (все величины выражены в СИ).
+
+Установите соответствие между физическими величинами и формулами, выражающими их зависимость от времени в условиях данной задачи.
+
+\TaskMatchingColumns[0.53\linewidth]{Физические величины}{
+А) напряжение \(u(t)\) на обкладках конденсатора\par
+Б) энергия \(W_C(t)\) электрического поля конденсатора
+}{Формулы}{
+1) \(1{,}6\cdot10^{-3}\cdot\sin^2(2000t)\)\par
+2) \(8\cdot\sin(2000t)\)\par
+3) \(1{,}6\cdot10^{-3}\cdot\cos^2(2000t)\)\par
+4) \(0{,}8\cdot\sin\left(2000t-\frac{\pi}{2}\right)\)
+}
+
+\medskip
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{00} & \phantom{00} \\
+\hline
+\end{tabular}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Напряжение \(u(t)=q(t)/C=8\sin(2000t)\text{ В}\), поэтому А соответствует формуле 2. Энергия \(W_C(t)=q^2(t)/(2C)=1{,}6\cdot10^{-3}\sin^2(2000t)\text{ Дж}\), поэтому Б соответствует формуле 1. Формула 3 имеет неверную начальную фазу энергии, а формула 4 не соответствует ни напряжению по амплитуде и фазе, ни неотрицательной энергии. Ответ: А — 2, Б — 1.
+}
+
+% Source D71C20: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=D71C20
+\BankTask{D71C20}{
+Идеальный колебательный контур состоит из конденсатора и катушки индуктивностью $L$. Напряжение на пластинах конденсатора изменяется во времени в соответствии с формулой $u(t)=U_0\sin\omega t$.
+
+Установите соответствие между физическими величинами и формулами, выражающими их зависимость от времени.
+
+\begin{center}
+\TaskMatchingColumns[0.48\linewidth]{Физические величины}{
+А) сила тока $i(t)$ в колебательном контуре\par
+Б) энергия $W_L(t)$ магнитного поля катушки
+}{Формулы}{
+1) $\displaystyle\frac{U_0^2}{2L\omega^2}\cos^2\omega t$\par
+2) $\displaystyle\frac{U_0}{\omega L}\cos\omega t$\par
+3) $\displaystyle\frac{U_0^2}{2L\omega^2}\cdot\sin^2\omega t$\par
+4) $\displaystyle\frac{\omega L}{U_0}\sin\omega t$
+}
+
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{22} & \phantom{22} \\
+\hline
+\end{tabular}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Из $\omega^2=1/(LC)$ получаем $C=1/(L\omega^2)$, поэтому $i(t)=C\,du/dt=\dfrac{U_0}{L\omega}\cos\omega t$: А — 2. Энергия магнитного поля $W_L(t)=Li^2/2=\dfrac{U_0^2}{2L\omega^2}\cos^2\omega t$: Б — 1. Ответ: $21$.
+}
+
+% Source 4EAC46: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=4EAC46
+\BankTask{4EAC46}{
+Исследуется электрическая цепь, собранная по схеме, представленной на рисунке.
+
+Определите формулы, которые можно использовать для расчётов показаний амперметра и вольтметра. Считать измерительные приборы идеальными, а сопротивление реостата полностью введённым в цепь.
+
+\begin{center}
+\TaskMatchingColumns[0.48\linewidth]{Показания приборов}{
+А) показания амперметра\par
+Б) показания вольтметра
+}{Формулы}{
+1) $\displaystyle\frac{\mathcal E}{R+R_{\text{р}}+r}$\par
+2) $\mathcal E(R+R_{\text{р}}+r)$\par
+3) $\displaystyle\mathcal E-\frac{\mathcal E R}{R+R_{\text{р}}+r}$\par
+4) $\displaystyle\frac{\mathcal E R}{R+R_{\text{р}}+r}$
+}
+
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{22} & \phantom{22} \\
+\hline
+\end{tabular}
+
+\begin{tikzpicture}[book diagram,x=0.045cm,y=0.045cm]
+\draw (0,0) -- (0,57) -- (12,57);
+\draw (12,50) -- (12,64);
+\draw (19,44) -- (19,70);
+\node[above] at (12,70) {$\mathcal E,r$};
+\draw (19,57) -- (45,57);
+\draw (59,57) circle (14);
+\node at (59,57) {$\mathrm A$};
+\draw (73,57) -- (85,57) -- (85,38);
+\draw (76,38) rectangle (94,-5);
+\node[left] at (73,16) {$R$};
+\draw (85,-5) -- (85,-27) -- (58,-27);
+\fill (85,51) circle (1.7);
+\fill (85,-22) circle (1.7);
+\draw (85,51) -- (129,51) -- (129,28);
+\draw (129,14) circle (14);
+\node at (129,14) {$\mathrm V$};
+\draw (129,0) -- (129,-22) -- (85,-22);
+\draw (15,-18) rectangle (58,-36);
+\node[below] at (36.5,-36) {$R_{\text{р}}$};
+
+\draw (0,0) -- (42,0) -- (42,-6);
+\draw[-{book tip}] (42,-6) -- (42,-18);
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Идеальный вольтметр не проводит ток, а сопротивление идеального амперметра равно нулю, поэтому $I=\dfrac{\mathcal E}{R+R_{\text{р}}+r}$: А — 1. Вольтметр подключён параллельно резистору $R$ и показывает $U=IR=\dfrac{\mathcal E R}{R+R_{\text{р}}+r}$: Б — 4. Ответ: $14$.
+}
+
+% Source 15274C: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=15274C
+\BankTask{15274C}{
+На рисунке показана цепь постоянного тока. Установите соответствие между физическими величинами и формулами, по которым их можно рассчитать ($\mathcal E$ — ЭДС источника тока, $r$ — внутреннее сопротивление источника тока, $R$ — сопротивление резистора).
+
+\begin{center}
+\TaskMatchingColumns[0.55\linewidth]{Физические величины}{
+А) сила тока через источник при замкнутом ключе К\par
+Б) сила тока через источник при разомкнутом ключе К
+}{Формулы}{
+1) $\displaystyle\frac{\mathcal E}{r+2R}$\par
+2) $\displaystyle\frac{\mathcal E}{2R}$\par
+3) $\displaystyle\frac{\mathcal E}{r}$\par
+4) $\displaystyle\frac{\mathcal E}{R+r}$
+}
+
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{22} & \phantom{22} \\
+\hline
+\end{tabular}
+
+\begin{tikzpicture}[book diagram,x=0.045cm,y=0.045cm]
+\draw (0,0) -- (0,44) -- (70,44);
+\draw (70,30) -- (70,58);
+\draw (77,37) -- (77,51);
+\node[above] at (74,60) {$\mathcal E,r$};
+\draw (77,44) -- (141,44) -- (141,0) -- (134,0);
+\draw (85,-11) rectangle (134,11);
+\node at (109.5,0) {$R$};
+\draw (85,0) -- (56,0);
+\draw (7,-11) rectangle (56,11);
+\node at (31.5,0) {$R$};
+\draw (7,0) -- (0,0) -- (0,-28) -- (25,-28);
+\fill (25,-28) circle (1.5);
+\draw (25,-28) -- (44,-39);
+\draw (49,-28) -- (70,-28) -- (70,0);
+\fill (49,-28) circle (1.5);
+\node[below right] at (46,-32) {$\mathrm K$};
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+При замкнутом ключе левый резистор закорочен, поэтому ток через источник $I_{\text{замк}}=\dfrac{\mathcal E}{R+r}$: А — 4. При разомкнутом ключе оба резистора соединены последовательно, поэтому $I_{\text{разомк}}=\dfrac{\mathcal E}{2R+r}$: Б — 1. Ответ: $41$.
+}
+
+% Source 10C527: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=10C527
+\BankTask{10C527}{
+Электрическая цепь на рисунке состоит из источника постоянного напряжения с ЭДС $\mathcal{E}$ и внутренним сопротивлением $r$ и внешней цепи из двух одинаковых резисторов сопротивлением $R$, включённых параллельно. Установите соответствие между физическими величинами и формулами, по которым их можно рассчитать.
+
+\begin{center}
+\TaskMatchingColumns[0.53\linewidth]{Физические величины}{
+А) мощность тока, выделяющаяся на одном из резисторов $R$\par
+Б) мощность сторонних сил в источнике тока
+}{Формулы}{
+1) $\displaystyle\frac{\mathcal{E}^2R}{4\left(r+\frac{R}{2}\right)^2}$\par
+2) $\displaystyle\frac{\mathcal{E}^2R}{2\left(r+\frac{R}{2}\right)^2}$\par
+3) $\displaystyle\frac{\mathcal{E}^2r}{\left(r+\frac{R}{2}\right)^2}$\par
+4) $\displaystyle\frac{\mathcal{E}^2}{r+\frac{R}{2}}$
+}
+
+\medskip
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{1} & \phantom{1} \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}[book diagram,x=0.8cm,y=0.8cm]
+\draw (0,1.9)--(0,3.5)--(4.6,3.5)--(4.6,2.45);
+\draw (0,1.55)--(0,0)--(4.6,0)--(4.6,1.1);
+\draw (-0.55,1.9)--(0.55,1.9);
+\draw (-0.3,1.55)--(0.3,1.55);
+\node[left] at (-0.55,2.35) {$\mathcal{E},r$};
+\draw (2.3,3.5)--(2.3,2.45);
+\draw (1.975,1.1) rectangle (2.625,2.45);
+\draw (2.3,1.1)--(2.3,0);
+\node[right] at (2.65,1.775) {$R$};
+\draw (4.275,1.1) rectangle (4.925,2.45);
+\node[right] at (4.95,1.775) {$R$};
+\fill (2.3,3.5) circle (1.5pt);
+\fill (2.3,0) circle (1.5pt);
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Сопротивление внешней цепи равно $R/2$, поэтому ток через источник $I=\mathcal{E}/(r+R/2)$. Через каждый резистор течёт ток $I/2$, и мощность одного резистора равна $P_R=I^2R/4=\mathcal{E}^2R/[4(r+R/2)^2]$, то есть А — 1. Мощность сторонних сил $P_{\text{ст}}=\mathcal{E}I=\mathcal{E}^2/(r+R/2)$, то есть Б — 4. Ответ: $14$.
+}
+
+% Source BB603A: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=BB603A
+\BankTask{BB603A}{
+Электрическая цепь на рисунке состоит из источника постоянного напряжения с ЭДС $\mathcal{E}$ и внутренним сопротивлением $r$ и внешней цепи из двух одинаковых резисторов сопротивлением $R$, включённых параллельно. Установите соответствие между физическими величинами и формулами, по которым их можно рассчитать.
+
+\begin{center}
+\TaskMatchingColumns[0.53\linewidth]{Физические величины}{
+А) мощность тока, выделяющаяся во внешней цепи из двух резисторов $R$\par
+Б) мощность тока, выделяющаяся на внутреннем сопротивлении источника тока
+}{Формулы}{
+1) $\displaystyle\frac{\mathcal{E}^2R}{4\left(r+\frac{R}{2}\right)^2}$\par
+2) $\displaystyle\frac{\mathcal{E}^2R}{2\left(r+\frac{R}{2}\right)^2}$\par
+3) $\displaystyle\frac{\mathcal{E}^2r}{\left(r+\frac{R}{2}\right)^2}$\par
+4) $\displaystyle\frac{\mathcal{E}^2}{r+\frac{R}{2}}$
+}
+
+\medskip
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{1} & \phantom{1} \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}[book diagram,x=0.8cm,y=0.8cm]
+\draw (0,1.9)--(0,3.5)--(4.6,3.5)--(4.6,2.45);
+\draw (0,1.55)--(0,0)--(4.6,0)--(4.6,1.1);
+\draw (-0.55,1.9)--(0.55,1.9);
+\draw (-0.3,1.55)--(0.3,1.55);
+\node[left] at (-0.55,2.35) {$\mathcal{E},r$};
+\draw (2.3,3.5)--(2.3,2.45);
+\draw (1.975,1.1) rectangle (2.625,2.45);
+\draw (2.3,1.1)--(2.3,0);
+\node[right] at (2.65,1.775) {$R$};
+\draw (4.275,1.1) rectangle (4.925,2.45);
+\node[right] at (4.95,1.775) {$R$};
+\fill (2.3,3.5) circle (1.5pt);
+\fill (2.3,0) circle (1.5pt);
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Эквивалентное сопротивление двух параллельных резисторов равно $R/2$, поэтому $I=\mathcal{E}/(r+R/2)$. Во внешней цепи выделяется мощность $P_{\text{внеш}}=I^2R/2=\mathcal{E}^2R/[2(r+R/2)^2]$, что соответствует формуле 2. На внутреннем сопротивлении выделяется мощность $P_r=I^2r=\mathcal{E}^2r/(r+R/2)^2$, что соответствует формуле 3. Ответ: $23$.
+}
+
+% Source DF5187: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=DF5187
+\BankTask{DF5187}{
+Два резистора с сопротивлениями $R_1$ и $R_2$ подключены к источнику тока с внутренним сопротивлением $r$ (см. рисунок). Напряжение на втором резисторе равно $U_2$. Чему равны напряжение на первом резисторе и ЭДС источника?
+
+Установите соответствие между физическими величинами и формулами, по которым их можно рассчитать.
+
+\begin{center}
+\TaskMatchingColumns[0.49\linewidth]{Физические величины}{
+А) напряжение на резисторе $R_1$\par
+Б) ЭДС источника
+}{Формулы}{
+1) $\displaystyle U_2\cdot\frac{R_1}{R_2}$\par
+2) $\displaystyle U_2\cdot\frac{R_2}{R_1}$\par
+3) $\displaystyle\frac{U_2}{R_1}\cdot(R_1+R_2+r)$\par
+4) $\displaystyle\frac{U_2}{R_2}\cdot(R_1+R_2+r)$
+}
+
+\medskip
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{1} & \phantom{1} \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}[book diagram,x=0.8cm,y=0.8cm]
+\draw (0,1.85)--(0,3.5)--(1.4,3.5);
+\draw (1.4,3.15) rectangle (3.1,3.85);
+\draw (3.1,3.5)--(4.5,3.5)--(4.5,2.95);
+\draw (4.15,1.25) rectangle (4.85,2.95);
+\draw (4.5,1.25)--(4.5,0)--(0,0)--(0,1.55);
+\draw (-0.55,1.85)--(0.55,1.85);
+\draw (-0.3,1.55)--(0.3,1.55);
+\node[left] at (-0.55,2.3) {$\mathcal{E},r$};
+\node[below] at (2.25,3.12) {$R_1$};
+\node[right] at (4.9,2.1) {$R_2$};
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+При последовательном соединении ток через оба резистора одинаков: $I=U_2/R_2$. Тогда напряжение на первом резисторе $U_1=IR_1=U_2R_1/R_2$, то есть А — 1. По закону Ома для полной цепи $\mathcal{E}=I(R_1+R_2+r)=\dfrac{U_2}{R_2}(R_1+R_2+r)$, то есть Б — 4. Ответ: $14$.
+}
+
+% Source 433A84: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=433A84
+\BankTask{433A84}{
+Электрическая цепь, схема которой изображена на рисунке, подключена к аккумулятору. Напряжение между полюсами аккумулятора равно \(U_0\), а показания идеальных амперметра и вольтметра равны соответственно \(I\) и \(U\).
+
+Установите соответствие между физическими величинами и формулами, по которым их можно рассчитать. Внутренним сопротивлением аккумулятора пренебречь.
+
+\TaskMatchingColumns[0.59\linewidth]{Физические величины}{
+А) мощность, потребляемая лампочкой\par
+Б) сопротивление лампочки
+}{Формулы}{
+1) \(\dfrac{U}{I}\)\par
+2) \(\dfrac{U_0-U}{I}\)\par
+3) \((U_0-U)I\)\par
+4) \(UI\)
+}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{3} & \phantom{2} \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}[book diagram, x=1cm, y=1cm, line width=0.8pt]
+\draw (1.15,1.5) -- (0,1.5) -- (0,1.05);
+\draw (0,0.45) -- (0,0) -- (0.5,0);
+\draw (0,0.75) circle (0.3);
+\node at (0,0.75) {\(\mathrm{A}\)};
+\draw (0.8,0) circle (0.3);
+\draw (0.59,-0.21) -- (1.01,0.21);
+\draw (0.59,0.21) -- (1.01,-0.21);
+\draw (1.1,0) -- (1.5,0) -- (2,0);
+\draw (2,-0.15) rectangle (2.6,0.15);
+\draw (2.6,0) -- (3.05,0) -- (3.05,1.5) -- (1.8,1.5);
+\draw (1.5,0) -- (1.5,0.9) -- (1.95,0.9);
+\draw (2.25,0.9) circle (0.3);
+\node at (2.25,0.9) {\(\mathrm{V}\)};
+\draw (2.55,0.9) -- (3.05,0.9);
+\fill (1.5,0) circle (0.045);
+\fill (3.05,0.9) circle (0.045);
+\draw[fill=white] (1.15,1.5) circle (0.06);
+\draw[fill=white] (1.8,1.5) circle (0.06);
+\node at (1.475,1.88) {\(U_0\)};
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Идеальный вольтметр измеряет напряжение на резисторе и не пропускает ток, поэтому через лампочку течёт ток \(I\), а напряжение на ней равно \(U_0-U\). Мощность лампочки \(P=(U_0-U)I\) соответствует формуле 3, её сопротивление \(R=\dfrac{U_0-U}{I}\) — формуле 2. Формулы 1 и 4 определяют соответственно сопротивление и мощность резистора. Ответ: \(32\).
+}
+
+% Source BD62B3: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=BD62B3
+\BankTask{BD62B3}{
+Установите соответствие между формулами для расчёта физических величин в цепях постоянного тока и названиями этих величин. В формулах использованы обозначения: \(R\) — сопротивление резистора; \(P\) — мощность тока в резисторе; \(U\) — напряжение на резисторе.
+
+\TaskMatchingColumns[.35\linewidth]{Формулы}{
+А) \(\dfrac{U}{R}\)\par
+Б) \(\dfrac{U^2}{P}\)
+}{Физические величины}{
+1) мощность тока в резисторе\par
+2) сопротивление резистора\par
+3) сила тока\par
+4) количество теплоты, выделяющееся в резисторе
+}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+А & Б \\
+\hline
+\phantom{3} & \phantom{2} \\
+\hline
+\end{tabular}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По закону Ома \(I=\dfrac{U}{R}\), поэтому А соответствует силе тока (3). Из формулы мощности \(P=\dfrac{U^2}{R}\) получаем \(R=\dfrac{U^2}{P}\), поэтому Б соответствует сопротивлению (2). Мощность (1) равна \(UI\), а количество теплоты (4) равно \(Pt\); ни одна из данных формул их не определяет. Ответ: \(32\).
+}
+
+\end{document}

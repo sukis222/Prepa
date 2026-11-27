@@ -1,0 +1,339 @@
+% EGE 2027, task 6. Source IDs and URLs are kept in comments.
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse
+\fi
+\newcounter{banktask}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}%
+  \Needspace{35mm}\par\medskip\noindent\begin{minipage}{\linewidth}%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+  \end{minipage}\par\medskip
+}
+\begin{document}
+
+
+% Source EC9E02: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=EC9E02
+\BankTask{EC9E02}{
+На гладком горизонтальном столе брусок массой $M$, прикреплённый к вертикальной стене лёгкой горизонтальной пружиной жёсткостью $k$, совершает свободные гармонические колебания с амплитудой $A$.
+\TaskMatchingColumns[.53\linewidth]{Физические величины}{
+А) частота колебаний бруска\par
+Б) амплитуда ускорения бруска
+}{Формулы}{
+1) $\frac{1}{2\pi}\sqrt{\frac{M}{k}}$\par
+2) $A\frac{k}{M}$\par
+3) $\frac{1}{2\pi}\sqrt{\frac{k}{M}}$\par
+4) $A\sqrt{\frac{k}{M}}$\par
+}\begin{center}\begin{tabular}{|c|c|}\hline А & Б \\\hline\rule{0pt}{1.2em}\hspace{1cm} & \hspace{1cm} \\\hline\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$\omega=\sqrt{k/M}$, поэтому $\nu=\omega/(2\pi)$ (формула $3$), $a_{\max}=\omega^2A=Ak/M$ (формула $2$). Ответ: $32$.
+}
+
+% Source 1D0119: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=1D0119
+\BankTask{1D0119}{
+Шайба массой $m$, скользящая по гладкой горизонтальной поверхности со скоростью $v$, абсолютно неупруго сталкивается с покоящейся шайбой массой $M$.
+\TaskMatchingColumns[.53\linewidth]{Физические величины}{
+А) кинетическая энергия покоившейся шайбы после столкновения\par
+Б) импульс налетающей шайбы после столкновения
+}{Формулы}{
+1) $\frac{m^2v}{m+M}$\par
+2) $mv$\par
+3) $\frac{m^2Mv^2}{2(m+M)^2}$\par
+4) $\frac{Mv^2}{2}$\par
+}\begin{center}\begin{tabular}{|c|c|}\hline А & Б \\\hline\rule{0pt}{1.2em}\hspace{1cm} & \hspace{1cm} \\\hline\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Из сохранения импульса общая скорость $u=mv/(m+M)$. Энергия второй шайбы $Mu^2/2=m^2Mv^2/[2(m+M)^2]$ (формула $3$); импульс первой $mu=m^2v/(m+M)$ (формула $1$). Ответ: $31$.
+}
+
+% Source F4CD91: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=F4CD91
+\BankTask{F4CD91}{
+Тело, брошенное с горизонтальной поверхности Земли со скоростью $v$ под углом $\alpha$ к горизонту, поднимается на максимальную высоту $h$ над земной поверхностью и затем падает на землю. Сопротивлением воздуха пренебречь.
+\TaskMatchingColumns[.53\linewidth]{Физические величины}{
+А) максимальная высота $h$ над горизонтом\par
+Б) модуль вертикальной проекции скорости тела непосредственно перед падением на землю
+}{Формулы}{
+1) $\frac{v^2\sin^2\alpha}{2g}$\par
+2) $v\sin\alpha$\par
+3) $\frac{v^2\sin2\alpha}{2g}$\par
+4) $v\cos\alpha$\par
+}\begin{center}\begin{tabular}{|c|c|}\hline А & Б \\\hline\rule{0pt}{1.2em}\hspace{1cm} & \hspace{1cm} \\\hline\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Начальная вертикальная скорость $v_{0y}=v\sin\alpha$. Из $v_y^2=v_{0y}^2-2gh$ при $v_y=0$ получаем $h=v^2\sin^2\alpha/(2g)$ (формула $1$). При возвращении на исходный уровень $v_y=-v\sin\alpha$, поэтому $|v_y|=v\sin\alpha$ (формула $2$). Ответ: $12$.
+}
+
+% Source B28492: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B28492
+\BankTask{B28492}{
+Тело массой $200\,\text{г}$ движется вдоль оси $Ox$, при этом его координата изменяется во времени в соответствии с формулой $x(t)=10+5t-3t^2$ (все величины выражены в СИ).
+\TaskMatchingColumns[.53\linewidth]{Физические величины}{
+А) проекция $v_x(t)$ скорости тела\par
+Б) проекция $F_x(t)$ равнодействующей сил, приложенных к телу
+}{Формулы}{
+1) $5-6t$\par
+2) $-1{,}2$\par
+3) $-3$\par
+4) $10+5t$\par
+}\begin{center}\begin{tabular}{|c|c|}\hline А & Б \\\hline\rule{0pt}{1.2em}\hspace{1cm} & \hspace{1cm} \\\hline\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$v_x=dx/dt=5-6t$ (формула $1$), $a_x=-6\,\text{м}/\text{с}^2$. Тогда $F_x=ma_x=0{,}2\cdot(-6)=-1{,}2\,\text{Н}$ (формула $2$). Ответ: $12$.
+}
+
+% Source 69AD85: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=69AD85
+\BankTask{69AD85}{
+Выражения А и Б определяют зависимость координат двух тел от времени. Установите соответствие между зависимостью координаты тела от времени и зависимостью проекции скорости от времени для этого же тела. Все величины заданы в СИ.
+\TaskMatchingColumns[.53\linewidth]{Координата}{
+А) $x=10+5t+2t^2$\par
+Б) $x=10+2t^2$
+}{Скорость}{
+1) $v_x=5+4t$\par
+2) $v_x=5+2t$\par
+3) $v_x=4t$\par
+4) $v_x=2t$\par
+}\begin{center}\begin{tabular}{|c|c|}\hline А & Б \\\hline\rule{0pt}{1.2em}\hspace{1cm} & \hspace{1cm} \\\hline\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Скорость --- производная координаты: в случае А $v_x=5+4t$ (формула $1$), в случае Б $v_x=4t$ (формула $3$). Ответ: $13$.
+}
+
+% Source DB3508: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=DB3508
+\BankTask{DB3508}{
+Шайба массой $m$ съезжает без трения из состояния покоя с вершины горки. У подножия горки потенциальная энергия шайбы равна нулю, а модуль её импульса равен $p$. Каковы высота горки и потенциальная энергия шайбы на её вершине? Ускорение свободного падения равно $g$.
+\TaskMatchingColumns[.53\linewidth]{Физические величины}{
+А) высота горки\par
+Б) потенциальная энергия шайбы на вершине горки
+}{Формулы}{
+1) $\frac{p^2}{2m^2g}$\par
+2) $\frac{p^2}{2mg}$\par
+3) $\frac{p^2}{2m}$\par
+4) $\frac{mp^2}{2g}$\par
+}\begin{center}\begin{tabular}{|c|c|}\hline А & Б \\\hline\rule{0pt}{1.2em}\hspace{1cm} & \hspace{1cm} \\\hline\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$mgh=mv^2/2=p^2/(2m)$. Поэтому $h=p^2/(2m^2g)$ (формула $1$), $E_{\text{п}}=p^2/(2m)$ (формула $3$). Ответ: $13$.
+}
+
+% Source BE8E13: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=BE8E13
+\BankTask{BE8E13}{
+Один конец лёгкой пружины жёсткостью $k$ прикреплён к бруску, а другой закреплён неподвижно. Брусок скользит по горизонтальной направляющей так, что его координата изменяется со временем по закону $x(t)=A\sin\omega t$.
+Установите соответствие между физическими величинами и формулами, выражающими их изменения во времени.\TaskMatchingColumns[.53\linewidth]{Физические величины}{
+А) проекция $F_x(t)$ равнодействующей силы на ось $x$\par
+Б) потенциальная энергия пружины $E_{\text{П}}(t)$
+}{Формулы}{
+1) $kA^2\sin\omega t$\par
+2) $-kA\sin\omega t$\par
+3) $-kA^2\sin^2\omega t$\par
+4) $\frac{kA^2}{2}\sin^2\omega t$\par
+}\begin{center}\begin{tabular}{|c|c|}\hline А & Б \\\hline\rule{0pt}{1.2em}\hspace{1cm} & \hspace{1cm} \\\hline\end{tabular}\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По закону Гука $F_x=-kx=-kA\sin\omega t$ (формула $2$). Энергия $E_{\text{П}}=kx^2/2=(kA^2/2)\sin^2\omega t$ (формула $4$). Ответ: $24$.
+}
+
+% Source DF724F: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=DF724F
+\BankTask{DF724F}{
+Подвешенный на пружине груз совершает свободные вертикальные гармонические колебания. Пружину заменили на другую, жёсткость которой больше, оставив массу груза и амплитуду колебаний неизменными. Как при этом изменятся частота свободных колебаний груза и его максимальная скорость?
+\begin{enumerate}
+\item увеличится
+\item уменьшится
+\item не изменится
+\end{enumerate}
+\TaskChangeTable{Частота свободных колебаний груза}{Максимальная скорость груза}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$\nu=(2\pi)^{-1}\sqrt{k/m}$, $v_{\max}=2\pi\nu A$. При увеличении $k$ и неизменных $m,A$ обе величины увеличиваются. Ответ: $11$.
+}
+
+% Source F4D3FF: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=F4D3FF
+\BankTask{F4D3FF}{
+Космический аппарат, обращающийся вокруг Луны по круговой орбите, перешёл на другую круговую орбиту бóльшего радиуса. Как изменились в результате этого перехода центростремительное ускорение, с которым аппарат движется по орбите, и его период обращения вокруг Луны?
+\begin{enumerate}
+\item увеличилась
+\item уменьшилась
+\item не изменилась
+\end{enumerate}
+\TaskChangeTable{Центростремительное ускорение}{Период обращения аппарата вокруг Луны}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$a=GM/r^2$ уменьшается с ростом радиуса; $T=2\pi\sqrt{r^3/(GM)}$ увеличивается. Ответ: $21$.
+}
+
+% Source FcA2F2: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=FcA2F2
+\BankTask{FcA2F2}{
+В школьном опыте брусок, помещённый на горизонтальный диск, вращался вместе с ним с некоторой угловой скоростью. В ходе опыта угловую скорость диска увеличили. При этом положение бруска на диске осталось прежним. Как изменились при этом центростремительное ускорение бруска и сила нормального давления бруска на опору?
+\begin{enumerate}
+\item увеличилась
+\item уменьшилась
+\item не изменилась
+\end{enumerate}
+\TaskChangeTable{Центростремительное ускорение бруска}{Сила нормального давления бруска на опору}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$a=\omega^2r$ увеличивается. По вертикали ускорения нет, поэтому сила нормального давления $N=mg$ не меняется. Ответ: $13$.
+}
+
+% Source 589e07: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=589e07
+\BankTask{589e07}{
+Мяч подбросили вверх с крыши сарая. Как изменяются по мере подъёма модуль импульса мяча и его потенциальная энергия относительно поверхности Земли? Сопротивление воздуха не учитывать.
+\begin{enumerate}
+\item увеличивается
+\item уменьшается
+\item не изменяется
+\end{enumerate}
+\TaskChangeTable{Модуль импульса мяча}{Потенциальная энергия мяча}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+При подъёме скорость уменьшается, поэтому $p=mv$ уменьшается. Высота растёт, значит $E_{\text{п}}=mgh$ увеличивается. Ответ: $21$.
+}
+
+% Source CCDA00: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=CCDA00
+\BankTask{CCDA00}{
+На поверхности воды плавает прямоугольный брусок из древесины плотностью $400\,\text{кг}/\text{м}^{3}$. Брусок заменили на другой брусок той же массы и с той же площадью основания, но из древесины плотностью $600\,\text{кг}/\text{м}^{3}$. Как при этом изменились глубина погружения бруска и действующая на него сила Архимеда?
+\begin{enumerate}
+\item увеличилась
+\item уменьшилась
+\item не изменилась
+\end{enumerate}
+\TaskChangeTable{Глубина погружения бруска}{Сила Архимеда}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+При плавании $F_A=mg$, а $\rho_{\text{воды}}gSh=mg$. При одинаковых $m,S$ обе величины неизменны: $h=m/(\rho_{\text{воды}}S)$. Ответ: $33$.
+}
+
+% Source AEDF70: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=AEDF70
+\BankTask{AEDF70}{
+Железный сплошной шарик совершает малые свободные колебания на лёгкой нерастяжимой нити. Затем этот шарик заменили на сплошной алюминиевый шарик такого же диаметра. Амплитуда колебаний в обоих случаях одинакова.
+Как при этом изменятся частота колебаний и максимальная кинетическая энергия шарика?
+\begin{enumerate}
+\item увеличится
+\item уменьшится
+\item не изменится
+\end{enumerate}
+\TaskChangeTable{Частота колебаний шарика}{Максимальная кинетическая энергия шарика}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Длина маятника одинакова, поэтому $\nu=(2\pi)^{-1}\sqrt{g/l}$ не меняется. При одинаковой амплитуде $v_{\max}$ одинакова, а масса алюминиевого шарика меньше, поэтому $E_{\text{к max}}=mv_{\max}^2/2$ уменьшается. Ответ: $32$.
+}
+
+% Source 010677: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=010677
+\BankTask{010677}{
+Камень подбросили вверх. Как меняются по мере подъёма ускорение камня
+и его кинетическая энергия? Сопротивление воздуха не учитывать.
+\begin{enumerate}
+\item увеличивается
+\item уменьшается
+\item не меняется
+\end{enumerate}
+\TaskChangeTable{Ускорение камня}{Кинетическая энергия камня}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Ускорение свободного падения $\vec a=\vec g$ постоянно. При подъёме скорость уменьшается, поэтому $E_{\text{к}}=mv^2/2$ уменьшается. Ответ: $32$.
+}
+
+% Source E2791B: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=E2791B
+\BankTask{E2791B}{
+На поверхности подсолнечного масла плавает деревянный шарик, частично погружённый в жидкость. Как изменятся сила Архимеда, действующая
+на шарик, и глубина погружения шарика, если он будет плавать в воде?
+\begin{enumerate}
+\item увеличится
+\item уменьшится
+\item не изменится
+\end{enumerate}
+\TaskChangeTable{Сила Архимеда}{Глубина погружения шарика в жидкость}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+При плавании $F_A=mg$ не меняется. Плотность воды больше плотности масла, поэтому $V_{\text{погр}}=m/\rho$ и глубина погружения уменьшаются. Ответ: $32$.
+}
+
+% Source 32F41D: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=32F41D
+\BankTask{32F41D}{
+Шарик, брошенный с поверхности Земли под углом $20\,{}^\circ$ к горизонту
+с начальной скоростью ${\vec{\upsilon}}_0$, поднялся на максимальную высоту $H$ и пролетел
+в горизонтальном направлении расстояние $L$. Что произойдёт с дальностью полёта шарика и временем его полёта, если шарик бросить с той же
+по величине начальной скоростью под углом $30\,{}^\circ$ к горизонту?
+Сопротивлением воздуха пренебречь.
+\begin{enumerate}
+\item увеличится
+\item уменьшится
+\item не изменится
+\end{enumerate}
+\TaskChangeTable{Дальность полёта шарика}{Время полёта шарика}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$L=v_0^2\sin2\alpha/g$, $t=2v_0\sin\alpha/g$. При росте угла от $20^\circ$ до $30^\circ$ возрастают и $\sin2\alpha$, и $\sin\alpha$, следовательно, обе величины увеличиваются. Ответ: $11$.
+}
+
+% Source FB0F2e: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=FB0F2e
+\BankTask{FB0F2e}{
+В первой серии опытов брусок перемещают при помощи нити равномерно вверх по наклонной плоскости. Во второй серии опытов на брусок ставят груз и продолжают перемещать брусок при помощи нити равномерно вверх по той же наклонной плоскости. В обоих случаях нить параллельна наклонной плоскости.
+Как изменяются при переходе от первой серии опытов ко второй модуль работы силы трения при перемещении бруска на одинаковые расстояния и коэффициент трения скольжения между бруском и плоскостью?
+\begin{enumerate}
+\item увеличивается
+\item уменьшается
+\item не изменяется
+\end{enumerate}
+\TaskChangeTable{Модуль работы силы трения}{Коэффициент трения скольжения}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+При той же плоскости $\mu$ неизменен. После добавления груза $N=(m+M)g\cos\alpha$ больше, поэтому $|A_{\text{тр}}|=\mu Ns$ на том же пути увеличивается. Ответ: $13$.
+}
+
+% Source 10BE25: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=10BE25
+\BankTask{10BE25}{
+На поверхности пресной воды плотностью $\rho_{1}=1000\,\text{кг}/\text{м}^{3}$ плавает деревянный брусок. Как изменятся масса вытесненной бруском жидкости и действующая на него сила Архимеда, если этот брусок будет плавать на поверхности керосина плотностью $\rho_{2}=800\,\text{кг}/\text{м}^{3}$?
+\begin{enumerate}
+\item увеличится
+\item уменьшится
+\item не изменится
+\end{enumerate}
+\TaskChangeTable{Масса вытесненной бруском жидкости}{Сила Архимеда}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+При плавании $F_A=mg$, а масса вытесненной жидкости $m_{\text{ж}}=F_A/g=m$. Обе величины не зависят от плотности жидкости и не изменяются. Ответ: $33$.
+}
+
+% Source A5cD6A: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=A5cD6A
+\BankTask{A5cD6A}{
+Шарик, брошенный с поверхности Земли под углом $\alpha$ к горизонту с начальной скоростью ${\vec{\upsilon}}_0$, поднялся на максимальную высоту $H$ и пролетел в горизонтальном направлении расстояние $L$. Что произойдёт с максимальной высотой, на которую поднимется шарик, и его ускорением, если уменьшить начальную скорость шарика, не меняя $\alpha$? Сопротивлением воздуха пренебречь.
+\begin{enumerate}
+\item увеличится
+\item уменьшится
+\item не изменится
+\end{enumerate}
+\TaskChangeTable{Максимальная высота подъёма}{Ускорение шарика}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$H=v_0^2\sin^2\alpha/(2g)$ уменьшается при уменьшении $v_0$ с неизменным углом. Ускорение $\vec a=\vec g$ не меняется. Ответ: $23$.
+}
+
+% Source 9A9FD1: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=9A9FD1
+\BankTask{9A9FD1}{
+Спортсмен спускается на парашюте с постоянной скоростью. Как изменяются с течением времени в процессе спуска импульс спортсмена и его потенциальная энергия?
+\begin{enumerate}
+\item увеличивается
+\item уменьшается
+\item не изменяется
+\end{enumerate}
+\TaskChangeTable{Импульс}{Потенциальная энергия}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+При постоянной скорости $\vec p=m\vec v$ не меняется. Высота уменьшается, поэтому $E_{\text{п}}=mgh$ уменьшается. Ответ: $32$.
+}
+
+\end{document}

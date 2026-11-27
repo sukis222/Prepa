@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "source": "fipi",
+  "source_sha256": "2ec26b6b65a69088567a254c28ee42163196877b9eefaed2b37357c1c936b7b5",
+  "grouping": "official-top-level-kes-set-and-answer-kind",
+  "task_count": 2344,
+  "group_count": 28,
+  "groups": {
+    "kes-1-2-3__multiple_choice": {
+      "task_ids": [
+        "AA8BDA"
+      ],
+      "count": 1,
+      "title": "Несколько разделов: 1. Механика; 2. Молекулярная физика. Термодинамика; 3. Электродинамика — Выбор ответов из предложенных вариантов",
+      "visual_review": "passed",
+      "status": "compiled",
+      "parts_sha256": "f809969865a4100df2a2f3a8263966e4ce56bfac4e92586db1c9c0a8f8e56a46",
+      "files": [
+        {
+          "path": "D:\\GitHub\\Prepa-GPT\\output\\fipi-physics\\kes-1-2-3__multiple_choice-student.pdf",
+          "sha256": "865e6ebcae18e7655b043201d559f3f770f758cb916e8232321aa290a626da76"
+        },
+        {
+          "path": "D:\\GitHub\\Prepa-GPT\\output\\fipi-physics\\kes-1-2-3__multiple_choice-tutor.pdf",
+          "sha256": "ab384feaa664ce15fd19f40029b910dab393e67d94583f081fb57390c86cb92c"
+        }
+      ],
+      "build_sha256": "8dc8b0ebeb2a0fa4fd8547bf74ea8b08c33a846cad23a89ec32449748f3f40aa",
+      "reviewed_pdf_sha256": [
+        "865e6ebcae18e7655b043201d559f3f770f758cb916e8232321aa290a626da76",
+        "ab384feaa664ce15fd19f40029b910dab393e67d94583f081fb57390c86cb92c"
+      ],
+      "editor_view_checked": false
+    },
+    "kes-1__single_choice": {
+      "task_ids": [
+        "FC2D8A"
+      ],
+      "count": 1,
+      "title": "Механика — Выбор ответа из предложенных вариантов",
+      "visual_review": "passed",
+      "status": "compiled",
+      "parts_sha256": "e991ad531a11438482444fbfb3128a82377ed9ec9e7aab63575180c8e0ce51b5",
+      "files": [
+        {
+          "path": "D:\\GitHub\\Prepa-GPT\\output\\fipi-physics\\kes-1__single_choice-student.pdf",
+          "sha256": "a505b0a99573774a158fab5be4933ad9b730e08d3fa20851456df54930378e0e"
+        },
+        {
+          "path": "D:\\GitHub\\Prepa-GPT\\output\\fipi-physics\\kes-1__single_choice-tutor.pdf",
+          "sha256": "a11c4b311977393d81afc7bd9d62bc13c0e38cd4181f1c83df89f5d534930742"
+        }
+      ],
+      "build_sha256": "8dc8b0ebeb2a0fa4fd8547bf74ea8b08c33a846cad23a89ec32449748f3f40aa",
+      "reviewed_pdf_sha256": [
+        "a505b0a99573774a158fab5be4933ad9b730e08d3fa20851456df54930378e0e",
+        "a11c4b311977393d81afc7bd9d62bc13c0e38cd4181f1c83df89f5d534930742"
+      ],
+      "editor_view_checked": false
+    }
+  },
+  "compiled_complete": false,
+  "complete": false,
+  "visually_reviewed_groups": 2
+}

@@ -1,0 +1,60 @@
+{
+  "approved": true,
+  "reviewed_sha256": "98e83fa24a1e601c84ca4c00f9e01282e4e115866606a479dcb91b026c16ed29",
+  "scope": "All 10 conditions and published solutions independently read; polarization signs, isolated/connected capacitor laws, parallel partial filling and charge redistribution recomputed. All 10 relevant original images viewed and compared with TikZ. Source snapshot hashes recorded.",
+  "source_snapshots": {
+    "D:/GitHub/Prepa-GPT/.scratch/all-topics/electro/originals/8177.html": "2390fcde8e7c4b62623a5c6c0788b43accf42d9e0f9e609b34d205dc19123bbb",
+    "D:/GitHub/Prepa-GPT/.scratch/all-topics/electro/originals/31415.html": "6c38d4c774e655c4e447f11b22c46e275fc7088a754a1288d7a1a1bda0e97d93",
+    "D:/GitHub/Prepa-GPT/.scratch/all-topics/electro/originals/3515.html": "6e8e369a160b8c5d83a3539984bd2cec154f9a14fb85a14a3e3fbabcfe73302f",
+    "D:/GitHub/Prepa-GPT/.scratch/all-topics/electro/originals/3516.html": "4fb7df1a4c53ca19644508749feb78623094b46d8d58f755a2ef6aca556a1d50",
+    "D:/GitHub/Prepa-GPT/.scratch/all-topics/electro/originals/10474.html": "715d6497230768859fd4bf6dc8e1a2187dcd5619ccfe8f984e7fc825a66bee51",
+    "D:/GitHub/Prepa-GPT/.scratch/all-topics/electro/originals/24107.html": "1b6fdab3d9bb230854d590e0e445c52f34d1e687423bf49bcae7808fe2580599",
+    "D:/GitHub/Prepa-GPT/.scratch/all-topics/electro/originals/9067.html": "d6f96e8a2a06e8fc8e272c7c5512573418569c921198f6351066a10f279ed601",
+    "D:/GitHub/Prepa-GPT/.scratch/all-topics/electro/originals/4360.html": "179846bff7abce2db8b10a04772c981c83c06d22fef34700694c95570f7bd778",
+    "D:/GitHub/Prepa-GPT/.scratch/all-topics/electro/originals/38859.html": "86bb42de8a613379c12162afb873015f5f56d2a4c9d508fc4fffbf135025c823",
+    "D:/GitHub/Prepa-GPT/.scratch/all-topics/electro/originals/6434.html": "171bb29d409e0b7fd05a60e8f3e622884cf4761fa722618a33e48cbcb8456747"
+  },
+  "issues": [],
+  "tasks": [
+    {
+      "id": "sdamgia-8177",
+      "approved": true
+    },
+    {
+      "id": "sdamgia-31415",
+      "approved": true
+    },
+    {
+      "id": "sdamgia-3515",
+      "approved": true
+    },
+    {
+      "id": "sdamgia-3516",
+      "approved": true
+    },
+    {
+      "id": "sdamgia-10474",
+      "approved": true
+    },
+    {
+      "id": "sdamgia-24107",
+      "approved": true
+    },
+    {
+      "id": "sdamgia-9067",
+      "approved": true
+    },
+    {
+      "id": "sdamgia-4360",
+      "approved": true
+    },
+    {
+      "id": "sdamgia-38859",
+      "approved": true
+    },
+    {
+      "id": "sdamgia-6434",
+      "approved": true
+    }
+  ]
+}

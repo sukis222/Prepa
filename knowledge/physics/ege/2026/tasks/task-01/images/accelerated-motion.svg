@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="365" viewBox="0 0 900 365">
+ 
+ <rect width="900" height="365" rx="16" fill="#f5f8fc"/>
+ <g font-family="Arial, sans-serif" fill="#182b43">
+ <text x="36" y="43" font-size="24" font-weight="bold">Равноускоренное движение: график скорости</text>
+ <path d="M108 273L108 218L480 97L480 273Z" fill="#dcebf9"/>
+ <path d="M108 218L480 97" stroke="#2563a6" stroke-width="4"/>
+ <path d="M480 97V273M108 97H480" fill="none" stroke="#8d9eb2" stroke-width="1.5" stroke-dasharray="6 5"/>
+ <path d="M72 273H535M108 294V70" fill="none" stroke="#546477" stroke-width="2"/>
+ <path d="M108 218H480V97" fill="none" stroke="#ba6d16" stroke-width="2" stroke-dasharray="5 4"/>
+ <text x="75" y="302" font-size="20">0</text><text x="546" y="281" font-size="22" font-style="italic">t</text><text x="68" y="80" font-size="22">vₓ</text>
+ <text x="57" y="224" font-size="22">v₀ₓ</text><text x="68" y="104" font-size="22">vₓ</text><text x="474" y="302" font-size="22">t</text>
+ <text x="272" y="245" font-size="21" fill="#945310">Δt = t</text><text x="489" y="167" font-size="21" fill="#945310">Δvₓ</text>
+ <text x="595" y="120" font-size="23">aₓ = Δvₓ / Δt = const</text>
+ <text x="595" y="163" font-size="21">За равные промежутки</text><text x="595" y="193" font-size="21">времени скорость меняется</text><text x="595" y="223" font-size="21">на одну и ту же величину.</text>
+ <path d="M535 273L522 267L522 279Z M108 70L102 83L114 83Z" fill="#546477"/>
+ <text x="36" y="341" font-size="19" fill="#546477">Здесь v₀ₓ &gt; 0 и aₓ &gt; 0. Площадь под графиком равна перемещению x − x₀.</text>
+ </g>
+</svg>

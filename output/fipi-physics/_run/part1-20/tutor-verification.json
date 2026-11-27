@@ -1,0 +1,170 @@
+{
+  "editions": [
+    {
+      "number": 1,
+      "pages": 8,
+      "solutions": 20,
+      "fipi_links": 20,
+      "source_sha256": "bae0e3da4b7889624aff539f29094bf2873f6eb6041f8498aeacec5b7ddd4c54",
+      "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\tutor-edition-qa\\previews\\tutor-01"
+    },
+    {
+      "number": 2,
+      "pages": 4,
+      "solutions": 20,
+      "fipi_links": 20,
+      "source_sha256": "bd65a5b9f87228d8dd5673be3749acd20b7fa525576a56e6be9bea2dabdbee43",
+      "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\tutor-edition-qa\\previews\\tutor-02"
+    },
+    {
+      "number": 3,
+      "pages": 4,
+      "solutions": 20,
+      "fipi_links": 20,
+      "source_sha256": "5a24debd926bf8f531df4158beeb9dcae94016a350711f1bfb36556aa9a14304",
+      "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\tutor-edition-qa\\previews\\tutor-03"
+    },
+    {
+      "number": 4,
+      "pages": 3,
+      "solutions": 20,
+      "fipi_links": 20,
+      "source_sha256": "b9015a3d494708ed2a0b1fa2a50a0ece52eab3d8d89f2b8cea43412b086754f9",
+      "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\tutor-edition-qa\\previews\\tutor-04"
+    },
+    {
+      "number": 5,
+      "pages": 14,
+      "solutions": 20,
+      "fipi_links": 20,
+      "source_sha256": "6f0b27de6ba7fa3805a299a7d556535768dc2511053c95098663d5d6304922ea",
+      "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\tutor-edition-qa\\previews\\tutor-05"
+    },
+    {
+      "number": 6,
+      "pages": 10,
+      "solutions": 20,
+      "fipi_links": 20,
+      "source_sha256": "0f1acc3966a762c3cbe6e312d1fd5fcbdd1fcf7c87578b06ff4fa212a449a615",
+      "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\tutor-edition-qa\\previews\\tutor-06"
+    },
+    {
+      "number": 7,
+      "pages": 5,
+      "solutions": 20,
+      "fipi_links": 20,
+      "source_sha256": "8cef7a715186875e9a67bffc76fbc1771053e77f37cc2a0e29e22578e35bdbb3",
+      "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\tutor-edition-qa\\previews\\tutor-07"
+    },
+    {
+      "number": 8,
+      "pages": 6,
+      "solutions": 20,
+      "fipi_links": 20,
+      "source_sha256": "89869c4d043eac4a1c087dffb24c4555d7c18ea79567ba8a9bdcf79044e9877e",
+      "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\tutor-edition-qa\\previews\\tutor-08"
+    },
+    {
+      "number": 9,
+      "pages": 19,
+      "solutions": 20,
+      "fipi_links": 20,
+      "source_sha256": "dde8a78c609f8aa79d49a69146db9d0e611ef5954dbce96f4413ab81c19c22b0",
+      "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\tutor-edition-qa\\previews\\tutor-09"
+    },
+    {
+      "number": 10,
+      "pages": 15,
+      "solutions": 20,
+      "fipi_links": 20,
+      "source_sha256": "4e9439e07e840d2d621d6d570134be385b669c8cfd13655ae6af539f2075fcf7",
+      "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\tutor-edition-qa\\previews\\tutor-10"
+    },
+    {
+      "number": 11,
+      "pages": 9,
+      "solutions": 20,
+      "fipi_links": 20,
+      "source_sha256": "55a866e34fc3057e6a6edb4b64bc2f92b79de00fc7ebec8c11197d3d36be36f5",
+      "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\tutor-edition-qa\\previews\\tutor-11"
+    },
+    {
+      "number": 12,
+      "pages": 6,
+      "solutions": 20,
+      "fipi_links": 20,
+      "source_sha256": "004379c5b2f67e111dec94e5d76fbb077584aced34c7ef2a7dd2913a11ebe673",
+      "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\tutor-edition-qa\\previews\\tutor-12"
+    },
+    {
+      "number": 13,
+      "pages": 7,
+      "solutions": 20,
+      "fipi_links": 20,
+      "source_sha256": "eaa5f7d00deaa52fd1abba5549c6e49aa3c951b6f950de2f43d266a4fe3a6bbf",
+      "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\tutor-edition-qa\\previews\\tutor-13"
+    },
+    {
+      "number": 14,
+      "pages": 20,
+      "solutions": 20,
+      "fipi_links": 20,
+      "source_sha256": "3bce995b4ad3392c7be653664dc2e576000b2e7c0f812f30a11fbccd59b1ff45",
+      "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\tutor-edition-qa\\previews\\tutor-14"
+    },
+    {
+      "number": 15,
+      "pages": 18,
+      "solutions": 20,
+      "fipi_links": 20,
+      "source_sha256": "2192a251c8e96f966cf81adf563cb2e5ff2975e19423716d31e7662dfe544b8f",
+      "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\tutor-edition-qa\\previews\\tutor-15"
+    },
+    {
+      "number": 16,
+      "pages": 5,
+      "solutions": 20,
+      "fipi_links": 20,
+      "source_sha256": "f726e5432d0573d69453947a68bb33f821944584e91758c9a332b88699516194",
+      "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\tutor-edition-qa\\previews\\tutor-16"
+    },
+    {
+      "number": 17,
+      "pages": 18,
+      "solutions": 20,
+      "fipi_links": 20,
+      "source_sha256": "a9f858813111e0f92fa88f6f91308360df3de5c0c5ed25351a4bb9807934b877",
+      "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\tutor-edition-qa\\previews\\tutor-17"
+    },
+    {
+      "number": 18,
+      "pages": 10,
+      "solutions": 20,
+      "fipi_links": 20,
+      "source_sha256": "2e2c490db4b3cec128bb5ed2e2ba6128723495d58a03b7dc8c8ef4df33c75ae7",
+      "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\tutor-edition-qa\\previews\\tutor-18"
+    },
+    {
+      "number": 19,
+      "pages": 16,
+      "solutions": 20,
+      "fipi_links": 20,
+      "source_sha256": "0319a1c89fe9142d8dfed7933c72aacef415d4c920589d1e4c040b724941bf87",
+      "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\tutor-edition-qa\\previews\\tutor-19"
+    },
+    {
+      "number": 20,
+      "pages": 11,
+      "solutions": 20,
+      "fipi_links": 20,
+      "source_sha256": "d7b3a609164ac9c3d804199703c095cdc78a9d739b2c3120459d308c172d3bd0",
+      "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\tutor-edition-qa\\previews\\tutor-20"
+    }
+  ],
+  "pages": 208,
+  "solutions": 400,
+  "source_links": 400,
+  "recipe": "Tectonic (project)",
+  "editor_checked": false,
+  "visual_checked": false
+}

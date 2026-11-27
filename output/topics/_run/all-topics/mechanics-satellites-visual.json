@@ -1,0 +1,43 @@
+{
+  "approved": true,
+  "bundle_sha256": "c0cdcb469ddae740aa0a5409d395033f6efa9acfc2b8867b58441f52577d24de",
+  "pages": [
+    {
+      "file": "tmp\\all-topics\\satellites\\preview\\task-1-10-4\\page-01.png",
+      "sha256": "e626f22c171bc2c58f726f629e87773672ce6b9e0c666068345041cf08945da1"
+    },
+    {
+      "file": "tmp\\all-topics\\satellites\\preview\\task-1-10-4\\page-02.png",
+      "sha256": "e61920876a22f25cee4cdbe782881f84775a102730942b0c44b5ce47602e146e"
+    },
+    {
+      "file": "tmp\\all-topics\\satellites\\preview\\task-1-10-4\\page-03.png",
+      "sha256": "08b8a75cff3171c548ad70df75b47c06f39bc193ac5d14851679db1c0f4ba92f"
+    },
+    {
+      "file": "tmp\\all-topics\\satellites\\preview\\tutor-1-10-4\\page-01.png",
+      "sha256": "006ab8da5147f2e5abd596dc5671cecd64150c3a3f472895fc2eb319e9a29467"
+    },
+    {
+      "file": "tmp\\all-topics\\satellites\\preview\\tutor-1-10-4\\page-02.png",
+      "sha256": "a0e5b279c7afc854f2912eb69fea2f0576a4e2b023f8ffb7de4d36076158e999"
+    },
+    {
+      "file": "tmp\\all-topics\\satellites\\preview\\tutor-1-10-4\\page-03.png",
+      "sha256": "b10ca4fdedb07069601f60e3d905b33d7c6eecb2b35e7f3933ca2ed7af79aceb"
+    },
+    {
+      "file": "tmp\\all-topics\\satellites\\preview\\tutor-1-10-4\\page-04.png",
+      "sha256": "db220059ae6de1ed5f71077d99c643ec0b9b365e28b8bf4d7ba82b5c55784d08"
+    },
+    {
+      "file": "tmp\\all-topics\\satellites\\preview\\tutor-1-10-4\\page-05.png",
+      "sha256": "db935349aec833182ca9e1861bbde8ad6761d782baf91c97ca6517ca192910d5"
+    },
+    {
+      "file": "tmp\\all-topics\\satellites\\preview\\tutor-1-10-4\\page-06.png",
+      "sha256": "4d15349f836dbd815fd0a367fc28a2502688e389369bcbfa0611b2ae9f940978"
+    }
+  ],
+  "scope": "Every rendered page viewed; diagrams, lines, tables and typeset formulas checked. Editor opening not checked."
+}

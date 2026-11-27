@@ -1,0 +1,555 @@
+{
+  "version": 1,
+  "exam_year": 2027,
+  "sections": [
+    {
+      "exam_number": 1,
+      "worksheet": {
+        "preparation_id": "fipi-ege-01",
+        "version": 1,
+        "student_ids": [
+          "local"
+        ],
+        "exam": "ege",
+        "topics": [
+          "ЕГЭ: задание 1"
+        ],
+        "title": "Задание 1: шесть задач ФИПИ",
+        "tasks": [
+          {
+            "id": "3CF615",
+            "statement_exact": "Впишите правильный ответ.\nКоордината x тела меняется с течением времени t согласно закону $x=23+5 t-2 t^2$, где все величины выражены в СИ. Определите проекцию ${\\text{а}}_x$ ускорения этого тела.\nОтвет: ____ м/с 2",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=3CF615",
+            "page": null,
+            "images": [],
+            "sha256": "92ad40570e35fca86c1678c17158166c73a18372fc8f53d27c7372b6eee4d92c",
+            "exam_part": null,
+            "exam_number": 1,
+            "section": "Равноускоренное прямолинейное движение",
+            "solution": {
+              "text": "Сравним $x=23+5t-2t^2$ с $x=x_0+v_{0x}t+\\dfrac{a_xt^2}{2}$: $\\dfrac{a_x}{2}=-2$. Следовательно, $a_x=-4\\,\\text{м}/\\text{с}^2$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=3CF615#prepa-gpt-solution",
+              "images": [],
+              "sha256": "38ea2dbbe6f80abddab68e4ff886ba3d867316e01e6a96270d25fb5c1e2a122e"
+            }
+          },
+          {
+            "id": "B51AF2",
+            "statement_exact": "Впишите правильный ответ.\nНа рисунке приведён график зависимости координаты тела x от времени t при его прямолинейном движении вдоль оси Ox. Определите проекцию скорости этого тела на ось Ox в промежутке времени от 4 до 6 с.\n[рисунок 1]\nОтвет: ____ м/с",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B51AF2",
+            "page": null,
+            "images": [
+              {
+                "data_base64": "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",
+                "sha256": "3dbebac4fabac88445f5d09750bd5a96cedbc405cf0385a17e3e44ab7eff2429",
+                "width": 280,
+                "height": 215
+              }
+            ],
+            "sha256": "4cf0ef251b4f4dc4eff8361b80495ffa179b54966e1f6a300d9bae6250e499a9",
+            "exam_part": null,
+            "exam_number": 1,
+            "section": "Скорость материальной точки",
+            "solution": {
+              "text": "На участке от $4$ до $8\\,\\text{с}$ скорость постоянна. По графику $x(4)=-10\\,\\text{м}$, $x(6)=0$. Поэтому $v_x=\\dfrac{\\Delta x}{\\Delta t}=\\dfrac{0-(-10)}{6-4}=5\\,\\text{м}/\\text{с}$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B51AF2#prepa-gpt-solution",
+              "images": [],
+              "sha256": "01369511a6ffe57159e895e3a14da9cfd465b3e3c4b8fad02f42a28cc97133d3"
+            }
+          },
+          {
+            "id": "008243",
+            "statement_exact": "Впишите правильный ответ.\nНа рисунке приведён график зависимости проекции скорости тела $\\upsilon_x$ от времени t.\n[рисунок 1]\nОпределите путь тела за первые 5 секунд движения.\nОтвет: ____ м",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=008243",
+            "page": null,
+            "images": [
+              {
+                "data_base64": "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",
+                "sha256": "b416b04e1e148c085e320bd9818dc6f8463ae14cc70903b37a99cc46c3366a5c",
+                "width": 382,
+                "height": 202
+              }
+            ],
+            "sha256": "a7d989ef0d26e4c7bb5a3ff50257dd1f5241c93f6d2041ad5c186f7e9b5f2c85",
+            "exam_part": null,
+            "exam_number": 1,
+            "section": "Ускорение материальной точки",
+            "solution": {
+              "text": "На первых $5\\,\\text{с}$ проекция скорости положительна. Путь равен площади под графиком:\n\\[\ns=5\\cdot3+\\frac{5+15}{2}\\cdot(5-3)=35\\,\\text{м}.\n\\]",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=008243#prepa-gpt-solution",
+              "images": [],
+              "sha256": "1e007ffef1a7debdae729ba9f1b25b2493137dd5dd3d40dbd316ad1dc6914b04"
+            }
+          },
+          {
+            "id": "081272",
+            "statement_exact": "Впишите правильный ответ.\n[рисунок 1]\nНа рисунке приведены графики зависимости проекции скорости от времени для легкового автомобиля (I) и микроавтобуса (II), движущихся по прямой дороге, вдоль которой и направлена ось Ох. Определите отношение модулей ускорений $\\frac{a_I}{a_{II}}.$",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=081272",
+            "page": null,
+            "images": [
+              {
+                "data_base64": "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",
+                "sha256": "b783e1bc6a66bd205cbd2359e4195b9d739936d8c236202ac8681b67c006ec7f",
+                "width": 249,
+                "height": 142
+              }
+            ],
+            "sha256": "57eca8b6117a145e3ad3c9f125ae496847c8170f2170bc2094c9bb01943a6e63",
+            "exam_part": null,
+            "exam_number": 1,
+            "section": "Ускорение материальной точки",
+            "solution": {
+              "text": "Модуль ускорения равен модулю наклона графика $v_x(t)$. За $4\\,\\text{с}$ скорость автомобиля изменяется от $20$ до $0\\,\\text{м}/\\text{с}$, а микроавтобуса --- от $0$ до $10\\,\\text{м}/\\text{с}$. Тогда $a_{\\mathrm I}=20/4=5\\,\\text{м}/\\text{с}^2$, $a_{\\mathrm{II}}=10/4=2{,}5\\,\\text{м}/\\text{с}^2$, и $\\dfrac{a_{\\mathrm I}}{a_{\\mathrm{II}}}=2$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=081272#prepa-gpt-solution",
+              "images": [],
+              "sha256": "dc6015d1ed692c608fbae159148135ccd255211c9c962b59027f107d56e1da80"
+            }
+          },
+          {
+            "id": "38F045",
+            "statement_exact": "Впишите правильный ответ.\nИз двух городов навстречу друг другу с постоянной скоростью движутся\nдва автомобиля. На графике показано изменение расстояния между автомобилями с течением времени. С какой скоростью едет по дороге второй автомобиль, если скорость первого автомобиля равна 15 м/с?\n[рисунок 1]\nОтвет: ____ м/с",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=38F045",
+            "page": null,
+            "images": [
+              {
+                "data_base64": "iVBORw0KGgoAAAANSUhEUgAAAUcAAAC0CAIAAACIWnk/AAARqElEQVR4nO2dfVRTZ57HL905xHrMm8XaUSHYWnxj0J4KTs+hW0XFU8EZFdqOLcwoRa0jdd1TqwN26gyKnZbujlgdiVu1FrtrK1hbGC0vokWmtIK6tRQ0iMqbEsAmJD2HXM6u2UOf2dtMCCEJebn3eb6fkz/0uU+Se3/kc+/z+z1PboKsVisHAKCI+wK9AwAALwOrAaANWA0A7Vb3dHXm7cpUqFTksTUnr7P7Ls/zH/zHBzzPB2gnAQCeWt3R2vT03CdKG+/TNTWbjEaT0fhs3PSlMXPGjR///diHZDKZO68MABCB1SVH3h4X+/zH777+0LgHSMvjT8Sf/Lxsqlo98+FJAdpDAICnVpvNxvLCLwf3CBkflvKrNZFTJrj5ygAAceTV9dXlbV137RpDHtbcHxzsx70CAHjDarlctSj550aDblniv3R2/yi2TCZ7Yc0LwybVFUUHhBqbQqWKnPWM0WzmOO5oXo5CpVqSuu3j/9wjbNUWnbF7unbHOidbFSrVCI4RAIav1c9vejM5bnZrS3lMzNPX22679UILk9be0F1NjpvNcVzuwaL6r4+r5PJrl6u/+X4MaVyStK7xSm28RsNx3CcnK20r6sLgP0yzSNfUvC5pgfcOEAC2rZbLVXlHTibHzTYadHH/vKz68jW3XivkwYfmPjaV4zhSWuN5/rOPqjI3ph06ce5UQY5MJgsZH7Y4LS05bnZ18b7ahlvCE29fr38oMXGqWh0WFaFWjPHe0QHAIvZ5tVyu2v9fpRlLY40G3ZL5c90VW4Dn+ZLj+0fNmauSy23bR48O2fBqFsdxR0o+Fxprqz5PWPikZ28EABh+bZlMJtv+blHG0tiBMfmKVHeH4gOD7flzx40ff7C0e1XiwIvYERYRFa/RlB56l7yy2Wy8dWfMlNCJQ70aSaqRWgPghtU8z5/+7Kxtq0wmy/zL0XiNxmjQnbnQyLnJqbNfnTj4VnXxvvdKqgdvVYxRv/T6BuGVvyr7aFx05OjgUe6+CwBgSKv7+/va2wx2G+Ry1Uuvb+A4rq6hmXOfufHPxms0OZszHV7qp0fPn6pWv5Od33m3u/bcNwtipnvwFgCAIa2+fb3+46qLQy3znjPjEc59yEnBaNC9+V7J4K0Twx5NT4tvbSn/9HRpm3VC6IN/X8rmHAzCAXDV6rYbDXZFaTIsrzz5qUod4fGFlFyuP/y3LULJrb+/72ZzD/n3vMRUjuM2Z2Q8/+IKJ5PhMBkAT6xubrhICmNlNQP/GKhg9fbmbl+9t7h629tvTAmdICwyeXJFGllb4pCerk4y7fztjXZyuc55bx/HcS+teo0sazEZuutqviZr18JnRGcsjQ3TLCJrURtrz14zGFqv6Aym790+CACALSaToeiDUxaLpVt/Z3fO7+aEh8uVSrlS+etVG+909Vj/n4LdO0l7erbW6ojyQi3pQB4zo5INJpPVas3PXktaND/7mbA1v7CCPCU9W2uxWDJTEmyfS7YSbNvlSqXDtwYA2BLk1n3LzGbjsWOVa9as4PyCw+G3yWj0z7sDwMS9UG5fr783VumznQEA+Nfqnq7O01WNDheWAADEg0sjcJ7nz5wqMlhVyQkL/HlHlKEK4BiEA+AE9/LqgEDchskAuAjuMQoAbcBqAGgDVgNAG7AaANqA1QDQBqwGgDZgNQC0AasBoA1YDQBtwGoAaANWA0Abnlht7u2t+bIqa9vLYZNjhr2vMM/zWamJS1K3DXVftGE7AAB8a3VHa9NrmzYd0x7eu6/Alf7nS47sLa4eSQcAgFv8xL3uP9weNO/wYbPZ2HHp0gXTMJ07WpsyN78xkg4AAD/l1cHB90dEhTrvw/P8+7l7Nu3M8rgDAMAf12rXudVQ+z+PzJ0zI9zjDgAAEdXAzWbjkUOnX37xlx53AACIy+pPDu1bkvZrux/EdKsDAEBEVl+7XH3Tqon94besPesAABBRXs3z/IlDH67ckulxB7fuXubPn+zx573TcFxDBd82MribnZ+sPl9yZOy8ZeR3fDzr4Ba0/l1xXE4ig19f8+sIvKO16cTZu07uGT5sBwCcA6V9dedgnuf/mJ50tLqrsuqk7VW3oujAihe3DPWsMM2ijRmzNr/6tpMO1dWH7EpowtgbtxAGgtK0jmXEeK1emLTWZDTaPmrPDvx+dezSDd16ff3Xx9euec15h2Gr4jhVMwuUpvA7Ww7rJYA1cJX2ldU9+lbdlTajQfdN/U3Oj0BsZkH+5UOryRcnp0dFl7W0cBz3m5UJrnwf04tAbAbB6IyJ39nCmZsdkE7TnFfbQiTHKZxlpfHXp81qAfxpKQZXaeasRoJNN1CaRashNgtgHos5qyE2raAayrTVEJs+UCsZITRYjXEaTSCdHjmUWI25LjqA0l6BHqsFMH6TKFDaW1BlNea6KABF75FDldUQW7qg6O1FaLMaYksRJE3ehUKrMYqTFkinvQ6dVqMkLhWgtC+g1moBjO5EC5T2ETRbjZK4JEDR2+vQbDXEFjMoevsOyq2G2OIEaZFPod9qjPHEBtJpX8OE1SiJiwco7QdYsVoAYz8xBB8VMp/CkNUoiYsEKO1rGLIaYgcWFL39BltWQ+xAgcTHnzBnNUaA/gfptJ9h0WqUxP0JlPY/jFotgJGhf8KLCpk/YddqlMT9H2rgH9i1GmL7GhS9AwXTVkNs34HUJoCwbjXE9gVIpwMLrB4AiZ8XgdIBB1b/HfwgtleA0mIAVtuDhNBjoLRIgNU/grkur4B0JuDA6n8AYnsM5rHEA6y2B2JLJW3BoGAoYLUD8HFxC6TTYgNWOwYlcReB0iIEVg8DSuKuBAejG1EBq4cECbaLQGmxAaudAbGdgKK3aIHVwwCxHYLERMzA6uHBCNMOpNMiB1a7BEriAlBa/MBq92B85AmlJQGsdhUk2INDAcQJrHYDxsVG0VsqwGr3YFZs1o5X0sBqt2Fw/Il0WlrAak9gqiQOpSUHrB4R1IsNpaUIrPYQphJsBpMOSQOrPYd6sVH0liiwekRQLDZ9R8QOsHqkUDk6RTotaWC1F6CsJA6lpQ6s9iYUiA2lKQBWewc6EmwoTQew2mvQITatlQKmgNXeRNJiYx6LGmC1l5Go2NLaW+AcWO19JDeCRTpNGbCa9bkuKE0fsNq3iFxsKE0lsNpXSCjBllzKAJwDq9kVG0VvWoHVjIottv0BXgRWszi+RTpNN7CauZI4lKYeWO1XAi42lGYBWM1igi3CpAB4EVjNkNiUFb3FcH4UJ7CaFbHhADvAan8TkEsl0mmmgNX0l8ShNGvA6kDiB7GhNIPAaiYSbGoqZMAVYDXNYlNW9AYuAqupFRtFb2aB1QHGRxdSpNMsA6spLIlDacaB1SLCK2JDaQCr6UywUSFjGVhNldgoegNYTZXYKHoDAq7VlIiNdBoIwGrR4UFKDKWBLbBa8nNdUBrYAatFzbBiQ2kwGFhNQ4KNeSxgC6yWsNiMz2Mxe+DDAqulKjbmscBQwGpJXpGQTgMnwGrplcShtF0c/IZSrVaoVORhtVo5sfKTQO8A8PBzjKwysCjVauHfvQZDUFAQJxqCxHzKISCBBBKiVwSGw2oAaNNbAlYDIBKUarVzX8RwoUZeDcBIEYnJtqBaBgANJtuCETgAtIH5agBoI2BW8zyftyuTTOjv2H2U5/lA7YnI6enqzNuVGT15skKl0hadoTuA5t7emi+rsra9HDY55nrb7cEdeJ4/mpdDohE2OcbhgfM0RkYCVpvNxhdiYkob7+vW67v1+r6Lx5anZzMYfeeQT/DDEdMK6/T7ThR36/XrkhZQHMCO1qbXNm06pj28d1+Bww48z/8xPem323OvGQwcxxkNutw/ZDwek2I0m4U+Zhoj4zbWQJCfvTY0PLqptYP8t71FNyc8PD1bG5CdEScWiyUzJUGuVOYXVjAVQJPJkBQVZXt0AuWF2tjlq680NZH4FBb8Wa5UypVK2wPP93ZkLBbL0QNHLRaLVToEwOrBgSafYId/SMaVLv2ijrUADnUsFotl9+9yDCaTbWN5oVauVM6MSibtXo+MxWLJz17r8MQqZgIwAi858vY1g2HOjEeEFplMpomYaDTozlxo9P/+iJDzJUf2Flc/98pb8U88PngrmwHs7++btTheJZfbNk6Pnj/VZj22dyPT09W5fuXinEOX46KncZLC31bzPN+i6+A4bubDk2zbH5kx8PGta2j28/6IkI7WpszNb4RpFuVuWjl4K7MBlMtV8+bNcbgpLCri/uBgL0bGbDa+mDR/oKJR+d9Gg+7xqJm2dUqHVBQdEL7ONbjzgZ0v2W6tKDpg+/WvyFnPGEwmu8Y1Ow447Gb7UqSbg+VuAcma5Erl+UtXbduvXjovVyqfTsmSVgLjC8io8rmtO+u+KF2w6DGSOm7ZuZtEhvoAujVmJkdNQuH1yJT/8Idwffjd3qJLnjWLvFdfX5/QbjIZSPvMqOTb+m7S2K2/Qxr3Hy8XetZ9UapQqULDoz/7W+3gbvfu3SONNxquRE+eHBoeXXWx0eGeiGu+uvWKrq+/n2MYnucrT346cMXWNT8waXpF2aVuvT73lef2525fuHK9bbHXIawF8FxJQezSDdEzwoft2epmZHieP/tJsUod4frwO2R8WPzq1clxs6uL99U23BLab1+vH5+QMFWtDouKUCvGkEa5Uh0RFWo3soiIjInXaBQKTUxkxOBuwmq2kEmhGoVCodBETpngcE/EZTXo7+/TXWlTqSMO5+0MDx34c8pkslVb9mQsjf268sSHZRcQIoGO1qbjH9/cs2uDTCbzelh69K3l1d9Gxi4KffAB1581enTIhlezgoKC3v9rlTAwrq36PGHhk648/dPDfym99ePpwGPEYnXbjQYhQQr0vgQehUITovqxLCSTyeKW/YLjuE9OVlr6LQ6fwloAeZ5/P3fPHw6+MyXU8fVqhJFprD179bvvfrksbtSoUa4/a+CNIqLiNZrSQ++SVTRms/HWnTFTQic6XzfO8/yfNm7kpkyL12g4yVkdHHw/GVE4ZGKExhfnXQogxd7WK7r/5f4JASTTBGPnLYt9bKovPlq8+8NvAcUY9brf/9Zo0FXWXuU47quyj8ZFR44OdnZqMJuNW9evT9q89RdPxg0lf0Lcz4UK2cTQcOeXdH9bTWYaOI779ka7bXtzw0WO42znJNiEfDRNppYeo4MUeiAxG6NAACuKDtS0jRZW2nn9o9Xj0fBbYHr0/Gljx76TnX+np6v23DcLYqY76dzYUJexcfvWP731aNjAzg/FXyu/NBmN5NHRdmtxeLi4RuDzElPtZhrInIRKHeH8+FmADLaNBl1nj3moCw7jAbxYU1bTNvr3m1IGb/JWZL6/q79mMHgw/CZMDHs0PS2+taW8+LOyNuuESePGOul8srRRu//Nnz4YwnmPAFg99bHY3FeeqyksFyq65NS4OC192ByJBebGPxuv0ez69/dtVy831p7Vc+O2rkpkPIAXa8oOfnBxy/pnbBvrL1/YsfuoFyNzrqRAqXo0Lnoaz/Od3XddfFZ/f9/N5h5SJHsqISUoKGhzRsbKtOXOTw2Z/5rq2bnDGdZAQKYW07O1FoulW38nMyUhdvlqu8WALHP10nmy8pFMsdZ9UWo3DUtxANtbdGTa+cSpartNJA4OH0JwTCOODJlefjoly2gyCivAydx17PLV3/X2OtnzZU+l6Vrayax7VmrizKhk0l9Y2ep8vvrqpfNkItr5fLVdt/YWHfkveevArAMXdndXRoZcqQwNj87+c4HU1054nfYW3erlT5GPbOzy1Xe6Bi4CdAdQWP0uPGzXojhRWlgH7pXImEwGsgxGWPljtVoLdu8c/E0SW4i35EEWrpQXatOztX19fVmpibZ7m19YUV6oVahUQkt6tvbevXvaHetsu6Vna+26kXPE4G6Drca9UABwFbPZeOxY5Zo1KzhxI5b5agDEz+3r9ffGKjnRA6sBcImers7TVY2rEmM50YMROADDwPP8mVNFBqsqOWGBJFZJwWoAaAMjcABoA1YDQBuwGgCOMv4PGPkPiZeUPxgAAAAASUVORK5CYII=",
+                "sha256": "d8138fea8ff9838c3bdd773bd759cad8e99af2dad97f2f962b6c42d8f6299603",
+                "width": 327,
+                "height": 180
+              }
+            ],
+            "sha256": "f32b576a1b5012fc13072e968c796b2d843b99c151f37dccd2b8d85eba08e07f",
+            "exam_part": null,
+            "exam_number": 1,
+            "section": "Скорость материальной точки",
+            "solution": {
+              "text": "До встречи расстояние $144\\,\\text{км}$ уменьшается до нуля за $60\\,\\text{мин}=3600\\,\\text{с}$. Скорость сближения $v_1+v_2=\\dfrac{144000}{3600}=40\\,\\text{м}/\\text{с}$. Следовательно, $v_2=40-15=25\\,\\text{м}/\\text{с}$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=38F045#prepa-gpt-solution",
+              "images": [],
+              "sha256": "1c415a2ecf3148176b4cfd62d1f70f8738b4cdb327c7479a3614eea27ce08461"
+            }
+          },
+          {
+            "id": "B5F7C7",
+            "statement_exact": "Впишите правильный ответ.\nНачальная скорость движения тела равна 5 м/с. Сколько потребуется времени, чтобы увеличить его скорость в 3 раза при равноускоренном движении по прямой в одном направлении на пути в 20 м?\nОтвет: ____ с",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B5F7C7",
+            "page": null,
+            "images": [],
+            "sha256": "6c7714e8c1234db41891e27ebb721cd572dbffe1c7c683636c46a1c02c20db1c",
+            "exam_part": null,
+            "exam_number": 1,
+            "section": "Равноускоренное прямолинейное движение",
+            "solution": {
+              "text": "Конечная скорость $v=3v_0=15\\,\\text{м}/\\text{с}$. При равноускоренном движении в одном направлении $s=\\dfrac{v_0+v}{2}t$. Отсюда $t=\\dfrac{2s}{v_0+v}=\\dfrac{2\\cdot20}{5+15}=2\\,\\text{с}$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B5F7C7#prepa-gpt-solution",
+              "images": [],
+              "sha256": "a52cfb3fff051925f4d3ea7fe879d090afcac7841c19a3a8cf538d7a3cc4498c"
+            }
+          }
+        ]
+      },
+      "typeset": {
+        "source_sha256": "1f02b492267cb8b51740ce4869af5d05b4237ed75e4540846e96bf77c67506bd",
+        "tasks": [
+          {
+            "id": "3CF615",
+            "condition_tex": "Координата $x$ тела меняется с течением времени $t$ согласно закону $x=23+5t-2t^2$, где все величины выражены в СИ. Определите проекцию $a_x$ ускорения этого тела, в $\\text{м}/\\text{с}^2$.",
+            "solution_tex": "Сравним $x=23+5t-2t^2$ с $x=x_0+v_{0x}t+\\dfrac{a_xt^2}{2}$: $\\dfrac{a_x}{2}=-2$. Следовательно, $a_x=-4\\,\\text{м}/\\text{с}^2$.",
+            "photo_indices": []
+          },
+          {
+            "id": "B51AF2",
+            "condition_tex": "На рисунке приведён график зависимости координаты тела $x$ от времени $t$ при его прямолинейном движении вдоль оси $Ox$. Определите проекцию скорости этого тела на ось $Ox$ в промежутке времени от $4$ до $6\\,\\text{с}$, в $\\text{м}/\\text{с}$.\n\\begin{center}\n\\begin{tikzpicture}[x=0.35cm,y=0.14cm,>=stealth]\n\\draw[step=1,black!85,thin,xstep=2,ystep=5] (0,-15) grid (14,15);\n\\draw[->] (0,0)--(16,0) node[right] {$t,\\,\\text{с}$};\n\\draw[->] (0,-16)--(0,20) node[above] {$x,\\,\\text{м}$};\n\\foreach \\t in {2,4,6,8,10,12,14} \\node[below] at (\\t,0) {$\\t$};\n\\foreach \\h in {-15,-10,-5,0,5,10,15} \\node[left] at (0,\\h) {$\\h$};\n\\draw[very thick] (0,-10)--(4,-10)--(8,10)--(14,-5);\n\\end{tikzpicture}\n\\end{center}",
+            "solution_tex": "На участке от $4$ до $8\\,\\text{с}$ скорость постоянна. По графику $x(4)=-10\\,\\text{м}$, $x(6)=0$. Поэтому $v_x=\\dfrac{\\Delta x}{\\Delta t}=\\dfrac{0-(-10)}{6-4}=5\\,\\text{м}/\\text{с}$.",
+            "photo_indices": []
+          },
+          {
+            "id": "008243",
+            "condition_tex": "На рисунке приведён график зависимости проекции скорости тела $v_x$ от времени $t$. Определите путь тела за первые $5$ секунд движения, в метрах.\n\\begin{center}\n\\begin{tikzpicture}[x=0.26cm,y=0.14cm,>=stealth]\n\\draw[black!85,thin,xstep=1,ystep=5] (0,-10) grid (20,15);\n\\draw[->] (0,0)--(22,0) node[right] {$t,\\,\\text{с}$};\n\\draw[->] (0,-15)--(0,19) node[above] {$v_x,\\,\\text{м}/\\text{с}$};\n\\foreach \\t in {5,10,15,20} \\node[below] at (\\t,0) {$\\t$};\n\\foreach \\v in {-10,-5,0,5,10,15} \\node[left] at (0,\\v) {$\\v$};\n\\draw[very thick] (0,5)--(3,5)--(5,15)--(10,-10)--(12,-10)--(18,5)--(20,5);\n\\end{tikzpicture}\n\\end{center}",
+            "solution_tex": "На первых $5\\,\\text{с}$ проекция скорости положительна. Путь равен площади под графиком:\n\\[\ns=5\\cdot3+\\frac{5+15}{2}\\cdot(5-3)=35\\,\\text{м}.\n\\]",
+            "photo_indices": []
+          },
+          {
+            "id": "081272",
+            "condition_tex": "На рисунке приведены графики зависимости проекции скорости от времени для легкового автомобиля (I) и микроавтобуса (II), движущихся по прямой дороге, вдоль которой и направлена ось $Ox$. Определите отношение модулей ускорений $\\dfrac{a_{\\mathrm I}}{a_{\\mathrm{II}}}$.\n\\begin{center}\n\\begin{tikzpicture}[x=1.05cm,y=0.14cm,>=stealth]\n\\draw[black!85,thin,xstep=0.5,ystep=5] (0,0) grid (4.5,25);\n\\draw[->] (0,0)--(5.15,0) node[right] {$t,\\,\\text{с}$};\n\\draw[->] (0,0)--(0,29) node[above] {$v_x,\\,\\text{м}/\\text{с}$};\n\\node[below left] at (0,0) {$0$};\n\\node[left] at (0,20) {$20$};\n\\foreach \\t in {2,4} \\node[below] at (\\t,0) {$\\t$};\n\\draw[very thick] (0,20)--(4,0);\n\\draw[very thick] (0,0)--(4.5,11.25);\n\\node at (1.25,17.3) {$\\mathrm I$};\n\\node at (3.8,13.3) {$\\mathrm{II}$};\n\\end{tikzpicture}\n\\end{center}",
+            "solution_tex": "Модуль ускорения равен модулю наклона графика $v_x(t)$. За $4\\,\\text{с}$ скорость автомобиля изменяется от $20$ до $0\\,\\text{м}/\\text{с}$, а микроавтобуса --- от $0$ до $10\\,\\text{м}/\\text{с}$. Тогда $a_{\\mathrm I}=20/4=5\\,\\text{м}/\\text{с}^2$, $a_{\\mathrm{II}}=10/4=2{,}5\\,\\text{м}/\\text{с}^2$, и $\\dfrac{a_{\\mathrm I}}{a_{\\mathrm{II}}}=2$.",
+            "photo_indices": []
+          },
+          {
+            "id": "38F045",
+            "condition_tex": "Из двух городов навстречу друг другу с постоянной скоростью движутся два автомобиля. На графике показано изменение расстояния между автомобилями с течением времени. С какой скоростью едет по дороге второй автомобиль, если скорость первого автомобиля равна $15\\,\\text{м}/\\text{с}$? Скорость выразите в $\\text{м}/\\text{с}$.\n\\begin{center}\n\\begin{tikzpicture}[x=0.04cm,y=0.022cm,>=stealth]\n\\draw[->] (0,0)--(151,0) node[right] {$t,\\,\\text{мин.}$};\n\\draw[->] (0,0)--(0,181) node[above] {$S,\\,\\text{км}$};\n\\draw (0,144)--(30,144) (55,144)--(80,144) (105,144)--(120,144);\n\\draw (120,0)--(120,47) (120,94)--(120,144);\n\\draw[very thick] (0,144)--(60,0)--(120,144);\n\\node[below left] at (0,0) {$0$};\n\\node[left] at (0,144) {$144$};\n\\node[below] at (60,0) {$60$};\n\\node[below] at (120,0) {$120$};\n\\end{tikzpicture}\n\\end{center}",
+            "solution_tex": "До встречи расстояние $144\\,\\text{км}$ уменьшается до нуля за $60\\,\\text{мин}=3600\\,\\text{с}$. Скорость сближения $v_1+v_2=\\dfrac{144000}{3600}=40\\,\\text{м}/\\text{с}$. Следовательно, $v_2=40-15=25\\,\\text{м}/\\text{с}$.",
+            "photo_indices": []
+          },
+          {
+            "id": "B5F7C7",
+            "condition_tex": "Начальная скорость движения тела равна $5\\,\\text{м}/\\text{с}$. Сколько потребуется времени, чтобы увеличить его скорость в $3$ раза при равноускоренном движении по прямой в одном направлении на пути в $20\\,\\text{м}$? Время выразите в секундах.",
+            "solution_tex": "Конечная скорость $v=3v_0=15\\,\\text{м}/\\text{с}$. При равноускоренном движении в одном направлении $s=\\dfrac{v_0+v}{2}t$. Отсюда $t=\\dfrac{2s}{v_0+v}=\\dfrac{2\\cdot20}{5+15}=2\\,\\text{с}$.",
+            "photo_indices": []
+          }
+        ],
+        "reviewed_tex_sha256": "656522f6161eb758268ecc0aea1b8c8b74cbe8af7b32ba7e847b632f0ecb2aaa",
+        "review": "Independent source, diagram and physics review: 025a9c523ff9daf1a86545425e5a92f42e6ab293e141361737d4f882a146f9eb"
+      },
+      "reference_tex": ""
+    },
+    {
+      "exam_number": 2,
+      "worksheet": {
+        "preparation_id": "fipi-ege-02",
+        "version": 1,
+        "student_ids": [
+          "local"
+        ],
+        "exam": "ege",
+        "topics": [
+          "ЕГЭ: задание 2"
+        ],
+        "title": "Задание 2: шесть задач ФИПИ",
+        "tasks": [
+          {
+            "id": "19F564",
+            "statement_exact": "Впишите правильный ответ.\nВ инерциальной системе отсчёта некоторая сила сообщает телу массой 5 кг ускорение, равное по модулю 3 м/с $^{2}$. Определите модуль ускорения, которое сообщит та же сила в той же системе отсчёта телу массой 7,5 кг.\nОтвет: ____ м/с 2",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=19F564",
+            "page": null,
+            "images": [],
+            "sha256": "42e0694e919c42fd0ec4ecae51928e4d555b13cce2d8f9a85cd14f77d37db7c0",
+            "exam_part": null,
+            "exam_number": 2,
+            "section": "Второй закон Ньютона: для материальной точки в ИСО",
+            "solution": {
+              "text": "По второму закону Ньютона $F=m_1a_1=m_2a_2$. Тогда\\[a_2=\\frac{m_1a_1}{m_2}=\\frac{5\\cdot3}{7{,}5}=2\\,\\text{м}/\\text{с}^{2}.\\] Ответ: $2$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=19F564#prepa-gpt-solution",
+              "images": [],
+              "sha256": "fd9e0943c7f5b39cdd6fc23af5bddc33e2605f9ef6353d3205f703ab9684ef9f"
+            }
+          },
+          {
+            "id": "AC8852",
+            "statement_exact": "Впишите правильный ответ.\nРасстояние от искусственного спутника до поверхности Земли равно двум радиусам Земли. Во сколько раз увеличится сила притяжения спутника к Земле, если расстояние от него до поверхности Земли станет равным одному радиусу Земли?\nОтвет: ____ раз(а)",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=AC8852",
+            "page": null,
+            "images": [],
+            "sha256": "499d6ab0f18b62473ff61d010fdfa2a5e848f0b3bc6edf47eb501c287c073ecc",
+            "exam_part": null,
+            "exam_number": 2,
+            "section": "Закон всемирного тяготения. Сила тяжести. Центр тяжести тела.",
+            "solution": {
+              "text": "Первоначально расстояние до центра Земли $r_1=3R$, затем $r_2=2R$. По закону всемирного тяготения $F=GMm/r^2$, поэтому\\[\\frac{F_2}{F_1}=\\left(\\frac{r_1}{r_2}\\right)^2=\\left(\\frac{3}{2}\\right)^2=2{,}25.\\] Ответ: в $2{,}25$ раза.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=AC8852#prepa-gpt-solution",
+              "images": [],
+              "sha256": "7e8985715ca090f41e1bf1c06ff86c4e3f46be2a0dff280b9e858c97426b2c76"
+            }
+          },
+          {
+            "id": "909F5c",
+            "statement_exact": "Впишите правильный ответ.\n[рисунок 1]\nНа рисунке представлен график зависимости модуля силы упругости F пружины от её удлинения x. Чему равна жёсткость пружины?\nОтвет: ____ Н/м",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=909F5c",
+            "page": null,
+            "images": [
+              {
+                "data_base64": "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",
+                "sha256": "01258884900c91e71fe6e9257fe3d72abed838c21e6d1df9c8d40e3ea4618365",
+                "width": 255,
+                "height": 189
+              }
+            ],
+            "sha256": "fe2ccd673eb55d2dc257e5b536574b42c75f20a52a67549111b791289b6b22cd",
+            "exam_part": null,
+            "exam_number": 2,
+            "section": "Сила упругости. Закон Гука",
+            "solution": {
+              "text": "По графику при $x=4\\cdot10^{-2}\\,\\text{м}$ сила упругости равна $F=4\\,\\text{Н}$. По закону Гука\\[k=\\frac{F}{x}=\\frac{4}{4\\cdot10^{-2}}=100\\,\\text{Н}/\\text{м}.\\] Ответ: $100$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=909F5c#prepa-gpt-solution",
+              "images": [],
+              "sha256": "348e86c810a6b0164dbeb67557aab3ad32785e950f838e9547301358a7807b5c"
+            }
+          },
+          {
+            "id": "318091",
+            "statement_exact": "Впишите правильный ответ.\nПри исследовании зависимости модуля силы трения скольжения ${\\vec{F}}_{\\text{т}\\text{р}}$ от модуля нормальной составляющей силы реакции опоры $\\vec{N}$ были получены следующие данные.\nF $_{тр}$, Н\n0,8\n1,6\n2,4\n3,2\nN, Н\n2,0\n4,0\n6,0\n8,0\nОпределите по результатам исследования коэффициент трения скольжения.",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=318091",
+            "page": null,
+            "images": [],
+            "sha256": "2213f683031d3fad8cbb3034c95a0876b694c752acaa9ad1f9a04e91956d5169",
+            "exam_part": null,
+            "exam_number": 2,
+            "section": "Сила трения. Сухое трение. Сила трения скольжения. Сила трения покоя. Коэффициент трения",
+            "solution": {
+              "text": "При скольжении $F_{\\text{тр}}=\\mu N$, поэтому\\[\\mu=\\frac{F_{\\text{тр}}}{N}=\\frac{0{,}8}{2{,}0}=0{,}4.\\] Остальные пары данных дают такое же отношение. Ответ: $0{,}4$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=318091#prepa-gpt-solution",
+              "images": [],
+              "sha256": "8e59e4a9db4d2aefdc30935334e97c19f20f4dcb5801ada9b4679f0c6ecf7729"
+            }
+          },
+          {
+            "id": "26769F",
+            "statement_exact": "Впишите правильный ответ.\nПод действием силы величиной 6 Н пружина удлинилась на 3 см. Чему равна величина силы, под действием которой удлинение этой пружины составит 4,5 см?\nОтвет: ____ H",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=26769F",
+            "page": null,
+            "images": [],
+            "sha256": "fc9defe343f20f26c01b8d80da1e2d390c7c24b530286e05a32e5bd3993bb186",
+            "exam_part": null,
+            "exam_number": 2,
+            "section": "Сила упругости. Закон Гука",
+            "solution": {
+              "text": "Для одной пружины по закону Гука $F_1=kx_1$ и $F_2=kx_2$. Следовательно,\\[F_2=F_1\\frac{x_2}{x_1}=6\\cdot\\frac{4{,}5}{3}=9\\,\\text{Н}.\\] Ответ: $9$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=26769F#prepa-gpt-solution",
+              "images": [],
+              "sha256": "ab3265deecb551e04f1fc109f5fd069eb66ae4bcd8815b03045bfeb5dea630e2"
+            }
+          },
+          {
+            "id": "89A46D",
+            "statement_exact": "Впишите правильный ответ.\nГруз массой 200 г подвешен на пружине к потолку неподвижного лифта. Лифт начинает двигаться и в течение 2 с равноускоренно опускается вниз на расстояние 5 м. Каково удлинение пружины при опускании лифта, если её жёсткость 100 Н/м? Движение груза также считать равноускоренным, возникновением колебаний пренебречь.\nОтвет: ____ см",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=89A46D",
+            "page": null,
+            "images": [],
+            "sha256": "4d6899cae4658ba707501f44f72a350f4e5a05d1561abb8b748629faf187f020",
+            "exam_part": null,
+            "exam_number": 2,
+            "section": "",
+            "solution": {
+              "text": "Лифт начинает движение из состояния покоя, поэтому $a=2s/t^2=2\\cdot5/2^2=2{,}5\\,\\text{м}/\\text{с}^{2}$. Ускорение направлено вниз. При $g=10\\,\\text{м}/\\text{с}^{2}$ по второму закону Ньютона $mg-kx=ma$. Тогда\\[x=\\frac{m(g-a)}{k}=\\frac{0{,}2(10-2{,}5)}{100}=0{,}015\\,\\text{м}=1{,}5\\,\\text{см}.\\] Ответ: $1{,}5$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=89A46D#prepa-gpt-solution",
+              "images": [],
+              "sha256": "e46b488657c46e05da53f04f613c6b7c184d551a3b79f13a6c5351e9315910a5"
+            }
+          }
+        ]
+      },
+      "typeset": {
+        "source_sha256": "32da5de4e5e7a8ee9a983894e81cd483a6894e21568a816a740cfb0fec690112",
+        "tasks": [
+          {
+            "id": "19F564",
+            "condition_tex": "В инерциальной системе отсчёта некоторая сила сообщает телу массой $5\\,\\text{кг}$ ускорение, равное по модулю $3\\,\\text{м}/\\text{с}^{2}$. Определите модуль ускорения, которое сообщит та же сила в той же системе отсчёта телу массой $7{,}5\\,\\text{кг}$ (в $\\text{м}/\\text{с}^{2}$).",
+            "solution_tex": "По второму закону Ньютона $F=m_1a_1=m_2a_2$. Тогда\\[a_2=\\frac{m_1a_1}{m_2}=\\frac{5\\cdot3}{7{,}5}=2\\,\\text{м}/\\text{с}^{2}.\\] Ответ: $2$.",
+            "photo_indices": []
+          },
+          {
+            "id": "AC8852",
+            "condition_tex": "Расстояние от искусственного спутника до поверхности Земли равно двум радиусам Земли. Во сколько раз увеличится сила притяжения спутника к Земле, если расстояние от него до поверхности Земли станет равным одному радиусу Земли?",
+            "solution_tex": "Первоначально расстояние до центра Земли $r_1=3R$, затем $r_2=2R$. По закону всемирного тяготения $F=GMm/r^2$, поэтому\\[\\frac{F_2}{F_1}=\\left(\\frac{r_1}{r_2}\\right)^2=\\left(\\frac{3}{2}\\right)^2=2{,}25.\\] Ответ: в $2{,}25$ раза.",
+            "photo_indices": []
+          },
+          {
+            "id": "909F5c",
+            "condition_tex": "На рисунке представлен график зависимости модуля силы упругости $F$ пружины от её удлинения $x$. Чему равна жёсткость пружины (в $\\text{Н}/\\text{м}$)?\n\\begin{center}\n\\begin{tikzpicture}[x=0.68cm,y=0.68cm,>=stealth]\n\\draw[step=1,black,thin] (0,0) grid (4,4);\n\\draw[->] (0,0)--(4.65,0) node[right] {$x,\\,10^{-2}\\,\\text{м}$};\n\\draw[->] (0,0)--(0,4.75) node[left] {$F,\\,\\text{Н}$};\n\\foreach \\n in {1,2,3,4}{\\node[below] at (\\n,0) {$\\n$};\\node[left] at (0,\\n) {$\\n$};}\n\\node[below left] at (0,0) {$0$};\n\\draw[thick] (0,0)--(4,4);\n\\end{tikzpicture}\n\\end{center}",
+            "solution_tex": "По графику при $x=4\\cdot10^{-2}\\,\\text{м}$ сила упругости равна $F=4\\,\\text{Н}$. По закону Гука\\[k=\\frac{F}{x}=\\frac{4}{4\\cdot10^{-2}}=100\\,\\text{Н}/\\text{м}.\\] Ответ: $100$.",
+            "photo_indices": []
+          },
+          {
+            "id": "318091",
+            "condition_tex": "При исследовании зависимости модуля силы трения скольжения $\\vec{F}_{\\text{тр}}$ от модуля нормальной составляющей силы реакции опоры $\\vec{N}$ были получены следующие данные.\n\\begin{center}\n\\begin{tabular}{|c|c|c|c|c|}\\hline\n$F_{\\text{тр}},\\,\\text{Н}$ & $0{,}8$ & $1{,}6$ & $2{,}4$ & $3{,}2$ \\\\\\hline\n$N,\\,\\text{Н}$ & $2{,}0$ & $4{,}0$ & $6{,}0$ & $8{,}0$ \\\\\\hline\n\\end{tabular}\n\\end{center}\nОпределите по результатам исследования коэффициент трения скольжения.",
+            "solution_tex": "При скольжении $F_{\\text{тр}}=\\mu N$, поэтому\\[\\mu=\\frac{F_{\\text{тр}}}{N}=\\frac{0{,}8}{2{,}0}=0{,}4.\\] Остальные пары данных дают такое же отношение. Ответ: $0{,}4$.",
+            "photo_indices": []
+          },
+          {
+            "id": "26769F",
+            "condition_tex": "Под действием силы величиной $6\\,\\text{Н}$ пружина удлинилась на $3\\,\\text{см}$. Чему равна величина силы, под действием которой удлинение этой пружины составит $4{,}5\\,\\text{см}$ (в $\\text{Н}$)?",
+            "solution_tex": "Для одной пружины по закону Гука $F_1=kx_1$ и $F_2=kx_2$. Следовательно,\\[F_2=F_1\\frac{x_2}{x_1}=6\\cdot\\frac{4{,}5}{3}=9\\,\\text{Н}.\\] Ответ: $9$.",
+            "photo_indices": []
+          },
+          {
+            "id": "89A46D",
+            "condition_tex": "Груз массой $200\\,\\text{г}$ подвешен на пружине к потолку неподвижного лифта. Лифт начинает двигаться и в течение $2\\,\\text{с}$ равноускоренно опускается вниз на расстояние $5\\,\\text{м}$. Каково удлинение пружины при опускании лифта, если её жёсткость $100\\,\\text{Н}/\\text{м}$? Движение груза также считать равноускоренным, возникновением колебаний пренебречь. Удлинение выразите в $\\text{см}$.",
+            "solution_tex": "Лифт начинает движение из состояния покоя, поэтому $a=2s/t^2=2\\cdot5/2^2=2{,}5\\,\\text{м}/\\text{с}^{2}$. Ускорение направлено вниз. При $g=10\\,\\text{м}/\\text{с}^{2}$ по второму закону Ньютона $mg-kx=ma$. Тогда\\[x=\\frac{m(g-a)}{k}=\\frac{0{,}2(10-2{,}5)}{100}=0{,}015\\,\\text{м}=1{,}5\\,\\text{см}.\\] Ответ: $1{,}5$.",
+            "photo_indices": []
+          }
+        ],
+        "reviewed_tex_sha256": "9dd2d52cfcaa598390b3ce5ba7e30827662b36b97c5196e6f6d126612cc75cba",
+        "review": "Independent source, diagram and physics review: fd5bf01f16ecdc2a856d7cda14e1ee34c5f12b99aa2f0e0557fc59099afb11a1"
+      },
+      "reference_tex": "При расчётах принимайте $g=10\\,\\text{м}/\\text{с}^2$, если не оговорено иное.\\par\\medskip"
+    },
+    {
+      "exam_number": 3,
+      "worksheet": {
+        "preparation_id": "fipi-ege-03",
+        "version": 1,
+        "student_ids": [
+          "local"
+        ],
+        "exam": "ege",
+        "topics": [
+          "ЕГЭ: задание 3"
+        ],
+        "title": "Задание 3: шесть задач ФИПИ",
+        "tasks": [
+          {
+            "id": "B02B49",
+            "statement_exact": "Впишите правильный ответ.\nНа тело, движущееся прямолинейно в инерциальной системе отсчёта, в течение 3 с в направлении движения действует постоянная сила 12 Н. Каково увеличение импульса тела за это время?\nОтвет: ____ кг ∙ м/с",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B02B49",
+            "page": null,
+            "images": [],
+            "sha256": "be76a4d5a2390a43a08bc106588c3deda8374a2afc101644c4ef4bedaf19a7d5",
+            "exam_part": null,
+            "exam_number": 3,
+            "section": "Закон изменения и сохранения импульса",
+            "solution": {
+              "text": "Изменение импульса равно импульсу силы: $\\Delta p=F\\Delta t=12\\cdot3=36\\,\\text{кг}\\cdot\\text{м}/\\text{с}$. Ответ: $36\\,\\text{кг}\\cdot\\text{м}/\\text{с}$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B02B49#prepa-gpt-solution",
+              "images": [],
+              "sha256": "2e94be73000421d501821fbd04a58c669fd09aec96ae26724ba72b54c98d6095"
+            }
+          },
+          {
+            "id": "DC8C1F",
+            "statement_exact": "Впишите правильный ответ.\n[рисунок 1]\nДва тела движутся по взаимно перпендикулярным пересекающимся прямым, как показано на рисунке. Модуль импульса первого тела р $_{1}$ = 8 кг $\\cdot$ м/с, второго тела р $_{2}$ = 6 кг $\\cdot$ м/с. Каков модуль импульса системы этих тел после их абсолютно неупругого удара?\nОтвет: ____ кг ∙ м/с",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=DC8C1F",
+            "page": null,
+            "images": [
+              {
+                "data_base64": "iVBORw0KGgoAAAANSUhEUgAAAHEAAAB4CAIAAABKE4pPAAAFVUlEQVR4nO2da5OqMAyGU2gFKfL/f6cXBGnJmYIXPCsCWqXSvB92hJ3tsI9JeqFJGSICyaoCu82RiOlHRHb6I0wZY+CxJjPN1oIxvpZZeymbqzQ9X4L3QAGATwIqBcuV+VCp+nZXKwQx9btZsKbZ6aHCTRKHnTthJGPO/7o689j9p8dTFooQdH0Z1aIGLvb7rfUn87SPytK0OkHYsVvmsXlexV6YR5moirGMRaCrKhDHw/YhU/R1hjatj7qXPqqgqnq9nrFXvjBPfZ8FIWhVlqdV1O2uSO/GUwV8fbjvmiiYvs40CEScbKrj/16PjeDPZ980OZ5mcp2rQPWHUdJYptla7CouIyhKiO9G/aRXfb+uEXRxMEBphD8g+8Md1gxRvQ2mtH76EdGatPNM2WVuyhqBl7IWT58QRM9iqx2mV6DYac3b9ZTgQ0DB46lUYGvk1IcPm/texVYLdjpojOgZ1reY+oNpkmh8al/E1L6IqX0RU8eY+tahf8lOx4zqmWerf++8ix6mxnqmWMuWzTF/dy2K0brU++qLquiThbaidyf2RWMp+yKm9kVM7YuY2hcxtS9iOitTKW4pPCQ7TMMohjInrNPG/GnEDyc9+DfhSqpy39si82vF5K15lMkyKQqIkm5SxIMWme9MJ/i+LoeBkmi+/xHRWMq+iKl9EdOvMM3SdM3bdXoh0yyNzhdMyA88gB9Mt/v9UaFchRDyutwVECM2lyoXa5pHver7WZpqrUEXim/a4X3ARQiAdacUAmlaPEVdaTNfuiXr1UqbTFOKvy+/izYEeSKCu/wo4Ktw7Ds+5uVb6FaP7U4rBXx1TdHNUlmedLiK2jtSMB6l333On+/35UlBGNzsTpe5CuO4Mds04m2ZGdIUO0Xj59fQ2dTq4cklJXJfKjMGIE2Kp7WqzHpfsTvHRJ4gHmBIiPh32wT6F0wfM8Xa9E9YDXMkjfL9NphyTt5tj2ldlabLfwmpn57+jGmWmtp7zbsTlR92709D0VfEk/egXd9ZPXwrxXzNh/zgvj5GTK2vn6KvttnVp9ZE0GO4tM5kX8TUvoipfRFTV/OjXBBzZgVnCUxZTxrRXDu3fp4p659ltL/6fmnbhcRTfFSQZS7f/22mbMi7Z8ncdpcpGwfCwQo3bsVTNuU/n6VuwJjoPD9T9mslFQbX3n7s/3mnKMPXnsTdePpzupYs4HPV6WUjbOd5I1Otz261xyeNzxZPsacC5aQWxv/hJ8aqfW3O30fBffUP6x2x3WA65rtxgunLxtuaqmsVbpZQu4M9pf/9GeoS+n0cmptaVyZNxkO7BaL93D2UcAl2+mWZIzWKZrsoTzb8ZI7XuD8HwnWmUvB65WJC5nnvyKPNeq77fuhqgnubNPJws978/X46JsE93/EofZLgPoOasx6rR4k489vpvlTYr42UcRjGyTmlyCFpXZkfunteritMfzHB3ZQyqINE8Oa8XPd8/7kOlVsJGSZS1ZEMTsDXANx4P4IUAqLbSXqu26mLUnkBkXEdE1J1ke9O90cTuj6W+kWRnS6XabagBHdXmG4XlODuClNYUIK7Q0xhKQnuLj1ubRLcowcJ7nU31ILzcoip7klwZ1UJ0QYRE67yovo7F3RNrsyjsjbBffV/grsUwX5ftXfCVRzmCkGA23LGTvFZgvtZrFNTwGG5Yqf1mAR3rOFS68JlucIURyS4awXdHsxZOfGI2YgE9zTip+A3jv92gmk9lOCeRryAuDpus1SunS9v8+297v8pS+XxcKtZw+PNbcB/UdNfXa/COHFuidotpouUE76/MBFT+yKm9kVM7YuY2hcxBev6B5t9zeuDrwV8AAAAAElFTkSuQmCC",
+                "sha256": "b581b849fd5e534b80c9ad9f678ad626c18a191292ff622ad6dafe2198d3c63c",
+                "width": 113,
+                "height": 120
+              }
+            ],
+            "sha256": "b96af31adfd459ae3980625c372ae17007f99247397beeec720c0d95dbb121b3",
+            "exam_part": null,
+            "exam_number": 3,
+            "section": "Импульс системы тел",
+            "solution": {
+              "text": "Импульс системы сохраняется. До удара импульсы перпендикулярны, поэтому $p=\\sqrt{p_1^2+p_2^2}=\\sqrt{8^2+6^2}=10\\,\\text{кг}\\cdot\\text{м}/\\text{с}$. Ответ: $10\\,\\text{кг}\\cdot\\text{м}/\\text{с}$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=DC8C1F#prepa-gpt-solution",
+              "images": [],
+              "sha256": "b39386529f54f0196f5844e0cc971a6787a0bb81056e165662a9b1c2441ab8d1"
+            }
+          },
+          {
+            "id": "225EC6",
+            "statement_exact": "Впишите правильный ответ.\nПри равномерном перемещении саней по горизонтальному участку пути длиной 50 м сила тяги совершает работу, величина которой равна 1000 Дж. Какова сила трения?\nОтвет: ____ Н",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=225EC6",
+            "page": null,
+            "images": [],
+            "sha256": "855a40b1b9a44e56efff6d3c683d183735101c05473eb7fce7e3e6cfd6d0d9ad",
+            "exam_part": null,
+            "exam_number": 3,
+            "section": "Работа силы на малом перемещении",
+            "solution": {
+              "text": "При равномерном движении $\\Delta E_{\\text{к}}=0$, поэтому $A_{\\text{тяги}}+A_{\\text{тр}}=0$. На горизонтальном участке $A_{\\text{тр}}=-F_{\\text{тр}}s$, откуда $F_{\\text{тр}}=A_{\\text{тяги}}/s=1000/50=20\\,\\text{Н}$. Ответ: $20\\,\\text{Н}$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=225EC6#prepa-gpt-solution",
+              "images": [],
+              "sha256": "4a394bec7fd1bd3c729df7c16f55fa0cd09b5e0825ae63a06ae01ebca578128b"
+            }
+          },
+          {
+            "id": "cF941A",
+            "statement_exact": "Впишите правильный ответ.\nПри подаче скорость волейбольного мяча составила 18 м/с. Масса мяча 280 г. Какова кинетическая энергия мяча?\nОтвет: ____ Дж",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=cF941A",
+            "page": null,
+            "images": [],
+            "sha256": "86526df3dc452a95e61a4861cfb814fdfbada1c0c84a65526237bd467208bbff",
+            "exam_part": null,
+            "exam_number": 3,
+            "section": "Кинетическая энергия материальной точки. Закон изменения кинетической энергии системы материальных точек",
+            "solution": {
+              "text": "$m=280\\,\\text{г}=0{,}28\\,\\text{кг}$. Кинетическая энергия $E_{\\text{к}}=mv^2/2=0{,}28\\cdot18^2/2=45{,}36\\,\\text{Дж}$. Ответ: $45{,}36\\,\\text{Дж}$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=cF941A#prepa-gpt-solution",
+              "images": [],
+              "sha256": "609908fe8f33e1a53686bd5660a4ee4abdd1d7ce5f39103aea9337a5319e57e4"
+            }
+          },
+          {
+            "id": "ADA046",
+            "statement_exact": "Впишите правильный ответ.\nПри упругой деформации, равной 3 см, потенциальная энергия пружины равна 6 Дж. На сколько изменится потенциальная энергия этой пружины при увеличении упругой деформации ещё на 3 см?\nОтвет: ____ Дж",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=ADA046",
+            "page": null,
+            "images": [],
+            "sha256": "d4810dd4ef37408eeea39a42bddb6712418ba618c637dd1de47d7d8af2d02017",
+            "exam_part": null,
+            "exam_number": 3,
+            "section": "Потенциальная энергия для потенциальных сил. Потенциальная энергия материальной точки в однородном поле тяжести. Потенциальная энергия упруго деформированного тела",
+            "solution": {
+              "text": "$E_{\\text{п}}=kx^2/2$. Деформация увеличилась вдвое, поэтому $E_2=4E_1=24\\,\\text{Дж}$. Изменение энергии $\\Delta E=E_2-E_1=24-6=18\\,\\text{Дж}$. Ответ: увеличится на $18\\,\\text{Дж}$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=ADA046#prepa-gpt-solution",
+              "images": [],
+              "sha256": "46374b61af9b3aae16dd7e2a286c6fe61b2cfb5e0dcc795b79217489279c2c14"
+            }
+          },
+          {
+            "id": "E9E545",
+            "statement_exact": "Впишите правильный ответ.\nШарик массой 100 г падает с некоторой высоты. Начальная скорость шарика равна нулю. Его кинетическая энергия при падении на землю равна 6 Дж, а потеря энергии за счёт сопротивления воздуха составила 1 Дж. С какой высоты упал шарик?\nОтвет: ____ м",
+            "statement_math_exact": [],
+            "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=E9E545",
+            "page": null,
+            "images": [],
+            "sha256": "49a9077dadae6d219117b5d9064087d186ea786756250ca32529b662d40676e4",
+            "exam_part": null,
+            "exam_number": 3,
+            "section": "Закон изменения и сохранения механической энергии",
+            "solution": {
+              "text": "$m=0{,}1\\,\\text{кг}$. При $g=10\\,\\text{м}/\\text{с}^2$ начальная энергия $mgh=E_{\\text{к}}+E_{\\text{потерь}}$, откуда $h=(6+1)/(0{,}1\\cdot10)=7\\,\\text{м}$. Ответ: $7\\,\\text{м}$.",
+              "source_url": "https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=E9E545#prepa-gpt-solution",
+              "images": [],
+              "sha256": "818fcc37af4f200192cbedba9f3ef78df911ccb06a4c3c4d64ec66e0f98e9df9"
+            }
+          }
+        ]
+      },
+      "typeset": {
+        "source_sha256": "eb0de6c2bdb2ee0493f244251caac53de4b526740f955696eff6da84d05fc63b",
+        "tasks": [
+          {
+            "id": "B02B49",
+            "condition_tex": "На тело, движущееся прямолинейно в инерциальной системе отсчёта, в течение $3\\,\\text{с}$ в направлении движения действует постоянная сила $12\\,\\text{Н}$. Каково увеличение импульса тела за это время? Выразите ответ в $\\text{кг}\\cdot\\text{м}/\\text{с}$.",
+            "solution_tex": "Изменение импульса равно импульсу силы: $\\Delta p=F\\Delta t=12\\cdot3=36\\,\\text{кг}\\cdot\\text{м}/\\text{с}$. Ответ: $36\\,\\text{кг}\\cdot\\text{м}/\\text{с}$.",
+            "photo_indices": []
+          },
+          {
+            "id": "DC8C1F",
+            "condition_tex": "Два тела движутся по взаимно перпендикулярным пересекающимся прямым, как показано на рисунке. Модуль импульса первого тела $p_1=8\\,\\text{кг}\\cdot\\text{м}/\\text{с}$, второго тела $p_2=6\\,\\text{кг}\\cdot\\text{м}/\\text{с}$. Каков модуль импульса системы этих тел после их абсолютно неупругого удара? Выразите ответ в $\\text{кг}\\cdot\\text{м}/\\text{с}$.\n\\begin{center}\n\\begin{tikzpicture}[>=stealth,scale=1.05]\n\\draw[->] (-0.65,0)--(2.25,0) node[right] {$x$};\n\\draw[->] (0,-0.65)--(0,2.1) node[above left] {$y$};\n\\draw[fill=white] (0,1.65) circle (0.14);\n\\draw[very thick,->] (0,1.49)--(0,0.45);\n\\node[left] at (-0.1,0.96) {$\\vec p_1$};\n\\draw[fill=white] (1.5,0) circle (0.14);\n\\draw[very thick,->] (1.35,0)--(0.36,0);\n\\node[below] at (0.83,-0.12) {$\\vec p_2$};\n\\end{tikzpicture}\n\\end{center}",
+            "solution_tex": "Импульс системы сохраняется. До удара импульсы перпендикулярны, поэтому $p=\\sqrt{p_1^2+p_2^2}=\\sqrt{8^2+6^2}=10\\,\\text{кг}\\cdot\\text{м}/\\text{с}$. Ответ: $10\\,\\text{кг}\\cdot\\text{м}/\\text{с}$.",
+            "photo_indices": []
+          },
+          {
+            "id": "225EC6",
+            "condition_tex": "При равномерном перемещении саней по горизонтальному участку пути длиной $50\\,\\text{м}$ сила тяги совершает работу, величина которой равна $1000\\,\\text{Дж}$. Какова сила трения? Выразите ответ в ньютонах.",
+            "solution_tex": "При равномерном движении $\\Delta E_{\\text{к}}=0$, поэтому $A_{\\text{тяги}}+A_{\\text{тр}}=0$. На горизонтальном участке $A_{\\text{тр}}=-F_{\\text{тр}}s$, откуда $F_{\\text{тр}}=A_{\\text{тяги}}/s=1000/50=20\\,\\text{Н}$. Ответ: $20\\,\\text{Н}$.",
+            "photo_indices": []
+          },
+          {
+            "id": "cF941A",
+            "condition_tex": "При подаче скорость волейбольного мяча составила $18\\,\\text{м}/\\text{с}$. Масса мяча $280\\,\\text{г}$. Какова кинетическая энергия мяча? Выразите ответ в джоулях.",
+            "solution_tex": "$m=280\\,\\text{г}=0{,}28\\,\\text{кг}$. Кинетическая энергия $E_{\\text{к}}=mv^2/2=0{,}28\\cdot18^2/2=45{,}36\\,\\text{Дж}$. Ответ: $45{,}36\\,\\text{Дж}$.",
+            "photo_indices": []
+          },
+          {
+            "id": "ADA046",
+            "condition_tex": "При упругой деформации, равной $3\\,\\text{см}$, потенциальная энергия пружины равна $6\\,\\text{Дж}$. На сколько изменится потенциальная энергия этой пружины при увеличении упругой деформации ещё на $3\\,\\text{см}$? Выразите ответ в джоулях.",
+            "solution_tex": "$E_{\\text{п}}=kx^2/2$. Деформация увеличилась вдвое, поэтому $E_2=4E_1=24\\,\\text{Дж}$. Изменение энергии $\\Delta E=E_2-E_1=24-6=18\\,\\text{Дж}$. Ответ: увеличится на $18\\,\\text{Дж}$.",
+            "photo_indices": []
+          },
+          {
+            "id": "E9E545",
+            "condition_tex": "Шарик массой $100\\,\\text{г}$ падает с некоторой высоты. Начальная скорость шарика равна нулю. Его кинетическая энергия при падении на землю равна $6\\,\\text{Дж}$, а потеря энергии за счёт сопротивления воздуха составила $1\\,\\text{Дж}$. С какой высоты упал шарик? Выразите ответ в метрах.",
+            "solution_tex": "$m=0{,}1\\,\\text{кг}$. При $g=10\\,\\text{м}/\\text{с}^2$ начальная энергия $mgh=E_{\\text{к}}+E_{\\text{потерь}}$, откуда $h=(6+1)/(0{,}1\\cdot10)=7\\,\\text{м}$. Ответ: $7\\,\\text{м}$.",
+            "photo_indices": []
+          }
+        ],
+        "reviewed_tex_sha256": "81c8bc594116268cfd0d3c9fafbe4420c95898cd442a78098f5ea6da73f733af",
+        "review": "Independent source, diagram and physics review: 254335bd7e095a84d9667891df628ad3836f9a7b8d16235d2ef07d94288af5db"
+      },
+      "reference_tex": "При расчётах принимайте $g=10\\,\\text{м}/\\text{с}^2$, если не оговорено иное.\\par\\medskip"
+    }
+  ]
+}

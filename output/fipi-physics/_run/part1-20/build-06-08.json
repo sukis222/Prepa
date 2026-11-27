@@ -1,0 +1,34 @@
+[
+  {
+    "document": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\student\\task-06.tex",
+    "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\student\\task-06.pdf",
+    "pages": 6,
+    "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\previews\\student-06",
+    "recipe": "Tectonic (project)",
+    "overflow": []
+  },
+  {
+    "document": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\tutor\\task-06.tex",
+    "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\tutor\\task-06.pdf",
+    "pages": 7,
+    "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\previews\\tutor-06",
+    "recipe": "Tectonic (project)",
+    "overflow": []
+  },
+  {
+    "document": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\student\\task-08.tex",
+    "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\student\\task-08.pdf",
+    "pages": 3,
+    "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\previews\\student-08",
+    "recipe": "Tectonic (project)",
+    "overflow": []
+  },
+  {
+    "document": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\tutor\\task-08.tex",
+    "pdf": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\tutor\\task-08.pdf",
+    "pages": 5,
+    "preview": "D:\\GitHub\\Prepa-GPT\\tmp\\part1-20-check\\previews\\tutor-08",
+    "recipe": "Tectonic (project)",
+    "overflow": []
+  }
+]

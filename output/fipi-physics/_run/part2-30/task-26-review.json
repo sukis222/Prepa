@@ -1,0 +1,171 @@
+{
+  "approved": true,
+  "reviewed_sha256": "20b1693037e4abd141e069e200e272530da1d2f3f4309831efe3048664018a3b",
+  "reviewer": "independent agent anchors_optics_quantum; not the author",
+  "scope": "All30 conditions compared with cached FIPI extended index; all30 solutions independently recomputed;21 original images inspected on assets2-5; corresponding TikZ and force directions checked.",
+  "resolved_findings": [
+    "6F7274: gravity and spring force on upper mass restored to vertical down.",
+    "F5e61D: tensions and Archimedes forces restored to vertical up.",
+    "C6A611: tension/friction restored horizontal; both downward board forces restored vertical.",
+    "E068D9: both downward forces on loaded block restored vertical.",
+    "60B2BE and D59EAC: unit N/H confusion corrected to Russian upright newton notation.",
+    "328102 removed as too simple; replacement AB0739 independently verified.",
+    "CFC86C tangent geometry rechecked after author adjusted circle centre and string to exact30degree tangency."
+  ],
+  "caveats": [
+    "45D010 inherits source convention using common friction coefficient at the onset of sliding; numeric result0.70 is consistent with that model.",
+    "Rendered-page QA is separate; old tutor26 preview had an empty page11, which must be checked in the final layout."
+  ],
+  "tasks": [
+    {
+      "id": "418761",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "652146",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "C594F9",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "338EF9",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "0DDE03",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "EB0004",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "AB0739",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "3D2308",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "A5F07e",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "904771",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "6F7274",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "04DCB4",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "2C62B8",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "A0A0B3",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "60B2BE",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "45D010",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "F5e61D",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "5BCC1F",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "C6A611",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "E7211F",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "89181B",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "B46C29",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "B8E9D0",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "E068D9",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "29FE54",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "D59EAC",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "3ECDA4",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "7018C7",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "DA269B",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    },
+    {
+      "id": "CFC86C",
+      "approved": true,
+      "reason": "Source wording and data preserved; model, applicable laws, signs, computation and answer checked independently. Source and requested force diagrams checked; no remaining subject error."
+    }
+  ]
+}

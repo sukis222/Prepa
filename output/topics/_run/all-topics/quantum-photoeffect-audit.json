@@ -1,0 +1,21 @@
+{
+  "batch": "quantum-photoeffect",
+  "bundle_sha256": "916177bf3347f8edae67ebd9562899cc9d9c2510e6a19abeebfa9957fc60f5e0",
+  "topics": [
+    "6.1.3",
+    "6.1.6",
+    "6.1.2"
+  ],
+  "tasks": 25,
+  "pages": 26,
+  "baseline_preserved": 107,
+  "files": {
+    "task-6-1-3.tex": "d75df08e3c12f4beabeda16242dab6d95419961c96953a168f1a951e8bd2fb4a",
+    "tutor-6-1-3.tex": "f495c0e91442d56f7070929f304a221bf924652207e3c763758836df0d5b3d6d",
+    "task-6-1-6.tex": "8a7ef83772c75de42a6af0f96739871d0207a407626d103272518c3cb7ee21f5",
+    "tutor-6-1-6.tex": "3b0fe2431169ac482130923d7bdb9e3175c3570ad3e7a97ca664494e5922cf30",
+    "task-6-1-2.tex": "45af30f20893d7a351fcc10d14745915cd2534e9740096c1b8fc1edc71d42c0b",
+    "tutor-6-1-2.tex": "0ee2e0ccb9ea663dc0eba242526b3ca1d7ee81019d43bb5781cb655ce8e63aaf"
+  },
+  "editor_open_checked": false
+}

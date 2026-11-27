@@ -1,0 +1,18 @@
+{
+  "batch": "mechanics-relative",
+  "bundle_sha256": "bf8bc245d51a8bc73f3eb8f11383dcbf7f5f70a2524865086bccabe9b80b3b62",
+  "topics": [
+    "1.1.1",
+    "1.1.8"
+  ],
+  "tasks": 20,
+  "pages": 14,
+  "baseline_preserved": 107,
+  "files": {
+    "task-1-1-1.tex": "56d87b66fba91531e5beb0316f39dfe7ad7a79c1099edaa4d43a3854b5badeb2",
+    "tutor-1-1-1.tex": "ecb390a9b95e0e018c44786a0396b0b94dde49e5c5dc8957d35ce58244a28460",
+    "task-1-1-8.tex": "d14bc1b2847a21c16975fd68891338f7e325ef25cca75cee66c036e002231fdd",
+    "tutor-1-1-8.tex": "435e6a4065576ea192599bbba11a85cac1d40df6d70ee49be61aba653fcdf981"
+  },
+  "editor_open_checked": false
+}

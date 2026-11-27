@@ -1,0 +1,159 @@
+% !TEX root = task-4-1-1.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{4.1.1}{Законы геометрической оптики. Прямолинейное распространение света и тень}
+
+
+% Source sdamgia-1707: https://phys-ege.sdamgia.ru/problem?id=1707
+\BankTask{sdamgia-1707}{
+Непрозрачный круг освещается точечным источником света и отбрасывает круглую тень на экран. Определите диаметр тени, если диаметр круга $0{,}1\,\text{м}$. Расстояние от источника света до круга в $3$ раза меньше, чем расстояние от источника до экрана. (в метрах.)
+}{
+\smallskip\noindent\textbf{Решение}\par
+\begin{center}\begin{tikzpicture}[book diagram,>=stealth]\draw[dashed](0,0)--(3,0);\fill(0,0)circle(.04);\node[left]at(0,0){$S$};\draw[very thick](1,-.4)--(1,.4);\draw[thick](3,-1.5)--(3,1.5);\draw(0,0)--(3,1.2) (0,0)--(3,-1.2);\draw[<->](0,.7)--(3,.7)node[midway,above]{$L$};\draw[<->](0,-.35)--(1,-.35)node[midway,below]{$l$};\node[right]at(1,-.25){$d$};\node[right]at(3,-1.1){$D$};\end{tikzpicture}\end{center}
+
+Поскольку источник отбрасывает на экран круглую тень, он расположен на оси симметрии непрозрачного круга. Используя рисунок, получаем (из подобия треугольников): $D=d \frac{L}{l} =3d=0{,}3\,\text{м}.$
+
+Ответ: $0{,}3$.
+}
+
+% Source sdamgia-1708: https://phys-ege.sdamgia.ru/problem?id=1708
+\BankTask{sdamgia-1708}{
+Солнце находится над горизонтом на высоте $45 ^\circ.$ Определите длину тени, которую отбрасывает вертикально стоящий шест высотой $1\,\text{м}$. (в метрах.)
+}{
+\smallskip\noindent\textbf{Решение}\par
+\begin{center}\begin{tikzpicture}[book diagram,>=stealth]\draw(-1,0)--(2.5,0);\draw[very thick](0,0)--(0,1);\node[left]at(0,.5){шест};\draw[thick](0,0)--(1,0);\node[below]at(.5,0){тень};\foreach\x in{-.7,0,.7}{\draw[->](\x-1,2)--(\x,1);\draw(\x,1)--(\x+1,0);}\end{tikzpicture}\end{center}
+
+Поскольку солнце находится над горизонтом на высоте $45 ^{ \circ } ,$ лучи от него падают на землю также под углом $45 ^{ \circ } .$ Следовательно, длина тени, которую отбрасывает вертикально стоящий шест высотой $1\,\text{м}$, равна $1\,\text{м}$.
+
+Ответ: $1$.
+}
+
+% Source sdamgia-29119: https://phys-ege.sdamgia.ru/problem?id=29119
+\BankTask{sdamgia-29119}{
+Непрозрачный круг освещается точечным источником света, находящимся на расстоянии $1\,\text{м}$ от центра круга. На экране, параллельном плоскости круга, образуется круглая тень, радиус которой в $2$ раза больше радиуса круга. Определите расстояние от круга до экрана.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Из соображений подобия треугольников, получаем, что экран находится от источника света на расстоянии в $2$ раза большем, чем расстояние от источника до круга, то есть $2\,\text{м}$. Тогда расстояние от круга до экрана равно $1\,\text{м}$.
+
+Ответ: $1$.
+}
+
+% Source sdamgia-9520: https://phys-ege.sdamgia.ru/problem?id=9520
+\BankTask{sdamgia-9520}{
+Капитан парусного корабля в открытом море не обнаружил в пределах видимости (до горизонта) ни одного клочка земли. Тогда он послал юнгу оглядеться с самого верха грот-мачты, который находился над уровнем моря в $4$ раза выше, чем капитанский мостик. Во сколько раз при этом увеличилось расстояние до крайней точки поверхности моря, которую еще можно было видеть?
+}{
+\smallskip\noindent\textbf{Решение}\par
+$1$.  Согласно закону прямолинейного распространения света в однородной среде горизонтальный луч от точки на пределе видимости (на горизонте) попадает к наблюдателю на корабле под небольшим углом к горизонтали, поскольку поверхность моря не плоская, а имеет сферическую форму. С ростом высоты наблюдателя над уровнем моря расстояние до видимого горизонта увеличивается. 
+
+\begin{center}\begin{tikzpicture}[book diagram,>=stealth]\draw(-2,0)arc(180:0:2);\coordinate(O)at(0,0);\coordinate(P)at(0,3);\draw(O)--(-1.4907,1.3333)--(P)--(1.4907,1.3333)--cycle;\draw(O)--(P);\node[left]at(-.8,.6){$R$};\node[right]at(.8,.6){$R$};\node[right]at(0,1){$R$};\node[right]at(0,2.5){$h$};\node[left]at(-.8,2.3){$r$};\node[right]at(.8,2.3){$r$};\draw(-1.342,1.466)--(-1.209,1.317)--(-1.358,1.184);\draw(1.342,1.466)--(1.209,1.317)--(1.358,1.184);\end{tikzpicture}\end{center}
+
+$2$.  Обозначим через R радиус Земли, r  — расстояние от наблюдателя до горизонта, h  — высоту наблюдателя над уровнем моря и построим ход лучей от горизонта до наблюдателя (см. рис.). 
+$3$.  По теореме Пифагора для прямоугольного треугольника с вершинами в центре Земли на горизонте и у наблюдателя имеем: $R ^2 + r ^2 = ( R + h ) ^2 .$ 
+$4$.  Отсюда с учетом того, что $h \ll R,$ получаем $r ^2 = ( R + h ) ^2 - R ^2 \approx 2Rh,$ то есть $r \approx \sqrt{2Rh} ,$ и расстояние до крайней точки поверхности моря, которую еще можно было видеть, при увеличении высоты h в $4$ раза возросла в $2$ раза.
+
+Ответ: в $2$ раза.
+}
+
+% Source sdamgia-32637: https://phys-ege.sdamgia.ru/problem?id=32637
+\BankTask{sdamgia-32637}{
+К потолку комнаты высотой $4\,\text{м}$ прикреплена люминесцентная лампа длиной $0{,}5\,\text{м}$. На высоте $3\,\text{м}$ от пола параллельно ему расположен круглый непрозрачный диск диаметром $1\,\text{м}$. Центр лампы и центр диска лежат на одной вертикали. Определите минимальный линейный размер тени диска на полу.
+}{
+\smallskip\noindent\textbf{Решение}\par
+\begin{center}\begin{tikzpicture}[book diagram,>=stealth]\draw(-2,0)--(2,0) (-2,4)--(2,4);\draw[very thick](-.25,4)--(.25,4) (-.5,3)--(.5,3);\draw(-.25,4)--(-1.25,0) (.25,4)--(1.25,0);\draw[dashed](0,-.2)--(0,4.4) (-.25,4)--(-.25,0) (-.5,3)--(-.5,0);\draw[very thick](-1.25,0)--(1.25,0);\draw[<->](-1.7,0)--(-1.7,4)node[midway,left]{$H$};\draw[<->](-1.4,0)--(-1.4,3)node[midway,left]{$h$};\node[below]at(-1.25,0){$A$};\node[below]at(-.5,0){$B$};\node[below]at(0,0){$D$};\node[left]at(-.5,3){$C$};\node[below right]at(-.25,2.9){$F$};\node[above left]at(-.25,4){$E$};\node[above right]at(.25,4){$l$};\node[right]at(.5,3){$d$};\fill(-.25,4)circle(1.5pt)(-.5,3)circle(1.5pt)(-.25,3)circle(1.5pt)(-.5,0)circle(1.5pt);\draw(-.25,4)++(255.964:.5)arc(255.964:270:.5);\draw(-.5,3)++(255.964:.4)arc(255.964:270:.4);\foreach\x in{-1.25,-1.1,...,1.2}\draw(\x,0)--++(.12,-.12);\end{tikzpicture}\end{center}
+Так как источник света протяженный (не точечный), то лампа будет давать на полу области тени и полутени. Построим изображение тени от лампы на полу (см. рис.)
+Треугольники ABC и CFE подобны. Тогда стороны подобных треугольников пропорциональны: $\frac{AB}{CF} = \frac{CB}{EF} .$
+Из рисунка следует, что 
+
+$AB= \frac{D - d}{2} ,$ $CF= \frac{d - l}{2} ,$ $CB=h,$ $EF=H - h.$
+
+Тогда получаем:
+
+\[\frac{D - d}{d - l} = \frac{h}{H - h} .\]
+
+Тогда размер тени равен
+
+\[D=d + \frac{h}{H - h} ( d - l ) =1 + \frac{3}{4 - 3} \cdot ( 1 - 0{,}5 ) =2{,}5\,\text{м}.\]
+
+Ответ: $2{,}5\,\text{м}$.
+}
+
+% Source sdamgia-32638: https://phys-ege.sdamgia.ru/problem?id=32638
+\BankTask{sdamgia-32638}{
+К потолку комнаты высотой $4\,\text{м}$ прикреплено светящееся панно-лампа в виде круга диаметром $2\,\text{м}$. На высоте $2\,\text{м}$ от пола параллельно ему расположен круглый непрозрачный диск диаметром $2\,\text{м}$. Центр панно и центр диска лежат на одной вертикали. Какова площадь полутени на полу? Ответ округлите до целых.
+}{
+\smallskip\noindent\textbf{Решение}\par
+Источник света будет протяженным (не точечным). Построим ход лучей, чтобы найти области тени и полутени (см. рис.).
+Треугольники АВС и CEF подобны. Тогда в них выполняется соотношение: $\frac{CF}{EF} = \frac{AB}{CB} .$
+\begin{center}\begin{tikzpicture}[book diagram,>=stealth]\draw(-3.5,0)--(3.5,0) (-3.5,4)--(3.5,4);\draw[very thick](-1,4)--(1,4) (-1,2)--(1,2);\draw(-1,4)--(3,0) (1,4)--(-3,0);\draw(-1,4)--(-1,0)(1,4)--(1,0);\draw[dashed](0,0)--(0,4.3);\draw[very thick](-1,0)--(1,0);\draw[<->](3.3,0)--(3.3,4)node[midway,right]{$H$};\draw[<->](2.7,0)--(2.7,2)node[midway,right]{$h$};\node[below]at(-3,0){$A$};\node[below]at(-1,0){$B$};\node[below]at(1,0){$D$};\node[left]at(-1,2){$C$};\node[right]at(1,2){$F$};\node[above]at(1,4){$E$};\node[above]at(0,4){$d$};\node[above]at(0,2){$d$};\node[above]at(-2,0){полутень};\node[above]at(0,0){тень};\node[above]at(2,0){полутень};\draw(-1,2)++(225:.4)arc(225:270:.4);\draw(1,4)++(225:.4)arc(225:270:.4);\foreach\x in{-3,-2.8,...,2.9}\draw(\x,0)--++(.14,-.14);\end{tikzpicture}\end{center}
+
+Найдем из рисунка отрезки: 
+
+$CF=d;$ $EF=H - h;$ $AB= \frac{D - d}{2} ;$ $CB=h.$
+
+Таким образом, получаем:
+
+\[\frac{d}{H - h} = \frac{D - d}{2h} .\]
+
+Откуда находим диаметр тени и полутени на полу: 
+
+\[D=d + \frac{2hd}{H - h} = \frac{d ( H + h )}{H - h} = \frac{2 \cdot ( 4 + 2 )}{4 - 2} =6\,\text{м}.\]
+
+Площадь полутени равна разности всей площади и площади тени:
+
+\[S= \frac{\pi D ^2}{4} - \frac{\pi d ^2}{4} = \frac{\pi ( D ^2 - d ^2 )}{4} = \frac{3{,}14 \cdot ( 36 - 4 )}{4} \approx 25\,\text{м} ^2 .\]
+
+Ответ: $25\,\text{м}$$^{2}$.
+}
+
+% Source sdamgia-6072: https://phys-ege.sdamgia.ru/problem?id=6072
+\BankTask{sdamgia-6072}{
+Пассажир автобуса едет в нем по шоссе и смотрит вбок, на поле, огороженное двумя одинаковыми заборами  — рядами темного штакетника, параллельными дороге. Зазор между вертикальными штакетинами в каждом из заборов равен их ширине d/$2$  =  $5\,\text{см}$, расстояние от наблюдателя до первого забора равно l  =  $50\,\text{м}$, а до второго  — на $\Delta$l  =  $10\,\text{м}$ больше. Поле, наблюдаемое пассажиром через первый забор, видно через мелькающий штакетник достаточно хорошо, а то, что пассажир видит сквозь оба забора, пересечено периодическими темными вертикальными полосами. Найдите период D (по горизонтали) этих полос на уровне первого забора, считая, что наблюдение ведется почти перпендикулярно к заборам.
+\begin{center}\begin{tikzpicture}[book diagram,>=stealth]\foreach\y in{2,2.5}{\foreach\x in{-1.4,-1,...,1.4}{\fill(\x,\y)rectangle++(.2,.07);}}\draw[<->](.9,0)--(.9,2)node[midway,right]{$l$};\draw[<->](.9,2)--(.9,2.5)node[midway,right]{$\Delta l$};\node[below]at(0,0){глаз};\fill(0,0)circle(.04);\draw[<->](.2,2.8)--(.4,2.8)node[midway,above]{$d/2$};\end{tikzpicture}\end{center}
+}{
+\smallskip\noindent\textbf{Решение}\par
+\begin{center}\begin{tikzpicture}[book diagram,>=stealth]\foreach\y in{2,2.5}{\foreach\x in{-1.4,-1,...,1.4}{\fill(\x,\y)rectangle++(.2,.07);}}\draw[<->](.9,0)--(.9,2)node[midway,right]{$l$};\draw[<->](.9,2)--(.9,2.5)node[midway,right]{$\Delta l$};\node[below]at(0,0){глаз};\fill(0,0)circle(.04);\draw[<->](.2,2.8)--(.4,2.8)node[midway,above]{$d/2$};\draw[->](0,0)--(-.6,2.5);\draw[->](0,0)--(.6,2.5);\draw[dashed](0,0)--(0,2.8);\draw[<->](-.48,1.8)--(.48,1.8)node[midway,above]{$D$};\node[left]at(-.6,2.2){$-\Delta\alpha$};\node[right]at(.6,2.2){$\Delta\alpha$};\end{tikzpicture}\end{center}
+Согласно закону прямолинейного распространения света в однородной среде (воздухе), центры темных полос будут наблюдаться там, где центры штакетин первого забора проецируются на середины промежутков между штакетинами во втором заборе (см. рис.). Это будет наблюдаться в первый раз под углами $\pm \Delta \alpha = \frac{d/2}{\Delta l} \ll 1$ к нормали, проведенной к первому забору. Поэтому период темных полос на уровне первого забора вблизи к основанию перпендикуляра, проведенного от наблюдателя к забору, будет равен 
+
+\[D\approx l \cdot 2 \Delta \alpha = \frac{d \cdot l}{\Delta l} = \frac{0{,}1 \cdot 50}{10} =0{,}5 \,\text{м}.\]
+
+Наблюдаемое явление называется «муаровыми узорами».
+Ответ: $D\approx \frac{d \cdot l}{\Delta l} =0{,}5 \,\text{м}.$
+}
+
+\end{document}

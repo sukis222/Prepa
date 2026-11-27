@@ -1,0 +1,175 @@
+{
+  "approved": true,
+  "scope": "All 40 final rendered pages actually viewed in final-sheet-01 through10 after the last successful builds. Conditions/solutions independently checked by root(23) and anchors_mechanics(24). Student editions contain conditions/figures only; tutor GPT labels and provenance visible.",
+  "pages": [
+    {
+      "file": "tmp/part2-30-check/preview/task-23/page-01.png",
+      "sha256": "ecf9dbd720e3f1542e841e5142bc362c62e21c7c3b6d6f510639518d5d337dd0"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/task-23/page-02.png",
+      "sha256": "9b3caa0e86663de13018a426ba700612087626a77d2285c6433e29b8a7850efd"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/task-23/page-03.png",
+      "sha256": "e16dbe6669e5cd810d29bdf4fb572ebe6b3edd7fad36d56289e81c6f5e34b6bb"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/task-23/page-04.png",
+      "sha256": "ee67e18a228f72749c6d7a095ad15b76f04cdfab48993904cc56466845cdbea6"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/task-23/page-05.png",
+      "sha256": "b4f6c8261365b02eb28f8678951e02cc7324ee6f20b990f8c29c0816f687cd1a"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/task-24/page-01.png",
+      "sha256": "b6bbf1a2d1a8a73ee303292aa96e2a6a577fc617ac8136764b732b935067763e"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/task-24/page-02.png",
+      "sha256": "264c0c398aec59d95cbe29183958ecb106cb4150e7e382f578f2096cfaf75556"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/task-24/page-03.png",
+      "sha256": "56165ec417b74c7989a46e905e38018cafa887ad4f524f0415875148c1f278f8"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/task-24/page-04.png",
+      "sha256": "864710b12e1161ec356d84b897c3487c1b9735a182ed1715158e12feb7bc550e"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/task-24/page-05.png",
+      "sha256": "e03dbbc7875bdb6e339f851ab0297a1068617e65efe477e57894b490f1b8ff1f"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/task-24/page-06.png",
+      "sha256": "bee5d933b4dac01342467750eff9016f6fd69be07ba26ca175300c3932b342d7"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/task-24/page-07.png",
+      "sha256": "9c9912e7198d6199914f760af21a763e0c33dcfe4598469729ffc7b9c5949ccf"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-23/page-01.png",
+      "sha256": "7e09c3ad3df449290339892de86b4d73c94587c6f286c811aaca40315cc31180"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-23/page-02.png",
+      "sha256": "66216bd5bfcdf5bbb6d57f117cdcfd0649232333d319f3e534ea72560cbde146"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-23/page-03.png",
+      "sha256": "d5a4e1a8caa3708ead050bd73363ec73346883f4060d229de5c7e663b8467e48"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-23/page-04.png",
+      "sha256": "ee9cce7c56de442a42cd6a21f17909590801e374f1d58a15f408d713c731325b"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-23/page-05.png",
+      "sha256": "fff30250a092601912c6e42957318a79b98fd9910b1cfe85858da2ab2361842f"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-23/page-06.png",
+      "sha256": "39a19621569ebf25811829a14fe96f0121e8376c1b8d5d8f6dfdd60e1960f524"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-23/page-07.png",
+      "sha256": "ec3855eba88541af75c3ef7236bc27748514213e32c8bae8c5193d80c8b83779"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-23/page-08.png",
+      "sha256": "824587ab976a250e81e97db7bd2b4dc1930c6fd3790b44d82ada0dc847513e20"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-23/page-09.png",
+      "sha256": "b21202f6b447473dad296c781c1051a599599ba19c01dbdbb09fe18334666555"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-23/page-10.png",
+      "sha256": "3b2f058de4268eab214450d1820860a459b08c45b999607f7000d0c62fb0bff3"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-23/page-11.png",
+      "sha256": "7eed82bc16c768d890268741ce0f99ce5dd9ba797fdb8e143b0abf3d3cf2e832"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-23/page-12.png",
+      "sha256": "7e2539f3b7fe199a794c416497713229f8ae9117142e73d51c8af4f3959d6dc4"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-24/page-01.png",
+      "sha256": "ce08cba16c32863e60fda9a66ec6e70028a277f44404c6e4586c4a5825aa63b0"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-24/page-02.png",
+      "sha256": "6e97c4723a673d4d318008fc80392686b4acdff3636a050719f03ab43512005b"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-24/page-03.png",
+      "sha256": "ab435ff21fc95ee60d4f947d0ce16369099191685d5d9b73c3250e0816c3010d"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-24/page-04.png",
+      "sha256": "5f83c0c63d4b048889f8de9146a5ecfea5e39dc4330d4312ccded3e93cebe723"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-24/page-05.png",
+      "sha256": "55d3370405a7605dcde7d8fced98d52aad1d67fcfb43ffd2ed8863d37864e26a"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-24/page-06.png",
+      "sha256": "04b895009d88b57c26827546b79cfe284d82a0423bd658c79a8aedb34b834ea8"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-24/page-07.png",
+      "sha256": "0158e551be8c71ce51e3f858c68231341142fe81ea913b4bf01140a4ebd60db5"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-24/page-08.png",
+      "sha256": "14ed9d08f938ea9a3ca3881d7b3a7808b290fa9dfc81c8493bc4ec92177979df"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-24/page-09.png",
+      "sha256": "c1c2545b15081e50a89aa919d516c2012fa4285da27d18d0a70b159f2f0fd712"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-24/page-10.png",
+      "sha256": "d7ee153c7ae9c6721854f0648f775b83eb894a3dd112527be65b9d7c83a7ee27"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-24/page-11.png",
+      "sha256": "d4617cc9a30d34c3b9838b319d8be1fef8282cdec4b5701e4ed11e15567f10ca"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-24/page-12.png",
+      "sha256": "2e130b27a4897ba4237b63a631fdd82937e47a765298894fb2a34fba26790b23"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-24/page-13.png",
+      "sha256": "7c0a3c9cb666f967dd30b7d9dfa27dd31cf82a33d372b77f2c4b699406140b90"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-24/page-14.png",
+      "sha256": "e974f369e51c63489826ad8caff79c1cc4f6d29440d0857f400109956b41b735"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-24/page-15.png",
+      "sha256": "9840a87c6f55d986eebfba2795e9df0fe9f33b545d89a91d9b9630478b2e85bc"
+    },
+    {
+      "file": "tmp/part2-30-check/preview/tutor-24/page-16.png",
+      "sha256": "5ed976945907d0483547c49a030ce01c9df227fa3ac92343c584c725000ccf1d"
+    }
+  ],
+  "resolved": [
+    "A7474D: corrected model to air buoyancy; pressure6.61kPa.",
+    "225695: dew-point reading21–22C.",
+    "9FBACA: isotherm now passes through both equal-temperature points.",
+    "DA1E75: separated long temperature caption.",
+    "C0CDD7: source radius r restored.",
+    "A9E186: source grid1000K/10percent restored."
+  ],
+  "editor_verification": "Command compilation and rendered PDFs verified; opening through LaTeX Workshop unavailable."
+}

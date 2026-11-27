@@ -1,0 +1,177 @@
+{
+  "approved": true,
+  "reviewed_sha256": "3203950d2ff9bb913654fff83cb35ee832258c259d422839810ca7e78b3cdb0a",
+  "tasks": [
+    {
+      "id": "sdamgia-2003",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-2016",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-3196",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-5160",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-5195",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-7361",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-7866",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-6221",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-29865",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-3723",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-2002",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-2016",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-2025",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-2026",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-2043",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-5195",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-29191",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-3084",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-5563",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-33055",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-19738",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-3084",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-6365",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-6471",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-8962",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-11687",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-33055",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-6436",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-25425",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    },
+    {
+      "id": "sdamgia-25429",
+      "approved": true,
+      "reason": "Source condition and published solution checked; photon formulas, units and arithmetic independently verified."
+    }
+  ],
+  "source_evidence": [
+    "sources-photons.json",
+    "sources-pressure-extra.json",
+    "direct ID HTML snapshots",
+    "formula-5563.png visually inspected; both factors inside radical"
+  ],
+  "resolved_issues": [
+    "5563 radical restored faithfully from SVG",
+    "3723 requested nm and rounding restored",
+    "2002/29191 general answer word removed, precision retained",
+    "25429 missing source concentration unit restored with correction audit"
+  ],
+  "diversity_note": "6436 and6471 use the same laser-pulse reflection model with different unknowns. Author explicitly retains inverse problem as a distinct question; no numerical-only clones found.",
+  "arithmetic_checks": {
+    "5563": "(16.32e-19)^2/(2*8.81e-27*(3e8)^2)=1.68e-27kg; source1.67e-27 retained",
+    "6221": "2e-3*600e-9/(6.6e-34*3e8)=6.06e15 photons",
+    "3084": "lambda=1.4Nh/(PSdt)=5.5e-7m",
+    "25425": "n=p lambda/(1.4hc)=5e8m^-3",
+    "25429": "nu=p/(0.8nh)=3.79e14Hz",
+    "6471": "tau=2W/(cSP)=80ns"
+  }
+}

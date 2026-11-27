@@ -1,0 +1,82 @@
+% !TEX root = task-3-19-1.tex
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\usetikzlibrary{decorations.pathmorphing}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse % Change to \ShowSolutionstrue to display solutions.
+\fi
+\newcounter{banktask}
+\newsavebox{\BankTaskBox}
+\newcommand{\BankTaskContent}[3]{%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    \Needspace{50mm}% Keep the solution heading with its opening text or diagram.
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \nopagebreak\smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}\par\medskip
+  \sbox{\BankTaskBox}{\begin{minipage}{\linewidth}%
+    \BankTaskContent{#1}{#2}{#3}\end{minipage}}%
+  \ifdim\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax>\dimexpr\textheight-20mm\relax
+    \Needspace{35mm}\BankTaskContent{#1}{#2}{#3}%
+  \else
+    \Needspace{\dimexpr\ht\BankTaskBox+\dp\BankTaskBox\relax}%
+    \noindent\usebox{\BankTaskBox}\par
+  \fi
+  \medskip
+}
+\begin{document}
+\BookSubsection{3.19.1}{Магнитный поток}
+
+
+% Source 9C35AF: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=9C35AF
+\BankTask{9C35AF}{
+В опыте по наблюдению электромагнитной индукции квадратная рамка из одного витка тонкого провода находится в однородном магнитном поле, перпендикулярном плоскости рамки. Индукция магнитного поля равномерно возрастает от $0$ до максимального значения $B_{\text{макс}}$ за время $T$. При этом в рамке возбуждается ЭДС индукции, равная $6\,\text{мВ}$. Какая ЭДС индукции (в $\text{мВ}$) возникнет в рамке, если $T$ уменьшить в $3$ раза, а $B_{\text{макс}}$ уменьшить в $2$ раза?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Модуль ЭДС равен $|\mathcal{E}|=S B_{\text{макс}}/T$. Поэтому
+\[
+|\mathcal{E}'|=\frac{S(B_{\text{макс}}/2)}{T/3}=\frac32|\mathcal{E}|=9\,\text{мВ}.
+\]
+Ответ: $9\,\text{мВ}$.
+}
+
+% Source Fe341D: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=Fe341D
+\BankTask{Fe341D}{
+Проволочная рамка площадью $50\,\text{см}^{2}$ помещена в однородное магнитное поле так, что плоскость рамки перпендикулярна вектору индукции $\vec B$. Проекция $B_n$ индукции магнитного поля на нормаль к плоскости рамки изменяется во времени $t$ согласно графику на рисунке.
+\begin{enumerate}
+\item Модуль ЭДС индукции, возникающей в рамке в промежутке времени от $5$ до $8\,\text{мс}$, равен $4\,\text{В}$.
+\item Направления индукционного тока в рамке в промежутках времени от $0$ до $2\,\text{мс}$ и от $5$ до $8\,\text{мс}$ совпадают.
+\item Модуль изменения магнитного потока в рамке минимален в промежутке времени от $2$ до $4\,\text{мс}$.
+\item Модуль силы индукционного тока в рамке максимален в промежутке времени от $0$ до $2\,\text{мс}$.
+\item ЭДС индукции в рамке отлична от $0$ только в промежутках времени от $0$ до $2\,\text{мс}$ и от $5$ до $8\,\text{мс}$.
+\end{enumerate}
+\begin{center}
+\begin{tikzpicture}[book diagram,x=0.65cm,y=0.65cm]
+\draw[step=1,gray,very thin] (0,-2) grid (8,3);
+\draw[-{book tip}] (0,-2.25)--(0,4.2);
+\draw[-{book tip}] (0,0)--(9.15,0);
+\node[above left] at (0,3.85) {$B_n,\,\text{Тл}$};
+\node[below right] at (8.85,-0.05) {$t,\,\text{мс}$};
+\foreach \x in {1,2,3,4,5,6,7,8}{\node[below,fill=white,inner sep=1pt] at (\x,0) {$\x$};}
+\foreach \y in {-2,-1,0,1,2,3}{\node[left] at (0,\y) {$\y$};}
+\draw[thick] (0,-2)--(2,2)--(4,-1)--(5,-1)--(8,3);
+\end{tikzpicture}
+\end{center}
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По закону Фарадея $|\mathcal E|=S|\Delta B_n/\Delta t|$, где $S=5\cdot10^{-3}\,\text{м}^2$; на участках $0$–$2$, $2$–$4$, $4$–$5$ и $5$–$8\,\text{мс}$ получаем соответственно $10$, $7{,}5$, $0$ и $20/3\,\text{В}$, поэтому утверждение 1 неверно. На первом и последнем участках $B_n$ возрастает, следовательно, направления индукционного тока совпадают: утверждение 2 верно. Минимальное изменение потока равно нулю на участке $4$–$5\,\text{мс}$, поэтому утверждение 3 неверно. При постоянном сопротивлении $|I|=|\mathcal E|/R$ максимально на участке $0$–$2\,\text{мс}$: утверждение 4 верно. На участке $2$–$4\,\text{мс}$ ЭДС также отлична от нуля, поэтому утверждение 5 неверно. Ответ: 2, 4.
+}
+
+\end{document}

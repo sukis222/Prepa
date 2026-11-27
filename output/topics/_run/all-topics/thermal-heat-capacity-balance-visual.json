@@ -1,0 +1,58 @@
+{
+  "approved": true,
+  "bundle_sha256": "a5ed54498faf733efa090f4bb717114dde09140e2399792d1ef7e10aae01220a",
+  "reviewed_sha256": "a5ed54498faf733efa090f4bb717114dde09140e2399792d1ef7e10aae01220a",
+  "method": "Every listed PNG personally viewed: layout, formulas, tables, diagrams; no clipping, overlap or illegible glyphs.",
+  "pages": [
+    {
+      "file": "tmp/all-topics/thermal/preview/task-2-9-1/page-01.png",
+      "sha256": "527dd6d3acb035048c9abe69de3f51dd4a4ee199cbbe1f0b8551be36ba32b305"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/task-2-9-1/page-02.png",
+      "sha256": "eefd7f713aab86ab19538e77bcc408bf1aee8a9b92cf2f4ea8ae439318b7edba"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/tutor-2-9-1/page-01.png",
+      "sha256": "1204d7c0bfd04345ee882c82fefebb99650b85b950cf3808e6a693b759e2045c"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/tutor-2-9-1/page-02.png",
+      "sha256": "44dbfbc46be1d9cb7b681d7650a7c6f6dfb0c04c82e7e18616a88105023c00ad"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/tutor-2-9-1/page-03.png",
+      "sha256": "188f97c438ba5a61136867a05c641454a4b84f56d9c15b027d0ee982900da8f3"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/tutor-2-9-1/page-04.png",
+      "sha256": "b9cea1238a5af0209700240bb5c95cf9b81a216235e277fd2e95060af2134923"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/task-2-9-2/page-01.png",
+      "sha256": "bb6e9b119089c06b6f20f496425e423664df5e5bdf37d87f975cc9ab48f8d316"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/task-2-9-2/page-02.png",
+      "sha256": "39215540d251b5534e17fd1bd96860ad204476d1918824dffa250dec8a39cb11"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/tutor-2-9-2/page-01.png",
+      "sha256": "4e3594da1b4273014887259060dbb45a3044d5b93b59c313355b40e168573cb3"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/tutor-2-9-2/page-02.png",
+      "sha256": "1a7c3766d6ca4799aefacc9af4bae391fd0f7ad55c42bf25487618a50cd33907"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/tutor-2-9-2/page-03.png",
+      "sha256": "4ffce31eaadc97895e0591fcea851d3ea2db97eb637e6026c678fd2640350197"
+    },
+    {
+      "file": "tmp/all-topics/thermal/preview/tutor-2-9-2/page-04.png",
+      "sha256": "19c4fdfa69f4224d5306a767f2487968965d3f6a3bc81b7e57e7fdbfd37fa351"
+    }
+  ],
+  "issues": [],
+  "editor_opening_verified": false
+}

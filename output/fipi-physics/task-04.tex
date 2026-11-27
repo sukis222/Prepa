@@ -1,0 +1,201 @@
+% EGE 2027, task 4. Source IDs and URLs are kept in comments.
+% Editable task bank. Append new BankTask blocks at the end of the document.
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics-textbook}
+\usepackage{graphicx,needspace}
+\newif\ifShowSolutions
+\ifdefined\TutorEdition
+  \ShowSolutionstrue
+\else
+  \ShowSolutionsfalse
+\fi
+\newcounter{banktask}
+\newcommand{\BankTask}[3]{%
+  \refstepcounter{banktask}%
+  \Needspace{35mm}\par\medskip\noindent\begin{minipage}{\linewidth}%
+  \noindent\textbf{\thebanktask.}\quad #2\par
+  \ifShowSolutions
+    #3\par
+    \ifdefined\TutorEdition
+      \ifcsname TutorSource#1\endcsname
+        \smallskip{\small\csname TutorSource#1\endcsname\par}%
+      \fi
+    \fi
+  \fi
+  \end{minipage}\par\medskip
+}
+\begin{document}
+$g=10\,\text{м}/\text{с}^2$, $\rho_{\text{воды}}=1000\,\text{кг}/\text{м}^3$, $\rho_{\text{керосина}}=800\,\text{кг}/\text{м}^3$.
+
+
+
+% Source C36A4C: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=C36A4C
+\BankTask{C36A4C}{
+Во сколько раз уменьшится частота малых свободных колебаний математического маятника, если длину нити увеличить в $9$ раз, а массу груза уменьшить в $4$ раза?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$\nu=(2\pi)^{-1}\sqrt{g/l}$; масса не влияет. При $l_2=9l_1$ частота $\nu_2=\nu_1/3$: уменьшится в $3$ раза.
+}
+
+% Source F120FE: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=F120FE
+\BankTask{F120FE}{
+В сосуд глубиной $20\,\text{см}$ налита вода, уровень которой ниже края сосуда
+на $2\,\text{см}$. Чему равно дополнительное к атмосферному давление столба воды на плоское дно сосуда? Результат выразите в $\text{кПа}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Высота воды $h=20-2=18\,\text{см}=0{,}18\,\text{м}$. Дополнительное давление $p=\rho gh=1000\cdot10\cdot0{,}18=1800\,\text{Па}=1{,}8\,\text{кПа}$.
+}
+
+% Source A784FF: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=A784FF
+\BankTask{A784FF}{
+Человек услышал звук грома через $8\,\text{с}$ после вспышки молнии. Считая, что скорость звука в воздухе равна $340\,\text{м}/\text{с}$, определите, на каком расстоянии от человека ударила молния. Результат выразите в $\text{м}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Время распространения света пренебрежимо мало. Расстояние $s=vt=340\cdot8=2720\,\text{м}$.
+}
+
+% Source 3F1DFE: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=3F1DFE
+\BankTask{3F1DFE}{
+У входа в вертикальную шахту произведён выстрел. Через какое время после выстрела звук выстрела вернётся к стрелку, отразившись от дна шахты, если её глубина $170\,\text{м}$? Скорость звука в воздухе принять равной $340\,\text{м}/\text{с}$. Результат выразите в $\text{с}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Звук проходит путь $2h$, поэтому $t=2h/v=2\cdot170/340=1\,\text{с}$.
+}
+
+% Source B86809: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B86809
+\BankTask{B86809}{
+Груз, подвешенный на лёгкой пружине жёсткостью $400\,\text{Н}/\text{м}$, совершает свободные вертикальные гармонические колебания. Пружину какой жёсткости надо взять вместо первой пружины, чтобы период свободных колебаний этого груза стал в $2$ раза меньше? Результат выразите в $\text{Н}/\text{м}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$T=2\pi\sqrt{m/k}$. При $T_2=T_1/2$ и той же массе $k_2=4k_1=1600\,\text{Н}/\text{м}$.
+}
+
+% Source 176001: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=176001
+\BankTask{176001}{
+Полый стальной шар массой $10\,\text{кг}$ плавает на поверхности озера. Объём шара равен $15\,\text{дм}^{3}$. Чему равна сила Архимеда, действующая на шар? Результат выразите в $\text{Н}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+При плавании $F_A=mg=10\cdot10=100\,\text{Н}$. Полный объём полого шара подставлять в $\rho gV$ нельзя.
+}
+
+% Source 2EF7AF: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=2EF7AF
+\BankTask{2EF7AF}{
+На кусок алюминия массой $0{,}54\,\text{кг}$ при полном погружении в воду действует сила Архимеда, равная $2\,\text{Н}$. Чему равна при этом масса вытесненной воды? Массу выразите в $\text{кг}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+По закону Архимеда $F_A=m_{\text{выт}}g$. Поэтому масса вытесненной воды $m_{\text{выт}}=F_A/g=2/10=0{,}2\,\text{кг}$.
+}
+
+% Source B0907A: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B0907A
+\BankTask{B0907A}{
+Ученик выполнял лабораторную работу по исследованию условий равновесия лёгкого рычага под действием двух сил. Полученные результаты он занёс в таблицу. Результат выразите в $\text{м}$.
+\begin{center}\begin{tabular}{|c|c|c|c|}\hline
+$F_1,\,\text{Н}$ & $l_1,\,\text{м}$ & $F_2,\,\text{Н}$ & $l_2,\,\text{м}$ \\\hline
+$60$ & $?$ & $120$ & $0{,}2$ \\\hline
+\end{tabular}\end{center}
+Каково плечо $l_1$, если рычаг находится в равновесии?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Условие равновесия $F_1l_1=F_2l_2$. Тогда $l_1=120\cdot0{,}2/60=0{,}4\,\text{м}$.
+}
+
+% Source 6DEE76: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=6DEE76
+\BankTask{6DEE76}{
+Период свободных колебаний пружинного маятника равен $0{,}5\,\text{с}$. Каким станет период свободных колебаний этого маятника, если массу груза маятника увеличить в $2$ раза, а жёсткость пружины вдвое уменьшить? Результат выразите в $\text{с}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$T_2/T_1=\sqrt{(m_2/m_1)(k_1/k_2)}=\sqrt{2\cdot2}=2$. Значит, $T_2=1\,\text{с}$.
+}
+
+% Source 1B36B0: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=1B36B0
+\BankTask{1B36B0}{
+Шарик массой $0{,}4\,\text{кг}$, подвешенный на пружине, совершает свободные гармонические колебания вдоль вертикальной прямой. Какой должна быть масса шарика, чтобы период его свободных вертикальных гармонических колебаний на этой же пружине был в $2$ раза меньше? Результат выразите в $\text{кг}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Для одной пружины $T^2\sim m$. Поэтому $m_2=m_1(T_2/T_1)^2=0{,}4/4=0{,}1\,\text{кг}$.
+}
+
+% Source 1BF6BB: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=1BF6BB
+\BankTask{1BF6BB}{
+Частота свободных гармонических колебаний пружинного маятника равна $4\,\text{Гц}$. Какой будет частота свободных колебаний этого маятника, если массу его груза увеличить в $4$ раза? Результат выразите в $\text{Гц}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$\nu\sim m^{-1/2}$ при неизменной пружине. Тогда $\nu_2=\nu_1/\sqrt4=2\,\text{Гц}$.
+}
+
+% Source ED57BF: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=ED57BF
+\BankTask{ED57BF}{
+На лодку, плавающую в воде, действует сила Архимеда величиной $2150\,\text{Н}$. Чему равна масса лодки? Результат выразите в $\text{кг}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Плавающая лодка в равновесии: $F_A=mg$. Масса $m=2150/10=215\,\text{кг}$.
+}
+
+% Source 991714: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=991714
+\BankTask{991714}{
+Труба (бас) издаёт звуки в диапазоне от $\nu_{1}=60\,\text{Гц}$ до $\nu_{2}=6000\,\text{Гц}$.
+Чему равно отношение граничных длин звуковых волн $\frac{\lambda_1}{\lambda_2}$ этого диапазона?
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+В одной среде $\lambda=v/\nu$, поэтому $\lambda_1/\lambda_2=\nu_2/\nu_1=6000/60=100$.
+}
+
+% Source E92D12: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=E92D12
+\BankTask{E92D12}{
+Каков период колебаний $T$ звуковых волн в среде, если скорость звука
+в этой среде равна $1000\,\text{м}/\text{с}$, а длина волны $l=5\,\text{м}$? Результат выразите в $\text{с}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$v=\lambda/T$, откуда $T=\lambda/v=5/1000=0{,}005\,\text{с}$.
+}
+
+% Source 0EFE20: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=0EFE20
+\BankTask{0EFE20}{
+Какова сила давления керосина, заполняющего цистерну, на заплату в её стене, находящуюся на глубине $2\,\text{м}$? Площадь заплаты $10\,\text{см}^{2}$. Атмосферное давление не учитывать. Результат выразите в $\text{Н}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$S=10\,\text{см}^2=10^{-3}\,\text{м}^2$. При $\rho_{\text{кер}}=800\,\text{кг}/\text{м}^3$ сила $F=pS=\rho ghS=800\cdot10\cdot2\cdot10^{-3}=16\,\text{Н}$.
+}
+
+% Source 0BA328: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=0BA328
+\BankTask{0BA328}{
+Момент первой силы, действующей на рычаг, равен $50\,\text{Н}\cdot\text{м}$. Какой должна быть вторая сила, чтобы рычаг находился в равновесии, если её плечо равно $0{,}5\,\text{м}$? Результат выразите в $\text{Н}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Для равновесия $F_2l_2=M_1$. Поэтому $F_2=50/0{,}5=100\,\text{Н}$.
+}
+
+% Source 4e8F5A: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=4e8F5A
+\BankTask{4e8F5A}{
+Звуковая волна частотой $2\,\text{кГц}$ распространяется в среде со скоростью $340\,\text{м}/\text{с}$. Чему равна длина звуковой волны? Результат выразите в $\text{м}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$\nu=2000\,\text{Гц}$. Длина волны $\lambda=v/\nu=340/2000=0{,}17\,\text{м}$.
+}
+
+% Source EB02A8: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=EB02A8
+\BankTask{EB02A8}{
+Деревянный кубик имеет ребро длиной $2\,\text{см}$. Определите архимедову силу, действующую на кубик при его полном погружении в воду. Результат выразите в $\text{Н}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$V=a^3=0{,}02^3=8\cdot10^{-6}\,\text{м}^3$. При полном погружении $F_A=\rho gV=1000\cdot10\cdot8\cdot10^{-6}=0{,}08\,\text{Н}$.
+}
+
+% Source B08038: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=B08038
+\BankTask{B08038}{
+Гидростатическое давление, создаваемое водой на дне озера, без учёта давления атмосферы равно $4\cdot10^5\,\text{Па}$. Какова глубина озера? Глубину выразите в $\text{м}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+$p=\rho gh$. Глубина $h=p/(\rho g)=4\cdot10^5/(1000\cdot10)=40\,\text{м}$.
+}
+
+% Source 39CA85: https://ege.fipi.ru/bank/questions.php?search=1&proj=BA1F39653304A5B041B656915DC36B38&qid=39CA85
+\BankTask{39CA85}{
+Точно посередине между наблюдателем и скалой в дерево ударила молния.
+Наблюдатель услышал первый раскат грома через $1\,\text{с}$ после вспышки молнии. Через какое время после вспышки молнии наблюдатель услышит отражённый от скалы звук? Результат выразите в $\text{с}$.
+}{
+\smallskip\noindent\textbf{Решение от GPT}\par
+Пусть расстояние до молнии $d$. Первый звук проходит $d$ за $1\,\text{с}$. До скалы от молнии также $d$, затем от скалы до наблюдателя $2d$; отражённый звук проходит $3d$ и придёт через $3\,\text{с}$ после вспышки.
+}
+
+\end{document}

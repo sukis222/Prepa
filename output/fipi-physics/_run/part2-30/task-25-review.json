@@ -1,0 +1,158 @@
+{
+  "approved": true,
+  "reviewed_sha256": "1e79cd8d5417161b6e13520c58ac0940757360f1a86b9152a26f0ec2989c7ed3",
+  "reviewer": "anchors_electricity (1–15 and original diagrams), root (16–30 and original diagrams)",
+  "scope": "Independent physics, arithmetic, source conditions and diagrams; final layout separately reviewed by author. All original25 image sheets actually viewed, supplementary21 image sheets viewed for shared assets.",
+  "tasks": [
+    {
+      "id": "27B52F",
+      "approved": true,
+      "reason": "Верхняя точка: mg−qvB=mv²/L; энергия даёт v²верх=v²низ−4gL; знак и область B корректны."
+    },
+    {
+      "id": "05618D",
+      "approved": true,
+      "reason": "Параллельное соединение R и2R, отношение напряжений6/7, мощность3.6Вт."
+    },
+    {
+      "id": "4E0320",
+      "approved": true,
+      "reason": "Начальный ток1.5А, энергия LC даёт модуль5В."
+    },
+    {
+      "id": "B8DA0A",
+      "approved": true,
+      "reason": "Второй порядок: F=Δxd/(2Δλ)=2м."
+    },
+    {
+      "id": "37DF77",
+      "approved": true,
+      "reason": "Установившаяся ЭДС Blv; W50мкДж,C100мкФ→1м/с."
+    },
+    {
+      "id": "F765A3",
+      "approved": true,
+      "reason": "Добавочный заряд2q на расстоянииa/√2:360В/м."
+    },
+    {
+      "id": "94CB5B",
+      "approved": true,
+      "reason": "Сохранение заряда и потеря энергии: C1=1мкФ."
+    },
+    {
+      "id": "01C993",
+      "approved": true,
+      "reason": "Разность координат соседних порядков: d=6мкм."
+    },
+    {
+      "id": "9BB528",
+      "approved": true,
+      "reason": "Энергия даёт4м/с, горизонтальная проекция скорости в ЭДС: B=.098Тл."
+    },
+    {
+      "id": "B26DD3",
+      "approved": true,
+      "reason": "Интеграл Фарадея: B=2ρlq/r=.01Тл."
+    },
+    {
+      "id": "F8cc4D",
+      "approved": true,
+      "reason": "Ортогональные ускорения7.5 и10м/с²: скорость2.5м/с; силы показаны."
+    },
+    {
+      "id": "798C45",
+      "approved": true,
+      "reason": "Два наклона.25 и.1Тл/с, Джоуль–Ленц155мкДж; график исходный."
+    },
+    {
+      "id": "74944E",
+      "approved": true,
+      "reason": "Линза.4м, изображения четырёх вершин дают457см²; окончательная геометрия равномасштабна и лучи осевых вершин добавлены."
+    },
+    {
+      "id": "BE1F40",
+      "approved": true,
+      "reason": "Начальное напряжение10В,Q=qU/2→2мкКл."
+    },
+    {
+      "id": "128F44",
+      "approved": true,
+      "reason": "Оси половин смещены±x/2, увеличение5→расстояние24см."
+    },
+    {
+      "id": "94914E",
+      "approved": true,
+      "reason": "Root independently checked this source condition, physical model, formulas, arithmetic and source figure; final corrections approved in collaboration. Final A57B29 ray geometry independently rechecked by root."
+    },
+    {
+      "id": "4F38F2",
+      "approved": true,
+      "reason": "Root independently checked this source condition, physical model, formulas, arithmetic and source figure; final corrections approved in collaboration. Final A57B29 ray geometry independently rechecked by root."
+    },
+    {
+      "id": "11C8FA",
+      "approved": true,
+      "reason": "Root independently checked this source condition, physical model, formulas, arithmetic and source figure; final corrections approved in collaboration. Final A57B29 ray geometry independently rechecked by root."
+    },
+    {
+      "id": "FC820A",
+      "approved": true,
+      "reason": "Root independently checked this source condition, physical model, formulas, arithmetic and source figure; final corrections approved in collaboration. Final A57B29 ray geometry independently rechecked by root."
+    },
+    {
+      "id": "89370B",
+      "approved": true,
+      "reason": "Root independently checked this source condition, physical model, formulas, arithmetic and source figure; final corrections approved in collaboration. Final A57B29 ray geometry independently rechecked by root."
+    },
+    {
+      "id": "6FD77C",
+      "approved": true,
+      "reason": "Root independently checked this source condition, physical model, formulas, arithmetic and source figure; final corrections approved in collaboration. Final A57B29 ray geometry independently rechecked by root."
+    },
+    {
+      "id": "4518BA",
+      "approved": true,
+      "reason": "Root independently checked this source condition, physical model, formulas, arithmetic and source figure; final corrections approved in collaboration. Final A57B29 ray geometry independently rechecked by root."
+    },
+    {
+      "id": "DB24B5",
+      "approved": true,
+      "reason": "Root independently checked this source condition, physical model, formulas, arithmetic and source figure; final corrections approved in collaboration. Final A57B29 ray geometry independently rechecked by root."
+    },
+    {
+      "id": "C0F0B7",
+      "approved": true,
+      "reason": "Root independently checked this source condition, physical model, formulas, arithmetic and source figure; final corrections approved in collaboration. Final A57B29 ray geometry independently rechecked by root."
+    },
+    {
+      "id": "9EC7B7",
+      "approved": true,
+      "reason": "Root independently checked this source condition, physical model, formulas, arithmetic and source figure; final corrections approved in collaboration. Final A57B29 ray geometry independently rechecked by root."
+    },
+    {
+      "id": "866CB9",
+      "approved": true,
+      "reason": "Root independently checked this source condition, physical model, formulas, arithmetic and source figure; final corrections approved in collaboration. Final A57B29 ray geometry independently rechecked by root."
+    },
+    {
+      "id": "238F11",
+      "approved": true,
+      "reason": "Root independently checked this source condition, physical model, formulas, arithmetic and source figure; final corrections approved in collaboration. Final A57B29 ray geometry independently rechecked by root."
+    },
+    {
+      "id": "D71312",
+      "approved": true,
+      "reason": "Root independently checked this source condition, physical model, formulas, arithmetic and source figure; final corrections approved in collaboration. Final A57B29 ray geometry independently rechecked by root."
+    },
+    {
+      "id": "2B0e26",
+      "approved": true,
+      "reason": "Root independently checked this source condition, physical model, formulas, arithmetic and source figure; final corrections approved in collaboration. Final A57B29 ray geometry independently rechecked by root."
+    },
+    {
+      "id": "A57B29",
+      "approved": true,
+      "reason": "Root independently checked this source condition, physical model, formulas, arithmetic and source figure; final corrections approved in collaboration. Final A57B29 ray geometry independently rechecked by root."
+    }
+  ]
+}
